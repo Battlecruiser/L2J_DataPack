@@ -29,6 +29,7 @@ import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.data.xml.impl.DoorData;
 import com.l2jserver.gameserver.data.xml.impl.NpcData;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.L2Object;
@@ -496,7 +497,7 @@ public final class Beleth extends AbstractNpcAI
 				{
 					fakeBeleth = MINIONS.get(getRandom(MINIONS.size()));
 				}
-				ZONE.broadcastPacket(new CreatureSay(fakeBeleth.getObjectId(), 0, fakeBeleth.getName(), "Miss text."));
+				ZONE.broadcastPacket(new CreatureSay(fakeBeleth.getObjectId(), ChatType.NPC_GENERAL, fakeBeleth.getName(), "Miss text."));
 			}
 			if (getRandom(100) < 40)
 			{

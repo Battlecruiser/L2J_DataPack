@@ -21,6 +21,7 @@ package ai.individual;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -28,7 +29,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
  * Frightened Ragna Orc AI.
@@ -64,7 +64,7 @@ public final class FrightenedRagnaOrc extends AbstractNpcAI
 		else if ((npc.getCurrentHp() < (npc.getMaxHp() * 0.2)) && npc.isScriptValue(1))
 		{
 			startQuestTimer("reward", 10000, npc, attacker);
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.WAIT_WAIT_STOP_SAVE_ME_AND_I_LL_GIVE_YOU_10_000_000_ADENA);
+			broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.WAIT_WAIT_STOP_SAVE_ME_AND_I_LL_GIVE_YOU_10_000_000_ADENA);
 			npc.setScriptValue(2);
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
@@ -74,7 +74,7 @@ public final class FrightenedRagnaOrc extends AbstractNpcAI
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final NpcStringId msg = getRandomBoolean() ? NpcStringId.UGH_A_CURSE_UPON_YOU : NpcStringId.I_REALLY_DIDN_T_WANT_TO_FIGHT;
-		broadcastNpcSay(npc, Say2.NPC_ALL, msg);
+		broadcastNpcSay(npc, ChatType.NPC_GENERAL, msg);
 		cancelQuestTimer("say", npc, null);
 		cancelQuestTimer("reward", npc, player);
 		return super.onKill(npc, player, isSummon);
@@ -93,7 +93,7 @@ public final class FrightenedRagnaOrc extends AbstractNpcAI
 					return null;
 				}
 				final NpcStringId msg = getRandomBoolean() ? NpcStringId.I_DON_T_WANT_TO_FIGHT : NpcStringId.IS_THIS_REALLY_NECESSARY;
-				broadcastNpcSay(npc, Say2.NPC_ALL, msg);
+				broadcastNpcSay(npc, ChatType.NPC_GENERAL, msg);
 				break;
 			}
 			case "reward":
@@ -103,7 +103,7 @@ public final class FrightenedRagnaOrc extends AbstractNpcAI
 					if (getRandom(100000) < CHANCE2)
 					{
 						final NpcStringId msg = getRandomBoolean() ? NpcStringId.TH_THANKS_I_COULD_HAVE_BECOME_GOOD_FRIENDS_WITH_YOU : NpcStringId.I_LL_GIVE_YOU_10_000_000_ADENA_LIKE_I_PROMISED_I_MIGHT_BE_AN_ORC_WHO_KEEPS_MY_PROMISES;
-						broadcastNpcSay(npc, Say2.NPC_ALL, msg);
+						broadcastNpcSay(npc, ChatType.NPC_GENERAL, msg);
 						npc.setScriptValue(3);
 						npc.doCast(SKILL.getSkill());
 						for (int i = 0; i < 10; i++)
@@ -114,7 +114,7 @@ public final class FrightenedRagnaOrc extends AbstractNpcAI
 					else if (getRandom(100000) < CHANCE)
 					{
 						final NpcStringId msg = getRandomBoolean() ? NpcStringId.TH_THANKS_I_COULD_HAVE_BECOME_GOOD_FRIENDS_WITH_YOU : NpcStringId.SORRY_BUT_THIS_IS_ALL_I_HAVE_GIVE_ME_A_BREAK;
-						broadcastNpcSay(npc, Say2.NPC_ALL, msg);
+						broadcastNpcSay(npc, ChatType.NPC_GENERAL, msg);
 						npc.setScriptValue(3);
 						npc.doCast(SKILL.getSkill());
 						for (int i = 0; i < 10; i++)
@@ -125,7 +125,7 @@ public final class FrightenedRagnaOrc extends AbstractNpcAI
 					else
 					{
 						final NpcStringId msg = getRandomBoolean() ? NpcStringId.THANKS_BUT_THAT_THING_ABOUT_10_000_000_ADENA_WAS_A_LIE_SEE_YA : NpcStringId.YOU_RE_PRETTY_DUMB_TO_BELIEVE_ME;
-						broadcastNpcSay(npc, Say2.NPC_ALL, msg);
+						broadcastNpcSay(npc, ChatType.NPC_GENERAL, msg);
 					}
 					startQuestTimer("despawn", 1000, npc, null);
 				}

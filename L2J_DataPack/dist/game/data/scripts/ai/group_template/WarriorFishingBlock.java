@@ -21,12 +21,12 @@ package ai.group_template;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlEvent;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
  * Warrior Fishing Block AI.
@@ -92,7 +92,7 @@ public final class WarriorFishingBlock extends AbstractNpcAI
 				else
 				{
 					final L2PcInstance target = obj.getActingPlayer();
-					broadcastNpcSay(npc, Say2.NPC_ALL, NPC_STRINGS_ON_SPAWN[getRandom(NPC_STRINGS_ON_SPAWN.length)], target.getName());
+					broadcastNpcSay(npc, ChatType.NPC_GENERAL, NPC_STRINGS_ON_SPAWN[getRandom(NPC_STRINGS_ON_SPAWN.length)], target.getName());
 					((L2Attackable) npc).addDamageHate(target, 0, 2000);
 					npc.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, target);
 					npc.addAttackerToAttackByList(target);
@@ -115,7 +115,7 @@ public final class WarriorFishingBlock extends AbstractNpcAI
 	{
 		if (getRandom(100) < CHANCE_TO_SHOUT_ON_ATTACK)
 		{
-			broadcastNpcSay(npc, Say2.NPC_ALL, NPC_STRINGS_ON_ATTACK[getRandom(NPC_STRINGS_ON_ATTACK.length)]);
+			broadcastNpcSay(npc, ChatType.NPC_GENERAL, NPC_STRINGS_ON_ATTACK[getRandom(NPC_STRINGS_ON_ATTACK.length)]);
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
@@ -123,7 +123,7 @@ public final class WarriorFishingBlock extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		broadcastNpcSay(npc, Say2.NPC_ALL, NPC_STRINGS_ON_KILL[getRandom(NPC_STRINGS_ON_KILL.length)]);
+		broadcastNpcSay(npc, ChatType.NPC_GENERAL, NPC_STRINGS_ON_KILL[getRandom(NPC_STRINGS_ON_KILL.length)]);
 		cancelQuestTimer("DESPAWN", npc, killer);
 		return super.onKill(npc, killer, isSummon);
 	}

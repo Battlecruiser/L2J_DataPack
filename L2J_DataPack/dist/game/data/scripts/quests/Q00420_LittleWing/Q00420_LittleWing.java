@@ -23,6 +23,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -30,7 +31,6 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
@@ -424,7 +424,7 @@ public final class Q00420_LittleWing extends Quest
 		{
 			takeItems(attacker, DELUXE_FAIRY_STONE, -1);
 			qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
-			npc.broadcastPacket(new NpcSay(npc, Say2.NPC_ALL, NpcStringId.THE_STONE_THE_ELVEN_STONE_BROKE));
+			npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.THE_STONE_THE_ELVEN_STONE_BROKE));
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}

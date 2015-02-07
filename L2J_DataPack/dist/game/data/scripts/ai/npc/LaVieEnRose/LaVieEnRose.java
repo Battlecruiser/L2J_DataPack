@@ -20,10 +20,10 @@ package ai.npc.LaVieEnRose;
 
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.ExResponseBeautyList;
 import com.l2jserver.gameserver.network.serverpackets.ExResponseResetList;
 import com.l2jserver.gameserver.network.serverpackets.ExShowBeautyMenu;
@@ -87,19 +87,19 @@ public final class LaVieEnRose extends AbstractNpcAI
 			}
 			case "SPAM_TEXT":
 			{
-				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.THE_BEAUTY_SHOP_IS_OPEN_COME_ON_IN);
+				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.THE_BEAUTY_SHOP_IS_OPEN_COME_ON_IN);
 				startQuestTimer("SPAM_TEXT2", 2500, npc, null);
 				break;
 			}
 			case "SPAM_TEXT2":
 			{
-				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.YOU_CAN_LOOK_GOOD_TOO_BUDDY_COME_ON_COME_ON);
+				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.YOU_CAN_LOOK_GOOD_TOO_BUDDY_COME_ON_COME_ON);
 				startQuestTimer("SPAM_TEXT3", 2500, npc, null);
 				break;
 			}
 			case "SPAM_TEXT3":
 			{
-				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.EVERYONE_COME_ON_LET_S_GO_GANGNAM_STYLE);
+				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.EVERYONE_COME_ON_LET_S_GO_GANGNAM_STYLE);
 				break;
 			}
 			case "cancel":

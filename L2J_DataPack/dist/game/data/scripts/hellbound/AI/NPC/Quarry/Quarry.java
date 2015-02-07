@@ -23,6 +23,7 @@ import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -32,7 +33,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2QuestGuardInstance;
 import com.l2jserver.gameserver.model.holders.ItemChanceHolder;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
  * Quarry AI.
@@ -103,7 +103,7 @@ public final class Quarry extends AbstractNpcAI
 						return null;
 					}
 				}
-				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.HUN_HUNGRY);
+				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.HUN_HUNGRY);
 				npc.doDie(npc);
 				break;
 			}
@@ -176,7 +176,7 @@ public final class Quarry extends AbstractNpcAI
 						startQuestTimer("DECAY", 1000, npc, null);
 						try
 						{
-							broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.THANK_YOU_FOR_THE_RESCUE_IT_S_A_SMALL_GIFT);
+							broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.THANK_YOU_FOR_THE_RESCUE_IT_S_A_SMALL_GIFT);
 						}
 						catch (Exception e)
 						{

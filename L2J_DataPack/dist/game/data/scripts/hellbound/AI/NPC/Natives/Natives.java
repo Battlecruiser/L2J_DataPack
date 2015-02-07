@@ -22,11 +22,11 @@ import hellbound.HellboundEngine;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.data.xml.impl.DoorData;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
  * Natives AI.
@@ -110,7 +110,7 @@ public final class Natives extends AbstractNpcAI
 				if (getQuestItemsCount(player, MARK_OF_BETRAYAL) >= 10)
 				{
 					takeItems(player, MARK_OF_BETRAYAL, 10);
-					broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.ALRIGHT_NOW_LEODAS_IS_YOURS);
+					broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.ALRIGHT_NOW_LEODAS_IS_YOURS);
 					HellboundEngine.getInstance().updateTrust(-50, true);
 					
 					for (int doorId : DOORS)
@@ -148,7 +148,7 @@ public final class Natives extends AbstractNpcAI
 		}
 		else if ((npc.getId() == NATIVE) && event.equalsIgnoreCase("hungry_death"))
 		{
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.HUN_HUNGRY);
+			broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.HUN_HUNGRY);
 			npc.doDie(null);
 		}
 		else if (npc.getId() == INCASTLE)

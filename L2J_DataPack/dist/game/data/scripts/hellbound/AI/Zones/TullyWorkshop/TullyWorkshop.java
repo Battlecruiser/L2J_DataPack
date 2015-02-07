@@ -33,6 +33,7 @@ import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.data.xml.impl.DoorData;
 import com.l2jserver.gameserver.datatables.SkillData;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.instancemanager.RaidBossSpawnManager;
 import com.l2jserver.gameserver.instancemanager.RaidBossSpawnManager.StatusEnum;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
@@ -48,7 +49,6 @@ import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.util.MinionList;
 import com.l2jserver.gameserver.util.Util;
 
@@ -572,7 +572,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 		{
 			if (postMortemSpawn.indexOf(npc) == 11)
 			{
-				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.HA_HA_YOU_WERE_SO_AFRAID_OF_DEATH_LET_ME_SEE_IF_YOU_FIND_ME_IN_TIME_MAYBE_YOU_CAN_FIND_A_WAY);
+				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.HA_HA_YOU_WERE_SO_AFRAID_OF_DEATH_LET_ME_SEE_IF_YOU_FIND_ME_IN_TIME_MAYBE_YOU_CAN_FIND_A_WAY);
 				npc.deleteMe();
 				return null;
 			}
@@ -746,7 +746,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 		
 		if (event.equalsIgnoreCase("repair_device"))
 		{
-			broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.DE_ACTIVATE_THE_ALARM);
+			broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.DE_ACTIVATE_THE_ALARM);
 			brokenContraptions.remove(npc.getObjectId());
 		}
 		else if (event.equalsIgnoreCase("despawn_servant") && !npc.isDead())
@@ -1223,7 +1223,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 					{
 						if ((_npc != null) && (_npc.getId() == INGENIOUS_CONTRAPTION))
 						{
-							broadcastNpcSay(_npc, Say2.NPC_SHOUT, NpcStringId.S1_MINUTE_S_ARE_REMAINING, Integer.toString((countdownTime / 60000)));
+							broadcastNpcSay(_npc, ChatType.NPC_SHOUT, NpcStringId.S1_MINUTE_S_ARE_REMAINING, Integer.toString((countdownTime / 60000)));
 						}
 					}
 				}
@@ -1257,35 +1257,35 @@ public final class TullyWorkshop extends AbstractNpcAI
 				{
 					if ((_npc != null) && (_npc.getId() == INGENIOUS_CONTRAPTION))
 					{
-						broadcastNpcSay(_npc, Say2.NPC_SHOUT, NpcStringId.S1_SECOND_S_REMAINING, Integer.toString((countdownTime / 1000)));
+						broadcastNpcSay(_npc, ChatType.NPC_SHOUT, NpcStringId.S1_SECOND_S_REMAINING, Integer.toString((countdownTime / 1000)));
 					}
 				}
 			}, 60000, 10000);
-			broadcastNpcSay(postMortemSpawn.get(0), Say2.NPC_SHOUT, NpcStringId.DETONATOR_INITIALIZATION_TIME_SET_FOR_S1_MINUTE_S_FROM_NOW, Integer.toString((countdownTime / 60000)));
+			broadcastNpcSay(postMortemSpawn.get(0), ChatType.NPC_SHOUT, NpcStringId.DETONATOR_INITIALIZATION_TIME_SET_FOR_S1_MINUTE_S_FROM_NOW, Integer.toString((countdownTime / 60000)));
 		}
 		else if ((npcId == TIMETWISTER_GOLEM) && (_countdown != null))
 		{
 			if (getRandom(1000) >= 700)
 			{
-				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.A_FATAL_ERROR_HAS_OCCURRED);
+				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.A_FATAL_ERROR_HAS_OCCURRED);
 				if (countdownTime > 180000)
 				{
 					countdownTime = Math.max(countdownTime - 180000, 60000);
 					if ((postMortemSpawn != null) && (postMortemSpawn.size() > 0) && (postMortemSpawn.get(0) != null) && (postMortemSpawn.get(0).getId() == INGENIOUS_CONTRAPTION))
 					{
-						broadcastNpcSay(postMortemSpawn.get(0), Say2.NPC_SHOUT, NpcStringId.ZZZZ_CITY_INTERFERENCE_ERROR_FORWARD_EFFECT_CREATED);
+						broadcastNpcSay(postMortemSpawn.get(0), ChatType.NPC_SHOUT, NpcStringId.ZZZZ_CITY_INTERFERENCE_ERROR_FORWARD_EFFECT_CREATED);
 					}
 				}
 			}
 			else
 			{
-				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.TIME_RIFT_DEVICE_ACTIVATION_SUCCESSFUL);
+				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.TIME_RIFT_DEVICE_ACTIVATION_SUCCESSFUL);
 				if ((countdownTime > 0) && (countdownTime <= 420000))
 				{
 					countdownTime += 180000;
 					if ((postMortemSpawn != null) && (postMortemSpawn.size() > 0) && (postMortemSpawn.get(0) != null) && (postMortemSpawn.get(0).getId() == INGENIOUS_CONTRAPTION))
 					{
-						broadcastNpcSay(postMortemSpawn.get(0), Say2.NPC_SHOUT, NpcStringId.ZZZZ_CITY_INTERFERENCE_ERROR_RECURRENCE_EFFECT_CREATED);
+						broadcastNpcSay(postMortemSpawn.get(0), ChatType.NPC_SHOUT, NpcStringId.ZZZZ_CITY_INTERFERENCE_ERROR_RECURRENCE_EFFECT_CREATED);
 					}
 				}
 			}
@@ -1367,11 +1367,11 @@ public final class TullyWorkshop extends AbstractNpcAI
 			
 			if (((npc.getId() - 22404) == 3) || ((npc.getId() - 22404) == 6))
 			{
-				broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.I_FAILED_PLEASE_FORGIVE_ME_DARION);
+				broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.I_FAILED_PLEASE_FORGIVE_ME_DARION);
 			}
 			else
 			{
-				broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.S1_I_LL_BE_BACK_DON_T_GET_COMFORTABLE, killer.getName());
+				broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.S1_I_LL_BE_BACK_DON_T_GET_COMFORTABLE, killer.getName());
 			}
 		}
 		else if (((npcId == TEMENIR) || (npcId == DRAXIUS) || (npcId == KIRETCENAH)) && spawnedFollowers.contains(npc))
@@ -1446,7 +1446,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 		}
 		else if ((npcId >= SERVANT_FIRST) && (npcId <= SERVANT_LAST) && (skillId == 5392))
 		{
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.S1_THANK_YOU_FOR_GIVING_ME_YOUR_LIFE, player.getName());
+			broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.S1_THANK_YOU_FOR_GIVING_ME_YOUR_LIFE, player.getName());
 			final int dmg = (int) (player.getCurrentHp() / (npc.getId() - 22404));
 			player.reduceCurrentHp(dmg, null, null);
 			npc.setCurrentHp((npc.getCurrentHp() + 10) - (npc.getId() - 22404));

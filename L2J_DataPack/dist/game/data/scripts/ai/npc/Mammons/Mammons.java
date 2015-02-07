@@ -26,11 +26,11 @@ import java.util.Objects;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.util.Broadcast;
 
 /**
@@ -120,7 +120,7 @@ public final class Mammons extends AbstractNpcAI
 				
 				if (blacksmith != null)
 				{
-					broadcastNpcSay(blacksmith, Say2.NPC_ALL, NpcStringId.I_HAVE_SOME_EXCELLENT_WEAPONS_TO_SHOW_YOU);
+					broadcastNpcSay(blacksmith, ChatType.NPC_GENERAL, NpcStringId.I_HAVE_SOME_EXCELLENT_WEAPONS_TO_SHOW_YOU);
 				}
 				
 				if (Config.ANNOUNCE_MAMMON_SPAWN)

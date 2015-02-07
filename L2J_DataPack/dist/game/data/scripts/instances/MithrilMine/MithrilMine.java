@@ -22,6 +22,7 @@ import instances.AbstractInstance;
 import quests.Q10284_AcquisitionOfDivineSword.Q10284_AcquisitionOfDivineSword;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
@@ -32,7 +33,6 @@ import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
  * Mithril Mine instance zone.
@@ -120,7 +120,7 @@ public final class MithrilMine extends AbstractInstance
 						kegor.setWalking();
 						kegor.setTarget(player);
 						kegor.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
-						broadcastNpcSay(kegor, Say2.NPC_ALL, NpcStringId.I_CAN_FINALLY_TAKE_A_BREATHER_BY_THE_WAY_WHO_ARE_YOU_HMM_I_THINK_I_KNOW_WHO_SENT_YOU);
+						broadcastNpcSay(kegor, ChatType.NPC_GENERAL, NpcStringId.I_CAN_FINALLY_TAKE_A_BREATHER_BY_THE_WAY_WHO_ARE_YOU_HMM_I_THINK_I_KNOW_WHO_SENT_YOU);
 					}
 				}
 				InstanceManager.getInstance().getInstance(world.getInstanceId()).setDuration(3000);
@@ -163,7 +163,7 @@ public final class MithrilMine extends AbstractInstance
 		
 		if (npc.getId() == KEGOR)
 		{
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.HOW_COULD_I_FALL_IN_A_PLACE_LIKE_THIS);
+			broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.HOW_COULD_I_FALL_IN_A_PLACE_LIKE_THIS);
 			InstanceManager.getInstance().getInstance(world.getInstanceId()).setDuration(1000);
 		}
 		else

@@ -19,51 +19,43 @@
 package handlers.chathandlers;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.handler.IChatHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
-import com.l2jserver.gameserver.util.Util;
 
 /**
- * A chat handler
+ * Party Room All chat handler.
  * @author durgus
  */
-public class ChatPartyRoomAll implements IChatHandler
+public final class ChatPartyRoomAll implements IChatHandler
 {
-	private static final int[] COMMAND_IDS =
+	private static final ChatType[] CHAT_TYPES =
 	{
-		16
+		ChatType.PARTYROOM_ALL,
 	};
 	
-	/**
-	 * Handle chat type 'party room all'
-	 */
 	@Override
-	public void handleChat(int type, L2PcInstance activeChar, String target, String text)
+	public void handleChat(ChatType type, L2PcInstance activeChar, String target, String text)
 	{
 		if (activeChar.isInParty())
 		{
 			if (activeChar.getParty().isInCommandChannel() && activeChar.getParty().isLeader(activeChar))
 			{
-				if (activeChar.isChatBanned() && Util.contains(Config.BAN_CHAT_CHANNELS, type))
+				if (activeChar.isChatBanned() && Config.BAN_CHAT_CHANNELS.contains(type))
 				{
 					activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER);
 					return;
 				}
-				
-				CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
-				activeChar.getParty().getCommandChannel().broadcastCreatureSay(cs, activeChar);
+				activeChar.getParty().getCommandChannel().broadcastCreatureSay(new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text), activeChar);
 			}
 		}
 	}
 	
-	/**
-	 * Returns the chat types registered to this handler.
-	 */
 	@Override
-	public int[] getChatTypeList()
+	public ChatType[] getChatTypeList()
 	{
-		return COMMAND_IDS;
+		return CHAT_TYPES;
 	}
 }

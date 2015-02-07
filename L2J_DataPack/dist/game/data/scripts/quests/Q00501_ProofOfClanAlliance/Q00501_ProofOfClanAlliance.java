@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -34,7 +35,6 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.model.skills.AbnormalType;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.util.Util;
 
@@ -289,29 +289,29 @@ public final class Q00501_ProofOfClanAlliance extends Quest
 						if ((lqs.getInt("flag") == 3) && arthea.isScriptValue(15))
 						{
 							lqs.set("flag", lqs.getInt("flag") + 1);
-							npc.broadcastPacket(new NpcSay(npc, Say2.NPC_ALL, NpcStringId.BINGO));
+							npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.BINGO));
 						}
 						else if ((lqs.getInt("flag") == 2) && arthea.isScriptValue(14))
 						{
 							lqs.set("flag", lqs.getInt("flag") + 1);
-							npc.broadcastPacket(new NpcSay(npc, Say2.NPC_ALL, NpcStringId.BINGO));
+							npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.BINGO));
 						}
 						else if ((lqs.getInt("flag") == 1) && arthea.isScriptValue(13))
 						{
 							lqs.set("flag", lqs.getInt("flag") + 1);
-							npc.broadcastPacket(new NpcSay(npc, Say2.NPC_ALL, NpcStringId.BINGO));
+							npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.BINGO));
 						}
 						else if ((lqs.getInt("flag") == 0) && arthea.isScriptValue(12))
 						{
 							lqs.set("flag", lqs.getInt("flag") + 1);
-							npc.broadcastPacket(new NpcSay(npc, Say2.NPC_ALL, NpcStringId.BINGO));
+							npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.BINGO));
 						}
 						else if (lqs.getInt("flag") < 4)
 						{
 							if (getRandom(4) == 0)
 							{
 								lqs.set("flag", lqs.getInt("flag") + 1);
-								npc.broadcastPacket(new NpcSay(npc, Say2.NPC_ALL, NpcStringId.BINGO));
+								npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.BINGO));
 							}
 						}
 						arthea.setScriptValue(arthea.getScriptValue() + 1);

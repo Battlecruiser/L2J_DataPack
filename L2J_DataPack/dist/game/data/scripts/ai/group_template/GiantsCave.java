@@ -20,11 +20,11 @@ package ai.group_template;
 
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
  * Giant's Cave AI.
@@ -53,11 +53,11 @@ public final class GiantsCave extends AbstractNpcAI
 		{
 			if (npc.getId() == SCOUTS[0]) // Gamlin
 			{
-				broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.INTRUDER_DETECTED);
+				broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.INTRUDER_DETECTED);
 			}
 			else
 			{
-				broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.OH_GIANTS_AN_INTRUDER_HAS_BEEN_DISCOVERED);
+				broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.OH_GIANTS_AN_INTRUDER_HAS_BEEN_DISCOVERED);
 			}
 			
 			for (L2Character characters : npc.getKnownList().getKnownCharactersInRadius(450))
@@ -95,11 +95,11 @@ public final class GiantsCave extends AbstractNpcAI
 			npc.setScriptValue(1);
 			if (getRandomBoolean())
 			{
-				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.YOU_GUYS_ARE_DETECTED);
+				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.YOU_GUYS_ARE_DETECTED);
 			}
 			else
 			{
-				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.WHAT_KIND_OF_CREATURES_ARE_YOU);
+				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.WHAT_KIND_OF_CREATURES_ARE_YOU);
 			}
 			startQuestTimer("ATTACK", 6000, npc, player);
 			startQuestTimer("CLEAR", 120000, npc, null);

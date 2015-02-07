@@ -22,12 +22,12 @@ import quests.Q00184_ArtOfPersuasion.Q00184_ArtOfPersuasion;
 import quests.Q00185_NikolasCooperation.Q00185_NikolasCooperation;
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
  * Alarm AI for quests Art of Persuasion (184) and Nikola's Cooperation (185).
@@ -61,19 +61,19 @@ public final class Alarm extends AbstractNpcAI
 			case "SELF_DESTRUCT_IN_60":
 			{
 				startQuestTimer("SELF_DESTRUCT_IN_30", 30000, npc, null);
-				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.THE_ALARM_WILL_SELF_DESTRUCT_IN_60_SECONDS_ENTER_PASSCODE_TO_OVERRIDE);
+				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.THE_ALARM_WILL_SELF_DESTRUCT_IN_60_SECONDS_ENTER_PASSCODE_TO_OVERRIDE);
 				break;
 			}
 			case "SELF_DESTRUCT_IN_30":
 			{
 				startQuestTimer("SELF_DESTRUCT_IN_10", 20000, npc, null);
-				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.THE_ALARM_WILL_SELF_DESTRUCT_IN_30_SECONDS_ENTER_PASSCODE_TO_OVERRIDE);
+				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.THE_ALARM_WILL_SELF_DESTRUCT_IN_30_SECONDS_ENTER_PASSCODE_TO_OVERRIDE);
 				break;
 			}
 			case "SELF_DESTRUCT_IN_10":
 			{
 				startQuestTimer("RECORDER_CRUSHED", 10000, npc, null);
-				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.THE_ALARM_WILL_SELF_DESTRUCT_IN_10_SECONDS_ENTER_PASSCODE_TO_OVERRIDE);
+				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.THE_ALARM_WILL_SELF_DESTRUCT_IN_10_SECONDS_ENTER_PASSCODE_TO_OVERRIDE);
 				break;
 			}
 			case "RECORDER_CRUSHED":
@@ -85,7 +85,7 @@ public final class Alarm extends AbstractNpcAI
 						npc0.getVariables().set("SPAWNED", false);
 						if (player0 != null)
 						{
-							broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.RECORDER_CRUSHED);
+							broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.RECORDER_CRUSHED);
 							if (verifyMemoState(player0, ART_OF_PERSUASION_ID, -1))
 							{
 								setMemoState(player0, ART_OF_PERSUASION_ID, 5);
@@ -234,7 +234,7 @@ public final class Alarm extends AbstractNpcAI
 	public String onSpawn(L2Npc npc)
 	{
 		startQuestTimer("SELF_DESTRUCT_IN_60", 60000, npc, null);
-		broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.INTRUDER_ALERT_THE_ALARM_WILL_SELF_DESTRUCT_IN_2_MINUTES);
+		broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.INTRUDER_ALERT_THE_ALARM_WILL_SELF_DESTRUCT_IN_2_MINUTES);
 		final L2PcInstance player = npc.getVariables().getObject("player0", L2PcInstance.class);
 		if (player != null)
 		{

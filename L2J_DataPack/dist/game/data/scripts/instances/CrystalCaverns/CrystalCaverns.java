@@ -30,6 +30,7 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SkillData;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.enums.TrapAction;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.L2Object;
@@ -1312,7 +1313,7 @@ public final class CrystalCaverns extends AbstractInstance
 					world._alarm = addSpawn(ALARMID, spawnLoc[0], spawnLoc[1], spawnLoc[2], 10800, false, 0, false, world.getInstanceId());
 					world._alarm.disableCoreAI(true);
 					world._alarm.setIsImmobilized(true);
-					world._alarm.broadcastPacket(new CreatureSay(world._alarm.getObjectId(), 1, world._alarm.getName(), NpcStringId.AN_ALARM_HAS_BEEN_SET_OFF_EVERYBODY_WILL_BE_IN_DANGER_IF_THEY_ARE_NOT_TAKEN_CARE_OF_IMMEDIATELY));
+					world._alarm.broadcastPacket(new CreatureSay(world._alarm.getObjectId(), ChatType.SHOUT, world._alarm.getName(), NpcStringId.AN_ALARM_HAS_BEEN_SET_OFF_EVERYBODY_WILL_BE_IN_DANGER_IF_THEY_ARE_NOT_TAKEN_CARE_OF_IMMEDIATELY));
 				}
 			}
 			else if (event.equalsIgnoreCase("baylor_skill"))
@@ -1332,12 +1333,12 @@ public final class CrystalCaverns extends AbstractInstance
 						if ((nowHp < (maxHp * 0.15)) && (world._raidStatus == 2))
 						{
 							npc.doCast(SkillData.getInstance().getSkill(5225, 1));
-							npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 1, npc.getName(), NpcStringId.DEMON_KING_BELETH_GIVE_ME_THE_POWER_AAAHH));
+							npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.SHOUT, npc.getName(), NpcStringId.DEMON_KING_BELETH_GIVE_ME_THE_POWER_AAAHH));
 						}
 						else if ((rand < 10) || (nowHp < (maxHp * 0.15)))
 						{
 							npc.doCast(SkillData.getInstance().getSkill(5225, 1));
-							npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 1, npc.getName(), NpcStringId.DEMON_KING_BELETH_GIVE_ME_THE_POWER_AAAHH));
+							npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.SHOUT, npc.getName(), NpcStringId.DEMON_KING_BELETH_GIVE_ME_THE_POWER_AAAHH));
 							startQuestTimer("baylor_remove_invul", 30000, world._baylor, null);
 						}
 					}
@@ -1407,7 +1408,7 @@ public final class CrystalCaverns extends AbstractInstance
 				{
 					if (getRandom(100) < 5)
 					{
-						npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 1, npc.getName(), NpcStringId.AH_I_M_HUNGRY));
+						npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.SHOUT, npc.getName(), NpcStringId.AH_I_M_HUNGRY));
 					}
 					startQuestTimer("autoFood", 2000, npc, null);
 				}

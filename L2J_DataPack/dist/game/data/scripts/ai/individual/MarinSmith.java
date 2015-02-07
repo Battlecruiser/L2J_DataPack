@@ -20,10 +20,10 @@ package ai.individual;
 
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
  * Marin Smith AI.
@@ -45,7 +45,7 @@ public final class MarinSmith extends AbstractNpcAI
 	{
 		if (event.equals("SPAM_TEXT") && (npc != null))
 		{
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.HMM_IS_THIS_STILL_A_DECENT_WEAPON, 1000);
+			broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.HMM_IS_THIS_STILL_A_DECENT_WEAPON, 1000);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}

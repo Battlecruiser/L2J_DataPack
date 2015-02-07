@@ -24,6 +24,7 @@ import instances.AbstractInstance;
 import java.util.concurrent.ScheduledFuture;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.Location;
@@ -38,7 +39,6 @@ import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
@@ -200,8 +200,8 @@ public final class UrbanArea extends AbstractInstance
 				{
 					if (!npc.isAffectedBySkill(STONE.getSkillId()) || world.isAmaskariDead)
 					{
-						broadcastNpcSay(npc, Say2.NPC_ALL, NATIVES_NPCSTRING_ID[0]);
-						broadcastNpcSay(npc, Say2.NPC_ALL, NATIVES_NPCSTRING_ID[2]);
+						broadcastNpcSay(npc, ChatType.NPC_GENERAL, NATIVES_NPCSTRING_ID[0]);
+						broadcastNpcSay(npc, ChatType.NPC_GENERAL, NATIVES_NPCSTRING_ID[2]);
 					}
 					else
 					{
@@ -211,8 +211,8 @@ public final class UrbanArea extends AbstractInstance
 							npc.stopSkillEffects(false, STONE.getSkillId());
 						}
 						
-						broadcastNpcSay(npc, Say2.NPC_ALL, NATIVES_NPCSTRING_ID[0]);
-						broadcastNpcSay(npc, Say2.NPC_ALL, NATIVES_NPCSTRING_ID[1]);
+						broadcastNpcSay(npc, ChatType.NPC_GENERAL, NATIVES_NPCSTRING_ID[0]);
+						broadcastNpcSay(npc, ChatType.NPC_GENERAL, NATIVES_NPCSTRING_ID[1]);
 						HellboundEngine.getInstance().updateTrust(10, true);
 						npc.scheduleDespawn(3000);
 						// Try to call Amaskari
@@ -260,7 +260,7 @@ public final class UrbanArea extends AbstractInstance
 			
 			if (!npc.isBusy())
 			{
-				broadcastNpcSay(npc, Say2.NPC_ALL, NPCSTRING_ID[0]);
+				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NPCSTRING_ID[0]);
 				npc.setBusy(true);
 				
 				if ((world.spawnedAmaskari != null) && !world.spawnedAmaskari.isDead() && (getRandom(1000) < 25) && Util.checkIfInRange(1000, npc, world.spawnedAmaskari, false))
@@ -304,7 +304,7 @@ public final class UrbanArea extends AbstractInstance
 				}
 				if (msgId >= 0)
 				{
-					broadcastNpcSay(npc, Say2.NPC_ALL, NPCSTRING_ID[msgId], range);
+					broadcastNpcSay(npc, ChatType.NPC_GENERAL, NPCSTRING_ID[msgId], range);
 				}
 				npc.setBusy(true);
 				npc.setBusyMessage("atk");
@@ -421,7 +421,7 @@ public final class UrbanArea extends AbstractInstance
 					if ((world.spawnedAmaskari != null) && !world.spawnedAmaskari.isDead())
 					{
 						world.spawnedAmaskari.teleToLocation(_caller.getLocation());
-						world.spawnedAmaskari.broadcastPacket(new NpcSay(world.spawnedAmaskari.getObjectId(), Say2.NPC_ALL, world.spawnedAmaskari.getId(), NpcStringId.I_LL_MAKE_YOU_FEEL_SUFFERING_LIKE_A_FLAME_THAT_IS_NEVER_EXTINGUISHED));
+						world.spawnedAmaskari.broadcastPacket(new NpcSay(world.spawnedAmaskari.getObjectId(), ChatType.NPC_GENERAL, world.spawnedAmaskari.getId(), NpcStringId.I_LL_MAKE_YOU_FEEL_SUFFERING_LIKE_A_FLAME_THAT_IS_NEVER_EXTINGUISHED));
 					}
 				}
 			}

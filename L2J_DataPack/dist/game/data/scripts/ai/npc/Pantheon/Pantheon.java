@@ -21,12 +21,12 @@ package ai.npc.Pantheon;
 import quests.Q10320_LetsGoToTheCentralSquare.Q10320_LetsGoToTheCentralSquare;
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 
 /**
@@ -76,7 +76,7 @@ public final class Pantheon extends AbstractNpcAI
 			{
 				if (npc != null)
 				{
-					broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.IS_IT_BETTER_TO_END_DESTINY_OR_START_DESTINY);
+					broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.IS_IT_BETTER_TO_END_DESTINY_OR_START_DESTINY);
 				}
 				break;
 			}

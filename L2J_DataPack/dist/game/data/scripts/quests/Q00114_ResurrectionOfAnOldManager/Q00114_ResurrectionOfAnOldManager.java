@@ -21,6 +21,7 @@ package quests.Q00114_ResurrectionOfAnOldManager;
 import quests.Q00121_PavelTheGiant.Q00121_PavelTheGiant;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -30,7 +31,6 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
@@ -194,7 +194,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 				if ((golem == null) || ((golem != null) && golem.isDead()))
 				{
 					golem = (L2Attackable) addSpawn(GUARDIAN, 96977, -110625, -3280, 0, false, 0);
-					golem.broadcastPacket(new NpcSay(golem.getObjectId(), Say2.NPC_ALL, golem.getId(), NpcStringId.YOU_S1_YOU_ATTACKED_WENDY_PREPARE_TO_DIE).addStringParameter(player.getName()));
+					golem.broadcastPacket(new NpcSay(golem.getObjectId(), ChatType.NPC_GENERAL, golem.getId(), NpcStringId.YOU_S1_YOU_ATTACKED_WENDY_PREPARE_TO_DIE).addStringParameter(player.getName()));
 					golem.setRunning();
 					golem.addDamageHate(player, 0, 999);
 					golem.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
@@ -267,7 +267,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 			// Quest timer
 			case "golem_despawn":
 				st.unset("spawned");
-				golem.broadcastPacket(new NpcSay(golem.getObjectId(), Say2.NPC_ALL, golem.getId(), NpcStringId.S1_YOUR_ENEMY_WAS_DRIVEN_OUT_I_WILL_NOW_WITHDRAW_AND_AWAIT_YOUR_NEXT_COMMAND).addStringParameter(player.getName()));
+				golem.broadcastPacket(new NpcSay(golem.getObjectId(), ChatType.NPC_GENERAL, golem.getId(), NpcStringId.S1_YOUR_ENEMY_WAS_DRIVEN_OUT_I_WILL_NOW_WITHDRAW_AND_AWAIT_YOUR_NEXT_COMMAND).addStringParameter(player.getName()));
 				golem.deleteMe();
 				golem = null;
 				htmltext = null;
@@ -329,7 +329,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 		
 		if ((st != null) && st.isCond(10) && (st.getInt("spawned") == 1))
 		{
-			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.THIS_ENEMY_IS_FAR_TOO_POWERFUL_FOR_ME_TO_FIGHT_I_MUST_WITHDRAW));
+			npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.THIS_ENEMY_IS_FAR_TOO_POWERFUL_FOR_ME_TO_FIGHT_I_MUST_WITHDRAW));
 			st.setCond(11, true);
 			st.unset("spawned");
 			cancelQuestTimers("golem_despawn");

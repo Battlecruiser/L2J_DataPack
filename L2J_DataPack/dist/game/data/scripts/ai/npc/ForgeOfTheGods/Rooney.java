@@ -20,12 +20,12 @@ package ai.npc.ForgeOfTheGods;
 
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
  * Rooney AI
@@ -95,16 +95,16 @@ public final class Rooney extends AbstractNpcAI
 			switch (aiVal)
 			{
 				case 1:
-					broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.HURRY_HURRY);
+					broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.HURRY_HURRY);
 					break;
 				case 2:
-					broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.I_AM_NOT_THAT_TYPE_OF_PERSON_WHO_STAYS_IN_ONE_PLACE_FOR_A_LONG_TIME);
+					broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.I_AM_NOT_THAT_TYPE_OF_PERSON_WHO_STAYS_IN_ONE_PLACE_FOR_A_LONG_TIME);
 					break;
 				case 3:
-					broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.IT_S_HARD_FOR_ME_TO_KEEP_STANDING_LIKE_THIS);
+					broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.IT_S_HARD_FOR_ME_TO_KEEP_STANDING_LIKE_THIS);
 					break;
 				case 4:
-					broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.WHY_DON_T_I_GO_THAT_WAY_THIS_TIME);
+					broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.WHY_DON_T_I_GO_THAT_WAY_THIS_TIME);
 					break;
 				default:
 					npc.teleToLocation(LOCATIONS[getRandom(LOCATIONS.length)], false);
@@ -122,7 +122,7 @@ public final class Rooney extends AbstractNpcAI
 	{
 		if (creature.isPlayer() && npc.isScriptValue(0))
 		{
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.WELCOME);
+			broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.WELCOME);
 			startQuestTimer("teleport", 60000, npc, null);
 			npc.setScriptValue(1);
 		}

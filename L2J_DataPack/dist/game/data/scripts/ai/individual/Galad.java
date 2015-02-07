@@ -20,10 +20,10 @@ package ai.individual;
 
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
  * Galad AI.
@@ -46,7 +46,7 @@ public final class Galad extends AbstractNpcAI
 		if (event.equals("SPAM_TEXT") && (npc != null))
 		{
 			npc.broadcastSocialAction(3);
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.OCCASIONALLY_RARE_JEWELS_OF_GIANTS_ARE_DISCOVERED_IN_THE_BEACH, 1000);
+			broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.OCCASIONALLY_RARE_JEWELS_OF_GIANTS_ARE_DISCOVERED_IN_THE_BEACH, 1000);
 			
 		}
 		return super.onAdvEvent(event, npc, player);

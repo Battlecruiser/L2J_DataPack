@@ -24,6 +24,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.handler.IChatHandler;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -31,22 +32,22 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 import com.l2jserver.gameserver.network.serverpackets.ExWorldChatCnt;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.util.Util;
 
 /**
+ * World chat handler.
  * @author UnAfraid
  */
-public class ChatWorld implements IChatHandler
+public final class ChatWorld implements IChatHandler
 {
 	private static final Map<Integer, Instant> REUSE = new ConcurrentHashMap<>();
 	
-	private static final int[] COMMANDS =
+	private static final ChatType[] CHAT_TYPES =
 	{
-		25
+		ChatType.GLOBAL,
 	};
 	
 	@Override
-	public void handleChat(int type, L2PcInstance activeChar, String target, String text)
+	public void handleChat(ChatType type, L2PcInstance activeChar, String target, String text)
 	{
 		final Instant now = Instant.now();
 		if (!REUSE.isEmpty())
@@ -60,7 +61,7 @@ public class ChatWorld implements IChatHandler
 			msg.addInt(Config.WORLD_CHAT_MIN_LEVEL);
 			activeChar.sendPacket(msg);
 		}
-		else if (activeChar.isChatBanned() && Util.contains(Config.BAN_CHAT_CHANNELS, type))
+		else if (activeChar.isChatBanned() && Config.BAN_CHAT_CHANNELS.contains(type))
 		{
 			activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER);
 		}
@@ -97,8 +98,8 @@ public class ChatWorld implements IChatHandler
 	}
 	
 	@Override
-	public int[] getChatTypeList()
+	public ChatType[] getChatTypeList()
 	{
-		return COMMANDS;
+		return CHAT_TYPES;
 	}
 }

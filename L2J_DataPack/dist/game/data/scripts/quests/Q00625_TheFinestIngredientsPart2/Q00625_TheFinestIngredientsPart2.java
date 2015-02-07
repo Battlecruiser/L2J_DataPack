@@ -19,6 +19,7 @@
 package quests.Q00625_TheFinestIngredientsPart2;
 
 import com.l2jserver.gameserver.datatables.SpawnTable;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -26,7 +27,6 @@ import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.util.Util;
 
@@ -163,7 +163,7 @@ public final class Q00625_TheFinestIngredientsPart2 extends Quest
 			{
 				if (isBumbalumpSpawned())
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getTemplate().getDisplayId(), NpcStringId.OOOH));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getTemplate().getDisplayId(), NpcStringId.OOOH));
 				}
 				break;
 			}
@@ -261,7 +261,7 @@ public final class Q00625_TheFinestIngredientsPart2 extends Quest
 	public String onSpawn(L2Npc npc)
 	{
 		startQuestTimer("NPC_TALK", 1000 * 1200, npc, null);
-		// npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getTemplate().getDisplayId(), NpcStringId.I_SMELL_SOMETHING_DELICIOUS)); //TODO: St3eT: Find proper NpcStringId
+		// npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getTemplate().getDisplayId(), NpcStringId.I_SMELL_SOMETHING_DELICIOUS)); //TODO: St3eT: Find proper NpcStringId
 		return super.onSpawn(npc);
 	}
 	

@@ -20,11 +20,11 @@ package ai.group_template;
 
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
 
 /**
@@ -82,7 +82,7 @@ public final class LairOfAntharas extends AbstractNpcAI
 			{
 				npc.setScriptValue(1);
 			}
-			broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.WHO_S_THERE_IF_YOU_DISTURB_THE_TEMPER_OF_THE_GREAT_LAND_DRAGON_ANTHARAS_I_WILL_NEVER_FORGIVE_YOU);
+			broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.WHO_S_THERE_IF_YOU_DISTURB_THE_TEMPER_OF_THE_GREAT_LAND_DRAGON_ANTHARAS_I_WILL_NEVER_FORGIVE_YOU);
 		}
 		return super.onAggroRangeEnter(npc, player, isSummon);
 	}
@@ -98,7 +98,7 @@ public final class LairOfAntharas extends AbstractNpcAI
 				{
 					final L2Npc newKnight = addSpawn(DRAGON_KNIGHT2, npc, false, 0, true);
 					npc.deleteMe();
-					broadcastNpcSay(newKnight, Say2.NPC_SHOUT, NpcStringId.THOSE_WHO_SET_FOOT_IN_THIS_PLACE_SHALL_NOT_LEAVE_ALIVE);
+					broadcastNpcSay(newKnight, ChatType.NPC_SHOUT, NpcStringId.THOSE_WHO_SET_FOOT_IN_THIS_PLACE_SHALL_NOT_LEAVE_ALIVE);
 					addAttackPlayerDesire(newKnight, killer);
 				}
 				break;
@@ -109,7 +109,7 @@ public final class LairOfAntharas extends AbstractNpcAI
 				{
 					final L2Npc eliteKnight = addSpawn(ELITE_DRAGON_KNIGHT, npc, false, 0, true);
 					npc.deleteMe();
-					broadcastNpcSay(eliteKnight, Say2.NPC_SHOUT, NpcStringId.IF_YOU_WISH_TO_SEE_HELL_I_WILL_GRANT_YOU_YOUR_WISH);
+					broadcastNpcSay(eliteKnight, ChatType.NPC_SHOUT, NpcStringId.IF_YOU_WISH_TO_SEE_HELL_I_WILL_GRANT_YOU_YOUR_WISH);
 					addAttackPlayerDesire(eliteKnight, killer);
 				}
 				break;

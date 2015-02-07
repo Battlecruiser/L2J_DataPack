@@ -22,6 +22,7 @@ import java.util.Set;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SpawnTable;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.enums.QuestType;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -30,7 +31,6 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
@@ -147,7 +147,7 @@ public final class Q00457_LostAndFound extends Quest
 						startQuestTimer("STOP", 1000, npc, player);
 						startQuestTimer("BYE", 3000, npc, player);
 						cancelQuestTimer("CHECK", npc, player);
-						npc.broadcastPacket(new CreatureSay(npc.getObjectId(), Say2.NPC_ALL, npc.getName(), NpcStringId.AH_FRESH_AIR));
+						npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getName(), NpcStringId.AH_FRESH_AIR));
 						broadcastNpcSay(npc, player, NpcStringId.AH_FRESH_AIR, false);
 						st.giveItems(PACKAGED_BOOK, 1);
 						st.exitQuest(QuestType.DAILY, true);
@@ -246,6 +246,6 @@ public final class Q00457_LostAndFound extends Quest
 	
 	public void broadcastNpcSay(L2Npc npc, L2PcInstance player, NpcStringId stringId, boolean whisper)
 	{
-		((whisper) ? player : npc).sendPacket(new NpcSay(npc.getObjectId(), ((whisper) ? Say2.TELL : Say2.ALL), npc.getId(), stringId));
+		((whisper) ? player : npc).sendPacket(new NpcSay(npc.getObjectId(), ((whisper) ? ChatType.TELL : ChatType.NPC_GENERAL), npc.getId(), stringId));
 	}
 }
