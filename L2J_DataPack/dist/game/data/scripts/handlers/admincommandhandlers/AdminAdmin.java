@@ -311,7 +311,7 @@ public class AdminAdmin implements IAdminCommandHandler
 						sb.append(" ");
 					}
 					
-					final CreatureSay cs = new CreatureSay(activeChar, ChatType.GLOBAL, sb.toString());
+					final CreatureSay cs = new CreatureSay(activeChar, ChatType.WORLD, sb.toString());
 					L2World.getInstance().getPlayers().stream().filter(activeChar::isNotBlocked).forEach(cs::sendTo);
 					break;
 				}

@@ -246,7 +246,7 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 								caster.broadcastPacket(new NpcSay(caster.getObjectId(), ChatType.NPC_SHOUT, caster.getId(), NpcStringId.FOR_THE_ETERNITY_OF_EINHASAD));
 								if (Util.checkIfInRange(2000, caster, player, true))
 								{
-									player.sendPacket(new NpcSay(caster.getObjectId(), ChatType.TELL, caster.getId(), NpcStringId.MY_POWER_S_WEAKENING_HURRY_AND_TURN_ON_THE_SEALING_DEVICE));
+									player.sendPacket(new NpcSay(caster.getObjectId(), ChatType.NPC_WHISPER, caster.getId(), NpcStringId.MY_POWER_S_WEAKENING_HURRY_AND_TURN_ON_THE_SEALING_DEVICE));
 								}
 								caster.setScriptValue(1);
 							}
@@ -259,7 +259,7 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 										caster.broadcastPacket(new NpcSay(caster.getObjectId(), ChatType.NPC_SHOUT, caster.getId(), NpcStringId.DEAR_SHILLIEN_S_OFFSPRINGS_YOU_ARE_NOT_CAPABLE_OF_CONFRONTING_US));
 										if (Util.checkIfInRange(2000, caster, player, true))
 										{
-											player.sendPacket(new NpcSay(caster.getObjectId(), ChatType.TELL, caster.getId(), NpcStringId.ALL_4_SEALING_DEVICES_MUST_BE_TURNED_ON));
+											player.sendPacket(new NpcSay(caster.getObjectId(), ChatType.NPC_WHISPER, caster.getId(), NpcStringId.ALL_4_SEALING_DEVICES_MUST_BE_TURNED_ON));
 										}
 										break;
 									}
@@ -268,7 +268,7 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 										caster.broadcastPacket(new NpcSay(caster.getObjectId(), ChatType.NPC_SHOUT, caster.getId(), NpcStringId.I_LL_SHOW_YOU_THE_REAL_POWER_OF_EINHASAD));
 										if (Util.checkIfInRange(2000, caster, player, true))
 										{
-											player.sendPacket(new NpcSay(caster.getObjectId(), ChatType.TELL, caster.getId(), NpcStringId.LILITH_ATTACK_IS_GETTING_STRONGER_GO_AHEAD_AND_TURN_IT_ON));
+											player.sendPacket(new NpcSay(caster.getObjectId(), ChatType.NPC_WHISPER, caster.getId(), NpcStringId.LILITH_ATTACK_IS_GETTING_STRONGER_GO_AHEAD_AND_TURN_IT_ON));
 										}
 										break;
 									}
@@ -277,7 +277,7 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 										caster.broadcastPacket(new NpcSay(caster.getObjectId(), ChatType.NPC_SHOUT, caster.getId(), NpcStringId.DEAR_MILITARY_FORCE_OF_LIGHT_GO_DESTROY_THE_OFFSPRINGS_OF_SHILLIEN));
 										if (Util.checkIfInRange(2000, caster, player, true))
 										{
-											player.sendPacket(new NpcSay(caster.getObjectId(), ChatType.TELL, caster.getId(), NpcStringId.DEAR_S1_GIVE_ME_MORE_STRENGTH).addStringParameter(player.getName()));
+											player.sendPacket(new NpcSay(caster.getObjectId(), ChatType.NPC_WHISPER, caster.getId(), NpcStringId.DEAR_S1_GIVE_ME_MORE_STRENGTH).addStringParameter(player.getName()));
 										}
 										break;
 									}

@@ -246,6 +246,6 @@ public final class Q00457_LostAndFound extends Quest
 	
 	public void broadcastNpcSay(L2Npc npc, L2PcInstance player, NpcStringId stringId, boolean whisper)
 	{
-		((whisper) ? player : npc).sendPacket(new NpcSay(npc.getObjectId(), ((whisper) ? ChatType.TELL : ChatType.NPC_GENERAL), npc.getId(), stringId));
+		((whisper) ? player : npc).sendPacket(new NpcSay(npc.getObjectId(), ((whisper) ? ChatType.NPC_WHISPER : ChatType.NPC_GENERAL), npc.getId(), stringId));
 	}
 }
