@@ -34,8 +34,10 @@ import quests.Q00223_TestOfTheChampion.Q00223_TestOfTheChampion;
 import quests.Q00224_TestOfSagittarius.Q00224_TestOfSagittarius;
 import quests.Q00225_TestOfTheSearcher.Q00225_TestOfTheSearcher;
 import quests.Q00226_TestOfTheHealer.Q00226_TestOfTheHealer;
+import quests.Q00227_TestOfTheReformer.Q00227_TestOfTheReformer;
 import quests.Q00228_TestOfMagus.Q00228_TestOfMagus;
 import quests.Q00229_TestOfWitchcraft.Q00229_TestOfWitchcraft;
+import quests.Q00230_TestOfTheSummoner.Q00230_TestOfTheSummoner;
 import quests.Q00231_TestOfTheMaestro.Q00231_TestOfTheMaestro;
 import quests.Q00232_TestOfTheLord.Q00232_TestOfTheLord;
 import quests.Q00233_TestOfTheWarSpirit.Q00233_TestOfTheWarSpirit;
@@ -240,10 +242,10 @@ public final class Q00060_GoodWorksReward extends Quest
 					final QuestState q224 = player.getQuestState(Q00224_TestOfSagittarius.class.getSimpleName());
 					final QuestState q225 = player.getQuestState(Q00225_TestOfTheSearcher.class.getSimpleName());
 					final QuestState q226 = player.getQuestState(Q00226_TestOfTheHealer.class.getSimpleName());
-					final QuestState q227 = player.getQuestState("227_TestOfReformer");
+					final QuestState q227 = player.getQuestState(Q00227_TestOfTheReformer.class.getSimpleName());
 					final QuestState q228 = player.getQuestState(Q00228_TestOfMagus.class.getSimpleName());
 					final QuestState q229 = player.getQuestState(Q00229_TestOfWitchcraft.class.getSimpleName());
-					final QuestState q230 = player.getQuestState("230_TestOfSummoner");
+					final QuestState q230 = player.getQuestState(Q00230_TestOfTheSummoner.class.getSimpleName());
 					final QuestState q231 = player.getQuestState(Q00231_TestOfTheMaestro.class.getSimpleName());
 					final QuestState q232 = player.getQuestState(Q00232_TestOfTheLord.class.getSimpleName());
 					final QuestState q233 = player.getQuestState(Q00233_TestOfTheWarSpirit.class.getSimpleName());
@@ -1116,7 +1118,7 @@ public final class Q00060_GoodWorksReward extends Quest
 					{
 						npc.getVariables().set("SPAWNED", true);
 						npc.getVariables().set("PLAYER_ID", player.getObjectId());
-						final L2Npc pursuer = addSpawn(PURSUER, player.getX() + 20, player.getY() + 20, player.getZ(), 0, false, 0);
+						final L2Npc pursuer = addSpawn(PURSUER, player.getX() + 50, player.getY() + 50, player.getZ(), 0, false, 0);
 						pursuer.getVariables().set("PLAYER_ID", player.getObjectId());
 						pursuer.getVariables().set("npc0", npc);
 						pursuer.getVariables().set("player0", player);
