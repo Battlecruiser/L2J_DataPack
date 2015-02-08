@@ -18,6 +18,8 @@
  */
 package quests.Q00021_HiddenTruth;
 
+import quests.Q00022_TragedyInVonHellmannForest.Q00022_TragedyInVonHellmannForest;
+
 import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.instancemanager.WalkingManager;
 import com.l2jserver.gameserver.model.L2World;
@@ -420,7 +422,7 @@ public class Q00021_HiddenTruth extends Quest
 					}
 					else if (st.isCompleted())
 					{
-						st = player.getQuestState("22_TragedyInVonHellmanForest");
+						st = player.getQuestState(Q00022_TragedyInVonHellmannForest.class.getSimpleName());
 						if (st == null)
 						{
 							htmltext = "31328-06.html";

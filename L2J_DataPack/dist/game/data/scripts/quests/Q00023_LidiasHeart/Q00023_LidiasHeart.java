@@ -18,6 +18,7 @@
  */
 package quests.Q00023_LidiasHeart;
 
+import quests.Q00022_TragedyInVonHellmannForest.Q00022_TragedyInVonHellmannForest;
 import quests.Q00024_InhabitantsOfTheForestOfTheDead.Q00024_InhabitantsOfTheForestOfTheDead;
 
 import com.l2jserver.gameserver.enums.QuestSound;
@@ -292,7 +293,7 @@ public final class Q00023_LidiasHeart extends Quest
 		{
 			if (npc.getId() == HIGH_PRIEST_INNOCENTIN)
 			{
-				final QuestState q22 = player.getQuestState("22_TragedyInVonHellmannForest");
+				final QuestState q22 = player.getQuestState(Q00022_TragedyInVonHellmannForest.class.getSimpleName());
 				if ((q22 != null) && q22.isCompleted())
 				{
 					htmltext = "31328-01.htm";
