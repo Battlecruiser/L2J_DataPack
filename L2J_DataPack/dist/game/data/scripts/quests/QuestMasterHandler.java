@@ -214,6 +214,7 @@ import quests.Q00223_TestOfTheChampion.Q00223_TestOfTheChampion;
 import quests.Q00224_TestOfSagittarius.Q00224_TestOfSagittarius;
 import quests.Q00225_TestOfTheSearcher.Q00225_TestOfTheSearcher;
 import quests.Q00226_TestOfTheHealer.Q00226_TestOfTheHealer;
+import quests.Q00227_TestOfTheReformer.Q00227_TestOfTheReformer;
 import quests.Q00228_TestOfMagus.Q00228_TestOfMagus;
 import quests.Q00229_TestOfWitchcraft.Q00229_TestOfWitchcraft;
 import quests.Q00230_TestOfTheSummoner.Q00230_TestOfTheSummoner;
@@ -681,6 +682,7 @@ public class QuestMasterHandler
 		Q00224_TestOfSagittarius.class,
 		Q00225_TestOfTheSearcher.class,
 		Q00226_TestOfTheHealer.class,
+		Q00227_TestOfTheReformer.class,
 		Q00228_TestOfMagus.class,
 		Q00229_TestOfWitchcraft.class,
 		Q00230_TestOfTheSummoner.class,
