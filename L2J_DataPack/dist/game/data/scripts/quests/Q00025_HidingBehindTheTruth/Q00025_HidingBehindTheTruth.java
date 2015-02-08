@@ -257,7 +257,7 @@ public class Q00025_HidingBehindTheTruth extends Quest
 				}
 				break;
 			}
-			case "31533-05.html":
+			case "31533-04.html":
 			{
 				if (qs.getMemoStateEx(npc.getId()) != 0)
 				{
@@ -267,17 +267,17 @@ public class Q00025_HidingBehindTheTruth extends Quest
 				{
 					qs.setMemoStateEx(1, qs.getMemoStateEx(1) + 20);
 					qs.setMemoStateEx(npc.getId(), 1);
-					htmltext = "31533-04.html";
+					htmltext = "31533-03.html";
 				}
 				else
 				{
 					qs.setMemoState(8);
-					htmltext = "31533-05.html";
+					htmltext = event;
 					playSound(player, QuestSound.AMDSOUND_HORROR_02);
 				}
 				break;
 			}
-			case "31533-07.html":
+			case "31533-05.html":
 			{
 				if (qs.isMemoState(8))
 				{
@@ -294,26 +294,26 @@ public class Q00025_HidingBehindTheTruth extends Quest
 							startQuestTimer("DESPAWN_TRIYOL", 120000, triyol, player);
 							triyol.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 							
-							htmltext = "31533-07.html";
+							htmltext = event;
 							qs.setCond(7);
 						}
 						else if (brokenDeskOwner == player.getObjectId())
 						{
-							htmltext = "31533-08.html";
+							htmltext = "31533-06.html";
 						}
 						else
 						{
-							htmltext = "31533-09.html";
+							htmltext = "31533-07.html";
 						}
 					}
 					else
 					{
-						htmltext = "31533-10.html";
+						htmltext = "31533-08.html";
 					}
 				}
 				break;
 			}
-			case "31533-11.html":
+			case "31533-09.html":
 			{
 				if (qs.isMemoState(8) && hasQuestItems(player, TOTEM_DOLL3, GEMSTONE_KEY))
 				{
@@ -634,7 +634,7 @@ public class Q00025_HidingBehindTheTruth extends Quest
 						}
 						else if (qs.isMemoState(8))
 						{
-							htmltext = "31533-06.html";
+							htmltext = "31533-04.html";
 						}
 						break;
 					}
@@ -726,18 +726,14 @@ public class Q00025_HidingBehindTheTruth extends Quest
 					}
 					case COFFIN:
 					{
-						switch (qs.getMemoState())
+						if (qs.isMemoState(11))
 						{
-							case 11:
-							{
-								giveItems(talker, LIDAS_DRESS, 1);
-								cancelQuestTimer("DESPAWN_BOX", npc, talker);
-								startQuestTimer("DESPAWN_BOX", 3000, npc, talker);
-								qs.setMemoState(12);
-								qs.setCond(13, true);
-								htmltext = "31536-01.html";
-								break;
-							}
+							giveItems(talker, LIDAS_DRESS, 1);
+							cancelQuestTimer("DESPAWN_BOX", npc, talker);
+							startQuestTimer("DESPAWN_BOX", 3000, npc, talker);
+							qs.setMemoState(12);
+							qs.setCond(13, true);
+							htmltext = "31536-01.html";
 						}
 						break;
 					}
