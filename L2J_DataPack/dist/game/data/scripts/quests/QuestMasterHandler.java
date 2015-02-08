@@ -45,6 +45,7 @@ import quests.Q00021_HiddenTruth.Q00021_HiddenTruth;
 import quests.Q00022_TragedyInVonHellmannForest.Q00022_TragedyInVonHellmannForest;
 import quests.Q00023_LidiasHeart.Q00023_LidiasHeart;
 import quests.Q00024_InhabitantsOfTheForestOfTheDead.Q00024_InhabitantsOfTheForestOfTheDead;
+import quests.Q00025_HidingBehindTheTruth.Q00025_HidingBehindTheTruth;
 import quests.Q00026_TiredOfWaiting.Q00026_TiredOfWaiting;
 import quests.Q00027_ChestCaughtWithABaitOfWind.Q00027_ChestCaughtWithABaitOfWind;
 import quests.Q00028_ChestCaughtWithABaitOfIcyAir.Q00028_ChestCaughtWithABaitOfIcyAir;
@@ -514,6 +515,7 @@ public class QuestMasterHandler
 		Q00022_TragedyInVonHellmannForest.class,
 		Q00023_LidiasHeart.class,
 		Q00024_InhabitantsOfTheForestOfTheDead.class,
+		Q00025_HidingBehindTheTruth.class,
 		Q00026_TiredOfWaiting.class,
 		Q00027_ChestCaughtWithABaitOfWind.class,
 		Q00028_ChestCaughtWithABaitOfIcyAir.class,

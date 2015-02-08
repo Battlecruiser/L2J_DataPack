@@ -19,6 +19,7 @@
 package quests.Q00024_InhabitantsOfTheForestOfTheDead;
 
 import quests.Q00023_LidiasHeart.Q00023_LidiasHeart;
+import quests.Q00025_HidingBehindTheTruth.Q00025_HidingBehindTheTruth;
 
 import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -285,7 +286,7 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 				}
 				else if (st.isCompleted())
 				{
-					final QuestState qs = player.getQuestState("25_HidingBehindTheTruth");
+					final QuestState qs = player.getQuestState(Q00025_HidingBehindTheTruth.class.getSimpleName());
 					if (!((qs != null) && (qs.isStarted() || qs.isStarted())))
 					{
 						htmltext = "31522-22.html";

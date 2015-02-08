@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00025_HidingBehindTheTruth' WHERE name='25_HidingBehindTheTruth';
