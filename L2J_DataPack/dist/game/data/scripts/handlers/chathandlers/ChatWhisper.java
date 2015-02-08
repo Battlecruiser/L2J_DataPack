@@ -33,11 +33,11 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  * Tell chat handler.
  * @author durgus
  */
-public final class ChatTell implements IChatHandler
+public final class ChatWhisper implements IChatHandler
 {
 	private static final ChatType[] CHAT_TYPES =
 	{
-		ChatType.TELL,
+		ChatType.NPC_WHISPER,
 	};
 	
 	@Override

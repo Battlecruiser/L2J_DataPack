@@ -37,9 +37,9 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  * General Chat Handler.
  * @author durgus
  */
-public final class ChatAll implements IChatHandler
+public final class ChatGeneral implements IChatHandler
 {
-	private static Logger _log = Logger.getLogger(ChatAll.class.getName());
+	private static Logger _log = Logger.getLogger(ChatGeneral.class.getName());
 	
 	private static final ChatType[] CHAT_TYPES =
 	{

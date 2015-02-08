@@ -43,7 +43,7 @@ public final class ChatWorld implements IChatHandler
 	
 	private static final ChatType[] CHAT_TYPES =
 	{
-		ChatType.GLOBAL,
+		ChatType.WORLD,
 	};
 	
 	@Override
