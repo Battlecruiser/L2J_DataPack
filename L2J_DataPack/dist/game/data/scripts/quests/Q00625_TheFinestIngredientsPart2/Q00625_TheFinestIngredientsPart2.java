@@ -282,6 +282,6 @@ public final class Q00625_TheFinestIngredientsPart2 extends Quest
 	
 	private static boolean isBumbalumpSpawned()
 	{
-		return SpawnTable.getInstance().getFirstSpawn(ICICLE_EMPEROR_BUMBALUMP) != null;
+		return SpawnTable.getInstance().getAnySpawn(ICICLE_EMPEROR_BUMBALUMP) != null;
 	}
 }
