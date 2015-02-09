@@ -281,7 +281,7 @@ public final class NpcLocationInfo extends Quest
 			if (Util.contains(NPCRADAR, npcId))
 			{
 				int x = 0, y = 0, z = 0;
-				final L2Spawn spawn = SpawnTable.getInstance().getAnySpawn(npcId);
+				final L2Spawn spawn = SpawnTable.getInstance().findAny(npcId);
 				if (spawn != null)
 				{
 					x = spawn.getX();

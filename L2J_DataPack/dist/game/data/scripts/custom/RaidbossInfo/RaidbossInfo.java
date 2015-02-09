@@ -81,7 +81,7 @@ public final class RaidbossInfo extends Quest
 			
 			if (RAIDS.contains(bossId))
 			{
-				final L2Spawn spawn = SpawnTable.getInstance().getAnySpawn(bossId);
+				final L2Spawn spawn = SpawnTable.getInstance().findAny(bossId);
 				if (spawn != null)
 				{
 					final Location loc = spawn.getLocation();
