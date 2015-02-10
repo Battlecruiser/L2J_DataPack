@@ -145,7 +145,7 @@ public final class SummonNpc extends AbstractEffect
 				L2Spawn spawn;
 				try
 				{
-					spawn = new L2Spawn(npcTemplate);
+					spawn = new L2Spawn(_npcId);
 				}
 				catch (Exception e)
 				{

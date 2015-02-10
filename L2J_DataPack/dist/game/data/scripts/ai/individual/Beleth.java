@@ -28,7 +28,6 @@ import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.data.xml.impl.DoorData;
-import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.L2Object;
@@ -40,7 +39,6 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.Skill;
@@ -116,15 +114,11 @@ public final class Beleth extends AbstractNpcAI
 	{
 		try
 		{
-			L2NpcTemplate template = NpcData.getInstance().getTemplate(npcId);
-			if (template != null)
-			{
-				L2Spawn spawn = new L2Spawn(template);
-				spawn.setInstanceId(loc.getInstanceId());
-				spawn.setLocation(loc);
-				spawn.setAmount(spawn.getAmount() + 1);
-				return spawn.doSpawn();
-			}
+			final L2Spawn spawn = new L2Spawn(npcId);
+			spawn.setInstanceId(loc.getInstanceId());
+			spawn.setLocation(loc);
+			spawn.setAmount(spawn.getAmount() + 1);
+			return spawn.doSpawn();
 		}
 		catch (Exception ignored)
 		{

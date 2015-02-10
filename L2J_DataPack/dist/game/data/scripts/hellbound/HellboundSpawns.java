@@ -28,11 +28,9 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jserver.gameserver.data.xml.IXmlReader;
-import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 
 /**
  * Hellbound Spawns parser.
@@ -88,13 +86,6 @@ public final class HellboundSpawns implements IXmlReader
 			}
 			
 			final int npcId = Integer.parseInt(id.getNodeValue());
-			final L2NpcTemplate template = NpcData.getInstance().getTemplate(npcId);
-			if (template == null)
-			{
-				LOGGER.warning(getClass().getSimpleName() + ": Missing NPC template for ID: " + npcId + "!");
-				return;
-			}
-			
 			Location loc = null;
 			int delay = 0;
 			int randomInterval = 0;
@@ -129,7 +120,7 @@ public final class HellboundSpawns implements IXmlReader
 			
 			try
 			{
-				final L2Spawn spawn = new L2Spawn(template);
+				final L2Spawn spawn = new L2Spawn(npcId);
 				spawn.setAmount(1);
 				if (loc == null)
 				{

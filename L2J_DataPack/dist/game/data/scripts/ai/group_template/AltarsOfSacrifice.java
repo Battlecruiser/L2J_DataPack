@@ -23,7 +23,6 @@ import java.util.logging.Level;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.GeoData;
-import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -56,7 +55,7 @@ public final class AltarsOfSacrifice extends AbstractNpcAI
 				throw new IllegalStateException();
 			}
 			
-			final L2Spawn spawn = new L2Spawn(NpcData.getInstance().getTemplate(_bossNpcIds[Rnd.get(_bossNpcIds.length)]));
+			final L2Spawn spawn = new L2Spawn(_bossNpcIds[Rnd.get(_bossNpcIds.length)]);
 			spawn.setAmount(1);
 			spawn.setHeading(Rnd.get(65536));
 			
