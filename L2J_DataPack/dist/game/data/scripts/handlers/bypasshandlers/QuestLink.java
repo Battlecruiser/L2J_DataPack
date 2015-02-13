@@ -98,7 +98,7 @@ public class QuestLink implements IBypassHandler
 				continue;
 			}
 			
-			final QuestState qs = player.getQuestState(quest.getScriptName());
+			final QuestState qs = player.getQuestState(quest.getName());
 			if ((qs == null) || qs.isCreated())
 			{
 				state = quest.isCustomQuest() ? "" : "01";
