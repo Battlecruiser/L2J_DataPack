@@ -186,17 +186,17 @@ public final class Q00292_BrigandsSweep extends Quest
 								{
 									giveAdena(talker, 1120, true);
 									takeItems(talker, -1, SUSPICIOUS_CONTRACT); // Retail like, reward is given in 2 pieces if both conditions are meet.
-									html = "30523-10.html";
+									html = "30532-10.html";
 								}
 								else
 								{
 									if (memos == 1)
 									{
-										html = "30523-08.html";
+										html = "30532-08.html";
 									}
 									else if (memos >= 2)
 									{
-										html = "30523-09.html";
+										html = "30532-09.html";
 									}
 								}
 							}
