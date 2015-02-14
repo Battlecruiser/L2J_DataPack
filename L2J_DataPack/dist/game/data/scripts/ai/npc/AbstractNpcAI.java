@@ -18,8 +18,6 @@
  */
 package ai.npc;
 
-import java.util.logging.Logger;
-
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
@@ -37,8 +35,6 @@ import com.l2jserver.gameserver.util.Broadcast;
  */
 public abstract class AbstractNpcAI extends Quest
 {
-	public final Logger _log = Logger.getLogger(getClass().getSimpleName());
-	
 	public AbstractNpcAI(String name, String descr)
 	{
 		super(-1, name, descr);

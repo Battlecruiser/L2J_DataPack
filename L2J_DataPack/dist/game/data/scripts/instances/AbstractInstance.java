@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -19,10 +19,8 @@
 package instances;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-import java.util.logging.Logger;
 
 import ai.npc.AbstractNpcAI;
 
@@ -46,8 +44,6 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  */
 public abstract class AbstractInstance extends AbstractNpcAI
 {
-	public final Logger _log = Logger.getLogger(getClass().getSimpleName());
-	
 	public AbstractInstance(String name, String desc)
 	{
 		super(name, desc);
@@ -80,27 +76,26 @@ public abstract class AbstractInstance extends AbstractNpcAI
 		
 		if (checkConditions(player))
 		{
-			final InstanceWorld playerWorld = instance;
-			playerWorld.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
-			playerWorld.setTemplateId(templateId);
-			playerWorld.setStatus(0);
-			InstanceManager.getInstance().addWorld(playerWorld);
-			onEnterInstance(player, playerWorld, true);
+			instance.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
+			instance.setTemplateId(templateId);
+			instance.setStatus(0);
+			InstanceManager.getInstance().addWorld(instance);
+			onEnterInstance(player, instance, true);
 			
-			final Instance inst = InstanceManager.getInstance().getInstance(playerWorld.getInstanceId());
+			final Instance inst = InstanceManager.getInstance().getInstance(instance.getInstanceId());
 			if (inst.getReenterType() == InstanceReenterType.ON_INSTANCE_ENTER)
 			{
-				handleReenterTime(playerWorld);
+				handleReenterTime(instance);
 			}
 			
 			if (inst.isRemoveBuffEnabled())
 			{
-				handleRemoveBuffs(playerWorld);
+				handleRemoveBuffs(instance);
 			}
 			
 			if (Config.DEBUG_INSTANCES)
 			{
-				_log.info("Instance " + InstanceManager.getInstance().getInstance(playerWorld.getInstanceId()).getName() + " (" + playerWorld.getTemplateId() + ") has been created by player " + player.getName());
+				_log.info("Instance " + inst.getName() + " (" + instance.getTemplateId() + ") has been created by player " + player.getName());
 			}
 		}
 	}
@@ -182,7 +177,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	
 	protected void handleRemoveBuffs(InstanceWorld world)
 	{
-		for (Integer objId : world.getAllowed())
+		for (int objId : world.getAllowed())
 		{
 			final L2PcInstance player = L2World.getInstance().getPlayer(objId);
 			
@@ -202,8 +197,8 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	
 	/**
 	 * Spawns group of instance NPC's
-	 * @param groupName - name of group from XML definition to spawn
-	 * @param instanceId - ID of instance
+	 * @param groupName the name of group from XML definition to spawn
+	 * @param instanceId the instance ID
 	 * @return list of spawned NPC's
 	 */
 	protected List<L2Npc> spawnGroup(String groupName, int instanceId)
@@ -212,9 +207,9 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	}
 	
 	/**
-	 * Save Reenter time for every player in InstanceWorld.
-	 * @param world - the InstanceWorld
-	 * @param time - Time in miliseconds
+	 * Sets reenter time for every player in the instance.
+	 * @param world the instance
+	 * @param time the time in milliseconds
 	 */
 	protected void setReenterTime(InstanceWorld world, long time)
 	{
@@ -237,12 +232,12 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	private void handleRemoveBuffs(L2PcInstance player, InstanceWorld world)
 	{
 		final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
-		final List<BuffInfo> buffToRemove = new ArrayList<>();
-		
 		switch (inst.getRemoveBuffType())
 		{
 			case ALL:
 			{
+				player.stopAllEffectsExceptThoseThatLastThroughDeath();
+				
 				final L2Summon summon = player.getSummon();
 				if (summon != null)
 				{
@@ -256,7 +251,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 				{
 					if (!inst.getBuffExceptionList().contains(info.getSkill().getId()))
 					{
-						buffToRemove.add(info);
+						info.getEffected().getEffectList().stopSkillEffects(true, info.getSkill());
 					}
 				}
 				
@@ -267,7 +262,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 					{
 						if (!inst.getBuffExceptionList().contains(info.getSkill().getId()))
 						{
-							buffToRemove.add(info);
+							info.getEffected().getEffectList().stopSkillEffects(true, info.getSkill());
 						}
 					}
 				}
@@ -279,7 +274,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 				{
 					if (inst.getBuffExceptionList().contains(info.getSkill().getId()))
 					{
-						buffToRemove.add(info);
+						info.getEffected().getEffectList().stopSkillEffects(true, info.getSkill());
 					}
 				}
 				
@@ -290,17 +285,12 @@ public abstract class AbstractInstance extends AbstractNpcAI
 					{
 						if (inst.getBuffExceptionList().contains(info.getSkill().getId()))
 						{
-							buffToRemove.add(info);
+							info.getEffected().getEffectList().stopSkillEffects(true, info.getSkill());
 						}
 					}
 				}
 				break;
 			}
-		}
-		
-		for (BuffInfo info : buffToRemove)
-		{
-			info.getEffected().getEffectList().stopSkillEffects(true, info.getSkill());
 		}
 	}
 }
