@@ -190,7 +190,7 @@ public final class Q00501_ProofOfClanAlliance extends Quest
 				{
 					if (npc.getSummonedNpcCount() < 4)
 					{
-						takeItems(player, ADENA_TO_RESTART_GAME, Inventory.ADENA_ID);
+						takeItems(player, Inventory.ADENA_ID, ADENA_TO_RESTART_GAME);
 					}
 					htmltext = event;
 				}
