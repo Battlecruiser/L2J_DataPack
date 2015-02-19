@@ -18,7 +18,8 @@
  */
 package ai.individual;
 
-import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 
 import ai.npc.AbstractNpcAI;
@@ -31,7 +32,6 @@ import com.l2jserver.gameserver.data.xml.impl.DoorData;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
@@ -58,6 +58,9 @@ import com.l2jserver.gameserver.util.Util;
  */
 public final class Beleth extends AbstractNpcAI
 {
+	// NPCs
+	private static final int BELETH_ID_1 = 29118;
+	private static final int BELETH_ID_2 = 29119;
 	protected static L2Npc CAMERA;
 	protected static L2Npc CAMERA2;
 	protected static L2Npc CAMERA3;
@@ -72,11 +75,11 @@ public final class Beleth extends AbstractNpcAI
 	private static int ALLOW_OBJECT_ID = 0;
 	private static int KILLED = 0;
 	protected static ScheduledFuture<?> SPAWN_TIMER = null;
-	protected static ArrayList<L2Npc> MINIONS = new ArrayList<>();
-	private static SkillHolder BLEED = new SkillHolder(5495, 1);
-	private static SkillHolder FIREBALL = new SkillHolder(5496, 1);
-	private static SkillHolder HORN_OF_RISING = new SkillHolder(5497, 1);
-	private static SkillHolder LIGHTENING = new SkillHolder(5499, 1);
+	protected static final List<L2Npc> MINIONS = new CopyOnWriteArrayList<>();
+	private static final SkillHolder BLEED = new SkillHolder(5495, 1);
+	private static final SkillHolder FIREBALL = new SkillHolder(5496, 1);
+	private static final SkillHolder HORN_OF_RISING = new SkillHolder(5497, 1);
+	private static final SkillHolder LIGHTENING = new SkillHolder(5499, 1);
 	
 	protected static final Location BELETH_SPAWN = new Location(16323, 213059, -9357, 49152);
 	
@@ -85,60 +88,34 @@ public final class Beleth extends AbstractNpcAI
 		super(Beleth.class.getSimpleName(), "ai/individual");
 		ZONE = ZoneManager.getInstance().getZoneById(12018);
 		addEnterZoneId(12018);
-		registerMobs(29118, 29119);
+		registerMobs(BELETH_ID_1, BELETH_ID_2);
 		addStartNpc(32470);
 		addTalkId(32470);
 		addFirstTalkId(29128);
-		StatsSet info = GrandBossManager.getInstance().getStatsSet(29118);
-		int status = GrandBossManager.getInstance().getBossStatus(29118);
+		StatsSet info = GrandBossManager.getInstance().getStatsSet(BELETH_ID_1);
+		int status = GrandBossManager.getInstance().getBossStatus(BELETH_ID_1);
 		if (status == 3)
 		{
-			long temp = (info.getLong("respawn_time") - System.currentTimeMillis());
-			if (temp > 0)
+			final long time = (info.getLong("respawn_time") - System.currentTimeMillis());
+			if (time > 0)
 			{
-				ThreadPoolManager.getInstance().scheduleGeneral(new unlock(), temp);
+				startQuestTimer("UNLOCK", time, null, null);
 			}
 			else
 			{
-				GrandBossManager.getInstance().setBossStatus(29118, 0);
+				GrandBossManager.getInstance().setBossStatus(BELETH_ID_1, 0);
 			}
 		}
 		else if (status != 0)
 		{
-			GrandBossManager.getInstance().setBossStatus(29118, 0);
+			GrandBossManager.getInstance().setBossStatus(BELETH_ID_1, 0);
 		}
 		DoorData.getInstance().getDoor(20240001).openMe();
-	}
-	
-	protected static L2Npc spawn(int npcId, Location loc)
-	{
-		try
-		{
-			final L2Spawn spawn = new L2Spawn(npcId);
-			spawn.setInstanceId(loc.getInstanceId());
-			spawn.setLocation(loc);
-			spawn.setAmount(spawn.getAmount() + 1);
-			return spawn.doSpawn();
-		}
-		catch (Exception ignored)
-		{
-		}
-		return null;
 	}
 	
 	public static void startSpawnTask()
 	{
 		ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(1), DEBUG ? 10000 : 300000);
-	}
-	
-	protected static class unlock implements Runnable
-	{
-		@Override
-		public void run()
-		{
-			GrandBossManager.getInstance().setBossStatus(29118, 0);
-			DoorData.getInstance().getDoor(20240001).openMe();
-		}
 	}
 	
 	private static class Cast implements Runnable
@@ -189,10 +166,10 @@ public final class Beleth extends AbstractNpcAI
 								npc.deleteMe();
 							}
 						}
-						CAMERA = spawn(29120, new Location(16323, 213142, -9357, 0, instanceId));
-						CAMERA2 = spawn(29121, new Location(16323, 210741, -9357, 0, instanceId));
-						CAMERA3 = spawn(29122, new Location(16323, 213170, -9357, 0, instanceId));
-						CAMERA4 = spawn(29123, new Location(16323, 214917, -9356, 0, instanceId));
+						CAMERA = addSpawn(29120, new Location(16323, 213142, -9357, 0, instanceId));
+						CAMERA2 = addSpawn(29121, new Location(16323, 210741, -9357, 0, instanceId));
+						CAMERA3 = addSpawn(29122, new Location(16323, 213170, -9357, 0, instanceId));
+						CAMERA4 = addSpawn(29123, new Location(16323, 214917, -9356, 0, instanceId));
 						ZONE.broadcastPacket(new PlaySound(1, "BS07_A", 1, CAMERA.getObjectId(), CAMERA.getX(), CAMERA.getY(), CAMERA.getZ()));
 						ZONE.broadcastPacket(new SpecialCamera(CAMERA, 400, 75, -25, 0, 2500, 0, 0, 1, 0, 0));
 						ZONE.broadcastPacket(new SpecialCamera(CAMERA, 400, 75, -25, 0, 2500, 0, 0, 1, 0, 0));
@@ -227,7 +204,7 @@ public final class Beleth extends AbstractNpcAI
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(8), 6000);
 						break;
 					case 8:
-						spawn(29125, new Location(16323, 214917, -9356, 0, instanceId));
+						addSpawn(29125, new Location(16323, 214917, -9356, 0, instanceId));
 						ZONE.broadcastPacket(new SpecialCamera(CAMERA4, 900, 255, 0, 0, 1500, 0, 10, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(9), 1000);
 						break;
@@ -236,7 +213,7 @@ public final class Beleth extends AbstractNpcAI
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(10), 3000);
 						break;
 					case 10:
-						BELETH = spawn(29118, new Location(16321, 214211, -9352, 49369, instanceId));
+						BELETH = addSpawn(BELETH_ID_1, new Location(16321, 214211, -9352, 49369, instanceId));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(11), 200);
 						break;
 					case 11:
@@ -245,7 +222,7 @@ public final class Beleth extends AbstractNpcAI
 						{
 							int x = (int) ((150 * Math.cos(i * 1.046666667)) + 16323);
 							int y = (int) ((150 * Math.sin(i * 1.046666667)) + 213059);
-							L2Npc minion = spawn(29119, new Location(x, y, -9357, 49152, BELETH.getInstanceId()));
+							L2Npc minion = addSpawn(BELETH_ID_2, new Location(x, y, -9357, 49152, BELETH.getInstanceId()));
 							minion.setShowSummonAnimation(true);
 							minion.decayMe();
 							MINIONS.add(minion);
@@ -332,7 +309,7 @@ public final class Beleth extends AbstractNpcAI
 						break;
 					case 27:
 						BELETH.doDie(null);
-						CAMERA = spawn(29122, new Location(16323, 213170, -9357, 0, instanceId));
+						CAMERA = addSpawn(29122, new Location(16323, 213170, -9357, 0, instanceId));
 						CAMERA.broadcastPacket(new PlaySound(1, "BS07_D", 1, CAMERA.getObjectId(), CAMERA.getX(), CAMERA.getY(), CAMERA.getZ()));
 						ZONE.broadcastPacket(new SpecialCamera(CAMERA, 400, 290, 25, 0, 10000, 0, 0, 1, 0, 0));
 						ZONE.broadcastPacket(new SpecialCamera(CAMERA, 400, 290, 25, 0, 10000, 0, 0, 1, 0, 0));
@@ -356,7 +333,7 @@ public final class Beleth extends AbstractNpcAI
 					case 31:
 						PRIEST.spawnMe();
 						BELETH.deleteMe();
-						CAMERA2 = spawn(29121, new Location(14056, 213170, -9357, 0, instanceId));
+						CAMERA2 = addSpawn(29121, new Location(14056, 213170, -9357, 0, instanceId));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(32), 3500);
 						break;
 					case 32:
@@ -375,7 +352,7 @@ public final class Beleth extends AbstractNpcAI
 						MOVIE = false;
 						break;
 					case 333:
-						BELETH = spawn(29118, new Location(16323, 213170, -9357, 49152));
+						BELETH = addSpawn(BELETH_ID_1, new Location(16323, 213170, -9357, 49152));
 						break;
 				
 				}
@@ -388,50 +365,59 @@ public final class Beleth extends AbstractNpcAI
 	}
 	
 	@Override
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	{
+		switch (event)
+		{
+			case "UNLOCK":
+			{
+				GrandBossManager.getInstance().setBossStatus(BELETH_ID_1, 0);
+				DoorData.getInstance().getDoor(20240001).openMe();
+				break;
+			}
+		}
+		return super.onAdvEvent(event, npc, player);
+	}
+	
+	@Override
 	public String onEnterZone(L2Character character, L2ZoneType zone)
 	{
-		if (((character.isPlayer()) && (GrandBossManager.getInstance().getBossStatus(29118) == 1)) || (DEBUG && (GrandBossManager.getInstance().getBossStatus(29118) != 2) && (character.isPlayer())))
+		if (((character.isPlayer()) && (GrandBossManager.getInstance().getBossStatus(BELETH_ID_1) == 1)) || (DEBUG && (GrandBossManager.getInstance().getBossStatus(BELETH_ID_1) != 2) && (character.isPlayer())))
 		{
 			startSpawnTask();
-			GrandBossManager.getInstance().setBossStatus(29118, 2);
+			GrandBossManager.getInstance().setBossStatus(BELETH_ID_1, 2);
 		}
-		return null;
+		
+		return super.onEnterZone(character, zone);
 	}
 	
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		if (npc == null)
+		if ((npc.getId() == BELETH_ID_1) && (killer != null))
 		{
-			return super.onKill(npc, killer, isSummon);
-		}
-		
-		if ((npc.getId() == 29118) && (killer != null))
-		{
-			setBelethKiller(1, killer);
-			GrandBossManager.getInstance().setBossStatus(29118, 3);
+			setBelethKiller(killer);
+			GrandBossManager.getInstance().setBossStatus(BELETH_ID_1, 3);
 			// Calculate Min and Max respawn times randomly.
-			long respawnTime = Config.BELETH_SPAWN_INTERVAL + getRandom(-Config.BELETH_SPAWN_RANDOM, Config.BELETH_SPAWN_RANDOM);
-			respawnTime *= 3600000;
-			
-			StatsSet info = GrandBossManager.getInstance().getStatsSet(29118);
+			final long respawnTime = (Config.BELETH_SPAWN_INTERVAL + getRandom(-Config.BELETH_SPAWN_RANDOM, Config.BELETH_SPAWN_RANDOM)) * 3600000;
+			StatsSet info = GrandBossManager.getInstance().getStatsSet(BELETH_ID_1);
 			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-			GrandBossManager.getInstance().setStatsSet(29118, info);
-			ThreadPoolManager.getInstance().scheduleGeneral(new unlock(), respawnTime);
+			GrandBossManager.getInstance().setStatsSet(BELETH_ID_1, info);
+			startQuestTimer("UNLOCK", respawnTime, null, null);
 			deleteAll();
 			npc.deleteMe();
 			MOVIE = true;
-			BELETH = spawn(29118, new Location(16323, 213170, -9357, 49152));
+			BELETH = addSpawn(BELETH_ID_1, new Location(16323, 213170, -9357, 49152));
 			BELETH.setIsInvul(true);
 			BELETH.setIsImmobilized(true);
 			BELETH.disableAllSkills();
-			PRIEST = spawn(29128, new Location(BELETH));
+			PRIEST = addSpawn(29128, new Location(BELETH));
 			PRIEST.setShowSummonAnimation(true);
 			PRIEST.decayMe();
-			spawn(32470, new Location(12470, 215607, -9381, 49152));
+			addSpawn(32470, new Location(12470, 215607, -9381, 49152));
 			ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(27), 1000);
 		}
-		else if (npc.getId() == 29119)
+		else if (npc.getId() == BELETH_ID_2)
 		{
 			if (npc.getObjectId() == ALLOW_OBJECT_ID)
 			{
@@ -464,7 +450,7 @@ public final class Beleth extends AbstractNpcAI
 	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance player, Skill skill, L2Object[] targets, boolean isSummon)
 	{
-		if ((npc != null) && !npc.isDead() && ((npc.getId() == 29118) || (npc.getId() == 29119)) && !npc.isCastingNow() && skill.hasEffectType(L2EffectType.HEAL) && (getRandom(100) < 80))
+		if ((npc != null) && !npc.isDead() && ((npc.getId() == BELETH_ID_1) || (npc.getId() == BELETH_ID_2)) && !npc.isCastingNow() && skill.hasEffectType(L2EffectType.HEAL) && (getRandom(100) < 80))
 		{
 			npc.setTarget(player);
 			npc.doCast(HORN_OF_RISING.getSkill());
@@ -480,7 +466,7 @@ public final class Beleth extends AbstractNpcAI
 			return super.onAttack(npc, attacker, damage, isSummon);
 		}
 		
-		if ((npc.getId() == 29118) || (npc.getId() == 29119))
+		if ((npc.getId() == BELETH_ID_1) || (npc.getId() == BELETH_ID_2))
 		{
 			if ((npc.getObjectId() == ALLOW_OBJECT_ID) && !ATTACKED)
 			{
@@ -529,7 +515,7 @@ public final class Beleth extends AbstractNpcAI
 	@Override
 	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
 	{
-		if ((npc != null) && !npc.isDead() && ((npc.getId() == 29118) || (npc.getId() == 29119)) && !npc.isCastingNow())
+		if ((npc != null) && !npc.isDead() && ((npc.getId() == BELETH_ID_1) || (npc.getId() == BELETH_ID_2)) && !npc.isCastingNow())
 		{
 			if ((player != null) && !player.isDead())
 			{
@@ -541,7 +527,6 @@ public final class Beleth extends AbstractNpcAI
 					double speed = npc.isRunning() ? npc.getRunSpeed() : npc.getWalkSpeed();
 					int time = (int) (((distance2 - 890) / speed) * 1000);
 					ThreadPoolManager.getInstance().scheduleGeneral(new Cast(FIREBALL, npc), time);
-					
 				}
 				else if (distance2 < 890)
 				{
@@ -572,7 +557,7 @@ public final class Beleth extends AbstractNpcAI
 	@Override
 	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		if ((npc != null) && !npc.isDead() && ((npc.getId() == 29118) || (npc.getId() == 29119)) && !npc.isCastingNow() && !MOVIE)
+		if ((npc != null) && !npc.isDead() && ((npc.getId() == BELETH_ID_1) || (npc.getId() == BELETH_ID_2)) && !npc.isCastingNow() && !MOVIE)
 		{
 			if (getRandom(100) < 40)
 			{
@@ -591,14 +576,14 @@ public final class Beleth extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		if ((npc.getId() == 29118) || (npc.getId() == 29119))
+		if ((npc.getId() == BELETH_ID_1) || (npc.getId() == BELETH_ID_2))
 		{
 			npc.setRunning();
 			if (!MOVIE && !npc.getKnownList().getKnownPlayersInRadius(300).isEmpty() && (getRandom(100) < 60))
 			{
 				npc.doCast(BLEED.getSkill());
 			}
-			if (npc.getId() == 29118)
+			if (npc.getId() == BELETH_ID_1)
 			{
 				npc.getSpawn().setRespawnDelay(0);// setOnKillDelay
 			}
@@ -613,7 +598,7 @@ public final class Beleth extends AbstractNpcAI
 		if ((BELETH_KILLER != null) && (player.getObjectId() == BELETH_KILLER.getObjectId()))
 		{
 			player.addItem("Kill Beleth", 10314, 1, null, true);// giveItems(10314, 1, 0)
-			setBelethKiller(0, player);
+			BELETH_KILLER = null;
 			html = "32470a.htm";
 		}
 		else
@@ -629,29 +614,22 @@ public final class Beleth extends AbstractNpcAI
 		return null;
 	}
 	
-	private static void setBelethKiller(int event, L2PcInstance killer)
+	private static void setBelethKiller(L2PcInstance killer)
 	{
-		if (event == 0)
+		if (killer.getParty() != null)
 		{
-			BELETH_KILLER = null;
-		}
-		else if (event == 1)
-		{
-			if (killer.getParty() != null)
+			if (killer.getParty().getCommandChannel() != null)
 			{
-				if (killer.getParty().getCommandChannel() != null)
-				{
-					BELETH_KILLER = killer.getParty().getCommandChannel().getLeader();
-				}
-				else
-				{
-					BELETH_KILLER = killer.getParty().getLeader();
-				}
+				BELETH_KILLER = killer.getParty().getCommandChannel().getLeader();
 			}
 			else
 			{
-				BELETH_KILLER = killer;
+				BELETH_KILLER = killer.getParty().getLeader();
 			}
+		}
+		else
+		{
+			BELETH_KILLER = killer;
 		}
 	}
 	
@@ -679,7 +657,7 @@ public final class Beleth extends AbstractNpcAI
 		{
 			for (L2Npc npc : MINIONS)
 			{
-				if ((npc == null) || npc.isDead())
+				if (npc.isDead())
 				{
 					continue;
 				}
@@ -703,7 +681,7 @@ public final class Beleth extends AbstractNpcAI
 			a++;
 			int x = (int) ((650 * Math.cos(i * 0.39)) + 16323);
 			int y = (int) ((650 * Math.sin(i * 0.39)) + 213170);
-			npc = spawn(29119, new Location(x, y, -9357, 49152));
+			npc = addSpawn(BELETH_ID_2, new Location(x, y, -9357, 49152));
 			MINIONS.add(npc);
 			if (a >= 2)
 			{
@@ -717,54 +695,54 @@ public final class Beleth extends AbstractNpcAI
 		{
 			xm[i] = (int) ((1700 * Math.cos((i * 1.57) + 0.78)) + 16323);
 			ym[i] = (int) ((1700 * Math.sin((i * 1.57) + 0.78)) + 213170);
-			npc = spawn(29119, new Location(xm[i], ym[i], -9357, 49152));
+			npc = addSpawn(BELETH_ID_2, new Location(xm[i], ym[i], -9357, 49152));
 			npc.setIsOverloaded(true);
 			MINIONS.add(npc);
 		}
 		xm[4] = (xm[0] + xm[1]) / 2;
 		ym[4] = (ym[0] + ym[1]) / 2;
-		npc = spawn(29119, new Location(xm[4], ym[4], -9357, 49152));
+		npc = addSpawn(BELETH_ID_2, new Location(xm[4], ym[4], -9357, 49152));
 		npc.setIsOverloaded(true);
 		MINIONS.add(npc);
 		xm[5] = (xm[1] + xm[2]) / 2;
 		ym[5] = (ym[1] + ym[2]) / 2;
-		npc = spawn(29119, new Location(xm[5], ym[5], -9357, 49152));
+		npc = addSpawn(BELETH_ID_2, new Location(xm[5], ym[5], -9357, 49152));
 		npc.setIsOverloaded(true);
 		MINIONS.add(npc);
 		xm[6] = (xm[2] + xm[3]) / 2;
 		ym[6] = (ym[2] + ym[3]) / 2;
-		npc = spawn(29119, new Location(xm[6], ym[6], -9357, 49152));
+		npc = addSpawn(BELETH_ID_2, new Location(xm[6], ym[6], -9357, 49152));
 		npc.setIsOverloaded(true);
 		MINIONS.add(npc);
 		xm[7] = (xm[3] + xm[0]) / 2;
 		ym[7] = (ym[3] + ym[0]) / 2;
-		npc = spawn(29119, new Location(xm[7], ym[7], -9357, 49152));
+		npc = addSpawn(BELETH_ID_2, new Location(xm[7], ym[7], -9357, 49152));
 		npc.setIsOverloaded(true);
 		MINIONS.add(npc);
 		xm[8] = (xm[0] + xm[4]) / 2;
 		ym[8] = (ym[0] + ym[4]) / 2;
-		MINIONS.add(spawn(29119, new Location(xm[8], ym[8], -9357, 49152)));
+		MINIONS.add(addSpawn(BELETH_ID_2, new Location(xm[8], ym[8], -9357, 49152)));
 		xm[9] = (xm[4] + xm[1]) / 2;
 		ym[9] = (ym[4] + ym[1]) / 2;
-		MINIONS.add(spawn(29119, new Location(xm[9], ym[9], -9357, 49152)));
+		MINIONS.add(addSpawn(BELETH_ID_2, new Location(xm[9], ym[9], -9357, 49152)));
 		xm[10] = (xm[1] + xm[5]) / 2;
 		ym[10] = (ym[1] + ym[5]) / 2;
-		MINIONS.add(spawn(29119, new Location(xm[10], ym[10], -9357, 49152)));
+		MINIONS.add(addSpawn(BELETH_ID_2, new Location(xm[10], ym[10], -9357, 49152)));
 		xm[11] = (xm[5] + xm[2]) / 2;
 		ym[11] = (ym[5] + ym[2]) / 2;
-		MINIONS.add(spawn(29119, new Location(xm[11], ym[11], -9357, 49152)));
+		MINIONS.add(addSpawn(BELETH_ID_2, new Location(xm[11], ym[11], -9357, 49152)));
 		xm[12] = (xm[2] + xm[6]) / 2;
 		ym[12] = (ym[2] + ym[6]) / 2;
-		MINIONS.add(spawn(29119, new Location(xm[12], ym[12], -9357, 49152)));
+		MINIONS.add(addSpawn(BELETH_ID_2, new Location(xm[12], ym[12], -9357, 49152)));
 		xm[13] = (xm[6] + xm[3]) / 2;
 		ym[13] = (ym[6] + ym[3]) / 2;
-		MINIONS.add(spawn(29119, new Location(xm[13], ym[13], -9357, 49152)));
+		MINIONS.add(addSpawn(BELETH_ID_2, new Location(xm[13], ym[13], -9357, 49152)));
 		xm[14] = (xm[3] + xm[7]) / 2;
 		ym[14] = (ym[3] + ym[7]) / 2;
-		MINIONS.add(spawn(29119, new Location(xm[14], ym[14], -9357, 49152)));
+		MINIONS.add(addSpawn(BELETH_ID_2, new Location(xm[14], ym[14], -9357, 49152)));
 		xm[15] = (xm[7] + xm[0]) / 2;
 		ym[15] = (ym[7] + ym[0]) / 2;
-		MINIONS.add(spawn(29119, new Location(xm[15], ym[15], -9357, 49152)));
+		MINIONS.add(addSpawn(BELETH_ID_2, new Location(xm[15], ym[15], -9357, 49152)));
 		ALLOW_OBJECT_ID = MINIONS.get(getRandom(MINIONS.size())).getObjectId();
 		ATTACKED = false;
 	}
