@@ -47,9 +47,9 @@ public final class GatekeeperSpirit extends AbstractNpcAI
 	private GatekeeperSpirit()
 	{
 		super(GatekeeperSpirit.class.getSimpleName(), "ai/npc/Teleports");
-		addStartNpc(GATEKEEPER_SPIRIT_ENTER);
-		addFirstTalkId(GATEKEEPER_SPIRIT_ENTER);
-		addTalkId(GATEKEEPER_SPIRIT_ENTER);
+		addStartNpc(GATEKEEPER_SPIRIT_ENTER, GATEKEEPER_SPIRIT_EXIT);
+		addFirstTalkId(GATEKEEPER_SPIRIT_ENTER, GATEKEEPER_SPIRIT_EXIT);
+		addTalkId(GATEKEEPER_SPIRIT_ENTER, GATEKEEPER_SPIRIT_EXIT);
 		addKillId(LILITH, ANAKIM);
 	}
 	
