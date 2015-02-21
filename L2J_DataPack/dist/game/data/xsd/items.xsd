@@ -4,6 +4,7 @@
 		<xs:attribute name="name" use="required">
 			<xs:simpleType>
 				<xs:restriction base="xs:token">
+					<xs:enumeration value="displayId" />
 					<xs:enumeration value="armor_type" />
 					<xs:enumeration value="attack_range" />
 					<xs:enumeration value="auto_destroy_time" />
