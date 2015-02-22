@@ -27,6 +27,7 @@ import java.util.logging.Level;
 import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
+import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -42,6 +43,8 @@ import com.l2jserver.util.StringUtil;
 
 public class QuestLink implements IBypassHandler
 {
+	private static final int TO_LEAD_AND_BE_LED = 118;
+	private static final int THE_LEADER_AND_THE_FOLLOWER = 123;
 	private static final String[] COMMANDS =
 	{
 		"Quest"
@@ -85,7 +88,7 @@ public class QuestLink implements IBypassHandler
 	 * @param npc The table containing quests of the L2NpcInstance
 	 * @param quests
 	 */
-	public static void showQuestChooseWindow(L2PcInstance player, L2Npc npc, Quest[] quests)
+	private static void showQuestChooseWindow(L2PcInstance player, L2Npc npc, Quest[] quests)
 	{
 		final StringBuilder sb = StringUtil.startAppend(150, "<html><body>");
 		String state = "";
@@ -131,7 +134,7 @@ public class QuestLink implements IBypassHandler
 			else
 			{
 				questId = quest.getId();
-				if (quest.getId() > 10000)
+				if (questId > 10000)
 				{
 					questId -= 5000;
 				}
@@ -142,6 +145,19 @@ public class QuestLink implements IBypassHandler
 				StringUtil.append(sb, "<fstring>", String.valueOf(questId), state, "</fstring>");
 			}
 			sb.append("]</font></a><br>");
+			
+			if ((player.getApprentice() > 0) && (L2World.getInstance().getPlayer(player.getApprentice()) != null))
+			{
+				if (questId == TO_LEAD_AND_BE_LED)
+				{
+					sb.append("<a action=\"bypass -h Quest Q00118_ToLeadAndBeLed sponsor\"><font color=\"" + color + "\">[<fstring>" + questId + state + "</fstring> (Sponsor)]</font></a><br>");
+				}
+				
+				if (questId == THE_LEADER_AND_THE_FOLLOWER)
+				{
+					sb.append("<a action=\"bypass -h Quest Q00123_TheLeaderAndTheFollower sponsor\"><font color=\"" + color + "\">[<fstring>" + questId + state + "</fstring> (Sponsor)]</font></a><br>");
+				}
+			}
 		}
 		sb.append("</body></html>");
 		
@@ -255,11 +271,7 @@ public class QuestLink implements IBypassHandler
 	public static void showQuestWindow(L2PcInstance player, L2Npc npc)
 	{
 		boolean conditionMeet = false;
-		// collect awaiting quests and start points
 		final Set<Quest> options = new HashSet<>();
-		
-		// Quests are limited between 1 and 999 because those are the quests that are supported by the client.
-		// By limiting them there, we are allowed to create custom quests at higher IDs without interfering
 		for (QuestState state : getQuestsForTalk(player, npc.getId()))
 		{
 			final Quest quest = state.getQuest();
@@ -298,7 +310,7 @@ public class QuestLink implements IBypassHandler
 		{
 			showQuestWindow(player, npc, "");
 		}
-		else if (options.size() > 1)
+		else if ((options.size() > 1) || ((player.getApprentice() > 0) && (L2World.getInstance().getPlayer(player.getApprentice()) != null) && options.stream().anyMatch(q -> q.getId() == TO_LEAD_AND_BE_LED)))
 		{
 			showQuestChooseWindow(player, npc, options.toArray(new Quest[options.size()]));
 		}
