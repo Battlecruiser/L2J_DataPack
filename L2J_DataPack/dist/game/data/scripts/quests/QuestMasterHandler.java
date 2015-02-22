@@ -325,6 +325,7 @@ import quests.Q00368_TrespassingIntoTheHolyGround.Q00368_TrespassingIntoTheHolyG
 import quests.Q00369_CollectorOfJewels.Q00369_CollectorOfJewels;
 import quests.Q00370_AnElderSowsSeeds.Q00370_AnElderSowsSeeds;
 import quests.Q00371_ShrieksOfGhosts.Q00371_ShrieksOfGhosts;
+import quests.Q00373_SupplierOfReagents.Q00373_SupplierOfReagents;
 import quests.Q00376_ExplorationOfTheGiantsCavePart1.Q00376_ExplorationOfTheGiantsCavePart1;
 import quests.Q00377_ExplorationOfTheGiantsCavePart2.Q00377_ExplorationOfTheGiantsCavePart2;
 import quests.Q00378_GrandFeast.Q00378_GrandFeast;
@@ -795,6 +796,7 @@ public class QuestMasterHandler
 		Q00369_CollectorOfJewels.class,
 		Q00370_AnElderSowsSeeds.class,
 		Q00371_ShrieksOfGhosts.class,
+		Q00373_SupplierOfReagents.class,
 		Q00376_ExplorationOfTheGiantsCavePart1.class,
 		Q00377_ExplorationOfTheGiantsCavePart2.class,
 		Q00378_GrandFeast.class,
