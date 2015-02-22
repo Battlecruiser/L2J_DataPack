@@ -28,10 +28,8 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * Olympiad Undefeated (553)<br>
+ * Olympiad Undefeated (553)
  * @author lion
- * @since Nov. 5, 2011, improved by jurchiks
- * @version 2011-02-05 Based on official H5 PTS server and 551 quest ;)
  */
 public class Q00553_OlympiadUndefeated extends Quest
 {
@@ -82,7 +80,7 @@ public class Q00553_OlympiadUndefeated extends Quest
 			}
 			else
 			{
-				htmltext = getNoQuestMsg(player); // missing items
+				htmltext = getNoQuestMsg(player);
 			}
 		}
 		return htmltext;
@@ -171,10 +169,7 @@ public class Q00553_OlympiadUndefeated extends Quest
 			if (st.isNowAvailable())
 			{
 				st.setState(State.CREATED);
-				if ((player.getLevel() < 75) || !player.isNoble())
-				{
-					htmltext = "31688-00.htm";
-				}
+				htmltext = (player.getLevel() < 75) || !player.isNoble() ? "31688-00.htm" : "31688-01.htm";
 			}
 			else
 			{

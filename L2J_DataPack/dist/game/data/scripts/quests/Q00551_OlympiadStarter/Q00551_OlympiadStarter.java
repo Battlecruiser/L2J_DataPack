@@ -28,10 +28,8 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * Olympiad Starter (551)<br>
+ * Olympiad Starter (551)
  * @author Gnacik
- * @since Nov. 5, 2011, improved by jurchiks
- * @version 2011-02-04 Based on official H5 PTS server
  */
 public class Q00551_OlympiadStarter extends Quest
 {
@@ -81,7 +79,7 @@ public class Q00551_OlympiadStarter extends Quest
 			}
 			else
 			{
-				htmltext = super.getNoQuestMsg(player); // missing items
+				htmltext = getNoQuestMsg(player);
 			}
 		}
 		return htmltext;
@@ -221,10 +219,7 @@ public class Q00551_OlympiadStarter extends Quest
 			if (st.isNowAvailable())
 			{
 				st.setState(State.CREATED);
-				if ((player.getLevel() < 75) || !player.isNoble())
-				{
-					htmltext = "31688-00.htm";
-				}
+				htmltext = (player.getLevel() < 75) || !player.isNoble() ? "31688-00.htm" : "31688-01.htm";
 			}
 			else
 			{
