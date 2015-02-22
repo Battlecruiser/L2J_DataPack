@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00373_SupplierOfReagents' WHERE name='373_SupplierOfReagents';
