@@ -136,6 +136,7 @@ import quests.Q00119_LastImperialPrince.Q00119_LastImperialPrince;
 import quests.Q00120_PavelsLastResearch.Q00120_PavelsLastResearch;
 import quests.Q00121_PavelTheGiant.Q00121_PavelTheGiant;
 import quests.Q00122_OminousNews.Q00122_OminousNews;
+import quests.Q00123_TheLeaderAndTheFollower.Q00123_TheLeaderAndTheFollower;
 import quests.Q00124_MeetingTheElroki.Q00124_MeetingTheElroki;
 import quests.Q00125_TheNameOfEvil1.Q00125_TheNameOfEvil1;
 import quests.Q00126_TheNameOfEvil2.Q00126_TheNameOfEvil2;
@@ -607,6 +608,7 @@ public class QuestMasterHandler
 		Q00120_PavelsLastResearch.class,
 		Q00121_PavelTheGiant.class,
 		Q00122_OminousNews.class,
+		Q00123_TheLeaderAndTheFollower.class,
 		Q00124_MeetingTheElroki.class,
 		Q00125_TheNameOfEvil1.class,
 		Q00126_TheNameOfEvil2.class,
