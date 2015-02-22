@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00118_ToLeadAndBeLed' WHERE name='118_ToLeadAndBeLed'; 

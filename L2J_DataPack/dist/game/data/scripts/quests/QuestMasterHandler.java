@@ -131,6 +131,7 @@ import quests.Q00114_ResurrectionOfAnOldManager.Q00114_ResurrectionOfAnOldManage
 import quests.Q00115_TheOtherSideOfTruth.Q00115_TheOtherSideOfTruth;
 import quests.Q00116_BeyondTheHillsOfWinter.Q00116_BeyondTheHillsOfWinter;
 import quests.Q00117_TheOceanOfDistantStars.Q00117_TheOceanOfDistantStars;
+import quests.Q00118_ToLeadAndBeLed.Q00118_ToLeadAndBeLed;
 import quests.Q00119_LastImperialPrince.Q00119_LastImperialPrince;
 import quests.Q00120_PavelsLastResearch.Q00120_PavelsLastResearch;
 import quests.Q00121_PavelTheGiant.Q00121_PavelTheGiant;
@@ -601,6 +602,7 @@ public class QuestMasterHandler
 		Q00115_TheOtherSideOfTruth.class,
 		Q00116_BeyondTheHillsOfWinter.class,
 		Q00117_TheOceanOfDistantStars.class,
+		Q00118_ToLeadAndBeLed.class,
 		Q00119_LastImperialPrince.class,
 		Q00120_PavelsLastResearch.class,
 		Q00121_PavelTheGiant.class,
