@@ -301,6 +301,7 @@ import quests.Q00327_RecoverTheFarmland.Q00327_RecoverTheFarmland;
 import quests.Q00328_SenseForBusiness.Q00328_SenseForBusiness;
 import quests.Q00329_CuriosityOfADwarf.Q00329_CuriosityOfADwarf;
 import quests.Q00331_ArrowOfVengeance.Q00331_ArrowOfVengeance;
+import quests.Q00333_HuntOfTheBlackLion.Q00333_HuntOfTheBlackLion;
 import quests.Q00338_AlligatorHunter.Q00338_AlligatorHunter;
 import quests.Q00340_SubjugationOfLizardmen.Q00340_SubjugationOfLizardmen;
 import quests.Q00341_HuntingForWildBeasts.Q00341_HuntingForWildBeasts;
@@ -774,6 +775,7 @@ public class QuestMasterHandler
 		Q00328_SenseForBusiness.class,
 		Q00329_CuriosityOfADwarf.class,
 		Q00331_ArrowOfVengeance.class,
+		Q00333_HuntOfTheBlackLion.class,
 		Q00338_AlligatorHunter.class,
 		Q00340_SubjugationOfLizardmen.class,
 		Q00341_HuntingForWildBeasts.class,
