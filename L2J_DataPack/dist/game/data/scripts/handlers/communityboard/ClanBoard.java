@@ -283,7 +283,15 @@ public class ClanBoard implements IWriteBoardHandler
 	@Override
 	public boolean writeCommunityBoardCommand(L2PcInstance activeChar, String arg1, String arg2, String arg3, String arg4, String arg5)
 	{
-		// TODO: Implement.
-		return false;
+		// the only Write bypass that comes to this handler is "Write Notice Set _ Content Content Content";
+		// arg1 = Set, arg2 = _
+		final L2Clan clan = activeChar.getClan();
+		
+		if ((clan != null) && activeChar.isClanLeader())
+		{
+			clan.setNotice(arg3);
+		}
+		
+		return true;
 	}
 }
