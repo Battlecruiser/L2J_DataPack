@@ -1747,8 +1747,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#accCombat"> 3 7 7 </table>
 		<table name="#magicLvl"> 40 60 75 </table>
-		<table name="#maxHp"> 1.14 1.21 1.21 </table>
-		<table name="#maxHpHeal"> 14 21 21 </table>
+		<table name="#MaxHp"> 14 21 21 </table>
 		<table name="#mpConsume"> 18 18 19 </table>
 		<table name="#pAtk"> 1.05 1.15 1.15 </table>
 		<table name="#pDef"> 1.1 1.3 1.3 </table>
@@ -1771,12 +1770,13 @@
 				<mul stat="runSpd" val="#runSpd" />
 				<mul stat="pAtk" val="#pAtk" />
 				<mul stat="pDef" val="#pDef" />
-				<mul stat="maxHp" val="#maxHp" />
 				<sub stat="rEvas" val="#rEvas" />
 				<add stat="accCombat" val="#accCombat" />
 			</effect>
-			<effect name="HealPercent">
-				<param power="#maxHpHeal" />
+			<effect name="MaxHp">
+				<param power="#MaxHp" />
+				<param type="PER" />
+				<param heal="true" />
 			</effect>
 		</for>
 	</skill>

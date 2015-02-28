@@ -344,10 +344,9 @@
 	</skill>
 	<skill id="1311" levels="6" name="Body Of Avatar" enchantGroup1="1" enchantGroup2="1">
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 </table>
-		<table name="#amount"> 10 15 20 25 30 35 </table>
+		<table name="#MaxHp"> 10 15 20 25 30 35 </table>
 		<table name="#effectPoints"> 457 532 566 597 624 646 </table>
 		<table name="#magicLvl"> 48 56 60 64 68 72 </table>
-		<table name="#maxHp"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
 		<table name="#mpConsume"> 273 326 352 378 402 424 </table>
 		<table name="#mpInitialConsume"> 69 82 88 95 101 106 </table>
 		<table name="#ench1AbnormalTimes"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
@@ -375,11 +374,10 @@
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="#maxHp" />
-			</effect>
-			<effect name="HealPercent">
-				<param power="#amount" />
+			<effect name="MaxHp">
+				<param power="#MaxHp" />
+				<param type="PER" />
+				<param heal="true" />
 			</effect>
 		</for>
 	</skill>
@@ -1555,12 +1553,14 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff">
+			<effect name="MaxHp">
+				<param power="20" />
+				<param type="PER" />
+				<param heal="true" />
 				<mul stat="rCrit" val="1.2" />
 				<mul stat="pAtk" val="1.1" />
 				<mul stat="cAtk" val="1.2" />
 				<mul stat="pAtkSpd" val="1.2" />
-				<mul stat="maxHp" val="1.2" />
 				<mul stat="runSpd" val="0.8" />
 				<add stat="accCombat" val="4" />
 				<mul stat="pDef" val="1.2" />
@@ -1568,9 +1568,6 @@
 				<mul stat="mAtk" val="1.2" />
 				<mul stat="mAtkSpd" val="1.2" />
 				<sub stat="debuffVuln" val="20" />
-			</effect>
-			<effect name="HealPercent">
-				<param power="20" />
 			</effect>
 		</for>
 	</skill>
@@ -2133,8 +2130,10 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.2" />
+			<effect name="MaxHp">
+				<param power="20" />
+				<param type="PER" />
+				<param heal="true" />
 				<add stat="mCritRate" val="2" />
 				<mul stat="cAtk" val="1.2" />
 				<mul stat="pAtk" val="1.1" />
@@ -2147,13 +2146,12 @@
 				<add stat="accCombat" val="4" />
 				<mul stat="runSpd" val="0.8" />
 			</effect>
-			<effect name="HealPercent">
-				<param power="20" />
-			</effect>
 		</for>
 		<enchant3for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.2" />
+			<effect name="MaxHp">
+				<param power="20" />
+				<param type="PER" />
+				<param heal="true" />
 				<add stat="mCritRate" val="2" />
 				<mul stat="cAtk" val="1.2" />
 				<mul stat="pAtk" val="1.1" />
@@ -2165,9 +2163,6 @@
 				<sub stat="debuffVuln" val="10" />
 				<add stat="accCombat" val="4" />
 				<mul stat="runSpd" val="#ench3Spd" />
-			</effect>
-			<effect name="HealPercent">
-				<param power="20" />
 			</effect>
 		</enchant3for>
 	</skill>
