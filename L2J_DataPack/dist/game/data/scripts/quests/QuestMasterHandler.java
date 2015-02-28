@@ -359,6 +359,7 @@ import quests.Q00418_PathOfTheArtisan.Q00418_PathOfTheArtisan;
 import quests.Q00420_LittleWing.Q00420_LittleWing;
 import quests.Q00421_LittleWingsBigAdventure.Q00421_LittleWingsBigAdventure;
 import quests.Q00423_TakeYourBestShot.Q00423_TakeYourBestShot;
+import quests.Q00426_QuestForFishingShot.Q00426_QuestForFishingShot;
 import quests.Q00431_WeddingMarch.Q00431_WeddingMarch;
 import quests.Q00432_BirthdayPartySong.Q00432_BirthdayPartySong;
 import quests.Q00450_GraveRobberRescue.Q00450_GraveRobberRescue;
@@ -833,6 +834,7 @@ public class QuestMasterHandler
 		Q00420_LittleWing.class,
 		Q00421_LittleWingsBigAdventure.class,
 		Q00423_TakeYourBestShot.class,
+		Q00426_QuestForFishingShot.class,
 		Q00431_WeddingMarch.class,
 		Q00432_BirthdayPartySong.class,
 		Q00450_GraveRobberRescue.class,
