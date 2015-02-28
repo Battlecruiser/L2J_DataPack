@@ -41,8 +41,19 @@ public final class MaxCp extends AbstractEffect
 	{
 		super(attachCond, applyCond, set, params);
 		
-		_power = 1 + (params.getInt("power", 0) / 100.0);
 		_type = params.getEnum("type", EffectCalculationType.class, EffectCalculationType.DIFF);
+		switch (_type)
+		{
+			case DIFF:
+			{
+				_power = params.getInt("power", 0);
+				break;
+			}
+			default:
+			{
+				_power = 1 + (params.getInt("power", 0) / 100.0);
+			}
+		}
 		_heal = params.getBoolean("heal", false);
 		
 		if (params.isEmpty())
@@ -64,17 +75,21 @@ public final class MaxCp extends AbstractEffect
 				case DIFF:
 				{
 					charStat.getActiveChar().addStatFunc(new FuncAdd(Stats.MAX_CP, 1, null, _power, null));
+					if (_heal)
+					{
+						info.getEffected().setCurrentCp((currentCp + _power));
+					}
+					break;
 				}
 				case PER:
 				{
 					charStat.getActiveChar().addStatFunc(new FuncMul(Stats.MAX_CP, 1, null, _power, null));
+					if (_heal)
+					{
+						info.getEffected().setCurrentCp((currentCp * _power));
+					}
 					break;
 				}
-			}
-			
-			if (_heal)
-			{
-				info.getEffected().setCurrentCp((currentCp * _power));
 			}
 		}
 	}
