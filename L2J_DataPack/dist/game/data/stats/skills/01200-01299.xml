@@ -263,7 +263,6 @@
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill1213" />
-		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -868,6 +867,7 @@
 		<enchant2 name="power" val="#ench2Power" />
 		<enchant3 name="basicProperty" val="MEN" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
+		<enchant3 name="isDebuff" val="true" />
 		<enchant4 name="elementPower" val="#ench4ElementPower" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
@@ -899,6 +899,7 @@
 		<set name="effectRange" val="650" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill1231" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1107,6 +1108,7 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="power" val="#ench2Power" />
 		<enchant3 name="basicProperty" val="MEN" />
+		<enchant3 name="isDebuff" val="true" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="elementPower" val="#ench4ElementPower" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
@@ -1333,6 +1335,7 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="basicProperty" val="MEN" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
+		<enchant3 name="isDebuff" val="true" />
 		<for>
 			<effect name="MagicalAttack" />
 		</for>
