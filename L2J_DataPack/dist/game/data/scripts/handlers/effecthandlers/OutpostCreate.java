@@ -50,7 +50,7 @@ public final class OutpostCreate extends AbstractEffect
 	public void onStart(BuffInfo info)
 	{
 		final L2PcInstance player = info.getEffector().getActingPlayer();
-		if ((player.getClan() == null) || (player.getClan().getLeaderId() != player.getObjectId()))
+		if (!player.isClanLeader())
 		{
 			return;
 		}
