@@ -74,7 +74,7 @@ public final class MaxHp extends AbstractEffect
 			{
 				case DIFF:
 				{
-					charStat.getActiveChar().addStatFunc(new FuncAdd(Stats.MAX_HP, 1, null, _power, null));
+					charStat.getActiveChar().addStatFunc(new FuncAdd(Stats.MAX_HP, 1, this, _power, null));
 					if (_heal)
 					{
 						info.getEffected().setCurrentHp((currentHp + _power));
@@ -83,7 +83,7 @@ public final class MaxHp extends AbstractEffect
 				}
 				case PER:
 				{
-					charStat.getActiveChar().addStatFunc(new FuncMul(Stats.MAX_HP, 1, null, _power, null));
+					charStat.getActiveChar().addStatFunc(new FuncMul(Stats.MAX_HP, 1, this, _power, null));
 					if (_heal)
 					{
 						info.getEffected().setCurrentHp((currentHp * _power));
@@ -101,19 +101,7 @@ public final class MaxHp extends AbstractEffect
 		final CharStat charStat = info.getEffected().getStat();
 		synchronized (charStat)
 		{
-			switch (_type)
-			{
-				case DIFF:
-				{
-					charStat.getActiveChar().removeStatFunc(new FuncAdd(Stats.MAX_HP, 1, null, _power, null));
-					break;
-				}
-				case PER:
-				{
-					charStat.getActiveChar().removeStatFunc(new FuncMul(Stats.MAX_HP, 1, null, _power, null));
-					break;
-				}
-			}
+			charStat.getActiveChar().removeStatsOwner(this);
 		}
 	}
 	
