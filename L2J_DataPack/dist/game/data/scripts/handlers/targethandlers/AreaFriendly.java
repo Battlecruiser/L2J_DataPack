@@ -126,12 +126,12 @@ public class AreaFriendly implements ITargetTypeHandler
 				return false;
 			}
 			
-			if (activeChar.atDuelWith(target))
+			if (activeChar.isInDuelWith(target))
 			{
 				return false;
 			}
 			
-			if (activeChar.inPartyWith(target))
+			if (activeChar.isInPartyWith(target))
 			{
 				return true;
 			}
@@ -141,7 +141,7 @@ public class AreaFriendly implements ITargetTypeHandler
 				return false;
 			}
 			
-			if (activeChar.inClanWith(target) || activeChar.inAllyWith(target) || activeChar.inCommandChannelWith(target))
+			if (activeChar.isInClanWith(target) || activeChar.isInAllyWith(target) || activeChar.isInCommandChannelWith(target))
 			{
 				return true;
 			}
