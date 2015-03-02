@@ -23,7 +23,6 @@ import java.util.Map;
 
 import javolution.util.FastList;
 import javolution.util.FastMap;
-import quests.Q00131_BirdInACage.Q00131_BirdInACage;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
@@ -1486,19 +1485,19 @@ public final class CrystalCaverns extends Quest
 		L2Party party = player.getParty();
 		if (party == null)
 		{
-			player.sendPacket(SystemMessageId.NOT_IN_PARTY_CANT_ENTER);
+			player.sendPacket(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER);
 			return false;
 		}
 		if (party.getLeader() != player)
 		{
-			player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
+			player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);
 			return false;
 		}
 		for (L2PcInstance partyMember : party.getMembers())
 		{
 			if (partyMember.getLevel() < 78)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
 				return false;
@@ -1506,14 +1505,14 @@ public final class CrystalCaverns extends Quest
 			L2ItemInstance item = partyMember.getInventory().getItemByItemId(CONT_CRYSTAL);
 			if (item == null)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_ITEM_REQUIREMENT_NOT_SUFFICIENT);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_ITEM_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
 				return false;
 			}
 			if (!Util.checkIfInRange(1000, player, partyMember, true))
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_LOCATION_THAT_CANNOT_BE_ENTERED);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
 				return false;
@@ -1521,7 +1520,7 @@ public final class CrystalCaverns extends Quest
 			Long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), TEMPLATE_ID);
 			if (System.currentTimeMillis() < reentertime)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_REENTER_YET);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
 				return false;
@@ -1539,12 +1538,12 @@ public final class CrystalCaverns extends Quest
 		L2Party party = player.getParty();
 		if (party == null)
 		{
-			player.sendPacket(SystemMessageId.NOT_IN_PARTY_CANT_ENTER);
+			player.sendPacket(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER);
 			return false;
 		}
 		if (party.getLeader() != player)
 		{
-			player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
+			player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);
 			return false;
 		}
 		for (L2PcInstance partyMember : party.getMembers())
@@ -1552,14 +1551,14 @@ public final class CrystalCaverns extends Quest
 			L2ItemInstance item = partyMember.getInventory().getItemByItemId(RED_CORAL);
 			if (item == null)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_ITEM_REQUIREMENT_NOT_SUFFICIENT);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_ITEM_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
 				return false;
 			}
 			if (!Util.checkIfInRange(1000, player, partyMember, true))
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_LOCATION_THAT_CANNOT_BE_ENTERED);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
 				return false;
@@ -1573,12 +1572,12 @@ public final class CrystalCaverns extends Quest
 		L2Party party = player.getParty();
 		if (party == null)
 		{
-			player.sendPacket(SystemMessageId.NOT_IN_PARTY_CANT_ENTER);
+			player.sendPacket(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER);
 			return false;
 		}
 		if (party.getLeader() != player)
 		{
-			player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
+			player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);
 			return false;
 		}
 		for (L2PcInstance partyMember : party.getMembers())
@@ -1588,14 +1587,14 @@ public final class CrystalCaverns extends Quest
 			L2ItemInstance item3 = partyMember.getInventory().getItemByItemId(BOSS_CRYSTAL_3);
 			if ((item1 == null) || (item2 == null) || (item3 == null))
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_ITEM_REQUIREMENT_NOT_SUFFICIENT);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_ITEM_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
 				return false;
 			}
 			if (!Util.checkIfInRange(1000, player, partyMember, true))
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_LOCATION_THAT_CANNOT_BE_ENTERED);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
 				return false;
@@ -1661,7 +1660,7 @@ public final class CrystalCaverns extends Quest
 		{
 			if (!(world instanceof CCWorld))
 			{
-				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
+				player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
 				return 0;
 			}
 			teleportPlayer(player, loc, world.getInstanceId());
@@ -1711,7 +1710,7 @@ public final class CrystalCaverns extends Quest
 		player.breakAttack();
 		player.breakCast();
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		L2Summon pet = player.getSummon();
+		L2Summon pet = player.getPet();
 		if (pet != null)
 		{
 			pet.setTarget(null);
@@ -1721,6 +1720,15 @@ public final class CrystalCaverns extends Quest
 			pet.breakCast();
 			pet.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		}
+		player.getServitors().values().forEach(s ->
+		{
+			s.setTarget(null);
+			s.abortAttack();
+			s.abortCast();
+			s.breakAttack();
+			s.breakCast();
+			s.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+		});
 	}
 	
 	protected void runOracle(CCWorld world)
@@ -1894,8 +1902,7 @@ public final class CrystalCaverns extends Quest
 		}
 		else if (npc.getId() == 32279)
 		{
-			final QuestState st = player.getQuestState(Q00131_BirdInACage.class.getSimpleName());
-			return (st != null) && !st.isCompleted() ? "32279-01.htm" : "32279.htm";
+			return "32279.htm";
 		}
 		else if (npc.getId() == CRYSTAL_GOLEM)
 		{
@@ -2245,10 +2252,14 @@ public final class CrystalCaverns extends Quest
 				{
 					p.setIsParalyzed(false);
 					Throw(npc, p);
-					if (p.getSummon() != null)
+					if (p.getPet() != null)
 					{
-						Throw(npc, p.getSummon());
+						Throw(npc, p.getPet());
 					}
+					p.getServitors().values().forEach(s ->
+					{
+						Throw(npc, s);
+					});
 				}
 				world._raidStatus = 0;
 				for (L2Npc mob : world._animationMobs)
@@ -2378,7 +2389,7 @@ public final class CrystalCaverns extends Quest
 				{
 					if (getRandom(100) < 5)
 					{
-						npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 1, npc.getName(), NpcStringId.AH_IM_HUNGRY));
+						npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 1, npc.getName(), NpcStringId.AH_I_M_HUNGRY));
 					}
 					startQuestTimer("autoFood", 2000, npc, null);
 				}
@@ -2908,12 +2919,17 @@ public final class CrystalCaverns extends Quest
 					int x = (int) (radius * Math.cos((i * 2 * Math.PI) / members));
 					int y = (int) (radius * Math.sin((i++ * 2 * Math.PI) / members));
 					p.teleToLocation(new Location(153571 + x, 142075 + y, -12737));
-					L2Summon pet = p.getSummon();
+					L2Summon pet = p.getPet();
 					if (pet != null)
 					{
 						pet.teleToLocation(new Location(153571 + x, 142075 + y, -12737), true);
 						pet.broadcastPacket(new ValidateLocation(pet));
 					}
+					p.getServitors().values().forEach(s ->
+					{
+						s.teleToLocation(new Location(153571 + x, 142075 + y, -12737), true);
+						s.broadcastPacket(new ValidateLocation(s));
+					});
 					p.setIsParalyzed(true);
 					p.broadcastPacket(new ValidateLocation(p));
 				}

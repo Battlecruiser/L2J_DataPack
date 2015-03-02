@@ -124,7 +124,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2011" levels="1" name="Haste Potion">
+	<skill id="2011" levels="1" name="Wind Walk Potion">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -140,7 +140,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2012" levels="1" name="Potion of Alacrity">
+	<skill id="2012" levels="1" name="Haste Potion">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
@@ -156,7 +156,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2013" levels="1" name="Scroll Of Escape">
+	<skill id="2013" levels="1" name="Scroll of Escape">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="20000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -180,7 +180,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2014" levels="1" name="Scroll Of Resurrection">
+	<skill id="2014" levels="1" name="Scroll of Resurrection">
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="600" />
@@ -264,7 +264,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="2024" levels="1" name="Firework">
+	<skill id="2024" levels="1" name="Firecracker">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="6406" /> <!-- Firework -->
@@ -274,7 +274,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="2025" levels="1" name="Large Firework">
+	<skill id="2025" levels="1" name="Large Firecracker">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="6407" /> <!-- Large Firework -->
@@ -324,7 +324,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="2031" levels="1" name="Lesser Healing Potion">
+	<skill id="2031" levels="1" name="Healing Potion">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="HP_RECOVER" />
@@ -341,7 +341,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2032" levels="1" name="Healing potion">
+	<skill id="2032" levels="1" name="Greater Healing Potion">
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="HP_RECOVER" />
@@ -365,7 +365,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="2034" levels="1" name="Greater Haste Potion">
+	<skill id="2034" levels="1" name="Greater Wind Walk Potion">
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -381,7 +381,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2035" levels="1" name="Greater Swift Attack Potion">
+	<skill id="2035" levels="1" name="Greater Haste Potion">
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
@@ -422,7 +422,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2037" levels="1" name="Greater Healing Potion">
+	<skill id="2037" levels="1" name="Major Healing Potion">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="HP_RECOVER" />
@@ -602,7 +602,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2050" levels="1" name="Scroll of Guidance">
+	<skill id="2050" levels="1" name="Scroll: Guidance">
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="HIT_UP" />
@@ -621,7 +621,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2051" levels="1" name="Scroll of Death Whisper">
+	<skill id="2051" levels="1" name="Scroll: Death Whisper">
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
@@ -640,7 +640,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2052" levels="1" name="Scroll of Focus">
+	<skill id="2052" levels="1" name="Scroll: Focus">
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
@@ -659,7 +659,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2053" levels="1" name="Scroll of Greater Acumen">
+	<skill id="2053" levels="1" name="Scroll: Acumen">
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
@@ -678,7 +678,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2054" levels="1" name="Scroll of Haste">
+	<skill id="2054" levels="1" name="Scroll: Haste">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
@@ -697,7 +697,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2055" levels="1" name="Scroll of Agility">
+	<skill id="2055" levels="1" name="Scroll: Agility">
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="AVOID_UP" />
@@ -716,7 +716,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2056" levels="1" name="Scroll of Mystic Empower">
+	<skill id="2056" levels="1" name="Scroll: Empower">
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MA_UP" />
@@ -735,7 +735,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2057" levels="1" name="Scroll of Might">
+	<skill id="2057" levels="1" name="Scroll: Might">
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PA_UP" />
@@ -754,7 +754,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2058" levels="1" name="Scroll of Wind Walk">
+	<skill id="2058" levels="1" name="Scroll: Wind Walk">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -773,7 +773,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2059" levels="1" name="Scroll of Shield">
+	<skill id="2059" levels="1" name="Scroll: Shield">
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PD_UP" />
@@ -842,7 +842,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="2064" levels="1" name="Scroll of Mana Regeneration">
+	<skill id="2064" levels="1" name="Scroll: Mana Regeneration">
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MP_REGEN_UP" />
@@ -879,14 +879,14 @@
 			<effect name="OpenChest" />
 		</for>
 	</skill>
-	<skill id="2066" levels="1" name="Item - Theme Sound Crystal">
+	<skill id="2066" levels="1" name="Item - Fight Song Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="2067" levels="1" name="Item - Theme Sound Crystal">
+	<skill id="2067" levels="1" name="Item - Fight Song Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -928,7 +928,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="2073" levels="1" name="Item - Theme Sound Crystal">
+	<skill id="2073" levels="1" name="Item - Fight Song Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -958,7 +958,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2075" levels="1" name="Decrease Hate Scroll">
+	<skill id="2075" levels="1" name="Scroll: Decrease Hate">
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="800" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -972,7 +972,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2076" levels="1" name="Bless of Eva">
+	<skill id="2076" levels="1" name="Eva's Blessing">
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="400" />
 		<set name="abnormalType" val="MAX_BREATH_UP" />

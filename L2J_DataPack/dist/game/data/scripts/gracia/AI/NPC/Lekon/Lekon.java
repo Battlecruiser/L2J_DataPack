@@ -73,7 +73,7 @@ public final class Lekon extends AbstractNpcAI
 				}
 				else if (AirShipManager.getInstance().hasAirShipLicense(clan.getId()))
 				{
-					player.sendPacket(SystemMessageId.THE_AIRSHIP_SUMMON_LICENSE_ALREADY_ACQUIRED);
+					player.sendPacket(SystemMessageId.THE_AIRSHIP_SUMMON_LICENSE_HAS_ALREADY_BEEN_ACQUIRED);
 				}
 				else if (getQuestItemsCount(player, STONE) >= STONE_COUNT)
 				{

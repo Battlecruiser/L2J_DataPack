@@ -63,7 +63,7 @@ public class Unstuck implements IUserCommandHandler
 		
 		if (activeChar.isInOlympiadMode())
 		{
-			activeChar.sendPacket(SystemMessageId.THIS_SKILL_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
+			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_THAT_SKILL_IN_A_OLYMPIAD_MATCH);
 			return false;
 		}
 		
@@ -135,7 +135,6 @@ public class Unstuck implements IUserCommandHandler
 				return;
 			}
 			
-			_activeChar.setIsIn7sDungeon(false);
 			_activeChar.enableAllSkills();
 			_activeChar.setIsCastingNow(false);
 			_activeChar.setInstanceId(0);

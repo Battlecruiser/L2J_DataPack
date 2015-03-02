@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="5700" levels="7" name="Magic Resistance Decrease">
+	<skill id="5700" levels="7" name="Decrease M. Def.">
 		<!-- Lvl 1 - Kamaloka (Labyrinth of the Abyss) 29 -->
 		<!-- Lvl 2 - Kamaloka (Labyrinth of the Abyss) 39 -->
 		<!-- Lvl 3 - Kamaloka (Labyrinth of the Abyss) 49 -->
@@ -209,7 +209,6 @@
 		</for>
 	</skill>
 	<skill id="5712" levels="1" name="Energy Ditch">
-		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="castRange" val="1300" />
 		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2000" />
@@ -323,7 +322,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5719" levels="1" name="Kamabion Susceptibility">
+	<skill id="5719" levels="1" name="Kanabion Susceptibility">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PD_DOWN" />
@@ -441,7 +440,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5725" levels="6" name="Broom Trusting">
+	<skill id="5725" levels="6" name="Broom Thrust">
 		<!-- Confirmed CT2.5 -->
 		<!-- Kratei Cube Skills -->
 		<table name="#magicLvl"> 60 70 75 80 85 90 </table>
@@ -504,7 +503,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5728" levels="6" name="Shobel Attack">
+	<skill id="5728" levels="6" name="Shovel Attack">
 		<!-- Confirmed CT2.5 -->
 		<!-- Kratei Cube Skills -->
 		<table name="#magicLvl"> 60 70 75 80 85 90 </table>
@@ -525,7 +524,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5729" levels="6" name="Shobel Whirlwind">
+	<skill id="5729" levels="6" name="Shovel Whirlwind">
 		<!-- Confirmed CT2.5 -->
 		<!-- Kratei Cube Skills -->
 		<table name="#magicLvl"> 60 70 75 80 85 90 </table>
@@ -788,7 +787,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5739" levels="1" name="Invincible">
+	<skill id="5739" levels="1" name="Invincibility">
 		<!-- Confirmed CT2.5 -->
 		<!-- Kratei Cube Skills -->
 		<set name="abnormalLvl" val="1" />
@@ -807,7 +806,7 @@
 			<effect name="Invincible" />
 		</for>
 	</skill>
-	<skill id="5740" levels="1" name="Recovery Pet">
+	<skill id="5740" levels="1" name="Recovery Pot">
 		<!-- Confirmed CT2.5 -->
 		<!-- Kratei Cube Skills -->
 		<set name="castRange" val="900" />
@@ -845,21 +844,21 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5742" levels="5" name="Area Recharge - Per">
+	<skill id="5742" levels="5" name="Recharge">
 		<set name="effectPoint" val="100" />
 		<set name="magicLvl" val="10" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5743" levels="1" name="Area Full Recovery">
+	<skill id="5743" levels="1" name="Full Recovery">
 		<set name="effectPoint" val="100" />
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5744" levels="1" name="Invincible">
+	<skill id="5744" levels="1" name="Invincibility">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="INVINCIBILITY" />
@@ -1113,7 +1112,6 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5757" levels="1" name="Presentation - Energy Ditch">
-		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="15000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1123,7 +1121,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5758" levels="1" name="Presentation - Large Firework">
+	<skill id="5758" levels="1" name="Presentation - Large Firecracker">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1340,7 +1338,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5774" levels="2" name="Pailaka Reward Energy Replenishing">
+	<skill id="5774" levels="2" name="Replenish Pailaka Reward Vitality">
 		<!-- Confirmed CT2.5 -->
 		<table name="#value"> 10000 20000 </table>
 		<set name="castRange" val="900" />
@@ -1357,7 +1355,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5775" levels="1" name="Great Blessing of Pathfinder">
+	<skill id="5775" levels="1" name="Greater Blessing of Pathfinder">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7200" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -1511,7 +1509,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5792" levels="1" name="Presentation - Summon Banshee Queen Boomi">
+	<skill id="5792" levels="1" name="Presentation - Summon Banshee Queen Boomeye">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="85" />
@@ -1519,7 +1517,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5793" levels="1" name="Presentation - Summon Boomi">
+	<skill id="5793" levels="1" name="Presentation - Summon Boomeye">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="85" />

@@ -48,7 +48,7 @@ public class AdminTargetSay implements IAdminCommandHandler
 				final L2Object obj = activeChar.getTarget();
 				if ((obj instanceof L2StaticObjectInstance) || !(obj instanceof L2Character))
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					return false;
 				}
 				

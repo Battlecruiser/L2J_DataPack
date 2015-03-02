@@ -9,7 +9,6 @@
 		<table name="#ench1Power2"> 4 4 4 4 4 4 4 4 4 4 4 4 4 4 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 6 </table>
 		<table name="#ench2Cost"> 0.39 0.39 0.38 0.38 0.37 0.37 0.36 0.36 0.35 0.35 0.34 0.34 0.33 0.33 0.32 0.32 0.31 0.31 0.3 0.3 0.29 0.29 0.28 0.28 0.27 0.27 0.26 0.26 0.25 0.25 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="icon" val="icon.skill0500" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="T" />
@@ -1181,7 +1180,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="529" levels="1" name="Song of Elemental" enchantGroup1="5" enchantGroup2="5">
+	<skill id="529" levels="1" name="Elemental Song" enchantGroup1="5" enchantGroup2="5">
 		<table name="#ench1AbnormalTimes"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
 		<table name="#ench2mpConsume"> 52 50 48 46 45 43 41 39 38 36 34 32 31 29 27 </table>
 		<set name="abnormalLvl" val="1" />
@@ -1238,7 +1237,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="531" levels="1" name="Critical Wound">
+	<skill id="531" levels="5" name="Critical Wound">
+		<!-- TODO: Auto level parse, Requires manual update -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="T_CRT_RATE_UP" />
@@ -1427,7 +1427,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="539" levels="1" name="Nail Attack">
+	<skill id="539" levels="2" name="Nail Attack">
+		<!-- TODO: Auto level parse, Requires manual update -->
 		<!-- Confirmed CT2.5 -->
 		<!-- Kamael Final Form Skill -->
 		<set name="castRange" val="40" />
@@ -1448,7 +1449,8 @@
 			<effect name="PhysicalSoulAttack" />
 		</for>
 	</skill>
-	<skill id="540" levels="1" name="Wing Assault">
+	<skill id="540" levels="2" name="Wing Assault">
+		<!-- TODO: Auto level parse, Requires manual update -->
 		<!-- Confirmed CT2.5 -->
 		<!-- Kamael Final Form Skill -->
 		<set name="affectLimit" val="5-12" />
@@ -2006,7 +2008,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="561" levels="4" name="Bless of Angel">
+	<skill id="561" levels="4" name="Angel's Blessing">
 		<table name="#effectPoints"> 566 590 611 630 </table>
 		<table name="#magicLvl"> 60 63 66 69 </table>
 		<table name="#mpConsume"> 61 63 67 70 </table>
@@ -2133,7 +2135,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="567" levels="4" name="Light of Heal">
+	<skill id="567" levels="4" name="Light Heal">
 		<!-- Confirmed CT2.5 -->
 		<table name="#amount"> 690 731 770 806 </table>
 		<table name="#magicLvl"> 60 63 66 69 </table>

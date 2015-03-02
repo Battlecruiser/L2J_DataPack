@@ -11,7 +11,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="80" />
-		<set name="price" val="66600" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
@@ -35,7 +34,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="300" />
-		<set name="price" val="66600" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
@@ -59,7 +57,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="750" />
-		<set name="price" val="66600" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
@@ -84,7 +81,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="750" />
-		<set name="price" val="66600" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
@@ -109,7 +105,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="150" />
-		<set name="price" val="66600" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
@@ -133,7 +128,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="120" />
-		<set name="price" val="66600" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
@@ -157,7 +151,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CHRYSOLITE" />
 		<set name="weight" val="100" />
-		<set name="price" val="66600" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
@@ -181,7 +174,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="150" />
-		<set name="price" val="3340000" />
 		<set name="soulshots" val="9" />
 		<set name="spiritshots" val="3" />
 		<set name="mp_consume" val="3" />
@@ -196,7 +188,7 @@
 			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="1308" type="Armor" name="Compound Scale Mail">
+	<item id="1308" type="Armor" name="Top">
 		<set name="icon" val="icon.weapon_voodoo_doll_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -204,7 +196,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1400" />
-		<set name="price" val="190200" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
@@ -222,7 +213,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="1000" />
-		<set name="price" val="190200" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
@@ -240,7 +230,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="150" />
-		<set name="price" val="37300" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
@@ -259,7 +248,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="300" />
-		<set name="price" val="76900" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
@@ -274,7 +262,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="150" />
-		<set name="price" val="106000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
@@ -285,7 +272,7 @@
 			<add stat="maxMp" val="142" />
 		</for>
 	</item>
-	<item id="1313" type="Armor" name="Compound Scale Gaiters">
+	<item id="1313" type="Armor" name="Pants">
 		<set name="icon" val="icon.weapon_voodoo_doll_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -293,7 +280,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1000" />
-		<set name="price" val="130800" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
@@ -311,7 +297,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="600" />
-		<set name="price" val="130800" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
@@ -329,7 +314,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="150" />
-		<set name="price" val="23300" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
@@ -348,7 +332,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="400" />
-		<set name="price" val="43000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
@@ -363,7 +346,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="150" />
-		<set name="price" val="48000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
@@ -381,7 +363,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="80" />
-		<set name="price" val="2520" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
@@ -395,21 +376,19 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="100" />
-		<set name="price" val="6100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
 			<add order="0" stat="pDef" val="14" />
 		</for>
 	</item>
-	<item id="1320" type="Armor" name="Crafted Leather Gloves">
+	<item id="1320" type="Armor" name="Quality Leather Gloves">
 		<set name="icon" val="icon.armor_gauntlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="100" />
-		<set name="price" val="22900" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
@@ -423,7 +402,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="150" />
-		<set name="price" val="75200" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
@@ -437,21 +415,19 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="80" />
-		<set name="price" val="12400" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
 			<add order="0" stat="pDef" val="14" />
 		</for>
 	</item>
-	<item id="1323" type="Armor" name="Leather Shoes">
+	<item id="1323" type="Armor" name="Shoes">
 		<set name="icon" val="icon.armor_iron_boots_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="120" />
-		<set name="price" val="2520" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
@@ -465,7 +441,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="150" />
-		<set name="price" val="6100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
@@ -479,7 +454,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="250" />
-		<set name="price" val="22900" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
@@ -493,7 +467,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="300" />
-		<set name="price" val="57400" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
@@ -507,7 +480,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="200" />
-		<set name="price" val="12400" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
@@ -521,7 +493,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="300" />
-		<set name="price" val="838000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
@@ -538,7 +509,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="350" />
-		<set name="price" val="1096000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
@@ -555,7 +525,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="500" />
-		<set name="price" val="1422000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
@@ -572,7 +541,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="350" />
-		<set name="price" val="1096000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
@@ -589,7 +557,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="500" />
-		<set name="price" val="246900" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
@@ -610,7 +577,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2250" />
-		<set name="price" val="41600" />
+		<set name="price" val="8320" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
@@ -684,7 +651,6 @@
 		<set name="etcitem_type" val="ARROW" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="D" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="5" />
 		<set name="price" val="3" />
@@ -697,7 +663,6 @@
 		<set name="etcitem_type" val="ARROW" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="4" />
 		<set name="price" val="5" />
@@ -710,7 +675,6 @@
 		<set name="etcitem_type" val="ARROW" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="B" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="4" />
 		<set name="price" val="7" />
@@ -723,20 +687,18 @@
 		<set name="etcitem_type" val="ARROW" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="A" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="3" />
 		<set name="price" val="8" />
 		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1345" type="EtcItem" name="Shining Arrow">
+	<item id="1345" type="EtcItem" name="Arrow of Light">
 		<set name="icon" val="icon.etc_shining_quiver_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="ARROW" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="3" />
 		<set name="price" val="10" />
@@ -820,7 +782,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1353" type="EtcItem" name="Skull">
+	<item id="1353" type="EtcItem" name="Deadman's Skull">
 		<set name="icon" val="icon.etc_skull_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -831,7 +793,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1354" type="EtcItem" name="Rib Bone">
+	<item id="1354" type="EtcItem" name="Deadman's Rib Bone">
 		<set name="icon" val="icon.etc_rib_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -842,7 +804,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1355" type="EtcItem" name="Spine">
+	<item id="1355" type="EtcItem" name="Deadman's Spine">
 		<set name="icon" val="icon.etc_piece_bone_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -853,7 +815,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1356" type="EtcItem" name="Arm Bone">
+	<item id="1356" type="EtcItem" name="Deadman's Arm Bone">
 		<set name="icon" val="icon.etc_piece_bone_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -864,7 +826,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1357" type="EtcItem" name="Thigh Bone">
+	<item id="1357" type="EtcItem" name="Deadman's Thigh Bone">
 		<set name="icon" val="icon.etc_piece_bone_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -875,7 +837,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1358" type="EtcItem" name="Complete Skeleton">
+	<item id="1358" type="EtcItem" name="Deadman's Complete Skeleton">
 		<set name="icon" val="icon.etc_ashes_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -996,7 +958,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1369" type="EtcItem" name="Black Lion Mark">
+	<item id="1369" type="EtcItem" name="Black Lion Badge">
 		<set name="icon" val="icon.etc_badge_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1039,7 +1001,7 @@
 		<set name="price" val="600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1374" type="EtcItem" name="Greater Haste Potion">
+	<item id="1374" type="EtcItem" name="Greater Wind Walk Potion">
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1057,7 +1019,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="1375" type="EtcItem" name="Greater Swift Attack Potion">
+	<item id="1375" type="EtcItem" name="Greater Haste Potion">
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1075,7 +1037,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="1376" type="Weapon" name="Guard Spear">
+	<item id="1376" type="Weapon" name="Royal Guard Spear">
 		<set name="icon" val="icon.weapon_guard_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1084,11 +1046,11 @@
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="743" />
+		<set name="crystal_count" val="101" />
 		<set name="crystal_type" val="D" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="300" />
-		<set name="price" val="409000" />
+		<set name="price" val="81800" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />

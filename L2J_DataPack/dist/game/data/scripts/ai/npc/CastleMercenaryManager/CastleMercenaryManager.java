@@ -22,7 +22,6 @@ import java.util.StringTokenizer;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.SevenSigns;
 import com.l2jserver.gameserver.model.ClanPrivilege;
 import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -88,15 +87,8 @@ public final class CastleMercenaryManager extends AbstractNpcAI
 			}
 			case "buy":
 			{
-				if (SevenSigns.getInstance().isSealValidationPeriod())
-				{
-					final int listId = Integer.parseInt(npc.getId() + st.nextToken());
-					((L2MerchantInstance) npc).showBuyWindow(player, listId, false); // NOTE: Not affected by Castle Taxes, baseTax is 20% (done in merchant buylists)
-				}
-				else
-				{
-					htmltext = "mercmanager-ssq.html";
-				}
+				final int listId = Integer.parseInt(npc.getId() + st.nextToken());
+				((L2MerchantInstance) npc).showBuyWindow(player, listId, false); // NOTE: Not affected by Castle Taxes, baseTax is 20% (done in merchant buylists)
 				break;
 			}
 			case "main":
@@ -125,17 +117,7 @@ public final class CastleMercenaryManager extends AbstractNpcAI
 			}
 			else
 			{
-				switch (SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_STRIFE))
-				{
-					case SevenSigns.CABAL_DUSK:
-						htmltext = "mercmanager-dusk.html";
-						break;
-					case SevenSigns.CABAL_DAWN:
-						htmltext = "mercmanager-dawn.html";
-						break;
-					default:
-						htmltext = "mercmanager.html";
-				}
+				htmltext = "mercmanager.html";
 			}
 		}
 		else

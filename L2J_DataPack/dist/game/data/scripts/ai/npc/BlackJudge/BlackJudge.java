@@ -20,11 +20,15 @@ package ai.npc.BlackJudge;
 
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
+import com.l2jserver.gameserver.model.skills.CommonSkill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.EtcStatusUpdate;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * Black Judge AI.
@@ -64,16 +68,33 @@ public class BlackJudge extends AbstractNpcAI
 			}
 			case "remove_dp":
 			{
-				if (player.getDeathPenaltyBuffLevel() > 0)
+				if (player.getShilensBreathDebuffLevel() > 0)
 				{
 					int cost = COSTS[level];
 					
 					if (player.getAdena() >= cost)
 					{
 						takeItems(player, Inventory.ADENA_ID, cost);
-						player.setDeathPenaltyBuffLevel(player.getDeathPenaltyBuffLevel() - 1);
-						player.sendPacket(SystemMessageId.DEATH_PENALTY_LIFTED);
-						player.sendPacket(new EtcStatusUpdate(player));
+						final int nextLv = player.getShilensBreathDebuffLevel() - 1;
+						
+						if (nextLv > 0)
+						{
+							final Skill skill = SkillData.getInstance().getSkill(CommonSkill.SHILENS_BREATH.getId(), nextLv);
+							if (skill != null)
+							{
+								skill.applyEffects(player, player);
+								player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_VE_BEEN_AFFLICTED_BY_SHILEN_S_BREATH_LEVEL_S1).addInt(nextLv));
+							}
+						}
+						else
+						{
+							final BuffInfo buff = player.getEffectList().getBuffInfoBySkillId(CommonSkill.SHILENS_BREATH.getId());
+							if (buff != null)
+							{
+								player.getEffectList().remove(true, buff);
+							}
+							player.sendPacket(SystemMessageId.SHILEN_S_BREATH_HAS_BEEN_PURIFIED);
+						}
 					}
 					else
 					{

@@ -66,7 +66,7 @@ public final class FleeMonsters extends AbstractNpcAI
 		npc.disableCoreAI(true);
 		npc.setRunning();
 		
-		final L2Summon summon = isSummon ? attacker.getSummon() : null;
+		final L2Summon summon = isSummon ? attacker.getServitors().values().stream().findFirst().orElse(attacker.getPet()) : null;
 		final ILocational attackerLoc = summon == null ? attacker : summon;
 		final double radians = Math.toRadians(Util.calculateAngleFrom(attackerLoc, npc));
 		final int posX = (int) (npc.getX() + (FLEE_DISTANCE * Math.cos(radians)));

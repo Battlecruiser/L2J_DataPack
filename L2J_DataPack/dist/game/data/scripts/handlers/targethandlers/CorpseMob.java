@@ -39,7 +39,7 @@ public class CorpseMob implements ITargetTypeHandler
 	{
 		if ((target == null) || !target.isAttackable() || !target.isDead())
 		{
-			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
+			activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 			return EMPTY_TARGET_LIST;
 		}
 		

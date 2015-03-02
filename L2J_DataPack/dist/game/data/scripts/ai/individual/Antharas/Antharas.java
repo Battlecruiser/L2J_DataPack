@@ -713,7 +713,6 @@ public final class Antharas extends AbstractNpcAI
 		{
 			cancelQuestTimer("SET_REGEN", npc, null);
 			startQuestTimer("SET_REGEN", 60000, npc, null);
-			((L2Attackable) npc).setOnKillDelay(0);
 		}
 		else
 		{

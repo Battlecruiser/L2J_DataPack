@@ -18,99 +18,74 @@
  */
 package ai.npc.BlackMarketeerOfMammon;
 
-import java.util.Calendar;
+import java.util.StringTokenizer;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.enums.QuestType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
-import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
+import com.l2jserver.gameserver.util.Util;
 
 /**
- * Black Marketeer of Mammon - Exchange Adena for AA.
- * @author Adry_85
+ * Black Marketeer of Mammon AI.
+ * @author St3eT
  */
 public final class BlackMarketeerOfMammon extends AbstractNpcAI
 {
 	// NPC
 	private static final int BLACK_MARKETEER = 31092;
-	// Misc
-	private static final int MIN_LEVEL = 60;
 	
 	private BlackMarketeerOfMammon()
 	{
 		super(BlackMarketeerOfMammon.class.getSimpleName(), "ai/npc");
 		addStartNpc(BLACK_MARKETEER);
 		addTalkId(BLACK_MARKETEER);
-	}
-	
-	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
-	{
-		return exchangeAvailable() ? "31092-01.html" : "31092-02.html";
+		addFirstTalkId(BLACK_MARKETEER);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
-		if ("exchange".equals(event))
-		{
-			if (exchangeAvailable())
-			{
-				if (player.getLevel() >= MIN_LEVEL)
-				{
+		if (event.equals("31092-01.html"))
 					final QuestState qs = getQuestState(player, true);
-					if (!qs.isNowAvailable())
-					{
-						htmltext = "31092-03.html";
-					}
-					else
-					{
-						if (player.getAdena() >= 2000000)
-						{
-							qs.setState(State.STARTED);
-							takeItems(player, Inventory.ADENA_ID, 2000000);
-							giveItems(player, Inventory.ANCIENT_ADENA_ID, 500000);
-							htmltext = "31092-04.html";
-							qs.exitQuest(QuestType.DAILY, false);
-						}
-						else
-						{
-							htmltext = "31092-05.html";
-						}
-					}
-				}
-				else
-				{
-					htmltext = "31092-06.html";
-				}
-			}
-			else
-			{
-				htmltext = "31092-02.html";
-			}
+		{
+			return event;
 		}
-		
-		return htmltext;
-	}
-	
-	private boolean exchangeAvailable()
-	{
-		Calendar currentTime = Calendar.getInstance();
-		Calendar minTime = Calendar.getInstance();
-		minTime.set(Calendar.HOUR_OF_DAY, 20);
-		minTime.set(Calendar.MINUTE, 0);
-		minTime.set(Calendar.SECOND, 0);
-		Calendar maxtTime = Calendar.getInstance();
-		maxtTime.set(Calendar.HOUR_OF_DAY, 23);
-		maxtTime.set(Calendar.MINUTE, 59);
-		maxtTime.set(Calendar.SECOND, 59);
-		
-		return (currentTime.compareTo(minTime) >= 0) && (currentTime.compareTo(maxtTime) <= 0);
+		else if (event.startsWith("exchange"))
+		{
+			final StringTokenizer st = new StringTokenizer(event, " ");
+			event = st.nextToken();
+			
+			if (!st.hasMoreElements())
+			{
+				return "31092-02.html";
+			}
+			
+			final String value = st.nextToken();
+			if (!Util.isDigit(value))
+			{
+				return "31092-02.html";
+			}
+			
+			final long count = Integer.parseInt(value);
+			final long AAcount = player.getAncientAdena();
+			
+			if (count < 1)
+			{
+				return "31092-02.html";
+			}
+			
+			if (count > AAcount)
+			{
+				return "31092-03.html";
+				
+			}
+			takeItems(player, Inventory.ANCIENT_ADENA_ID, count);
+			giveAdena(player, count, false);
+			return "31092-04.html";
+		}
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	public static void main(String[] args)

@@ -57,7 +57,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3603" levels="10" name="Demon Sword Zariche">
+	<skill id="3603" levels="10" name="Demonic Sword Zariche">
 		<table name="#absorbDam"> 22 24 26 29 32 35 38 42 47 50 </table>
 		<table name="#accCombat"> 1 4 9 16 25 36 49 64 81 100 </table>
 		<table name="#debuffVuln"> 85 86 87 88 89 90 91 92 93 94 </table>
@@ -257,7 +257,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3611" levels="1" name="Enchant Heavy Armor (Grade D)">
+	<skill id="3611" levels="1" name="Enchant Heavy Armor (D-grade)">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill0231" />
 		<set name="magicLvl" val="1" />
@@ -279,7 +279,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3612" levels="1" name="Enchant Light Armor (Grade D)">
+	<skill id="3612" levels="1" name="Enchant Light Armor (D-grade)">
 		<set name="icon" val="icon.skill0233" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -295,7 +295,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3613" levels="1" name="Enchant Robe (Grade D)">
+	<skill id="3613" levels="1" name="Enchant Robe (D-grade)">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill0234" />
 		<set name="magicLvl" val="1" />
@@ -310,7 +310,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3614" levels="1" name="Enchant Heavy Armor (Grade C)">
+	<skill id="3614" levels="1" name="Enchant Heavy Armor (C-grade)">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill0231" />
 		<set name="magicLvl" val="1" />
@@ -332,7 +332,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3615" levels="1" name="Enchant Light Armor (Grade C)">
+	<skill id="3615" levels="1" name="Enchant Light Armor (C-grade)">
 		<set name="icon" val="icon.skill0233" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -348,7 +348,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3616" levels="1" name="Enchant Robe (Grade C)">
+	<skill id="3616" levels="1" name="Enchant Robe (C-grade)">
 		<set name="icon" val="icon.skill0234" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -362,7 +362,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3617" levels="1" name="Enchant Heavy Armor (Grade B)">
+	<skill id="3617" levels="1" name="Enchant Heavy Armor (B-grade)">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill0231" />
 		<set name="magicLvl" val="1" />
@@ -384,7 +384,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3618" levels="1" name="Enchant Light Armor (Grade B)">
+	<skill id="3618" levels="1" name="Enchant Light Armor (B-grade)">
 		<set name="icon" val="icon.skill0233" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -400,7 +400,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3619" levels="1" name="Enchant Robe (Grade B)">
+	<skill id="3619" levels="1" name="Enchant Robe (B-grade)">
 		<set name="icon" val="icon.skill0234" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -414,7 +414,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3620" levels="1" name="Enchant Heavy Armor (Grade A)">
+	<skill id="3620" levels="1" name="Enchant Heavy Armor (A-grade)">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill0231" />
 		<set name="magicLvl" val="1" />
@@ -436,7 +436,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3621" levels="1" name="Enchant Light Armor (Grade A)">
+	<skill id="3621" levels="1" name="Enchant Light Armor (A-grade)">
 		<set name="icon" val="icon.skill0233" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -452,7 +452,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3622" levels="1" name="Enchant Robe (Grade A)">
+	<skill id="3622" levels="1" name="Enchant Robe (A-grade)">
 		<set name="icon" val="icon.skill0234" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -466,7 +466,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3623" levels="1" name="Enchant Heavy Armor (Grade S)">
+	<skill id="3623" levels="3" name="Enchant Heavy Armor (S-grade)">
+		<!-- TODO: Auto level parse, Requires manual update -->
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill0231" />
 		<set name="magicLvl" val="1" />
@@ -488,7 +489,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3624" levels="1" name="Enchant Light Armor (Grade S)">
+	<skill id="3624" levels="3" name="Enchant Light Armor (S-grade)">
+		<!-- TODO: Auto level parse, Requires manual update -->
 		<set name="icon" val="icon.skill0233" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -504,7 +506,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3625" levels="1" name="Enchant Robe (Grade S)">
+	<skill id="3625" levels="3" name="Enchant Robe (S-grade)">
+		<!-- TODO: Auto level parse, Requires manual update -->
 		<set name="icon" val="icon.skill0234" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -519,7 +522,6 @@
 		</for>
 	</skill>
 	<skill id="3626" levels="1" name="Kabokula">
-		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="castRange" val="300" />
 		<set name="channelingSkillId" val="5106" />
 		<set name="channelingTickInterval" val="2" />
@@ -541,7 +543,6 @@
 		</cond>
 	</skill>
 	<skill id="3627" levels="1" name="Tapirawa">
-		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="castRange" val="300" />
 		<set name="channelingSkillId" val="5107" />
 		<set name="channelingTickInterval" val="2" />
@@ -563,7 +564,6 @@
 		</cond>
 	</skill>
 	<skill id="3628" levels="1" name="Shabonoba">
-		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="castRange" val="300" />
 		<set name="channelingSkillId" val="5108" />
 		<set name="channelingTickInterval" val="2" />
@@ -690,7 +690,7 @@
 			<effect name="ImmobileBuff" />
 		</for>
 	</skill>
-	<skill id="3633" levels="2" name="Residential Shock Immunity">
+	<skill id="3633" levels="2" name="Residential Stun Immunity">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#trait_shock"> 80 100 </table>
 		<set name="abnormalLvl" val="1" />
@@ -746,7 +746,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3636" levels="1" name="Dynasty Platinum Plate - Shield Master">
+	<skill id="3636" levels="1" name="Dynasty Platinum Plate">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.armor_t91_uk_i00" />
 		<set name="magicLvl" val="1" />
@@ -767,7 +767,7 @@
 			<effect name="EnableCloak" />
 		</for>
 	</skill>
-	<skill id="3637" levels="1" name="Dynasty Platinum Plate - Weapon Master">
+	<skill id="3637" levels="1" name="Dynasty Platinum Plate">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.armor_t91_uw_i00" />
 		<set name="magicLvl" val="1" />
@@ -786,7 +786,7 @@
 			<effect name="EnableCloak" />
 		</for>
 	</skill>
-	<skill id="3638" levels="1" name="Dynasty Platinum Plate - Bard">
+	<skill id="3638" levels="1" name="Dynasty Platinum Plate">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.armor_t91_uke_i00" />
 		<set name="magicLvl" val="1" />
@@ -804,7 +804,7 @@
 			<effect name="EnableCloak" />
 		</for>
 	</skill>
-	<skill id="3639" levels="1" name="Dynasty Platinum Plate - Force Master">
+	<skill id="3639" levels="1" name="Dynasty Platinum Plate">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.armor_t91_uf_i00" />
 		<set name="magicLvl" val="1" />
@@ -823,7 +823,7 @@
 			<effect name="EnableCloak" />
 		</for>
 	</skill>
-	<skill id="3640" levels="1" name="Dynasty Jewel Leather Mail Dagger Master">
+	<skill id="3640" levels="1" name="Dynasty Jewel Leather Armor">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.armor_t92_ud_i00" />
 		<set name="magicLvl" val="1" />
@@ -844,7 +844,7 @@
 			<effect name="EnableCloak" />
 		</for>
 	</skill>
-	<skill id="3641" levels="1" name="Dynasty Jewel Leather Mail Bow Master">
+	<skill id="3641" levels="1" name="Dynasty Jewel Leather Armor">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.armor_t92_ub_i00" />
 		<set name="magicLvl" val="1" />
@@ -863,7 +863,7 @@
 			<effect name="EnableCloak" />
 		</for>
 	</skill>
-	<skill id="3642" levels="1" name="Dynasty Jeweled Leather Armor Force Master">
+	<skill id="3642" levels="1" name="Dynasty Jewel Leather Armor">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.armor_t92_ud_i00" />
 		<set name="magicLvl" val="1" />
@@ -882,7 +882,7 @@
 			<effect name="EnableCloak" />
 		</for>
 	</skill>
-	<skill id="3643" levels="1" name="Dynasty Jeweled Leather Armor Weapon Master">
+	<skill id="3643" levels="1" name="Dynasty Jewel Leather Armor">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.armor_t92_ub_i00" />
 		<set name="magicLvl" val="1" />
@@ -902,7 +902,7 @@
 			<effect name="EnableCloak" />
 		</for>
 	</skill>
-	<skill id="3644" levels="1" name="Dynasty Jeweled Leather Armor Summoner">
+	<skill id="3644" levels="1" name="Dynasty Jewel Leather Armor">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.armor_t92_ub_i00" />
 		<set name="magicLvl" val="1" />
@@ -921,7 +921,7 @@
 			<effect name="EnableCloak" />
 		</for>
 	</skill>
-	<skill id="3645" levels="1" name="Dynasty Silver Satin Tunic Healer">
+	<skill id="3645" levels="1" name="Dynasty Silver Satin Tunic">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.armor_t93_uh_i00" />
 		<set name="magicLvl" val="1" />
@@ -940,7 +940,7 @@
 			<effect name="EnableCloak" />
 		</for>
 	</skill>
-	<skill id="3646" levels="1" name="Dynasty Silver Satin Tunic Enchanter">
+	<skill id="3646" levels="1" name="Dynasty Silver Satin Tunic">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.armor_t93_ue_i00" />
 		<set name="magicLvl" val="1" />
@@ -959,7 +959,7 @@
 			<effect name="EnableCloak" />
 		</for>
 	</skill>
-	<skill id="3647" levels="1" name="Dynasty Silver Satin Tunic Summoner">
+	<skill id="3647" levels="1" name="Dynasty Silver Satin Tunic">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.armor_t93_us_i00" />
 		<set name="magicLvl" val="1" />
@@ -978,7 +978,7 @@
 			<effect name="EnableCloak" />
 		</for>
 	</skill>
-	<skill id="3648" levels="1" name="Dynasty Silver Satin Tunic Human Wizard">
+	<skill id="3648" levels="1" name="Dynasty Silver Satin Tunic">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.armor_t93_uw_i00" />
 		<set name="magicLvl" val="1" />
@@ -1068,7 +1068,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3653" levels="1" name="PvP Weapon - Attack Chance">
+	<skill id="3653" levels="1" name="PvP Weapon - Attack Rate">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill0005" />
 		<set name="magicLvl" val="80" />
@@ -1281,7 +1281,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3666" levels="1" name="Yellow Talisman - Increase Force">
+	<skill id="3666" levels="1" name="Yellow Talisman - Increase Momentum">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLvl" val="1" />

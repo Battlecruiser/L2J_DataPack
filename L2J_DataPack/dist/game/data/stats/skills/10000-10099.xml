@@ -1,0 +1,1297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="10000" levels="1" name="Steel Door Guild Reward Box  (Top-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="10001" levels="1" name="Superior Sword/Blunt Weapon Mastery" enchantGroup1="10">
+		<!-- STR + 2, P. Atk. + 205 when a Sword or Blunt weapon is equipped. Increases enmity toward you 60% of the damage you inflict with a Sword or Blunt weapon. Additionally, there is a chance the Cooldown of skills will reset or the duration double depending on your STR. -->
+		<table name="#pAtk"> 218 232 245 259 272 286 299 313 326 340 </table>
+		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
+		<set name="icon" val="icon.skill10001" />
+		<set name="operateType" val="P" />
+		<set name="magicLvl" val="85" />
+		<set name="targetType" val="SELF" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<for>
+			<effect name="Buff">
+				<add stat="pAtk" val="205">
+					<using kind="SWORD, BLUNT" />
+				</add>
+				<add stat="STR" val="2">
+					<using kind="SWORD, BLUNT" />
+				</add>
+				<add stat="skillCritical" val="1" /> <!-- STR -->
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="1" chance="60" />
+				<param skillId="10060" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="SWORD,BLUNT" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Buff">
+				<add stat="pAtk" val="#pAtk">
+					<using kind="SWORD, BLUNT" />
+				</add>
+				<add stat="STR" val="2">
+					<using kind="SWORD, BLUNT" />
+				</add>
+				<add stat="skillCritical" val="1" /> <!-- STR -->
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="1" chance="60" />
+				<param skillId="10060" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="SWORD,BLUNT" />
+			</effect>
+		</enchant1for>
+	</skill>
+	<skill id="10002" levels="1" name="Superior Heavy Armor Mastery" enchantGroup1="10">
+		<!-- STR + 2. Max HP + 6883 and P. Def. + 1592 when equipped with Heavy Armor. MP Recovery Bonus + 8.4 and Critical Damage received - 35%. Reflects 10% of incurred damage back to the opponent. When HP falls below 30%, additional P. Def. + 280 and Evasion + 17. -->
+		<table name="#ench1pDef1"> 1638 1684 1730 1776 1822 1868 1914 1960 2006 2060 </table>
+		<table name="#ench1pDef2"> 298 316 334 353 371 389 408 426 444 463 </table>
+		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
+		<set name="icon" val="icon.skill10002" />
+		<set name="operateType" val="P" />
+		<set name="magicLvl" val="85" />
+		<set name="targetType" val="SELF" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<for>
+			<effect name="Buff">
+				<add stat="STR" val="2">
+					<using kind="HEAVY" />
+				</add>
+				<add stat="maxHp" val="6883">
+					<using kind="HEAVY" />
+				</add>
+				<add stat="pDef" val="1592">
+					<using kind="HEAVY" />
+				</add>
+				<mul stat="regMp" val="1.84">
+					<using kind="HEAVY" />
+				</mul>
+				<mul stat="defCritDamage" val="1.35">
+					<using kind="HEAVY" />
+				</mul>
+				<add stat="reflectDam" val="10">
+					<using kind="HEAVY" />
+				</add>
+				<add stat="pDef" val="280">
+					<and>
+						<player hp="30" />
+						<using kind="HEAVY" />
+					</and>
+				</add>
+				<add stat="rEvas" val="17">
+					<and>
+						<player hp="30" />
+						<using kind="HEAVY" />
+					</and>
+				</add>
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Buff">
+				<add stat="STR" val="2">
+					<using kind="HEAVY" />
+				</add>
+				<add stat="maxHp" val="6883">
+					<using kind="HEAVY" />
+				</add>
+				<add stat="pDef" val="#ench1pDef1">
+					<using kind="HEAVY" />
+				</add>
+				<mul stat="regMp" val="1.84">
+					<using kind="HEAVY" />
+				</mul>
+				<mul stat="defCritDamage" val="1.35">
+					<using kind="HEAVY" />
+				</mul>
+				<add stat="reflectDam" val="10">
+					<using kind="HEAVY" />
+				</add>
+				<add stat="pDef" val="#ench1pDef2">
+					<and>
+						<player hp="30" />
+						<using kind="HEAVY" />
+					</and>
+				</add>
+				<add stat="rEvas" val="17">
+					<and>
+						<player hp="30" />
+						<using kind="HEAVY" />
+					</and>
+				</add>
+			</effect>
+		</enchant1for>
+	</skill>
+	<skill id="10003" levels="1" name="Superior Shield Mastery" enchantGroup1="10">
+		<!-- STR + 2 and Shield defense becomes possible in all directions. Shield defense success rate + 100%. When Shield defense succeeds, Shield Defense + 80% and an additional + 209. -->
+		<table name="#ench1pDef"> 222 236 249 263 277 290 304 317 331 345 </table>
+		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
+		<set name="icon" val="icon.skill10003" />
+		<set name="operateType" val="P" />
+		<set name="magicLvl" val="85" />
+		<set name="targetType" val="SELF" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<for>
+			<effect name="Buff">
+				<add stat="STR" val="2">
+					<using kind="SHIELD" />
+				</add>
+				<mul stat="rShld" val="2">
+					<using kind="SHIELD" />
+				</mul>
+				<mul stat="sDef" val="1.8">
+					<using kind="SHIELD" />
+				</mul>
+				<add stat="sDef" val="209">
+					<using kind="SHIELD" />
+				</add>
+				<add stat="shieldDefAngle" val="360">
+					<using kind="SHIELD" />
+				</add>
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Buff">
+				<add stat="STR" val="2">
+					<using kind="SHIELD" />
+				</add>
+				<mul stat="rShld" val="2">
+					<using kind="SHIELD" />
+				</mul>
+				<mul stat="sDef" val="1.8">
+					<using kind="SHIELD" />
+				</mul>
+				<add stat="sDef" val="#ench1pDef">
+					<using kind="SHIELD" />
+				</add>
+				<add stat="shieldDefAngle" val="360">
+					<using kind="SHIELD" />
+				</add>
+			</effect>
+		</enchant1for>
+	</skill>
+	<skill id="10004" levels="1" name="Superior M. Def." enchantGroup1="10">
+		<!-- STR + 2 and M. Def. + 158. Attack M. Def. rate + 25%. When receiving damage, has a chance of momentarily increasing M. Def. and Attribute Resistance. -->
+		<table name="#ench1mDef"> 168 178 188 199 209 219 230 240 250 261 </table>
+		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
+		<set name="icon" val="icon.skill10004" />
+		<set name="operateType" val="P" />
+		<set name="magicLvl" val="85" />
+		<set name="targetType" val="SELF" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<for>
+			<effect name="Buff">
+				<add stat="STR" val="2" />
+				<add stat="mDef" val="158" />
+				<mul stat="magicSuccRes" val="1.25" />
+			</effect>
+			<effect name="TriggerSkillByDamage">
+				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="20" />
+				<param skillId="10058" skillLevel="1" />
+				<param targetType="SELF" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Buff">
+				<add stat="STR" val="2" />
+				<add stat="mDef" val="#ench1mDef" />
+				<mul stat="magicSuccRes" val="1.25" />
+			</effect>
+			<effect name="TriggerSkillByDamage">
+				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="20" />
+				<param skillId="10058" skillLevel="1" />
+				<param targetType="SELF" />
+			</effect>
+		</enchant1for>
+	</skill>
+	<skill id="10005" levels="1" name="Superior Mental Attack Resistance">
+		<!-- STR + 2. Resistance + 20 to Hold, Sleep, Paralysis, Mental attacks, Poison, Bleed, and Stun. In addition, has a chance of reflecting debuffs back to the attacker. -->
+		<table name="#ench1Vuln">21 22 23 24 25 26 27 28 29 30</table>
+		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
+		<set name="icon" val="icon.skill10005" />
+		<set name="operateType" val="P" />
+		<set name="magicLvl" val="85" />
+		<set name="targetType" val="SELF" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<for>
+			<effect name="Buff">
+				<add stat="STR" val="2" />
+				<add stat="reflectSkillMagic" val="10" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param HOLD="20" />
+				<param SLEEP="20" />
+				<param PARALYZE="20" />
+				<param DERANGEMENT="20" />
+				<param POISON="20" />
+				<param BLEED="20" />
+				<param SHOCK="20" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Buff">
+				<add stat="STR" val="2" />
+				<add stat="reflectSkillMagic" val="10" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param HOLD="#ench1Vuln" />
+				<param SLEEP="#ench1Vuln" />
+				<param PARALYZE="#ench1Vuln" />
+				<param DERANGEMENT="#ench1Vuln" />
+				<param POISON="#ench1Vuln" />
+				<param BLEED="#ench1Vuln" />
+				<param SHOCK="#ench1Vuln" />
+			</effect>
+		</enchant1for>
+	</skill>
+	<skill id="10006" levels="1" name="Last Patience">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2. When receiving damage, has a chance of increasing P. Skill Power and Shield Defense -->
+		<set name="icon" val="icon.skill10006" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="10007" levels="3" name="Last Patience">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 9 seconds, Shield Defense/Skill Power + 25%. -->
+		<table name="#icons"> icon.skill10006 icon.skill10007 icon.skill10007 </table>
+		<set name="icon" val="#icons" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="8000" />
+		<set name="isMagic" val="4" />
+	</skill>
+	<skill id="10008" levels="8" name="Shield Charge">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Uses a shield to attack target with 13634 Power added to P. Atk. and also P. Def. - 10%, P. Evasion - 2, and P. Critical Damage + 10%. Can be used while a shield is equipped. -->
+		<table name="#mpConsumes"> 53 54 56 58 59 61 63 65 </table>
+		<set name="icon" val="icon.skill10008" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="800" />
+		<set name="coolTime" val="570" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10009" levels="8" name="Last Judgment">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 16556 Power added to P. Atk, and Speed - 70. Can be used while a sword or blunt weapon is equipped. Over-hit. Critical. -->
+		<table name="#mpConsumes"> 64 66 68 70 72 75 77 79 </table>
+		<set name="icon" val="icon.skill10009" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="470" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10010" levels="8" name="Justice Punishment">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 20451 Power added to P. Atk, and P. Atk./M. Atk. - 20%. Blocks the use of magic skills. Requires a sword or blunt weapon to be equipped. Over-hit. Critical. -->
+		<table name="#mpConsumes"> 80 83 85 88 91 94 97 100 </table>
+		<set name="icon" val="icon.skill10010" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1700" />
+		<set name="coolTime" val="370" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10011" levels="5" name="Shield Impact">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 11253 Power added to P. Atk. and Stuns for 5 seconds. Can be used while a shield is equipped. -->
+		<table name="#mpConsumes"> 49 52 54 57 60 </table>
+		<set name="icon" val="icon.skill10011" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="800" />
+		<set name="coolTime" val="470" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10012" levels="7" name="Shield Wave">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks nearby targets with 10174 Power added to P. Atk. Power added to P. Atk. and Stuns for 9 seconds Power added to P. Atk. Can be used while a shield is equipped. -->
+		<table name="#mpConsumes"> 59 61 63 65 67 69 71 </table>
+		<set name="icon" val="icon.skill10012" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="470" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10013" levels="8" name="Gust Blade">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks nearby targets with 10314 Power added to P. Atk. Can be used while a sword or blunt weapon is equipped. Over-hit. Critical. -->
+		<table name="#mpConsumes"> 121 125 129 133 138 142 146 151 </table>
+		<set name="icon" val="icon.skill10013" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="370" />
+		<set name="reuseDelay" val="10000" />
+	</skill>
+	<skill id="10014" levels="8" name="Chain Galaxy">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks nearby targets with 14300 Power added to P. Atk. Healing Power received - 90%. -->
+		<table name="#mpConsumes"> 159 162 167 173 179 184 190 196 </table>
+		<set name="icon" val="icon.skill10014" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1700" />
+		<set name="coolTime" val="370" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10015" levels="6" name="Chain Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Pulls selected target to make them attack you. Requires a shield. -->
+		<table name="#mpConsumes"> 58 61 63 66 69 72 </table>
+		<set name="icon" val="icon.skill10015" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="500" />
+		<set name="coolTime" val="1000" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10016" levels="6" name="Chain Hydra">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Pulls target and nearby enemies to make them attack you. Requires a shield. -->
+		<table name="#mpConsumes"> 123 127 132 136 140 144 </table>
+		<set name="icon" val="icon.skill10016" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="500" />
+		<set name="coolTime" val="1000" />
+		<set name="reuseDelay" val="45000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10017" levels="4" name="Final Ultimate Defense">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 sec., P. Def. + 4000 and M. Def. + 4000. Damage received is capped at 300 and 40% of it is reflected back to the attacker. Additionally, + 80% Buff-canceling Attack Resistance. -->
+		<table name="#mpConsumes"> 58 63 68 72 </table>
+		<set name="icon" val="icon.skill10017" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="900000" />
+	</skill>
+	<skill id="10018" levels="2" name="Noble Sacrifice">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 seconds, receives 60% of the damage inflicted to the party member. -->
+		<table name="#mpConsumes"> 60 65 </table>
+		<set name="icon" val="icon.skill10018" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="400" />
+		<set name="hitTime" val="500" />
+		<set name="coolTime" val="1000" />
+		<set name="reuseDelay" val="60000" />
+	</skill>
+	<skill id="10019" levels="2" name="Protection of Faith">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 15 seconds, all party members' P. Def. + 5000, M. Def. + 5000, and Debuff Resistance + 50%. Receives 90% of the damage inflicted to each party member. -->
+		<table name="#mpConsumes"> 127 140 </table>
+		<set name="icon" val="icon.skill10019" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="500" />
+		<set name="coolTime" val="1000" />
+		<set name="reuseDelay" val="900000" />
+	</skill>
+	<skill id="10020" levels="4" name="Focus Shield">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Def. + 350, Shield Defense + 700, and shield defense + 35%. MP is continuously consumed. -->
+		<set name="icon" val="icon.skill10020" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="50" />
+	</skill>
+	<skill id="10021" levels="4" name="Spike Shield">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 seconds, reflects 10% of received damage back to the attacker. Also has a 50% chance of reflecting magic damage back to the attacker. Requires a shield. -->
+		<table name="#mpConsumes"> 20 21 23 24 </table>
+		<set name="icon" val="icon.skill10021" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="60000" />
+	</skill>
+	<skill id="10022" levels="1" name="Ignore Death">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 seconds, HP does not decrease below 1. -->
+		<set name="icon" val="icon.skill10022" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="38" />
+		<set name="hitTime" val="500" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="1800000" />
+	</skill>
+	<skill id="10023" levels="2" name="King of Beasts">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons the King of Beasts to attack nearby and frontal targets with 35222 Power added to P. Atk. Requires a shield. Over-hit. -->
+		<table name="#mpConsumes"> 1103 1158 </table>
+		<set name="icon" val="icon.skill10023" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="7500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+	</skill>
+	<skill id="10024" levels="1" name="Party Rescue">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Drags all party members to oneself, and for 15 seconds receives 90% of the damage inflicted to all party members. Additionally, all damage received is capped at 10. Requires a shield. -->
+		<set name="icon" val="icon.skill10024" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="96" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="600000" />
+	</skill>
+	<skill id="10025" levels="4" name="Knight Frenzy">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 1 minute, P. Def. and M. Def. + 50%, Speed + 10, Accuracy + 4 and Atk. Spd. + 10% when equipped with a sword or blunt weapon. Additionally, Critical Rate + 30 when equipped with a sword, and Critical Damage + 30% when equipped with a blunt weapon. -->
+		<table name="#mpConsumes"> 20 21 23 24 </table>
+		<set name="icon" val="icon.skill10025" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="600000" />
+	</skill>
+	<skill id="10026" levels="6" name="Superior Aggression">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Provokes target into attacking you. -->
+		<set name="icon" val="icon.skill10026" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="400" />
+		<set name="hitTime" val="800" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10027" levels="5" name="Superior Aggression Aura">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Provokes nearby enemies into attacking you. -->
+		<set name="icon" val="icon.skill10027" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10028" levels="1" name="Rage Aura">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When equipped with a sword or blunt weapon, increases P. Atk. Atk. Spd. and P. Critical Damage by 10%, and Speed by 10. Decreases nearby enemies' P. Atk. and Atk. Spd. by 20%. Only one Sigel Knight's Aura can be active at any time. -->
+		<set name="icon" val="icon.skill10028" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="1000" />
+	</skill>
+	<skill id="10029" levels="1" name="Rage Aura">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decrease P. Atk and Atk. Spd. by 20%. -->
+		<set name="icon" val="icon.skill10028" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="1000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10030" levels="1" name="Challenge Aura">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When a sword or blunt weapon is equipped, increases aggression power. Additionally, increases party members' P. Atk. and Atk. Spd. by 5% and decreases skill MP Consumption by 20%. Only one Sigel Knight's Aura can be active at any time. -->
+		<set name="icon" val="icon.skill10030" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="1000" />
+	</skill>
+	<skill id="10031" levels="1" name="Challenge Aura">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. and Atk. Spd. + 5%, and skill MP Consumption - 20%. -->
+		<set name="icon" val="icon.skill10030" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="1000" />
+	</skill>
+	<skill id="10032" levels="1" name="Iron Aura">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. and Atk. Spd. + 5%. P. Def. + 215, Shield Defense + 50%, shield defense rate + 100% when equipped with heavy armor. Bow/Crossbow Resistance + 20%. Damage from critical attack - 15%. Only one Sigel Knight's Aura can be active at any time. -->
+		<set name="icon" val="icon.skill10032" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="1000" />
+	</skill>
+	<skill id="10033" levels="1" name="Iron Aura">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. and Atk. Spd. + 5%, P. Def. + 10%, Bow/Crossbow Resistance + 20%. Instant heal effect + 10%. -->
+		<set name="icon" val="icon.skill10032" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="1000" />
+	</skill>
+	<skill id="10034" levels="1" name="Aura Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. and Atk. Spd. + 5%, M. Def. + 10%, Fire/Water/Wind/Earth Resistance + 20. Only one Sigel Knight's Aura can be active at any time. -->
+		<set name="icon" val="icon.skill10034" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="1000" />
+	</skill>
+	<skill id="10035" levels="1" name="Aura Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. and Atk. Spd. + 5%, M. Def. + 10%, Fire/Water/Wind/Earth Resistance + 20. -->
+		<set name="icon" val="icon.skill10034" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="1000" />
+	</skill>
+	<skill id="10036" levels="1" name="Recovery Aura">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. and Atk. Spd. + 5%, and P. Mez/Debuff Resistance + 20. Additionally, Heal Amount by healing skills + 10% and HP Recovery Bonus + 10%. Only one Sigel Knight's Aura can be active at any time. -->
+		<set name="icon" val="icon.skill10036" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="1000" />
+	</skill>
+	<skill id="10037" levels="1" name="Recovery Aura">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. and Atk. Spd. + 5%, and P. Mez/Debuff Resistance + 20. Additionally, Heal Amount by healing skills + 10% and HP Recovery Bonus + 10%. -->
+		<set name="icon" val="icon.skill10036" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="1000" />
+	</skill>
+	<skill id="10038" levels="1" name="Spirit Aura">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. and Atk. Spd. + 5%, and M. Mez/Debuff Resistance + 20. Additionally, Additionally, MP Recovery Amount and MP Recovery Bonus + 10%. Only one Sigel Knight's Aura can be active at any time. -->
+		<set name="icon" val="icon.skill10038" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="1000" />
+	</skill>
+	<skill id="10039" levels="1" name="Spirit Aura">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. and Atk. Spd. + 5%, and M. Mez/Debuff Resistance + 20. Additionally, Additionally, MP Recovery Amount and MP Recovery Bonus + 10%. -->
+		<set name="icon" val="icon.skill10038" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="1000" />
+	</skill>
+	<skill id="10040" levels="6" name="Summon Golden Lion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons a golden lion to fight alongside you. -->
+		<table name="#mpConsumes"> 154 156 164 173 181 189 </table>
+		<set name="icon" val="icon.skill10040" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+	</skill>
+	<skill id="10041" levels="4" name="Summon Cubic of Despair">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0010" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="hitTime" val="2200" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="30000" />
+	</skill>
+	<skill id="10042" levels="3" name="Summon Cubic of Life">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0010" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="hitTime" val="2200" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="30000" />
+	</skill>
+	<skill id="10043" levels="8" name="Summon Knight Cubic">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons a Knight Cubic. The summoned cubic removes debuffs from you. -->
+		<table name="#mpConsumes"> 96 98 101 105 108 111 115 118 </table>
+		<set name="icon" val="icon.skill0010" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="2200" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="30000" />
+	</skill>
+	<skill id="10044" levels="1" name="Superior Elemental Mastery">
+		<!-- STR + 2 and Attribute Resistance + 20. -->
+		<table name="#elemRes">21 22 23 24 25 26 27 28 29 30</table>
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill10044" />
+		<set name="isMagic" val="1" />
+		<set name="mpInitialConsume" val="14" />
+		<set name="mpConsume" val="56" />
+		<set name="operateType" val="P" />
+		<set name="reuseDelay" val="3000" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<add stat="STR" val="2" />
+				<add stat="waterRes" val="20" />
+				<add stat="fireRes" val="20" />
+				<add stat="windRes" val="20" />
+				<add stat="earthRes" val="20" />
+				<add stat="holyRes" val="20" />
+				<add stat="darkRes" val="20" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Buff">
+				<add stat="STR" val="2" />
+				<add stat="waterRes" val="#elemRes" />
+				<add stat="fireRes" val="#elemRes" />
+				<add stat="windRes" val="#elemRes" />
+				<add stat="earthRes" val="#elemRes" />
+				<add stat="holyRes" val="#elemRes" />
+				<add stat="darkRes" val="#elemRes" />
+			</effect>
+		</enchant1for>
+	</skill>
+	<skill id="10045" levels="3" name="Shield Charge II">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Strikes with the shield. Attacks target with 14179 Power added to P. Atk. Decreases P. Def. by 10% and Evasion by 2. Increases Critical damage by 10%. -->
+		<table name="#mpConsumes"> 54 0 0 </table>
+		<set name="icon" val="icon.skill10045" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="800" />
+		<set name="coolTime" val="570" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10046" levels="3" name="Shield Charge III">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Strikes with the shield. Attacks target with 15269 Power added to P. Atk. Decreases P. Def. by 10% and Evasion by 2. Increases Critical damage by 10%. -->
+		<table name="#mpConsumes"> 56 0 0 </table>
+		<set name="icon" val="icon.skill10046" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="800" />
+		<set name="coolTime" val="570" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10047" levels="3" name="Shield Charge IV">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Strikes with the shield. Attacks target with 16359 Power added to P. Atk. Decreases P. Def. by 10% and Evasion by 2. Increases Critical damage by 10%. -->
+		<table name="#mpConsumes"> 58 0 0 </table>
+		<set name="icon" val="icon.skill10047" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="800" />
+		<set name="coolTime" val="570" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10048" levels="3" name="Shield Charge V">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Strikes with the shield. Attacks target with 17449 Power added to P. Atk. Decreases P. Def. by 10% and Evasion by 2. Increases Critical damage by 10%. -->
+		<table name="#mpConsumes"> 59 0 0 </table>
+		<set name="icon" val="icon.skill10048" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="800" />
+		<set name="coolTime" val="570" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10049" levels="3" name="Shield Charge VI">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Strikes with the shield. Attacks target with 18539 Power added to P. Atk. Decreases P. Def. by 10% and Evasion by 2. Increases Critical damage by 10%. -->
+		<table name="#mpConsumes"> 61 0 0 </table>
+		<set name="icon" val="icon.skill10049" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="800" />
+		<set name="coolTime" val="570" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10050" levels="3" name="Shield Charge VII">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Strikes with the shield. Attacks target with 19629 Power added to P. Atk. Decreases P. Def. by 10% and Evasion by 2. Increases Critical damage by 10%. -->
+		<table name="#mpConsumes"> 63 0 0 </table>
+		<set name="icon" val="icon.skill10050" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="800" />
+		<set name="coolTime" val="570" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10051" levels="6" name="Lion Roar">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attack the nearby enemies and block the physical skills. -->
+		<table name="#mpConsumes"> 159 173 187 193 193 193 </table>
+		<set name="icon" val="icon.skill0217" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="400" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="70" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10052" levels="6" name="Lion Claw">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Flourishes claws to attack enemies at the front. -->
+		<table name="#mpConsumes"> 144 156 169 174 174 174 </table>
+		<set name="icon" val="icon.skill0217" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1080" />
+		<set name="coolTime" val="790" />
+		<set name="reuseDelay" val="15000" />
+	</skill>
+	<skill id="10053" levels="6" name="Lion Dash">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Dashes to the enemy to inflict damage and shock. -->
+		<table name="#mpConsumes"> 15 16 17 18 18 18 </table>
+		<set name="icon" val="icon.skill0217" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="500" />
+		<set name="hitTime" val="100" />
+		<set name="coolTime" val="270" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10054" levels="6" name="Lion Flame">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Spews flames at the enemy to inflict damage. -->
+		<table name="#mpConsumes"> 99 108 116 120 120 120 </table>
+		<set name="icon" val="icon.skill0217" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="2500" />
+		<set name="coolTime" val="70" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="10055" levels="1" name="Cubic Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Momentarily decreases P. Atk. Effect 3. -->
+		<set name="icon" val="icon.skill1164" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10056" levels="8" name="Cubic Protection">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="10057" levels="1" name="Cubic Curse">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicted with poison and HP is momentarily decreased. Effect 5. -->
+		<set name="icon" val="icon.skill1168" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10058" levels="1" name="Blessing of Protection">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- M. Def. and Attribute Resistance are momentarily increased. -->
+		<set name="icon" val="icon.skill0755" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="400" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="4" />
+	</skill>
+	<skill id="10059" levels="3" name="Shield Charge VII">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Strikes with the shield. Attacks target with 20719 Power added to P. Atk. Decreases P. Def. by 10% and Evasion by 2. Increases Critical damage by 10%. -->
+		<table name="#mpConsumes"> 65 0 0 </table>
+		<set name="icon" val="icon.skill10059" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="800" />
+		<set name="coolTime" val="570" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10060" levels="1" name="Aggression Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Provokes. -->
+		<set name="icon" val="icon.skill0086" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="4" />
+	</skill>
+	<skill id="10061" levels="1" name="Price of Summoning">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Def. is intentionally decreased as price for summoning a lion. -->
+		<set name="icon" val="icon.skill1100" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="reuseDelay" val="8000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10062" levels="4" name="Phoenix Spirit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Def./ M. Def. + 2%. Has a 30% chance of doing the same to all party members for 10 sec. when attacked. -->
+		<set name="icon" val="icon.skill11829" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="10063" levels="4" name="Phoenix Spirit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 sec., all party members' P. Def./ M. Def. + 2%. -->
+		<set name="icon" val="icon.skill11829" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="400" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="4" />
+	</skill>
+	<skill id="10064" levels="4" name="Holy Sacrifice">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Consumes your HP to restore target's HP by 1000. Requires a shield. -->
+		<table name="#hpConsumes"> 800 1100 1200 1600 </table>
+		<set name="icon" val="icon.skill10064" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hpConsume" val="#hpConsumes" />
+		<set name="castRange" val="400" />
+		<set name="hitTime" val="1000" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="10065" levels="4" name="Fortress Shield">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Shield P. Def. + 5%, Shield Defense + 2%. -->
+		<set name="icon" val="icon.skill0322" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="10066" levels="4" name="Spirit of Revenge">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk./ M. Atk. + 2%. Has a 30% chance of doing the same to all party members for 10 sec. when attacked. -->
+		<set name="icon" val="icon.skill11830" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="10067" levels="4" name="Spirit of Revenge">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 sec., all party members' P. Atk./ M. Atk. + 2%. -->
+		<set name="icon" val="icon.skill11830" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="4" />
+	</skill>
+	<skill id="10068" levels="4" name="Summon Blood Panther">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons a Blood Panther to fight with you. -->
+		<table name="#mpConsumes"> 154 156 164 173 </table>
+		<set name="icon" val="icon.skill11853" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+	</skill>
+	<skill id="10069" levels="4" name="Vampirism">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Has a 30% chance of recovering HP after a successful standard/ skill attack. -->
+		<set name="icon" val="icon.skill10069" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="10070" levels="4" name="Vampirism">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- HP Recovery -->
+		<set name="icon" val="icon.skill10069" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="reuseDelay" val="10000" />
+	</skill>
+	<skill id="10071" levels="4" name="Eva's Presence">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Def./ M. Def. + 2%. Has a 30% chance of increasing all party members' P. Def./ M. Def. and heal amount by 1% for 10 sec. when attacked. -->
+		<set name="icon" val="icon.skill10071" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="10072" levels="4" name="Eva's Presence">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 sec., all party members' P. Def./ M. Def. and heal amount by 1%. -->
+		<set name="icon" val="icon.skill10071" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="4" />
+	</skill>
+	<skill id="10073" levels="4" name="Summon Buff Cubic">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons a Melody Cubic. The Melody Cubic uses magic to restore its owner's HP and MP. -->
+		<set name="icon" val="icon.skill10073" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="96" />
+		<set name="hitTime" val="2200" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="10074" levels="4" name="Summon Mind Cubic">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons the Mind Cubic. The Sigel Mind Cubic uses magic to restore the owner's MP. -->
+		<set name="icon" val="icon.skill10074" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="96" />
+		<set name="hitTime" val="2200" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="10075" levels="1" name="Superior Cubic Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can summon up to 3 Cubics at once. -->
+		<set name="icon" val="icon.skill0143" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="10076" levels="4" name="Superior Guard Stance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Shield Defense + 5%, Shield P. Def. + 2%. -->
+		<set name="icon" val="icon.skill0288" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="8" />
+	</skill>
+	<skill id="10077" levels="4" name="Shilen's Presence">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk./ M. Atk. + 2%. Has a 30% chance of doing the same to all party members for 10 sec. when attacked. -->
+		<set name="icon" val="icon.skill11832" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="10078" levels="4" name="Shilen's Presence">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 sec., all party members' P. Atk./ M. Atk. + 2%. -->
+		<set name="icon" val="icon.skill11832" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="4" />
+	</skill>
+	<skill id="10079" levels="4" name="Summon Phantom Cubic">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons a Phantom Cubic. It uses magic to decrease the enemy's physical and magic Spd. -->
+		<set name="icon" val="icon.skill10079" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="96" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="10080" levels="4" name="Summon Hex Cubic">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons the Hex Cubic, which uses magic to decrease the enemy's P. Def. and M. Def. -->
+		<set name="icon" val="icon.skill10080" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="96" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="10081" levels="4" name="Lightning Root">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- With lightning, inflicts non-attribute damage on target with 15574 Power added to M. Atk. Instantly becomes stunned for 5 sec. Requires a shield. -->
+		<table name="#mpConsumes"> 87 95 103 110 </table>
+		<set name="icon" val="icon.skill0279" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="400" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10082" levels="4" name="Strong Cubic Heal">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="10083" levels="4" name="Basic Cubic Heal">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="10084" levels="4" name="Basic Cubic Mind">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0191" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="10085" levels="4" name="Cubic Falter">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 5 sec., Atk. Spd./ Casting Spd. - 5%. -->
+		<set name="icon" val="icon.skill1206" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10086" levels="4" name="Cubic Hex">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 5 sec., P. Def./ M. Def. - 5%. -->
+		<set name="icon" val="icon.skill0122" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10087" levels="4" name="Blood Panther Roar">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts 7750 damage onto nearby enemies, and has a chance of restraining their P. Atk. For 5 sec. -->
+		<table name="#mpConsumes"> 159 173 187 193 </table>
+		<set name="icon" val="icon.skill1336" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="42000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10088" levels="4" name="Blood Panther Rush">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Rush toward the enemy to inflict 3875 damage and inflict Shock for 5 sec. -->
+		<table name="#mpConsumes"> 30 32 34 36 </table>
+		<set name="icon" val="icon.skill0100" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="100" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="21000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10089" levels="4" name="Strong Cubic Mind">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0191" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="10090" levels="4" name="Provoking Shackle">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Provokes nearby enemies and inflicts Hold for 9 sec. -->
+		<table name="#mpConsumes"> 59 61 63 65 </table>
+		<set name="icon" val="icon.skill10090new" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="470" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10091" levels="1" name="Templar's Will">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Removes your debuff. -->
+		<set name="icon" val="icon.skll10092" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="35" />
+		<set name="hitTime" val="200" />
+		<set name="reuseDelay" val="60000" />
+	</skill>
+	<skill id="10092" levels="4" name="Summon Guardian Cubic">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons a Guardian Cubic. The Guardian Cubic uses magic to increase its owner's Shield Defense and Spd. -->
+		<set name="icon" val="icon.skll10093" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="96" />
+		<set name="hitTime" val="2200" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="10093" levels="4" name="Guardian Cubic">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Shield P. Def. and Shield Defense. Spd. + 13. -->
+		<set name="icon" val="icon.skll10093" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="10094" levels="4" name="Mass Lightning Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Strikes target and nearby enemies with a lightning bolt that inflicts non-attribute damage with 11997 Power. Paralyzes for 5 seconds. Consumes 1 Soulstone. -->
+		<table name="#mpConsumes"> 140 143 155 165 </table>
+		<set name="icon" val="icon.skll10094" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="400" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10095" levels="1" name="Blood Panther's Death Touch">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When a normal attack or skill attack is successful, casts a de-buff that increases the critical damage received from target with a certain probability. -->
+		<set name="icon" val="icon.skll10091" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="10096" levels="1" name="Death Touch">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases target's Received Critical Damage by 35%. -->
+		<set name="icon" val="icon.skll10091" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="100" />
+		<set name="hitTime" val="500" />
+		<set name="coolTime" val="100" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10097" levels="3" name="Riot Shield">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks nearby targets with 17927 Power added to P. Atk., and forces them to target you. Requires a shield. Consumes 6 Soulstones. Over-hit. Critical. -->
+		<table name="#mpConsumes"> 185 191 197 </table>
+		<set name="icon" val="icon.skill10097" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10098" levels="4" name="Paladin's Frenzy">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 1 min., P./M. Def. +50%, Debuff Resistance + 10%, Speed + 10. When equipped with a sword or blunt weapon, Accuracy + 4, Atk. Spd. + 10%, Critical Rate + 30, Critical Damage + 30%. -->
+		<table name="#mpConsumes"> 20 21 23 24 </table>
+		<set name="icon" val="icon.skill10098" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="600000" />
+	</skill>
+	<skill id="10099" levels="4" name="Avenger's Frenzy">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 1 min., P. Atk. + 5%, P./M. Def. + 50%, Speed + 10. When equipped with a sword or blunt weapon, Accuracy + 4, Atk. Spd. + 10%, Critical Rate + 30, Critical Damage + 30%. -->
+		<table name="#mpConsumes"> 20 21 23 24 </table>
+		<set name="icon" val="icon.skill10099" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="600000" />
+	</skill>
+</list>

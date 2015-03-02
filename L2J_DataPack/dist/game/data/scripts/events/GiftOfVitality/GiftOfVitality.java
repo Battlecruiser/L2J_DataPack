@@ -101,7 +101,7 @@ public final class GiftOfVitality extends LongTimeEvent
 					long remainingTime = (reuse - System.currentTimeMillis()) / 1000;
 					int hours = (int) (remainingTime / 3600);
 					int minutes = (int) ((remainingTime % 3600) / 60);
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.AVAILABLE_AFTER_S1_S2_HOURS_S3_MINUTES);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_WILL_BE_AVAILABLE_FOR_RE_USE_AFTER_S2_HOUR_S_S3_MINUTE_S);
 					sm.addSkillName(23179);
 					sm.addInt(hours);
 					sm.addInt(minutes);
@@ -141,17 +141,20 @@ public final class GiftOfVitality extends LongTimeEvent
 				{
 					htmltext = "4306-nolevel.htm";
 				}
-				else if (!player.hasServitor())
+				else if (!player.hasServitors())
 				{
 					htmltext = "4306-nosummon.htm";
 				}
 				else
 				{
-					npc.setTarget(player.getSummon());
-					for (SkillHolder sk : SERVITOR_SKILLS)
+					player.getServitors().values().forEach(s ->
 					{
-						npc.doCast(sk.getSkill());
-					}
+						npc.setTarget(s);
+						for (SkillHolder sk : SERVITOR_SKILLS)
+						{
+							npc.doCast(sk.getSkill());
+						}
+					});
 					htmltext = "4306-okbuff.htm";
 				}
 				break;

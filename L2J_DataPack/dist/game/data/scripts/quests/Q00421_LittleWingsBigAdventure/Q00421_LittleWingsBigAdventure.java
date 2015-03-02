@@ -70,10 +70,10 @@ public final class Q00421_LittleWingsBigAdventure extends Quest
 	private static final Map<Integer, NpcData> NPC_DATA = new HashMap<>();
 	static
 	{
-		NPC_DATA.put(TREE_OF_WIND, new NpcData(NpcStringId.HEY_YOUVE_ALREADY_DRUNK_THE_ESSENCE_OF_WIND, 2, 1, 270));
-		NPC_DATA.put(TREE_OF_STAR, new NpcData(NpcStringId.HEY_YOUVE_ALREADY_DRUNK_THE_ESSENCE_OF_A_STAR, 4, 2, 400));
-		NPC_DATA.put(TREE_OF_TWILIGHT, new NpcData(NpcStringId.HEY_YOUVE_ALREADY_DRUNK_THE_ESSENCE_OF_DUSK, 8, 4, 150));
-		NPC_DATA.put(TREE_OF_ABYSS, new NpcData(NpcStringId.HEY_YOUVE_ALREADY_DRUNK_THE_ESSENCE_OF_THE_ABYSS, 16, 8, 270));
+		NPC_DATA.put(TREE_OF_WIND, new NpcData(NpcStringId.HEY_YOU_VE_ALREADY_DRUNK_THE_ESSENCE_OF_WIND, 2, 1, 270));
+		NPC_DATA.put(TREE_OF_STAR, new NpcData(NpcStringId.HEY_YOU_VE_ALREADY_DRUNK_THE_ESSENCE_OF_A_STAR, 4, 2, 400));
+		NPC_DATA.put(TREE_OF_TWILIGHT, new NpcData(NpcStringId.HEY_YOU_VE_ALREADY_DRUNK_THE_ESSENCE_OF_DUSK, 8, 4, 150));
+		NPC_DATA.put(TREE_OF_ABYSS, new NpcData(NpcStringId.HEY_YOU_VE_ALREADY_DRUNK_THE_ESSENCE_OF_THE_ABYSS, 16, 8, 270));
 	}
 	
 	public Q00421_LittleWingsBigAdventure()
@@ -127,7 +127,7 @@ public final class Q00421_LittleWingsBigAdventure extends Quest
 			}
 			case "30747-04.html":
 			{
-				final L2Summon summon = player.getSummon();
+				final L2Summon summon = player.getPet();
 				
 				if (summon == null)
 				{
@@ -145,7 +145,7 @@ public final class Q00421_LittleWingsBigAdventure extends Quest
 			}
 			case "30747-05.html":
 			{
-				final L2Summon summon = player.getSummon();
+				final L2Summon summon = player.getPet();
 				
 				if (summon == null)
 				{
@@ -247,7 +247,7 @@ public final class Q00421_LittleWingsBigAdventure extends Quest
 					}
 					case 200:
 					{
-						final L2Summon summon = talker.getSummon();
+						final L2Summon summon = talker.getPet();
 						
 						if (summon == null)
 						{
@@ -293,7 +293,7 @@ public final class Q00421_LittleWingsBigAdventure extends Quest
 					{
 						if (!hasQuestItems(talker, FAIRY_LEAF))
 						{
-							final L2Summon summon = talker.getSummon();
+							final L2Summon summon = talker.getPet();
 							
 							if (summon == null)
 							{
@@ -383,7 +383,8 @@ public final class Q00421_LittleWingsBigAdventure extends Quest
 				final NpcData data = NPC_DATA.get(npc.getId());
 				if ((qs.getMemoState() % data.memoStateMod) < data.memoStateValue)
 				{
-					if (attacker.getSummon().getControlObjectId() == qs.getInt("fluteObjectId"))
+					final L2Summon pet = attacker.getPet();
+					if ((pet != null) && (pet.getControlObjectId() == qs.getInt("fluteObjectId")))
 					{
 						final int hits = qs.getInt("hits") + 1;
 						qs.set("hits", hits);

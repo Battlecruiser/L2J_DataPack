@@ -212,7 +212,7 @@ public final class AirShipGludioGracia extends Quest implements Runnable
 		}
 		else if (player.isCursedWeaponEquipped())
 		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_A_CURSED_WEAPON_IS_EQUIPPED);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHEN_A_CURSED_WEAPON_IS_EQUIPPED);
 			return null;
 		}
 		else if (player.isCombatFlagEquipped())

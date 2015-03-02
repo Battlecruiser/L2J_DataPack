@@ -154,19 +154,20 @@
 		<set name="recipe_id" val="2" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9514" type="Armor" name="Sealed Dynasty Breast Plate">
+	<item id="9514" type="Armor" name="Sealed Dynasty Breastplate">
 		<set name="icon" val="icon.armor_t91_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1171" />
+		<set name="crystal_count" val="780" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -175,19 +176,20 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9515" type="Armor" name="Sealed Dynasty Gaiter">
+	<item id="9515" type="Armor" name="Sealed Dynasty Gaiters">
 		<set name="icon" val="icon.armor_t91_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="731" />
+		<set name="crystal_count" val="487" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="3210" />
 		<set name="price" val="15248000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -201,13 +203,14 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="439" />
+		<set name="crystal_count" val="292" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="HELMET" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -221,13 +224,14 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="293" />
+		<set name="crystal_count" val="195" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="GLOVES" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -241,13 +245,14 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="293" />
+		<set name="crystal_count" val="195" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FEET" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -262,13 +267,14 @@
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="878" />
+		<set name="crystal_count" val="585" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<for>
 			<add order="0" stat="pDef" val="161" />
 			<enchant stat="pDef" val="0" />
@@ -280,13 +286,14 @@
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="549" />
+		<set name="crystal_count" val="365" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1370" />
 		<set name="price" val="11436000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<for>
 			<add order="0" stat="pDef" val="100" />
 			<enchant stat="pDef" val="0" />
@@ -297,13 +304,14 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="439" />
+		<set name="crystal_count" val="292" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="HELMET" />
 		<for>
 			<add order="0" stat="pDef" val="92" />
 			<enchant stat="pDef" val="0" />
@@ -314,13 +322,14 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="293" />
+		<set name="crystal_count" val="195" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="GLOVES" />
 		<for>
 			<add order="0" stat="pDef" val="61" />
 			<enchant stat="pDef" val="0" />
@@ -331,13 +340,14 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="293" />
+		<set name="crystal_count" val="195" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FEET" />
 		<for>
 			<add order="0" stat="pDef" val="61" />
 			<enchant stat="pDef" val="0" />
@@ -349,13 +359,14 @@
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="878" />
+		<set name="crystal_count" val="585" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -371,13 +382,14 @@
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="549" />
+		<set name="crystal_count" val="365" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="860" />
 		<set name="price" val="11436000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -392,7 +404,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="439" />
+		<set name="crystal_count" val="292" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
@@ -412,13 +424,14 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="293" />
+		<set name="crystal_count" val="195" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="GLOVES" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -432,13 +445,14 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="293" />
+		<set name="crystal_count" val="195" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FEET" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -452,7 +466,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="307" />
+		<set name="crystal_count" val="204" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1150" />
@@ -468,7 +482,7 @@
 			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
-	<item id="9530" type="EtcItem" name="Sealed Dynasty Breast Plate Piece">
+	<item id="9530" type="EtcItem" name="Sealed Dynasty Breastplate Piece">
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -495,7 +509,7 @@
 		<set name="price" val="37081" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9533" type="EtcItem" name="Sealed Dynasty Gauntlet Piece">
+	<item id="9533" type="EtcItem" name="Sealed Dynasty Gauntlets Piece">
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -504,7 +518,7 @@
 		<set name="price" val="27870" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9534" type="EtcItem" name="Sealed Dynasty Boot Piece">
+	<item id="9534" type="EtcItem" name="Sealed Dynasty Boots Piece">
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -513,7 +527,7 @@
 		<set name="price" val="27870" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9535" type="EtcItem" name="Sealed Dynasty Leather Armor Piece">
+	<item id="9535" type="EtcItem" name="Sealed Dynasty Leather Armor Fragment">
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -540,7 +554,7 @@
 		<set name="price" val="37081" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9538" type="EtcItem" name="Sealed Dynasty Leather Glove Piece">
+	<item id="9538" type="EtcItem" name="Sealed Dynasty Leather Gloves Piece">
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -567,7 +581,7 @@
 		<set name="price" val="74529" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9541" type="EtcItem" name="Sealed Dynasty Stocking Piece">
+	<item id="9541" type="EtcItem" name="Sealed Dynasty Stockings Piece">
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -585,7 +599,7 @@
 		<set name="price" val="37081" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9543" type="EtcItem" name="Sealed Dynasty Glove Piece">
+	<item id="9543" type="EtcItem" name="Sealed Dynasty Gloves Piece">
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -603,7 +617,7 @@
 		<set name="price" val="27870" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9545" type="EtcItem" name="Sealed Dynasty Shield Piece">
+	<item id="9545" type="EtcItem" name="Sealed Dynasty Shield Fragment">
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -618,11 +632,12 @@
 		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="1" />
 		<set name="price" val="25000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2329-1" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="9547" type="EtcItem" name="Water Stone">
 		<set name="icon" val="icon.etc_water_stone_i00" />
@@ -630,11 +645,12 @@
 		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="1" />
 		<set name="price" val="25000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2330-1" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="9548" type="EtcItem" name="Earth Stone">
 		<set name="icon" val="icon.etc_earth_stone_i00" />
@@ -642,11 +658,12 @@
 		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="1" />
 		<set name="price" val="25000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2332-1" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="9549" type="EtcItem" name="Wind Stone">
 		<set name="icon" val="icon.etc_wind_stone_i00" />
@@ -654,11 +671,12 @@
 		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="1" />
 		<set name="price" val="25000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2331-1" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="9550" type="EtcItem" name="Dark Stone">
 		<set name="icon" val="icon.etc_unholy_stone_i00" />
@@ -666,11 +684,12 @@
 		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="1" />
 		<set name="price" val="25000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2334-1" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="9551" type="EtcItem" name="Holy Stone">
 		<set name="icon" val="icon.etc_holy_stone_i00" />
@@ -678,11 +697,12 @@
 		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="1" />
 		<set name="price" val="25000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2333-1" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="9552" type="EtcItem" name="Fire Crystal">
 		<set name="icon" val="icon.etc_fire_crystal_i00" />
@@ -690,11 +710,12 @@
 		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="1" />
 		<set name="price" val="100000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2329-2" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="9553" type="EtcItem" name="Water Crystal">
 		<set name="icon" val="icon.etc_water_crystal_i00" />
@@ -702,11 +723,12 @@
 		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="1" />
 		<set name="price" val="100000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2330-2" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="9554" type="EtcItem" name="Earth Crystal">
 		<set name="icon" val="icon.etc_earth_crystal_i00" />
@@ -714,11 +736,12 @@
 		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="1" />
 		<set name="price" val="100000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2332-2" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="9555" type="EtcItem" name="Wind Crystal">
 		<set name="icon" val="icon.etc_wind_crystal_i00" />
@@ -726,11 +749,12 @@
 		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="1" />
 		<set name="price" val="100000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2331-2" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="9556" type="EtcItem" name="Dark Crystal">
 		<set name="icon" val="icon.etc_unholy_crystal_i00" />
@@ -738,11 +762,12 @@
 		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="1" />
 		<set name="price" val="100000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2334-2" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="9557" type="EtcItem" name="Holy Crystal">
 		<set name="icon" val="icon.etc_holy_crystal_i00" />
@@ -750,11 +775,12 @@
 		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="1" />
 		<set name="price" val="100000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2333-2" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="9558" type="EtcItem" name="Fire Jewel">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
@@ -762,7 +788,7 @@
 		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2329-3" />
@@ -773,7 +799,7 @@
 		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2330-3" />
@@ -784,7 +810,7 @@
 		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2332-3" />
@@ -795,7 +821,7 @@
 		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2331-3" />
@@ -806,7 +832,7 @@
 		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2334-3" />
@@ -817,51 +843,51 @@
 		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2333-3" />
 	</item>
-	<item id="9564" type="EtcItem" name="Fire Energy">
+	<item id="9564" type="EtcItem" name="Energy of Fire">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2329-4" />
 	</item>
-	<item id="9565" type="EtcItem" name="Water Energy">
+	<item id="9565" type="EtcItem" name="Energy of Water">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2330-4" />
 	</item>
-	<item id="9566" type="EtcItem" name="Earth Energy">
+	<item id="9566" type="EtcItem" name="Energy of Earth">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2332-4" />
 	</item>
-	<item id="9567" type="EtcItem" name="Wind Energy">
+	<item id="9567" type="EtcItem" name="Energy of Wind">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2331-4" />
@@ -872,7 +898,7 @@
 		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2334-4" />
@@ -883,7 +909,7 @@
 		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2333-4" />
@@ -897,6 +923,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="9571" type="EtcItem" name="Blue Soul Crystal - Stage 14">
 		<set name="icon" val="icon.etc_soul_stone_i01" />
@@ -907,6 +934,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="9572" type="EtcItem" name="Green Soul Crystal - Stage 14">
 		<set name="icon" val="icon.etc_soul_stone_i02" />
@@ -917,47 +945,52 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
-	<item id="9573" type="EtcItem" name="Life Stone - Level 80">
+	<item id="9573" type="EtcItem" name="Life Stone - Lv. 80">
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="price" val="28800" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
 		<cond msgId="113">
 			<player level="80" />
 		</cond>
 	</item>
-	<item id="9574" type="EtcItem" name="Mid-Grade Life Stone - Level 80">
+	<item id="9574" type="EtcItem" name="Mid-grade Life Stone - Lv. 80">
 		<set name="icon" val="icon.etc_mineral_special_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="price" val="115200" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
 		<cond msgId="113">
 			<player level="80" />
 		</cond>
 	</item>
-	<item id="9575" type="EtcItem" name="High-Grade Life Stone - Level 80">
+	<item id="9575" type="EtcItem" name="High-grade Life Stone - Lv. 80">
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
-		<set name="price" val="1152000" />
+		<set name="price" val="576000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
 		<cond msgId="113">
 			<player level="80" />
 		</cond>
 	</item>
-	<item id="9576" type="EtcItem" name="Top-Grade Life Stone - Level 80">
+	<item id="9576" type="EtcItem" name="Top-grade Life Stone - Lv. 80">
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
-		<set name="price" val="5760000" />
+		<set name="price" val="2880000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
 		<cond msgId="113">
 			<player level="80" />
 		</cond>
@@ -969,7 +1002,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
-		<set name="price" val="1300" />
+		<set name="price" val="260" />
 		<set name="enchant_enabled" val="1" />
 		<for>
 			<add order="0" stat="pDef" val="6" />
@@ -980,11 +1013,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="39" />
+		<set name="crystal_count" val="7" />
 		<set name="crystal_type" val="D" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
-		<set name="price" val="25000" />
+		<set name="price" val="5000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
 			<add order="0" stat="pDef" val="12" />
@@ -996,11 +1029,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="27" />
+		<set name="crystal_count" val="5" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
-		<set name="price" val="80000" />
+		<set name="price" val="16000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
 			<add order="0" stat="pDef" val="17" />
@@ -1012,11 +1045,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="29" />
+		<set name="crystal_count" val="5" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
-		<set name="price" val="260000" />
+		<set name="price" val="52000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
 			<add order="0" stat="pDef" val="21" />
@@ -1028,7 +1061,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="39" />
+		<set name="crystal_count" val="31" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
@@ -1044,7 +1077,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="86" />
+		<set name="crystal_count" val="57" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
@@ -1062,23 +1095,24 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
-		<set name="price" val="6100" />
+		<set name="price" val="1220" />
 		<set name="enchant_enabled" val="1" />
 		<for>
 			<add order="0" stat="pDef" val="8" />
 		</for>
 	</item>
-	<item id="9584" type="Armor" name="Stripe Linen Shirt">
+	<item id="9584" type="Armor" name="Striped Linen Shirt">
 		<set name="icon" val="icon.etc_stripe_shirts_d_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="75" />
+		<set name="crystal_count" val="12" />
 		<set name="crystal_type" val="D" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
-		<set name="price" val="49000" />
+		<set name="price" val="9800" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="UNDERWEAR" />
 		<for>
 			<add order="0" stat="pDef" val="14" />
 			<enchant stat="pDef" val="0" />
@@ -1089,11 +1123,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="60" />
+		<set name="crystal_count" val="10" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
-		<set name="price" val="180000" />
+		<set name="price" val="36000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
 			<add order="0" stat="pDef" val="19" />
@@ -1105,11 +1139,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="44" />
+		<set name="crystal_count" val="8" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
-		<set name="price" val="400000" />
+		<set name="price" val="80000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
 			<add order="0" stat="pDef" val="22" />
@@ -1121,7 +1155,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="59" />
+		<set name="crystal_count" val="46" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
@@ -1137,7 +1171,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="122" />
+		<set name="crystal_count" val="81" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
@@ -1159,6 +1193,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="216000" />
 		<set name="item_skill" val="3322-1" />
+		<set name="commissionItemType" val="BRACELET" />
 	</item>
 	<item id="9590" type="Armor" name="Bronze Bracelet">
 		<set name="icon" val="icon.etc_rbracelet_b_i01" />
@@ -1177,7 +1212,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="76" />
+		<set name="crystal_count" val="61" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
@@ -1189,14 +1224,14 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="171" />
+		<set name="crystal_count" val="113" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="3556000" />
 		<set name="item_skill" val="3325-1" />
 	</item>
-	<item id="9593" type="EtcItem" name="Yellow Seed of Evil - Shard">
+	<item id="9593" type="EtcItem" name="Yellow Seed of Evil Fragment">
 		<set name="icon" val="icon.etc_seed_of_evil_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1205,7 +1240,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9594" type="EtcItem" name="Green Seed of Evil - Shard">
+	<item id="9594" type="EtcItem" name="Green Seed of Evil Fragment">
 		<set name="icon" val="icon.etc_seed_of_evil_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1214,7 +1249,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9595" type="EtcItem" name="Blue Seed of Evil - Shard">
+	<item id="9595" type="EtcItem" name="Blue Seed of Evil Fragment">
 		<set name="icon" val="icon.etc_seed_of_evil_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1223,7 +1258,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9596" type="EtcItem" name="Red Seed of Evil - Shard">
+	<item id="9596" type="EtcItem" name="Red Seed of Evil Fragment">
 		<set name="icon" val="icon.etc_seed_of_evil_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1232,7 +1267,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9597" type="EtcItem" name="White Seed of Evil - Shard">
+	<item id="9597" type="EtcItem" name="White Seed of Evil Fragment">
 		<set name="icon" val="icon.etc_seed_of_evil_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1241,7 +1276,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9598" type="EtcItem" name="Black Seed of Evil - Shard">
+	<item id="9598" type="EtcItem" name="Black Seed of Evil Fragment">
 		<set name="icon" val="icon.etc_seed_of_evil_i05" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />

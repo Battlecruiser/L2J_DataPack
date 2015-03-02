@@ -59,13 +59,13 @@ public class HandysBlockCheckerEvent extends Quest
 		final int arena = npc.getId() - A_MANAGER_1;
 		if (eventIsFull(arena))
 		{
-			player.sendPacket(SystemMessageId.CANNOT_REGISTER_CAUSE_QUEUE_FULL);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_REGISTER_BECAUSE_CAPACITY_HAS_BEEN_EXCEEDED);
 			return null;
 		}
 		
 		if (HandysBlockCheckerManager.getInstance().arenaIsBeingUsed(arena))
 		{
-			player.sendPacket(SystemMessageId.MATCH_BEING_PREPARED_TRY_LATER);
+			player.sendPacket(SystemMessageId.THE_MATCH_IS_BEING_PREPARED_PLEASE_TRY_AGAIN_LATER);
 			return null;
 		}
 		

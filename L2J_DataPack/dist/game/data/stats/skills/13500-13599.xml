@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="13500" levels="1" name="Monster Weapon Appearance Stone: Glakias' Hammer">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13501" levels="1" name="Monster Weapon Appearance Stone: Tebot's Dual Blunt Weapon">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13502" levels="1" name="Monster Weapon Appearance Stone: Drakos' Dagger">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13503" levels="1" name="Monster Weapon Appearance Stone: Drakos' Dual Dagger">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13504" levels="1" name="Monster Weapon Appearance Stone: Guillotine's Greatsword">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13505" levels="1" name="Monster Weapon Appearance Stone: Thesakar's Axe">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13506" levels="1" name="Monster Weapon Appearance Stone: Mimilead's Staff">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13507" levels="1" name="Monster Weapon Appearance Stone: Satyr's Staff">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13508" levels="1" name="Monster Weapon Appearance Stone: Kanadis' Hand">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13509" levels="1" name="Monster Weapon Appearance Stone: Kanadis' Bow">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13510" levels="1" name="Monster Weapon Appearance Stone: Centaur's Bow">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13511" levels="1" name="Monster Weapon Appearance Stone: Spicula's Crossbow">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13512" levels="1" name="Monster Weapon Appearance Stone: Theor's Shield">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13513" levels="1" name="Monster Weapon Appearance Stone: Shield of Corruption">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13514" levels="1" name="Giant's Damage Reflect">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Reflects 20% of damage to attacker. -->
+		<set name="icon" val="icon.skill0086" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13515" levels="1" name="Giant's Critical Damage">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 5 min., P. Critical Damage + 15%. -->
+		<set name="icon" val="icon.skill0482" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="13516" levels="1" name="Giant's Damage Reflect Shield">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Damage Reflect Resistance + 50%. -->
+		<set name="icon" val="icon.active_damage_shield1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13517" levels="1" name="Giant's Battle Roar">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP/CP + 10% for 5 min. -->
+		<set name="icon" val="icon.skill3123" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="13518" levels="1" name="Giant's Celestial Shield">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Invincible for 30 sec. Invincibility is removed when you attack. -->
+		<set name="icon" val="icon.skill11758" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="600000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="13519" levels="1" name="Giant's Undying Will">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Does not die for 10 sec. Can be used when HP is 20% or below. -->
+		<set name="icon" val="icon.race_orc_immortality" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="600000" />
+	</skill>
+	<skill id="13520" levels="1" name="Giant's Silence">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 5 sec., locks target's P. Skill/ M. Skill. PvP Only. -->
+		<set name="icon" val="icon.skill1064" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1000" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="13521" levels="1" name="Giant's Sleep">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Sleeps target for 5 sec. PvP Only. -->
+		<set name="icon" val="icon.skill1069" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1000" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="13522" levels="1" name="Giant's Winter">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 sec., decreases target's Atk. Spd./ Casting Spd. by 50%. -->
+		<set name="icon" val="icon.skill1454" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1000" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="13523" levels="1" name="Giant's Critical Weakness">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 sec., increases target's Received Critical Damage and Critical Rate by 90%. -->
+		<set name="icon" val="icon.skill1222" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1000" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="13524" levels="1" name="Lindvior's Earring">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Petrification Attack/Resistance + 50%, Knock Back/Knock Down Attack/Resistance + 40%, Pull Attack/Resistance + 40%, P. Critical Damage + 10%, M. Critical Damage + 10%, and P./M. Abnormal State Reflect + 10%. Has a 10% chance of returning damage magic back to the attacking target. Speed + 5, DEX + 3, and WIT + 3. Increases Wind/Dark Resistance. Equipping two will only give the effect of one. -->
+		<set name="icon" val="icon.accessory_earring_of_lind_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13525" levels="1" name="Blessed Lindvior's Earring">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Petrification Attack/Resistance + 50%, Knock Back/Knock Down Attack/Resistance + 40%, Pull Attack/Resistance + 40%, P. Critical Damage + 10%, M. Critical Damage + 10%, and P./M. Abnormal State Reflect + 10%. Has a 10% chance of returning damage magic back to the attacking target. Speed + 5, DEX + 3, and WIT + 3. Increases Wind/Dark Resistance. Equipping two will only give the effect of one. -->
+		<set name="icon" val="icon.accessory_earring_of_lind_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13526" levels="1" name="Blessed Lindvior's Earring">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Removes Knock Back/ Knock Down effect. For 5 sec., has Knock Back/ Knock Down Resistance. -->
+		<set name="icon" val="icon.accessory_earring_of_lind_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="200" />
+		<set name="reuseDelay" val="7200000" />
+	</skill>
+	<skill id="13527" levels="1" name="Enhanced Octavis' Ring (Warrior)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Atk. Spd. + 3%, P. Critical Rate + 10, P. Critical Damage + 15%. Wearing two of the items will only give the effect of one. -->
+		<set name="icon" val="icon.octavis_ring_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13528" levels="1" name="Enhanced Octavis' Earring (Warrior)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Def. + 3%, P. Skill MP Consumption - 5%, Vampiric Rage + 5%. Wearing two of the items will only give the effect of one. -->
+		<set name="icon" val="icon.octavis_earring_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13529" levels="1" name="Enhanced Octavis' Necklace (Warrior)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. + 3%, P. Skill Cooldown - 10%, Damage Reflect + 5%. Wearing two of the items will only give the effect of one. -->
+		<set name="icon" val="icon.octavis_necklace_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13530" levels="1" name="Enhanced Istina' Ring (Warrior)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Atk. Spd. + 2%, P. Critical Rate + 10, P. Critical Damage + 10%. Wearing two of the items will only give the effect of one. -->
+		<set name="icon" val="icon.istina_ring_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13531" levels="1" name="Enhanced Istina' Earring (Warrior)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Def. + 2%, P. Skill MP Consumption - 3%, Vampiric Rage + 5%. Wearing two of the items will only give the effect of one. -->
+		<set name="icon" val="icon.istina_earring_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13532" levels="1" name="Enhanced Istina' Necklace (Warrior)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. + 2%, P. Skill Cooldown - 5%, Damage Reflect + 5%. Wearing two of the items will only give the effect of one. -->
+		<set name="icon" val="icon.istina_necklace_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13533" levels="1" name="Enhanced Octavis' Ring (Wizard)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Casting Spd. + 2%, M. Critical Rate + 10, M. Critical Damage + 10%. Wearing two of the items will only give the effect of one. -->
+		<set name="icon" val="icon.octavis_ring_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13534" levels="1" name="Enhanced Octavis' Earring (Wizard)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- M. Def. + 2%, M. Skill MP Consumption - 3%, Vampiric Rage + 5%. Wearing two of the items will only give the effect of one. -->
+		<set name="icon" val="icon.octavis_earring_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13535" levels="1" name="Enhanced Octavis' Necklace (Wizard)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- M. Atk. + 3%, M. Skill Cooldown - 5%, Damage Reflect + 5%. Wearing two of the items will only give the effect of one. -->
+		<set name="icon" val="icon.octavis_necklace_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13536" levels="1" name="Enhanced Istina' Ring (Wizard)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Casting Spd. + 3%, M. Critical Rate + 10, M. Critical Damage + 15%. Wearing two of the items will only give the effect of one. -->
+		<set name="icon" val="icon.istina_ring_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13537" levels="1" name="Enhanced Istina' Earring (Wizard)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- M. Def. + 3%, M. Skill MP Consumption - 5%, Vampiric Rage + 5%. Wearing two of the items will only give the effect of one. -->
+		<set name="icon" val="icon.istina_earring_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13538" levels="1" name="Enhanced Istina' Necklace (Wizard)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- M. Atk. + 5%, M. Skill Cooldown - 10%, Damage Reflect + 5%. Wearing two of the items will only give the effect of one. -->
+		<set name="icon" val="icon.istina_necklace_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13539" levels="1" name="Baium's Soul Ring">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Stun/Hold/Mental Resistance + 25%, Stun/Hold/Mental Attack Rate + 25%, P./ M. Critical Damage + 15%, Atk./Casting Spd. + 5%, P. Accuracy/M. Accuracy + 4. Wearing two of the items will only give the effect of one. -->
+		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13540" levels="1" name="Frintezza's Soul Necklace">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Poison/Bleed/Stun/Hold/Paralyze Resistance + 20%, Poison/Bleed/Stun/Hold/Paralyze Attack Rate + 20%, Damage Reflect + 5%, Speed + 5. Cooldown - 10%. -->
+		<set name="icon" val="icon.accessory_necklace_of_frintessa_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13541" levels="1" name="Octavis' Shirt">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2, DEX + 1, CON + 2, INT + 2, WIT + 1, MEN + 2. Speed + 7. Dark Resistance + 30. -->
+		<set name="icon" val="icon.istina_shirt_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13542" levels="1" name="Lindvior's Earring">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Removes Knock Back/ Knock Down effect. For 5 sec., has Knock Back/ Knock Down Resistance. -->
+		<set name="icon" val="icon.accessory_earring_of_lind_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="200" />
+		<set name="reuseDelay" val="7200000" />
+	</skill>
+	<skill id="13543" levels="1" name="NC Messenger's Hat">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 1/ DEX + 1/ INT + 1/ WIT + 1. -->
+		<set name="icon" val="icon.nc_hair_acc" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13544" levels="1" name="Kisung's Mysterious Power">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Magic Skill MP Consumption - 3%. -->
+		<set name="icon" val="icon.skill17085" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13545" levels="1" name="Kisung's Great Power">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Atk. Spd./ Casting Spd. + 50. -->
+		<set name="icon" val="icon.skill17085" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13546" levels="1" name="Kisung's Balanced Power">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- All stats + 1. -->
+		<set name="icon" val="icon.skill17085" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13547" levels="1" name="Mysterious Shaper">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 440, Atk. Spd. + 15%, and PVP Damage + 15%. -->
+		<set name="icon" val="icon.bm_the_dagger_of_hero" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13548" levels="1" name="Mysterious Cutter">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 503, Atk. Spd. + 15%, and PVP Damage + 15%. -->
+		<set name="icon" val="icon.bm_the_sword_of_hero" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13549" levels="1" name="Mysterious Slasher">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 612, Atk. Spd. + 15%, and PVP Damage + 15%. -->
+		<set name="icon" val="icon.bm_the_two_handed_sword_of_hero" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13550" levels="1" name="Mysterious Avenger">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 503, Atk. Spd. + 15%, and PVP Damage + 15%. -->
+		<set name="icon" val="icon.bm_the_axe_of_hero" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13551" levels="1" name="Mysterious Fighter">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 612, Atk. Spd. + 15%, and PVP Damage + 15%. -->
+		<set name="icon" val="icon.bm_the_fist_of_hero" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13552" levels="1" name="Mysterious Stormer">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 503, Atk. Spd. + 15%, and PVP Damage + 15%. Can attack multiple enemies. -->
+		<set name="icon" val="icon.bm_the_pole_of_hero" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13553" levels="1" name="Mysterious Thrower">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 991, Atk. Spd. + 15%, and PVP Damage + 15%. -->
+		<set name="icon" val="icon.bm_the_bow_of_hero" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13554" levels="1" name="Mysterious Shooter">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 893, Atk. Spd. + 15%, and PVP Damage + 15%. -->
+		<set name="icon" val="icon.bm_infinity_shooter" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13555" levels="1" name="Mysterious Buster">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, M. Atk. + 598, Casting Spd. + 15%, and PvP Damage + 15%. -->
+		<set name="icon" val="icon.bm_infinity_sword" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13556" levels="1" name="Mysterious Caster">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, M. Atk. + 598, Casting Spd. + 15%, and PvP Damage + 15%. -->
+		<set name="icon" val="icon.bm_the_mace_of_hero" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13557" levels="1" name="Mysterious Retributer">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, M. Atk. + 657, Casting Spd. + 15%, and PvP Damage + 15%. -->
+		<set name="icon" val="icon.bm_the_staff_of_hero" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13558" levels="1" name="Mysterious Dualsword">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 612, Atk. Spd. + 15%, and PVP Damage + 15%. -->
+		<set name="icon" val="icon.bm_r_dualsword" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13559" levels="1" name="Mysterious Dual Dagger">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 503, Atk. Spd. + 15%, and PVP Damage + 15%. -->
+		<set name="icon" val="icon.bm_r_dualdagger" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13560" levels="1" name="Mysterious Dual Blunt">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 612, Atk. Spd. + 15%, and PVP Damage + 15%. -->
+		<set name="icon" val="icon.bm_r_dualblunt" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13561" levels="1" name="Basic Effect: Shiny Elemental Shirt">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- M. Def. + 8. -->
+		<set name="icon" val="BranchSys2.icon.etc_scroll_of_enchant_shirt_i01" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13562" levels="10" name="Enchant Effect: Shiny Elemental Shirt">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- M. Def. + 9. -->
+		<set name="icon" val="BranchSys2.icon.etc_scroll_of_enchant_shirt_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13563" levels="5" name="Einhasad's Wrath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases P. Atk + 10%, M. Atk. + 20%, Atk. Spd. + 10%, Casting Spd. + 10%. Decreases P. Def. and M. Def. by 10%. Cooldown is 30 minutes. -->
+		<table name="#reuseDelays"> 1800000 1740000 1680000 1620000 1500000 </table>
+		<set name="icon" val="icon.ainhasard_shirt" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="#reuseDelays" />
+	</skill>
+	<skill id="13564" levels="4" name="Einhasad's Protection">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Invincible for 5 sec. Cooldown is 30 min. -->
+		<table name="#reuseDelays"> 1800000 1680000 1560000 1500000 </table>
+		<set name="icon" val="icon.ainhasard_shirt_2" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="#reuseDelays" />
+	</skill>
+	<skill id="13565" levels="3" name="Einhasad's Silence">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 5 seconds, cancels all your debuffs and cannot be targeted by the enemy. Cooldown is 30 minutes. -->
+		<table name="#reuseDelays"> 1800000 1620000 1500000 </table>
+		<set name="icon" val="icon.ainhasard_shirt_3" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="#reuseDelays" />
+	</skill>
+	<skill id="13566" levels="2" name="Einhasad's Salvation">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Resurrects when dead and retains all buffs and debuffs. The Noblesse Blessing and Lucky Charm, however, will disappear. Cooldown is 30 minutes. -->
+		<table name="#reuseDelays"> 1800000 1500000 </table>
+		<set name="icon" val="icon.ainhasard_shirt_4" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="#reuseDelays" />
+	</skill>
+	<skill id="13567" levels="1" name="Einhasad's Blessing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Recovers all your HP, MP, and CP. Has a chance of removing debuffs. Cooldown is 30 minutes. -->
+		<set name="icon" val="icon.ainhasard_shirt_5" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="1800000" />
+	</skill>
+	<skill id="13568" levels="1" name="Talisman Energy">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases resistance for all weapons by 3. When equipped with a weapon that has an attribute, the attack attribute increases + 50. -->
+		<set name="icon" val="icon.r85_talisman_pa_up_passive" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="3" />
+	</skill>
+	<skill id="13569" levels="3" name="Talisman - Lilith">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increase M. Def. + 552, MP recovery + 3, dark resistance + 10, and damage reflect resistance + 6. -->
+		<table name="#icons"> icon.lilith_talisman_i00 icon.anakim_talisman_i00 icon.sevensign_talisman_i00 </table>
+		<set name="icon" val="#icons" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="3" />
+	</skill>
+	<skill id="13570" levels="1" name="Hero's Weapon: Dagger">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 440, Atk. Spd. + 15%, and PVP Damage + 15%. -->
+		<set name="icon" val="icon.bm_the_dagger_of_hero" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13571" levels="1" name="Hero's Weapon: One-handed Sword">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 503, Atk. Spd. + 15%, and PVP Damage + 15%. -->
+		<set name="icon" val="icon.bm_the_sword_of_hero" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13572" levels="1" name="Hero's Weapon: Two-handed Sword">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 612, Atk. Spd. + 15%, and PVP Damage + 15%. -->
+		<set name="icon" val="icon.bm_the_two_handed_sword_of_hero" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13573" levels="1" name="Hero's Weapon: One-handed Blunt Weapon">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 503, Atk. Spd. + 15%, and PVP Damage + 15%. -->
+		<set name="icon" val="icon.bm_the_axe_of_hero" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13574" levels="1" name="Hero's Weapon: Fist Weapon">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 612, Atk. Spd. + 15%, and PVP Damage + 15%. -->
+		<set name="icon" val="icon.bm_the_fist_of_hero" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13575" levels="1" name="Hero's Weapon: Spear">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 503, Atk. Spd. + 15%, and PVP Damage + 15%. Can attack multiple enemies. -->
+		<set name="icon" val="icon.bm_the_pole_of_hero" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13576" levels="1" name="Hero's Weapon: Bow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 991, Atk. Spd. + 15%, and PVP Damage + 15%. -->
+		<set name="icon" val="icon.bm_the_bow_of_hero" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13577" levels="1" name="Hero's Weapon: Crossbow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 893, Atk. Spd. + 15%, and PVP Damage + 15%. -->
+		<set name="icon" val="icon.bm_infinity_shooter" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13578" levels="1" name="Hero's Weapon: One-handed Magic Sword">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, M. Atk. + 598, Casting Spd. + 15%, and PvP Damage + 15%. -->
+		<set name="icon" val="icon.bm_infinity_sword" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13579" levels="1" name="Hero's Weapon: One-handed Magic Blunt Weapon">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, M. Atk. + 598, Casting Spd. + 15%, and PvP Damage + 15%. -->
+		<set name="icon" val="icon.bm_the_mace_of_hero" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13580" levels="1" name="Hero's Weapon: Two-handed Magic Blunt Weapon">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, M. Atk. + 657, Casting Spd. + 15%, and PvP Damage + 15%. -->
+		<set name="icon" val="icon.bm_the_staff_of_hero" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13581" levels="1" name="Hero's Weapon: Dualsword">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 612, Atk. Spd. + 15%, and PVP Damage + 15%. -->
+		<set name="icon" val="icon.bm_r_dualsword" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13582" levels="1" name="Hero's Weapon: Dual Dagger">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 503, Atk. Spd. + 15%, and PVP Damage + 15%. -->
+		<set name="icon" val="icon.bm_r_dualdagger" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13583" levels="1" name="Hero's Weapon: Dual Blunt Weapon">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 612, Atk. Spd. + 15%, and PVP Damage + 15%. -->
+		<set name="icon" val="icon.bm_r_dualblunt" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13584" levels="1" name="Aria's Bracelet: CON">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- You can equip 5 Talismans. CON + 3. Max HP + 531. Max HP + 531. -->
+		<set name="icon" val="icon.istina_bangel" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13585" levels="1" name="Aria's Bracelet: MEN">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- You can equip 5 Talismans. MEN + 3. Max HP + 531. -->
+		<set name="icon" val="icon.istina_bangel" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13586" levels="1" name="Aria's Bracelet: DEX">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- You can equip 5 Talismans. DEX + 3. Max HP + 531. -->
+		<set name="icon" val="icon.octavis_bangel" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13587" levels="1" name="Aria's Bracelet: WIT">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- You can equip 5 Talismans. WIT + 3. Max HP + 531. -->
+		<set name="icon" val="icon.octavis_bangel" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13588" levels="1" name="Aria's Bracelet: STR">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- You can equip 5 Talismans. STR + 3. Max HP + 531. -->
+		<set name="icon" val="icon.accessory_bangel_of_tauti_i01" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13589" levels="1" name="Aria's Bracelet: INT">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- You can equip 5 Talismans. INT + 3. Max HP + 531. -->
+		<set name="icon" val="icon.accessory_bangel_of_tauti_i01" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13590" levels="1" name="Augment Option - P. Def.">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Passive: P. Def. + 5%. -->
+		<set name="icon" val="icon.skill4416_dwarf" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13591" levels="1" name="Augment Option - Elemental Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Passive: Elemental Resistance + 30. -->
+		<set name="icon" val="icon.skill4416_dwarf" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13592" levels="1" name="Augment Option - Attribute Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Passive: Alignment Resistance + 30. -->
+		<set name="icon" val="icon.skill4416_dwarf" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13593" levels="1" name="Augment Option - Decrease P. Skill MP Consumption">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Passive: P. Skill MP Consumption - 1%. -->
+		<set name="icon" val="icon.skill4416_dwarf" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13594" levels="1" name="Augment Option - Decrease M. Skill MP Consumption">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Passive: M. Skill MP Consumption - 1%. -->
+		<set name="icon" val="icon.skill4416_dwarf" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13595" levels="1" name="Augment Option - Decrease Skill Cooldown">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Passive: Skill Cooldown - 1%. -->
+		<set name="icon" val="icon.skill4416_dwarf" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13596" levels="1" name="Augment Option - P. Critical Damage">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Passive: P. Skill Critical Damage + 1%. -->
+		<set name="icon" val="icon.skill4416_dwarf" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13597" levels="1" name="Augment Option - M. Critical Damage">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Passive: M. Skill Critical Damage + 1%. -->
+		<set name="icon" val="icon.skill4416_dwarf" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13598" levels="1" name="Augment Option - Heal Amount">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Passive: Received Heal Amount + 1%. -->
+		<set name="icon" val="icon.skill4416_dwarf" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="13599" levels="1" name="Augment Option - Fire Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Passive: Fire Resistance + 20. -->
+		<set name="icon" val="icon.skill4416_dwarf" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+</list>

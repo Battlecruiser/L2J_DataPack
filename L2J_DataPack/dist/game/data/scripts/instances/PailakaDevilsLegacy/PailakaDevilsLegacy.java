@@ -315,7 +315,7 @@ public final class PailakaDevilsLegacy extends AbstractNpcAI
 				teleportPlayer(player, TELEPORT, world.getInstanceId());
 				return;
 			}
-			player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
+			player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
 			return;
 		}
 		world = new DIWorld();

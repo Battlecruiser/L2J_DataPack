@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/teleporterData.xsd">
+	<npc id="30836"> <!-- Minerva -->
+		<teleport type="NORMAL">
+			<location npcStringId="1010007" x="83551" y="147945" z="-3395" feeCount="2200" /> <!-- The Town of Giran -->
+			<location npcStringId="1010013" x="82958" y="53213" z="-1495" feeCount="3100" /> <!-- Town of Oren -->
+			<location npcStringId="1010020" x="117070" y="76936" z="-2696" feeCount="1700" /> <!-- Hunter's Village -->
+		</teleport>
+		<teleport type="NOBLES_TOKEN">
+			<location npcStringId="1010506" x="-87334" y="142252" z="-3645" feeId="13722" feeCount="1" /> <!-- Gludin Arena -->
+			<location npcStringId="1010507" x="73579" y="142709" z="-3763" feeId="13722" feeCount="1" /> <!-- Giran Arena -->
+			<location npcStringId="1010119" x="113553" y="134813" z="-3640" feeId="13722" feeCount="1" /> <!-- Gorgon Flower Garden (Lv. 31) -->
+			<location npcStringId="1010053" x="146434" y="46712" z="-3433" feeId="13722" feeCount="1" /> <!-- Coliseum -->
+		</teleport>
+		<teleport type="NOBLES_ADENA">
+			<location npcStringId="1010506" x="-87334" y="142252" z="-3645" feeCount="1000" /> <!-- Gludin Arena -->
+			<location npcStringId="1010507" x="73579" y="142709" z="-3763" feeCount="1000" /> <!-- Giran Arena -->
+			<location npcStringId="1010119" x="113553" y="134813" z="-3640" feeCount="1000" /> <!-- Gorgon Flower Garden (Lv. 31) -->
+			<location npcStringId="1010053" x="146434" y="46712" z="-3433" feeCount="1000" /> <!-- Coliseum -->
+		</teleport>
+	</npc>
+</list>

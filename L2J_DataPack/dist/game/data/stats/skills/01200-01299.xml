@@ -516,7 +516,7 @@
 			</effect>
 		</enchant3for>
 	</skill>
-	<skill id="1223" levels="15" name="Surrender To Earth" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1223" levels="15" name="Surrender to Earth" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 3 4 4 4 4 4 4 4 4 4 4 4 4 4 4 </table>
 		<table name="#castRange"> 750 900 900 900 900 900 900 900 900 900 900 900 900 900 900 </table>
@@ -574,7 +574,7 @@
 			</effect>
 		</enchant3for>
 	</skill>
-	<skill id="1224" levels="17" name="Surrender To Poison" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1224" levels="17" name="Surrender to Poison" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#abnormalLvls"> 3 3 3 4 4 4 4 4 4 4 4 4 4 4 4 4 4 </table>
 		<table name="#castRange"> 750 750 750 900 900 900 900 900 900 900 900 900 900 900 900 900 900 </table>
 		<table name="#effectPoints"> -243 -285 -331 -379 -418 -457 -495 -532 -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
@@ -650,7 +650,10 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond>
-			<player canSummon="true" />
+		    <and>
+				<player canSummonServitor="true" />
+				<player hasFreeSummonPoints="0" />
+			</and>
 		</cond>
 		<for>
 			<effect name="Summon">
@@ -692,7 +695,10 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond>
-			<player canSummon="true" />
+		    <and>
+				<player canSummonServitor="true" />
+				<player hasFreeSummonPoints="0" />
+			</and>
 		</cond>
 		<for>
 			<effect name="Summon">
@@ -731,7 +737,10 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond>
-			<player canSummon="true" />
+		    <and>
+				<player canSummonServitor="true" />
+				<player hasFreeSummonPoints="0" />
+			</and>
 		</cond>
 		<for>
 			<effect name="Summon">
@@ -770,7 +779,10 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond>
-			<player canSummon="true" />
+		    <and>
+				<player canSummonServitor="true" />
+				<player hasFreeSummonPoints="0" />
+			</and>
 		</cond>
 		<for>
 			<effect name="Summon">
@@ -1419,7 +1431,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1243" levels="6" name="Bless Shield" enchantGroup1="1" enchantGroup2="1">
+	<skill id="1243" levels="6" name="Blessed Shield" enchantGroup1="1" enchantGroup2="1">
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 </table>
 		<table name="#effectPoints"> 379 457 532 582 611 635 </table>
 		<table name="#magicLvl"> 40 48 56 62 66 70 </table>
@@ -1457,13 +1469,15 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1244" levels="4" name="Freezing Flame">
-		<table name="#abnormalLvls"> 5 6 7 8 </table>
-		<table name="#dot"> 102 125 144 157 </table>
-		<table name="#effectPoints"> -379 -495 -597 -646 </table>
-		<table name="#magicLvl"> 40 52 64 72 </table>
-		<table name="#mpConsume"> 42 56 71 80 </table>
-		<table name="#mpInitialConsume"> 11 14 18 20 </table>
+	<skill id="1244" levels="10" name="Freezing Flame">
+		<!-- Updated to Ertheia -->
+		<table name="#abnormalLvls"> 5 6 7 8 9 10 11 12 13 14 </table>
+		<table name="#dot"> 112 137 158 172 198 330 358 377 394 412 </table>
+		<table name="#dotPvP"> 132 162 187 204 234 390 423 445 466 487 </table>
+		<table name="#effectPoints"> -379 -495 -597 -646 -696 -746 -796 -846 -896 -946 </table> <!-- Guessed -->
+		<table name="#magicLvl"> 40 52 64 72 76 80 85 90 95 99</table>
+		<table name="#mpConsume"> 44 46 49 51 54 56 58 63 69 73 </table>
+		<table name="#mpInitialConsume"> 11 12 12 13 13 14 15 16 17 18 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="DOT_ATTR" />
@@ -1471,11 +1485,12 @@
 		<set name="activateRate" val="70" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="900" />
+		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1400" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
-		<set name="hitTime" val="4000" />
+		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.skill1244" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1484,14 +1499,19 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
-		<set name="reuseDelay" val="2000" />
+		<set name="reuseDelay" val="5000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
-		<for>
+		<pvpEffects>
+			<effect name="DamOverTime" ticks="1">
+				<param power="#dotPvP" />
+			</effect>
+		</pvpEffects>
+		<pveEffects>
 			<effect name="DamOverTime" ticks="1">
 				<param power="#dot" />
 			</effect>
-		</for>
+		</pveEffects>
 	</skill>
 	<skill id="1245" levels="14" name="Steal Essence" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
 		<table name="#effectPoints"> -379 -418 -457 -495 -532 -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
@@ -1888,7 +1908,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="1255" levels="2" name="Party Recall">
+	<skill id="1255" levels="2" name="Party Return">
 		<!-- Confirmed CT2.5 -->
 		<table name="#hitTime"> 20000 3500 </table>
 		<table name="#magicLvl"> 48 56 </table>
@@ -2049,7 +2069,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="1259" levels="4" name="Resist Shock" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1259" levels="4" name="Stun Resistance" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#abnormalLvls"> 1 2 3 4 </table>
 		<table name="#effectPoints"> 379 495 597 646 </table>
 		<table name="#magicLvl"> 40 52 64 72 </table>
@@ -2181,13 +2201,12 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1262" levels="5" name="Transfer Pain" enchantGroup1="1">
-		<table name="#magicLvl"> 40 48 56 58 70 </table>
-		<table name="#mpInitialConsume"> 7 9 11 12 13 </table>
-		<table name="#power"> 10 20 30 40 50 </table>
+	<skill id="1262" levels="10" name="Transfer Pain" enchantGroup1="1">
+		<table name="#magicLvl"> 40 48 56 58 70 80 85 90 95 99 </table>
+		<table name="#mpInitialConsume"> 7 9 11 12 13 14 15 16 17 18 </table>
+		<table name="#power"> 10 20 30 40 50 52 54 56 58 60 </table>
 		<table name="#ench1power"> 51 52 52 53 54 54 55 56 56 57 57 58 59 59 60 61 61 62 63 63 64 64 65 66 66 67 68 68 69 70 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="icon" val="icon.skill1262" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -2208,13 +2227,13 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="1263" levels="13" name="Curse Gloom" enchantGroup1="1" enchantGroup2="1">
-		<table name="#effectPoints"> -209 -229 -248 -266 -275 -283 -291 -299 -306 -312 -318 -323 -328 </table>
-		<table name="#magicLvl"> 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
-		<table name="#mpConsume"> 31 35 38 41 43 44 46 48 49 51 52 53 55 </table>
-		<table name="#mpInitialConsume"> 8 9 10 11 11 11 12 12 13 13 13 14 14 </table>
-		<table name="#power"> 47 52 57 63 66 68 71 74 77 79 82 84 87 </table>
-		<table name="#vuln"> 5 5 5 10 10 10 15 15 15 20 20 25 25 </table>
+	<skill id="1263" levels="21" name="Curse Gloom" enchantGroup1="1" enchantGroup2="1">
+		<table name="#effectPoints"> -209 -229 -248 -266 -275 -283 -291 -299 -306 -312 -318 -323 -328 -333 -338 -343 -348 -343 -348 -353 -358 </table> <!-- Guessed -->
+		<table name="#magicLvl"> 44 48 52 56 58 60 62 64 66 68 70 72 74 77 79 81 83 85 90 95 99 </table>
+		<table name="#mpConsume"> 31 35 38 42 43 44 46 48 50 51 52 54 55 57 58 60 62 63 66 67 69 </table>
+		<table name="#mpInitialConsume"> 8 9 10 10 11 11 12 12 12 13 13 13 14 14 15 15 15 16 16 17 17 </table>
+		<table name="#power"> 47 52 57 63 66 68 71 74 77 79 82 84 87 93 96 99 102 105 108 112 115 </table>
+		<table name="#vuln"> 10 10 10 10 10 20 20 20 20 30 30 30 30 40 40 40 40 50 50 50 50 </table>
 		<table name="#ench1ActivateRates"> 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 100 101 102 102 103 104 104 105 106 106 107 108 108 109 110 </table>
 		<table name="#ench1Vuln"> 26 27 28 29 30 30 31 32 33 34 34 35 36 37 38 38 39 40 41 42 42 43 44 45 46 46 47 48 49 50 </table>
 		<table name="#ench2AbnormalTimes"> 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 </table>
@@ -2227,11 +2246,12 @@
 		<set name="activateRate" val="90" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="900" />
+		<set name="coolTime" val="300" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1400" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
-		<set name="hitTime" val="1500" />
+		<set name="hitTime" val="2780" />
 		<set name="icon" val="icon.skill1263" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -2241,7 +2261,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
-		<set name="reuseDelay" val="5000" />
+		<set name="reuseDelay" val="2400" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="activateRate" val="#ench1ActivateRates" />
@@ -2565,7 +2585,7 @@
 			<effect name="Fear" />
 		</for>
 	</skill>
-	<skill id="1273" levels="13" name="Serenade of Eva">
+	<skill id="1273" levels="13" name="Eva's Serenade">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 93 103 112 122 127 132 137 142 147 151 155 159 163 </table>
@@ -2674,7 +2694,10 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 		<cond>
-			<player canSummon="true" />
+		    <and>
+				<player canSummonServitor="true" />
+				<player hasFreeSummonPoints="0" />
+			</and>
 		</cond>
 		<for>
 			<effect name="Summon">
@@ -2713,7 +2736,10 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 		<cond>
-			<player canSummon="true" />
+		    <and>
+				<player canSummonServitor="true" />
+				<player hasFreeSummonPoints="0" />
+			</and>
 		</cond>
 		<for>
 			<effect name="Summon">
@@ -2752,7 +2778,10 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 		<cond>
-			<player canSummon="true" />
+		    <and>
+				<player canSummonServitor="true" />
+				<player hasFreeSummonPoints="0" />
+			</and>
 		</cond>
 		<for>
 			<effect name="Summon">
@@ -2912,7 +2941,6 @@
 		<table name="#mdot"> 5 6 6 7 8 8 8 8 9 9 9 10 10 </table>
 		<table name="#mpInitialConsume"> 8 9 10 11 11 11 12 12 13 13 13 14 14 </table>
 		<table name="#ench1def"> 683.76 687.82 691.88 695.94 700 704.06 708.12 712.18 716.24 720.3 724.36 728.42 732.48 736.54 740.6 744.66 748.72 752.78 756.84 760.9 764.96 769.02 773.08 777.14 781.2 785.26 789.32 793.38 797.44 801.5 </table>
-		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="icon" val="icon.skill1283" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />

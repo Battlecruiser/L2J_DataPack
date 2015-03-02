@@ -127,7 +127,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="7008" levels="1" name="not_used">
+	<skill id="7008" levels="1" name="Feather of Blessing">
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -158,56 +158,48 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7014" levels="1" name="Test - Critical Damage Up">
-		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7015" levels="1" name="Test - Critical Damage Down">
-		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7016" levels="1" name="Test - Critical Damage Up">
-		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7017" levels="1" name="Test - Critical Damage Down">
-		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7018" levels="1" name="Test - Critical Rate Up">
-		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7019" levels="1" name="Test - Critical Rate Down">
-		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7020" levels="1" name="Test - Critical Rate Up">
-		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7021" levels="1" name="Test - Critical Rate Down">
-		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="rideState" val="NONE" />
@@ -246,7 +238,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="7028" levels="1" name="For Stationary NPCs">
+	<skill id="7028" levels="1" name="Stationary NPCs">
 		<!-- TODO: Implement me! -->
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="P" />
@@ -301,7 +293,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond>
-			<player canSummon="true" />
+			<player canSummonPet="true" />
 		</cond>
 		<for>
 			<effect name="Summon">
@@ -322,7 +314,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond>
-			<player canSummon="true" />
+			<player canSummonPet="true" />
 		</cond>
 		<for>
 			<effect name="Summon">
@@ -343,7 +335,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond>
-			<player canSummon="true" />
+			<player canSummonPet="true" />
 		</cond>
 		<for>
 			<effect name="Summon">
@@ -1527,5 +1519,33 @@
 		<for>
 			<effect name="NoblesseBless" />
 		</for>
+	</skill>
+	<skill id="7097" levels="1" name="Cancel Shadow Move">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill01702" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="7098" levels="1" name="Clan-exclusive Pet Heal">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Recovers all of your HP. Power 3000 -->
+		<set name="icon" val="icon.skill1401" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="5" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="7099" levels="1" name="Clan-exclusive Pet Fear">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts fear on the target for 3 seconds. -->
+		<set name="icon" val="icon.skill4108" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="5" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
 	</skill>
 </list>

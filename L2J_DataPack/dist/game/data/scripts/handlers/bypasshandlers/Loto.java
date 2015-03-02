@@ -108,13 +108,13 @@ public class Loto implements IBypassHandler
 			if (!Lottery.getInstance().isStarted())
 			{
 				// tickets can't be sold
-				player.sendPacket(SystemMessageId.NO_LOTTERY_TICKETS_CURRENT_SOLD);
+				player.sendPacket(SystemMessageId.LOTTERY_TICKETS_ARE_NOT_CURRENTLY_BEING_SOLD);
 				return;
 			}
 			if (!Lottery.getInstance().isSellableTickets())
 			{
 				// tickets can't be sold
-				player.sendPacket(SystemMessageId.NO_LOTTERY_TICKETS_AVAILABLE);
+				player.sendPacket(SystemMessageId.TICKETS_FOR_THE_CURRENT_LOTTERY_ARE_NO_LONGER_AVAILABLE);
 				return;
 			}
 			
@@ -181,13 +181,13 @@ public class Loto implements IBypassHandler
 			if (!Lottery.getInstance().isStarted())
 			{
 				// tickets can't be sold
-				player.sendPacket(SystemMessageId.NO_LOTTERY_TICKETS_CURRENT_SOLD);
+				player.sendPacket(SystemMessageId.LOTTERY_TICKETS_ARE_NOT_CURRENTLY_BEING_SOLD);
 				return;
 			}
 			if (!Lottery.getInstance().isSellableTickets())
 			{
 				// tickets can't be sold
-				player.sendPacket(SystemMessageId.NO_LOTTERY_TICKETS_AVAILABLE);
+				player.sendPacket(SystemMessageId.TICKETS_FOR_THE_CURRENT_LOTTERY_ARE_NO_LONGER_AVAILABLE);
 				return;
 			}
 			
@@ -214,7 +214,7 @@ public class Loto implements IBypassHandler
 			}
 			if (player.getAdena() < price)
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_NOT_ENOUGH_ADENA);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 				player.sendPacket(sm);
 				return;
 			}
@@ -224,7 +224,7 @@ public class Loto implements IBypassHandler
 			}
 			Lottery.getInstance().increasePrize(price);
 			
-			sm = SystemMessage.getSystemMessage(SystemMessageId.EARNED_ITEM_S1);
+			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
 			sm.addItemName(4442);
 			player.sendPacket(sm);
 			

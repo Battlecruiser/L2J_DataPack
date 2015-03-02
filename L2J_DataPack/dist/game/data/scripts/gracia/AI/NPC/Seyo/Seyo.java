@@ -38,11 +38,11 @@ public final class Seyo extends AbstractNpcAI
 	// Misc
 	private static final NpcStringId[] TEXT =
 	{
-		NpcStringId.NO_ONE_ELSE_DONT_WORRY_I_DONT_BITE_HAHA,
-		NpcStringId.OK_MASTER_OF_LUCK_THATS_YOU_HAHA_WELL_ANYONE_CAN_COME_AFTER_ALL,
-		NpcStringId.SHEDDING_BLOOD_IS_A_GIVEN_ON_THE_BATTLEFIELD_AT_LEAST_ITS_SAFE_HERE,
-		NpcStringId.OK_WHOS_NEXT_IT_ALL_DEPENDS_ON_YOUR_FATE_AND_LUCK_RIGHT_AT_LEAST_COME_AND_TAKE_A_LOOK,
-		NpcStringId.THERE_WAS_SOMEONE_WHO_WON_10000_FROM_ME_A_WARRIOR_SHOULDNT_JUST_BE_GOOD_AT_FIGHTING_RIGHT_YOUVE_GOTTA_BE_GOOD_IN_EVERYTHING
+		NpcStringId.NO_ONE_ELSE_DON_T_WORRY_I_DON_T_BITE_HAHA,
+		NpcStringId.OK_MASTER_OF_LUCK_THAT_S_YOU_HAHA_WELL_ANYONE_CAN_COME_AFTER_ALL,
+		NpcStringId.SHEDDING_BLOOD_IS_A_GIVEN_ON_THE_BATTLEGROUND_AT_LEAST_IT_S_SAFE_HERE,
+		NpcStringId.OK_WHO_S_NEXT_IT_ALL_DEPENDS_ON_YOUR_FATE_AND_LUCK_RIGHT_AT_LEAST_COME_AND_TAKE_A_LOOK,
+		NpcStringId.THERE_WAS_SOMEONE_WHO_WON_10_000_FROM_ME_A_WARRIOR_SHOULDN_T_JUST_BE_GOOD_AT_FIGHTING_RIGHT_YOU_VE_GOTTA_BE_GOOD_IN_EVERYTHING
 	};
 	
 	public Seyo()
@@ -121,7 +121,7 @@ public final class Seyo extends AbstractNpcAI
 					else if (chance < 80)
 					{
 						giveItems(player, STONE_FRAGMENT, 1);
-						broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.ITS_BETTER_THAN_LOSING_IT_ALL_RIGHT_OR_DOES_THIS_FEEL_WORSE);
+						broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.IT_S_BETTER_THAN_LOSING_IT_ALL_RIGHT_OR_DOES_THIS_FEEL_WORSE);
 					}
 					else
 					{
@@ -151,17 +151,17 @@ public final class Seyo extends AbstractNpcAI
 					if (chance == 0)
 					{
 						giveItems(player, STONE_FRAGMENT, 10000);
-						broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.AH_ITS_OVER_WHAT_KIND_OF_GUY_IS_THAT_DAMN_FINE_YOU_S1_TAKE_IT_AND_GET_OUTTA_HERE, player.getName());
+						broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.AH_IT_S_OVER_WHAT_KIND_OF_GUY_IS_THAT_DAMN_FINE_YOU_S1_TAKE_IT_AND_GET_OUTTA_HERE, player.getName());
 					}
 					else if (chance < 10)
 					{
 						giveItems(player, STONE_FRAGMENT, 1);
-						broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.YOU_DONT_FEEL_BAD_RIGHT_ARE_YOU_SAD_BUT_DONT_CRY);
+						broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.YOU_DON_T_FEEL_BAD_RIGHT_ARE_YOU_SAD_BUT_DON_T_CRY);
 					}
 					else
 					{
 						giveItems(player, STONE_FRAGMENT, getRandom(1, 100));
-						broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.A_BIG_PIECE_IS_MADE_UP_OF_LITTLE_PIECES_SO_HERES_A_LITTLE_PIECE);
+						broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.A_BIG_PIECE_IS_MADE_UP_OF_LITTLE_PIECES_SO_HERE_S_A_LITTLE_PIECE);
 					}
 					startQuestTimer("TRICKERY_TIMER", 5000, npc, null);
 				}

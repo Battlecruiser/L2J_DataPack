@@ -18,7 +18,6 @@
  */
 package quests.Q00176_StepsForHonor;
 
-import com.l2jserver.gameserver.instancemanager.TerritoryWarManager;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -73,10 +72,6 @@ public class Q00176_StepsForHonor extends Quest
 				htmltext = (player.getLevel() >= MIN_LEVEL) ? "36479-03.html" : "36479-02.html";
 				break;
 			case State.STARTED:
-				if (TerritoryWarManager.getInstance().isTWInProgress())
-				{
-					return "36479-05.html";
-				}
 				switch (st.getCond())
 				{
 					case 1:

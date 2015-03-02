@@ -1,0 +1,989 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="14600" levels="1" name="Chain Skills">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Enables use of chain skills. -->
+		<set name="icon" val="icon.skill10317" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="14601" levels="1" name="Cry of Destiny - Mark of Weakness">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 seconds, weakens the enemy. Decreases 174 HP per second and increases weakness to de-buff by 5%. -->
+		<set name="icon" val="icon.skill11259" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14602" levels="1" name="Cry of Destiny - Mark of Plague">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Stigma that connects to the epidemic dimension. For 10 seconds, inflicts the plague in the enemy. Decreases 238 HP per second and block recovery. -->
+		<set name="icon" val="icon.skill11261" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14603" levels="1" name="Cry of Destiny - Exile">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Kicks out the target to another dimension. The exiled target becomes incapacitated and loses 167 HP per second. -->
+		<set name="icon" val="icon.skill11273" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14604" levels="1" name="Chain Skills">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Enables use of chain skills. -->
+		<set name="icon" val="icon.skill10317" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="14605" levels="1" name="Cry of Destiny - Crippling Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks the target with 5175 power added to P. Atk. For 5 seconds, decreases the enemy's P. Def./M. Def. by 70% and evasion by 10. -->
+		<set name="icon" val="icon.skill11509" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="910" />
+		<set name="coolTime" val="300" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14606" levels="1" name="Cry of Destiny - Death Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks the target with 9444 Power added to P. Atk. -->
+		<set name="icon" val="icon.skill11511" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1410" />
+		<set name="coolTime" val="500" />
+	</skill>
+	<skill id="14607" levels="1" name="Cry of Destiny - Pipe Organ Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 seconds, increases Max HP by 2572, Max MP by 953, HP recovery by 20%, and MP recovery by 20%. -->
+		<set name="icon" val="icon.skill11519" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+	</skill>
+	<skill id="14608" levels="1" name="Chain Skills">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Enables use of chain skills. -->
+		<set name="icon" val="icon.skill10317" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="14609" levels="1" name="Cry of Destiny - Dark Blast">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts no-type damage on the enemy with 124 power added to M. Atk. Decreases the enemy's attacking urge against yourself. -->
+		<set name="icon" val="icon.skill11766" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14610" levels="1" name="Cry of Destiny - Radiant Heal">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Restores the target's HP with 1488 Power. Once HP is filled, the remaining effect stores CP. -->
+		<set name="icon" val="icon.skill11755" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="500" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14611" levels="1" name="Cry of Destiny - Dark Force">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Pushes and inflicts a magic attack. -->
+		<set name="icon" val="icon.skill0101" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="43" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14612" levels="1" name="Press the icon to use the chain skill.">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can use chain attacks. -->
+		<set name="icon" val="icon.skill10317" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14613" levels="1" name="Press the icon to use the chain skill.">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can use chain attacks. -->
+		<set name="icon" val="icon.skill10317" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14614" levels="1" name="Press the icon to use the chain skill.">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can use chain attacks. -->
+		<set name="icon" val="icon.skill10317" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14615" levels="1" name="Teredor Biting">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Def. and M. Def. decreased 10%. Additional 500 decrease. Evasion 4 decrease. Accumulates with every incurred attack. -->
+		<set name="icon" val="icon.skill0122" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="150" />
+		<set name="hitTime" val="1500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14616" levels="1" name="Blood Siphon">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Blood is being sucked. -->
+		<set name="icon" val="icon.skill1042" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14617" levels="1" name="Knock Down Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="14618" levels="1" name="Knock Back Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="14619" levels="1" name="Disarm Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="14620" levels="4" name="Aerial Yoke Resistance 1">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="14621" levels="1" name="Pulling Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="14622" levels="1" name="Banishment Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="14623" levels="1" name="Mutation Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="14624" levels="1" name="Apherus Dark Space">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Atk. Spd. and HP are decreased. -->
+		<set name="icon" val="icon.skill0048" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1000" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14625" levels="1" name="Release of Power">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Shares power with the target. -->
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1400" />
+		<set name="hitTime" val="10000" />
+		<set name="icon" val="icon.skill1042" />
+		<set name="isMagic" val="1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="30000" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="14626" levels="1" name="Mental Attack Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="14627" levels="1" name="Foul Secretion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Def. is decreased. -->
+		<set name="icon" val="icon.skill0122" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="300" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14628" levels="1" name="Gastric Juice Eruption">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Speed is decreased. -->
+		<set name="icon" val="icon.skill1184" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="300" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14629" levels="1" name="Corpse Grinding">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Bleed status. -->
+		<set name="icon" val="icon.skill0096" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="100" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14630" levels="1" name="Discard Decayed Branch">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Knocked back. -->
+		<set name="icon" val="icon.skill0101" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="150" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14631" levels="1" name="Foul Spore">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Silence status. -->
+		<set name="icon" val="icon.skill1064" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14632" levels="1" name="Terrifying Sword Dance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Atk. Spd. is increased. -->
+		<set name="icon" val="icon.skill1086" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="7000" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14633" levels="1" name="Severed Ankle">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Knocked back. -->
+		<set name="icon" val="icon.skill0261" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="100" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14634" levels="1" name="Stigma's Despair">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill14634" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="300" />
+		<set name="hitTime" val="7000" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14635" levels="1" name="Corpse Explosion">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill14635" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="100" />
+		<set name="hitTime" val="5000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14636" levels="1" name="Merciless Grip">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Aerial yoke status. -->
+		<set name="icon" val="icon.skill1042" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="150" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14637" levels="1" name="Driving Fog">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0014637" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="5000" />
+		<set name="reuseDelay" val="10000" />
+	</skill>
+	<skill id="14638" levels="1" name="Blade Claw">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Bleed status. -->
+		<set name="icon" val="icon.skill0096" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="100" />
+		<set name="hitTime" val="2500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14639" levels="1" name="Compound Poison">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Poison status. -->
+		<set name="icon" val="icon.skill0129" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="200" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14640" levels="1" name="High-speed Movement">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Evasion is increased. -->
+		<set name="icon" val="icon.skill1087" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14641" levels="1" name="Earthquake">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0014641" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="500" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="14642" levels="1" name="Sever">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Knocked back. -->
+		<set name="icon" val="icon.skill0261" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="100" />
+		<set name="hitTime" val="2500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14643" levels="1" name="Summon">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="20000" />
+	</skill>
+	<skill id="14644" levels="1" name="White Dog's Fang">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0014644" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="80" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14645" levels="1" name="Dark Arrow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Knocked back. -->
+		<set name="icon" val="icon.skill0101" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="500" />
+		<set name="hitTime" val="500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14646" levels="1" name="Polarization">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Atk. Spd. is decreased. -->
+		<set name="icon" val="icon.skill0115" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="300" />
+		<set name="hitTime" val="5000" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14647" levels="1" name="Polarization">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Atk. Spd. is decreased. -->
+		<set name="icon" val="icon.skill0115" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="300" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14648" levels="1" name="Flood">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Flood status. -->
+		<set name="icon" val="icon.skill1062" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14649" levels="1" name="Bounce">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Bounce status. -->
+		<set name="icon" val="icon.skill4107" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14650" levels="1" name="Corpse' Blow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="15000" />
+	</skill>
+	<skill id="14651" levels="1" name="Stun">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Stuns the enemy for 7 seconds. -->
+		<set name="icon" val="icon.skill0092" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="300" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14652" levels="1" name="Blood Siphon">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Damage blood siphon 100%. -->
+		<set name="icon" val="icon.skill1268" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14653" levels="1" name="Rigor Mortis">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster absolute defense. Defense increased 50000. -->
+		<set name="icon" val="icon.skill0110" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+	</skill>
+	<skill id="14654" levels="1" name="Darkness Drain">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster heal. Power 1024. -->
+		<set name="icon" val="icon.skill1401" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14655" levels="1" name="Barrier of Reflection">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Reflect damage 50% -->
+		<set name="icon" val="icon.skill0086" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14656" levels="1" name="Corpse Lunacy">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases P. Atk., Critical rage/damage, and Atk. Spd. by 100%. -->
+		<set name="icon" val="icon.skill1068" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14657" levels="1" name="Lingering Lunacy">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Aftereffect of going insane. -->
+		<set name="icon" val="icon.skill1170" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14658" levels="1" name="Spinning Slasher">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 36675. -->
+		<set name="icon" val="icon.skill0036" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="10000" />
+	</skill>
+	<skill id="14659" levels="1" name="Stun">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Stuns the enemy for 7 seconds. -->
+		<set name="icon" val="icon.skill0092" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="300" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14660" levels="1" name="Blood Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 50937. -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="1000" />
+	</skill>
+	<skill id="14661" levels="1" name="Darkness Wave">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 49414. -->
+		<set name="icon" val="icon.skill0056" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="1000" />
+	</skill>
+	<skill id="14662" levels="1" name="Darkness Shiver">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 50937. -->
+		<set name="icon" val="icon.skill0056" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="1000" />
+	</skill>
+	<skill id="14663" levels="1" name="Guardian's Blow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 45844. -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="15000" />
+	</skill>
+	<skill id="14664" levels="1" name="Destruction Blow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 50937. -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="15000" />
+	</skill>
+	<skill id="14665" levels="1" name="Ferocious Charge">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster Rush -->
+		<set name="icon" val="icon.skill0493" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="400" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="15000" />
+	</skill>
+	<skill id="14666" levels="1" name="Penetrating Blow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 50937. -->
+		<set name="icon" val="icon.skill0056" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="15000" />
+	</skill>
+	<skill id="14667" levels="1" name="Flames of Judgment">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill1230" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="2" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="1200" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14668" levels="1" name="Firestorm of Judgment">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill1296" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="2" />
+		<set name="castRange" val="500" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14669" levels="1" name="Earth Wyrm Feeler Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0773" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="2000" />
+	</skill>
+	<skill id="14670" levels="1" name="Earth Wyrm Feeler Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0036" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="14671" levels="1" name="Earth Wyrm Feeler Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0036" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="14672" levels="1" name="Bounce">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Bounce status. -->
+		<set name="icon" val="icon.skill4107" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14673" levels="1" name="Cry of Destiny - Shield Charge">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Uses a shield to attack the selected target with 1500 power added to P. Atk. Also decreases P. Def. by 10% and physical evasion by 2. Increase incurred physical critical damage by 10%. -->
+		<set name="icon" val="icon.skill10008" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="800" />
+		<set name="coolTime" val="570" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14674" levels="1" name="Cry of Destiny - Chain Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Drags a target to the center. -->
+		<set name="icon" val="icon.skill10015" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="500" />
+		<set name="coolTime" val="1000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14675" levels="1" name="Cry of Destiny - Last Judgment">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks with 2000 power added to P. Atk. Decreases Speed by 10%. -->
+		<set name="icon" val="icon.skill10009" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="470" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14676" levels="1" name="Cry of Destiny - Armor Destruction">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks the enemy with 1300 power added to P. Atk. Weakens P. Def. Additionally absorbs Momentum. -->
+		<set name="icon" val="icon.skill10258" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1090" />
+		<set name="coolTime" val="200" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14677" levels="1" name="Cry of Destiny - Giant Punch">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Strikes down at the ground with a fist to knock down nearby enemies for 3 seconds. Dualsword/two-handed sword/spear/blunt weapon must be equipped. -->
+		<set name="icon" val="icon.skill10266" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="300" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14678" levels="1" name="Cry of Destiny - Power Bomber">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerfully strikes the target with 2000 Power added to P. Atk. to knock down for 2 seconds. -->
+		<set name="icon" val="icon.skill10262" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1490" />
+		<set name="coolTime" val="200" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14679" levels="1" name="Cry of Destiny - Heart Breaker">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a powerful vital spot attack by striking the heart. Attack the target with 1700 Power added to P. Atk. Over-hit. Half-kill. -->
+		<set name="icon" val="icon.skill10509" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="830" />
+		<set name="coolTime" val="700" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14680" levels="1" name="Cry of Destiny - Dark Paralysis">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Seals with the power of darkness. Causes the enemy's body to go completely rigid for 10 seconds and causes paralysis for 5 seconds. -->
+		<set name="icon" val="icon.skill10514" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="300" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14681" levels="1" name="Cry of Destiny - Throwing Sand">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Hurls poison sand at the target. Greatly decreases Accuracy for 5 seconds and lures to yourself. -->
+		<set name="icon" val="icon.skill10540" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="800" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="300" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14682" levels="1" name="Cry of Destiny - Pinpoint Shot">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks the weak points of long-range enemies. Attack the target with 2700 Power added to P. Atk. Disregards 30% of P. Def. and attacks. -->
+		<set name="icon" val="icon.skill10763" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="700" />
+		<set name="hitTime" val="2200" />
+		<set name="coolTime" val="850" />
+	</skill>
+	<skill id="14683" levels="1" name="Cry of Destiny - Quick Fire">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Atk. Spd. by 50% when equipped with a bow or crossbow. -->
+		<set name="icon" val="icon.skill10779" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="800" />
+		<set name="coolTime" val="200" />
+	</skill>
+	<skill id="14684" levels="1" name="Cry of Destiny - Recoil Shot">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Shoots an arrow with 1200 power added to P. Atk. to the target to push out the enemy. Bow/crossbow required. Over-hit. Chance of canceling the opponent's target. -->
+		<set name="icon" val="icon.skill10770" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="2200" />
+		<set name="coolTime" val="450" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14685" levels="1" name="Cry of Destiny - Elemental Spike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts magic damage with 30 power on the selected target. Decreases Fire Resistance by 20. -->
+		<set name="icon" val="icon.skill11011" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="550" />
+		<set name="hitTime" val="2280" />
+		<set name="coolTime" val="300" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14686" levels="1" name="Cry of Destiny - Elemental Crash">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts magic damage on the enemy with 35 power. Also decreases Speed and inflicts fear. -->
+		<set name="icon" val="icon.skill11513" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="2780" />
+		<set name="coolTime" val="300" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14687" levels="1" name="Cry of Destiny - Hell Binding">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Floats the target into the air and stops him from moving for awhile. -->
+		<set name="icon" val="icon.skill11050" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14688" levels="2" name="Cry of Destiny - Mark of Weakness">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 seconds, weakens the enemy. Decreases 40 HP per second and increases weakness to de-buff by 5%. -->
+		<set name="icon" val="icon.skill11259" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14689" levels="2" name="Cry of Destiny - Mark of Plague">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Stigma that connects to the epidemic dimension. For 10 seconds, inflicts the plague in the enemy. Decreases 70 HP per second and block recovery. -->
+		<set name="icon" val="icon.skill11261" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14690" levels="1" name="Cry of Destiny - Exile">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Kicks out the target to another dimension. The exiled target becomes incapacitated and loses 167 HP per second. -->
+		<set name="icon" val="icon.skill11273" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14691" levels="1" name="Cry of Destiny - Crippling Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks the target with 1300 power added to P. Atk. For 5 seconds, decreases the enemy's P. Def./M. Def. by 30% and evasion by 10. -->
+		<set name="icon" val="icon.skill11509" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="910" />
+		<set name="coolTime" val="300" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14692" levels="1" name="Cry of Destiny - Death Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks the target with 1400 Power added to P. Atk. -->
+		<set name="icon" val="icon.skill11511" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1410" />
+		<set name="coolTime" val="500" />
+	</skill>
+	<skill id="14693" levels="1" name="Cry of Destiny - Pipe Organ Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 minutes, increases Max HP by 2572, Max MP by 953, HP recovery by 20%, and MP recovery by 20%. -->
+		<set name="icon" val="icon.skill11519" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+	</skill>
+	<skill id="14694" levels="1" name="Cry of Destiny - Dark Blast">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts no-type damage on the enemy with 31 power added to M. Atk. Decreases the enemy's attacking urge against yourself. -->
+		<set name="icon" val="icon.skill1175" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14695" levels="1" name="Cry of Destiny - Radiant Heal">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Restores the target's HP with 1488 Power. Once HP is filled, the remaining effect stores CP. -->
+		<set name="icon" val="icon.skill11755" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="500" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14696" levels="1" name="Cry of Destiny - Dark Force">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Pushes and inflicts a magic attack. -->
+		<set name="icon" val="icon.skill0101" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="43" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14697" levels="1" name="Ghost's Hell Binding">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Floats the target into the air and stops him from moving for awhile. -->
+		<set name="icon" val="icon.skill11050" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14698" levels="1" name="Current Shock">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Incurs a current shock. -->
+		<set name="icon" val="icon.skill1072" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14699" levels="1" name="Illusion of Pain">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Translucent status. -->
+		<set name="icon" val="icon.skill0411" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="34" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="4000" />
+	</skill>
+</list>

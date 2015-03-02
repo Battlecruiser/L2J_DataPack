@@ -18,6 +18,9 @@
  */
 package handlers.targethandlers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -35,10 +38,21 @@ public class Summon implements ITargetTypeHandler
 	{
 		if (activeChar.hasSummon())
 		{
-			return new L2Character[]
+			if (!activeChar.hasPet() && activeChar.hasServitors())
 			{
-				activeChar.getSummon()
-			};
+				return activeChar.getServitors().values().toArray(new L2Character[0]);
+			}
+			else if (activeChar.hasPet() && !activeChar.hasServitors())
+			{
+				return new L2Character[]
+				{
+					activeChar.getPet()
+				};
+			}
+			final List<L2Character> targets = new ArrayList<>(1 + activeChar.getServitors().size());
+			targets.add(activeChar.getPet());
+			targets.addAll(activeChar.getServitors().values());
+			return targets.toArray(new L2Character[0]);
 		}
 		return EMPTY_TARGET_LIST;
 	}

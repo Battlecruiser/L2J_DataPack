@@ -72,7 +72,7 @@ public final class PhysicalSoulAttack extends AbstractEffect
 		
 		if (((info.getSkill().getFlyRadius() > 0) || (info.getSkill().getFlyType() != null)) && activeChar.isMovementDisabled())
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addSkillName(info.getSkill());
 			activeChar.sendPacket(sm);
 			return;
@@ -117,7 +117,7 @@ public final class PhysicalSoulAttack extends AbstractEffect
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.ATTACK_FAILED);
+			activeChar.sendPacket(SystemMessageId.YOUR_ATTACK_HAS_FAILED);
 		}
 		
 		if (info.getSkill().isSuicideAttack())

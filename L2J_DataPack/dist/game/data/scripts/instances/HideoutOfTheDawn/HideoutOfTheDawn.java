@@ -22,6 +22,7 @@ import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -84,7 +85,7 @@ public final class HideoutOfTheDawn extends Quest
 		{
 			if (!(world instanceof HotDWorld))
 			{
-				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
+				player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
 				return 0;
 			}
 			teleportPlayer(player, loc, world.getInstanceId(), false);
@@ -112,7 +113,7 @@ public final class HideoutOfTheDawn extends Quest
 		ch.stopAllEffectsExceptThoseThatLastThroughDeath();
 		if (ch.hasSummon())
 		{
-			ch.getSummon().stopAllEffectsExceptThoseThatLastThroughDeath();
+			ch.getServitors().values().forEach(L2Summon::stopAllEffectsExceptThoseThatLastThroughDeath);
 		}
 	}
 	

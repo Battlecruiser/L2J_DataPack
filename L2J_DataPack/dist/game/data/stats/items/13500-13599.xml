@@ -27,7 +27,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="6000000" />
 	</item>
-	<item id="13503" type="Armor" name="Refined Medieval Style Party Mask">
+	<item id="13503" type="Armor" name="Refined Medieval Party Mask">
 		<set name="icon" val="icon.accessory_middle_age_party_mask2_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -53,6 +53,7 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="price" val="6000000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="13506" type="Armor" name="Improved Lord's Crown">
 		<set name="icon" val="icon.accessory_pig_cap_i00" />
@@ -74,7 +75,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="2000000" />
 	</item>
-	<item id="13508" type="Armor" name="Circlet of Freeze">
+	<item id="13508" type="Armor" name="Circlet of Ice">
 		<set name="icon" val="icon.accessory_ice_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -128,7 +129,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="2000000" />
 	</item>
-	<item id="13514" type="Armor" name="Improved Mining Hat">
+	<item id="13514" type="Armor" name="Enhanced Mining Hat">
 		<set name="icon" val="icon.accessory_advence_mining_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -146,7 +147,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="2000000" />
 	</item>
-	<item id="13516" type="Armor" name="Improved Search Hat">
+	<item id="13516" type="Armor" name="Enhanced Search Hat">
 		<set name="icon" val="icon.accessory_advence_mine_search_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -162,7 +163,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
-		<set name="price" val="2000000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -174,7 +174,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
-		<set name="price" val="2000000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -186,7 +185,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
-		<set name="price" val="2000000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -198,7 +196,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
-		<set name="price" val="2000000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -210,7 +207,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
-		<set name="price" val="2000000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -222,7 +218,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
-		<set name="price" val="2000000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -234,7 +229,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="10" />
-		<set name="price" val="2000000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -251,7 +245,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1500" />
-		<set name="price" val="105000" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
@@ -271,7 +264,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1300" />
-		<set name="price" val="16900" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -318,7 +310,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="500" />
-		<set name="price" val="3340000" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="is_tradable" val="false" />
@@ -357,7 +348,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="500" />
-		<set name="price" val="1" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -380,7 +370,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="500" />
-		<set name="price" val="1" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -403,7 +392,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="500" />
-		<set name="price" val="1" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -426,7 +414,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="500" />
-		<set name="price" val="1" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -449,7 +436,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="500" />
-		<set name="price" val="1" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -472,7 +458,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="500" />
-		<set name="price" val="1" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -495,7 +480,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="500" />
-		<set name="price" val="1" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -518,7 +502,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="500" />
-		<set name="price" val="1" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -541,7 +524,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="500" />
-		<set name="price" val="1" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -555,7 +537,7 @@
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="13539" type="Weapon" name="Staff of Master Yogi">
+	<item id="13539" type="Weapon" name="Master Yogi's Staff">
 		<set name="icon" val="icon.yogi_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -597,7 +579,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="20" />
-		<set name="price" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -608,34 +589,31 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="20" />
-		<set name="price" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="13543" type="Armor" name="Agathion Summon Bracelet - Collection">
+	<item id="13543" type="Armor" name="Agathion - Collection">
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
-		<set name="price" val="7000000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="5414-1;3269-1;3267-1" />
 	</item>
-	<item id="13544" type="Armor" name="Agathion Summon Bracelet - Boy Teddy Bear">
+	<item id="13544" type="Armor" name="Agathion - Teddy Boy">
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
-		<set name="price" val="7000000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -643,14 +621,13 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8259-1;3267-1;5958-1" />
 	</item>
-	<item id="13545" type="Armor" name="Agathion Summon Bracelet - Girl Teddy Bear">
+	<item id="13545" type="Armor" name="Agathion - Teddy Girl">
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
-		<set name="price" val="7000000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -658,12 +635,11 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8260-1;3267-1;5959-1" />
 	</item>
-	<item id="13546" type="Armor" name="Steam Sledge Mount Bracelet">
+	<item id="13546" type="Armor" name="Mount - Steam Sledge">
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="76" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="1144000" />
@@ -673,12 +649,11 @@
 		<set name="is_premium" val="true" />
 		<set name="item_skill" val="8261-1" />
 	</item>
-	<item id="13547" type="Armor" name="Tawny-Maned Lion Mount Bracelet">
+	<item id="13547" type="Armor" name="Mount - Tawny-maned Lion">
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="76" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="1144000" />
@@ -688,7 +663,7 @@
 		<set name="is_premium" val="true" />
 		<set name="item_skill" val="8262-1" />
 	</item>
-	<item id="13548" type="EtcItem" name="Toy Knight Summon Whistle">
+	<item id="13548" type="EtcItem" name="Toy Knight Minion Necklace">
 		<set name="icon" val="icon.pet_controler_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -705,7 +680,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13549" type="EtcItem" name="Soul Monk Summon Whistle">
+	<item id="13549" type="EtcItem" name="Soul Monk Minion Necklace">
 		<set name="icon" val="icon.pet_controler_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -722,7 +697,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13550" type="EtcItem" name="Owl Monk Summon Whistle">
+	<item id="13550" type="EtcItem" name="Owl Monk Minion Necklace">
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -739,7 +714,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13551" type="EtcItem" name="Turtle Ascetic Summon Whistle">
+	<item id="13551" type="EtcItem" name="Turtle Ascetic Minion Necklace">
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -756,7 +731,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13552" type="EtcItem" name="Spellbook - Flying Final Form">
+	<item id="13552" type="EtcItem" name="Spellbook: Flying Final Form">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -768,7 +743,7 @@
 			<player level="75" />
 		</cond>
 	</item>
-	<item id="13553" type="EtcItem" name="Spellbook - Aurabird Falcon">
+	<item id="13553" type="EtcItem" name="Spellbook: Aura Bird Falcon">
 		<set name="icon" val="icon.etc_codex_of_giant_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -776,11 +751,12 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2790-1" />
+		<set name="commissionItemType" val="SPELLBOOK" />
 		<cond msgId="113" addName="1">
 			<player level="75" />
 		</cond>
 	</item>
-	<item id="13554" type="EtcItem" name="Spellbook - Aurabird Owl">
+	<item id="13554" type="EtcItem" name="Spellbook: Aura Bird Owl">
 		<set name="icon" val="icon.etc_codex_of_giant_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -877,7 +853,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="500" />
-		<set name="price" val="1" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -902,7 +877,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="500" />
-		<set name="price" val="1" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -927,7 +901,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="500" />
-		<set name="price" val="1" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -952,7 +925,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="500" />
-		<set name="price" val="1" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -977,7 +949,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="500" />
-		<set name="price" val="1" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1002,7 +973,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="500" />
-		<set name="price" val="1" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1027,7 +997,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="500" />
-		<set name="price" val="1" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1052,7 +1021,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="500" />
-		<set name="price" val="1" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1077,7 +1045,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="500" />
-		<set name="price" val="1" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />

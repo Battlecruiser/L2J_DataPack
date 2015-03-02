@@ -18,21 +18,19 @@
  */
 package instances.NornilsGarden;
 
-import quests.Q00179_IntoTheLargeCavern.Q00179_IntoTheLargeCavern;
-
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -240,11 +238,17 @@ public final class NornilsGarden extends Quest
 	{
 		removeBuffs(player);
 		giveBuffs(player);
-		if (player.hasSummon())
+		final L2Summon pet = player.getPet();
+		if (pet != null)
 		{
-			removeBuffs(player.getSummon());
-			giveBuffs(player.getSummon());
+			removeBuffs(pet);
+			giveBuffs(pet);
 		}
+		player.getServitors().values().forEach(s ->
+		{
+			removeBuffs(s);
+			giveBuffs(s);
+		});
 		super.teleportPlayer(player, loc, instanceId);
 	}
 	
@@ -266,13 +270,13 @@ public final class NornilsGarden extends Quest
 		{
 			if (!(world instanceof NornilsWorld) || (world.getTemplateId() != TEMPLATE_ID))
 			{
-				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
+				player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
 				return null;
 			}
 			// check for level difference again on reenter
 			if ((player.getLevel() > INSTANCE_LVL_MAX) || (player.getLevel() < INSTANCE_LVL_MIN))
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
 				sm.addPcName(player);
 				player.sendPacket(sm);
 				return null;
@@ -421,13 +425,13 @@ public final class NornilsGarden extends Quest
 		// player must be in party
 		if (party == null)
 		{
-			player.sendPacket(SystemMessageId.NOT_IN_PARTY_CANT_ENTER);
+			player.sendPacket(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER);
 			return "32330-05.html";
 		}
 		// ...and be party leader
 		if (party.getLeader() != player)
 		{
-			player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
+			player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);
 			return "32330-08.html";
 		}
 		boolean _kamael = false;
@@ -437,21 +441,21 @@ public final class NornilsGarden extends Quest
 			// player level must be in range
 			if (partyMember.getLevel() > INSTANCE_LVL_MAX)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
 				sm.addPcName(partyMember);
 				player.sendPacket(sm);
 				return "32330-06.html";
 			}
 			if (partyMember.getLevel() < INSTANCE_LVL_MIN)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
 				sm.addPcName(partyMember);
 				player.sendPacket(sm);
 				return "32330-07.html";
 			}
 			if (partyMember.getClassId().level() != 0)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
 				sm.addPcName(partyMember);
 				player.sendPacket(sm);
 				return "32330-06.html";
@@ -459,25 +463,14 @@ public final class NornilsGarden extends Quest
 			// player must be near party leader
 			if (!partyMember.isInsideRadius(player, 500, true, true))
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_LOCATION_THAT_CANNOT_BE_ENTERED);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED);
 				sm.addPcName(partyMember);
 				player.sendPacket(sm);
 				return "32330-08.html";
 			}
 			if (partyMember.getRace().ordinal() == 5)
 			{
-				QuestState checkst = partyMember.getQuestState(Q00179_IntoTheLargeCavern.class.getSimpleName());
-				if ((checkst != null) && (checkst.getState() == State.STARTED))
-				{
-					_kamael = true;
-				}
-				else
-				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_QUEST_REQUIREMENT_NOT_SUFFICIENT);
-					sm.addPcName(partyMember);
-					player.sendPacket(sm);
-					return "32330-08.html";
-				}
+				_kamael = true;
 			}
 		}
 		if (!_kamael)
@@ -588,12 +581,7 @@ public final class NornilsGarden extends Quest
 	{
 		if (Util.contains(_final_gates, npc.getId()))
 		{
-			QuestState cst = player.getQuestState(Q00179_IntoTheLargeCavern.class.getSimpleName());
-			if ((cst != null) && (cst.getState() == State.STARTED))
-			{
-				return npc.getId() + "-01.html";
-			}
-			return getNoQuestMsg(player);
+			return npc.getId() + "-01.html";
 		}
 		
 		return null;

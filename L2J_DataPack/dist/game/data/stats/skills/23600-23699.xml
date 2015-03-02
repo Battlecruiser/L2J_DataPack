@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="23600" levels="1" name="P. Atk. Boost">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. + 50%. -->
+		<set name="icon" val="icon.skill1068" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1000" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="23601" levels="1" name="P. Atk. Decrease">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. - 50%. -->
+		<set name="icon" val="icon.skill0115" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1000" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="23602" levels="1" name="P. Def. Boost">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 15 sec., P. Def. and M. Def. x 2. -->
+		<set name="icon" val="icon.skill1040" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1000" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="23603" levels="1" name="Stun Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts Stun for 5 seconds. -->
+		<set name="icon" val="icon.skill0100" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="33" />
+		<set name="castRange" val="300" />
+		<set name="hitTime" val="1500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="23604" levels="1" name="Heal">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Recovers HP by 2%. -->
+		<set name="icon" val="icon.skill1401" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="400" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="23605" levels="1" name="Katura's Blood Seal">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Engages the target in 1:1 combat. Ignores all normal attacks, skills, and debuffs, except those of the opponent. -->
+		<set name="icon" val="icon.skll10319" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="10" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="23606" levels="1" name="Flame Launch">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Lights target and nearby enemies on fire, causing magic damage, and inflicts a damage of 1500 HP per second for 10sec. -->
+		<set name="icon" val="icon.skill4279_new" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="450" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="23607" levels="1" name="Heal">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Restores 5% HP. -->
+		<set name="icon" val="icon.skill1401" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="400" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="23608" levels="1" name="Dimensional Guard's Blessing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Restores you from death to full health. Buffs/debuffs remain after death, except for Noblesse Blessing and Lucky Charm. Infernal/Lunatic Kamaloka only. -->
+		<set name="icon" val="icon.skill5873" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="10" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1000" />
+	</skill>
+	<skill id="23609" levels="1" name="Slow Insanity">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Pulls enemies around you to slow them down. -->
+		<set name="icon" val="icon.skill10016" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="10" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="23610" levels="1" name="Bloody Sacrifice">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Sacrificed to your Bloody Katura. -->
+		<set name="icon" val="icon.skill0127" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="900" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="23611" levels="1" name="Hardy Armor">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Def. is maximized. -->
+		<set name="icon" val="icon.skill0110" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="23612" levels="1" name="Elusive Robes">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- M. Def. is maximized. -->
+		<set name="icon" val="icon.skill0110" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="23613" levels="3" name="Crackling Timber">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Crackling fire burns the enemy for 10sec. If stacked to Lv. 2 or above, an explosion adds more damage after the duration is up. -->
+		<set name="icon" val="icon.skill1101" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="48" />
+		<set name="castRange" val="300" />
+		<set name="hitTime" val="2500" />
+		<set name="coolTime" val="500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="23614" levels="1" name="Timber Burst">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Lights the target and nearby enemies on fire for continuous HP damage for 10sec. -->
+		<set name="icon" val="icon.skill4279_new" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="coolTime" val="300" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="23615" levels="1" name="Ready Burst">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill1401" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="23616" levels="3" name="Frost Shard">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Freezes the air and slows the enemy's Speed by 50. If stacked to Lv. 2 or above, a burst of coldness adds more damage after the duration is up. -->
+		<set name="icon" val="icon.skill1184" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="9" />
+		<set name="castRange" val="300" />
+		<set name="hitTime" val="2500" />
+		<set name="coolTime" val="500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="23617" levels="1" name="Frost Burst">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Frozen solid for 7sec., rendering all action impossible. -->
+		<set name="icon" val="icon.skill6274" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="23619" levels="3" name="Silence Bomb">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Katura's darkness seeps in to inflict Silence and magic damage for 7sec. If stacked to Lv. 2 or above, Soul Burn adds more damage after the duration is up. -->
+		<set name="icon" val="icon.skill1064" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="13" />
+		<set name="castRange" val="300" />
+		<set name="hitTime" val="2500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="23620" levels="1" name="Soul Burn">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- An explosion inflicts Mana Burn on multiple targets. -->
+		<set name="icon" val="icon.skill1398" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="77" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="23621" levels="1" name="Ready Burst">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill1401" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="23622" levels="3" name="Quaking Earth">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- The wrath of the earth inflicts Stun for 5sec. If stacked to Lv. 2 or above, a sweeping quake adds more damage after the duration is up. -->
+		<set name="icon" val="icon.skill0100" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="10" />
+		<set name="castRange" val="300" />
+		<set name="hitTime" val="2500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="23623" levels="1" name="Sweeping Quake">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Knocked Back with nearby targets due to an earthquake. -->
+		<set name="icon" val="icon.skill0036" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="10" />
+	</skill>
+	<skill id="23624" levels="1" name="Ready Burst">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill1401" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="23625" levels="1" name="Fire Altar's Blessing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 5min., entire party's M. Atk. + 50%. -->
+		<set name="icon" val="icon.skill0337" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="2500" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="23626" levels="1" name="Water Altar's Blessing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 5min., entire party's M. Skill MP Consumption - 30%. -->
+		<set name="icon" val="icon.skill1397" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="2500" />
+	</skill>
+	<skill id="23627" levels="1" name="Dark Altar's Blessing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 5min., entire party's P. Atk. and Atk. Spd. + 25%. -->
+		<set name="icon" val="icon.skill1068" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="2500" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="23628" levels="1" name="Earth Altar's Blessing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 5min., entire party's HP + 50%. -->
+		<set name="icon" val="icon.skill1045" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="2500" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="23629" levels="1" name="Protected Altar">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Invincible against normal hits, buffs, and debuffs. HP fully restored. -->
+		<set name="icon" val="icon.skill1427" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="6000" />
+	</skill>
+	<skill id="23630" levels="1" name="Swirling Poison">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10sec., a powerful poison cloud inflicts Poison and inflicts damage of 3000 HP per second to nearby enemies and slows them. -->
+		<set name="icon" val="icon.skill1167" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="3000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="23631" levels="1" name="Agathion's Blessing: Dash">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10sec., a dragon's power boosts Speed by 100%. Cooldown is 10min. -->
+		<set name="icon" val="icon.skill_transform_buff" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="600000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="23632" levels="1" name="Agathion's Blessing: Meditation">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30sec., P. Def. - 90% and restores MP by 134 per second. Effect removed when hit. Cooldown is 30min. -->
+		<set name="icon" val="icon.skill1430" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="1800000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="23633" levels="1" name="Agathion's Blessing: Featherweight">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Weight Limit + 9000, and Inventory Slots + 9. -->
+		<set name="icon" val="icon.skill0332" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="23634" levels="1" name="Dimensional Weakening">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- for 7sec., P. Def. and M. Def. - 50%. -->
+		<set name="icon" val="icon.skill1170" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="23635" levels="0" name="Dimensional Backpedal">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- After failing to retreat, Kamaloka's boss will remain alive for at least 18sec., with HP that doesn't drop past 1. -->
+		<table name="#castRanges"> </table>
+		<table name="#coolTimes"> </table>
+		<table name="#hitTimes"> </table>
+		<table name="#hpConsumes"> </table>
+		<table name="#icons"> </table>
+		<table name="#isDebuffs"> </table>
+		<table name="#isMagics"> </table>
+		<table name="#mpConsumes"> </table>
+		<table name="#reuseDelays"> </table>
+		<set name="icon" val="#icons" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hpConsume" val="#hpConsumes" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="#castRanges" />
+		<set name="hitTime" val="#hitTimes" />
+		<set name="coolTime" val="#coolTimes" />
+		<set name="reuseDelay" val="#reuseDelays" />
+		<set name="isMagic" val="#isMagics" />
+		<set name="isDebuff" val="#isDebuffs" />
+	</skill>
+</list>

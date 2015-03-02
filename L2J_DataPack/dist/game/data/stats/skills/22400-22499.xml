@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="22400" levels="1" name="Transformation Scroll - Zaken">
+	<skill id="22400" levels="1" name="Transformation Scroll: Zaken">
 		<!-- Desciption: Transformed into Zaken. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22401" levels="1" name="Transformation Scroll - Ranku">
+	<skill id="22401" levels="1" name="Transformation Scroll: Ranku">
 		<!-- Desciption: Transformed into Ranku. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
@@ -15,7 +15,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22403" levels="1" name="Extra Entrance Pass - Kamaloka (Hall of the Abyss)">
+	<skill id="22403" levels="1" name="Extra Pass: Kamaloka (Hall of Nightmares)">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
@@ -25,29 +25,624 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22405" levels="1" name="S84 Top-Grade Weapon Box">
+	<skill id="22405" levels="1" name="Weapon Pack (S84-grade)">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22406" levels="1" name="Ellegia Armor Box">
+	<skill id="22406" levels="1" name="Elegia Armor Pack">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22407" levels="1" name="PC Cafe Energy">
+	<skill id="22407" levels="1" name="PC Vitality">
 		<!-- Desciption: For 60 minutes, recovers Vitality when Exp. is acquired through hunting. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22408" levels="1" name="Enchantment Tool Box">
+	<skill id="22408" levels="1" name="Enchanting Tool Box">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22409" levels="1" name="Rune of Fate">
+	<skill id="22409" levels="1" name="Raid Boss' Soul Pack">
 		<!-- Desciption: Increases acquired XP and SP by 200%. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22410" levels="1" name="Adventurer's Song - Eva's Protection">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Receives Eva's protection and Shilen's energy is weakened. -->
+		<set name="icon" val="BranchSys3.Icon.g_sing_of_adventurer_eva_r" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="3600000" />
+	</skill>
+	<skill id="22411" levels="1" name="Adventurer's Song - Eva's Protection">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Receives Eva's protection and Shilen's energy is weakened. -->
+		<set name="icon" val="BranchSys3.Icon.g_sing_of_adventurer_eva_r" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="3600000" />
+	</skill>
+	<skill id="22412" levels="1" name="Weapon Conversion - One-handed Emerald Weapon">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 2 hours, a one-handed sword is changed into an Emerald Weapon. -->
+		<set name="icon" val="BranchSys3.Icon.g_beam_1h_sword" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="3600000" />
+	</skill>
+	<skill id="22413" levels="1" name="Weapon Conversion - Dual Emerald Weapons">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 2 hours, a dualsword is changed into dual Emerald Weapons. -->
+		<set name="icon" val="BranchSys3.Icon.g_beam_1h_sword" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="3600000" />
+	</skill>
+	<skill id="22414" levels="1" name="Halloween Gift Box">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22415" levels="1" name="Halloween Cookie">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Speed by 33 for 60 minutes. -->
+		<set name="icon" val="BranchSys3.Icon.ev_halloween_cookie" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="3600000" />
+	</skill>
+	<skill id="22416" levels="1" name="Halloween Special Cookie">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 minutes, increases Max MP by 20%, HP recovery bonus by 20%, attack M. Critical Rate by 2, critical rate during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, Debuff Resistance by 10%, and P. Def. upon evading a critical attack. Decreases speed by 15%. Also for party members who are equipped with melee weapons, bows, or crossbows that receive more than a set amount of damage, critical power increases during a normal attack. -->
+		<set name="icon" val="BranchSys3.Icon.ev_halloween_cookie" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="3600000" />
+	</skill>
+	<skill id="22417" levels="1" name="Equip Magic Saddle">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When the magic saddle is equipped, your mount runs at maximum speed for 30 seconds. -->
+		<set name="icon" val="BranchSys3.Icon.s_g_magic_saddle_up" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="45000" />
+	</skill>
+	<skill id="22418" levels="1" name="Root of Evolution">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="86400000" />
+	</skill>
+	<skill id="22419" levels="1" name="Weapon Appearance Stone (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22420" levels="1" name="Weapon Appearance Stone (S-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22421" levels="1" name="Weapon Appearance Stone (A-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22422" levels="1" name="Weapon Appearance Stone (B-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22423" levels="1" name="Weapon Appearance Stone (C-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22424" levels="1" name="Weapon Appearance Stone (D-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22425" levels="1" name="Blessed Weapon Appearance Stone (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22426" levels="1" name="Blessed Weapon Appearance Stone (S-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22427" levels="1" name="Blessed Weapon Appearance Stone (A-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22428" levels="1" name="Blessed Weapon Appearance Stone (B-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22429" levels="1" name="Blessed Weapon Appearance Stone (C-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22430" levels="1" name="Blessed Weapon Appearance Stone (D-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22431" levels="1" name="Weapon Restoration Stone (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22432" levels="1" name="Weapon Restoration Stone (S-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22433" levels="1" name="Weapon Restoration Stone (A-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22434" levels="1" name="Weapon Restoration Stone (B-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22435" levels="1" name="Weapon Restoration Stone (C-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22436" levels="1" name="Weapon Restoration Stone (D-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22437" levels="1" name="(Test) Emerald Sword Modification Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22438" levels="1" name="Scroll: Enchant Weapon (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22439" levels="1" name="Ancient Scroll: Enchant Weapon (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22440" levels="1" name="Divine Scroll: Enchant Weapon (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22441" levels="1" name="Scroll: Enchant Armor (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22442" levels="1" name="Ancient Scroll: Enchant Armor (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22443" levels="1" name="Divine Scroll: Enchant Armor (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22444" levels="1" name="Radiant Fortuna Box">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22445" levels="1" name="Radiant Fortuna Cube">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22446" levels="1" name="Soulshot (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22447" levels="1" name="Blessed Spiritshot (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22448" levels="1" name="Soulshot Medium Pack (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22449" levels="1" name="Soulshot Large Pack (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22450" levels="1" name="Blessed Spiritshot Medium Pack (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22451" levels="1" name="Blessed Spiritshot Large Pack (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22452" levels="1" name="Santa Girl's Gift Box">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22453" levels="1" name="Talisman Pack">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22454" levels="1" name="Scroll: Enchant Weapon (D-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22455" levels="1" name="Scroll: Enchant Armor (D-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22456" levels="1" name="Scroll: Enchant Weapon (C-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22457" levels="1" name="Scroll: Enchant Armor (C-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22458" levels="1" name="Scroll: Enchant Weapon (B-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22459" levels="1" name="Scroll: Enchant Armor (B-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22460" levels="1" name="Scroll: Enchant Weapon (A-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22461" levels="1" name="Scroll: Enchant Armor (A-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22462" levels="1" name="Scroll: Enchant Weapon (S-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22463" levels="1" name="Scroll: Enchant Armor (S-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22464" levels="1" name="Scroll: Enchant Weapon (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22465" levels="1" name="Scroll: Enchant Armor (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22466" levels="1" name="Scroll of Escape">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="20000" />
+	</skill>
+	<skill id="22467" levels="1" name="Scroll of Escape: Castle">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="20000" />
+	</skill>
+	<skill id="22468" levels="1" name="Scroll of Escape: Clan Hall">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="20000" />
+	</skill>
+	<skill id="22469" levels="1" name="Blessed Scroll of Escape">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="200" />
+	</skill>
+	<skill id="22470" levels="1" name="Blessed Scroll of Escape: Castle">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="200" />
+	</skill>
+	<skill id="22471" levels="1" name="Blessed Scroll of Escape: Clan Hall">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="200" />
+	</skill>
+	<skill id="22472" levels="1" name="Blessed Scroll of Resurrection (Pet)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="400" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+	</skill>
+	<skill id="22473" levels="1" name="Agathion Pack">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22474" levels="1" name="Soulshot R 10000">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22475" levels="1" name="Blessed Spiritshot R 10000">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22476" levels="1" name="Soulshot R 3000">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22477" levels="1" name="Blessed Spiritshot R 3000">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22478" levels="1" name="Soulshot s 10000">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22479" levels="1" name="Soulshot s 10000">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22480" levels="1" name="Leaf of Appreciation">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 1 hour, with the help from the Leaf of Appreciation, increases Max MP by 20%, MP Recovery Bonus by 20%, HP recovery bonus by 20%, the chance of prominent damage occurring through magic damage by 2, the power of critical attacks by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases Speed by 20% and MP consumption needed for skill use by 5%. -->
+		<set name="icon" val="icon.etc_leaf_green_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="10000" />
+	</skill>
+	<skill id="22481" levels="1" name="Mysterious Soulshot d 10000">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22482" levels="1" name="Mysterious Soulshot d 5000">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22483" levels="1" name="Mysterious Soulshot c 10000">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22484" levels="1" name="Mysterious Soulshot c 5000">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22485" levels="1" name="Mysterious Soulshot b 10000">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22486" levels="1" name="Mysterious Soulshot b 5000">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22487" levels="1" name="Mysterious Soulshot a 10000">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22488" levels="1" name="Mysterious Soulshot a 5000">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22489" levels="1" name="Mysterious Spiritshot d 10000">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22490" levels="1" name="Mysterious Spiritshot d 5000">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22491" levels="1" name="Mysterious Spiritshot c 10000">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22492" levels="1" name="Mysterious Spiritshot c 5000">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22493" levels="1" name="Mysterious Spiritshot b 10000">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22494" levels="1" name="Mysterious Spiritshot b 5000">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22495" levels="1" name="Mysterious Spiritshot a 10000">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22496" levels="1" name="Mysterious Spiritshot a 5000">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22497" levels="1" name="Mysterious Spiritshot s 10000">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22498" levels="1" name="Mysterious Spiritshot s 5000">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22499" levels="1" name="Extra Pass: Rim Kamaloka">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
 	</skill>
 </list>

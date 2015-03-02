@@ -52,7 +52,7 @@ public final class Amaskari extends AbstractNpcAI
 	// Misc
 	private static final NpcStringId[] AMASKARI_NPCSTRING_ID =
 	{
-		NpcStringId.ILL_MAKE_EVERYONE_FEEL_THE_SAME_SUFFERING_AS_ME,
+		NpcStringId.I_LL_MAKE_EVERYONE_FEEL_THE_SAME_SUFFERING_AS_ME,
 		NpcStringId.HA_HA_YES_DIE_SLOWLY_WRITHING_IN_PAIN_AND_AGONY,
 		NpcStringId.MORE_NEED_MORE_SEVERE_PAIN,
 		NpcStringId.SOMETHING_IS_BURNING_INSIDE_MY_BODY
@@ -62,7 +62,7 @@ public final class Amaskari extends AbstractNpcAI
 		NpcStringId.AHH_MY_LIFE_IS_BEING_DRAINED_OUT,
 		NpcStringId.THANK_YOU_FOR_SAVING_ME,
 		NpcStringId.IT_WILL_KILL_EVERYONE,
-		NpcStringId.EEEK_I_FEEL_SICKYOW
+		NpcStringId.EEEK_I_FEEL_SICK_YOW
 	};
 	
 	public Amaskari()

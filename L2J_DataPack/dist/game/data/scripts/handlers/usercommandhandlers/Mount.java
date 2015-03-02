@@ -39,7 +39,7 @@ public class Mount implements IUserCommandHandler
 		{
 			return false;
 		}
-		return activeChar.mountPlayer(activeChar.getSummon());
+		return activeChar.mountPlayer(activeChar.getPet());
 	}
 	
 	@Override

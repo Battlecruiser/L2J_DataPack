@@ -7,7 +7,7 @@
 					<xs:simpleType>
 						<xs:restriction base="xs:nonNegativeInteger">
 							<xs:minInclusive value="0" />
-							<xs:maxInclusive value="136" />
+							<xs:maxInclusive value="189" />
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
@@ -20,6 +20,8 @@
 							<xs:element type="xs:nonNegativeInteger" name="baseMEN" minOccurs="1" maxOccurs="1" />
 							<xs:element type="xs:nonNegativeInteger" name="baseDEX" minOccurs="1" maxOccurs="1" />
 							<xs:element type="xs:nonNegativeInteger" name="baseWIT" minOccurs="1" maxOccurs="1" />
+							<xs:element type="xs:nonNegativeInteger" name="baseLUC" minOccurs="1" maxOccurs="1" />
+							<xs:element type="xs:nonNegativeInteger" name="baseCHA" minOccurs="1" maxOccurs="1" />
 							<xs:element name="creationPoints" minOccurs="1" maxOccurs="1">
 								<xs:complexType>
 									<xs:sequence maxOccurs="1" minOccurs="0">
@@ -35,14 +37,16 @@
 							</xs:element>
 							<xs:element type="xs:positiveInteger" name="basePAtk" minOccurs="1" maxOccurs="1" />
 							<xs:element type="xs:positiveInteger" name="baseCritRate" minOccurs="1" maxOccurs="1" />
+							<xs:element type="xs:positiveInteger" name="baseMCritRate" minOccurs="1" maxOccurs="1" />
 							<xs:element name="baseAtkType" minOccurs="1" maxOccurs="1">
-							<xs:simpleType>
-								<xs:restriction base="xs:token">
-									<xs:enumeration value="FIST" />
-								</xs:restriction>
-							</xs:simpleType>
+								<xs:simpleType>
+									<xs:restriction base="xs:token">
+										<xs:enumeration value="FIST" />
+									</xs:restriction>
+								</xs:simpleType>
 							</xs:element>
 							<xs:element type="xs:positiveInteger" name="basePAtkSpd" minOccurs="1" maxOccurs="1" />
+							<xs:element type="xs:positiveInteger" name="baseMAtkSpd" minOccurs="0" maxOccurs="1" />
 							<xs:element name="basePDef" minOccurs="1" maxOccurs="1">
 								<xs:complexType>
 									<xs:sequence maxOccurs="1" minOccurs="1">
@@ -115,7 +119,7 @@
 				<xs:element name="lvlUpgainData" minOccurs="1" maxOccurs="1">
 					<xs:complexType>
 						<xs:sequence maxOccurs="1" minOccurs="1">
-							<xs:element name="level" maxOccurs="85" minOccurs="85">
+							<xs:element name="level" maxOccurs="99" minOccurs="99">
 								<xs:complexType>
 									<xs:sequence maxOccurs="1" minOccurs="1">
 										<xs:element type="xs:decimal" name="hp" minOccurs="1" maxOccurs="1" />
@@ -129,7 +133,7 @@
 										<xs:simpleType>
 											<xs:restriction base="xs:positiveInteger">
 												<xs:minInclusive value="1"></xs:minInclusive>
-												<xs:maxInclusive value="85"></xs:maxInclusive>
+												<xs:maxInclusive value="99"></xs:maxInclusive>
 											</xs:restriction>
 										</xs:simpleType>
 									</xs:attribute>

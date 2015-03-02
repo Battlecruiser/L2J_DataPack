@@ -45,7 +45,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9605" type="Armor" name="Agathion Seal Bracelet - Rainbow Clan Hall">
+	<item id="9605" type="Armor" name="Agathion - Rainbow Clan Hall">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -62,7 +62,7 @@
 			<player clanHall="62" />
 		</cond>
 	</item>
-	<item id="9606" type="Armor" name="Agathion Seal Bracelet - Wild Beast Reserve">
+	<item id="9606" type="Armor" name="Agathion - Wild Beast Reserve">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -79,7 +79,7 @@
 			<player clanHall="63" />
 		</cond>
 	</item>
-	<item id="9607" type="Armor" name="Agathion Seal Bracelet - Gludio">
+	<item id="9607" type="Armor" name="Agathion - Gludio">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -97,7 +97,7 @@
 			<player castle="1" />
 		</cond>
 	</item>
-	<item id="9608" type="Armor" name="Agathion Seal Bracelet - Dion">
+	<item id="9608" type="Armor" name="Agathion - Dion">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -115,7 +115,7 @@
 			<player castle="2" />
 		</cond>
 	</item>
-	<item id="9609" type="Armor" name="Agathion Seal Bracelet - Giran">
+	<item id="9609" type="Armor" name="Agathion - Giran">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -133,7 +133,7 @@
 			<player castle="3" />
 		</cond>
 	</item>
-	<item id="9610" type="Armor" name="Agathion Seal Bracelet - Oren">
+	<item id="9610" type="Armor" name="Agathion - Oren">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -151,7 +151,7 @@
 			<player castle="4" />
 		</cond>
 	</item>
-	<item id="9611" type="Armor" name="Agathion Seal Bracelet - Aden">
+	<item id="9611" type="Armor" name="Agathion - Aden">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -169,7 +169,7 @@
 			<player castle="5" />
 		</cond>
 	</item>
-	<item id="9612" type="Armor" name="Agathion Seal Bracelet - Innadril">
+	<item id="9612" type="Armor" name="Agathion - Innadril">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -187,7 +187,7 @@
 			<player castle="6" />
 		</cond>
 	</item>
-	<item id="9613" type="Armor" name="Agathion Seal Bracelet - Goddard">
+	<item id="9613" type="Armor" name="Agathion - Goddard">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -205,7 +205,7 @@
 			<player castle="7" />
 		</cond>
 	</item>
-	<item id="9614" type="Armor" name="Agathion Seal Bracelet - Rune">
+	<item id="9614" type="Armor" name="Agathion - Rune">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -223,7 +223,7 @@
 			<player castle="8" />
 		</cond>
 	</item>
-	<item id="9615" type="Armor" name="Agathion Seal Bracelet - Schuttgart">
+	<item id="9615" type="Armor" name="Agathion - Schuttgart">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -342,8 +342,9 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="9628" type="EtcItem" name="Leonard">
+	<item id="9628" type="EtcItem" name="Corroded Leonard">
 		<set name="icon" val="icon.etc_high_gem_black_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -352,7 +353,7 @@
 		<set name="price" val="25500" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9629" type="EtcItem" name="Adamantine">
+	<item id="9629" type="EtcItem" name="Corroded Adamantine">
 		<set name="icon" val="icon.etc_adamantium_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -361,7 +362,7 @@
 		<set name="price" val="46000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9630" type="EtcItem" name="Orichalcum">
+	<item id="9630" type="EtcItem" name="Corroded Orichalcum">
 		<set name="icon" val="icon.etc_oricalcum_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -370,7 +371,7 @@
 		<set name="price" val="38000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9631" type="EtcItem" name="Tough Leather">
+	<item id="9631" type="EtcItem" name="Exquisite Leather">
 		<set name="icon" val="icon.etc_hightes_leather_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -396,7 +397,6 @@
 		<set name="etcitem_type" val="BOLT" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="D" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="5" />
 		<set name="price" val="3" />
@@ -409,7 +409,6 @@
 		<set name="etcitem_type" val="BOLT" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="4" />
 		<set name="price" val="5" />
@@ -422,7 +421,6 @@
 		<set name="etcitem_type" val="BOLT" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="B" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="4" />
 		<set name="price" val="7" />
@@ -435,20 +433,18 @@
 		<set name="etcitem_type" val="BOLT" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="A" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="3" />
 		<set name="price" val="8" />
 		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9637" type="EtcItem" name="Shining Bolt">
+	<item id="9637" type="EtcItem" name="Bolt of Light">
 		<set name="icon" val="icon.etc_shining_bolt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="BOLT" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="3" />
 		<set name="price" val="10" />
@@ -701,6 +697,7 @@
 		<set name="weight" val="120" />
 		<set name="price" val="21600" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="9649" type="EtcItem" name="Transformation Sealbook: Death Blader">
 		<set name="icon" val="BranchSys2.icon.etc_sb_transform_i00" />
@@ -717,6 +714,7 @@
 		<set name="weight" val="120" />
 		<set name="price" val="21600" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="9651" type="EtcItem" name="Transformation Sealbook: Unicorn">
 		<set name="icon" val="BranchSys2.icon.etc_sb_transform_i00" />
@@ -733,6 +731,7 @@
 		<set name="weight" val="120" />
 		<set name="price" val="21600" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="9653" type="EtcItem" name="Transformation Sealbook: Golem Guardian">
 		<set name="icon" val="BranchSys2.icon.etc_sb_transform_i00" />
@@ -741,6 +740,7 @@
 		<set name="weight" val="120" />
 		<set name="price" val="21600" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="9654" type="EtcItem" name="Transformation Sealbook: Inferno Drake">
 		<set name="icon" val="BranchSys2.icon.etc_sb_transform_i00" />
@@ -749,6 +749,7 @@
 		<set name="weight" val="120" />
 		<set name="price" val="21600" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="9655" type="EtcItem" name="Transformation Sealbook: Dragon Bomber">
 		<set name="icon" val="BranchSys2.icon.etc_sb_transform_i00" />
@@ -757,8 +758,9 @@
 		<set name="weight" val="120" />
 		<set name="price" val="21600" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
-	<item id="9656" type="Weapon" name="Enchanted Wolf Fang">
+	<item id="9656" type="Weapon" name="Reinforced Wolf Fang">
 		<set name="icon" val="icon.etc_wolf_r_d_01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -781,7 +783,7 @@
 			<set stat="pAtkSpd" val="277" />
 		</for>
 	</item>
-	<item id="9657" type="Weapon" name="Enchanted Coyote Fang">
+	<item id="9657" type="Weapon" name="Reinforced Coyote Fang">
 		<set name="icon" val="icon.etc_wolf_r_d_01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -804,7 +806,7 @@
 			<set stat="pAtkSpd" val="277" />
 		</for>
 	</item>
-	<item id="9658" type="Weapon" name="Enchanted Saltydog Fang">
+	<item id="9658" type="Weapon" name="Reinforced Saltydog Fang">
 		<set name="icon" val="icon.etc_wolf_r_d_01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -827,7 +829,7 @@
 			<set stat="pAtkSpd" val="277" />
 		</for>
 	</item>
-	<item id="9659" type="Weapon" name="Enchanted Cerberus Fang">
+	<item id="9659" type="Weapon" name="Reinforced Cerberus Fang">
 		<set name="icon" val="icon.etc_wolf_r_d_01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -873,7 +875,7 @@
 			<set stat="pAtkSpd" val="277" />
 		</for>
 	</item>
-	<item id="9661" type="Weapon" name="Enchanted Fenrir Fang">
+	<item id="9661" type="Weapon" name="Reinforced Fenril Fang">
 		<set name="icon" val="icon.etc_wolf_r_d_01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1132,7 +1134,6 @@
 		<set name="crystal_type" val="B" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
-		<set name="price" val="616000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1149,7 +1150,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
-		<set name="price" val="50000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1193,7 +1193,7 @@
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9684" type="EtcItem" name="Native Treasure">
+	<item id="9684" type="EtcItem" name="Native's Treasure">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

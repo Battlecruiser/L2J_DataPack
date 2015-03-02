@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="36600" name="Scroll: Restore Equipment (A-grade)" additionalName="" type="EtcItem">
+		<!-- Restores the original appearance of A-grade equipment (only weapons and armor, no hair accessories) whose appearances have been modified. Double-click to use. -->
+		<set name="icon" val="icon.change_restore_i04" />
+		<set name="price" val="500000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36601" name="Scroll: Restore Equipment (B-grade)" additionalName="" type="EtcItem">
+		<!-- Restores the original appearance of B-grade equipment (only weapons and armor, no hair accessories) whose appearances have been modified. Double-click to use. -->
+		<set name="icon" val="icon.change_restore_i03" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36602" name="Scroll: Restore Equipment (C-grade)" additionalName="" type="EtcItem">
+		<!-- Restores the original appearance of C-grade equipment (only weapons and armor, no hair accessories) whose appearances have been modified. Double-click to use. -->
+		<set name="icon" val="icon.change_restore_i02" />
+		<set name="price" val="50000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36603" name="Scroll: Restore Equipment (D-grade)" additionalName="" type="EtcItem">
+		<!-- Restores the original appearance of D-grade equipment (only weapons and armor, no hair accessories) whose appearances have been modified. Double-click to use. -->
+		<set name="icon" val="icon.change_restore_i01" />
+		<set name="price" val="10000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36604" name="Hair Accessory Appearance Stone" additionalName="" type="EtcItem">
+		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 125000 adena for a 1-slot hair accessory and 200000 adena for a 2-slot hair accessory.\n\nWarning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2_stone" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+	</item>
+	<item id="36605" name="Blessed Hair Accessory Appearance Stone" additionalName="" type="EtcItem">
+		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use.\n\nWarning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
+		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting_hair2_stone" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+	</item>
+	<item id="36606" name="Scroll: Modify Weapon (R-grade)" additionalName="15-day" type="EtcItem">
+		<!-- Changes the appearance of an R-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<set name="icon" val="icon.weapon_change_i06" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="1296000" />
+	</item>
+	<item id="36607" name="Scroll: Modify Weapon (S-grade)" additionalName="15-day" type="EtcItem">
+		<!-- Changes the appearance of an S-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<set name="icon" val="icon.weapon_change_i05" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="1296000" />
+	</item>
+	<item id="36608" name="Scroll: Modify Weapon (A-grade)" additionalName="15-day" type="EtcItem">
+		<!-- Changes the appearance of an A-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<set name="icon" val="icon.weapon_change_i04" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="1296000" />
+	</item>
+	<item id="36609" name="Scroll: Modify Weapon (B-grade)" additionalName="15-day" type="EtcItem">
+		<!-- Changes the appearance of a B-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<set name="icon" val="icon.weapon_change_i03" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="1296000" />
+	</item>
+	<item id="36610" name="Scroll: Modify Weapon (C-grade)" additionalName="15-day" type="EtcItem">
+		<!-- Changes the appearance of a C-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<set name="icon" val="icon.weapon_change_i02" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="1296000" />
+	</item>
+	<item id="36611" name="Scroll: Modify Weapon (D-grade)" additionalName="15-day" type="EtcItem">
+		<!-- Changes the appearance of a D-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<set name="icon" val="icon.weapon_change_i01" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="1296000" />
+	</item>
+	<item id="36612" name="Blessed Scroll: Modify Weapon (R-grade)" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of an R-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<set name="icon" val="icon.pr_weapon_change_i06" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="36613" name="Blessed Scroll: Modify Weapon (S-grade)" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of an S-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<set name="icon" val="icon.pr_weapon_change_i05" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="36614" name="Blessed Scroll: Modify Weapon (A-grade)" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of an A-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<set name="icon" val="icon.pr_weapon_change_i04" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="36615" name="Blessed Scroll: Modify Weapon (B-grade)" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a B-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<set name="icon" val="icon.pr_weapon_change_i03" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="36616" name="Blessed Scroll: Modify Weapon (C-grade)" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a C-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<set name="icon" val="icon.pr_weapon_change_i02" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="36617" name="Blessed Scroll: Modify Weapon (D-grade)" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a D-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<set name="icon" val="icon.pr_weapon_change_i01" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="36618" name="Scroll: Modify Armor (R-grade)" additionalName="15-day" type="EtcItem">
+		<!-- Changes the appearance of an R-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 125000 adena. -->
+		<set name="icon" val="icon.armor_change_i06" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="1296000" />
+	</item>
+	<item id="36619" name="Scroll: Modify Armor (S-grade)" additionalName="15-day" type="EtcItem">
+		<!-- Changes the appearance of an S-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 50,000 adena. -->
+		<set name="icon" val="icon.armor_change_i05" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="1296000" />
+	</item>
+	<item id="36620" name="Scroll: Modify Armor (A-grade)" additionalName="15-day" type="EtcItem">
+		<!-- Changes the appearance of an A-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 24000 adena. -->
+		<set name="icon" val="icon.armor_change_i04" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="1296000" />
+	</item>
+	<item id="36621" name="Scroll: Modify Armor (B-grade)" additionalName="15-day" type="EtcItem">
+		<!-- Changes the appearance of a B-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 8000 adena. -->
+		<set name="icon" val="icon.armor_change_i03" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="1296000" />
+	</item>
+	<item id="36622" name="Scroll: Modify Armor (C-grade)" additionalName="15-day" type="EtcItem">
+		<!-- Changes the appearance of a C-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 1500 adena. -->
+		<set name="icon" val="icon.armor_change_i02" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="1296000" />
+	</item>
+	<item id="36623" name="Scroll: Modify Armor (D-grade)" additionalName="15-day" type="EtcItem">
+		<!-- Changes the appearance of a D-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 600 adena. -->
+		<set name="icon" val="icon.armor_change_i01" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="1296000" />
+	</item>
+	<item id="36624" name="Blessed Scroll: Modify Armor (R-grade)" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of an R-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<set name="icon" val="icon.pr_armor_change_i06" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="36625" name="Blessed Scroll: Modify Armor (S-grade)" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of an S-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<set name="icon" val="icon.pr_armor_change_i05" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="36626" name="Blessed Scroll: Modify Armor (A-grade)" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of an A-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<set name="icon" val="icon.pr_armor_change_i04" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="36627" name="Blessed Scroll: Modify Armor (B-grade)" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a B-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<set name="icon" val="icon.pr_armor_change_i03" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="36628" name="Blessed Scroll: Modify Armor (C-grade)" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a C-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<set name="icon" val="icon.pr_armor_change_i02" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="36629" name="Blessed Scroll: Modify Armor (D-grade)" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a D-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<set name="icon" val="icon.pr_armor_change_i01" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="36630" name="Hair Accessory Appearance Stone" additionalName="15-day" type="EtcItem">
+		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 125000 adena for a 1-slot hair accessory and 200000 adena for a 2-slot hair accessory.\n\nWarning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2_stone" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="time" val="1296000" />
+	</item>
+	<item id="36631" name="Blessed Hair Accessory Appearance Stone" additionalName="7-day" type="EtcItem">
+		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use.\n\nWarning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
+		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting_hair2_stone" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="36632" name="Emerald Weapon: One-handed Sword" additionalName="" type="Weapon">
+		<!-- Emerald Weapon. One-handed sword style. Initial Emerald Weapon Appearance Stone. -->
+		<set name="icon" val="BranchSys3.Icon.g_beam_sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="D" />
+		<set name="weight" val="144" />
+		<for>
+			<add stat="pAtk" val="92.0" />
+			<add stat="mAtk" val="54.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="36633" name="Emerald Weapon: Dagger" additionalName="" type="Weapon">
+		<!-- Emerald Weapon. Dagger style. Initial Emerald Weapon Appearance Stone. -->
+		<set name="icon" val="BranchSys3.Icon.g_beam_sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="D" />
+		<set name="weight" val="106" />
+		<for>
+			<add stat="pAtk" val="80.0" />
+			<add stat="mAtk" val="54.0" />
+			<add stat="pAtkSpd" val="433.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="36634" name="Emerald Weapon: Two-handed Sword" additionalName="" type="Weapon">
+		<!-- Emerald Weapon. Two-handed sword style. Initial Emerald Weapon Appearance Stone. -->
+		<set name="icon" val="BranchSys3.Icon.g_beam_twohand_sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="D" />
+		<set name="weight" val="209" />
+		<for>
+			<add stat="pAtk" val="112.0" />
+			<add stat="mAtk" val="54.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="36635" name="Emerald Weapon: Fist Weapon" additionalName="" type="Weapon">
+		<!-- Emerald Weapon. Fist weapon style. Initial Emerald Weapon Appearance Stone. -->
+		<set name="icon" val="BranchSys3.Icon.g_beam_dualfist" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="crystal_type" val="D" />
+		<set name="weight" val="152" />
+		<for>
+			<add stat="pAtk" val="112.0" />
+			<add stat="mAtk" val="54.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="36636" name="Emerald Weapon: Spear" additionalName="" type="Weapon">
+		<!-- Emerald Weapon. Spear style. Initial Emerald Weapon Appearance Stone. -->
+		<set name="icon" val="BranchSys3.Icon.g_beam_pole" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="POLE" />
+		<set name="crystal_type" val="D" />
+		<set name="weight" val="205" />
+		<for>
+			<add stat="pAtk" val="92.0" />
+			<add stat="mAtk" val="54.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="36637" name="Emerald Weapon: Bow" additionalName="" type="Weapon">
+		<!-- Emerald Weapon. Bow style. Initial Emerald Weapon Appearance Stone. -->
+		<set name="icon" val="BranchSys3.Icon.g_beam_bow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="D" />
+		<set name="weight" val="181" />
+		<for>
+			<add stat="pAtk" val="191.0" />
+			<add stat="mAtk" val="54.0" />
+			<add stat="pAtkSpd" val="293.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="36638" name="Emerald Weapon: Crossbow" additionalName="" type="Weapon">
+		<!-- Emerald Weapon. Crossbow style. Initial Emerald Weapon Appearance Stone. -->
+		<set name="icon" val="BranchSys3.Icon.g_beam_twohand_crossbow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="crystal_type" val="D" />
+		<set name="weight" val="181" />
+		<for>
+			<add stat="pAtk" val="117.0" />
+			<add stat="mAtk" val="54.0" />
+			<add stat="pAtkSpd" val="303.0" />
+			<add stat="rCrit" val="10.0" />
+		</for>
+	</item>
+	<item id="36639" name="Emerald Weapon: One-handed Blunt Weapon" additionalName="" type="Weapon">
+		<!-- Emerald Weapon. One-handed blunt style. Initial Emerald Weapon Appearance Stone. -->
+		<set name="icon" val="BranchSys3.Icon.g_beam_blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="D" />
+		<set name="weight" val="172" />
+		<for>
+			<add stat="pAtk" val="92.0" />
+			<add stat="mAtk" val="54.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="36640" name="Emerald Weapon: Two-handed Blunt Weapon" additionalName="" type="Weapon">
+		<!-- Emerald Weapon. Two-handed blunt style. Initial Emerald Weapon Appearance Stone. -->
+		<set name="icon" val="BranchSys3.Icon.g_beam_twohand_blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="D" />
+		<set name="weight" val="101" />
+		<for>
+			<add stat="pAtk" val="90.0" />
+			<add stat="mAtk" val="79.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="36641" name="Emerald Weapon: One-handed Magic Blunt Weapon" additionalName="" type="Weapon">
+		<!-- Emerald Weapon. One-handed magic blunt style. Initial Emerald Weapon Appearance Stone. -->
+		<set name="icon" val="BranchSys3.Icon.g_beam_magic_twohand_blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="D" />
+		<set name="weight" val="172" />
+		<for>
+			<add stat="pAtk" val="92.0" />
+			<add stat="mAtk" val="54.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="36642" name="Emerald Weapon: Two-handed Magic Blunt Weapon" additionalName="" type="Weapon">
+		<!-- Emerald Weapon. Two-handed magic blunt style. Initial Emerald Weapon Appearance Stone. -->
+		<set name="icon" val="BranchSys3.Icon.g_beam_magic_twohand_blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="D" />
+		<set name="weight" val="101" />
+		<for>
+			<add stat="pAtk" val="152.0" />
+			<add stat="mAtk" val="122.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="36643" name="Emerald Weapon: Dualsword" additionalName="" type="Weapon">
+		<!-- Emerald Weapon. Dualsword style. Initial Emerald Weapon Appearance Stone. -->
+		<set name="icon" val="BranchSys3.Icon.g_beam_dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="crystal_type" val="D" />
+		<set name="weight" val="247" />
+		<for>
+			<add stat="pAtk" val="107.0" />
+			<add stat="mAtk" val="51.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="36644" name="Emerald Weapon: Dual Dagger" additionalName="" type="Weapon">
+		<!-- Emerald Weapon. Dual dagger style. Initial Emerald Weapon Appearance Stone. -->
+		<set name="icon" val="BranchSys3.Icon.g_beam_dualdagger" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="crystal_type" val="D" />
+		<set name="weight" val="205" />
+		<for>
+			<add stat="pAtk" val="107.0" />
+			<add stat="mAtk" val="181.0" />
+			<add stat="pAtkSpd" val="433.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="36645" name="Emerald Weapon: Dual Blunt Weapon" additionalName="" type="Weapon">
+		<!-- Emerald Weapon. Dual blunt style. Initial Emerald Weapon Appearance Stone. -->
+		<set name="icon" val="BranchSys3.Icon.g_beam_dualblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="crystal_type" val="D" />
+		<set name="weight" val="250" />
+		<for>
+			<add stat="pAtk" val="125.0" />
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="36646" name="Emerald Weapon: Shield" additionalName="" type="Weapon">
+		<!-- Emerald Weapon. Shield style. Initial Emerald Weapon Appearance Stone. -->
+		<set name="icon" val="BranchSys3.Icon.g_beam_shield" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="crystal_type" val="D" />
+		<set name="weight" val="200" />
+		<for>
+			<add stat="pDef" val="25.0" />
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="36647" name="Emerald Weapon: Sigil" additionalName="" type="Armor">
+		<!-- Emerald Weapon. Sigil style. Initial Emerald Weapon Appearance Stone. -->
+		<set name="icon" val="BranchSys3.Icon.g_beam_sigil" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="crystal_type" val="D" />
+		<set name="weight" val="100" />
+		<for>
+			<add stat="sDef" val="47.0" />
+			<add stat="rShld" val="20.0" />
+		</for>
+	</item>
+	<item id="36648" name="Emerald Weapon Appearance Stone: Sword" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a one-handed sword to that of an Emerald one-handed sword. 7-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="36649" name="Emerald Weapon Appearance Stone: Dagger" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a dagger to that of an Emerald dagger. 7-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dagger" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="36650" name="Emerald Weapon Appearance Stone: Two-handed Sword" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a two-handed sword to that of an Emerald two-handed sword. 7-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_sword" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="36651" name="Emerald Weapon Appearance Stone: Fist Weapon" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a fist weapon to that of an Emerald fist weapon. 7-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="36652" name="Emerald Weapon Appearance Stone: Spear" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a spear to that of an Emerald spear. 7-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="36653" name="Emerald Weapon Appearance Stone: Bow" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a bow to that of an Emerald bow. 7-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_bow" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="36654" name="Emerald Weapon Appearance Stone: Crossbow" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a crossbow to that of an Emerald crossbow. 7-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_crossbow" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="36655" name="Emerald Weapon Appearance Stone: One-handed Blunt Weapon" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a one-handed blunt to that of an Emerald one-handed blunt. 7-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_blunt" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="36656" name="Emerald Weapon Appearance Stone: Two-handed Blunt Weapon" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a two-handed blunt to that of an Emerald two-handed blunt. 7-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_blunt" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="36657" name="Emerald Weapon Appearance Stone: One-handed Magic Blunt Weapon" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a one-handed blunt to that of an Emerald magic blunt. 7-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_blunt" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="36658" name="Emerald Weapon Appearance Stone: Two-handed Magic Blunt Weapon" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a two-handed blunt to that of an Emerald two-handed magic blunt. 7-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_twohand_blunt" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="36659" name="Emerald Weapon Appearance Stone: Dualsword" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a dualsword to that of an Emerald dualsword. 7-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="36660" name="Emerald Weapon Appearance Stone: Dual Dagger" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a dual dagger to that of an Emerald dual dagger. 7-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualdagger" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="36661" name="Emerald Weapon Appearance Stone: Dual Blunt Weapon" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a dual blunt to that of an Emerald dual blunt. 7-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualblunt" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="36662" name="Emerald Weapon Appearance Stone: Shield" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a shield to that of an Emerald shield. 7-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_shield" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="36663" name="Emerald Weapon Appearance Stone: Sigil" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a sigil to that of an Emerald sigil. 7-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sigil" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="36664" name="9th Anniversary Hat" additionalName="" type="Armor">
+		<!-- 9-year anniversary hair accessory. Enables emoticon skills. -->
+		<set name="icon" val="BranchSys.icon.br_party_hat_gold_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+	</item>
+	<item id="36665" name="Nerva's Temporary Prison Key" additionalName="" type="EtcItem">
+		<!-- Key obtained after killing monsters at Raider's Crossroads. Opens the Nerva temporary prison gate. -->
+		<set name="icon" val="icon.item_normal26" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+	</item>
+	<item id="36666" name="Unidentified Suspicious Badge" additionalName="" type="EtcItem">
+		<!-- Suspicious badge from a dead monster in the Sea of Spores. Take it to Paterson's Disciple, Bacon, in the Sea of Spores to receive a reward. -->
+		<set name="icon" val="icon.etc_painting_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36667" name="Giant's Alphabet" additionalName="" type="EtcItem">
+		<!-- Giant's Alphabet that Stakatos are collecting in the Sea of Spores. Take it to Paterson's Disciple, Bacon, in the Sea of Spores to receive a reward. -->
+		<set name="icon" val="icon.etc_painting_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36668" name="Intact Stakato Shell" additionalName="" type="EtcItem">
+		<!-- Stakato Shell from the Swamp of Screams. Take it to Mercenary Captain Pierce at the Swamp of Screams to receive a reward. -->
+		<set name="icon" val="icon.etc_parasite_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36669" name="Intact Stakato Talon" additionalName="" type="EtcItem">
+		<!-- Stakato Claw from the Swamp of Screams. Take it to Mercenary Captain Pierce at the Swamp of Screams to receive a reward. -->
+		<set name="icon" val="icon.etc_claw_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36670" name="Monster Bone" additionalName="" type="EtcItem">
+		<!-- Monster bone from the Forest of the Dead. Take it to the Mysterious Wizard at the Forest of the Dead to receive a reward. -->
+		<set name="icon" val="icon.etc_piece_bone_black_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36671" name="Monster Blood" additionalName="" type="EtcItem">
+		<!-- Monster blood from the Forest of the Dead. Take it to the Mysterious Wizard at the Forest of the Dead to receive a reward. -->
+		<set name="icon" val="icon.item_canuse48" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36672" name="Evil Eye of Darkness" additionalName="" type="EtcItem">
+		<!-- Mark of Daimon the White-Eyed instilled in monsters at the Wall of Argos. Take it to Giant's Minion Janitt at the Wall of Argos to receive a reward. -->
+		<set name="icon" val="icon.etc_eyeball_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36673" name="Powerful Dark Malice" additionalName="" type="EtcItem">
+		<!-- Thought of Daimon the White-Eyed instilled in monsters at the Wall of Argos. Take it to Giant's Minion Janitt at the Wall of Argos to receive a reward. -->
+		<set name="icon" val="icon.etc_bead_silver_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36674" name="Varka's Badge: Soldier" additionalName="" type="EtcItem">
+		<!-- Badge of Silenos Soldiers at Varka Silenos Barracks. Take it to Giant's Minion Hansen at Varka Silenos Barracks to receive a reward. -->
+		<set name="icon" val="icon.etc_ketra_badge_grunt_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36675" name="Varka's Badge: General" additionalName="" type="EtcItem">
+		<!-- Badge of Silenos Officers at Varka Silenos Barracks. Take it to Giant's Minion Hansen at Varka Silenos Barracks to receive a reward. -->
+		<set name="icon" val="icon.etc_ketra_badge_officer_i02" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36676" name="Ketra's Badge: Soldier" additionalName="" type="EtcItem">
+		<!-- Badge of Orc Soldiers at Ketra Orc Outpost. Take it to Giant's Minion Lugonnes at Ketra Orc Outpost to receive a reward. -->
+		<set name="icon" val="icon.etc_barka_badge_grunt_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36677" name="Ketra's Badge: General" additionalName="" type="EtcItem">
+		<!-- Badge of Orc Officers at Ketra Orc Outpost. Take it to Giant's Minion Lugonnes at Ketra Orc Outpost to receive a reward. -->
+		<set name="icon" val="icon.etc_barka_badge_officer_i02" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36678" name="Refugee's Necklace" additionalName="" type="EtcItem">
+		<!-- Refugee's Necklace. Take it to Rune Backup Trooper Falk in the Land of Chaos to receive a reward. -->
+		<set name="icon" val="icon.accessary_aquastone_necklace_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36679" name="Chunk of a Corpse" additionalName="" type="EtcItem">
+		<!-- Corpse Piece obtained after killing monsters in the Land of Chaos. Take it to Investigator Quincy in the Land of Chaos to receive a reward. -->
+		<set name="icon" val="icon.etc_magic_energy_i02" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36680" name="Soul of Darkness" additionalName="" type="EtcItem">
+		<!-- Soul of Darkness obtained after killing monsters in the Land of Chaos. Take it to Investigator Quincy in the Land of Chaos to receive a reward. -->
+		<set name="icon" val="icon.etc_life_stone_of_begining_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36681" name="Curious Letter" additionalName="" type="EtcItem">
+		<!-- Curious Letter from Rune Captain Mathias. Take it to Flame Patrol Vice Captain Tuska near Gainak. -->
+		<set name="icon" val="icon.etc_letter_envelope_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36682" name="Turakan's Secret Letter" additionalName="" type="EtcItem">
+		<!-- Turakan's Secret Letter obtained after killing monsters at Raider's Crossroads. Take it to Flame Patrol Warrior Bruener at the entrance of Raider's Crossroads. -->
+		<set name="icon" val="icon.mercenary_certification_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36683" name="Broken Weapon Fragment" additionalName="" type="EtcItem">
+		<!-- Broken Weapon Fragment obtained after killing monsters at Raider's Crossroads. Take it to Flame Patrol Warrior Bruener at the entrance of Raider's Crossroads. -->
+		<set name="icon" val="icon.etc_sword_body_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36684" name="Mark of a Thief" additionalName="" type="EtcItem">
+		<!-- Mark of a Thief obtained after killing monsters at Raider's Crossroads. Take it to Flame Patrol Warrior Bruener at the entrance of Raider's Crossroads to receive a reward. -->
+		<set name="icon" val="icon.etc_r2_ring_piece" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36685" name="Reinforcements' Badge" additionalName="" type="EtcItem">
+		<!-- Reinforcements' Badge received from Flame Patrol Vice Captain Tuska. Take it to Flame Patrol Warrior Bruener at the entrance of Raider's Crossroads. -->
+		<set name="icon" val="icon.voucher_lev_97" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36686" name="Demon Heart" additionalName="" type="EtcItem">
+		<!-- Demon Heart obtained after killing a monster at Gainak. Take it to Flame Patrol Vice Captain Tuska near Gainak. -->
+		<set name="icon" val="Icon.etc_inf_ore_low_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36687" name="Embryo's Suspicious Fragment" additionalName="" type="EtcItem">
+		<!-- Suspicious Fragment obtained after killing monsters in the Plains of the Lizardmen. Take it to Investigator Laki in the Plains of the Lizardmen to receive a reward. -->
+		<set name="icon" val="icon.armor_t503_l_i00_piece" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36688" name="Fantasy Mushroom's Spore Sac" additionalName="" type="EtcItem">
+		<!-- Fantasy Mushroom's Spore obtained after collecting herbs in the Plains of the Lizardmen. Take it to Investigator Sally in the Plains of the Lizardmen to receive a reward. -->
+		<set name="icon" val="Icon.etc_pouch_violet_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36689" name="Sticky Mushroom's Spore Sac" additionalName="" type="EtcItem">
+		<!-- Sticky Mushroom Pouch obtained after collecting herbs in the Plains of the Lizardmen. Take it to Investigator Sally in the Plains of the Lizardmen to receive a reward. -->
+		<set name="icon" val="icon.etc_pouch_red_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36690" name="Vitality Leaf Pouch" additionalName="" type="EtcItem">
+		<!-- Vitality Leaf obtained after collecting herbs in the Plains of the Lizardmen. Take it to Investigator Sally in the Plains of the Lizardmen to receive a reward. -->
+		<set name="icon" val="icon.etc_leaf_green_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36691" name="Lizard Blood" additionalName="" type="EtcItem">
+		<!-- Vial of Tanta Blood obtained after killing monsters in the Plains of the Lizardmen. Take it to Researcher Ankumi at the Sel Mahum Training Grounds to receive a reward. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i10" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36692" name="Evidence of a Conspiracy" additionalName="" type="EtcItem">
+		<!-- Evidence of a Conspiracy obtained after killing monsters at the Sel Mahum Training Grounds. Take it to Investigator Roa at the Sel Mahum Training Grounds to receive a reward. -->
+		<set name="icon" val="icon.etc_fire_rune_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36693" name="Sel Mahum Signet" additionalName="" type="EtcItem">
+		<!-- Sel Mahum ID Tag obtained after killing monsters at the Sel Mahum Training Grounds. Take it to Investigator Roa at the Sel Mahum Training Grounds to receive a reward. -->
+		<set name="icon" val="icon.etc_parasite_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36694" name="Mark of Glory" additionalName="" type="EtcItem">
+		<!-- Mark obtained at the siege of dimension. 14-day. -->
+		<set name="icon" val="icon.low_energy_condense_i00" />
+	</item>
+	<item id="36695" name="Mark of Chaos" additionalName="" type="EtcItem">
+		<!-- Mark obtained at the siege of dimension. -->
+		<set name="icon" val="icon.low_energy_condense_i01" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36696" name="Faint Soul of Light" additionalName="" type="EtcItem">
+		<!-- Faint Soul of Light obtained after killing monsters in the Land of Chaos. Take it to Investigator Quincy in the Land of Chaos to receive a reward. -->
+		<set name="icon" val="icon.etc_freezing_core_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36697" name="Precious Blood Stone" additionalName="" type="EtcItem">
+		<!-- Precious Blood Stone obtained after killing monsters in the Plains of the Lizardmen. Take it to Researcher Ankumi at the Sel Mahum Training Grounds to receive a reward. -->
+		<set name="icon" val="icon.drake_wing_lure_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36698" name="Elite Mahum ID Tag" additionalName="" type="EtcItem">
+		<!-- Elite Mahum ID Tag obtained after killing monsters at the Sel Mahum Training Grounds. Take it to Investigator Roa at the Sel Mahum Training Grounds to receive a reward. -->
+		<set name="icon" val="icon.etc_badge_gold_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36699" name="Nerva's Icon" additionalName="" type="EtcItem">
+		<!-- Nerva's Icon obtained after killing monsters at Raider's Crossroads. Take it to Flame Patrol Warrior Bruener at the entrance of Raider's Crossroads to receive a reward. -->
+		<set name="icon" val="icon.etc_barka_badge_officer_i02" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

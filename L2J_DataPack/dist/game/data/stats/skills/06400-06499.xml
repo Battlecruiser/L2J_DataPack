@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="6400" levels="1" name="Cokrakon Dwindling Velocity">
+	<skill id="6400" levels="1" name="Kokracon Dwindling Velocity">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="CASTING_TIME_UP" />
@@ -24,7 +24,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6401" levels="1" name="Cokrakon Wheeling Clow">
+	<skill id="6401" levels="1" name="Kokracon Wheeling Clow">
 		<set name="affectRange" val="150" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="500" />
@@ -451,7 +451,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="6420" levels="1" name="Lizard Strike">
+	<skill id="6420" levels="1" name="Lizard Blow">
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
@@ -466,7 +466,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="6421" levels="1" name="Rage of Soldier">
+	<skill id="6421" levels="1" name="Warrior's Rage">
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
@@ -495,7 +495,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="6423" levels="1" name="Shock">
+	<skill id="6423" levels="1" name="Stun">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
@@ -588,7 +588,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="6428" levels="1" name="Hold">
+	<skill id="6428" levels="1" name="Restore HP">
 		<!-- Confirmed CT2.5 -->
 		<!-- Sticky Mushroom Skill -->
 		<set name="abnormalLvl" val="1" />
@@ -808,7 +808,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6437" levels="7" name="Area of Freezing Core">
+	<skill id="6437" levels="7" name="Freezing Core Area">
 		<table name="#dot"> 30 60 90 150 250 350 500 </table>
 		<set name="abnormalLvl" val="10" />
 		<set name="abnormalTime" val="15" />
@@ -879,7 +879,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6440" levels="1" name="Energy of Strong">
+	<skill id="6440" levels="1" name="Energy of Strength">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SIGNAL_E" />
@@ -909,7 +909,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6441" levels="1" name="Energy of Agile">
+	<skill id="6441" levels="1" name="Energy of Agility">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SIGNAL_E" />
@@ -939,7 +939,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6442" levels="1" name="Efficacy of Wisdom">
+	<skill id="6442" levels="1" name="Energy of Wisdom">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SIGNAL_E" />
@@ -959,7 +959,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6443" levels="1" name="Efficacy of Strength">
+	<skill id="6443" levels="1" name="Energy of Strength">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SIGNAL_E" />
@@ -980,7 +980,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6444" levels="1" name="Efficacy of Agility">
+	<skill id="6444" levels="1" name="Energy of Agility">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SIGNAL_E" />
@@ -1251,7 +1251,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6470" levels="1" name="1 win">
+	<skill id="6470" levels="1" name="First Win">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1260,7 +1260,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6471" levels="1" name="2 win">
+	<skill id="6471" levels="1" name="2nd Consecutive Win">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1269,7 +1269,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6472" levels="1" name="3 win">
+	<skill id="6472" levels="1" name="3rd Consecutive Win">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1278,7 +1278,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6473" levels="1" name="4 win">
+	<skill id="6473" levels="1" name="4th Consecutive Win">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1287,7 +1287,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6474" levels="1" name="5 win">
+	<skill id="6474" levels="1" name="5th Consecutive Win">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1296,7 +1296,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6475" levels="1" name="6 win">
+	<skill id="6475" levels="1" name="6th Consecutive Win">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1305,7 +1305,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6476" levels="1" name="7 win">
+	<skill id="6476" levels="1" name="7th Consecutive Win">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1314,7 +1314,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6477" levels="1" name="8 win">
+	<skill id="6477" levels="1" name="8th Consecutive Win">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1323,7 +1323,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6478" levels="1" name="9 win">
+	<skill id="6478" levels="1" name="9th Consecutive Win">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1332,7 +1332,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6479" levels="1" name="10 win">
+	<skill id="6479" levels="1" name="10th Consecutive Win">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1341,7 +1341,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6480" levels="1" name="11 win">
+	<skill id="6480" levels="1" name="11th Consecutive Win">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1350,7 +1350,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6481" levels="1" name="12 win">
+	<skill id="6481" levels="1" name="12th Consecutive Win">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1359,7 +1359,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6482" levels="1" name="13 win">
+	<skill id="6482" levels="1" name="13th Consecutive Win">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1368,7 +1368,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6483" levels="1" name="14 win">
+	<skill id="6483" levels="1" name="14th Consecutive Win">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1377,7 +1377,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6484" levels="1" name="15 win">
+	<skill id="6484" levels="1" name="15th Consecutive Win">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1386,7 +1386,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6485" levels="1" name="16 win">
+	<skill id="6485" levels="1" name="16th Consecutive Win">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1395,7 +1395,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6486" levels="1" name="17 win">
+	<skill id="6486" levels="1" name="17th Consecutive Win">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1404,7 +1404,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6487" levels="1" name="18 win">
+	<skill id="6487" levels="1" name="18th Consecutive Win">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1413,7 +1413,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6488" levels="1" name="19 win">
+	<skill id="6488" levels="1" name="19th Consecutive Win">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1422,7 +1422,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6489" levels="1" name="20 win">
+	<skill id="6489" levels="1" name="20th Consecutive Win">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1449,7 +1449,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6492" levels="28" name="NPC holy attack">
+	<skill id="6492" levels="28" name="Holy Attack">
 		<table name="#effectPoints"> -138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709 </table>
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -1467,7 +1467,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6494" levels="28" name="NPC holy attack">
+	<skill id="6494" levels="28" name="Holy Attack">
 		<table name="#effectPoints"> -138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709 </table>
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -1476,7 +1476,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6495" levels="28" name="NPC holy attack">
+	<skill id="6495" levels="28" name="Holy Attack">
 		<table name="#effectPoints"> -138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709 </table>
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -1485,7 +1485,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6496" levels="28" name="NPC holy attack">
+	<skill id="6496" levels="28" name="Holy Attack">
 		<table name="#effectPoints"> -138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709 </table>
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -1494,7 +1494,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6497" levels="28" name="NPC holy attack">
+	<skill id="6497" levels="28" name="Holy Attack">
 		<table name="#effectPoints"> -138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709 </table>
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -1503,7 +1503,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6498" levels="28" name="NPC holy shot">
+	<skill id="6498" levels="28" name="Holy Shot">
 		<table name="#effectPoints"> -138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709 </table>
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -1512,7 +1512,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6499" levels="28" name="NPC holy shot">
+	<skill id="6499" levels="28" name="Holy Shot">
 		<table name="#effectPoints"> -138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709 </table>
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="#effectPoints" />

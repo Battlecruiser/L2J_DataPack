@@ -44,7 +44,7 @@ public final class PlainsOfDion extends AbstractNpcAI
 	private static final NpcStringId[] MONSTERS_MSG =
 	{
 		NpcStringId.S1_HOW_DARE_YOU_INTERRUPT_OUR_FIGHT_HEY_GUYS_HELP,
-		NpcStringId.S1_HEY_WERE_HAVING_A_DUEL_HERE,
+		NpcStringId.S1_HEY_WE_RE_HAVING_A_DUEL_HERE,
 		NpcStringId.THE_DUEL_IS_OVER_ATTACK,
 		NpcStringId.FOUL_KILL_THE_COWARD,
 		NpcStringId.HOW_DARE_YOU_INTERRUPT_A_SACRED_DUEL_YOU_MUST_BE_TAUGHT_A_LESSON

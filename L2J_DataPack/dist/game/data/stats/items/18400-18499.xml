@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="18400" name="Special Talisman (R95-grade) - MP Recovery (Passive)" additionalName="" type="Armor">
+		<!-- MP Recovery amount + 0.70 when equipped. -->
+		<set name="icon" val="icon.r85_sp_talisman_mp_rg_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18401" name="Special Talisman (R99-grade) - MP Recovery (Passive)" additionalName="" type="Armor">
+		<!-- MP Recovery amount + 0.72 when equipped. -->
+		<set name="icon" val="icon.r85_sp_talisman_mp_rg_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18402" name="Special Talisman (R-grade) - Decrease MP Consumption (Passive)" additionalName="" type="Armor">
+		<!-- When equipped, MP consumption -15% for physical and magic skills. -->
+		<set name="icon" val="icon.r_sp_talisman_mp_rd_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18403" name="Special Talisman (R85-grade) - Enhance Heal (Passive)" additionalName="" type="Armor">
+		<!-- HP Recovery magic + 75 when equipped. -->
+		<set name="icon" val="icon.r85_sp_talisman_hl_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18404" name="Special Talisman (R90-grade) - Enhance Heal (Passive)" additionalName="" type="Armor">
+		<!-- HP Recovery magic + 82 when equipped. -->
+		<set name="icon" val="icon.r85_sp_talisman_hl_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18405" name="Special Talisman (R95-grade) - Enhance Heal (Passive)" additionalName="" type="Armor">
+		<!-- HP Recovery magic + 90 when equipped. -->
+		<set name="icon" val="icon.r85_sp_talisman_hl_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18406" name="Special Talisman (R99-grade) - Enhance Heal (Passive)" additionalName="" type="Armor">
+		<!-- HP Recovery magic + 96 when equipped. -->
+		<set name="icon" val="icon.r85_sp_talisman_hl_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18407" name="Special Talisman (R85-grade) - Enhance Heal (Active)" additionalName="" type="Armor">
+		<!-- HP Recovery magic + 225 when used. -->
+		<set name="icon" val="icon.r85_sp_talisman_hl_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18408" name="Special Talisman (R90-grade) - Enhance Heal (Active)" additionalName="" type="Armor">
+		<!-- HP Recovery magic + 246 when used. -->
+		<set name="icon" val="icon.r85_sp_talisman_hl_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18409" name="Special Talisman (R95-grade) - Enhance Heal (Active)" additionalName="" type="Armor">
+		<!-- HP Recovery magic + 270 when used. -->
+		<set name="icon" val="icon.r85_sp_talisman_hl_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18410" name="Special Talisman (R99-grade) - Enhance Heal (Active)" additionalName="" type="Armor">
+		<!-- HP Recovery magic + 288 when used. -->
+		<set name="icon" val="icon.r85_sp_talisman_hl_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18411" name="Talisman (R85-grade) - P. Atk. (Passive)" additionalName="" type="Armor">
+		<!-- P. Atk. + 37 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_pa_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18412" name="Talisman (R90-grade) - P. Atk. (Passive)" additionalName="" type="Armor">
+		<!-- P. Atk. + 43 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_pa_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18413" name="Talisman (R95-grade) - P. Atk. (Passive)" additionalName="" type="Armor">
+		<!-- P. Atk. + 52 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_pa_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18414" name="Talisman (R99-grade) - P. Atk. (Passive)" additionalName="" type="Armor">
+		<!-- P. Atk. + 60 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_pa_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18415" name="Talisman (R85-grade) - P. Def. (Passive)" additionalName="" type="Armor">
+		<!-- P. Def. + 38 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_pd_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18416" name="Talisman (R90-grade) - P. Def. (Passive)" additionalName="" type="Armor">
+		<!-- P. Def. + 43 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_pd_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18417" name="Talisman (R95-grade) - P. Def. (Passive)" additionalName="" type="Armor">
+		<!-- P. Def. + 49 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_pd_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18418" name="Talisman (R99-grade) - P. Def. (Passive)" additionalName="" type="Armor">
+		<!-- P. Def. + 54 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_pd_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18419" name="Talisman (R85-grade) - M. Atk. (Passive)" additionalName="" type="Armor">
+		<!-- M. Atk. + 37 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_ma_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18420" name="Talisman (R90-grade) - M. Atk. (Passive)" additionalName="" type="Armor">
+		<!-- M. Atk. + 46 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_ma_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18421" name="Talisman (R95-grade) - M. Atk. (Passive)" additionalName="" type="Armor">
+		<!-- M. Atk. + 56 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_ma_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18422" name="Talisman (R99-grade) - M. Atk. (Passive)" additionalName="" type="Armor">
+		<!-- M. Atk. + 66 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_ma_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18423" name="Talisman (R85-grade) - M. Def. (Passive)" additionalName="" type="Armor">
+		<!-- M. Def. + 21 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_md_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18424" name="Talisman (R90-grade) - M. Def. (Passive)" additionalName="" type="Armor">
+		<!-- M. Def. + 24 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_md_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18425" name="Talisman (R95-grade) - M. Def. (Passive)" additionalName="" type="Armor">
+		<!-- M. Def. + 28 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_md_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18426" name="Talisman (R99-grade) - M. Def. (Passive)" additionalName="" type="Armor">
+		<!-- M. Def. + 32 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_md_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18427" name="Talisman (R85-grade) - HP (Passive)" additionalName="" type="Armor">
+		<!-- HP + 219 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_hp_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18428" name="Talisman (R90-grade) - HP (Passive)" additionalName="" type="Armor">
+		<!-- HP + 246 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_hp_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18429" name="Talisman (R95-grade) - HP (Passive)" additionalName="" type="Armor">
+		<!-- HP + 277 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_hp_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18430" name="Talisman (R99-grade) - HP (Passive)" additionalName="" type="Armor">
+		<!-- HP + 305 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_hp_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18431" name="Talisman (R85-grade) - MP (Passive)" additionalName="" type="Armor">
+		<!-- MP + 109 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_mp_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18432" name="Talisman (R90-grade) - MP (Passive)" additionalName="" type="Armor">
+		<!-- MP + 119 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_mp_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18433" name="Talisman (R95-grade) - MP (Passive)" additionalName="" type="Armor">
+		<!-- MP + 130 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_mp_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18434" name="Talisman (R99-grade) - MP (Passive)" additionalName="" type="Armor">
+		<!-- MP + 139 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_mp_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18435" name="Talisman (R85-grade) - CP (Passive)" additionalName="" type="Armor">
+		<!-- CP + 99 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_cp_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18436" name="Talisman (R90-grade) - CP (Passive)" additionalName="" type="Armor">
+		<!-- CP + 108 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_cp_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18437" name="Talisman (R95-grade) - CP (Passive)" additionalName="" type="Armor">
+		<!-- CP + 116 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_cp_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18438" name="Talisman (R99-grade) - CP (Passive)" additionalName="" type="Armor">
+		<!-- CP + 124 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_cp_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18439" name="Talisman (R85-grade) - Critical Damage (Passive)" additionalName="" type="Armor">
+		<!-- Critical + 135 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18440" name="Talisman (R90-grade) - Critical Damage (Passive)" additionalName="" type="Armor">
+		<!-- Critical + 142 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18441" name="Talisman (R95-grade) - Critical Damage (Passive)" additionalName="" type="Armor">
+		<!-- Critical + 149 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18442" name="Talisman (R99-grade) - Critical Damage (Passive)" additionalName="" type="Armor">
+		<!-- Critical + 155 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18443" name="Talisman (R85-grade) - Decrease Critical (Passive)" additionalName="" type="Armor">
+		<!-- When receiving Critical Attacks, -135 received damage amount when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_ca_down_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18444" name="Talisman (R90-grade) - Decrease Critical (Passive)" additionalName="" type="Armor">
+		<!-- When receiving Critical Attacks, -142 received damage amount when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_ca_down_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18445" name="Talisman (R95-grade) - Decrease Critical (Passive)" additionalName="" type="Armor">
+		<!-- When receiving Critical Attacks, -149 received damage amount when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_ca_down_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18446" name="Talisman (R99-grade) - Decrease Critical (Passive)" additionalName="" type="Armor">
+		<!-- When receiving Critical Attacks, -155 received damage amount when equipped. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_ca_down_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18447" name="Talisman (R-grade) - M. Critical (Passive)" additionalName="" type="Armor">
+		<!-- M. Critical Rate + 2% when equipped. Shadow item. -->
+		<set name="icon" val="icon.r_talisman_mc_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18448" name="Talisman (R-grade) - P. Accuracy (Passive)" additionalName="" type="Armor">
+		<!-- Accuracy + 2 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r_talisman_ph_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18449" name="Talisman (R-grade) - M. Accuracy (Passive)" additionalName="" type="Armor">
+		<!-- M. Accuracy + 2 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r_talisman_mh_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18450" name="Talisman (R-grade) - Evasion (Passive)" additionalName="" type="Armor">
+		<!-- Evasion + 2 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r_talisman_pm_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18451" name="Talisman (R-grade) - M. Evasion (Passive)" additionalName="" type="Armor">
+		<!-- M. Evasion + 2 when equipped. Shadow item. -->
+		<set name="icon" val="icon.r_talisman_mm_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18452" name="Talisman (R-grade) - P. Critical Rate (Passive)" additionalName="" type="Armor">
+		<!-- P. Critical Rate + 2% when equipped. Shadow item. -->
+		<set name="icon" val="icon.r_talisman_cr_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18453" name="Talisman (R-grade) - Critical Evasion (Passive)" additionalName="" type="Armor">
+		<!-- The rate of receiving a physical Critical Attacks is - 2% when equipped. Shadow item. -->
+		<set name="icon" val="icon.r_talisman_cm_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18454" name="Talisman (R85-grade) - P. Atk. (Active)" additionalName="" type="Armor">
+		<!-- P. Atk. + 111 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_pa_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18455" name="Talisman (R90-grade) - P. Atk. (Active)" additionalName="" type="Armor">
+		<!-- P. Atk. + 129 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_pa_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18456" name="Talisman (R95-grade) - P. Atk. (Active)" additionalName="" type="Armor">
+		<!-- P. Atk. + 156 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_pa_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18457" name="Talisman (R99-grade) - P. Atk. (Active)" additionalName="" type="Armor">
+		<!-- P. Atk. + 180 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_pa_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18458" name="Talisman (R85-grade) - P. Def. (Active)" additionalName="" type="Armor">
+		<!-- P. Def. + 114 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_pd_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18459" name="Talisman (R90-grade) - P. Def. (Active)" additionalName="" type="Armor">
+		<!-- P. Def. + 129 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_pd_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18460" name="Talisman (R95-grade) - P. Def. (Active)" additionalName="" type="Armor">
+		<!-- P. Def. + 147 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_pd_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18461" name="Talisman (R99-grade) - P. Def. (Active)" additionalName="" type="Armor">
+		<!-- P. Def. + 162 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_pd_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18462" name="Talisman (R85-grade) - M. Atk. (Active)" additionalName="" type="Armor">
+		<!-- M. Atk. + 111 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_ma_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18463" name="Talisman (R90-grade) - M. Atk. (Active)" additionalName="" type="Armor">
+		<!-- M. Atk. + 138 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_ma_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18464" name="Talisman (R95-grade) - M. Atk. (Active)" additionalName="" type="Armor">
+		<!-- M. Atk. + 168 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_ma_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18465" name="Talisman (R99-grade) - M. Atk. (Active)" additionalName="" type="Armor">
+		<!-- M. Atk. + 198 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_ma_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18466" name="Talisman (R85-grade) - M. Def. (Active)" additionalName="" type="Armor">
+		<!-- M. Def. + 63 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_md_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18467" name="Talisman (R90-grade) - M. Def. (Active)" additionalName="" type="Armor">
+		<!-- M. Def. + 72 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_md_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18468" name="Talisman (R95-grade) - M. Def. (Active)" additionalName="" type="Armor">
+		<!-- M. Def. + 84 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_md_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18469" name="Talisman (R99-grade) - M. Def. (Active)" additionalName="" type="Armor">
+		<!-- M. Def. + 96 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_md_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18470" name="Talisman (R85-grade) - HP (Active)" additionalName="" type="Armor">
+		<!-- HP + 657 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_hp_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18471" name="Talisman (R90-grade) - HP (Active)" additionalName="" type="Armor">
+		<!-- HP + 738 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_hp_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18472" name="Talisman (R95-grade) - HP (Active)" additionalName="" type="Armor">
+		<!-- HP + 831 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_hp_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18473" name="Talisman (R99-grade) - HP (Active)" additionalName="" type="Armor">
+		<!-- HP + 915 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_hp_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18474" name="Talisman (R85-grade) - MP (Active)" additionalName="" type="Armor">
+		<!-- MP + 327 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_mp_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18475" name="Talisman (R90-grade) - MP (Active)" additionalName="" type="Armor">
+		<!-- MP + 357 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_mp_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18476" name="Talisman (R95-grade) - MP (Active)" additionalName="" type="Armor">
+		<!-- MP + 390 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_mp_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18477" name="Talisman (R99-grade) - MP (Active)" additionalName="" type="Armor">
+		<!-- MP + 417 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_mp_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18478" name="Talisman (R85-grade) - CP (Active)" additionalName="" type="Armor">
+		<!-- CP + 297 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_cp_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18479" name="Talisman (R90-grade) - CP (Active)" additionalName="" type="Armor">
+		<!-- CP + 324 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_cp_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18480" name="Talisman (R95-grade) - CP (Active)" additionalName="" type="Armor">
+		<!-- CP + 390 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_cp_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18481" name="Talisman (R99-grade) - CP (Active)" additionalName="" type="Armor">
+		<!-- CP + 417 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_cp_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18482" name="Talisman (R85-grade) - Critical Damage (Active)" additionalName="" type="Armor">
+		<!-- Critical + 405 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_ca_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18483" name="Talisman (R90-grade) - Critical Damage (Active)" additionalName="" type="Armor">
+		<!-- Critical + 426 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_ca_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18484" name="Talisman (R95-grade) - Critical Damage (Active)" additionalName="" type="Armor">
+		<!-- Critical + 447 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_ca_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18485" name="Talisman (R99-grade) - Critical Damage (Active)" additionalName="" type="Armor">
+		<!-- Critical + 465 when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_ca_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18486" name="Talisman (R85-grade) - Critical P. Def. (Active)" additionalName="" type="Armor">
+		<!-- When receiving Critical Attacks, - 405 received damage amount when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_ca_down_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18487" name="Talisman (R90-grade) - Critical P. Def. (Active)" additionalName="" type="Armor">
+		<!-- When receiving Critical Attacks, - 426 received damage amount when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_ca_down_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18488" name="Talisman (R95-grade) - Critical P. Def. (Active)" additionalName="" type="Armor">
+		<!-- When receiving Critical Attacks, - 447 received damage amount when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_ca_down_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18489" name="Talisman (R99-grade) - Critical P. Def. (Active)" additionalName="" type="Armor">
+		<!-- When receiving Critical Attacks, - 465 received damage amount when used. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_ca_down_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18490" name="Talisman (R-grade) - M. Critical (Active)" additionalName="" type="Armor">
+		<!-- M. Critical Rate + 4% when used. Shadow item. -->
+		<set name="icon" val="icon.r_talisman_mc_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18491" name="Talisman (R-grade) - P. Accuracy (Active)" additionalName="" type="Armor">
+		<!-- Accuracy + 4 when used. Shadow item. -->
+		<set name="icon" val="icon.r_talisman_ph_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18492" name="Talisman (R-grade) - M. Accuracy (Active)" additionalName="" type="Armor">
+		<!-- M. Accuracy + 4 when used. Shadow item. -->
+		<set name="icon" val="icon.r_talisman_mh_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18493" name="Talisman (R-grade) - Evasion (Active)" additionalName="" type="Armor">
+		<!-- Evasion + 4 when used. Shadow item. -->
+		<set name="icon" val="icon.r_talisman_pm_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18494" name="Talisman (R-grade) - M. Evasion (Active)" additionalName="" type="Armor">
+		<!-- M. Evasion + 4 when used. Shadow item. -->
+		<set name="icon" val="icon.r_talisman_mm_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18495" name="Talisman (R-grade) - P. Critical Rate (Active)" additionalName="" type="Armor">
+		<!-- P. Critical Rate + 4% when used. Shadow item. -->
+		<set name="icon" val="icon.r_talisman_cr_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18496" name="Talisman (R-grade) - Critical Evasion (Active)" additionalName="" type="Armor">
+		<!-- The rate of receiving a physical Critical Attacks is - 4% when used. Shadow item. -->
+		<set name="icon" val="icon.r_talisman_cm_up_active" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18497" name="Special Talisman (R85-grade) - Shield Defense (Passive)" additionalName="" type="Armor">
+		<!-- Shield Defense + 414 when equipped. -->
+		<set name="icon" val="icon.r85_sp_talisman_sd_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18498" name="Special Talisman (R90-grade) - Shield Defense (Passive)" additionalName="" type="Armor">
+		<!-- Shield Defense + 457 when equipped. -->
+		<set name="icon" val="icon.r85_sp_talisman_sd_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="18499" name="Special Talisman (R95-grade) - Shield Defense (Passive)" additionalName="" type="Armor">
+		<!-- Shield Defense + 505 when equipped. -->
+		<set name="icon" val="icon.r85_sp_talisman_sd_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+</list>

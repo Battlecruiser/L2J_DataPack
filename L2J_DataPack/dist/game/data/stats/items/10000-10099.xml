@@ -25,6 +25,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2340-1" />
+		<set name="commissionItemType" val="POTION" />
 	</item>
 	<item id="10002" type="EtcItem" name="Holy Potion">
 		<set name="icon" val="icon.etc_holy_potion_i00" />
@@ -48,11 +49,11 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="915" />
+		<set name="crystal_count" val="122" />
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1500" />
-		<set name="price" val="495500" />
+		<set name="price" val="99100" />
 		<set name="change_weaponId" val="128" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -71,7 +72,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10004" type="Weapon" name="Dynasty Dual Sword">
+	<item id="10004" type="Weapon" name="Dynasty Dualsword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -80,7 +81,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
@@ -91,6 +92,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3411-1" />
 		<set name="item_skill" val="3552-1" />
+		<set name="commissionItemType" val="DUALSWORD" />
 		<for>
 			<set stat="pAtk" val="405" />
 			<set stat="mAtk" val="151" />
@@ -290,7 +292,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10011" type="Weapon" name="Shadow Item - War Axe">
+	<item id="10011" type="Weapon" name="Shadow Item: War Axe">
 		<set name="icon" val="icon.weapon_war_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -370,14 +372,13 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2400-1" />
 	</item>
-	<item id="10018" type="Armor" name="Agathion Seal Bracelet - Fortress">
+	<item id="10018" type="Armor" name="Agathion - Fortress">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
-		<set name="price" val="5000000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -388,17 +389,15 @@
 			<player fort="-1" />
 		</cond>
 	</item>
-	<item id="10019" type="Armor" name="Ring Mail Breastplate">
+	<item id="10019" type="Armor" name="Ring Breastplate">
 		<set name="icon" val="icon.armor_t12_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="151" />
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="8820" />
-		<set name="price" val="64210" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -415,11 +414,9 @@
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="94" />
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="3820" />
-		<set name="price" val="40100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -436,11 +433,9 @@
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="113" />
 		<set name="crystal_type" val="D" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="4700" />
-		<set name="price" val="48200" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -454,11 +449,9 @@
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
 		<set name="crystal_type" val="D" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1600" />
-		<set name="price" val="30100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -472,11 +465,9 @@
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="113" />
 		<set name="crystal_type" val="D" />
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="2090" />
-		<set name="price" val="48200" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -494,11 +485,9 @@
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
 		<set name="crystal_type" val="D" />
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="1020" />
-		<set name="price" val="30100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -814,7 +803,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10063" type="EtcItem" name="Battle Manual - Quiver of Bolts - Grade A">
+	<item id="10063" type="EtcItem" name="Battle Manual - Quiver of Bolts (A-grade)">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -822,7 +811,7 @@
 		<set name="price" val="8700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10064" type="EtcItem" name="Battle Manual - Quiver of Bolts - Grade S">
+	<item id="10064" type="EtcItem" name="Battle Manual - Quiver of Bolts (S-grade)">
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -878,7 +867,7 @@
 		<set name="price" val="800" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10071" type="EtcItem" name="Battle Manual - Quiver of Bolts - Grade B">
+	<item id="10071" type="EtcItem" name="Battle Manual - Quiver of Bolts (B-grade)">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -990,7 +979,7 @@
 		<set name="price" val="4800" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10085" type="EtcItem" name="Battle Manual - Surrender To Unholy">
+	<item id="10085" type="EtcItem" name="Battle Manual - Surrender to Dark">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1102,7 +1091,7 @@
 		<set name="price" val="6000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10099" type="EtcItem" name="Spellbook - Count of Fire">
+	<item id="10099" type="EtcItem" name="Spellbook: Count of Fire">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

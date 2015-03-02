@@ -234,10 +234,10 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1405" levels="4" name="Divine Inspiration">
-		<!-- Confirmed CT2.5 -->
-		<table name="#magicLvl"> 52 61 76 76 </table>
-		<table name="#slots"> 1 2 3 4 </table>
+	<skill id="1405" levels="6" name="Divine Inspiration">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<table name="#magicLvl"> 52 61 76 76 99 99 </table>
+		<table name="#slots"> 1 2 3 4 5 6 </table>
 		<set name="icon" val="icon.skill1405" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -268,7 +268,10 @@
 		<enchant1 name="mpConsume" val="116" />
 		<enchant1 name="mpInitialConsume" val="29" />
 		<cond>
-			<player canSummon="true" />
+		    <and>
+				<player canSummonServitor="true" />
+				<player hasFreeSummonPoints="0" />
+			</and>
 		</cond>
 		<for>
 			<effect name="Summon">
@@ -305,7 +308,10 @@
 		<enchant1 name="mpConsume" val="116" />
 		<enchant1 name="mpInitialConsume" val="29" />
 		<cond>
-			<player canSummon="true" />
+		    <and>
+				<player canSummonServitor="true" />
+				<player hasFreeSummonPoints="0" />
+			</and>
 		</cond>
 		<for>
 			<effect name="Summon">
@@ -344,7 +350,10 @@
 		<enchant1 name="mpConsume" val="116" />
 		<enchant1 name="mpInitialConsume" val="29" />
 		<cond>
-			<player canSummon="true" />
+		    <and>
+				<player canSummonServitor="true" />
+				<player hasFreeSummonPoints="0" />
+			</and>
 		</cond>
 		<for>
 			<effect name="Summon">
@@ -837,7 +846,7 @@
 			<effect name="MagicalAttack" />
 		</channelingEffects>
 	</skill>
-	<skill id="1424" levels="1" name="Anti-Summoning Field">
+	<skill id="1424" levels="1" name="Anti-summoning Field">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="5000" />
@@ -950,7 +959,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1429" levels="1" name="Gate Chant">
+	<skill id="1429" levels="1" name="Chant of Gate">
 		<!-- Confirmed CT2.5 -->
 		<set name="effectPoint" val="467" />
 		<set name="hitTime" val="15000" />
@@ -1428,7 +1437,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1442" levels="3" name="Protection from Darkness" enchantGroup1="1" enchantGroup2="1">
+	<skill id="1442" levels="3" name="Darkness Protection" enchantGroup1="1" enchantGroup2="1">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#effectPoints"> 549 611 655 </table>
@@ -1582,7 +1591,7 @@
 			</effect>
 		</enchant3for>
 	</skill>
-	<skill id="1445" levels="18" name="Surrender to the Unholy" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1445" levels="18" name="Surrender to Dark" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 3 3 3 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 </table>
 		<table name="#castRange"> 750 750 750 900 900 900 900 900 900 900 900 900 900 900 900 900 900 900 </table>
@@ -2072,18 +2081,22 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1457" levels="1" name="Empowering Echo" enchantGroup1="5" enchantGroup2="5">
+	<skill id="1457" levels="2" name="Empowering Echo" enchantGroup1="5" enchantGroup2="5">
+		<table name="#abnormalTime"> 1200 1800 </table>
 		<table name="#ench1AbnormalTimes"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 </table>
 		<table name="#ench2mpConsume"> 140 135 130 125 120 115 110 106 101 96 91 86 81 76 72 </table>
+		<table name="#mpConsume"> 116 58 </table>
+		<table name="#mpInitialConsume"> 29 14 </table>
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="1200" />
+		<set name="abnormalTime" val="#abnormalTime" />
 		<set name="abnormalType" val="MA_UP_SPECIAL" />
 		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill1457" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="79" />
-		<set name="mpConsume" val="145" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="15000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
@@ -2231,8 +2244,11 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1462" levels="1" name="Seal of Blockade" enchantGroup1="6" enchantGroup2="6">
-		<!-- Confirmed CT2.5 -->
+	<skill id="1462" levels="7" name="Seal of Blockade" enchantGroup1="6" enchantGroup2="6">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<table name="#magicLvl"> 79 81 83 85 90 95 99 </table>
+		<table name="#mpConsume"> 80 104 136 202 222 245 266 </table>
+		<table name="#mpInitialConsume"> 20 26 34 50 56 61 68 </table>
 		<table name="#ench1ActivateRates"> 82 83 84 86 87 88 90 91 92 94 95 96 97 99 100 </table>
 		<table name="#ench2MpConsume"> 84 81 78 75 72 69 66 63 61 58 55 52 49 46 43 </table>
 		<table name="#ench2MpInitialConsume"> 21 20 19 18 18 17 16 15 15 14 13 13 12 11 10  </table>
@@ -2244,8 +2260,10 @@
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="200" />
 		<set name="basicProperty" val="MEN" />
+		<set name="coolTime" val="500" />
+		<set name="castRange" val="900" />
 		<set name="effectPoint" val="-673" />
-		<set name="hitTime" val="4000" />
+		<set name="hitTime" val="2200" />
 		<set name="icon" val="icon.skill1462" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -2255,7 +2273,7 @@
 		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="80" />
-		<set name="reuseDelay" val="75000" />
+		<set name="reuseDelay" val="120000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="PHYSICAL_BLOCKADE" />
@@ -2520,7 +2538,8 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="1471" levels="1" name="Death Beam">
+	<skill id="1471" levels="2" name="Death Beam">
+		<!-- TODO: Auto level parse, Requires manual update -->
 		<!-- Confirmed CT2.5 -->
 		<!-- Kamael Final Form Skill -->
 		<set name="affectLimit" val="5-12" />
@@ -3233,7 +3252,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="1489" levels="1" name="Summoner Ability - Resist Attribute">
+	<skill id="1489" levels="1" name="Summoner Ability: Attribute Resistance">
 		<!-- CT2.5 retail confirmed -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill0433" />
@@ -3249,7 +3268,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1490" levels="1" name="Healer Ability - Heal">
+	<skill id="1490" levels="1" name="Healer Ability: Heal">
 		<!-- Confirmed CT2.5 -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill1011" />
@@ -3266,7 +3285,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1491" levels="1" name="Summoner Ability - Spirit">
+	<skill id="1491" levels="1" name="Summoner Ability: Spirit">
 		<!-- Confirmed CT2.5 -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill1349" />
@@ -3456,7 +3475,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1499" levels="1" name="Improved Combat">
+	<skill id="1499" levels="1" name="Improve Combat">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="2400" />

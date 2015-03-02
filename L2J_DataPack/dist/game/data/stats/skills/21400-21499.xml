@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="21400" levels="1" name="Mysterious Lindvior Defense Dye">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Def. and M. Def. + 20% when fighting Lindvior. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_hena_boss_lindvior" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21401" levels="1" name="Mysterious Buff Boost Dye - Noblesse Blessing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Buffs and Debuffs are retained at death. But, the Noblesse Blessing and theLucky Charm disappear. Consumes 5 Spirit Ores. -->
+		<set name="icon" val="icon.skill1323" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="69" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="21402" levels="1" name="Mysterious Human Dye - Unbind">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Removes all debuffs and becomes invincible to debuffs for 10 seconds. -->
+		<set name="icon" val="icon.skill1904" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="200" />
+		<set name="reuseDelay" val="600000" />
+	</skill>
+	<skill id="21403" levels="1" name="Mysterious Elf Dye - Prevision">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 15 seconds, P./ M. Evasion + 90 and Speed + 50. -->
+		<set name="icon" val="icon.skill1907" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="200" />
+		<set name="reuseDelay" val="600000" />
+	</skill>
+	<skill id="21404" levels="1" name="Mysterious Dark Elf Dye - Disparition">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Cancels all debuffs and renders you immune to targeting for 5 seconds. -->
+		<set name="icon" val="icon.skill1912" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="200" />
+		<set name="reuseDelay" val="600000" />
+	</skill>
+	<skill id="21405" levels="1" name="Mysterious Orc Dye - Savage">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 sec., P. Atk. + 10%, M. Atk. + 20%, Atk. Spd. + 10%, Casting Spd. + 10%., and P./M. Def. - 10%. -->
+		<set name="icon" val="icon.skill1914" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="200" />
+		<set name="reuseDelay" val="600000" />
+	</skill>
+	<skill id="21406" levels="1" name="Mysterious Dwarf Dye - Endurance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 5 sec., reflects 50% of received damage and recovers 460 HP per second. -->
+		<set name="icon" val="icon.skill1920" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="200" />
+		<set name="reuseDelay" val="600000" />
+	</skill>
+	<skill id="21407" levels="1" name="Mysterious Kamael Dye - Soul Protection">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 sec., blocks Debuff attacks 3 times. -->
+		<set name="icon" val="icon.skill1925" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="200" />
+		<set name="reuseDelay" val="600000" />
+	</skill>
+	<skill id="21408" levels="1" name="Mysterious Dye Cancellation">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21409" levels="1" name="Release Agathion's Seal - Three-headed Dragon">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Removes the Agathion's seal. -->
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="3000" />
+	</skill>
+	<skill id="21410" levels="1" name="Cloak of the Chosen: Blessed Escape">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can use Blessed Escape every hour. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="200" />
+	</skill>
+	<skill id="21411" levels="1" name="Halloween Outfit Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21412" levels="1" name="Halloween Weapon Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21413" levels="1" name="Mysterious Halloween Potion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Mysterious potion that changes the appearance into that of a Halloween weapon and outfit for 1 hour. -->
+		<set name="icon" val="icon.etc_whiteday_herb" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isMagic" val="4" />
+	</skill>
+	<skill id="21414" levels="1" name="Halloween: Outfit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases Damage by 3%, LUC +1, and all Attribute Resistance + 10. -->
+		<set name="icon" val="icon.ev_wp_halloween" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21415" levels="1" name="Halloween: Weapon">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Damage by 3%, LUC +1, and Attack Attribute + 30. -->
+		<set name="icon" val="icon.ev_wp_halloween" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21416" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Debuff Reflect + 3%. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21417" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Debuff Reflect + 5%. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21418" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Debuff Reflect + 10%. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21419" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Damage Reflect Resistance + 5. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21420" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Damage Reflect Resistance + 7. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21421" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Damage Reflect Resistance + 15. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21422" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Bow/Crossbow Resistance + 3%. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21423" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Bow/Crossbow Resistance + 5%. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21424" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Bow/Crossbow Resistance + 10%. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21425" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Visual Def. + 3%. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21426" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Visual Def. + 5%. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21427" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Visual Def. + 10%. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21428" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- M. Def. + 3%. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21429" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- M. Def. + 5%. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21430" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- M. Def. + 10%. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21431" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attribute Resistance + 5. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21432" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attribute Resistance + 7. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21433" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attribute Resistance + 15. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21434" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Received Heal Amount + 3%. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21435" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Received Heal Amount + 7%. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21436" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Received Heal Amount + 15%. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21437" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max. HP + 3%. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21438" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max. HP + 7%. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21439" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max. HP + 15%. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21440" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max. MP + 3%. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21441" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max. MP + 5%. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21442" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max. MP + 10%. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21443" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max. CP + 3%. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21444" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max. CP + 7%. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21445" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max. CP + 15%. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21446" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max. Speed + 3. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21447" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max. Speed + 7. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21448" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max. Speed + 15. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21449" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- HP Recovery Bonus + 5. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21450" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- HP Recovery Bonus + 8. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21451" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- HP Recovery Bonus + 16. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21452" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- MP Recovery Bonus + 3. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21453" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- MP Recovery Bonus + 4. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21454" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- MP Recovery Bonus + 8. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21455" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P./M. Evasion + 3. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21456" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P./M. Evasion + 4. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21457" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P./M. Evasion + 8. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21458" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Low-grade / Option 15. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21459" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Mid-grade / Option 15. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21460" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- High-grade / Option 15. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21461" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Low-grade / Option 16. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21462" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Mid-grade / Option 16. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21463" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- High-grade / Option 16. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21464" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Low-grade / Option 17. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21465" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Mid-grade / Option 17. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21466" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- High-grade / Option 17. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21467" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Low-grade / Option 18. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21468" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Mid-grade / Option 18. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21469" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- High-grade / Option 18. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21470" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Low-grade / Option 19. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21471" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Mid-grade / Option 19. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21472" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- High-grade / Option 19. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21473" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Low-grade / Option 20. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21474" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Mid-grade / Option 20. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21475" levels="1" name="Visual Enchant Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- High-grade / Option 20. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="21476" levels="1" name="Cloak of the Chosen">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR/DEX/CON/INT/WIT/MEN +2. Received damage during PvP - 5%. -->
+		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+</list>

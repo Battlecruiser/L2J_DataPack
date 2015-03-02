@@ -230,7 +230,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="909" levels="6" name="Ice Focus">
+	<skill id="909" levels="6" name="Ice Fog">
 		<table name="#effectPoints"> -338 -340 -341 -342 -344 -345 </table>
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#pvePower"> 348 351 355 358 361 364 </table>
@@ -336,7 +336,10 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond>
-			<player canSummon="true" />
+		    <and>
+				<player canSummonServitor="true" />
+				<player hasFreeSummonPoints="0" />
+			</and>
 		</cond>
 		<for>
 			<effect name="Summon">
@@ -470,7 +473,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="918" levels="1" name="Maximum Focus Force">
+	<skill id="918" levels="1" name="Maximum Force Focus">
 		<!-- Confirmed CT2.5 -->
 		<set name="effectPoint" val="150" />
 		<set name="hitTime" val="900" />
@@ -494,7 +497,7 @@
 			<effect name="FocusMaxEnergy" />
 		</for>
 	</skill>
-	<skill id="919" levels="1" name="Maximum Focus Sonic">
+	<skill id="919" levels="1" name="Maximum Sonic Focus">
 		<!-- Confirmed CT2.5 -->
 		<set name="effectPoint" val="150" />
 		<set name="hitTime" val="900" />
@@ -774,7 +777,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="930" levels="1" name="Spirit of the Demon">
+	<skill id="930" levels="1" name="Spirit of the Phantom">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -957,7 +960,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="938" levels="47" name="Top Elite Mercenary">
+	<skill id="938" levels="47" name="Exalted Mercenary">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 </table>
 		<table name="#mAtk"> 781.79 795.09 807.93 820.3 832.2 843.63 854.57 865.04 875.02 884.53 893.55 902.11 910.2 917.84 925.02 931.77 938.09 944.01 949.54 954.69 959.49 963.96 968.14 972.03 975.68 979.11 982.36 985.46 988.45 991.36 994.23 997.11 1000.04 1003.06 1006.22 1009.55 1009.99 1005.7 996.25 976.81 955.21 1002.97 1053.12 1105.77 1161.06 1224.92 0.0 </table>
@@ -1908,7 +1911,7 @@
 			<effect name="GetAgro" />
 		</for>
 	</skill>
-	<skill id="980" levels="6" name="Hate Aura">
+	<skill id="980" levels="6" name="Aggression Aura">
 		<!-- Confirmed CT2.5 -->
 		<table name="#effectPoints"> -7427 -8137 -8851 -9570 -10292 -11018 </table>
 		<table name="#magicLvl"> 80 81 82 83 84 85 </table>
@@ -2161,7 +2164,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="990" levels="1" name="Death Shot">
+	<skill id="990" levels="1" name="Death Sting">
 		<!-- High Five Skill -->
 		<set name="baseCritRate" val="15" /> <!-- FIXME: value unconfirmed -->
 		<set name="castRange" val="900" />

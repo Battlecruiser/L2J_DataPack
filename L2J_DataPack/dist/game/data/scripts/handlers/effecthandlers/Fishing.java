@@ -96,7 +96,7 @@ public final class Fishing extends AbstractEffect
 				player.endFishing(false);
 			}
 			
-			player.sendPacket(SystemMessageId.FISHING_ATTEMPT_CANCELLED);
+			player.sendPacket(SystemMessageId.YOUR_ATTEMPT_AT_FISHING_HAS_BEEN_CANCELLED);
 			return;
 		}
 		
@@ -104,7 +104,7 @@ public final class Fishing extends AbstractEffect
 		L2Weapon equipedWeapon = player.getActiveWeaponItem();
 		if (((equipedWeapon == null) || (equipedWeapon.getItemType() != WeaponType.FISHINGROD)))
 		{
-			player.sendPacket(SystemMessageId.FISHING_POLE_NOT_EQUIPPED);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_FISHING_POLE_EQUIPPED);
 			return;
 		}
 		
@@ -112,7 +112,7 @@ public final class Fishing extends AbstractEffect
 		L2ItemInstance equipedLeftHand = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
 		if ((equipedLeftHand == null) || (equipedLeftHand.getItemType() != EtcItemType.LURE))
 		{
-			player.sendPacket(SystemMessageId.BAIT_ON_HOOK_BEFORE_FISHING);
+			player.sendPacket(SystemMessageId.YOU_MUST_PUT_BAIT_ON_YOUR_HOOK_BEFORE_YOU_CAN_FISH);
 			return;
 		}
 		
@@ -120,19 +120,19 @@ public final class Fishing extends AbstractEffect
 		{
 			if (player.isInBoat())
 			{
-				player.sendPacket(SystemMessageId.CANNOT_FISH_ON_BOAT);
+				player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHEN_TRANSFORMED_OR_WHILE_RIDING_AS_A_PASSENGER_OF_A_BOAT_IT_S_AGAINST_THE_RULES);
 				return;
 			}
 			
 			if (player.isInCraftMode() || player.isInStoreMode())
 			{
-				player.sendPacket(SystemMessageId.CANNOT_FISH_WHILE_USING_RECIPE_BOOK);
+				player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHILE_USING_A_RECIPE_BOOK_PRIVATE_WORKSHOP_OR_PRIVATE_STORE);
 				return;
 			}
 			
 			if (player.isInsideZone(ZoneId.WATER))
 			{
-				player.sendPacket(SystemMessageId.CANNOT_FISH_UNDER_WATER);
+				player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHILE_UNDER_WATER);
 				return;
 			}
 		}
@@ -209,7 +209,7 @@ public final class Fishing extends AbstractEffect
 				}
 				else
 				{
-					player.sendPacket(SystemMessageId.CANNOT_FISH_HERE);
+					player.sendPacket(SystemMessageId.YOU_CAN_T_FISH_HERE);
 					return;
 				}
 			}
@@ -217,7 +217,7 @@ public final class Fishing extends AbstractEffect
 		
 		if (!player.destroyItem("Fishing", equipedLeftHand, 1, null, false))
 		{
-			player.sendPacket(SystemMessageId.NOT_ENOUGH_BAIT);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_BAIT);
 			return;
 		}
 		

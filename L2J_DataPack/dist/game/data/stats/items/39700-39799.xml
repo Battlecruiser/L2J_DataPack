@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="39700" name="Little Angel Wings" additionalName="LUC" type="Armor">
+		<!-- LUC + 3. -->
+		<set name="icon" val="icon.accessory_hair_ring_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="price" val="50000" />
+	</item>
+	<item id="39701" name="Little Angel Wings" additionalName="CHA" type="Armor">
+		<!-- CHA + 3. -->
+		<set name="icon" val="icon.accessory_hair_ring_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="price" val="50000" />
+	</item>
+	<item id="39702" name="Fairy Antennae" additionalName="LUC" type="Armor">
+		<!-- LUC + 3. -->
+		<set name="icon" val="icon.accessory_hair_feeler_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="price" val="50000" />
+	</item>
+	<item id="39703" name="Fairy Antennae" additionalName="CHA" type="Armor">
+		<!-- CHA + 3. -->
+		<set name="icon" val="icon.accessory_hair_feeler_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="price" val="50000" />
+	</item>
+	<item id="39704" name="Chapeau" additionalName="LUC" type="Armor">
+		<!-- LUC + 3. -->
+		<set name="icon" val="icon.accessory_archer_hat_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="price" val="200000" />
+	</item>
+	<item id="39705" name="Chapeau" additionalName="CHA" type="Armor">
+		<!-- CHA + 3. -->
+		<set name="icon" val="icon.accessory_archer_hat_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="price" val="200000" />
+	</item>
+	<item id="39706" name="Artisan's Goggles" additionalName="LUC" type="Armor">
+		<!-- LUC + 3. -->
+		<set name="icon" val="icon.accessory_dwarf_goggle_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="price" val="200000" />
+	</item>
+	<item id="39707" name="Artisan's Goggles" additionalName="CHA" type="Armor">
+		<!-- CHA + 3. -->
+		<set name="icon" val="icon.accessory_dwarf_goggle_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="price" val="200000" />
+	</item>
+	<item id="39708" name="Arrow-pierced Apple" additionalName="LUC" type="Armor">
+		<!-- LUC + 3. -->
+		<set name="icon" val="icon.accessory_arrow_apple_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="price" val="200000" />
+	</item>
+	<item id="39709" name="Arrow-pierced Apple" additionalName="CHA" type="Armor">
+		<!-- CHA + 3. -->
+		<set name="icon" val="icon.accessory_arrow_apple_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="price" val="200000" />
+	</item>
+	<item id="39710" name="Irene's Brooch" additionalName="" type="Armor">
+		<!-- Made by Shadai, who was inspired by Moon Voice Irene. Activates 5 Jewel Slots. -->
+		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<for>
+			<add stat="mDef" val="87.0" />
+		</for>
+	</item>
+	<item id="39711" name="Shining Mysterious Fragment" additionalName="" type="EtcItem">
+		<!-- Found from the magical creatures of Cruma Tower Underground Lv. 3. It emits a mysterious light. -->
+		<set name="icon" val="icon.r95_soul_stone_i01" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39712" name="1st Liberation Fragment" additionalName="" type="EtcItem">
+		<!-- Found by the Ertheia upon the 1st Liberation, maybe this is related to the Grail. -->
+		<set name="icon" val="icon.r95_soul_stone_i03" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39713" name="Shining Mysterious Fragment" additionalName="" type="EtcItem">
+		<!-- Found from the magical creatures of Cruma Tower Underground Lv. 3. The energy is unstable and must be destroyed. -->
+		<set name="icon" val="icon.r95_soul_stone_i01" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39714" name="Normal Fragment Dust" additionalName="" type="EtcItem">
+		<!-- Shining Mysterious Fragment turns into this once crushed with the Hidden Crusher. Take these to Janssen in Cruma Tower Underground Lv. 3. -->
+		<set name="icon" val="icon.etc_powder_gray_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39715" name="Energy of Regeneration" additionalName="" type="EtcItem">
+		<!-- Found among magical creatures of followers of darkness in Cruma Tower Underground Lv. 2. Used for restoring a broken machine. -->
+		<set name="icon" val="icon.r99_soul_stone_i01" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39716" name="Regeneration Device Core" additionalName="" type="EtcItem">
+		<!-- A device for restoring the broken machine in Cruma Tower Underground Lv. 3, made by Belkadhi. You can use the machine to briefly meet an ancient Giant. -->
+		<set name="icon" val="icon.shirt_special_box_i02" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39717" name="Cat Fighter" additionalName="" type="Weapon">
+		<!-- A basic for appearance modification. -->
+		<set name="icon" val="icon.cat_foot" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="crystal_type" val="D" />
+		<set name="weight" val="152" />
+		<for>
+			<add stat="pAtk" val="112.0" />
+			<add stat="mAtk" val="54.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="39718" name="Boxing Glove" additionalName="" type="Weapon">
+		<!-- Monster weapon. -->
+		<set name="icon" val="icon.box_glove" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="crystal_type" val="D" />
+		<set name="weight" val="152" />
+		<for>
+			<add stat="pAtk" val="112.0" />
+			<add stat="mAtk" val="54.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="39719" name="Monster Only: Crook's Staff" additionalName="" type="Weapon">
+		<!-- Monster weapon. -->
+		<set name="icon" val="icon.wp_fishing4" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="POLE" />
+		<set name="crystal_type" val="D" />
+		<set name="weight" val="205" />
+		<for>
+			<add stat="pAtk" val="92.0" />
+			<add stat="mAtk" val="54.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="39720" name="Maphr's Luck Potion" additionalName="" type="EtcItem">
+		<!-- For 15 sec., LUC + 5. -->
+		<set name="icon" val="icon.etc_instant_lucky_potion_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39721" name="Wind Spirit Fragment" additionalName="" type="EtcItem">
+		<!-- Obtained by killing monsters in the Sea of Spores. Perhaps it's related to the cause of the weakening of the barrier there? Take this to Bacon. -->
+		<set name="icon" val="icon.etc_bead_silver_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39722" name="Missive Scraps" additionalName="" type="EtcItem">
+		<!-- Obtained by killing the Embryo Predators that suddenly appeared in Forsaken Plains. Take these to Novain. -->
+		<set name="icon" val="icon.etc_piece_of_report_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39723" name="Broken Magic Device Fragment" additionalName="" type="EtcItem">
+		<!-- Obtained by killing giants in Forsaken Plains. Seems to be a part of a lost magic device. Take these to Novain. -->
+		<set name="icon" val="icon.energy_condenser_i01" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39724" name="Embryo Missives" additionalName="" type="EtcItem">
+		<!-- Embryo's secret orders. Double-click to read. -->
+		<set name="icon" val="icon.etc_codex_of_giant_i03" />
+	</item>
+	<item id="39725" name="Old Jewelry Box" additionalName="" type="EtcItem">
+		<!-- Obtained while investigating brkoen shelves in the Forest of the Dead area. Take this to Tracker Hatuba. -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39726" name="Emissary's Reward Box (Low-grade)" additionalName="" type="EtcItem">
+		<!-- Reward for successfully completing missions for the Delegation. Double-click to open. -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39727" name="Emissary's Reward Box (Mid-grade)" additionalName="" type="EtcItem">
+		<!-- Reward for successfully completing missions for the Delegation. Double-click to open. -->
+		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39728" name="Emissary's Reward Box (High-grade)" additionalName="" type="EtcItem">
+		<!-- Reward for successfully completing missions for the Delegation. Double-click to open. -->
+		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39729" name="Emissary's Reward Box (Top-grade)" additionalName="" type="EtcItem">
+		<!-- Reward for successfully completing missions for the Delegation. Double-click to open. -->
+		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39730" name="Stakato Chitin" additionalName="" type="EtcItem">
+		<!-- Obtained by killing Stakatos in the Swamp of Screams. Bring these to Mercenary Kahman for rrewardrs. -->
+		<set name="icon" val="icon.etc_seed_of_evil_i04" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39731" name="Quality Stakato Chitin" additionalName="" type="EtcItem">
+		<!-- Obtained by killing Stakatos in the Swamp of Screams. Bring these to Mercenary Kahman for rrewardrs. -->
+		<set name="icon" val="icon.etc_seed_of_evil_i05" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39732" name="Monster Flesh" additionalName="" type="EtcItem">
+		<!-- Obtained by killing creatures in the Forest of the Dead. Take it to the Mysterious Wizard for rewards. -->
+		<set name="icon" val="icon.etc_bodypart_liver_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39733" name="Monster Blood" additionalName="" type="EtcItem">
+		<!-- Obtained by killing Stakatos in the Swamp of Screams. Bring these to Mercenary Kahman for rrewardrs. -->
+		<set name="icon" val="icon.etc_dragon_blood_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39734" name="Eye of Darkness" additionalName="" type="EtcItem">
+		<!-- Badge of Daimon the White-eyed ingrained in monsters of the Wall of Argos. Take these to Hermit at the Wall of Argos for rewards. -->
+		<set name="icon" val="icon.etc_eyeball_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39735" name="Dark Malice" additionalName="" type="EtcItem">
+		<!-- The will of Daimon the White-eyed ingrained in monsters of the Wall of Argos. Take these to Hermit at the Wall of Argos for rewards. -->
+		<set name="icon" val="icon.etc_bead_silver_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39736" name="Dragon Bone Dust" additionalName="" type="EtcItem">
+		<!-- Obtained by killing monsters in Dragon Valley. Take these to Namo at the entrance of the valley. -->
+		<set name="icon" val="icon.etc_powder_gray_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39737" name="Dragon Bone Fragment" additionalName="" type="EtcItem">
+		<!-- Obtained by killing monsters in Dragon Valley. Take these to Namo at the entrance of the valley. -->
+		<set name="icon" val="icon.etc_piece_bone_black_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39738" name="Rune Stone" additionalName="" type="EtcItem">
+		<!-- Rock engraved with ancient rune. Used to infuse skills with ancient wisdom. Consumed when learning skills for each class. -->
+		<set name="icon" val="icon.skill_acquire_book_i00" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+	</item>
+	<item id="39739" name="Tempus Fragment: Warrior" additionalName="" type="EtcItem">
+		<!-- Item needed to obtain the skills of a Warrior. -->
+		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39740" name="Tempus Fragment: Archer" additionalName="" type="EtcItem">
+		<!-- Item needed to obtain the skills of a Archer. -->
+		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39741" name="Tempus Fragment: Wizard" additionalName="" type="EtcItem">
+		<!-- Item needed to obtain the skills of a Wizard. -->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39742" name="Tempus Fragment: Rogue" additionalName="" type="EtcItem">
+		<!-- Item needed to obtain the skills of a Rogue. -->
+		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39743" name="Tempus Fragment: Summoner" additionalName="" type="EtcItem">
+		<!-- Item needed to obtain the skills of a Summoner. -->
+		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39744" name="Tempus Fragment: Enchanter" additionalName="" type="EtcItem">
+		<!-- Item needed to obtain the skills of a Enchanter. -->
+		<set name="icon" val="icon.giant_book_i01" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39745" name="Tempus Fragment: Healer" additionalName="" type="EtcItem">
+		<!-- Item needed to obtain the skills of a Healer. -->
+		<set name="icon" val="icon.giant_book_i00" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39746" name="Sealed Pendant" additionalName="" type="EtcItem">
+		<!-- Main ingredient for making a pendant. -->
+		<set name="icon" val="icon.etc_hairacc_pandent_i00" />
+		<set name="weight" val="10" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+	</item>
+	<item id="39747" name="Dimensional Bracelet" additionalName="Stage 1 - Basic" type="Armor">
+		<!-- Activates 1 Talisman Slot. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39748" name="Dimensional Bracelet" additionalName="Stage 1 - STR" type="Armor">
+		<!-- Activates 1 Talisman Slot. STR stat can be added or enhanced. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39749" name="Dimensional Bracelet" additionalName="Stage 1 - DEX" type="Armor">
+		<!-- Activates 1 Talisman Slot. DEX stat can be added or enhanced. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39750" name="Dimensional Bracelet" additionalName="Stage 1 - CON" type="Armor">
+		<!-- Activates 1 Talisman Slot. CON stat can be added or enhanced. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39751" name="Dimensional Bracelet" additionalName="Stage 1 - INT" type="Armor">
+		<!-- Activates 1 Talisman Slot. INT stat can be added or enhanced. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39752" name="Dimensional Bracelet" additionalName="Stage 1 - MEN" type="Armor">
+		<!-- Activates 1 Talisman Slot. MEN stat can be added or enhanced. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39753" name="Dimensional Bracelet" additionalName="Stage 1 - WIT" type="Armor">
+		<!-- Activates 1 Talisman Slot. WIT stat can be added or enhanced. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39754" name="Dimensional Bracelet" additionalName="Stage 1 - LUC" type="Armor">
+		<!-- Activates 1 Talisman Slot. LUC stat can be added or enhanced. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39755" name="Dimensional Bracelet" additionalName="Stage 1 - CHA" type="Armor">
+		<!-- Activates 1 Talisman Slot. CHA stat can be added or enhanced. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39756" name="Dimensional Bracelet" additionalName="Stage 1 - STR" type="Armor">
+		<!-- Activates 1 Talisman Slot. STR + 1. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39757" name="Dimensional Bracelet" additionalName="Stage 1 - STR" type="Armor">
+		<!-- Activates 1 Talisman Slot. STR + 2. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39758" name="Dimensional Bracelet" additionalName="Stage 1 - STR" type="Armor">
+		<!-- Activates 1 Talisman Slot. STR + 3. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39759" name="Dimensional Bracelet" additionalName="Stage 1 - STR" type="Armor">
+		<!-- Activates 1 Talisman Slot. STR + 4. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39760" name="Dimensional Bracelet" additionalName="Stage 1 - STR" type="Armor">
+		<!-- Activates 1 Talisman Slot. STR + 5. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39761" name="Dimensional Bracelet" additionalName="Stage 1 - DEX" type="Armor">
+		<!-- Activates 1 Talisman Slot. DEX + 1. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39762" name="Dimensional Bracelet" additionalName="Stage 1 - DEX" type="Armor">
+		<!-- Activates 1 Talisman Slot. DEX + 2. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39763" name="Dimensional Bracelet" additionalName="Stage 1 - DEX" type="Armor">
+		<!-- Activates 1 Talisman Slot. DEX + 3. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39764" name="Dimensional Bracelet" additionalName="Stage 1 - DEX" type="Armor">
+		<!-- Activates 1 Talisman Slot. DEX + 4. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39765" name="Dimensional Bracelet" additionalName="Stage 1 - DEX" type="Armor">
+		<!-- Activates 1 Talisman Slot. DEX + 5. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39766" name="Dimensional Bracelet" additionalName="Stage 1 - CON" type="Armor">
+		<!-- Activates 1 Talisman Slot. CON + 1. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39767" name="Dimensional Bracelet" additionalName="Stage 1 - CON" type="Armor">
+		<!-- Activates 1 Talisman Slot. CON + 2. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39768" name="Dimensional Bracelet" additionalName="Stage 1 - CON" type="Armor">
+		<!-- Activates 1 Talisman Slot. CON + 3. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39769" name="Dimensional Bracelet" additionalName="Stage 1 - CON" type="Armor">
+		<!-- Activates 1 Talisman Slot. CON + 4. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39770" name="Dimensional Bracelet" additionalName="Stage 1 - CON" type="Armor">
+		<!-- Activates 1 Talisman Slot. CON + 5. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39771" name="Dimensional Bracelet" additionalName="Stage 1 - INT" type="Armor">
+		<!-- Activates 1 Talisman Slot. INT + 1. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39772" name="Dimensional Bracelet" additionalName="Stage 1 - INT" type="Armor">
+		<!-- Activates 1 Talisman Slot. INT + 2. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39773" name="Dimensional Bracelet" additionalName="Stage 1 - INT" type="Armor">
+		<!-- Activates 1 Talisman Slot. INT + 3. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39774" name="Dimensional Bracelet" additionalName="Stage 1 - INT" type="Armor">
+		<!-- Activates 1 Talisman Slot. INT + 4. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39775" name="Dimensional Bracelet" additionalName="Stage 1 - INT" type="Armor">
+		<!-- Activates 1 Talisman Slot. INT + 5. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39776" name="Dimensional Bracelet" additionalName="Stage 1 - MEN" type="Armor">
+		<!-- Activates 1 Talisman Slot. MEN + 1. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39777" name="Dimensional Bracelet" additionalName="Stage 1 - MEN" type="Armor">
+		<!-- Activates 1 Talisman Slot. MEN + 2. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39778" name="Dimensional Bracelet" additionalName="Stage 1 - MEN" type="Armor">
+		<!-- Activates 1 Talisman Slot. MEN + 3. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39779" name="Dimensional Bracelet" additionalName="Stage 1 - MEN" type="Armor">
+		<!-- Activates 1 Talisman Slot. MEN + 4. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39780" name="Dimensional Bracelet" additionalName="Stage 1 - MEN" type="Armor">
+		<!-- Activates 1 Talisman Slot. MEN + 5. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39781" name="Dimensional Bracelet" additionalName="Stage 1 - WIT" type="Armor">
+		<!-- Activates 1 Talisman Slot. WIT + 1. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39782" name="Dimensional Bracelet" additionalName="Stage 1 - WIT" type="Armor">
+		<!-- Activates 1 Talisman Slot. WIT + 2. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39783" name="Dimensional Bracelet" additionalName="Stage 1 - WIT" type="Armor">
+		<!-- Activates 1 Talisman Slot. WIT + 3. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39784" name="Dimensional Bracelet" additionalName="Stage 1 - WIT" type="Armor">
+		<!-- Activates 1 Talisman Slot. WIT + 4. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39785" name="Dimensional Bracelet" additionalName="Stage 1 - WIT" type="Armor">
+		<!-- Activates 1 Talisman Slot. WIT + 5. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39786" name="Dimensional Bracelet" additionalName="Stage 1 - LUC" type="Armor">
+		<!-- Activates 1 Talisman Slot. LUC + 1. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39787" name="Dimensional Bracelet" additionalName="Stage 1 - LUC" type="Armor">
+		<!-- Activates 1 Talisman Slot. LUC + 2. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39788" name="Dimensional Bracelet" additionalName="Stage 1 - LUC" type="Armor">
+		<!-- Activates 1 Talisman Slot. LUC + 3. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39789" name="Dimensional Bracelet" additionalName="Stage 1 - LUC" type="Armor">
+		<!-- Activates 1 Talisman Slot. LUC + 4. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39790" name="Dimensional Bracelet" additionalName="Stage 1 - LUC" type="Armor">
+		<!-- Activates 1 Talisman Slot. LUC + 5. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39791" name="Dimensional Bracelet" additionalName="Stage 1 - CHA" type="Armor">
+		<!-- Activates 1 Talisman Slot. CHA + 1. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39792" name="Dimensional Bracelet" additionalName="Stage 1 - CHA" type="Armor">
+		<!-- Activates 1 Talisman Slot. CHA + 2. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39793" name="Dimensional Bracelet" additionalName="Stage 1 - CHA" type="Armor">
+		<!-- Activates 1 Talisman Slot. CHA + 3. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39794" name="Dimensional Bracelet" additionalName="Stage 1 - CHA" type="Armor">
+		<!-- Activates 1 Talisman Slot. CHA + 4. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39795" name="Dimensional Bracelet" additionalName="Stage 1 - CHA" type="Armor">
+		<!-- Activates 1 Talisman Slot. CHA + 5. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39796" name="Dimensional Bracelet" additionalName="Stage 2 - Basic" type="Armor">
+		<!-- Activates 2 Talisman Slots. -->
+		<set name="icon" val="icon.dimension_bracelet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39797" name="Dimensional Bracelet" additionalName="Stage 2 - STR" type="Armor">
+		<!-- Activates 2 Talisman Slots. STR stat can be added or enhanced. -->
+		<set name="icon" val="icon.dimension_bracelet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39798" name="Dimensional Bracelet" additionalName="Stage 2 - DEX" type="Armor">
+		<!-- Activates 2 Talisman Slots. DEX stat can be added or enhanced. -->
+		<set name="icon" val="icon.dimension_bracelet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="39799" name="Dimensional Bracelet" additionalName="Stage 2 - CON" type="Armor">
+		<!-- Activates 2 Talisman Slots. CON stat can be added or enhanced. -->
+		<set name="icon" val="icon.dimension_bracelet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+	</item>
+</list>

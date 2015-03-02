@@ -82,7 +82,7 @@ public final class LairOfAntharas extends AbstractNpcAI
 			{
 				npc.setScriptValue(1);
 			}
-			broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.WHOS_THERE_IF_YOU_DISTURB_THE_TEMPER_OF_THE_GREAT_LAND_DRAGON_ANTHARAS_I_WILL_NEVER_FORGIVE_YOU);
+			broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.WHO_S_THERE_IF_YOU_DISTURB_THE_TEMPER_OF_THE_GREAT_LAND_DRAGON_ANTHARAS_I_WILL_NEVER_FORGIVE_YOU);
 		}
 		return super.onAggroRangeEnter(npc, player, isSummon);
 	}
@@ -127,11 +127,9 @@ public final class LairOfAntharas extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		final L2Attackable mob = (L2Attackable) npc;
-		mob.setOnKillDelay(0);
 		if ((npc.getId() == DRAGON_GUARD) || (npc.getId() == DRAGON_MAGE))
 		{
-			mob.setIsNoRndWalk(true);
+			npc.setIsNoRndWalk(true);
 			startQuestTimer("CHECK_HOME", 10000, npc, null, true);
 		}
 		return super.onSpawn(npc);

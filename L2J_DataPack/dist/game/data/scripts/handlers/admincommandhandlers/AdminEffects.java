@@ -36,12 +36,11 @@ import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.CharInfo;
 import com.l2jserver.gameserver.network.serverpackets.Earthquake;
-import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExRedSky;
 import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
+import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
-import com.l2jserver.gameserver.network.serverpackets.SSQInfo;
 import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 import com.l2jserver.gameserver.network.serverpackets.SunRise;
 import com.l2jserver.gameserver.network.serverpackets.SunSet;
@@ -90,8 +89,6 @@ public class AdminEffects implements IAdminCommandHandler
 		"admin_effect",
 		"admin_effect_menu",
 		"admin_ave_abnormal",
-		"admin_ave_special",
-		"admin_ave_event",
 		"admin_social_menu",
 		"admin_play_sounds",
 		"admin_play_sound",
@@ -145,7 +142,7 @@ public class AdminEffects implements IAdminCommandHandler
 		{
 			if ((activeChar.getTarget() == null) || !activeChar.getTarget().isCharacter())
 			{
-				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				return false;
 			}
 			final L2Character target = (L2Character) activeChar.getTarget();
@@ -222,7 +219,7 @@ public class AdminEffects implements IAdminCommandHandler
 				{
 					if (!player.isGM())
 					{
-						player.startAbnormalVisualEffect(true, AbnormalVisualEffect.PARALYZE);
+						player.startAbnormalVisualEffect(AbnormalVisualEffect.PARALYZE);
 						player.setIsParalyzed(true);
 						player.startParalyze();
 					}
@@ -239,7 +236,7 @@ public class AdminEffects implements IAdminCommandHandler
 				Collection<L2PcInstance> plrs = activeChar.getKnownList().getKnownPlayers().values();
 				for (L2PcInstance player : plrs)
 				{
-					player.stopAbnormalVisualEffect(true, AbnormalVisualEffect.PARALYZE);
+					player.stopAbnormalVisualEffect(AbnormalVisualEffect.PARALYZE);
 					player.setIsParalyzed(false);
 				}
 			}
@@ -266,11 +263,11 @@ public class AdminEffects implements IAdminCommandHandler
 					player = (L2Character) target;
 					if (type.equals("1"))
 					{
-						player.startAbnormalVisualEffect(true, AbnormalVisualEffect.PARALYZE);
+						player.startAbnormalVisualEffect(AbnormalVisualEffect.PARALYZE);
 					}
 					else
 					{
-						player.startAbnormalVisualEffect(true, AbnormalVisualEffect.FLESH_STONE);
+						player.startAbnormalVisualEffect(AbnormalVisualEffect.FLESH_STONE);
 					}
 					player.setIsParalyzed(true);
 					player.startParalyze();
@@ -299,11 +296,11 @@ public class AdminEffects implements IAdminCommandHandler
 					player = (L2Character) target;
 					if (type.equals("1"))
 					{
-						player.stopAbnormalVisualEffect(true, AbnormalVisualEffect.PARALYZE);
+						player.stopAbnormalVisualEffect(AbnormalVisualEffect.PARALYZE);
 					}
 					else
 					{
-						player.stopAbnormalVisualEffect(true, AbnormalVisualEffect.FLESH_STONE);
+						player.stopAbnormalVisualEffect(AbnormalVisualEffect.FLESH_STONE);
 					}
 					player.setIsParalyzed(false);
 				}
@@ -321,7 +318,7 @@ public class AdminEffects implements IAdminCommandHandler
 				if (target instanceof L2Character)
 				{
 					player = (L2Character) target;
-					player.startAbnormalVisualEffect(true, AbnormalVisualEffect.BIG_HEAD);
+					player.startAbnormalVisualEffect(AbnormalVisualEffect.BIG_HEAD);
 				}
 			}
 			catch (Exception e)
@@ -337,7 +334,7 @@ public class AdminEffects implements IAdminCommandHandler
 				if (target instanceof L2Character)
 				{
 					player = (L2Character) target;
-					player.stopAbnormalVisualEffect(true, AbnormalVisualEffect.BIG_HEAD);
+					player.stopAbnormalVisualEffect(AbnormalVisualEffect.BIG_HEAD);
 				}
 			}
 			catch (Exception e)
@@ -378,7 +375,6 @@ public class AdminEffects implements IAdminCommandHandler
 				activeChar.broadcastPacket(info1);
 				UserInfo info2 = new UserInfo(activeChar);
 				activeChar.sendPacket(info2);
-				activeChar.broadcastPacket(new ExBrExtraUserInfo(activeChar));
 			}
 			catch (Exception e)
 			{
@@ -394,7 +390,6 @@ public class AdminEffects implements IAdminCommandHandler
 			activeChar.broadcastPacket(info1);
 			UserInfo info2 = new UserInfo(activeChar);
 			activeChar.sendPacket(info2);
-			activeChar.broadcastPacket(new ExBrExtraUserInfo(activeChar));
 		}
 		else if (command.equals("admin_clearteams"))
 		{
@@ -527,7 +522,7 @@ public class AdminEffects implements IAdminCommandHandler
 				}
 			}
 		}
-		else if (command.startsWith("admin_ave_abnormal") || command.startsWith("admin_ave_special") || command.startsWith("admin_ave_event"))
+		else if (command.startsWith("admin_ave_abnormal"))
 		{
 			if (st.countTokens() > 0)
 			{
@@ -581,7 +576,18 @@ public class AdminEffects implements IAdminCommandHandler
 			}
 			else
 			{
+				final StringBuilder sb = new StringBuilder();
+				for (int i = 0; i < AbnormalVisualEffect.values().length; i++)
+				{
+					final AbnormalVisualEffect abnormalVisualEffect = AbnormalVisualEffect.values()[i];
+					sb.append("<button action=\"bypass admin_ave_abnormal " + abnormalVisualEffect.name() + "\" align=left icon=teleport>" + abnormalVisualEffect.name() + "</button>");
+				}
+				final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
+				html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/ave_abnormal.htm");
+				html.replace("%abnormals%", sb.toString());
+				activeChar.sendPacket(html);
 				activeChar.sendMessage("Usage: //" + command.replace("admin_", "") + " <AbnormalVisualEffect> [radius]");
+				return true;
 			}
 		}
 		else if (command.startsWith("admin_effect"))
@@ -605,7 +611,7 @@ public class AdminEffects implements IAdminCommandHandler
 				}
 				if (!(obj instanceof L2Character))
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				}
 				else
 				{
@@ -625,7 +631,7 @@ public class AdminEffects implements IAdminCommandHandler
 			L2Object target = activeChar.getTarget();
 			if (!(target instanceof L2Npc))
 			{
-				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				return false;
 			}
 			L2Npc npc = (L2Npc) target;
@@ -641,7 +647,7 @@ public class AdminEffects implements IAdminCommandHandler
 			}
 		}
 		
-		if (command.contains("menu") || command.contains("ave_"))
+		if (command.contains("menu"))
 		{
 			showMainPage(activeChar, command);
 		}
@@ -658,13 +664,13 @@ public class AdminEffects implements IAdminCommandHandler
 		if (target instanceof L2Character)
 		{
 			final L2Character character = (L2Character) target;
-			if (character.hasAbnormalVisualEffect(ave))
+			if (!character.hasAbnormalVisualEffect(ave))
 			{
-				character.stopAbnormalVisualEffect(true, ave);
+				character.startAbnormalVisualEffect(ave);
 			}
 			else
 			{
-				character.startAbnormalVisualEffect(true, ave);
+				character.stopAbnormalVisualEffect(ave);
 			}
 			return true;
 		}
@@ -716,18 +722,7 @@ public class AdminEffects implements IAdminCommandHandler
 	{
 		L2GameServerPacket packet = null;
 		
-		if (type.equals("signsky"))
-		{
-			if (state.equals("dawn"))
-			{
-				packet = new SSQInfo(2);
-			}
-			else if (state.equals("dusk"))
-			{
-				packet = new SSQInfo(1);
-			}
-		}
-		else if (type.equals("sky"))
+		if (type.equals("sky"))
 		{
 			if (state.equals("night"))
 			{
@@ -776,19 +771,7 @@ public class AdminEffects implements IAdminCommandHandler
 	private void showMainPage(L2PcInstance activeChar, String command)
 	{
 		String filename = "effects_menu";
-		if (command.contains("ave_abnormal"))
-		{
-			filename = "ave_abnormal";
-		}
-		else if (command.contains("ave_special"))
-		{
-			filename = "ave_special";
-		}
-		else if (command.contains("ave_event"))
-		{
-			filename = "ave_event";
-		}
-		else if (command.contains("social"))
+		if (command.contains("social"))
 		{
 			filename = "social";
 		}

@@ -135,10 +135,10 @@ public final class TowerOfNaia extends AbstractNpcAI
 	//@formatter:on
 	private static final NpcStringId[] SPORES_NPCSTRING_ID =
 	{
-		NpcStringId.ITS_S1,
+		NpcStringId.IT_S_S1,
 		NpcStringId.S1_IS_STRONG,
-		NpcStringId.ITS_ALWAYS_S1,
-		NpcStringId.S1_WONT_DO
+		NpcStringId.IT_S_ALWAYS_S1,
+		NpcStringId.S1_WON_T_DO
 	};
 	
 	private static Map<Integer, int[]> DOORS = new HashMap<>();
@@ -408,7 +408,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 			{
 				if (player.getParty() == null)
 				{
-					player.sendPacket(SystemMessageId.CAN_OPERATE_MACHINE_WHEN_IN_PARTY);
+					player.sendPacket(SystemMessageId.YOU_MUST_BE_IN_A_PARTY_IN_ORDER_TO_OPERATE_THE_MACHINE);
 					return null;
 				}
 				return "manager.htm";
@@ -587,7 +587,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 			}
 			else
 			{
-				player.sendPacket(SystemMessageId.CAN_OPERATE_MACHINE_WHEN_IN_PARTY);
+				player.sendPacket(SystemMessageId.YOU_MUST_BE_IN_A_PARTY_IN_ORDER_TO_OPERATE_THE_MACHINE);
 			}
 		}
 		return htmltext;

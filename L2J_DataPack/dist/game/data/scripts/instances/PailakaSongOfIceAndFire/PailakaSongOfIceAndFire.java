@@ -82,7 +82,7 @@ public final class PailakaSongOfIceAndFire extends AbstractNpcAI
 				teleportPlayer(player, TELEPORT, world.getInstanceId());
 				return;
 			}
-			player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
+			player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
 			return;
 		}
 		world = new PSoIWorld();
@@ -106,7 +106,7 @@ public final class PailakaSongOfIceAndFire extends AbstractNpcAI
 			}
 			case "GARGOS_LAUGH":
 			{
-				broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.OHHOHOH);
+				broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.OHH_OH_OH);
 				break;
 			}
 			case "TELEPORT":

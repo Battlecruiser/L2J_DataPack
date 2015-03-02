@@ -27,6 +27,7 @@
 	<admin command="admin_setconfig" accessLevel="7" />
 	<admin command="admin_config_server" accessLevel="7" />
 	<admin command="admin_gmon" accessLevel="7" />
+	<admin command="admin_worldchat" accessLevel="7" />
 
 	<!-- ADMIN ANNOUNCEMENTS -->
 	<admin command="admin_announce" accessLevel="7" />
@@ -36,7 +37,7 @@
 
 	<!-- ADMIN BAN -->
 	<admin command="admin_punishment" accessLevel="7" />
-	<admin command="admin_punishment_add" accessLevel="7" confirmDlg="true"  />
+	<admin command="admin_punishment_add" accessLevel="7" confirmDlg="true" />
 	<admin command="admin_punishment_remove" accessLevel="7" confirmDlg="true" />
 
 	<!-- ADMIN BBS -->
@@ -173,8 +174,6 @@
 	<admin command="admin_effect" accessLevel="7" />
 	<admin command="admin_effect_menu" accessLevel="7" />
 	<admin command="admin_ave_abnormal" accessLevel="7" />
-	<admin command="admin_ave_special" accessLevel="7" />
-	<admin command="admin_ave_event" accessLevel="7" />
 	<admin command="admin_play_sounds" accessLevel="7" />
 	<admin command="admin_play_sound" accessLevel="7" />
 	<admin command="admin_atmosphere" accessLevel="7" />
@@ -298,7 +297,7 @@
 	<admin command="admin_grandboss_respawn" accessLevel="7" />
 	<admin command="admin_grandboss_minions" accessLevel="7" />
 	<admin command="admin_grandboss_abort" accessLevel="7" />
-	
+
 	<!-- ADMIN HEAL -->
 	<admin command="admin_heal" accessLevel="7" />
 
@@ -352,7 +351,7 @@
 
 	<!-- ADMIN MANOR -->
 	<admin command="admin_manor" accessLevel="7" />
-	
+
 	<!-- ADMIN MENU -->
 	<admin command="admin_char_manage" accessLevel="7" />
 	<admin command="admin_teleport_character_to_menu" accessLevel="7" />
@@ -419,6 +418,9 @@
 	<admin command="admin_transform" accessLevel="7" />
 	<admin command="admin_untransform" accessLevel="7" />
 	<admin command="admin_transform_menu" accessLevel="7" />
+	
+		<!-- ADMIN PRIME POINTS -->
+	<admin command="admin_primepoints" accessLevel="7" />
 
 	<!-- ADMIN QUEST -->
 	<admin command="admin_quest_reload" accessLevel="7" />
@@ -429,7 +431,7 @@
 
 	<!-- ADMIN RELOAD -->
 	<admin command="admin_reload" accessLevel="7" confirmDlg="true" />
-	
+
 	<!-- ADMIN REPAIR CHAR -->
 	<admin command="admin_restore" accessLevel="7" />
 	<admin command="admin_repair" accessLevel="7" />
@@ -462,26 +464,16 @@
 	<admin command="admin_server_restart" accessLevel="7" confirmDlg="true" />
 	<admin command="admin_server_abort" accessLevel="7" />
 
-	<!-- ADMIN SIEGE -->
-	<admin command="admin_siege" accessLevel="7" />
-	<admin command="admin_add_attacker" accessLevel="7" />
-	<admin command="admin_add_defender" accessLevel="7" />
-	<admin command="admin_add_guard" accessLevel="7" />
-	<admin command="admin_list_siege_clans" accessLevel="7" />
-	<admin command="admin_clear_siege_list" accessLevel="7" />
-	<admin command="admin_move_defenders" accessLevel="7" />
-	<admin command="admin_spawn_doors" accessLevel="7" />
-	<admin command="admin_endsiege" accessLevel="7" />
-	<admin command="admin_startsiege" accessLevel="7" />
-	<admin command="admin_setsiegetime" accessLevel="7" />
-	<admin command="admin_setcastle" accessLevel="7" />
-	<admin command="admin_removecastle" accessLevel="7" />
+	<!-- ADMIN CLAN HALL -->
 	<admin command="admin_clanhall" accessLevel="7" />
 	<admin command="admin_clanhallset" accessLevel="7" />
 	<admin command="admin_clanhalldel" accessLevel="7" />
 	<admin command="admin_clanhallopendoors" accessLevel="7" />
 	<admin command="admin_clanhallclosedoors" accessLevel="7" />
 	<admin command="admin_clanhallteleportself" accessLevel="7" />
+	
+	<!-- ADMIN CASTLE -->
+	<admin command="admin_castlemanage" accessLevel="7" />
 
 	<!-- ADMIN SKILL -->
 	<admin command="admin_show_skills" accessLevel="7" />
@@ -535,6 +527,7 @@
 	<admin command="admin_show_teleport" accessLevel="7" />
 	<admin command="admin_teleport_to_character" accessLevel="7" />
 	<admin command="admin_teleportto" accessLevel="7" />
+	<admin command="admin_teleport" accessLevel="7" />
 	<admin command="admin_move_to" accessLevel="7" />
 	<admin command="admin_teleport_character" accessLevel="7" />
 	<admin command="admin_recall" accessLevel="7" />

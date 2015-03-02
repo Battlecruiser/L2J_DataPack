@@ -62,7 +62,6 @@ public final class Escape extends AbstractEffect
 		}
 		
 		info.getEffected().teleToLocation(MapRegionManager.getInstance().getTeleToLocation(info.getEffected(), _escapeType), true);
-		info.getEffected().getActingPlayer().setIsIn7sDungeon(false);
 		info.getEffected().setInstanceId(0);
 	}
 }

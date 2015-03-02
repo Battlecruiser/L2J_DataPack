@@ -55,7 +55,7 @@ public final class OpenCommonRecipeBook extends AbstractEffect
 		L2PcInstance player = info.getEffector().getActingPlayer();
 		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
 		{
-			player.sendPacket(SystemMessageId.CANNOT_CREATED_WHILE_ENGAGED_IN_TRADING);
+			player.sendPacket(SystemMessageId.ITEM_CREATION_IS_NOT_POSSIBLE_WHILE_ENGAGED_IN_A_TRADE);
 			return;
 		}
 		

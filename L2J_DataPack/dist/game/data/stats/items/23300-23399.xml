@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="23300" name="Enchanted Sayha's Shirt Pack" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Sayha's Shirt enchanted to +7. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23301" name="Sayha's Shirt" additionalName="" type="Armor">
+		<!-- Magic shirt filled with the power of Sayha, the god of wind.\nCan be enchanted to +10 using Elemental Shirt Enchant Scrolls. When enchanted to +7 or above, can use a portal teleport skill that allows you to create a portal at a selected location and teleport to that portal (cannot be used in the Olympiad). -->
+		<set name="icon" val="icon.pi_shirt_of_wolf_2nd_wind" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="130" />
+		<for>
+			<add stat="pDef" val="28.0" />
+		</for>
+	</item>
+	<item id="23302" name="Blessed Scroll: Enchant Elemental Shirt Pack" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing 30 Blessed Scroll: Enchant Elemental Shirt. Has a very low chance of acquiring a +7 Eva's Shirt. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23303" name="Enchanted Eva's Shirt Pack" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Eva's Shirt enchanted to +7. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23304" name="Eva's Shirt" additionalName="" type="Armor">
+		<!-- Magic shirt filled with the power of Eva, the goddess of water.\nCan be enchanted to +10 using Elemental Shirt Enchant Scrolls. When enchanted to +7 or above, can use HP/MP/CP recovering skills. -->
+		<set name="icon" val="icon.pi_shirt_of_wolf_2nd_water" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="130" />
+		<for>
+			<add stat="pDef" val="28.0" />
+		</for>
+	</item>
+	<item id="23305" name="Blessed Scroll: Enchant Elemental Shirt Pack" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing 30 Blessed Scroll: Enchant Elemental Shirt. Has a very low chance of acquiring a +7 Maphr's Shirt. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23306" name="Enchanted Maphr's Shirt Pack" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Maphr's Shirt enchanted to +7. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23307" name="Maphr's Shirt" additionalName="" type="Armor">
+		<!-- Magic shirt filled with the power of Maphr, the goddess of earth.\nCan be enchanted to +10 using Elemental Shirt Enchant Scrolls. When enchanted to +7 or above and equipped, the enchant success rate is increased (cannot be used in the Olympiad). -->
+		<set name="icon" val="icon.pi_shirt_of_wolf_2nd_earth" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="130" />
+		<for>
+			<add stat="pDef" val="28.0" />
+		</for>
+	</item>
+	<item id="23308" name="Recipe: Elven Radler" additionalName="Event" type="EtcItem">
+		<!-- Recipe needed for making Elven Radler. -->
+		<set name="icon" val="BranchSys.icon.br_valentine_recipe_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23309" name="Elven Radler" additionalName="Event" type="EtcItem">
+		<!-- Delicious and simple Elven Radler. You can acquire a Dion Pilsner if you're lucky. -->
+		<set name="icon" val="BranchSys3.icon1.g_beerfestival_lager" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23310" name="Dion Pilsner" additionalName="Event" type="EtcItem">
+		<!-- Very delicious Dion Pilsner. You can acquire a Dwarven Royal Blue Cocktail if you're lucky. -->
+		<set name="icon" val="BranchSys3.icon1.g_beerfestival_lager" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23311" name="Dwarven Royal Blue Cocktail" additionalName="Event" type="EtcItem">
+		<!-- Extremely delicious Dwarven Royal Blue Cocktail. You can acquire an Aden White Beer if you're lucky. -->
+		<set name="icon" val="BranchSys3.icon1.g_beerfestival_lager" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23312" name="Aden White Beer" additionalName="Event" type="EtcItem">
+		<!-- Aden White Beer made with the finest recipe. Take it to Queen of Hearts with the Beer Tankard to obtain the Gran Kain's Delight. -->
+		<set name="icon" val="BranchSys3.icon1.g_beerfestival_lager" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23313" name="Gran Kain's Delight" additionalName="30-day (Event)" type="EtcItem">
+		<!-- Finest beer obtained from Queen of Hearts. -->
+		<set name="icon" val="BranchSys3.icon1.g_beerfestival_octoberfest_beer" />
+		<set name="weight" val="100" />
+		<set name="time" val="2592000" />
+	</item>
+	<item id="23314" name="Beer Ingredient: Malt" additionalName="Event" type="EtcItem">
+		<!-- Ingredient needed for crafting beer. -->
+		<set name="icon" val="BranchSys3.icon1.g_beerfestival_malt" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23315" name="Beer Ingredient: Hops" additionalName="Event" type="EtcItem">
+		<!-- Ingredient needed for crafting beer. -->
+		<set name="icon" val="BranchSys3.icon1.g_beerfestival_hops" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23316" name="Beer Ingredient: Yeast" additionalName="Event" type="EtcItem">
+		<!-- Ingredient needed for crafting beer. -->
+		<set name="icon" val="BranchSys3.icon1.g_beerfestival_yeast" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23318" name="Beer Tankard" additionalName="Event" type="EtcItem">
+		<!-- Take this and the Aden White Beer to Queen of Hearts to obtain a Gran Kain's Delight. -->
+		<set name="icon" val="BranchSys3.icon1.g_beerfestival_beer_barrel" />
+		<set name="weight" val="10" />
+	</item>
+	<item id="23319" name="Harp's Sealed Rune of Power (3-day)" additionalName="" type="EtcItem">
+		<!-- If stored in the inventory, STR + 7 permanently, and has a 5% chance of Stunning all enemies within 200 grids for 3 sec. during a standard attack. 3-day. -->
+		<set name="icon" val="BranchSys3.icon1.g_rune_of_half_power" />
+	</item>
+	<item id="23320" name="Harp's Sealed Rune of Magic (3-day)" additionalName="" type="EtcItem">
+		<!-- If stored in the inventory, INT + 7 permanently, and has a 10% chance of decreasing all enemies' M. Def. by 20% for 10 sec. within 400 grids during a magic attack. 3-day. -->
+		<set name="icon" val="BranchSys3.icon1.g_rune_of_half_magic" />
+	</item>
+	<item id="23321" name="Flynt's Sealed Rune of Will (3-day)" additionalName="" type="EtcItem">
+		<!-- If stored in the inventory, CON + 7 permanently, and has a 5% chance of becoming invincible for 5 sec when attacked. 3-day. -->
+		<set name="icon" val="BranchSys3.icon1.g_rune_of_flint_will" />
+	</item>
+	<item id="23322" name="Flynt's Sealed Rune of Destruction (3-day)" additionalName="" type="EtcItem">
+		<!-- If stored in the inventory, STR + 7 permanently, and has a 5% chance of inflicting 20% additional damage when using a skill attack. 3-day. -->
+		<set name="icon" val="BranchSys3.icon1.g_rune_of_flint_destroy" />
+	</item>
+	<item id="23323" name="Dr. Destroy's Sealed Rune of Skill (3-day)" additionalName="" type="EtcItem">
+		<!-- If stored in the inventory, DEX + 7 permanently, and has a 5% chance of increasing Critical Rate and Critical Damage by 20% for 10 sec. 3-day. -->
+		<set name="icon" val="BranchSys3.icon1.g_rune_of_destroy_tech" />
+	</item>
+	<item id="23324" name="Dr. Destroy's Sealed Rune of Wisdom (3-day)" additionalName="" type="EtcItem">
+		<!-- If stored in the inventory, INT + 7 permanently, and has a 10% chance of not consuming MP for healing skills. 3-day. -->
+		<set name="icon" val="BranchSys3.icon1.g_rune_of_destroy_wisdom" />
+	</item>
+	<item id="23325" name="Harp's Sealed Rune of Power" additionalName="" type="EtcItem">
+		<!-- If stored in the inventory, STR + 7 permanently, and has a 5% chance of Stunning all enemies within 200 grids for 3 sec. during a standard attack. -->
+		<set name="icon" val="BranchSys3.icon1.g_rune_of_half_power" />
+	</item>
+	<item id="23326" name="Harp's Sealed Rune of Magic" additionalName="" type="EtcItem">
+		<!-- If stored in the inventory, INT + 7 permanently, and has a 10% chance of decreasing all enemies' M. Def. by 20% for 10 sec. within 400 grids during a magic attack. -->
+		<set name="icon" val="BranchSys3.icon1.g_rune_of_half_magic" />
+	</item>
+	<item id="23327" name="Flynt's Sealed Rune of Will" additionalName="" type="EtcItem">
+		<!-- If stored in the inventory, CON + 7 permanently, and has a 5% chance of becoming invincible for 5 sec. when attacked. -->
+		<set name="icon" val="BranchSys3.icon1.g_rune_of_flint_will" />
+	</item>
+	<item id="23328" name="Flynt's Sealed Rune of Destruction" additionalName="" type="EtcItem">
+		<!-- If stored in the inventory, STR + 7 permanently, and has a 5% chance of inflicting 20% additional damage when using a skill attack. -->
+		<set name="icon" val="BranchSys3.icon1.g_rune_of_flint_destroy" />
+	</item>
+	<item id="23329" name="Dr. Destroy's Sealed Rune of Skill" additionalName="" type="EtcItem">
+		<!-- If stored in the inventory, DEX + 7 permanently, and has a 5% chance of increasing Critical Rate and Critical Damage by 20% for 10 sec. -->
+		<set name="icon" val="BranchSys3.icon1.g_rune_of_destroy_tech" />
+	</item>
+	<item id="23330" name="Dr. Destroy's Sealed Rune of Wisdom" additionalName="" type="EtcItem">
+		<!-- If stored in the inventory, INT + 7 permanently, and has a 10% chance of not consuming MP for healing skills. -->
+		<set name="icon" val="BranchSys3.icon1.g_rune_of_destroy_wisdom" />
+	</item>
+	<item id="23331" name="Vitality Maintaining Potion (30-minute)" additionalName="" type="EtcItem">
+		<!-- Maintains Vitality for 30 min. Cooldown is 60 min. Vitality item with limited usage. -->
+		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23332" name="XP Buff 50% (1-hour)" additionalName="" type="EtcItem">
+		<!-- Increases acquired XP by 50% for a certain amount of time. All levels. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23333" name="XP Buff 50% (2-hour)" additionalName="" type="EtcItem">
+		<!-- Increases acquired XP by 50% for a certain amount of time. All levels. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23334" name="Soulshot Pack (R-grade)" additionalName="" type="EtcItem">
+		<!-- Can acquire 5,000 Soulshots (R-grade). -->
+		<set name="icon" val="icon.br_cash_pack_of_soulshot_r_i00" />
+		<set name="weight" val="500" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23335" name="Blessed Spiritshot Pack (R-grade)" additionalName="" type="EtcItem">
+		<!-- Can acquire 5,000 Blessed Spiritshots (R-grade). -->
+		<set name="icon" val="icon.br_cash_pack_of_blessed_spiritshot_r_i00" />
+		<set name="weight" val="500" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23336" name="Scroll: Increase Vitality (High-grade)" additionalName="" type="EtcItem">
+		<!-- Increases the number of vitality items that can be used per week by 2. Cooldown is 3 days. -->
+		<set name="icon" val="BranchSys3.lcon.g_scrl_vitality_count_up_2" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23337" name="Scroll: Increase Vitality (Top-grade)" additionalName="" type="EtcItem">
+		<!-- Increases the number of vitality items that can be used per week by 3. Cooldown is 3 days. -->
+		<set name="icon" val="BranchSys3.lcon.g_scrl_vitality_count_up_3" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23338" name="Scroll: Replenish Vitality" additionalName="" type="EtcItem">
+		<!-- Replenishes 1 Vitality slot when used. Cooldown is 60 min. -->
+		<set name="icon" val="BranchSys3.lcon.g_scrl_vitality_point_up" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23339" name="Scroll: Replenish Vitality (High-grade)" additionalName="" type="EtcItem">
+		<!-- Replenishes 2 Vitality slots when used. Cooldown is 60 min. -->
+		<set name="icon" val="BranchSys3.lcon.g_scrl_vitality_point_up_2" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23340" name="Scroll: Replenish Vitality (Top-grade)" additionalName="" type="EtcItem">
+		<!-- Replenishes Vitality to max when used. Cooldown is 60 min. -->
+		<set name="icon" val="BranchSys3.lcon.g_scrl_vitality_point_up_3" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23341" name="Vitality Recovering Potion" additionalName="" type="EtcItem">
+		<!-- For 30 minutes, vitality is replenished when XP is acquired through hunting. Vitality item with limited usage. Effect remains even after death. -->
+		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
+		<set name="weight" val="80" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23342" name="Ancient Scroll: Enchant Weapon (R-grade)" additionalName="" type="EtcItem">
+		<!-- Enchant success rate + 10%. \nCurrent enchant stats remain if enchant fails. \nWhen enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (R-grade) + 6, and two-handed sword/blunt/fist, dagger, crossbow + 7. P. Atk. for bows + 12. M. Atk. for all weapons + 5. When enchanted to +4 or above, P. Atk. and M. Atk. Increase greatly. Blessed weapons have greater increases than standard weapons. -->
+		<set name="icon" val="BranchSys.icon.br_ancient_cry_of_ench_wp_s_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23343" name="Heavenly Scroll: Enchant Weapon (R-grade)" additionalName="" type="EtcItem">
+		<!-- 100% Enchant success rate. \nWhen enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (R-grade) + 6, and two-handed sword/blunt/fist, dagger, crossbow + 7. P. Atk. for bows + 12. M. Atk. for all weapons + 5. When enchanted to +4 or above, P. Atk. and M. Atk. Increase greatly. Blessed weapons have greater increases than standard weapons. Can enchant standard weapons to +12, and magic weapons to +7. -->
+		<set name="icon" val="BranchSys.icon.br_holy_cry_of_ench_wp_s_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23344" name="Ancient Scroll: Enchant Armor (R-grade)" additionalName="" type="EtcItem">
+		<!-- Enchant success rate + 10%. \nCurrent enchant stats remain if enchant fails. \nWhen enchanted, P. Def. for armor/accessories (R-grade) + 2. When enchanted to + 4 or above, P. Def. Increases greatly. Can be safely enchanted up to + 3. HP gradually increases with each enchant level starting from + 4. -->
+		<set name="icon" val="BranchSys.icon.br_ancient_cry_of_ench_am_s_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23345" name="Heavenly Scroll: Enchant Armor (R-grade)" additionalName="" type="EtcItem">
+		<!-- 100% Enchant success rate. \nWhen enchanted, P. Def. for armor/accessories (R-grade) + 2. When enchanted to + 4 or above, P. Def. Increases greatly. Can be safely enchanted up to + 3. HP gradually increases with each enchant level starting from + 4. -->
+		<set name="icon" val="BranchSys.icon.br_holy_cry_of_ench_am_s_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23346" name="Letter Collector's Gift" additionalName="" type="EtcItem">
+		<!-- Letter Collector's Gift\nFor 2 hr., Atk. Spd. + 15%, Casting Spd. + 15%, Speed + 20, and equipped weapons/armor appearance change to that of Memorable items. Cooldown is 60 min. -->
+		<set name="icon" val="icon.shield_bread_i01" />
+		<set name="weight" val="5" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23347" name="Lucky Enchant Stone: Weapon (R-grade)" additionalName="" type="EtcItem">
+		<!-- Enchant success rate + 10% for weapons (R-grade). Only for items enchanted between + 3 and + 9. -->
+		<set name="icon" val="icon.ench_wp_potion_violet_i00" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23348" name="Lucky Enchant Stone: Armor (R-grade)" additionalName="" type="EtcItem">
+		<!-- Enchant success rate + 15% for armor (R-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
+		<set name="icon" val="icon.ench_am_potion_violet_i00" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23349" name="Enhanced Power Shirt Pack" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Power Shirt enchanted to +7. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23350" name="Transformation Scroll Pack" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Transformation Scroll. Which could it be? -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23351" name="Weapon Appearance Stone (R-grade)" additionalName="" type="EtcItem">
+		<!-- Changes the appearance of an R-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 800000 adena. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_wp_stone_r" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23352" name="Weapon Appearance Stone (S-grade)" additionalName="" type="EtcItem">
+		<!-- Changes the appearance of an S-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 250000 adena. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_wp_stone_s" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23353" name="Weapon Appearance Stone (A-grade)" additionalName="" type="EtcItem">
+		<!-- Changes the appearance of an A-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 90000 adena. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_wp_stone_a" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23354" name="Blessed Weapon Appearance Stone (R-grade)" additionalName="" type="EtcItem">
+		<!-- Changes the appearance of an R-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__wp_stone_r" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23355" name="Blessed Weapon Appearance Stone (S-grade)" additionalName="" type="EtcItem">
+		<!-- Changes the appearance of an S-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__wp_stone_s" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23356" name="Blessed Weapon Appearance Stone (A-grade)" additionalName="" type="EtcItem">
+		<!-- Changes the appearance of an A-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__wp_stone_a" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23357" name="Weapon Restoration Stone (R-grade)" additionalName="" type="EtcItem">
+		<!-- Restores the appearance of a modified weapon (R-grade). Double-click to use. -->
+		<set name="icon" val="BranchSys3.icon.g_wp_processing_stone_r" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23358" name="Weapon Restoration Stone (S-grade)" additionalName="" type="EtcItem">
+		<!-- Restores the appearance of a modified weapon (S-grade). Double-click to use. -->
+		<set name="icon" val="BranchSys3.icon.g_wp_processing_stone_s" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23359" name="Weapon Restoration Stone (A-grade)" additionalName="" type="EtcItem">
+		<!-- Restores the appearance of a modified weapon (A-grade). Double-click to use. -->
+		<set name="icon" val="BranchSys3.icon.g_wp_processing_stone_a" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23360" name="Armor Appearance Stone (R-grade)" additionalName="" type="EtcItem">
+		<!-- Changes the appearance of an R-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 125000 adena. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_am_stone_r" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23361" name="Armor Appearance Stone (S-grade)" additionalName="" type="EtcItem">
+		<!-- Changes the appearance of an S-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 50000 adena. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_am_stone_s" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23362" name="Armor Appearance Stone (A-grade)" additionalName="" type="EtcItem">
+		<!-- Changes the appearance of an A-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 24000 adena. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_am_stone_a" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23363" name="Blessed Armor Appearance Stone (R-grade)" additionalName="" type="EtcItem">
+		<!-- Changes the appearance of an R-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_r" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23364" name="Blessed Armor Appearance Stone (S-grade)" additionalName="" type="EtcItem">
+		<!-- Changes the appearance of an S-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_s" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23365" name="Blessed Armor Appearance Stone (A-grade)" additionalName="" type="EtcItem">
+		<!-- Changes the appearance of an A-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_a" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23366" name="Armor Restoration Stone (R-grade)" additionalName="" type="EtcItem">
+		<!-- Restores the appearance of modified armor (R-grade). No hair accessories. Double-click to use. -->
+		<set name="icon" val="BranchSys3.icon.g_wp_processing_stone_r" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23367" name="Armor Restoration Stone (S-grade)" additionalName="" type="EtcItem">
+		<!-- Restores the appearance of modified armor (S-grade). No hair accessories. Double-click to use. -->
+		<set name="icon" val="BranchSys3.icon.g_wp_processing_stone_s" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23368" name="Armor Restoration Stone (A-grade)" additionalName="" type="EtcItem">
+		<!-- Restores the appearance of modified armor (A-grade). No hair accessories. Double-click to use. -->
+		<set name="icon" val="BranchSys3.icon.g_wp_processing_stone_a" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23369" name="Hair Accessory Appearance Stone" additionalName="" type="EtcItem">
+		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 125000 adena for a 1-slot hair accessory and 200000 adena for a 2-slot hair accessory.\n\nWarning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2_stone" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23370" name="Blessed Hair Accessory Appearance Stone" additionalName="" type="EtcItem">
+		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use.\n\nWarning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
+		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting_hair2_stone" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23371" name="Hair Accessory Restoration Stone" additionalName="" type="EtcItem">
+		<!-- Restores the appearance of a modified hair accessory. Double-click to use. -->
+		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_r" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23372" name="Weapon Appearance/Restoration Stone Pack (R-grade)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Weapon Appearance Stone (R-grade) and a Weapon Restoration Stone (R-grade). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23373" name="Weapon Appearance/Restoration Stone Pack (S-grade)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Weapon Appearance Stone (S-grade) and a Weapon Restoration Stone (S-grade). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23374" name="Armor Appearance/Restoration Stone Pack (R-grade)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Armor Appearance Stone (R-grade) and an Armor Restoration Stone (R-grade). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23375" name="Armor Appearance/Restoration Stone Pack (S-grade)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Armor Appearance Stone (S-grade) and an Armor Restoration Stone (S-grade). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23376" name="Hair Accessory Appearance/Restoration Stone Pack" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Hair Accessory Appearance Stone and a Hair Accessory Restoration Stone. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23377" name="Heavenly Treasure Chest" additionalName="" type="EtcItem">
+		<!-- Chest containing countless treasures. You can obtain either an Ancient/Heavenly Enchant Scroll, Lv. 5 Legendary Dye, Seal Scroll, or Life Stone. -->
+		<set name="icon" val="BranchSys3.icon.g_cash_fortuna_box_r" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23378" name="Fantastical Treasure Chest" additionalName="" type="EtcItem">
+		<!-- Chest containing countless treasures. You can obtain either a +7 Power Shirt, Kaliel's Energy, Enchant Stone, or Attribute Stone. -->
+		<set name="icon" val="BranchSys.icon.br_fortuna_box_s_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23379" name="Glorious Treasure Chest" additionalName="" type="EtcItem">
+		<!-- Chest containing countless treasures. You can obtain either an Agathion, Appearance Stone, or Super Healthy Juice. -->
+		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23380" name="Adenian Military Underwear" additionalName="" type="Armor">
+		<!-- Adenian Collection\nUnderwear with a military look. High basic stats. P. Def. + 35, M. Def. + 15, all attribute defense + 15, and Speed + 7. Can be augmented with Life Stone - Adenian Underwear through the town blacksmith. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_military_undwrwear" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="130" />
+		<for>
+			<add stat="pDef" val="35.0" />
+			<add stat="mDef" val="15.0" />
+		</for>
+	</item>
+	<item id="23381" name="Adenian Premium Underwear" additionalName="" type="Armor">
+		<!-- Adenian Collection\nUnderwear with a sophisticated feel. High basic stats. P. Def. + 35, M. Def. + 15, all attribute defense + 15, and Speed + 7. Can be augmented with Life Stone - Adenian Underwear through the town blacksmith. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_premium_underwear" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="130" />
+		<for>
+			<add stat="pDef" val="35.0" />
+			<add stat="mDef" val="15.0" />
+		</for>
+	</item>
+	<item id="23382" name="Adenian Temptation Underwear" additionalName="" type="Armor">
+		<!-- Adenian Collection\nSexy underwear. High basic stats. P. Def. + 35, M. Def. + 15, all attribute defense + 15, and Speed + 7. Can be augmented with Life Stone - Adenian Underwear through the town blacksmith. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_sexy_underwear" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="130" />
+		<for>
+			<add stat="pDef" val="35.0" />
+			<add stat="mDef" val="15.0" />
+		</for>
+	</item>
+	<item id="23383" name="Adenian Cyber Underwear" additionalName="" type="Armor">
+		<!-- Adenian Collection\nUnderwear with a cyberpunk look. High basic stats. P. Def. + 35, M. Def. + 15, all attribute defense + 15, and Speed + 7. Can be augmented with Life Stone - Adenian Underwear through the town blacksmith. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_sf_underwear_01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="130" />
+		<for>
+			<add stat="pDef" val="35.0" />
+			<add stat="mDef" val="15.0" />
+		</for>
+	</item>
+	<item id="23384" name="Adenian Cute Underwear" additionalName="" type="Armor">
+		<!-- Adenian Collection\nCute underwear. High basic stats. P. Def. + 35, M. Def. + 15, all attribute defense + 15, and Speed + 7. Female only. Can be augmented with Life Stone - Adenian Underwear through the town blacksmith. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_maid_underwear_f01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="130" />
+		<for>
+			<add stat="pDef" val="35.0" />
+			<add stat="mDef" val="15.0" />
+		</for>
+	</item>
+	<item id="23385" name="Life Stone: Adenian Underwear" additionalName="" type="EtcItem">
+		<!-- Life Stone for Adenian Underwear. Can use through the town blacksmith. -->
+		<set name="icon" val="BranchSys3.icon1.g_life_dust_general_adenia" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23386" name="Agathion - Griffin" additionalName="Wind Walk" type="Armor">
+		<!-- Can summon Griffin when equipped. -->
+		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="23387" name="Blessed Griffin Egg" additionalName="1-day" type="EtcItem">
+		<!-- This Blessed Griffin Egg will be of great help to you. -->
+		<set name="icon" val="BranchSys3.Icon.g_threehead_source" />
+		<set name="time" val="86400" />
+	</item>
+	<item id="23388" name="Transformation Scroll Pack" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Transformation Scroll. Which could it be? -->
+		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23389" name="XP Rune II (Lv. 1-95) 100% Pack (1-hour)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing XP Rune II (Lv. 1-95) 100% (1-hour). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23390" name="XP Rune II (Lv. 1-95) 100% Pack (3-hour)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing XP Rune II (Lv. 1-95) 100% (3-hour). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23391" name="XP Rune II (Lv. 1-95) 100%" additionalName="1-hour" type="EtcItem">
+		<!-- If stored in the inventory, acquired XP/ SP + 100%. Lv. 95 or below. 1-hour. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="time" val="3600" />
+	</item>
+	<item id="23392" name="XP Rune II (Lv. 1-95) 100%" additionalName="3-hour" type="EtcItem">
+		<!-- If stored in the inventory, acquired XP/ SP + 100%. Lv. 95 or below. 3-hour. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="time" val="10800" />
+	</item>
+	<item id="23393" name="Brilliant Talisman Pack" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Talisman (R-grade). -->
+		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23394" name="Scroll: Seal Weapon Pack" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Scroll: Seal Weapon (D - R99-grade). -->
+		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23395" name="Scroll: Seal Armor Pack" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Scroll: Seal Armor (D - R99-grade). -->
+		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23396" name="Scroll: Enchant Weapon Pack" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Scroll: Enchant Weapon (D - R-grade). -->
+		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23397" name="Scroll: Enchant Armor Pack" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Scroll: Enchant Armor (D - R-grade). -->
+		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23398" name="Blessed Scroll: Enchant Weapon Pack" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Blessed Scroll: Enchant Weapon (D - R-grade). -->
+		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23399" name="Blessed Scroll: Enchant Armor Pack" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Blessed Scroll: Enchant Armor (D - R-grade). -->
+		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

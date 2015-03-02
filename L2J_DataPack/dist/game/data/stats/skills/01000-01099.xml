@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="1001" levels="10" name="Soul Cry" enchantGroup1="1">
+	<skill id="1001" levels="15" name="Soul Cry" enchantGroup1="1">
 		<!-- Confirmed CT2.5 -->
-		<table name="#magicLvl"> 1 14 25 35 40 48 56 60 66 72 </table>
-		<table name="#mdot"> 0 0 1 2 2 2 3 3 4 4 </table>
-		<table name="#mpInitialConsume"> 1 2 3 3 4 5 6 6 7 7 </table>
-		<table name="#pAtk"> 4.5 14 33.5 66.5 90.5 141.5 208.5 247 310 375.5 </table>
+		<table name="#magicLvl"> 1 14 25 35 40 48 56 60 66 72 78 85 90 95 99 </table>
+		<table name="#mdot"> 0 0 1 2 2 2 3 3 4 4 5 5 6 6 7 </table> <!-- Guessed -->
+		<table name="#mAtk"> 0 0 0 0 0 0 1.05 1.05 1.07 1.1 1.12 1.14 1.16 1.18 1.2 </table>
+		<table name="#mDef"> 0 0 0 0 0 0 0 1.05 1.07 1.1 1.12 1.14 1.16 1.18 1.2 </table>
+		<table name="#pAtkAdd"> 2 3 0 0 0 0 0 0 0 0 0 0 0 0 0 </table>
+		<table name="#pAtkMul"> 0 0 1.04 1.05 1.05 1.05 1.05 1.05 1.07 1.1 1.12 1.14 1.16 1.18 1.2 </table>
+		<table name="#pDef"> 0 0 0 0 0 1.05 1.05 1.05 1.07 1.1 1.12 1.14 1.16 1.18 1.2 </table>
 		<table name="#ench1patk"> 418 421 424 427 430 433 436 439 442 445 448 451 454 457 460 463 466 469 472 475 478 481 484 487 490 493 496 499 502 505 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="icon" val="icon.skill1001" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="mpInitialConsume" val="1" />
 		<set name="operateType" val="T" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
@@ -19,7 +21,7 @@
 		<for>
 			<effect name="ManaDamOverTime" ticks="5">
 				<param power="#mdot" />
-				<add stat="pAtk" val="#pAtk" />
+				<add stat="pAtk" val="#pAtkAdd" />
 			</effect>
 		</for>
 		<enchant1for>
@@ -29,7 +31,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="1002" levels="3" name="Flame Chant" enchantGroup1="1" enchantGroup2="1">
+	<skill id="1002" levels="3" name="Chant of Flame" enchantGroup1="1" enchantGroup2="1">
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#effectPoints"> 285 418 532 </table>
 		<table name="#magicLvl"> 30 44 56 </table>
@@ -725,7 +727,7 @@
 			</effect>
 		</enchant3for>
 	</skill>
-	<skill id="1033" levels="3" name="Resist Poison" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1033" levels="3" name="Poison Resistance" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#effectPoints"> 331 379 418 </table>
 		<table name="#magicLvl"> 35 40 44 </table>
@@ -1459,7 +1461,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1071" levels="14" name="Surrender To Water" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1071" levels="14" name="Surrender to Water" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<!-- Confirmed CT2.5 -->
 		<table name="#effectPoints"> -379 -418 -457 -495 -532 -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
 		<table name="#magicLvl"> 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
@@ -1560,7 +1562,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1073" levels="2" name="Kiss of Eva" enchantGroup1="1" enchantGroup2="1">
+	<skill id="1073" levels="2" name="Eva's Kiss" enchantGroup1="1" enchantGroup2="1">
 		<table name="#abnormalLvls"> 2 3 </table>
 		<table name="#breath"> 5 7 </table>
 		<table name="#effectPoints"> 121 417 </table>
@@ -1596,7 +1598,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1074" levels="14" name="Surrender To Wind" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1074" levels="14" name="Surrender to Wind" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<!-- Confirmed CT2.5 -->
 		<table name="#effectPoints"> -379 -418 -457 -495 -532 -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
 		<table name="#magicLvl"> 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
@@ -1744,7 +1746,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1083" levels="17" name="Surrender To Fire" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1083" levels="17" name="Surrender to Fire" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 3 3 3 4 4 4 4 4 4 4 4 4 4 4 4 4 4 </table>
 		<table name="#castRange"> 750 750 750 900 900 900 900 900 900 900 900 900 900 900 900 900 900 </table>

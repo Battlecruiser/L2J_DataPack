@@ -1,0 +1,1087 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="19100" levels="1" name="Light Armor Mastery - Test">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Spd. And Skill Critical Rate increase depending on DEX. -->
+		<set name="icon" val="icon.skill19100" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="19101" levels="1" name="Chain Blow - Test">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts damage with 33717 Power added to P. Atk. Over-hit. Critical hit. Half-kill. Requires a dagger or dual dagger. Additional damage occurs with Bleed. -->
+		<set name="icon" val="icon.skill19101" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1130" />
+		<set name="coolTime" val="700" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="19102" levels="1" name="Chaos Sympathy">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Temporarily makes a participant in the Ceremony of Chaos invincible. -->
+		<set name="icon" val="icon.skill1505" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="300" />
+	</skill>
+	<skill id="19103" levels="1" name="Resident Power">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For clan members owning a residence, Max CP + 700, and PvP Def. + 3%. -->
+		<set name="icon" val="icon.skill0050" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="19104" levels="1" name="Resident Power">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For clan members owning a residence, Max CP + 1000, and PvP Def. + 5%. -->
+		<set name="icon" val="icon.skill0050" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19105" levels="1" name="Resident Advantage">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For clan members level 1 - 84 owning a residence, Atk. Spd./ Casting Spd/ Speed + 13%. -->
+		<set name="icon" val="icon.skill0820" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="19106" levels="1" name="Resident Advantage">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For clan members level 1 - 84 owning a residence, Atk. Spd./ Casting Spd/ Speed + 15%. -->
+		<set name="icon" val="icon.skill0820" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19107" levels="1" name="Resident Guidance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For clan members owning a residence, acquired XP + 3%. -->
+		<set name="icon" val="icon.skill0788_3" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="19108" levels="1" name="Resident Guidance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For clan members owning a residence, acquired XP + 5%. -->
+		<set name="icon" val="icon.skill0788_5" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19109" levels="4" name="Siege Golem's Spirit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Merge with a powerful Siege Golem. For 5 min., P. Def./ M. Def. + 50%, and resistance to bows/crossbows + 50%. Consumes 10 Crystals (R-grade). -->
+		<set name="icon" val="icon.skill19109" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="70" />
+		<set name="hitTime" val="10000" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="1200000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="19110" levels="5" name="Clan Resilience">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Clan members' resistance to Knock Back / Knock Down + 12. Elder or above only. -->
+		<set name="icon" val="icon.skill_tough_spirit" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="19111" levels="5" name="Clan Steadfastness">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Clan members' resistance to Aerial Yoke + 12. Elder or above only. -->
+		<set name="icon" val="icon.skill_heavy_heart" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="19112" levels="1" name="Clan Escape">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Teleports nearby clan members to town. Cannot be used in special places such as GM Consultation Services. Consumes 50 Spirit Ores and 2000 Individual Fame. Viscount or above only. -->
+		<set name="icon" val="icon.skill_pledge_party_recall" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="3500" />
+		<set name="reuseDelay" val="1800000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="19113" levels="1" name="Clan Escape Lock">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 sec., blocks target's Escape. Consumes 100 Spirit Ores and 3000 Individual Fame. Marquis or above only. -->
+		<set name="icon" val="icon.skill_recall" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="1800000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="19114" levels="1" name="Clan Resurrection Lock">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 sec., blocks target's Resurrection. Consumes 150 Spirit Ores and 1000 Clan Reputation. Marquis or above only. -->
+		<set name="icon" val="icon.skill_resurrection" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="1800000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="19115" levels="1" name="Air Bike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can mount the Air Bike. Must belong to a clan Lv. 5 or above. -->
+		<set name="icon" val="icon.etc_dwarf_craft_vehicle" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+	</skill>
+	<skill id="19116" levels="1" name="Summon Lyn Draco">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can mount a Lind Rider. -->
+		<set name="icon" val="icon.etc_lind_vehicle" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+	</skill>
+	<skill id="19117" levels="1" name="Dimensional Defense">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Status defense abilities are greatly increased by receiving dimensional abilities. -->
+		<set name="icon" val="icon.skill14216" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="19118" levels="4" name="Bike Ability">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Blend in with enemies to avoid their notice. If you attack in this state, the entire party becomes exposed. -->
+		<table name="#mpConsumes"> 61 63 67 70 </table>
+		<set name="icon" val="icon.skill_transform_etc" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="4000" />
+	</skill>
+	<skill id="19119" levels="1" name="Noblesse Grace">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Retains target's buffs/debuffs upon death, except for Noblesse Grace and Lucky Charm. Consumes 1000 Spirit Ore. -->
+		<set name="icon" val="icon.skill1323" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="500" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="19120" levels="4" name="Noble Shield">
+		<!-- P. Def. + 2%. -->
+		<table name="#bonus"> 1.02 1.04 1.06 1.08 </table>
+		<set name="icon" val="icon.skill19120" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pDef" val="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19121" levels="4" name="Noble Magic Barrier">
+		<!-- M. Def. + 3%. -->
+		<table name="#bonus"> 1.03 1.05 1.07 1.10 </table>
+		<set name="icon" val="icon.skill19121" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mDef" val="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19122" levels="4" name="Noble Blessed Body">
+		<!-- Max HP + 6%. -->
+		<table name="#bonus"> 1.06 1.10 1.12 1.16 </table>
+		<set name="icon" val="icon.skill1045" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxHp" val="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19123" levels="4" name="Noble Haste">
+		<!-- Atk. Spd. + 2%. -->
+		<table name="#bonus"> 1.02 1.04 1.06 1.09 </table>
+		<set name="icon" val="icon.skill1086" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19124" levels="2" name="Noble Knight Buffs">
+		<!-- Paralysis/Stun success rate and defense rate + 5%. -->
+		<table name="#bonus"> 5 10 </table>
+		<set name="icon" val="icon.skill19124" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="AttackTrait">
+				<param PARALYZE="#bonus" SHOCK="#bonus" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param PARALYZE="#bonus" SHOCK="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19125" levels="2" name="Noble Critical Focus">
+		<!-- Physical Skill Critical Rate + 5%. -->
+		<table name="#bonus"> 1.05 1.10 </table>
+		<set name="icon" val="icon.skill0193" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="physicalSkillPower" val="#bonus" /> <!-- TODO: Implement proper stat! -->
+			</effect>
+		</for>
+	</skill>
+	<skill id="19126" levels="2" name="Noble Mindset">
+		<!-- MP Recovery Bonus + 4. -->
+		<table name="#bonus"> 4 10 </table>
+		<set name="icon" val="icon.skill0229" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="regMp" val="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19127" levels="2" name="Noble Guidance">
+		<!-- P. Accuracy + 8, M. Accuracy + 8, servitor's P. Accuracy + 15. -->
+		<table name="#bonus"> 8 16 </table>
+		<set name="icon" val="icon.skill19127" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="accCombat" val="#bonus" />
+				<add stat="accMagic" val="#bonus" />
+				<!-- TODO: Implement servitor's p acc -->
+				<!-- TODO: Implement the hidden skill -->
+			</effect>
+		</for>
+	</skill>
+	<skill id="19128" levels="2" name="Noble Sting">
+		<!-- Physical Skill Critical Damage + 5%. -->
+		<set name="icon" val="icon.skill10655" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="physicalSkillPower" val="1.05" /> <!-- TODO: Implement proper stat! -->
+			</effect>
+		</for>
+	</skill>
+	<skill id="19129" levels="2" name="Noble Protection">
+		<!-- Critical rate in a normal attack - 2%. -->
+		<table name="#bonus"> 1.02 1.04 </table>
+		<set name="icon" val="icon.skill19129" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="rCrit" val="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19130" levels="2" name="Noble Attributes">
+		<!-- Attack Attribute + 20. 6 Attributes Resistance + 20. -->
+		<table name="#bonus"> 20 50 </table>
+		<set name="icon" val="icon.skill19130" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<!-- TODO: Handle attack attribute -->
+				<add stat="fireRes" val="#bonus" />
+				<add stat="waterRes" val="#bonus" />
+				<add stat="windRes" val="#bonus" />
+				<add stat="earthRes" val="#bonus" />
+				<add stat="holyRes" val="#bonus" />
+				<add stat="darkRes" val="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19131" levels="2" name="Noble Expertise">
+		<!-- P. Atk. + 3% when a melee two-handed weapon is equipped. Atk. Spd. + 3% when a shield is equipped. -->
+		<table name="#bonus"> 1.03 1.05 </table>
+		<set name="icon" val="icon.skill19131" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="#bonus">
+					<and>
+						<using kind="SWORD,BLUNT,POLE" />
+						<using slot="lrhand" />
+					</and>
+				</mul>
+				<mul stat="pAtkSpd" val="#bonus">
+					<using kind="SHIELD" />
+				</mul>
+			</effect>
+		</for>
+	</skill>
+	<skill id="19132" levels="2" name="Noble Mind">
+		<!-- Physical Skill Cooldown - 3%. -->
+		<table name="#bonus"> 0.97 0.95 </table>
+		<set name="icon" val="icon.skill19132" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pReuse" val="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19133" levels="1" name="Noble Heavy Armor Shield">
+		<!-- When equipped with Heavy Armor, P. Def. + 3% and Max MP + 6%. -->
+		<set name="icon" val="icon.skill19133" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pDef" val="1.03">
+					<using kind="HEAVY" />
+				</mul>
+				<mul stat="maxHp" val="1.06">
+					<using kind="HEAVY" />
+				</mul>
+			</effect>
+		</for>
+	</skill>
+	<skill id="19134" levels="4" name="Noble Heavy Armor Defense">
+		<!-- When equipped with Heavy Armor, P. Def. + 3%. -->
+		<table name="#bonus"> 1.03 1.05 1.07 1.10 </table>
+		<set name="icon" val="icon.skill19134" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pDef" val="#bonus">
+					<using kind="HEAVY" />
+				</mul>
+			</effect>
+		</for>
+	</skill>
+	<skill id="19135" levels="4" name="Noble Heavy Armor Attack">
+		<!-- When equipped with Heavy Armor, P. Atk. + 2%. -->
+		<table name="#bonus"> 1.02 1.04 1.06 1.08 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill19135" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="#bonus">
+					<using kind="HEAVY" />
+				</mul>
+			</effect>
+		</for>
+	</skill>
+	<skill id="19136" levels="3" name="Noble Prayer">
+		<!-- Received heal amount + 3%. -->
+		<table name="#bonus"> 1.03 1.06 1.09 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill1273" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="healEffect" val="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19137" levels="1" name="Noble Guts">
+		<!-- Received damage - 10%. -->
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill19137" />
+		<set name="targetType" val="NONE" />
+		<!-- TODO: Handle received damage - 10% -->
+	</skill>
+	<skill id="19138" levels="1" name="Noble Frenzy">
+		<!-- Physical Skill Power + 10%. -->
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill19138" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="physicalSkillPower" val="1.10" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19139" levels="4" name="Noble Might">
+		<!-- P. Atk. + 2%. -->
+		<table name="#bonus"> 1.02 1.04 1.06 1.09 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill19139" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19140" levels="2" name="Noble Cost">
+		<!-- Physical Skill MP Consumption - 5%. -->
+		<table name="#bonus"> 0.95 0.90 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill19140" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="PhysicalMpConsumeRate" val="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19141" levels="2" name="Noble Wind Walk">
+		<!-- Speed + 5. -->
+		<table name="#bonus"> 5 10 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill1204" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="runSpd" val="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19142" levels="2" name="Noble Warrior Buffs">
+		<!-- Stun/Restrain success rate and defense rate + 5%. -->
+		<table name="#bonus"> 5 10 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill19142" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<!-- TODO: Handle Restrain trait -->
+			<effect name="AttackTrait">
+				<param SHOCK="#bonus" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param SHOCK="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19143" levels="2" name="Noble Focus">
+		<!-- P. Critical Rate + 20. -->
+		<table name="#bonus"> 20 40 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill1077" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="rCrit" val="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19144" levels="2" name="Noble Backfire">
+		<!-- Rear Damage + 3%. -->
+		<table name="#bonus"> 1.03 1.05 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill0030" />
+		<set name="targetType" val="SELF" />
+		<!-- TODO: Handle rear damage stat -->
+	</skill>
+	<skill id="19145" levels="2" name="Noble Death Whisper">
+		<!-- Physical Critical Damage + 3%. -->
+		<table name="#bonus"> 1.03 1.05 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill4278" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="cAtk" val="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19146" levels="2" name="Noble Protection Magic">
+		<!-- Chance of receiving an M. Critical attack - 2%. -->
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill19146" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<!-- TODO: Find which skill triggers and under what circumstances -->
+		</for>
+	</skill>
+	<skill id="19147" levels="2" name="Noble Ambush">
+		<!-- Spd. + 6 when not engaged in battle. -->
+		<table name="#bonus"> 6 12 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill1905" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="runSpd" val="#bonus">
+					<player incombat="false" />
+				</add>
+			</effect>
+		</for>
+	</skill>
+	<skill id="19148" levels="1" name="Noble Light Armor Blessing">
+		<!-- When equipped with Light Armor, Max HP + 6% and Max MP + 6%. -->
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill19148" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxHp" val="1.06">
+					<using kind="LIGHT" />
+				</mul>
+				<mul stat="maxMp" val="1.06">
+					<using kind="LIGHT" />
+				</mul>
+			</effect>
+		</for>
+	</skill>
+	<skill id="19149" levels="4" name="Noble Anti Magic">
+		<!-- When equipped with Light Armor, M. Def. + 3%. -->
+		<table name="#bonus"> 1.03 1.05 1.09 1.12 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill0146" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mDef" val="#bonus">
+					<using kind="LIGHT" />
+				</mul>
+			</effect>
+		</for>
+	</skill>
+	<skill id="19150" levels="4" name="Noble Light Armor Attack">
+		<!-- When equipped with Light Armor, P. Atk. + 2%. -->
+		<table name="#bonus"> 1.02 1.04 1.06 1.08 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill19150" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="#bonus">
+					<using kind="LIGHT" />
+				</mul>
+			</effect>
+		</for>
+	</skill>
+	<skill id="19151" levels="3" name="Noble Vampiric Rage">
+		<!-- During an attack, there is a chance of restoring 3% of damage as HP. -->
+		<table name="#bonus"> 3 6 9 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill1268" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="absorbDam" val="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19152" levels="1" name="Noble Endurance">
+		<!-- Damage received while immobile decreases - 21%. -->
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill19152" />
+		<set name="targetType" val="SELF" />
+		<!-- TODO: Handle this skill -->
+	</skill>
+	<skill id="19153" levels="1" name="Noble Critical Boost">
+		<!-- P. Critical Rate + 50, M. Critical Rate + 20, and Skill Mastery Rate + 50%. -->
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill19153" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="rCrit" val="50" />
+				<add stat="mCritRate" val="20" />
+				<mul stat="skillCriticalProbability" val="1.50" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19154" levels="4" name="Noble Empower">
+		<!-- M. Atk. + 3% and recovery magic Power + 47. -->
+		<table name="#bonus"> 1.03 1.06 1.09 1.14 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill1059" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtk" val="#bonus" />
+				<!-- TODO: Handle recovery magic power stat -->
+			</effect>
+		</for>
+	</skill>
+	<skill id="19155" levels="2" name="Noble Acumen">
+		<!-- Casting Spd. + 2%. -->
+		<table name="#bonus"> 1.02 1.04 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill1085" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtkSpd" val="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19156" levels="2" name="Noble Wizard Buffs">
+		<!-- Restrain/Mind success rate and defense rate + 5%. -->
+		<table name="#bonus"> 5 10 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill19156" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<!-- TODO: Handle Restrain trait -->
+			<effect name="AttackTrait">
+				<param DERANGEMENT="#bonus" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param DERANGEMENT="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19157" levels="2" name="Noble Wild Magic">
+		<!-- M. Critical Rate + 20. -->
+		<table name="#bonus"> 20 30 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill1303" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="mCritRate" val="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19158" levels="2" name="Noble Blessed Soul">
+		<!-- Max MP + 6%. -->
+		<table name="#bonus"> 1.06 1.10	</table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill1048" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxMp" val="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19159" levels="2" name="Noble Resistance">
+		<!-- Debuff Resistance + 5%. -->
+		<table name="#bonus"> 5 10 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill11567" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<sub stat="debuffVuln" val="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19160" levels="2" name="Noble Magic Death">
+		<!-- M. Critical Damage + 3% and recovery magic Power + 94. -->
+		<table name="#bonus"> 1.03 1.05 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill19160" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mCritPower" val="#bonus" />
+				<!-- TODO: Handle recovery magic power stat -->
+			</effect>
+		</for>
+	</skill>
+	<skill id="19161" levels="2" name="Noble Protection Armor">
+		<!-- Critical Damage during a normal attack - 2%. -->
+		<table name="#bonus"> 1.02 1.04 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill19161" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="rCrit" val="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19162" levels="2" name="Noble Recovery">
+		<!-- MP Recovery Bonus + 8 while running. -->
+		<table name="#bonus"> 1.03 1.05 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill19162" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="regMp" val="#bonus">
+					<player running="true" />
+				</mul>
+			</effect>
+		</for>
+	</skill>
+	<skill id="19163" levels="2" name="Noble Skill Mastery">
+		<!-- Skill Mastery rate + 30%. -->
+		<table name="#bonus"> 1.30 1.50 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill0330" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="skillCriticalProbability" val="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19164" levels="1" name="Noble Robe Shield">
+		<!-- When equipped with a Robe, P. Def. + 3% and Max MP + 6%. -->
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill19164" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pDef" val="1.03">
+					<using kind="MAGIC" />
+				</mul>
+				<mul stat="maxMp" val="1.06">
+					<using kind="MAGIC" />
+				</mul>
+			</effect>
+		</for>
+	</skill>
+	<skill id="19165" levels="4" name="Noble Robe Defense">
+		<!-- When equipped with a Robe, P. Def. + 3%. -->
+		<table name="#bonus"> 1.03 1.05 1.07 1.10 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill19165" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pDef" val="#bonus">
+					<using kind="MAGIC" />
+				</mul>
+			</effect>
+		</for>
+	</skill>
+	<skill id="19166" levels="4" name="Noble Robe Attack">
+		<!-- When equipped with a Robe, M. Atk. + 3% and recovery skill Power + 47. -->
+		<table name="#bonus"> 1.03 1.06 1.09 1.12 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill19166" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtk" val="#bonus">
+					<using kind="MAGIC" />
+				</mul>
+				<!-- TODO: Handle recovery skill power stat -->
+			</effect>
+		</for>
+	</skill>
+	<skill id="19167" levels="3" name="Noble Heal Boost">
+		<!-- Recovery effects not affected by magic + 3%. -->
+		<table name="#bonus"> 1.03 1.06 1.09 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill19167" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="regHp" val="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19168" levels="1" name="Noble Gain">
+		<!-- MP Recovery Bonus + 33 and Max MP + 10%. -->
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill19168" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="regMp" val="33" />
+				<mul stat="maxMp" val="1.10" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19169" levels="1" name="Noble Advance">
+		<!-- MP Recovery Bonus + 33 and magic skill Cooldown - 5%. -->
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill19169" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="regMp" val="33" />
+				<mul stat="mReuse" val="1.05" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19170" levels="2" name="Noble Blessing">
+		<!-- P. Def. + 3%. -->
+		<table name="#bonus"> 1.03 1.05 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill19120" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pDef" val="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19171" levels="4" name="Noble Condition">
+		<!-- Max HP + 6%. -->
+		<table name="#bonus"> 1.06 1.10 1.14 1.20 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill1045" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxHp" val="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19172" levels="2" name="Noble Eagle Eye">
+		<!-- P. Accuracy + 8, M. Accuracy + 8, servitor's P. Accuracy + 15. -->
+		<table name="#bonus"> 8 16 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill19127" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="accCombat" val="#bonus" />
+				<add stat="accMagic" val="#bonus" />
+				<!-- TODO: Implement servitor's p acc -->
+			</effect>
+		</for>
+	</skill>
+	<skill id="19173" levels="2" name="Noble Emblem">
+		<!-- Attack Attribute + 20. 6 Attributes Resistance + 20. -->
+		<table name="#bonus"> 20 50 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill19130" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<!-- TODO: Handle attack attribute -->
+				<add stat="fireRes" val="#bonus" />
+				<add stat="waterRes" val="#bonus" />
+				<add stat="windRes" val="#bonus" />
+				<add stat="earthRes" val="#bonus" />
+				<add stat="holyRes" val="#bonus" />
+				<add stat="darkRes" val="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19174" levels="4" name="Noble Earth">
+		<!-- Physical P. Def. + 3%. -->
+		<table name="#bonus"> 1.03 1.05 1.06 1.08 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill19121" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pDef" val="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19175" levels="2" name="Noble Life">
+		<!-- Max HP + 6%. -->
+		<table name="#bonus"> 1.06 1.10 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill1045" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxHp" val="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19176" levels="2" name="Noble Vision">
+		<!-- P. Accuracy + 8, M. Accuracy + 8, servitor's P. Accuracy + 15. -->
+		<table name="#bonus"> 8 16 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill19127" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="accCombat" val="#bonus" />
+				<add stat="accMagic" val="#bonus" />
+				<!-- TODO: Implement servitor's p acc -->
+			</effect>
+		</for>
+	</skill>
+	<skill id="19177" levels="2" name="Noble Spirit">
+		<!-- Attack Attribute + 20. 6 Attributes Resistance + 20. -->
+		<table name="#bonus"> 20 50 </table>
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill19130" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<!-- TODO: Handle attack attribute -->
+				<add stat="fireRes" val="#bonus" />
+				<add stat="waterRes" val="#bonus" />
+				<add stat="windRes" val="#bonus" />
+				<add stat="earthRes" val="#bonus" />
+				<add stat="holyRes" val="#bonus" />
+				<add stat="darkRes" val="#bonus" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19178" levels="1" name="Knight Hidden Trigger">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="19179" levels="1" name="Warrior Hidden Trigger">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="19180" levels="1" name="Rogue Hidden Trigger">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="19181" levels="1" name="Archer Hidden Trigger">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="19182" levels="1" name="Wizard Hidden Trigger">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="19183" levels="1" name="Enchanter Hidden Trigger">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="19184" levels="1" name="Summoner Hidden Trigger">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="19185" levels="1" name="Healer Hidden Trigger">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="19186" levels="1" name="Rampage Shield">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Has a chance of increasing P. Atk. when Shield Defense is successful. Requires Abilities. -->
+		<set name="icon" val="icon.skill19186" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="19187" levels="1" name="Blockade">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 sec., blocks target's P./M. Skills. Requires Abilities. -->
+		<set name="icon" val="icon.skill19187" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="34" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="19188" levels="1" name="Snicker">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When hit in PvP, has a chance of canceling target's target. Requires Abilities. -->
+		<set name="icon" val="icon.skill19188" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="19189" levels="1" name="Retreating Shot">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 30534 power added to P. Atk., and cancels their target while moving 450 grids backward. Requires Abilities and bow/crossbow. -->
+		<set name="icon" val="icon.skill10858" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="34" />
+		<set name="castRange" val="450" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+	</skill>
+	<skill id="19190" levels="1" name="Brilliant Magic">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Maximum MP + 10%, and MP Recovery Bonus + 8 when running. Requires Abilities. -->
+		<set name="icon" val="icon.skill19190" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="19191" levels="1" name="Mist Armor">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Damage Received - 10%. Requires Abilities. -->
+		<set name="icon" val="icon.skill19191" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="19192" levels="1" name="Mass Servitor Berserk">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 sec., servitor's P. Atk. + 15%, and Critical Damage + 15%. Requires Abilities. -->
+		<set name="icon" val="icon.skill19192" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="67" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="19193" levels="1" name="Divine Blessing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Healing power and magic power increases when using Radiant Heal. Requires Abilities. -->
+		<set name="icon" val="icon.skill19193" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="19196" levels="1" name="Rampage Shield">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 5 sec., P. Atk. + 30%. Requires a shield. -->
+		<set name="icon" val="icon.skill19186" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isMagic" val="4" />
+	</skill>
+	<skill id="19197" levels="1" name="Divine Blessing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 15 sec., M. Atk. + 16%, and Healing Magic Power + 242. -->
+		<set name="icon" val="icon.skill19193" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isMagic" val="4" />
+	</skill>
+	<skill id="19198" levels="1" name="Cancel Target">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0445" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1100" />
+		<set name="reuseDelay" val="10000" />
+	</skill>
+	<skill id="19199" levels="1" name="Hurricane Sign">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 sec., P./M. Atk. + 10%. -->
+		<set name="icon" val="icon.skill1996" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="4" />
+	</skill>
+</list>

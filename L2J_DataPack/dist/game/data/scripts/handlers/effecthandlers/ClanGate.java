@@ -45,7 +45,7 @@ public final class ClanGate extends AbstractEffect
 			final L2Clan clan = info.getEffected().getActingPlayer().getClan();
 			if (clan != null)
 			{
-				SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.COURT_MAGICIAN_CREATED_PORTAL);
+				SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.COURT_WIZARD_THE_PORTAL_HAS_BEEN_CREATED);
 				clan.broadcastToOtherOnlineMembers(msg, info.getEffected().getActingPlayer());
 			}
 		}

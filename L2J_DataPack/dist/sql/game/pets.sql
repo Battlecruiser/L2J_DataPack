@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS `pets` (
   `curHp` int(9) unsigned DEFAULT '0',
   `curMp` int(9) unsigned DEFAULT '0',
   `exp` bigint(20) unsigned DEFAULT '0',
-  `sp` int(10) unsigned DEFAULT '0',
+  `sp` bigint(10) unsigned DEFAULT '0',
   `fed` int(10) unsigned DEFAULT '0',
   `ownerId` int(10) NOT NULL DEFAULT '0',
   `restore` enum('true','false') NOT NULL DEFAULT 'false',

@@ -54,7 +54,7 @@ public class OlympiadObservation implements IBypassHandler
 			{
 				if (!Olympiad.getInstance().inCompPeriod())
 				{
-					activeChar.sendPacket(SystemMessageId.THE_OLYMPIAD_GAME_IS_NOT_CURRENTLY_IN_PROGRESS);
+					activeChar.sendPacket(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
 					return false;
 				}
 				
@@ -74,13 +74,13 @@ public class OlympiadObservation implements IBypassHandler
 				
 				if (OlympiadManager.getInstance().isRegisteredInComp(activeChar))
 				{
-					activeChar.sendPacket(SystemMessageId.WHILE_YOU_ARE_ON_THE_WAITING_LIST_YOU_ARE_NOT_ALLOWED_TO_WATCH_THE_GAME);
+					activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_OBSERVE_A_OLYMPIAD_GAMES_MATCH_WHILE_YOU_ARE_ON_THE_WAITING_LIST);
 					return false;
 				}
 				
 				if (!Olympiad.getInstance().inCompPeriod())
 				{
-					activeChar.sendPacket(SystemMessageId.THE_OLYMPIAD_GAME_IS_NOT_CURRENTLY_IN_PROGRESS);
+					activeChar.sendPacket(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
 					return false;
 				}
 				

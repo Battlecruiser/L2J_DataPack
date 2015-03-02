@@ -1,0 +1,995 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="14200" levels="1" name="Blessing of Garden">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Critical P. Atk. is increased by 40%. -->
+		<set name="icon" val="icon.skill1253" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14201" levels="1" name="Apherus Invincibility">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Invincible status. -->
+		<set name="icon" val="icon.skill0442" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="hitTime" val="500" />
+	</skill>
+	<skill id="14202" levels="1" name="Garden Malice">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Poison status. -->
+		<set name="icon" val="icon.skill1168" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="100" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14203" levels="1" name="Hold">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Hold status. -->
+		<set name="icon" val="icon.skill4047" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="2" />
+		<set name="castRange" val="150" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14204" levels="1" name="Hold">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Hold status. -->
+		<set name="icon" val="icon.skill4047" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="2" />
+		<set name="castRange" val="150" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14205" levels="1" name="Oath of Loyalty">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14206" levels="2" name="Lachik Evolution">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Lachik Evaluation P. Atk. 100% increased. -->
+		<set name="icon" val="icon.skill1068" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="2" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14207" levels="1" name="Pull Up">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="300" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="4000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14208" levels="1" name="Reverberation of Shock">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Knock back. -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="300" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="14209" levels="1" name="Millipede Paralysis">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0279" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="80" />
+		<set name="castRange" val="400" />
+		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14210" levels="1" name="Teredor Hiding Presentation">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1660" />
+	</skill>
+	<skill id="14211" levels="1" name="Teredor Appearance Presentation">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1660" />
+	</skill>
+	<skill id="14212" levels="1" name="Manifestation of Authority">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill14289" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="8000" />
+	</skill>
+	<skill id="14213" levels="1" name="Manifestation of Authority">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill14289" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="8000" />
+	</skill>
+	<skill id="14214" levels="1" name="Manifestation of Authority">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill14289" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="8000" />
+	</skill>
+	<skill id="14215" levels="1" name="Barrier of Reflection">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Reflects 600% of damage. -->
+		<set name="icon" val="icon.skill0086" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="hitTime" val="5000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14216" levels="1" name="Energy Seal">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Yoke status. -->
+		<set name="icon" val="icon.skill14216" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="2" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="600000" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14217" levels="1" name="Yoke Status">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Momentarily immobilized. -->
+		<set name="icon" val="icon.skill1042" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14218" levels="1" name="Istina's Mark">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Istina's Mark is received. Handling Istina any further will be difficult. -->
+		<set name="icon" val="icon.skill5239" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="200" />
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14219" levels="1" name="Death Blow">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="500" />
+		<set name="hitTime" val="2000" />
+	</skill>
+	<skill id="14220" levels="1" name="Flood">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Flood -->
+		<set name="icon" val="icon.skill14220" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="2" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14221" levels="1" name="Acid Eruption">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="5000" />
+	</skill>
+	<skill id="14222" levels="1" name="Acid Eruption">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+	</skill>
+	<skill id="14223" levels="1" name="Acid Eruption">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+	</skill>
+	<skill id="14224" levels="1" name="Energy Control Device">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Energy Control -->
+		<set name="icon" val="icon.skill14216" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="400" />
+		<set name="hitTime" val="25000" />
+		<set name="reuseDelay" val="20000" />
+	</skill>
+	<skill id="14225" levels="8" name="Control Stage 1">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Control Stage 1 -->
+		<table name="#icons"> icon.skill14225_1 icon.skill14225_2 icon.skill14225_3 icon.skill14225_4 icon.skill14225_5 icon.skill14225_5 icon.skill14225_5 icon.skill14225_5 </table>
+		<set name="icon" val="#icons" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="14226" levels="1" name="Flood Cancel">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill14226" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="14227" levels="1" name="Regeneration of Limit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Istina's life force is quickly regenerated. -->
+		<set name="icon" val="icon.skill1229" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14228" levels="1" name="Energy Regeneration Stage 1">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Energy Regeneration -->
+		<set name="icon" val="icon.skill1229" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="2000" />
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14229" levels="1" name="Energy Regeneration Stage 2">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Energy Regeneration -->
+		<set name="icon" val="icon.skill1229" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="2000" />
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14230" levels="1" name="Energy Regeneration Stage 3">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Energy Regeneration -->
+		<set name="icon" val="icon.skill1229" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="2000" />
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14231" levels="1" name="Creation's Rage">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Stun status. -->
+		<set name="icon" val="icon.skill0048" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="hitTime" val="4000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14232" levels="1" name="Yoke of Thorns">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Speed is decreased by 50%. -->
+		<set name="icon" val="icon.skill0127" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="300" />
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14233" levels="1" name="Shock Wave">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="300" />
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14234" levels="1" name="Mind Contamination">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP and Max MP are decreased by 50%. -->
+		<set name="icon" val="icon.skill1045" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14235" levels="1" name="Maguen Steal">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="50" />
+		<set name="hitTime" val="2000" />
+	</skill>
+	<skill id="14236" levels="1" name="Ultimate Forcefulness">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Looking at Taklacan with forcefulness. -->
+		<set name="icon" val="icon.skill0018" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="200" />
+		<set name="hitTime" val="2000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14237" levels="1" name="Earth Vibration">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Vibration spreads through the body to decrease HP continuously. -->
+		<set name="icon" val="icon.skill0096" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14238" levels="1" name="Sound Blade">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Physical and magic skills are blocked. -->
+		<set name="icon" val="icon.skill1336" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="200" />
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14239" levels="1" name="Sound Prison">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Hold status. -->
+		<set name="icon" val="icon.skill4047" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="1200" />
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14240" levels="1" name="Poison Eruption">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Poison status. -->
+		<set name="icon" val="icon.skill4035" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="200" />
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14241" levels="1" name="Poison Fog">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Poison status. -->
+		<set name="icon" val="icon.skill4035" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="200" />
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14242" levels="1" name="Wide Area Curse">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- HP is decreased by the decaying darkness. -->
+		<set name="icon" val="icon.skill1107" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="400" />
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14243" levels="1" name="Hero's Influence">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0024" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="2000" />
+		<set name="hitTime" val="10000" />
+		<set name="reuseDelay" val="10000" />
+	</skill>
+	<skill id="14244" levels="1" name="Region Status Metastasis">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skilltransform3" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14245" levels="1" name="Rotten Net">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Stun status. -->
+		<set name="icon" val="icon.skill14245" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="87" />
+		<set name="castRange" val="700" />
+		<set name="hitTime" val="4000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14246" levels="1" name="Earth Demolition">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0096" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="400" />
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14247" levels="1" name="Black Vortex">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0054" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="1000" />
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14248" levels="1" name="Leap Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Stun status. -->
+		<set name="icon" val="icon.skill0793" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="400" />
+		<set name="hitTime" val="100" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14249" levels="1" name="Recovery Howl">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Flood -->
+		<set name="icon" val="icon.skill0918" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="2" />
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14250" levels="1" name="Touch of Death">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Stun status. -->
+		<set name="icon" val="icon.skill0260" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="300" />
+		<set name="hitTime" val="1500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14251" levels="1" name="Death Rap">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="45" />
+		<set name="hitTime" val="2000" />
+	</skill>
+	<skill id="14252" levels="1" name="Hands of Hell">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Pulled away. -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14253" levels="1" name="Drag to Hell">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Poison status. -->
+		<set name="icon" val="icon.skill1168" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14254" levels="1" name="Flash">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="500" />
+	</skill>
+	<skill id="14255" levels="1" name="Large Flash">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="500" />
+	</skill>
+	<skill id="14256" levels="2" name="Powerful Slash">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="14257" levels="2" name="Nearby Slash">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="14258" levels="2" name="Scalp">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="14259" levels="2" name="Double Slash">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="14260" levels="2" name="HP Drain">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill1147" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14261" levels="2" name="Coagulated Blood">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill1275" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14262" levels="2" name="Flame Hurl">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill1230" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14263" levels="2" name="Electric Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<table name="#isDebuffs"> false true </table>
+		<set name="icon" val="icon.skill1275" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="#isDebuffs" />
+	</skill>
+	<skill id="14264" levels="1" name="Poison Cloud">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Poison status. -->
+		<set name="icon" val="icon.skill1167" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14265" levels="1" name="Resurrection">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill1016" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14266" levels="1" name="Yoke">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Hold status. -->
+		<set name="icon" val="icon.skill1201" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="2" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14267" levels="2" name="Hole Punch">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="14268" levels="1" name="Stun and Fear">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Fear status. -->
+		<set name="icon" val="icon.skill1092" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14269" levels="1" name="Foot Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Hold status. -->
+		<set name="icon" val="icon.skill1201" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="2" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14270" levels="1" name="Spinning Blade of Fear">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Fear status. -->
+		<set name="icon" val="icon.skill1092" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14271" levels="1" name="Spinning Blade">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Hold status. -->
+		<set name="icon" val="icon.skill1201" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="2" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14272" levels="1" name="Powerful Blow">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="14273" levels="1" name="Indiscriminate Rush">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Knock back. -->
+		<set name="icon" val="icon.skill0494" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="400" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14274" levels="1" name="Mechanic Shot">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill1275" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="2000" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14275" levels="1" name="Swing">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0245" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="2000" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="4000" />
+	</skill>
+	<skill id="14276" levels="1" name="Particle Repair">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0045" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="2000" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="14277" levels="1" name="Orbis Spawn">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decaying darkness. -->
+		<set name="icon" val="icon.skill11273" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1000" />
+		<set name="hitTime" val="1000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14278" levels="1" name="Orbis De-spawn">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1000" />
+		<set name="hitTime" val="5000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14279" levels="1" name="Octavis' Influence">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Octavis' influence. -->
+		<set name="icon" val="icon.skill14279" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1000" />
+		<set name="hitTime" val="12000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14280" levels="1" name="Octavis' Influence">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Octavis' influence. -->
+		<set name="icon" val="icon.skill14279" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1000" />
+		<set name="hitTime" val="12000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14281" levels="1" name="Octavis' Influence">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Octavis' influence. -->
+		<set name="icon" val="icon.skill14279" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1000" />
+		<set name="hitTime" val="5000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14282" levels="1" name="Octavis' Obedience">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1000" />
+		<set name="hitTime" val="5000" />
+	</skill>
+	<skill id="14283" levels="1" name="Golem Connection">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14284" levels="1" name="Golem Connection Break">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14285" levels="1" name="Octavis' Arrow Shaft">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Octavis' arrow shaft. Throw a spear on the floor to inflict powerful attack damage. -->
+		<set name="icon" val="icon.skill0507" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1000" />
+		<set name="hitTime" val="5000" />
+	</skill>
+	<skill id="14286" levels="1" name="Teleport">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1000" />
+		<set name="hitTime" val="3000" />
+	</skill>
+	<skill id="14287" levels="1" name="Enhance">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1000" />
+		<set name="hitTime" val="10000" />
+	</skill>
+	<skill id="14288" levels="1" name="Agathion Cute Trick - Magmeld">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- See the summoned spirit perform cute tricks. -->
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="3000" />
+	</skill>
+	<skill id="14289" levels="2" name="Manifestation of Authority">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Atk Spd, Speed, Casting Spd, Max HP, Max MP decreased; HP consumed every second. -->
+		<set name="icon" val="icon.skill14289" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="7000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14291" levels="1" name="Self Defense">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Cannot be targeted. -->
+		<set name="icon" val="icon.skill0445" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="3000" />
+	</skill>
+	<skill id="14292" levels="7" name="Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="150" />
+		<set name="hitTime" val="1500" />
+	</skill>
+	<skill id="14293" levels="7" name="Range Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0036" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="3000" />
+	</skill>
+	<skill id="14294" levels="7" name="Stun Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Stun status. -->
+		<set name="icon" val="icon.skill0100" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="150" />
+		<set name="hitTime" val="1500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14295" levels="7" name="Range Stun Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Stun status. -->
+		<set name="icon" val="icon.skill0048" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="3000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14296" levels="7" name="Shot">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0056" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1500" />
+	</skill>
+	<skill id="14297" levels="7" name="Stun Shot">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Stun status. -->
+		<set name="icon" val="icon.skill0101" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14298" levels="7" name="Stab">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Bleed. Speed is decreased. -->
+		<set name="icon" val="icon.skill0096" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="150" />
+		<set name="hitTime" val="1500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="14299" levels="3" name="Divinity Burn">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill1265" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="1" />
+	</skill>
+</list>

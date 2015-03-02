@@ -12,7 +12,7 @@
 		<set name="crystal_type" val="C" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1380" />
-		<set name="price" val="6130000" />
+		<set name="price" val="1226000" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
@@ -38,7 +38,7 @@
 		<set name="crystal_type" val="C" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1380" />
-		<set name="price" val="6130000" />
+		<set name="price" val="1226000" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
@@ -64,7 +64,7 @@
 		<set name="crystal_type" val="C" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1380" />
-		<set name="price" val="6130000" />
+		<set name="price" val="1226000" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
@@ -78,13 +78,13 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="5803" type="EtcItem" name="Lucky Charm (D-Grade)">
+	<item id="5803" type="EtcItem" name="Lucky Charm (D-grade)">
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
-		<set name="price" val="330" />
+		<set name="price" val="9600" />
 		<set name="reuse_delay" val="10000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -94,13 +94,13 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="5804" type="EtcItem" name="Lucky Charm (C-Grade)">
+	<item id="5804" type="EtcItem" name="Lucky Charm (C-grade)">
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
-		<set name="price" val="660" />
+		<set name="price" val="28000" />
 		<set name="reuse_delay" val="10000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -110,13 +110,13 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="5805" type="EtcItem" name="Lucky Charm (B-Grade)">
+	<item id="5805" type="EtcItem" name="Lucky Charm (B-grade)">
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
-		<set name="price" val="1300" />
+		<set name="price" val="56000" />
 		<set name="reuse_delay" val="10000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -126,13 +126,13 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="5806" type="EtcItem" name="Lucky Charm (A-Grade)">
+	<item id="5806" type="EtcItem" name="Lucky Charm (A-grade)">
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
-		<set name="price" val="2700" />
+		<set name="price" val="96000" />
 		<set name="reuse_delay" val="10000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -142,13 +142,13 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="5807" type="EtcItem" name="Lucky Charm (S-Grade)">
+	<item id="5807" type="EtcItem" name="Lucky Charm (S-grade)">
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
-		<set name="price" val="5000" />
+		<set name="price" val="160000" />
 		<set name="reuse_delay" val="10000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -165,7 +165,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
-		<set name="price" val="500000" />
+		<set name="price" val="50000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="5809" type="EtcItem" name="Spellbook: Aqua Splash">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
@@ -582,6 +583,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2177-1" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -656,7 +658,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5865" type="EtcItem" name="Carnivore Spore">
+	<item id="5865" type="EtcItem" name="Carnivore Spores">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -667,7 +669,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5866" type="EtcItem" name="Herbivorous Spore">
+	<item id="5866" type="EtcItem" name="Herbivorous Spores">
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -711,7 +713,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5870" type="EtcItem" name="Receipt of Supply">
+	<item id="5870" type="EtcItem" name="Supply Receipt">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -766,7 +768,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5875" type="EtcItem" name="Titan Lamp">
+	<item id="5875" type="EtcItem" name="Lesser Giant's Lamp">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -777,7 +779,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5876" type="EtcItem" name="Titan Lamp">
+	<item id="5876" type="EtcItem" name="Lesser Giant's Lamp">
 		<set name="icon" val="icon.etc_bead_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -788,7 +790,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5877" type="EtcItem" name="Titan Lamp">
+	<item id="5877" type="EtcItem" name="Lesser Giant's Lamp">
 		<set name="icon" val="icon.etc_bead_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -799,7 +801,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5878" type="EtcItem" name="Titan Lamp">
+	<item id="5878" type="EtcItem" name="Lesser Giant's Lamp">
 		<set name="icon" val="icon.etc_bead_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -810,7 +812,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5879" type="EtcItem" name="Titan Lamp">
+	<item id="5879" type="EtcItem" name="Lesser Giant's Lamp">
 		<set name="icon" val="icon.etc_bead_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -821,7 +823,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5880" type="EtcItem" name="Broken Titan Lamp">
+	<item id="5880" type="EtcItem" name="Broken Lesser Giant's Lamp">
 		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -975,7 +977,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5894" type="EtcItem" name="Stone of Chill">
+	<item id="5894" type="EtcItem" name="Stone of Icy Air">
 		<set name="icon" val="icon.etc_crystal_ball_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />

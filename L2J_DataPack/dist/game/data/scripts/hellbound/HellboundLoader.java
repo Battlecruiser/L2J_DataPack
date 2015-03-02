@@ -55,9 +55,6 @@ import hellbound.Instances.UrbanArea.UrbanArea;
 
 import java.util.logging.Logger;
 
-import quests.Q00130_PathToHellbound.Q00130_PathToHellbound;
-import quests.Q00133_ThatsBloodyHot.Q00133_ThatsBloodyHot;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.AdminCommandHandler;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
@@ -113,9 +110,6 @@ public final class HellboundLoader
 		DemonPrinceFloor.class,
 		UrbanArea.class,
 		RankuFloor.class,
-		// Quests
-		Q00130_PathToHellbound.class,
-		Q00133_ThatsBloodyHot.class,
 	};
 	
 	public static void main(String[] args)

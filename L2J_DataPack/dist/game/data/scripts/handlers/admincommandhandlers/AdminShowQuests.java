@@ -120,7 +120,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 		
 		if (target == null)
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return false;
 		}
 		
@@ -339,7 +339,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 					Quest.deleteQuestInDb(qs, true);
 					qs.exitQuest(true);
 					target.sendPacket(new QuestList());
-					target.sendPacket(new ExShowQuestMark(qs.getQuest().getId()));
+					target.sendPacket(new ExShowQuestMark(qs.getQuest().getId(), qs.getCond()));
 					break;
 				}
 				case "CREATE":
@@ -348,7 +348,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 					qs.setState(State.STARTED);
 					qs.set("cond", "1");
 					target.sendPacket(new QuestList());
-					target.sendPacket(new ExShowQuestMark(qs.getQuest().getId()));
+					target.sendPacket(new ExShowQuestMark(qs.getQuest().getId(), qs.getCond()));
 					val[0] = qs.getQuest().getName();
 					break;
 				}
@@ -357,7 +357,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 					qs = QuestManager.getInstance().getQuest(Integer.parseInt(val[0])).newQuestState(target);
 					qs.exitQuest(false);
 					target.sendPacket(new QuestList());
-					target.sendPacket(new ExShowQuestMark(qs.getQuest().getId()));
+					target.sendPacket(new ExShowQuestMark(qs.getQuest().getId(), qs.getCond()));
 					val[0] = qs.getQuest().getName();
 					break;
 				}
@@ -374,7 +374,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 				qs.set(val[1], val[2]);
 			}
 			target.sendPacket(new QuestList());
-			target.sendPacket(new ExShowQuestMark(qs.getQuest().getId()));
+			target.sendPacket(new ExShowQuestMark(qs.getQuest().getId(), qs.getCond()));
 		}
 		actor.sendMessage("");
 		outval[0] = "name";

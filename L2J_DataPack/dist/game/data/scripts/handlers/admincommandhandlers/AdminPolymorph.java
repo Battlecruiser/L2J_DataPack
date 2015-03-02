@@ -60,7 +60,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
 		}
 		else if (command.startsWith("admin_transform"))
@@ -68,14 +68,14 @@ public class AdminPolymorph implements IAdminCommandHandler
 			final L2Object obj = activeChar.getTarget();
 			if ((obj == null) || !obj.isPlayer())
 			{
-				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				return false;
 			}
 			
 			final L2PcInstance player = obj.getActingPlayer();
 			if (activeChar.isSitting())
 			{
-				activeChar.sendPacket(SystemMessageId.CANNOT_TRANSFORM_WHILE_SITTING);
+				activeChar.sendPacket(SystemMessageId.YOU_CANNOT_TRANSFORM_WHILE_SITTING);
 				return false;
 			}
 			
@@ -98,7 +98,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 			
 			if (player.isFlyingMounted() || player.isMounted())
 			{
-				activeChar.sendPacket(SystemMessageId.YOU_CANNOT_POLYMORPH_WHILE_RIDING_A_PET);
+				activeChar.sendPacket(SystemMessageId.YOU_CANNOT_TRANSFORM_WHILE_RIDING_A_PET);
 				return false;
 			}
 			
@@ -176,7 +176,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 		}
 	}
 	
@@ -196,7 +196,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 		}
 	}
 }

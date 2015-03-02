@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="30500" levels="25" name="Lateral Hit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 22 Power added to P. Atk., and decreases their P. Def. by 10% for 10 sec. 20% more damage if target is Stunned. Requires a fist weapon. -->
+		<table name="#mpConsumes"> 8 17 23 29 35 39 44 47 52 55 59 63 67 69 70 71 73 73 74 75 75 75 76 76 77 </table>
+		<set name="icon" val="icon.skill30500" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="30501" levels="24" name="Backspin Blow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 129 Power added to P. Atk. Requires a fist weapon. -->
+		<table name="#mpConsumes"> 17 23 29 35 39 44 47 52 55 59 63 67 69 70 71 73 73 74 75 75 75 76 76 77 </table>
+		<set name="icon" val="icon.skill30501" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="30502" levels="21" name="Chin Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Knocks down target for 3 sec. Requires a fist weapon. -->
+		<table name="#mpConsumes"> 34 37 41 45 49 54 57 61 65 68 70 71 72 73 74 75 75 75 76 76 77 </table>
+		<set name="icon" val="icon.skill30502" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="30503" levels="8" name="Spinning Kick">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 35167 Power added to P. Atk. Ignores Shield Defense. Requires a fist weapon. -->
+		<table name="#mpConsumes"> 81 81 82 83 83 83 84 84 </table>
+		<set name="icon" val="icon.skill30503" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="60" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="30504" levels="13" name="Gravity Hit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 10417 Power added to P. Atk. Ignores 50% of target's P. Def. Requires a fist weapon. -->
+		<table name="#mpConsumes"> 75 77 78 79 80 81 82 82 83 83 84 84 85 </table>
+		<set name="icon" val="icon.skill30504" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="2500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="9000" />
+	</skill>
+	<skill id="30505" levels="7" name="Pressure Punch">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 17266 Power added to P. Atk, causing target to tumble toward you. Requires a fist weapon. -->
+		<table name="#mpConsumes"> 149 150 151 151 152 153 155 </table>
+		<set name="icon" val="icon.skill30505" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="30506" levels="11" name="Distant Kick">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks frontal target with 5164 Power added to P. Atk. and blows them away. Requires a fist weapon. -->
+		<table name="#mpConsumes"> 141 143 146 147 149 150 151 151 152 153 155 </table>
+		<set name="icon" val="icon.skill30506" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="80" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="1000" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="30507" levels="21" name="Left Sidestep">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Disables targeting and finds weakness to the enemy's left. Enemy is stunned for 5 sec. Requires a fist weapon. -->
+		<table name="#mpConsumes"> 13 14 16 18 19 21 23 24 26 27 28 28 29 29 29 30 30 30 30 30 30 </table>
+		<set name="icon" val="icon.skill30507" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="300" />
+		<set name="hitTime" val="100" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="7000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="30508" levels="24" name="Right Sidestep">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by 10%. Requires a fist weapon. -->
+		<table name="#mpConsumes"> 7 9 11 14 15 17 19 20 22 23 25 26 27 28 28 29 29 29 30 30 30 30 30 31 </table>
+		<set name="icon" val="icon.skill30508" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="300" />
+		<set name="hitTime" val="100" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="7000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="30509" levels="4" name="Back Step">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Disables targeting and retreats backwards, recovering 10% HP. Requires a Fist Weapon. -->
+		<table name="#mpConsumes"> 27 30 35 44 </table>
+		<set name="icon" val="icon.skill30509" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="280" />
+		<set name="hitTime" val="100" />
+		<set name="reuseDelay" val="60000" />
+	</skill>
+	<skill id="30510" levels="1" name="Infighter">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Using Right Sidestep increases P. Critical Rate. -->
+		<set name="icon" val="icon.skill30510" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="30511" levels="3" name="Air Light">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 min., you're less bound by gravity and P. Atk. + 10%. -->
+		<table name="#mpConsumes"> 20 44 45 </table>
+		<set name="icon" val="icon.skill30511" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+	</skill>
+	<skill id="30512" levels="1" name="Distortion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 sec., distorts space to attack from behind. Requires a fist weapon. -->
+		<set name="icon" val="icon.skill30512" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="41" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="180000" />
+	</skill>
+	<skill id="30514" levels="2" name="Fluid Weave">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 3 sec., P. Skill Evasion + 50%, P. Evasion + 50, M. Evasion + 50. Requires a fist weapon. -->
+		<table name="#mpConsumes"> 13 29 </table>
+		<set name="icon" val="icon.skill30514" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="200" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="30515" levels="1" name="Spallation">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Creates a protective sphere that diffuses all ranged attacks and debuffs for 30 sec. Damaged if attacked within the sphere. Requires a fist weapon. -->
+		<set name="icon" val="icon.skill30515" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="31" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="300000" />
+	</skill>
+	<skill id="30516" levels="1" name="Gravity Barrier">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Cancels all debuffs and becomes invincible against all debuffs and damage. -->
+		<set name="icon" val="icon.skill30516" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="30" />
+		<set name="hitTime" val="200" />
+		<set name="reuseDelay" val="300000" />
+	</skill>
+	<skill id="30517" levels="8" name="Heavy Hand">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases the effect of gravity on nearby enemies to slow them down and block them from teleporting. Requires a fist weapon. -->
+		<table name="#mpConsumes"> 73 74 75 75 75 76 76 77 </table>
+		<set name="icon" val="icon.skill30517" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="30518" levels="8" name="Reverse Weight">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks nearby enemies with 19693 Power added to P. Atk. and knocks them down. Damage increases with the number of enemies affected. Requires a fist weapon. -->
+		<table name="#mpConsumes"> 1479 1487 1500 1510 1516 1523 1532 1544 </table>
+		<set name="icon" val="icon.skill30518" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="2500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="6" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="30519" levels="1" name="Warped Space">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Creates a warped space where the enemy is trapped and their abilities are decreased. Requires a fist weapon. -->
+		<set name="icon" val="icon.skill30519" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="772" />
+		<set name="hitTime" val="2500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="600000" />
+	</skill>
+	<skill id="30520" levels="2" name="Steel Mind">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 sec., HP stays at 1. Speed + 50, P. Atk. + 15%, P. Critical Damage + 10%, Skill Critical Damage + 10%, and Knock Back / Knock Down / Pull / Aerial Yoke / Aggression Resistance + 90. Normal attacks have normal damage x 5. When duration ends, 30% of HP is restored. Requires a fist weapon. -->
+		<table name="#mpConsumes"> 221 232 </table>
+		<set name="icon" val="icon.skill30520" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="300000" />
+	</skill>
+	<skill id="30521" levels="1" name="Damage Up">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts normal damage x 5. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="1000" />
+	</skill>
+	<skill id="30522" levels="1" name="Eminent Attack Movement">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Speed has a chance to increase every time you receive damage. -->
+		<set name="icon" val="icon.skill30522" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="30523" levels="3" name="Battle Dash">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Speed + 10. -->
+		<set name="icon" val="icon.skill30523" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="4" />
+	</skill>
+	<skill id="30524" levels="1" name="Reliable Hit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Fixed damage. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+	</skill>
+	<skill id="30526" levels="1" name="Heavy Punch">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Has a chance to inflict normal damage x 5. Requires a Fist Weapon to activate. -->
+		<set name="icon" val="icon.skill30526" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="30527" levels="1" name="Twisted Space - NPC">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill1042" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="30528" levels="1" name="Spatial Trap">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Trapped in some space, your battle strength is weakened. -->
+		<set name="icon" val="icon.skill30525" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="30530" levels="12" name="Crushing Air">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Crushes the air to decrease target's battle strength. Requires a fist weapon. -->
+		<table name="#mpConsumes"> 34 35 35 36 36 37 37 37 37 38 38 38 </table>
+		<set name="icon" val="icon.skill30530" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="30532" levels="3" name="Inside Position">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases P. Critical Rate by 10. -->
+		<set name="icon" val="icon.skill30510" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="4" />
+	</skill>
+	<skill id="30540" levels="11" name="Eminent Fist Weapon Mastery">
+		<!-- When equipped with a fist weapon, P. Atk. + 10% and + 4. -->
+		<table name="#accCombat"> 0 2 3 3 3 4 4 8 8 8 8 </table>
+		<table name="#cAtkAdd"> 0 0 0 0 0 1.10 1.10 1.45 1.45 1.45 1.45 </table>
+		<table name="#magicLvl"> 5 20 40 52 64 76 80 85 90 95 99 </table>
+		<table name="#pAtkAdd"> 4 13 63 124 208 306 471 2156 2803 3342 4060 </table>
+		<table name="#pAtkMul"> 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.45 1.45 1.45 1.45 </table>
+		<table name="#rCrit"> 0 0 10 10 10 20 20 60 60 60 60 </table>
+		<set name="icon" val="icon.skill30524" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="rCrit" val="#rCrit">
+					<using kind="FIST,DUALFIST" />
+				</add>
+				<mul stat="pAtk" val="#pAtkMul">
+					<using kind="FIST,DUALFIST" />
+				</mul>
+				<add stat="pAtk" val="#pAtkAdd">
+					<using kind="FIST,DUALFIST" />
+				</add>
+				<add stat="accCombat" val="#accCombat">
+					<using kind="FIST,DUALFIST" />
+				</add>
+				<mul stat="cAtkAdd" val="#cAtkAdd">
+					<using kind="FIST,DUALFIST" />
+				</mul>
+				<mul stat="pAtkSpd" val="1.10">
+					<using kind="FIST,DUALFIST" />
+				</mul>
+			</effect>
+		</for>
+	</skill>
+	<skill id="30541" levels="11" name="Eminent Light Armor Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When equipped with light armor, P. Def. + 14. -->
+		<set name="icon" val="icon.skill10254" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="30542" levels="7" name="Eminent Stability">
+		<!-- Max HP + 58, HP Recovery Bonus + 2.5, MP Recovery Bonus + 1.2. -->
+		<table name="#maxHp"> 58 196 473 5961 6077 6194 6349</table>
+		<table name="#maxCp"> 0 0 231 291 347 404 481 </table>
+		<table name="#regHp"> 2.5 4.5 66.5 9 10 11 12 </table>
+		<table name="#regMp"> 1.2 1.8 2.4 3 4 5 6 </table>
+		<table name="#regCp"> 0 0 2.4 3 4 5 6 </table>
+		<table name="#runSpd"> 0 0 10 14 14 14 14 </table>
+		<table name="#magicLvl"> 20 40 76 85 90 95 99 </table>
+		<set name="icon" val="icon.skill11506" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="maxHp" val="#maxHp" />
+				<add stat="maxCp" val="#maxCp" />
+				<add stat="regCp" val="#regHp" />
+				<add stat="regHp" val="#regHp" />
+				<add stat="regMp" val="#regMp" />
+				<add stat="runSpd" val="#runSpd" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="30543" levels="2" name="Eminent Attribute Resistance">
+		<!-- Wind Resistance + 30. -->
+		<table name="#holyRes"> 0 30</table>
+		<table name="#magicLvl">76 85</table>
+		<set name="icon" val="icon.skill11006" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="windRes" val="30" />
+				<add stat="holyRes" val="#holyRes" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="30544" levels="2" name="Eminent Trait Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Hold/Mental Resistance + 30. -->
+		<set name="icon" val="icon.skill10005" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="30545" levels="3" name="Eminent Ability">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2. -->
+		<set name="icon" val="icon.skill0430" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+</list>

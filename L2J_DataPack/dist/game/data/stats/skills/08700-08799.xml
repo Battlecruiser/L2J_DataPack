@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="8700" levels="1" name="Special Talisman (R95-grade) - Shield Defense (Active)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Shield Defense by 1515 momentarily through the power of the talisman. -->
+		<set name="icon" val="icon.r85_talisman_pd_up_active" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="50" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="360000" />
+	</skill>
+	<skill id="8701" levels="1" name="Special Talisman (R99-grade) - Shield Defense (Active)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Shield Defense by 1638 momentarily through the power of the talisman. -->
+		<set name="icon" val="icon.r85_talisman_pd_up_active" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="50" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="360000" />
+	</skill>
+	<skill id="8702" levels="1" name="Special Talisman (R-grade) - Momentum">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.r85_talisman_md_up_passive" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8703" levels="1" name="Special Talisman (R90-grade) - Momentum">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.r85_talisman_md_up_passive" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8704" levels="1" name="Special Talisman (R95-grade) - Momentum">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.r85_talisman_md_up_passive" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8705" levels="1" name="Special Talisman (R99-grade) - Momentum">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.r85_talisman_md_up_passive" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8706" levels="1" name="Special Talisman (R-grade) - Momentum (Active)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Momentum by 5 momentarily through the power of the talisman. -->
+		<set name="icon" val="icon.r85_talisman_md_up_active" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="50" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="360000" />
+	</skill>
+	<skill id="8707" levels="1" name="Special Talisman (R90-grade) - Momentum (Active)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Momentum by 5 momentarily through the power of the talisman. -->
+		<set name="icon" val="icon.r85_talisman_md_up_active" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="50" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="360000" />
+	</skill>
+	<skill id="8708" levels="1" name="Special Talisman (R95-grade) - Momentum (Active)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Momentum by 5 momentarily through the power of the talisman. -->
+		<set name="icon" val="icon.r85_talisman_md_up_active" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="50" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="360000" />
+	</skill>
+	<skill id="8709" levels="1" name="Special Talisman (R99-grade) - Momentum (Active)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Momentum by 5 momentarily through the power of the talisman. -->
+		<set name="icon" val="icon.r85_talisman_md_up_active" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="50" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="360000" />
+	</skill>
+	<skill id="8710" levels="1" name="Special Talisman (R-grade) - Mana Drain (Active)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Momentarily absorbs 2 MP per attack with the power of Talisman. -->
+		<set name="icon" val="icon.r_talisman_mh_up_active" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="50" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="360000" />
+	</skill>
+	<skill id="8711" levels="1" name="Special Talisman (R90-grade) - Mana Drain (Active)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Momentarily absorbs 3 MP per attack with the power of Talisman. -->
+		<set name="icon" val="icon.r_talisman_mh_up_active" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="50" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="360000" />
+	</skill>
+	<skill id="8712" levels="1" name="Special Talisman (R95-grade) - Mana Drain (Active)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Momentarily absorbs 4 MP per attack with the power of Talisman. -->
+		<set name="icon" val="icon.r_talisman_mh_up_active" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="50" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="360000" />
+	</skill>
+	<skill id="8713" levels="1" name="Special Talisman (R99-grade) - Mana Drain (Active)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Momentarily absorbs 5 MP per attack with the power of Talisman. -->
+		<set name="icon" val="icon.r_talisman_mh_up_active" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="50" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="360000" />
+	</skill>
+	<skill id="8714" levels="1" name="Steal Mana">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.r_talisman_mh_up_active" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="3000" />
+	</skill>
+	<skill id="8715" levels="1" name="Steal Mana">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.r_talisman_mh_up_active" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="3000" />
+	</skill>
+	<skill id="8716" levels="1" name="Steal Mana">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.r_talisman_mh_up_active" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="3000" />
+	</skill>
+	<skill id="8717" levels="1" name="Steal Mana">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.r_talisman_mh_up_active" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="3000" />
+	</skill>
+	<skill id="8718" levels="1" name="Special Talisman (R-grade) - Blood Siphon (Active)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Momentarily absorbs HP by 1% per attack with the power of Talisman. -->
+		<set name="icon" val="icon.r_talisman_cr_up_active" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="50" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="360000" />
+	</skill>
+	<skill id="8719" levels="1" name="Special Talisman (R90-grade) - Blood Siphon (Active)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Momentarily absorbs HP by 1% per attack with the power of Talisman. -->
+		<set name="icon" val="icon.r_talisman_cr_up_active" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="50" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="360000" />
+	</skill>
+	<skill id="8720" levels="1" name="Special Talisman (R95-grade) - Blood Siphon (Active)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Momentarily absorbs HP by 1% per attack with the power of Talisman. -->
+		<set name="icon" val="icon.r_talisman_cr_up_active" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="50" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="360000" />
+	</skill>
+	<skill id="8721" levels="1" name="Special Talisman (R99-grade) - Blood Siphon (Active)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Momentarily absorbs HP by 1% per attack with the power of Talisman. -->
+		<set name="icon" val="icon.r_talisman_cr_up_active" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="50" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="360000" />
+	</skill>
+	<skill id="8722" levels="1" name="Special Talisman (R-grade) - Increase Range">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases the range of bows and crossbows by 10 when equipped. -->
+		<set name="icon" val="icon.r85_talisman_pa_up_passive" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8723" levels="1" name="Special Talisman (R90-grade) - Increase Range">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases the range of bows and crossbows by 10 when equipped. -->
+		<set name="icon" val="icon.r85_talisman_pa_up_passive" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8724" levels="1" name="Special Talisman (R95-grade) - Increase Range">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases the range of bows and crossbows by 10 when equipped. -->
+		<set name="icon" val="icon.r85_talisman_pa_up_passive" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8725" levels="1" name="Special Talisman (R99-grade) - Increase Range">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases the range of bows and crossbows by 10 when equipped. -->
+		<set name="icon" val="icon.r85_talisman_pa_up_passive" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8726" levels="1" name="Special Talisman (R-grade) - Increase Range (Active)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases the range of bows and crossbows by 20 momentarily through the power of the talisman. -->
+		<set name="icon" val="icon.r85_talisman_pa_up_active" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="50" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="360000" />
+	</skill>
+	<skill id="8727" levels="1" name="Special Talisman (R90-grade) - Increase Range (Active)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases the range of bows and crossbows by 20 momentarily through the power of the talisman. -->
+		<set name="icon" val="icon.r85_talisman_pa_up_active" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="50" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="360000" />
+	</skill>
+	<skill id="8728" levels="1" name="Special Talisman (R95-grade) - Increase Range (Active)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases the range of bows and crossbows by 20 momentarily through the power of the talisman. -->
+		<set name="icon" val="icon.r85_talisman_pa_up_active" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="50" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="360000" />
+	</skill>
+	<skill id="8729" levels="1" name="Special Talisman (R99-grade) - Increase Range (Active)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases the range of bows and crossbows by 20 momentarily through the power of the talisman. -->
+		<set name="icon" val="icon.r85_talisman_pa_up_active" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="50" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="360000" />
+	</skill>
+	<skill id="8730" levels="1" name="Special Talisman (R-grade) - Increase Servitor Enhancement (Active)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.r85_sp_talisman_sm_st_active" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="50" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="360000" />
+	</skill>
+	<skill id="8731" levels="1" name="Special Talisman (R90-grade) - Increase Servitor Enhancement (Active)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.r90_sp_talisman_sm_st_active" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="50" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="360000" />
+	</skill>
+	<skill id="8732" levels="1" name="Special Talisman (R95-grade) - Increase Servitor Enhancement (Active)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.r95_sp_talisman_sm_st_active" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="50" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="360000" />
+	</skill>
+	<skill id="8733" levels="1" name="Special Talisman (R99-grade) - Increase Servitor Enhancement (Active)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.r99_sp_talisman_sm_st_active" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="50" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="360000" />
+	</skill>
+	<skill id="8734" levels="1" name="Special Talisman (R99-grade) - Increase Servitor Enhancement (Active)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.r_sp_talisman_sm_rt_active" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="50" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="360000" />
+	</skill>
+	<skill id="8735" levels="1" name="Special Talisman (R-grade) - Increase Magic Cancel">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases Magic Cancel Rate by 10% when equipped. -->
+		<set name="icon" val="icon.r85_talisman_ma_up_passive" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8736" levels="1" name="Special Talisman (R-grade) - Increase Magic Cancel (Active)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Prevents magic from being canceled momentarily through the power of the talisman. -->
+		<set name="icon" val="icon.r85_talisman_ma_up_active" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="50" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="360000" />
+	</skill>
+	<skill id="8737" levels="1" name="Special Talisman (R-grade) - MP Recovery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases natural MP recovery amount by 0.66 when equipped. -->
+		<set name="icon" val="icon.r85_talisman_mp_up_passive" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8738" levels="1" name="Special Talisman (R90-grade) - MP Recovery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases natural MP recovery amount by 0.68 when equipped. -->
+		<set name="icon" val="icon.r85_talisman_mp_up_passive" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8739" levels="1" name="Special Talisman (R95-grade) - MP Recovery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases natural MP recovery amount by 0.70 when equipped. -->
+		<set name="icon" val="icon.r85_talisman_mp_up_passive" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8740" levels="1" name="Special Talisman (R99-grade) - MP Recovery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases natural MP recovery amount by 0.72 when equipped. -->
+		<set name="icon" val="icon.r85_talisman_mp_up_passive" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8741" levels="1" name="Special Talisman (R-grade) - Decrease MP Consumption">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases MP Consumption by 15% when equipped. -->
+		<set name="icon" val="icon.r85_talisman_mp_up_active" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8742" levels="1" name="Special Talisman (R-grade) - Enhance Heal">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases heal rate by 75 when equipped. -->
+		<set name="icon" val="icon.r85_talisman_hp_up_passive" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8743" levels="1" name="Special Talisman (R90-grade) - Enhance Heal">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases heal rate by 82 when equipped. -->
+		<set name="icon" val="icon.r85_talisman_hp_up_passive" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8744" levels="1" name="Special Talisman (R95-grade) - Enhance Heal">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases heal rate by 90 when equipped. -->
+		<set name="icon" val="icon.r85_talisman_hp_up_passive" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8745" levels="1" name="Special Talisman (R99-grade) - Enhance Heal">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases heal rate by 96 when equipped. -->
+		<set name="icon" val="icon.r85_talisman_hp_up_passive" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8746" levels="1" name="Special Talisman (R-grade) - Increase Heal Enhancement (Active)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases heal rate by 225 momentarily through the power of the talisman. -->
+		<set name="icon" val="icon.r85_talisman_hp_up_active" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="50" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="360000" />
+	</skill>
+	<skill id="8747" levels="1" name="Special Talisman (R90-grade) - Increase Heal Enhancement (Active)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases heal rate by 246 momentarily through the power of the talisman. -->
+		<set name="icon" val="icon.r85_talisman_hp_up_active" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="50" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="360000" />
+	</skill>
+	<skill id="8748" levels="1" name="Special Talisman (R95-grade) - Increase Heal Enhancement (Active)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases heal rate by 270 momentarily through the power of the talisman. -->
+		<set name="icon" val="icon.r85_talisman_hp_up_active" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="50" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="360000" />
+	</skill>
+	<skill id="8749" levels="1" name="Special Talisman (R99-grade) - Increase Heal Enhancement (Active)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases heal rate by 288 momentarily through the power of the talisman. -->
+		<set name="icon" val="icon.r85_talisman_hp_up_active" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="50" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="360000" />
+	</skill>
+	<skill id="8750" levels="1" name="Special Ability: Infinity Cutter">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases the enemy's P. Def. during a critical attack. Also increases Max HP, Max MP, Max CP, shield defense capability. Inflicts additional damage during PvP. Reflects some of the damage received back to the enemy. -->
+		<set name="icon" val="icon.weapon_the_sword_of_hero_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8751" levels="1" name="Decrease P. Def.">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Temporarily reduces P. Def. Effect 3. -->
+		<set name="icon" val="icon.skill0122" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="8752" levels="1" name="Special Ability: Infinity Avenger">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Seduces the enemy during a critical attack. Also increases Max HP, Max MP, Max CP, shield defense capability. Inflicts additional damage during PvP. Reflects some of the damage received back to the enemy. -->
+		<set name="icon" val="icon.weapon_the_axe_of_hero_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8753" levels="1" name="Discord">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8754" levels="1" name="Special Ability: Infinity Slasher">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Critical Rate/damage, Max HP, and Max CP. Inflicts additional damage during PvP. Reflects debuff attack back on enemy. -->
+		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8755" levels="1" name="Special Ability: Infinity Crusher">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Throws enemy into a state of stun during a critical attack. Increases Max HP, Max CP, Atk. Spd. Inflicts additional damage during PvP. Reflects debuff attack back on enemy. -->
+		<set name="icon" val="icon.weapon_the_hammer_of_hero_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8756" levels="1" name="Stun">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Momentarily stunned and unable to move. -->
+		<set name="icon" val="icon.skill0100" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="8757" levels="1" name="Special Ability: Infinity Dual">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Blocks enemy's ability to use physical skills during a critical attack. Increases Max HP, Max MP, Max CP, Critical Rate. Inflicts additional damage during PvP. Reflects debuff attack back on enemy. -->
+		<set name="icon" val="icon.weapon_the_dualsword_of_hero_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8758" levels="1" name="Restrain Physical Skills">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Momentarily blocks opponent's ability to use physical skills. -->
+		<set name="icon" val="icon.skill1064" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="8759" levels="1" name="Special Ability: Infinity Fighter">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Throws enemy into a state of stun during a critical attack. Increases Max HP, Max MP, Max CP, and Evasion. Inflicts additional damage during PvP. Reflects debuff attack back on enemy. -->
+		<set name="icon" val="icon.weapon_the_fist_of_hero_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8760" levels="1" name="Stun">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Momentarily stunned and unable to move. -->
+		<set name="icon" val="icon.skill0100" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="8761" levels="1" name="Special Ability: Infinity Dagger">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Momentarily the enemy's magic skills during a critical attack. Increases Max MP / Max CP / Atk. Spd. / MP Regeneration, Critical Rate when attacking from behind, and damage inflicted during PvP. restores HP by using some of the damage inflicted upon the enemy with a certain probability. -->
+		<set name="icon" val="icon.weapon_the_dagger_of_hero_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8762" levels="1" name="Restrain Magic Skills">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Momentarily blocks magic skills. -->
+		<set name="icon" val="icon.skill1064" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="8763" levels="1" name="Special Ability: Infinity Stormer">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- During a critical attack, this ability removes one or more of the enemy's buffs. It increases Max HP, Max CP, Atk. Spd., and Accuracy, and gives a bonus to damage inflicted on the enemy during PvP. It reflects debuffs targeted upon the character back upon the enemy. It enables the character to attack multiple enemies. -->
+		<set name="icon" val="icon.weapon_the_pole_of_hero_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8764" levels="1" name="Dispel">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8765" levels="1" name="Special Ability: Infinity Thrower">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases the enemy's Speed during a critical attack. Increases Max MP, Max CP, and damage inflicted during PvP. The skill Cooldown is short. Has a chance to decrease MP Consumption. -->
+		<set name="icon" val="icon.weapon_the_bow_of_hero_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8766" levels="1" name="Decrease Speed">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Temporarily decreases Speed. Effect 3. -->
+		<set name="icon" val="icon.skill1160" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="8767" levels="1" name="Special Ability: Infinity Retributer">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Regenerates HP by 100% when using a good magic. Increases Max HP, Max CP, M. Atk., and Critical Rate of a magic damage. Inflicts additional damage during PvP. Decreases MP Consumption and cancel rate when casting a magic. -->
+		<set name="icon" val="icon.weapon_the_staff_of_hero_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8768" levels="1" name="Full Recovery">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8769" levels="1" name="Special Ability: Infinity Magic">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Regenerates HP by 100% when using a good magic. Increases Max MP, Max CP, Casting Spd, MP Recovery Rate, and damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_the_mace_of_hero_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8770" levels="1" name="Full Recovery">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8771" levels="1" name="Special Ability: Infinity Rapier">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases the enemy's P. Def. on a critical attack. Increases Max HP, Max MP, Max CP. Inflicts additional damage during PvP. Reflects some of the damage received back to the enemy. In addition, when a critical hit occurs during a regular attack, there is a chance that the capacity of a party member's skills will be maximized. -->
+		<set name="icon" val="icon.weapon_infinity_rapier_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8772" levels="1" name="Special Ability: Infinity Sword">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Critical Rate/damage, Max HP, and Max CP. Inflicts additional damage during PvP. Reflects debuff attack back on enemy. -->
+		<set name="icon" val="icon.weapon_infinity_sword_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8773" levels="1" name="Special Ability: Infinity Shooter">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases the enemy's Speed during a critical attack. Increases Max MP, Max CP, and damage inflicted during PvP. The skill Cooldown is short. Has a chance to decrease MP Consumption. -->
+		<set name="icon" val="icon.weapon_infinity_shooter_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8774" levels="1" name="Special Talisman (R-grade) - Cancel Debuff (Active)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Cancels all debuffs momentarily through the power of the talisman. -->
+		<set name="icon" val="icon.r85_talisman_ma_up_active" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="50" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="320000" />
+	</skill>
+	<skill id="8775" levels="1" name="Immortal Bracelet">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- 5 Talisman can be equipped. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8776" levels="1" name="Twilight Bracelet">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- 5 Talisman can be equipped. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8777" levels="1" name="Seraph Bracelet">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- 5 Talisman can be equipped. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8778" levels="1" name="Eternal Bracelet">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- 5 Talisman can be equipped. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8779" levels="1" name="Istina's Bracelet">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- 5 Talisman can be equipped. -->
+		<set name="icon" val="icon.istina_bracelet_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8780" levels="1" name="Octavis' Bracelet">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- 5 Talisman can be equipped. -->
+		<set name="icon" val="icon.octavis_bracelet_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8781" levels="1" name="Equip Shield">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Shield Defense is additionally increased. -->
+		<set name="icon" val="icon.weapon_sacon_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8782" levels="1" name="Equip Shield">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Shield Defense is additionally increased. -->
+		<set name="icon" val="icon.kratere_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8783" levels="1" name="Equip Shield">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Shield Defense is additionally increased. -->
+		<set name="icon" val="icon.beranka_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8784" levels="1" name="Equip Shield">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Shield Defense is additionally increased. -->
+		<set name="icon" val="icon.weapon_akra_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8785" levels="1" name="Equip Shield">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Shield Defense is additionally increased. -->
+		<set name="icon" val="icon.heavengate_shield_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8786" levels="1" name="Top-grade Royal Guard Earring - Gludio">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max CP by 5% and Bleed Resistance by 15%, effectiveness of Stun attacks by 15% and Water Resistance by 10. -->
+		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8787" levels="1" name="Top-grade Royal Guard Earring - Dion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max CP by 5%, Poison Resistance by 15%, effectiveness of hold attacks by 15% and Holy Resistance by 10. -->
+		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8788" levels="1" name="Top-grade Royal Guard Earring - Giran">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max CP by 5%, Paralysis Resistance by 15%, effectiveness of bleed attacks by 15% and Wind Resistance by 10. -->
+		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8789" levels="1" name="Top-grade Royal Guard Earring - Oren">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max CP by 5%, Hold Resistance by 15%, effectiveness of paralysis attacks by 15% and Dark Resistance by 10. -->
+		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8790" levels="1" name="Top-grade Royal Guard Earring - Aden">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max CP by 5% and Stun Resistance by 15%, effectiveness of mental attacks by 15% and Earth Resistance by 10. -->
+		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8791" levels="1" name="Top-grade Royal Guard Earring - Innadril">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max CP by 5% and Stun Resistance by 15%, effectiveness of sleep attacks by 15% and Water Resistance by 10. -->
+		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8792" levels="1" name="Top-grade Royal Guard Earring - Goddard">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max CP by 5% and Sleep Resistance by 15%, effectiveness of Stun attacks by 15% and Fire Resistance by 10. -->
+		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8793" levels="1" name="Top-grade Royal Guard Earring - Rune">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max CP by 5%, Hold Resistance by 15%, effectiveness of Poison attacks by 15% and Fire Resistance by 10. -->
+		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8794" levels="1" name="Top-grade Royal Guard Earring - Schuttgart">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max CP by 5%, Mental Attack Resistance by 15%, effectiveness of hold attacks by 15% and Wind Resistance by 10. -->
+		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8795" levels="1" name="Top-grade Royal Guard Ring - Gludio">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Earth Resistance by 15. -->
+		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8796" levels="1" name="Top-grade Royal Guard Ring - Dion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Water Resistance by 15. -->
+		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8797" levels="1" name="Top-grade Royal Guard Ring - Giran">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Fire Resistance by 15. -->
+		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8798" levels="1" name="Top-grade Royal Guard Ring - Oren">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Earth Resistance by 15. -->
+		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="8799" levels="1" name="Top-grade Royal Guard Ring - Aden">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Holy Resistance by 15. -->
+		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+</list>

@@ -1,0 +1,59 @@
+<html><title>Admin Prime Points Manage</title><body>
+<center>
+<table width=270>
+<tr>
+<td width=45><button value="Main" action="bypass admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=180><center>Admin Prime Points Manage</center></td>
+<td width=45><button value="Back" action="bypass -h admin_admin6" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<font color=""><button action="" value="Target info:" width=270 height=21 back="L2UI_CT1.OlympiadWnd_DF_Watch_Down" fore="L2UI_CT1.OlympiadWnd_DF_Watch"></font>
+	<table width="270" border="0" bgcolor="444444">
+		<tr>
+			<td>Player Name:</td>
+			<td><font color="LEVEL">%targetName%<font></td>
+		</tr>
+		<tr>
+			<td>Player Points:</td>
+			<td><font color="LEVEL">%points%<font></td>
+		</tr>
+	</table>
+	<br>
+	<button action="" value="Target Operations" width=270 height=21 back="L2UI_CT1.OlympiadWnd_DF_Watch_Down" fore="L2UI_CT1.OlympiadWnd_DF_Watch">
+	<table width=256 border=0 bgcolor="444444">
+		<tr>
+			<td align=center><button value="Operation: " action="" width=130 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+			<td align=center><combobox width=120 height=17 var=ebox list=increase;decrease;set></td>
+		</tr>
+		<tr>
+			<td align=center><button value="Value: " action="" width=130 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+			<td align=center><edit var="val" width=120 type="number"></td>
+		</tr>
+	</table>
+	<table width="267" border="0" bgcolor="444444">
+		<tr>
+			<td><center><button value="Confirm" action="bypass -h admin_primepoints $ebox $val" width=125 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></center></td>
+		</tr>
+	</table>
+	<br>
+	<button action="" value="Reward More players" width=270 height=21 back="L2UI_CT1.OlympiadWnd_DF_Watch_Down" fore="L2UI_CT1.OlympiadWnd_DF_Watch">
+	<table width=256 border=0 bgcolor="444444">
+		<tr>
+			<td align=center><button value="Range: " action="" width=130 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+			<td align=center><edit var="range" width=120 type="number"></td>
+		</tr>
+		<tr>
+			<td align=center><button value="Value: " action="" width=130 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+			<td align=center><edit var="val2" width=120 type="number"></td>
+		</tr>
+	</table>
+	<table width="259" border="0" bgcolor="444444">
+		<tr>
+			<td><center><button value="Confirm" action="bypass -h admin_primepoints rewardOnline $val2 $range" width=125 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></center></td>
+		</tr>
+		<tr>
+			<td><center>Note: If you leave 'Range' empty or set 0, it will reward all online players.</center></td>
+		</tr>
+	</table>
+</center>
+</body></html>

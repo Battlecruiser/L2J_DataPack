@@ -110,7 +110,7 @@ public final class SanctumOftheLordsOfDawn extends AbstractNpcAI
 					HSWorld world = (HSWorld) tmpworld;
 					Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
 					inst.spawnGroup("high_priest_of_dawn");
-					player.sendPacket(SystemMessageId.SNEAK_INTO_DAWNS_DOCUMENT_STORAGE);
+					player.sendPacket(SystemMessageId.BY_USING_THE_INVISIBLE_SKILL_SNEAK_INTO_THE_DAWN_S_DOCUMENT_STORAGE);
 				}
 				break;
 			}
@@ -130,7 +130,7 @@ public final class SanctumOftheLordsOfDawn extends AbstractNpcAI
 					}
 					case GUARDS_OF_THE_DAWN_3:
 					{
-						npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getId(), NpcStringId.WHO_ARE_YOU_A_NEW_FACE_LIKE_YOU_CANT_APPROACH_THIS_PLACE));
+						npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getId(), NpcStringId.WHO_ARE_YOU_A_NEW_FACE_LIKE_YOU_CAN_T_APPROACH_THIS_PLACE));
 						break;
 					}
 				}
@@ -159,7 +159,7 @@ public final class SanctumOftheLordsOfDawn extends AbstractNpcAI
 		{
 			if (!(world instanceof HSWorld))
 			{
-				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
+				player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
 			}
 			else
 			{
@@ -214,9 +214,9 @@ public final class SanctumOftheLordsOfDawn extends AbstractNpcAI
 						if (world.doorst == 0)
 						{
 							openDoor(DOOR_ONE, world.getInstanceId());
-							talker.sendPacket(SystemMessageId.SNEAK_INTO_DAWNS_DOCUMENT_STORAGE);
-							talker.sendPacket(SystemMessageId.MALE_GUARDS_CAN_DETECT_FEMALES_DONT);
-							talker.sendPacket(SystemMessageId.FEMALE_GUARDS_NOTICE_BETTER_THAN_MALE);
+							talker.sendPacket(SystemMessageId.BY_USING_THE_INVISIBLE_SKILL_SNEAK_INTO_THE_DAWN_S_DOCUMENT_STORAGE);
+							talker.sendPacket(SystemMessageId.MALE_GUARDS_CAN_DETECT_THE_CONCEALMENT_BUT_THE_FEMALE_GUARDS_CANNOT);
+							talker.sendPacket(SystemMessageId.FEMALE_GUARDS_NOTICE_THE_DISGUISES_FROM_FAR_AWAY_BETTER_THAN_THE_MALE_GUARDS_DO_SO_BEWARE);
 							world.doorst++;
 							npc.decayMe();
 						}

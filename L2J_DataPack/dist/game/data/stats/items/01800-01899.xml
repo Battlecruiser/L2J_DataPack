@@ -7,7 +7,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
-		<set name="price" val="636" />
+		<set name="price" val="128" />
 		<set name="recipe_id" val="16" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
@@ -19,7 +19,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
-		<set name="price" val="397" />
+		<set name="price" val="80" />
 		<set name="recipe_id" val="17" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
@@ -31,7 +31,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
-		<set name="price" val="93" />
+		<set name="price" val="19" />
 		<set name="recipe_id" val="18" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
@@ -43,7 +43,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
-		<set name="price" val="238" />
+		<set name="price" val="48" />
 		<set name="recipe_id" val="19" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
@@ -95,6 +95,7 @@
 		<set name="recipe_id" val="23" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
+		<set name="commissionItemType" val="RECIPE" />
 	</item>
 	<item id="1808" type="EtcItem" name="Recipe: Soulshot (S-Grade)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
@@ -325,6 +326,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2040-1" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -409,7 +411,7 @@
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="4" />
+		<set name="weight" val="3" />
 		<set name="price" val="7" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="SoulShots" />
@@ -693,25 +695,25 @@
 		<set name="price" val="1000" />
 		<set name="handler" val="Maps" />
 	</item>
-	<item id="1864" type="EtcItem" name="Stem">
+	<item id="1864" type="EtcItem" name="Corroded Stem">
 		<set name="icon" val="icon.etc_branch_gold_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
-		<set name="price" val="100" />
+		<set name="price" val="20" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1865" type="EtcItem" name="Varnish">
+	<item id="1865" type="EtcItem" name="Corroded Varnish">
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
-		<set name="price" val="200" />
+		<set name="price" val="40" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1866" type="EtcItem" name="Suede">
+	<item id="1866" type="EtcItem" name="Corroded Suede">
 		<set name="icon" val="icon.etc_suede_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -720,7 +722,7 @@
 		<set name="price" val="300" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1867" type="EtcItem" name="Animal Skin">
+	<item id="1867" type="EtcItem" name="Corroded Animal Skin">
 		<set name="icon" val="icon.etc_leather_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -729,7 +731,7 @@
 		<set name="price" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1868" type="EtcItem" name="Thread">
+	<item id="1868" type="EtcItem" name="Corroded Thread">
 		<set name="icon" val="icon.etc_skein_white_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -738,7 +740,7 @@
 		<set name="price" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1869" type="EtcItem" name="Iron Ore">
+	<item id="1869" type="EtcItem" name="Corroded Iron Ore">
 		<set name="icon" val="icon.etc_lump_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -747,7 +749,7 @@
 		<set name="price" val="200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1870" type="EtcItem" name="Coal">
+	<item id="1870" type="EtcItem" name="Corroded Coal">
 		<set name="icon" val="icon.etc_coal_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -756,7 +758,7 @@
 		<set name="price" val="200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1871" type="EtcItem" name="Charcoal">
+	<item id="1871" type="EtcItem" name="Corroded Charcoal">
 		<set name="icon" val="icon.etc_charcoal_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -765,7 +767,7 @@
 		<set name="price" val="200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1872" type="EtcItem" name="Animal Bone">
+	<item id="1872" type="EtcItem" name="Corroded Animal Bone Fragment">
 		<set name="icon" val="icon.etc_piece_bone_white_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -774,7 +776,7 @@
 		<set name="price" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1873" type="EtcItem" name="Silver Nugget">
+	<item id="1873" type="EtcItem" name="Corroded Silver Nugget">
 		<set name="icon" val="icon.etc_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -783,7 +785,7 @@
 		<set name="price" val="500" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1874" type="EtcItem" name="Oriharukon Ore">
+	<item id="1874" type="EtcItem" name="Corroded Oriharukon Ore">
 		<set name="icon" val="icon.etc_oriharukon_ore_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -792,7 +794,7 @@
 		<set name="price" val="3000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1875" type="EtcItem" name="Stone of Purity">
+	<item id="1875" type="EtcItem" name="Corroded Stone of Purity">
 		<set name="icon" val="icon.etc_crystal_ball_white_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -801,7 +803,7 @@
 		<set name="price" val="3000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1876" type="EtcItem" name="Mithril Ore">
+	<item id="1876" type="EtcItem" name="Corroded Mithril Ore">
 		<set name="icon" val="icon.etc_mithril_ore_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -810,7 +812,7 @@
 		<set name="price" val="1000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1877" type="EtcItem" name="Adamantite Nugget">
+	<item id="1877" type="EtcItem" name="Corroded Adamantite Nugget">
 		<set name="icon" val="icon.etc_adamantite_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -819,7 +821,7 @@
 		<set name="price" val="5000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1878" type="EtcItem" name="Braided Hemp">
+	<item id="1878" type="EtcItem" name="Corroded Durable Braid">
 		<set name="icon" val="icon.etc_braided_hemp_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -828,7 +830,7 @@
 		<set name="price" val="500" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1879" type="EtcItem" name="Cokes">
+	<item id="1879" type="EtcItem" name="Corroded Cokes">
 		<set name="icon" val="icon.etc_oil_pot_black_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -837,7 +839,7 @@
 		<set name="price" val="1200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1880" type="EtcItem" name="Steel">
+	<item id="1880" type="EtcItem" name="Corroded Steel">
 		<set name="icon" val="icon.etc_lump_black_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -846,7 +848,7 @@
 		<set name="price" val="2000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1881" type="EtcItem" name="Coarse Bone Powder">
+	<item id="1881" type="EtcItem" name="Corroded Coarse Bone Powder">
 		<set name="icon" val="icon.etc_powder_white_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -855,7 +857,7 @@
 		<set name="price" val="1500" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1882" type="EtcItem" name="Leather">
+	<item id="1882" type="EtcItem" name="Corroded Leather">
 		<set name="icon" val="icon.etc_leather_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -864,7 +866,7 @@
 		<set name="price" val="900" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1883" type="EtcItem" name="Steel Mold">
+	<item id="1883" type="EtcItem" name="Corroded Steel Mold">
 		<set name="icon" val="icon.etc_mold_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -873,7 +875,7 @@
 		<set name="price" val="4500" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1884" type="EtcItem" name="Cord">
+	<item id="1884" type="EtcItem" name="Corroded Cord">
 		<set name="icon" val="icon.etc_skein_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -882,7 +884,7 @@
 		<set name="price" val="325" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1885" type="EtcItem" name="High-Grade Suede">
+	<item id="1885" type="EtcItem" name="Corroded High-grade Suede">
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -891,7 +893,7 @@
 		<set name="price" val="2400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1886" type="EtcItem" name="Silver Mold">
+	<item id="1886" type="EtcItem" name="Corroded Silver Mold">
 		<set name="icon" val="icon.etc_silver_mold_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -900,7 +902,7 @@
 		<set name="price" val="13500" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1887" type="EtcItem" name="Varnish of Purity">
+	<item id="1887" type="EtcItem" name="Corroded Varnish of Purity">
 		<set name="icon" val="icon.etc_potion_clear_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -909,7 +911,7 @@
 		<set name="price" val="8100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1888" type="EtcItem" name="Synthetic Cokes">
+	<item id="1888" type="EtcItem" name="Corroded Synthetic Cokes">
 		<set name="icon" val="icon.etc_synthetic_cokes_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -918,7 +920,7 @@
 		<set name="price" val="6600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1889" type="EtcItem" name="Compound Braid">
+	<item id="1889" type="EtcItem" name="Corroded Synthetic Braid">
 		<set name="icon" val="icon.etc_compound_braid_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -927,7 +929,7 @@
 		<set name="price" val="3000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1890" type="EtcItem" name="Mithril Alloy">
+	<item id="1890" type="EtcItem" name="Corroded Mithril Alloy">
 		<set name="icon" val="icon.etc_lump_white_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -954,7 +956,7 @@
 		<set name="price" val="64000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1893" type="EtcItem" name="Oriharukon">
+	<item id="1893" type="EtcItem" name="Corroded Oriharukon">
 		<set name="icon" val="icon.etc_oriharukon_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -963,7 +965,7 @@
 		<set name="price" val="24600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1894" type="EtcItem" name="Crafted Leather">
+	<item id="1894" type="EtcItem" name="Corroded Quality Leather">
 		<set name="icon" val="icon.etc_crafted_leather_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -972,7 +974,7 @@
 		<set name="price" val="5700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1895" type="EtcItem" name="Metallic Fiber">
+	<item id="1895" type="EtcItem" name="Corroded Metallic Fiber">
 		<set name="icon" val="icon.etc_metallic_fiber_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -987,7 +989,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
-		<set name="price" val="472" />
+		<set name="price" val="95" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1897" type="EtcItem" name="Necklace of Wisdom Chain">
@@ -996,7 +998,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
-		<set name="price" val="840" />
+		<set name="price" val="168" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1898" type="EtcItem" name="Blue Diamond Necklace Gem">
@@ -1005,7 +1007,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
-		<set name="price" val="1947" />
+		<set name="price" val="390" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1899" type="EtcItem" name="Necklace of Devotion Chain">
@@ -1014,7 +1016,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
-		<set name="price" val="1280" />
+		<set name="price" val="256" />
 		<set name="is_stackable" val="true" />
 	</item>
 </list>

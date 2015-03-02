@@ -64,7 +64,7 @@
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="14008" type="EtcItem" name="Accessory Type Life Stone - Level 84">
+	<item id="14008" type="EtcItem" name="Life Stone: Accessory - Lv. 84">
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -85,6 +85,7 @@
 		<set name="reuse_delay" val="500" />
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="14010" type="EtcItem" name="Extracted Blue Star Stone">
 		<set name="icon" val="icon.general_star_stone_piece_i01" />
@@ -108,7 +109,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14012" type="EtcItem" name="Extracted Mid-grade Red Star Stone">
+	<item id="14012" type="EtcItem" name="Mid-grade Extracted Red Star Stone">
 		<set name="icon" val="icon.high_star_stone_piece_i00" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
@@ -119,7 +120,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14013" type="EtcItem" name="Extracted Mid-grade Blue Star Stone">
+	<item id="14013" type="EtcItem" name="Mid-grade Extracted Blue Star Stone">
 		<set name="icon" val="icon.high_star_stone_piece_i01" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
@@ -130,7 +131,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14014" type="EtcItem" name="Extracted Mid-grade Green Star Stone">
+	<item id="14014" type="EtcItem" name="Mid-grade Extracted Green Star Stone">
 		<set name="icon" val="icon.high_star_stone_piece_i02" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
@@ -141,7 +142,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14015" type="EtcItem" name="Fire Energy Compression Stone">
+	<item id="14015" type="EtcItem" name="Energy of Fire Compression Stone">
 		<set name="icon" val="icon.general_energy_condense_i02" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
@@ -152,7 +153,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14016" type="EtcItem" name="Water Energy Compression Stone">
+	<item id="14016" type="EtcItem" name="Energy of Water Compression Stone">
 		<set name="icon" val="icon.general_energy_condense_i03" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
@@ -163,7 +164,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14017" type="EtcItem" name="Wind Energy Compression Stone">
+	<item id="14017" type="EtcItem" name="Energy of Wind Compression Stone">
 		<set name="icon" val="icon.general_energy_condense_i04" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
@@ -174,7 +175,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14018" type="EtcItem" name="Earth Energy Compression Stone">
+	<item id="14018" type="EtcItem" name="Energy of Earth Compression Stone">
 		<set name="icon" val="icon.general_energy_condense_i05" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
@@ -207,7 +208,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14021" type="EtcItem" name="Mid-grade Fire Energy Compression Stone">
+	<item id="14021" type="EtcItem" name="Mid-grade Energy of Fire Compression Stone">
 		<set name="icon" val="icon.high_energy_condense_i02" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
@@ -218,7 +219,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14022" type="EtcItem" name="Mid-grade Water Energy Compression Stone">
+	<item id="14022" type="EtcItem" name="Mid-grade Energy of Water Compression Stone">
 		<set name="icon" val="icon.high_energy_condense_i03" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
@@ -229,7 +230,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14023" type="EtcItem" name="Mid-grade Wind Energy Compression Stone">
+	<item id="14023" type="EtcItem" name="Mid-grade Energy of Wind Compression Stone">
 		<set name="icon" val="icon.high_energy_condense_i04" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
@@ -240,7 +241,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14024" type="EtcItem" name="Mid-grade Earth Energy Compression Stone">
+	<item id="14024" type="EtcItem" name="Mid-grade Energy of Earth Compression Stone">
 		<set name="icon" val="icon.high_energy_condense_i05" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
@@ -273,14 +274,13 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14027" type="Armor" name="Collection Agathion Summon Bracelet">
+	<item id="14027" type="Armor" name="Agathion - Essence Collector">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
-		<set name="price" val="3000000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -458,7 +458,7 @@
 			<player flyMounted="true" />
 		</cond>
 	</item>
-	<item id="14041" type="EtcItem" name="High-quality Stone of Mana">
+	<item id="14041" type="EtcItem" name="Greater Stone of Mana">
 		<set name="icon" val="icon.stone_10_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -645,15 +645,16 @@
 			<player flyMounted="true" />
 		</cond>
 	</item>
-	<item id="14052" type="EtcItem" name="Noble Enhancement Stone">
+	<item id="14052" type="EtcItem" name="Vesper Noble Enhancement Stone">
 		<set name="icon" val="icon.energy_condenser_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="14053" type="Armor" name="Gold-Maned Lion Mount Bracelet - 7-day limited period">
+	<item id="14053" type="Armor" name="Mount - Gold Maned Lion">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -669,7 +670,7 @@
 		<set name="item_skill" val="8262-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="14054" type="Armor" name="Steam Beatle Mount Bracelet - 7-day limited period">
+	<item id="14054" type="Armor" name="Mount - Steam Beetle">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -685,13 +686,12 @@
 		<set name="item_skill" val="8261-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="14055" type="EtcItem" name="Vitality Replenishing Beverage">
+	<item id="14055" type="EtcItem" name="Vitality Replenishing Potion">
 		<set name="icon" val="icon.etc_potion_of_energy_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="weight" val="80" />
 		<set name="shared_reuse_group" val="15" />
 		<set name="reuse_delay" val="3600000" />
 		<set name="is_tradable" val="false" />
@@ -703,7 +703,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2586-2" />
 	</item>
-	<item id="14056" type="Weapon" name="Snow Kung Transformation Stick - 30-day limited period">
+	<item id="14056" type="Weapon" name="Snow Man Transformation Stick">
 		<set name="icon" val="icon.weapon_snowman_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -727,7 +727,7 @@
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14057" type="Weapon" name="Scarecrow Jack Transformation Stick - 30-day limited period">
+	<item id="14057" type="Weapon" name="Scarecrow Jack Transformation Stick">
 		<set name="icon" val="icon.weapon_scarescow_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -751,7 +751,7 @@
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14058" type="Weapon" name="Tin Golem Transformation Stick - 30-day limited period">
+	<item id="14058" type="Weapon" name="Tin Golem Transformation Stick">
 		<set name="icon" val="icon.weapon_tin_golem_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -775,7 +775,7 @@
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14059" type="Armor" name="Teddy Boy Agathion Bracelet - 30-day limited period">
+	<item id="14059" type="Armor" name="Agathion - Teddy Boy">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -790,7 +790,7 @@
 		<set name="item_skill" val="8259-1;3267-1;5958-1" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="14060" type="Armor" name="Teddy Girl Agathion Bracelet - 30-day limited period">
+	<item id="14060" type="Armor" name="Agathion - Teddy Girl">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -841,7 +841,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="14063" type="EtcItem" name="Owl Monk Summon Whistle">
+	<item id="14063" type="EtcItem" name="Owl Monk Summon Necklace">
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -859,7 +859,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="14064" type="EtcItem" name="Turtle Ascetic Summon Whistle">
+	<item id="14064" type="EtcItem" name="Turtle Ascetic Summon Necklace">
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -877,7 +877,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="14065" type="EtcItem" name="High-Grade Hunting Helper Exchange Coupon - 5 hours">
+	<item id="14065" type="EtcItem" name="Superior Minion Coupon">
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
@@ -889,7 +889,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="14066" type="Armor" name="Gold Maned Lion Mount Bracelet (event) - 7-day limited period">
+	<item id="14066" type="Armor" name="Mount - Gold Maned Lion (Event)">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -905,7 +905,7 @@
 		<set name="item_skill" val="8262-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="14067" type="Armor" name="Steam Beatle Mount Bracelet (event) - 7-day limited period">
+	<item id="14067" type="Armor" name="Mount - Steam Beetle (Event)">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -921,14 +921,12 @@
 		<set name="item_skill" val="8261-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="14068" type="EtcItem" name="Vitality Replenishing Beverage (event)">
+	<item id="14068" type="EtcItem" name="Vitality Replenishing Potion (Event)">
 		<set name="icon" val="icon.etc_potion_of_energy_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="weight" val="80" />
-		<set name="price" val="40" />
 		<set name="shared_reuse_group" val="15" />
 		<set name="reuse_delay" val="3600000" />
 		<set name="is_tradable" val="false" />
@@ -940,7 +938,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2586-2" />
 	</item>
-	<item id="14069" type="Weapon" name="Snow Kung Transformation Stick (event) - 30-day limited period">
+	<item id="14069" type="Weapon" name="Snow Man Transformation Stick (Event)">
 		<set name="icon" val="icon.weapon_snowman_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -964,7 +962,7 @@
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14070" type="Weapon" name="Scarecrow Jack Transformation Stick (Event) - 30-day limited period">
+	<item id="14070" type="Weapon" name="Scarecrow Jack Transformation Stick (Event)">
 		<set name="icon" val="icon.weapon_scarescow_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -988,7 +986,7 @@
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14071" type="Weapon" name="Tin Golem Transformation Stick (event) - 30-day limited period">
+	<item id="14071" type="Weapon" name="Tin Golem Transformation Stick (Event)">
 		<set name="icon" val="icon.weapon_tin_golem_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1012,7 +1010,7 @@
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14072" type="Armor" name="Teddy Boy Agathion Bracelet (event) - 30-day limited period">
+	<item id="14072" type="Armor" name="Agathion - Teddy Boy (Event)">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1027,7 +1025,7 @@
 		<set name="item_skill" val="8259-1;3267-1;5958-1" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="14073" type="Armor" name="Teddy Girl Agathion Bracelet (event) - 30-day limited period">
+	<item id="14073" type="Armor" name="Agathion - Teddy Girl (Event)">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1042,7 +1040,7 @@
 		<set name="item_skill" val="8260-1;3267-1;5959-1" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="14074" type="EtcItem" name="Superior Minion Coupon (Event) - 5 hours">
+	<item id="14074" type="EtcItem" name="Superior Minion Coupon (Event)">
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
@@ -1054,7 +1052,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="14075" type="Armor" name="Sudden Agathion (Event) - 30-day limited period">
+	<item id="14075" type="Armor" name="Agathion - Angry Devil (Event)">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1069,7 +1067,7 @@
 		<set name="item_skill" val="8257-1;3267-1;5956-1" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="14076" type="Armor" name="Shiny Agathion (Event) - 30-day limited period">
+	<item id="14076" type="Armor" name="Agathion - Shiny (Event)">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1084,7 +1082,7 @@
 		<set name="item_skill" val="8256-1;3267-1;5955-1" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="14077" type="Armor" name="Sobbing Agathion (Event) - 30-day limited period">
+	<item id="14077" type="Armor" name="Agathion - Sobbing (Event)">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1099,7 +1097,7 @@
 		<set name="item_skill" val="8258-1;3267-1;5957-1" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="14078" type="EtcItem" name="Weapon-type Enhance Backup Stone (D-Grade) (event)">
+	<item id="14078" type="EtcItem" name="Lucky Enchant Stone: Weapon (D-grade) (Event)">
 		<set name="icon" val="icon.ench_wp_stone_i00" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
 		<set name="immediate_effect" val="true" />
@@ -1114,7 +1112,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2515-1" />
 	</item>
-	<item id="14079" type="EtcItem" name="Weapon-type Enhance Backup Stone (C-Grade) (event)">
+	<item id="14079" type="EtcItem" name="Lucky Enchant Stone: Weapon (C-grade) (Event)">
 		<set name="icon" val="icon.ench_wp_stone_i01" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
 		<set name="immediate_effect" val="true" />
@@ -1129,7 +1127,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2516-1" />
 	</item>
-	<item id="14080" type="EtcItem" name="Weapon-type Enhance Backup Stone (B-Grade) (event)">
+	<item id="14080" type="EtcItem" name="Lucky Enchant Stone: Weapon (B-grade) (Event)">
 		<set name="icon" val="icon.ench_wp_stone_i02" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
 		<set name="immediate_effect" val="true" />
@@ -1144,7 +1142,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2517-1" />
 	</item>
-	<item id="14081" type="EtcItem" name="Weapon-type Enhance Backup Stone (A-Grade) (event)">
+	<item id="14081" type="EtcItem" name="Lucky Enchant Stone: Weapon (A-grade) (Event)">
 		<set name="icon" val="icon.ench_wp_stone_i03" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
 		<set name="immediate_effect" val="true" />
@@ -1159,7 +1157,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2518-1" />
 	</item>
-	<item id="14082" type="EtcItem" name="Weapon-type Enhance Backup Stone (S-Grade) (event)">
+	<item id="14082" type="EtcItem" name="Lucky Enchant Stone: Weapon (S-grade) (Event)">
 		<set name="icon" val="icon.ench_wp_stone_i04" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
 		<set name="immediate_effect" val="true" />
@@ -1174,7 +1172,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2519-1" />
 	</item>
-	<item id="14083" type="EtcItem" name="Armor-type Enhance Backup Stone (D-Grade) (event)">
+	<item id="14083" type="EtcItem" name="Lucky Enchant Stone: Armor (D-grade) (Event)">
 		<set name="icon" val="icon.ench_am_stone_i00" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
 		<set name="immediate_effect" val="true" />
@@ -1189,7 +1187,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2520-1" />
 	</item>
-	<item id="14084" type="EtcItem" name="Armor-type Enhance Backup Stone (C-Grade) (event)">
+	<item id="14084" type="EtcItem" name="Lucky Enchant Stone: Armor (C-grade) (Event)">
 		<set name="icon" val="icon.ench_am_stone_i01" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
 		<set name="immediate_effect" val="true" />
@@ -1204,7 +1202,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2521-1" />
 	</item>
-	<item id="14085" type="EtcItem" name="Armor-type Enhance Backup Stone (B-Grade) (event)">
+	<item id="14085" type="EtcItem" name="Lucky Enchant Stone: Armor (B-grade) (Event)">
 		<set name="icon" val="icon.ench_am_stone_i02" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
 		<set name="immediate_effect" val="true" />
@@ -1219,7 +1217,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2522-1" />
 	</item>
-	<item id="14086" type="EtcItem" name="Armor-type Enhance Backup Stone (A-Grade) (event)">
+	<item id="14086" type="EtcItem" name="Lucky Enchant Stone: Armor (A-grade) (Event)">
 		<set name="icon" val="icon.ench_am_stone_i03" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
 		<set name="immediate_effect" val="true" />
@@ -1234,7 +1232,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2523-1" />
 	</item>
-	<item id="14087" type="EtcItem" name="Armor-type Enhance Backup Stone (S-Grade) (event)">
+	<item id="14087" type="EtcItem" name="Lucky Enchant Stone: Armor (S-grade) (Event)">
 		<set name="icon" val="icon.ench_am_stone_i04" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
 		<set name="immediate_effect" val="true" />
@@ -1249,7 +1247,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2524-1" />
 	</item>
-	<item id="14088" type="Weapon" name="Snow Kung Transformation Stick - 7-day limited period">
+	<item id="14088" type="Weapon" name="Snow Man Transformation Stick">
 		<set name="icon" val="icon.weapon_snowman_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1273,7 +1271,7 @@
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14089" type="Weapon" name="Scarecrow Jack Transformation Stick - 7-day limited period">
+	<item id="14089" type="Weapon" name="Scarecrow Jack Transformation Stick">
 		<set name="icon" val="icon.weapon_scarescow_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1297,7 +1295,7 @@
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14090" type="Weapon" name="Tin Golem Transformation Stick - 7-day limited period">
+	<item id="14090" type="Weapon" name="Tin Golem Transformation Stick">
 		<set name="icon" val="icon.weapon_tin_golem_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1321,7 +1319,7 @@
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14091" type="Armor" name="Teddy Boy Agathion Bracelet - 7-day limited period">
+	<item id="14091" type="Armor" name="Agathion - Teddy Boy">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1336,7 +1334,7 @@
 		<set name="item_skill" val="8259-1;3267-1;5958-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="14092" type="Armor" name="Teddy Girl Agathion Bracelet - 7-day limited period">
+	<item id="14092" type="Armor" name="Agathion - Teddy Girl">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1351,7 +1349,7 @@
 		<set name="item_skill" val="8260-1;3267-1;5959-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="14093" type="Armor" name="Sudden Agathion - 7-day limited period">
+	<item id="14093" type="Armor" name="Agathion - Angry Devil">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1366,7 +1364,7 @@
 		<set name="item_skill" val="8257-1;3267-1;5956-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="14094" type="Armor" name="Shiny Agathion - 7-day limited period">
+	<item id="14094" type="Armor" name="Agathion - Shiny">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1381,7 +1379,7 @@
 		<set name="item_skill" val="8256-1;3267-1;5955-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="14095" type="Armor" name="Sobbing Agathion - 7-day limited period">
+	<item id="14095" type="Armor" name="Agathion - Sobbing">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1396,7 +1394,7 @@
 		<set name="item_skill" val="8258-1;3267-1;5957-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="14096" type="Weapon" name="Snow Kung Transformation Stick (event) - 7-day limited period">
+	<item id="14096" type="Weapon" name="Snow Man Transformation Stick (Event)">
 		<set name="icon" val="icon.weapon_snowman_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1420,7 +1418,7 @@
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14097" type="Weapon" name="Scarecrow Jack Transformation Stick (Event) - 7-day limited period">
+	<item id="14097" type="Weapon" name="Scarecrow Jack Transformation Stick (Event)">
 		<set name="icon" val="icon.weapon_scarescow_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1444,7 +1442,7 @@
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14098" type="Weapon" name="Tin Golem Transformation Stick (event) - 7-day limited period">
+	<item id="14098" type="Weapon" name="Tin Golem Transformation Stick (Event)">
 		<set name="icon" val="icon.weapon_tin_golem_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1468,7 +1466,7 @@
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14099" type="Armor" name="Teddy Boy Agathion Bracelet (event) - 7-day limited period">
+	<item id="14099" type="Armor" name="Agathion - Teddy Boy (Event)">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />

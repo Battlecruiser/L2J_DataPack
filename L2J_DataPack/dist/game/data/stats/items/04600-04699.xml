@@ -44,6 +44,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="90000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="DYES" />
 	</item>
 	<item id="4605" type="EtcItem" name="Greater Dye of DEX (Dex+3 Str-3)">
 		<set name="icon" val="icon.etc_dex_hena_i02" />
@@ -116,6 +117,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="90000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="DYES" />
 	</item>
 	<item id="4613" type="EtcItem" name="Greater Dye of STR (Str+4 Con-4)">
 		<set name="icon" val="icon.etc_str_hena_i02" />
@@ -206,6 +208,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="145000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="DYES" />
 	</item>
 	<item id="4623" type="EtcItem" name="Greater Dye of WIT (Wit+4 Int-4)">
 		<set name="icon" val="icon.etc_wit_hena_i02" />
@@ -729,7 +732,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4674" type="EtcItem" name="Medal of Honor">
+	<item id="4674" type="EtcItem" name="Medal of Glory">
 		<set name="icon" val="icon.etc_magic_coin_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -780,7 +783,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="4678" type="EtcItem" name="Decrease Haste Potion">
+	<item id="4678" type="EtcItem" name="Scroll: Decrease Hate">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -798,7 +801,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="4679" type="EtcItem" name="Bless of Eva">
+	<item id="4679" type="EtcItem" name="Eva's Blessing">
 		<set name="icon" val="icon.etc_bless_of_eva_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -834,7 +837,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="4681" type="Weapon" name="Stormbringer - Critical Anger">
+	<item id="4681" type="Weapon" name="StormBringer">
 		<set name="icon" val="icon.weapon_stormbringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -843,11 +846,11 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="705" />
+		<set name="crystal_count" val="94" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1430" />
-		<set name="price" val="1762900" />
+		<set name="price" val="352580" />
 		<set name="change_weaponId" val="9229" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -864,7 +867,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4682" type="Weapon" name="Stormbringer - Focus">
+	<item id="4682" type="Weapon" name="StormBringer">
 		<set name="icon" val="icon.weapon_stormbringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -873,11 +876,11 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="705" />
+		<set name="crystal_count" val="94" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1430" />
-		<set name="price" val="1762900" />
+		<set name="price" val="352580" />
 		<set name="change_weaponId" val="9230" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -892,7 +895,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4683" type="Weapon" name="Stormbringer - Light">
+	<item id="4683" type="Weapon" name="StormBringer">
 		<set name="icon" val="icon.weapon_stormbringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -901,11 +904,11 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="705" />
+		<set name="crystal_count" val="94" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1430" />
-		<set name="price" val="1762900" />
+		<set name="price" val="352580" />
 		<set name="change_weaponId" val="9231" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -920,7 +923,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4684" type="Weapon" name="Shamshir - Guidance">
+	<item id="4684" type="Weapon" name="Shamshir">
 		<set name="icon" val="icon.weapon_shamshir_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -929,11 +932,11 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="884" />
+		<set name="crystal_count" val="118" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1420" />
-		<set name="price" val="2209700" />
+		<set name="price" val="441940" />
 		<set name="change_weaponId" val="9241" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -948,7 +951,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4685" type="Weapon" name="Shamshir - Back Blow">
+	<item id="4685" type="Weapon" name="Shamshir">
 		<set name="icon" val="icon.weapon_shamshir_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -957,11 +960,11 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="884" />
+		<set name="crystal_count" val="118" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1420" />
-		<set name="price" val="2209700" />
+		<set name="price" val="441940" />
 		<set name="change_weaponId" val="9242" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -985,11 +988,11 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="884" />
+		<set name="crystal_count" val="118" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1420" />
-		<set name="price" val="2209700" />
+		<set name="price" val="441940" />
 		<set name="change_weaponId" val="9243" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -1004,7 +1007,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4687" type="Weapon" name="Katana - Focus">
+	<item id="4687" type="Weapon" name="Katana">
 		<set name="icon" val="icon.weapon_katana_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1013,11 +1016,11 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="884" />
+		<set name="crystal_count" val="118" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1420" />
-		<set name="price" val="2209700" />
+		<set name="price" val="441940" />
 		<set name="change_weaponId" val="9245" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -1032,7 +1035,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4688" type="Weapon" name="Katana - Critical Damage">
+	<item id="4688" type="Weapon" name="Katana">
 		<set name="icon" val="icon.weapon_katana_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1041,11 +1044,11 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="884" />
+		<set name="crystal_count" val="118" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1420" />
-		<set name="price" val="2209700" />
+		<set name="price" val="441940" />
 		<set name="change_weaponId" val="9246" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -1060,7 +1063,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4689" type="Weapon" name="Katana - Haste">
+	<item id="4689" type="Weapon" name="Katana">
 		<set name="icon" val="icon.weapon_katana_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1069,11 +1072,11 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="884" />
+		<set name="crystal_count" val="118" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1420" />
-		<set name="price" val="2209700" />
+		<set name="price" val="441940" />
 		<set name="change_weaponId" val="9247" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -1088,7 +1091,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4690" type="Weapon" name="Spirit Sword - Critical Damage">
+	<item id="4690" type="Weapon" name="Spirit Sword">
 		<set name="icon" val="icon.weapon_spirits_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1097,11 +1100,11 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="884" />
+		<set name="crystal_count" val="118" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1420" />
-		<set name="price" val="2209700" />
+		<set name="price" val="441940" />
 		<set name="change_weaponId" val="9249" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -1116,7 +1119,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4691" type="Weapon" name="Spirit Sword - Critical Poison">
+	<item id="4691" type="Weapon" name="Spirit Sword">
 		<set name="icon" val="icon.weapon_spirits_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1125,11 +1128,11 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="884" />
+		<set name="crystal_count" val="118" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1420" />
-		<set name="price" val="2209700" />
+		<set name="price" val="441940" />
 		<set name="change_weaponId" val="9250" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -1145,7 +1148,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4692" type="Weapon" name="Spirit Sword - Haste">
+	<item id="4692" type="Weapon" name="Spirit Sword">
 		<set name="icon" val="icon.weapon_spirits_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1154,11 +1157,11 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="884" />
+		<set name="crystal_count" val="118" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1420" />
-		<set name="price" val="2209700" />
+		<set name="price" val="441940" />
 		<set name="change_weaponId" val="9251" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -1173,7 +1176,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4693" type="Weapon" name="Raid Sword - Focus">
+	<item id="4693" type="Weapon" name="Raid Sword">
 		<set name="icon" val="icon.weapon_raid_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1182,11 +1185,11 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="884" />
+		<set name="crystal_count" val="118" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1420" />
-		<set name="price" val="2209700" />
+		<set name="price" val="441940" />
 		<set name="change_weaponId" val="9253" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -1201,7 +1204,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4694" type="Weapon" name="Raid Sword - Critical Drain">
+	<item id="4694" type="Weapon" name="Raid Sword">
 		<set name="icon" val="icon.weapon_raid_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1210,11 +1213,11 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="884" />
+		<set name="crystal_count" val="118" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1420" />
-		<set name="price" val="2209700" />
+		<set name="price" val="441940" />
 		<set name="change_weaponId" val="9254" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -1230,7 +1233,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4695" type="Weapon" name="Raid Sword - Critical Poison">
+	<item id="4695" type="Weapon" name="Raid Sword">
 		<set name="icon" val="icon.weapon_raid_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1239,11 +1242,11 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="884" />
+		<set name="crystal_count" val="118" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1420" />
-		<set name="price" val="2209700" />
+		<set name="price" val="441940" />
 		<set name="change_weaponId" val="9255" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -1259,7 +1262,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4696" type="Weapon" name="Caliburs - Guidance">
+	<item id="4696" type="Weapon" name="Caliburs">
 		<set name="icon" val="icon.weapon_caliburs_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1268,11 +1271,11 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1322" />
+		<set name="crystal_count" val="177" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1400" />
-		<set name="price" val="3304300" />
+		<set name="price" val="660860" />
 		<set name="change_weaponId" val="9265" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1287,7 +1290,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4697" type="Weapon" name="Caliburs - Focus">
+	<item id="4697" type="Weapon" name="Caliburs">
 		<set name="icon" val="icon.weapon_caliburs_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1296,11 +1299,11 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1322" />
+		<set name="crystal_count" val="177" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1400" />
-		<set name="price" val="3304300" />
+		<set name="price" val="660860" />
 		<set name="change_weaponId" val="9266" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1315,7 +1318,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4698" type="Weapon" name="Caliburs - Critical Damage">
+	<item id="4698" type="Weapon" name="Caliburs">
 		<set name="icon" val="icon.weapon_caliburs_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1324,11 +1327,11 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1322" />
+		<set name="crystal_count" val="177" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1400" />
-		<set name="price" val="3304300" />
+		<set name="price" val="660860" />
 		<set name="change_weaponId" val="9267" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1343,7 +1346,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4699" type="Weapon" name="Sword of Delusion - Focus">
+	<item id="4699" type="Weapon" name="Sword of Delusion">
 		<set name="icon" val="icon.weapon_sword_of_delusion_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1352,11 +1355,11 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1322" />
+		<set name="crystal_count" val="177" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="1400" />
-		<set name="price" val="3304300" />
+		<set name="price" val="660860" />
 		<set name="change_weaponId" val="9269" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />

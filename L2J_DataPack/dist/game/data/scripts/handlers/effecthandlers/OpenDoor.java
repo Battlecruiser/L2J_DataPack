@@ -88,7 +88,7 @@ public final class OpenDoor extends AbstractEffect
 		
 		if ((!door.isOpenableBySkill() && !_isItem) || (door.getFort() != null))
 		{
-			effector.sendPacket(SystemMessageId.UNABLE_TO_UNLOCK_DOOR);
+			effector.sendPacket(SystemMessageId.THIS_DOOR_CANNOT_BE_UNLOCKED);
 			return;
 		}
 		
@@ -98,7 +98,7 @@ public final class OpenDoor extends AbstractEffect
 		}
 		else
 		{
-			effector.sendPacket(SystemMessageId.FAILED_TO_UNLOCK_DOOR);
+			effector.sendPacket(SystemMessageId.YOU_HAVE_FAILED_TO_UNLOCK_THE_DOOR);
 		}
 	}
 }

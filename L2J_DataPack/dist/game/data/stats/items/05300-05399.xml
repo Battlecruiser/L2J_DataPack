@@ -5,7 +5,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="92" />
+		<set name="crystal_count" val="47" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1110" />
@@ -22,7 +22,7 @@
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="347" />
+		<set name="crystal_count" val="231" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="5400" />
@@ -38,7 +38,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="92" />
+		<set name="crystal_count" val="47" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="580" />
@@ -54,7 +54,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="92" />
+		<set name="crystal_count" val="47" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1120" />
@@ -71,7 +71,7 @@
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="214" />
+		<set name="crystal_count" val="142" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1860" />
@@ -92,7 +92,7 @@
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="134" />
+		<set name="crystal_count" val="89" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="920" />
@@ -107,12 +107,12 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5306" type="Armor" name="Sealed Gloves of Black Ore">
+	<item id="5306" type="Armor" name="Sealed Red Flame Gloves">
 		<set name="icon" val="icon.armor_t14_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="92" />
+		<set name="crystal_count" val="47" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="570" />
@@ -128,7 +128,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="92" />
+		<set name="crystal_count" val="47" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1120" />
@@ -145,7 +145,7 @@
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="347" />
+		<set name="crystal_count" val="231" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="2450" />
@@ -165,7 +165,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="92" />
+		<set name="crystal_count" val="47" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="570" />
@@ -181,7 +181,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="92" />
+		<set name="crystal_count" val="47" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1120" />
@@ -198,12 +198,13 @@
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="704" />
+		<set name="crystal_count" val="469" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="9580" />
 		<set name="price" val="8804000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FULL_BODY" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -217,12 +218,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="163" />
+		<set name="crystal_count" val="108" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="560" />
 		<set name="price" val="2032000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="HELMET" />
 		<for>
 			<add order="0" stat="pDef" val="73" />
 			<enchant stat="pDef" val="0" />
@@ -233,12 +235,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="108" />
+		<set name="crystal_count" val="72" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="550" />
 		<set name="price" val="1355000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="GLOVES" />
 		<for>
 			<add order="0" stat="pDef" val="49" />
 			<enchant stat="pDef" val="0" />
@@ -249,12 +252,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="108" />
+		<set name="crystal_count" val="72" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1110" />
 		<set name="price" val="1355000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FEET" />
 		<for>
 			<add order="0" stat="pDef" val="49" />
 			<enchant stat="pDef" val="0" />
@@ -265,12 +269,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="114" />
+		<set name="crystal_count" val="75" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1180" />
 		<set name="price" val="1422000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="SHIELD" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -287,12 +292,13 @@
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="704" />
+		<set name="crystal_count" val="469" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="9200" />
 		<set name="price" val="8804000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FULL_BODY" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -306,7 +312,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="163" />
+		<set name="crystal_count" val="108" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="550" />
@@ -322,12 +328,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="108" />
+		<set name="crystal_count" val="72" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="540" />
 		<set name="price" val="1355000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="GLOVES" />
 		<for>
 			<add order="0" stat="pDef" val="49" />
 			<enchant stat="pDef" val="0" />
@@ -338,12 +345,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="108" />
+		<set name="crystal_count" val="72" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1110" />
 		<set name="price" val="1355000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FEET" />
 		<for>
 			<add order="0" stat="pDef" val="49" />
 			<enchant stat="pDef" val="0" />
@@ -355,12 +363,13 @@
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="528" />
+		<set name="crystal_count" val="352" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="5300" />
 		<set name="price" val="6603000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FULL_BODY" />
 		<for>
 			<add order="0" stat="pDef" val="220" />
 			<enchant stat="pDef" val="0" />
@@ -371,7 +380,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="140" />
+		<set name="crystal_count" val="72" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="560" />
@@ -387,7 +396,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="140" />
+		<set name="crystal_count" val="72" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1120" />
@@ -404,12 +413,13 @@
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="528" />
+		<set name="crystal_count" val="352" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="5350" />
 		<set name="price" val="6603000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FULL_BODY" />
 		<for>
 			<add order="0" stat="pDef" val="220" />
 			<enchant stat="pDef" val="0" />
@@ -420,7 +430,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="140" />
+		<set name="crystal_count" val="72" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="560" />
@@ -436,7 +446,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="140" />
+		<set name="crystal_count" val="72" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1120" />
@@ -453,7 +463,7 @@
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="528" />
+		<set name="crystal_count" val="352" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="2300" />
@@ -473,7 +483,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="140" />
+		<set name="crystal_count" val="72" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="540" />
@@ -489,7 +499,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="140" />
+		<set name="crystal_count" val="72" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="1120" />
@@ -506,12 +516,13 @@
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="528" />
+		<set name="crystal_count" val="352" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="2330" />
 		<set name="price" val="6603000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FULL_BODY" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -526,7 +537,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="140" />
+		<set name="crystal_count" val="72" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="550" />
@@ -541,7 +552,7 @@
 		<set name="icon" val="icon.armor_t44_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="140" />
+		<set name="crystal_count" val="72" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1100" />
@@ -728,7 +739,6 @@
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
-		<set name="price" val="1" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2097-1" />
@@ -737,7 +747,6 @@
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
-		<set name="price" val="1" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2097-1" />
@@ -896,7 +905,6 @@
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
-		<set name="price" val="1" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2097-1" />
@@ -905,7 +913,6 @@
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
-		<set name="price" val="1" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2097-1" />
@@ -914,7 +921,6 @@
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
-		<set name="price" val="1" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2097-1" />
@@ -923,7 +929,6 @@
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
-		<set name="price" val="1" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2097-1" />
@@ -932,7 +937,6 @@
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
-		<set name="price" val="1" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2097-1" />
@@ -941,7 +945,6 @@
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
-		<set name="price" val="1" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2097-1" />
@@ -950,7 +953,6 @@
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
-		<set name="price" val="1" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2097-1" />
@@ -959,7 +961,6 @@
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
-		<set name="price" val="1" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2097-1" />

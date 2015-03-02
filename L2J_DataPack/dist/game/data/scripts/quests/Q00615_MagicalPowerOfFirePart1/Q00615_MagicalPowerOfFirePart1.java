@@ -146,7 +146,7 @@ public class Q00615_MagicalPowerOfFirePart1 extends Quest
 			npc.setTarget(attacker);
 			npc.doCast(GOW.getSkill());
 			final L2Npc eye = addSpawn(ASEFA_EYE, npc);
-			eye.broadcastPacket(new NpcSay(eye, Say2.NPC_ALL, NpcStringId.YOU_CANT_AVOID_THE_EYES_OF_ASEFA));
+			eye.broadcastPacket(new NpcSay(eye, Say2.NPC_ALL, NpcStringId.YOU_CAN_T_AVOID_THE_EYES_OF_ASEFA));
 			startQuestTimer("eye_despawn", 10000, eye, attacker);
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);

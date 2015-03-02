@@ -1,0 +1,936 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="37600" name="Weapon Coupon (A-grade)" additionalName="" type="EtcItem">
+		<!-- Take this to Snake in town to obtain a weapon (A-grade) for a small fee. Temporary event item. -->
+		<set name="icon" val="icon.etc_level_bustup_ticket_i02" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37601" name="Armor Coupon (R-grade)" additionalName="" type="EtcItem">
+		<!-- Take this to Snake in town to obtain armor (R-grade) for a small fee. Temporary event item. -->
+		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37602" name="Armor Coupon (R95-grade)" additionalName="" type="EtcItem">
+		<!-- Take this to Snake in town to obtain armor (R95-grade) for a small fee. Temporary event item. -->
+		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37603" name="Armor Coupon (R99-grade)" additionalName="" type="EtcItem">
+		<!-- Take this to Snake in town to obtain armor (R99-grade) for a small fee. Temporary event item. -->
+		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37604" name="Armor Coupon (S-grade)" additionalName="" type="EtcItem">
+		<!-- Take this to Snake in town to obtain armor (S-grade) for a small fee. Temporary event item. -->
+		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37605" name="Armor Coupon (A-grade)" additionalName="" type="EtcItem">
+		<!-- Take this to Snake in town to obtain armor (A-grade) for a small fee. Temporary event item. -->
+		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37606" name="Promise Cube Pack" additionalName="Event" type="EtcItem">
+		<!-- Double click to acquire a Promise Cube (100-day). Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i01" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37607" name="Treasure Chest" additionalName="Western Winds" type="EtcItem">
+		<!-- Double-click to obtain either a hair accessory pack, pendant pack, enchant scroll pack, attribute stone pack, or ingredient pack. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+	</item>
+	<item id="37608" name="Hair Accessory Pack" additionalName="Western Winds" type="EtcItem">
+		<!-- Double-click to obtain a hair accessory on which you can add a pendant. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37609" name="Pendant Pack" additionalName="Western Winds" type="EtcItem">
+		<!-- Double-click to obtain a pendant. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37610" name="Enchant Scroll Pack" additionalName="Western Winds" type="EtcItem">
+		<!-- Double-click to obtain an Enchant Scroll (S or R-grade), or have a low chance of receiving a Blessed Enchant Scroll. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37611" name="Attribute Stone Pack" additionalName="Western Winds" type="EtcItem">
+		<!-- Double-click to obtain either an attribute stone or crystal. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37612" name="Ingredient Box" additionalName="Western Winds" type="EtcItem">
+		<!-- Double-click to obtain either an Energy of Destruction or a crafting ingredient. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37613" name="Hero's Treasure Chest" additionalName="Western Winds" type="EtcItem">
+		<!-- Double-click to obtain either a Hero's Lucky Enchant Stone Pack, Hero's Giant Enchant Scroll Pack, Hero's Blessed Enchant Scroll Pack, Hero's Unbind Scroll Pack, Hero's Attribute Crystal Pack, PK Pack, Reputation Pack, Mysterious Shot Box, Kaliel's Energy Box, Soul Bottle Pack, or Top-grade Life Stone Pack. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+	</item>
+	<item id="37614" name="Hero's Lucky Enchant Stone Pack" additionalName="Western Winds" type="EtcItem">
+		<!-- Double-click to obtain a Lucky Enchant Stone (S or R-grade). -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37615" name="Hero's Giant Enchant Scroll Pack" additionalName="Western Winds" type="EtcItem">
+		<!-- Double-click to obtain a Giant's Enchant Scroll (S or R-grade). -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37616" name="Hero's Blessed Enchant Scroll Pack" additionalName="Western Winds" type="EtcItem">
+		<!-- Double-click to obtain a Blessed Enchant Scroll (S or R-grade). -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37617" name="Hero's Unbind Scroll Pack" additionalName="Western Winds" type="EtcItem">
+		<!-- Double-click to obtain an Unbind Scroll (R, R95, or R99-grade). -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37618" name="Hero's Attribute Crystal Pack" additionalName="Western Winds" type="EtcItem">
+		<!-- Double-click to obtain an attribute crystal, or either a Super 60 or Super 150 attribute Stone. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37619" name="PK Pack" additionalName="Western Winds" type="EtcItem">
+		<!-- Double-click to obtain a random Scroll: PK. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37620" name="Reputation Pack" additionalName="Western Winds" type="EtcItem">
+		<!-- Double-click to obtain a random Scroll: Reputation. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37621" name="Mysterious Shot Pack" additionalName="Western Winds" type="EtcItem">
+		<!-- Double-click to obtain either a Mysterious Soulshot or a Mysterious Blessed Spiritshot. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37622" name="Kaliel's Energy Box" additionalName="Western Winds" type="EtcItem">
+		<!-- Double-click to obtain one of Kaliel's Energies. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37623" name="Soul Bottle Pack" additionalName="Western Winds" type="EtcItem">
+		<!-- Double-click to obtain either a Bottle of Antharas' Soul, or a Bottle of Valakas' Soul. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37624" name="Top-grade Life Stone Pack" additionalName="Western Winds" type="EtcItem">
+		<!-- Double-click to obtain either a Top-grade Life Stone (R95 or R99-grade), or a Life Stone Instilled with Giants' Power. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37625" name="Legendary Card: Frintezza" additionalName="" type="EtcItem">
+		<set name="icon" val="icon.card_devil_frintessa" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37626" name="Mysterious Blessed Spiritshot Pack (R-grade)" additionalName="" type="EtcItem">
+		<!-- The power of a high level spirit is bestowed on a weapon causing its M. Atk. to momentarily increase. Double click to acquire 10,000 rounds of Mysterious Blessed Spiritshots. Can be used with R-grade weapons. -->
+		<set name="icon" val="icon.br_cash_pack_of_spiritshot_r_i00" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37627" name="Mysterious Soulshot Pack (R-grade)" additionalName="" type="EtcItem">
+		<!-- The power of a high level spirit is bestowed on a weapon causing its M. Atk. to momentarily increase. Double click to acquire 20,000 rounds of Mysterious Blessed Soulshots. Can be used with R-grade weapons. -->
+		<set name="icon" val="icon.br_cash_pack_of_soulshot_r_i00" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37628" name="Cupid's Arrow" additionalName="" type="Weapon">
+		<!-- Throws a love-filled heart. Can use the active skill 'Heart Shot.' \nWarning: When using on a monster, you can receive another player's attack. -->
+		<set name="icon" val="icon.bm_krono_bow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="900" />
+		<for>
+			<add stat="pAtk" val="1.0" />
+			<add stat="mAtk" val="1.0" />
+			<add stat="pAtkSpd" val="293.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="37629" name="Pig Lollipop" additionalName="" type="Weapon">
+		<!-- Magic lollipop with a cute piggy drawing on it. It makes a piggy squeal upon a strike. Can transform into a cute piggy for a certain amount of time. -->
+		<set name="icon" val="icon.bm_pig_candy" />
+		<set name="default_action" val="EQUIP" />
+		<for>
+			<add stat="pAtk" val="1.0" />
+			<add stat="mAtk" val="1.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="37630" name="Mysterious Shaper" additionalName="7-day" type="Weapon">
+		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_the_dagger_of_hero" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<set name="time" val="604800" />
+		<for>
+			<add stat="pAtk" val="881.0" />
+			<add stat="mAtk" val="521.0" />
+			<add stat="pAtkSpd" val="433.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="37631" name="Mysterious Cutter" additionalName="7-day" type="Weapon">
+		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_the_sword_of_hero" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<set name="time" val="604800" />
+		<for>
+			<add stat="pAtk" val="1007.0" />
+			<add stat="mAtk" val="521.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="37632" name="Mysterious Slasher" additionalName="7-day" type="Weapon">
+		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_the_two_handed_sword_of_hero" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<set name="time" val="604800" />
+		<for>
+			<add stat="pAtk" val="1225.0" />
+			<add stat="mAtk" val="521.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="37633" name="Mysterious Avenger" additionalName="7-day" type="Weapon">
+		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_the_axe_of_hero" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<set name="time" val="604800" />
+		<for>
+			<add stat="pAtk" val="1007.0" />
+			<add stat="mAtk" val="521.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="37634" name="Mysterious Fighter" additionalName="7-day" type="Weapon">
+		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_the_fist_of_hero" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<set name="time" val="604800" />
+		<for>
+			<add stat="pAtk" val="1225.0" />
+			<add stat="mAtk" val="521.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="37635" name="Mysterious Stormer" additionalName="7-day" type="Weapon">
+		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_the_pole_of_hero" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<set name="time" val="604800" />
+		<for>
+			<add stat="pAtk" val="1007.0" />
+			<add stat="mAtk" val="521.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="37636" name="Mysterious Thrower" additionalName="7-day" type="Weapon">
+		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_the_bow_of_hero" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<set name="time" val="604800" />
+		<for>
+			<add stat="pAtk" val="1983.0" />
+			<add stat="mAtk" val="521.0" />
+			<add stat="pAtkSpd" val="293.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="37637" name="Mysterious Shooter" additionalName="7-day" type="Weapon">
+		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_infinity_shooter" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<set name="time" val="604800" />
+		<for>
+			<add stat="pAtk" val="1786.0" />
+			<add stat="mAtk" val="521.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="37638" name="Mysterious Buster" additionalName="7-day" type="Weapon">
+		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_infinity_sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<set name="time" val="604800" />
+		<for>
+			<add stat="pAtk" val="805.0" />
+			<add stat="mAtk" val="696.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="37639" name="Mysterious Caster" additionalName="7-day" type="Weapon">
+		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_the_mace_of_hero" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<set name="time" val="604800" />
+		<for>
+			<add stat="pAtk" val="805.0" />
+			<add stat="mAtk" val="696.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="37640" name="Mysterious Retributer" additionalName="7-day" type="Weapon">
+		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_the_staff_of_hero" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<set name="time" val="604800" />
+		<for>
+			<add stat="pAtk" val="981.0" />
+			<add stat="mAtk" val="765.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="accMagic" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="37641" name="Mysterious Dualsword" additionalName="7-day" type="Weapon">
+		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_r_dualsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<set name="time" val="604800" />
+		<for>
+			<add stat="pAtk" val="1225.0" />
+			<add stat="mAtk" val="521.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="37642" name="Mysterious Dual Dagger" additionalName="7-day" type="Weapon">
+		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_r_dualdagger" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<set name="time" val="604800" />
+		<for>
+			<add stat="pAtk" val="1007.0" />
+			<add stat="mAtk" val="521.0" />
+			<add stat="pAtkSpd" val="433.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="37643" name="Mysterious Dual Blunt" additionalName="7-day" type="Weapon">
+		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_r_dualblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<set name="time" val="604800" />
+		<for>
+			<add stat="pAtk" val="1225.0" />
+			<add stat="mAtk" val="521.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="37644" name="Mysterious Shaper" additionalName="30-day" type="Weapon">
+		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_the_dagger_of_hero" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<set name="time" val="2592000" />
+		<for>
+			<add stat="pAtk" val="881.0" />
+			<add stat="mAtk" val="521.0" />
+			<add stat="pAtkSpd" val="433.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="37645" name="Mysterious Cutter" additionalName="30-day" type="Weapon">
+		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_the_sword_of_hero" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<set name="time" val="2592000" />
+		<for>
+			<add stat="pAtk" val="1007.0" />
+			<add stat="mAtk" val="521.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="37646" name="Mysterious Slasher" additionalName="30-day" type="Weapon">
+		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_the_two_handed_sword_of_hero" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<set name="time" val="2592000" />
+		<for>
+			<add stat="pAtk" val="1225.0" />
+			<add stat="mAtk" val="521.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="37647" name="Mysterious Avenger" additionalName="30-day" type="Weapon">
+		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_the_axe_of_hero" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<set name="time" val="2592000" />
+		<for>
+			<add stat="pAtk" val="1007.0" />
+			<add stat="mAtk" val="521.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="37648" name="Mysterious Fighter" additionalName="30-day" type="Weapon">
+		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_the_fist_of_hero" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<set name="time" val="2592000" />
+		<for>
+			<add stat="pAtk" val="1225.0" />
+			<add stat="mAtk" val="521.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="37649" name="Mysterious Stormer" additionalName="30-day" type="Weapon">
+		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_the_pole_of_hero" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<set name="time" val="2592000" />
+		<for>
+			<add stat="pAtk" val="1007.0" />
+			<add stat="mAtk" val="521.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="37650" name="Mysterious Thrower" additionalName="30-day" type="Weapon">
+		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_the_bow_of_hero" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<set name="time" val="2592000" />
+		<for>
+			<add stat="pAtk" val="1983.0" />
+			<add stat="mAtk" val="521.0" />
+			<add stat="pAtkSpd" val="293.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="37651" name="Mysterious Shooter" additionalName="30-day" type="Weapon">
+		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_infinity_shooter" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<set name="time" val="2592000" />
+		<for>
+			<add stat="pAtk" val="1786.0" />
+			<add stat="mAtk" val="521.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="37652" name="Mysterious Buster" additionalName="30-day" type="Weapon">
+		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_infinity_sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<set name="time" val="2592000" />
+		<for>
+			<add stat="pAtk" val="805.0" />
+			<add stat="mAtk" val="696.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="37653" name="Mysterious Caster" additionalName="30-day" type="Weapon">
+		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_the_mace_of_hero" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<set name="time" val="2592000" />
+		<for>
+			<add stat="pAtk" val="805.0" />
+			<add stat="mAtk" val="696.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="37654" name="Mysterious Retributer" additionalName="30-day" type="Weapon">
+		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_the_staff_of_hero" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<set name="time" val="2592000" />
+		<for>
+			<add stat="pAtk" val="981.0" />
+			<add stat="mAtk" val="765.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="accMagic" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="37655" name="Mysterious Dualsword" additionalName="30-day" type="Weapon">
+		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_r_dualsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<set name="time" val="2592000" />
+		<for>
+			<add stat="pAtk" val="1225.0" />
+			<add stat="mAtk" val="521.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="37656" name="Mysterious Dual Dagger" additionalName="30-day" type="Weapon">
+		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_r_dualdagger" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<set name="time" val="2592000" />
+		<for>
+			<add stat="pAtk" val="1007.0" />
+			<add stat="mAtk" val="521.0" />
+			<add stat="pAtkSpd" val="433.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="37657" name="Mysterious Dual Blunt" additionalName="30-day" type="Weapon">
+		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_r_dualblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<set name="time" val="2592000" />
+		<for>
+			<add stat="pAtk" val="1225.0" />
+			<add stat="mAtk" val="521.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="37658" name="Mysterious Healthy Juice Pack (HP/CP)" additionalName="" type="EtcItem">
+		<!-- Double click to acquire 3 Mysterious Healthy Juices (HP/CP). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37659" name="Mysterious Healthy Juice (HP/CP)" additionalName="" type="EtcItem">
+		<!-- Mysterious juice that momentarily replenishes 30,000 HP and CP. Cannot be used in the Olympiad or Ceremony of Chaos. -->
+		<set name="icon" val="icon.bm_health_juice_violet" />
+		<set name="weight" val="60" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37660" name="Magmeld's Instrument" additionalName="" type="Weapon">
+		<!-- Magmeld's special instrument. Can play lively music. -->
+		<set name="icon" val="icon.bm_magmeld" />
+		<set name="default_action" val="EQUIP" />
+		<for>
+			<add stat="pAtk" val="1.0" />
+			<add stat="mAtk" val="1.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="37661" name="Refined Romantic Chapeau: Blue" additionalName="" type="Armor">
+		<!-- Refined blue romantic chapeau. Uses 2 hair accessory slots. -->
+		<set name="icon" val="icon.bm_romantic_chaperon_blue" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+	</item>
+	<item id="37662" name="Refined Romantic Chapeau: Gold" additionalName="" type="Armor">
+		<!-- Refined gold romantic chapeau. Uses 2 hair accessory slots. -->
+		<set name="icon" val="icon.bm_romantic_chaperon_gold" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+	</item>
+	<item id="37663" name="Refined Romantic Chapeau: Green" additionalName="" type="Armor">
+		<!-- Refined green romantic chapeau. Uses 2 hair accessory slots. -->
+		<set name="icon" val="icon.bm_romantic_chaperon_green" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+	</item>
+	<item id="37664" name="Refined Romantic Chapeau: Red" additionalName="" type="Armor">
+		<!-- Refined red romantic chapeau. Uses 2 hair accessory slots. -->
+		<set name="icon" val="icon.bm_romantic_chaperon_red" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+	</item>
+	<item id="37665" name="Refined Romantic Chapeau: Yellow" additionalName="" type="Armor">
+		<!-- Refined yellow romantic chapeau. Uses 2 hair accessory slots. -->
+		<set name="icon" val="icon.bm_romantic_chaperon_yellow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+	</item>
+	<item id="37666" name="Rare Accessory Pack" additionalName="" type="EtcItem">
+		<!-- Double click to acquire 30-day Blessed Antharas's Earring, Blessed Valakas's Necklace, Tauti's Ring, and Earth Wyrm Heart Ring. -->
+		<set name="icon" val="icon.etc_pi_box_love_pack" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37667" name="Blessed Antharas' Earring" additionalName="30-day" type="Armor">
+		<!-- MP +59, Bleed Resistance 50% increase, Bleed Attack Rate 50% increase, Heal Amount increase, Vampiric Rage Effect, Stun/Mental resistance 40%, Stun/Mental attack rate 40% increase, physical/magic skill MP consumption decrease, earth resistance increase, Holy Resistance increase, CON +3, MEN +3. P. Def./M. Def. are increased. Can use the Stun canceling skill. Momentarily increases Stun resistance by 100%. Only one effect is applied even when the same two earrings are worn. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_earring_of_antaras" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+		<set name="time" val="2592000" />
+		<for>
+			<add stat="mDef" val="170.0" />
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="37668" name="Blessed Valakas' Necklace" additionalName="30-day" type="Armor">
+		<!-- HP +625, MP +79, Sleep Resistance 50% increase, Sleep Attack Rate 50% increase, physical/magic skill cooldown decrease, Wild Magic Effect, damage shield effect, fire resistance 30 increase, Dark Resistance 20 increase, STR +3, INT +3. P. Skill Atk. 5% increase, P. Atk. 10% increase, M. Atk. 20% increase, hold resistance skill use. Hold resistance 100% increase momentarily. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_necklace_of_valakas" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+		<set name="time" val="2592000" />
+		<for>
+			<add stat="mDef" val="226.0" />
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="37669" name="Tauti's Ring" additionalName="30-day" type="Armor">
+		<!-- Tauti's Ring. Fire/Dark Resistance 25 increase, MP 38 increase, Critical Damage 15% increase, skill attack 5% increase, damage inflicted during PvP 5% increase, paralysis/yoke/exile resistance 10 increase, damage reflect resistance 5 increase, HP drain resistance 5 increase, damage received during PvP 5% decrease. Critical 54 increase when equipped with a blunt. Only one effect is applied even when the same two rings are worn (excluding attributes/M. Def.) Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_tauti_ring" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+		<set name="time" val="2592000" />
+		<for>
+			<add stat="mDef" val="108.0" />
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="37670" name="Earth Wyrm Heart Ring" additionalName="30-day" type="Armor">
+		<!-- MP +38, increases physical attack resistance, Mental Attack Resistance, MP Regeneration, P. Critical Damage, and Accuracy. Poison Resistance 50% increase, Poison Attack Rate 50% increase, Knock Back, Knock Down, pulling resistance 20 increase, Atk. Spd. Increase, Casting Spd. Increase, and Wind/Water Resistance increase. Can use skills that affect party members' Atk. Spd., Casting Spd., and Vampiric Rage. Can use Poison removal. Only one effect is applied even when the same two rings are worn. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_ring_earthworm_heart" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+		<set name="time" val="2592000" />
+		<for>
+			<add stat="mDef" val="108.0" />
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="37671" name="Heavenly Recovery Potion" additionalName="" type="EtcItem">
+		<!-- When used, recovers 2500 HP and the remaining power is recovered as CP. There is no duration. Cannot be used in an auction house or the Olympiad. Can be shared within the same account through the Dimensional Merchant. -->
+		<set name="icon" val="icon.etc_recall_potion2" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37672" name="Mysterious Friend Summon Bracelet" additionalName="30-day" type="Armor">
+		<!-- Bracelet that can summon another character. The summoning character and the summoned character must both be equipped with it and in the same party. 30-day. Cooldown is 60 minutes. Cannot be used in the Olympiad. Cannot be shared within the same account through the Dimensional Merchant. -->
+		<set name="icon" val="icon.bm_ring_of_friendship" />
+		<set name="default_action" val="EQUIP" />
+		<set name="time" val="2592000" />
+	</item>
+	<item id="37673" name="Mysterious Friend Summon Bracelet Pack (30-day)" additionalName="" type="EtcItem">
+		<!-- Double click to obtain 1 Mysterious Friend Summon Bracelet (30-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37674" name="Scroll: Modify Demonic Sword Zariche" additionalName="" type="EtcItem">
+		<!-- Scroll that modifies the appearance of a two-handed sword to that of the Demonic Sword Zariche. 30-day. -->
+		<set name="icon" val="icon.shape_shifting_zariche_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37675" name="Scroll: Modify Blood Sword Akamanah" additionalName="" type="EtcItem">
+		<!-- Scroll that modifies the appearance of a dualsword to that of the Blood Sword Akamanah. 30-day. -->
+		<set name="icon" val="icon.shape_shifting_aka_manaf_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37676" name="Coin of Knowledge" additionalName="" type="EtcItem">
+		<!-- You are full of knowledge!\nYou can purchase useful items through the Adventurers' Guide. -->
+		<set name="icon" val="icon.int_coin_gm_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37677" name="GM's Buff Scroll" additionalName="P. Def." type="EtcItem">
+		<!-- When used, can receive the effects of 6 types of level 4 melodies, including Guardian's Harmony, and 3 types of sonatas, for 60 minutes. Cannot be used in the Olympiad or Ceremony of Chaos. Cooldown is 2 minutes. -->
+		<set name="icon" val="icon.buff_scroll_gm_i00" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37678" name="GM's Buff Scroll" additionalName="P. Atk." type="EtcItem">
+		<!-- When used, can receive the effects of 6 types of level 4 melodies, including Berserker's Harmony, and 3 types of sonatas, for 60 minutes. Cannot be used in the Olympiad or Ceremony of Chaos. Cooldown is 2 minutes. -->
+		<set name="icon" val="icon.buff_scroll_gm_i00" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37679" name="GM's Buff Scroll" additionalName="M. Atk." type="EtcItem">
+		<!-- When used, can receive the effects of 6 types of level 4 melodies, including Magician's Harmony, and 3 types of sonatas, for 60 minutes. Cannot be used in the Olympiad or Ceremony of Chaos. Cooldown is 2 minutes. -->
+		<set name="icon" val="icon.buff_scroll_gm_i00" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37680" name="Transformation Scroll: Makeshift Bat" additionalName="" type="EtcItem">
+		<!-- Can change into the appearance of a Tow for 30 minutes.\nPlease note that a Tow is extremely cute. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37681" name="Theamo's Talisman" additionalName="Not in Use" type="Armor">
+		<!-- Test Item; do not open to public -->
+		<set name="icon" val="icon.etc_talisman_i01" />
+		<set name="default_action" val="EQUIP" />
+	</item>
+	<item id="37682" name="Theamo's Rune" additionalName="Not in Use" type="EtcItem">
+		<!-- Test Item; do not open to public -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+	</item>
+	<item id="37683" name="Demonic Sword Zariche" additionalName="Appearance Modification" type="Weapon">
+		<!-- Demonic Sword Zariche skin. -->
+		<set name="icon" val="icon.weapon_unique_zariche_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="crystal_type" val="D" />
+		<set name="weight" val="10" />
+		<for>
+			<add stat="pAtk" val="10.0" />
+			<add stat="mAtk" val="10.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="37684" name="Blood Sword Akamanah" additionalName="Appearance Modification" type="Weapon">
+		<!-- Blood Sword Akamanah skin. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="crystal_type" val="D" />
+		<set name="weight" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<for>
+			<add stat="pAtk" val="10.0" />
+			<add stat="mAtk" val="10.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="37685" name="Transformation Scroll: Lady Tow" additionalName="" type="EtcItem">
+		<!-- Can change into the appearance of a Lady Tow for 30 minutes.\nPlease note that a Tow is extremely cute. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37686" name="Transformation Scroll: Angry Tow" additionalName="" type="EtcItem">
+		<!-- Can change into the appearance of a Angry Tow for 30 minutes.\nPlease note that a Tow is extremely cute. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37687" name="Transformation Scroll: Sleepy Tow" additionalName="" type="EtcItem">
+		<!-- Can change into the appearance of a Sleepy Tow for 30 minutes.\nPlease note that a Tow is extremely cute. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="37688" name="Valentine Dagger" additionalName="" type="Weapon">
+		<!-- Modifies the appearance of a weapon. -->
+		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<for>
+			<add stat="pAtk" val="685.0" />
+			<add stat="mAtk" val="414.0" />
+			<add stat="pAtkSpd" val="433.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="37689" name="Valentine One-handed Sword" additionalName="" type="Weapon">
+		<!-- Modifies the appearance of a weapon. -->
+		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<for>
+			<add stat="pAtk" val="752.0" />
+			<add stat="mAtk" val="414.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="37690" name="Valentine Two-handed Sword" additionalName="" type="Weapon">
+		<!-- Modifies the appearance of a weapon. -->
+		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<for>
+			<add stat="pAtk" val="916.0" />
+			<add stat="mAtk" val="414.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="37691" name="Valentine One-handed Blunt Weapon" additionalName="" type="Weapon">
+		<!-- Modifies the appearance of a weapon. -->
+		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<for>
+			<add stat="pAtk" val="752.0" />
+			<add stat="mAtk" val="414.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="37692" name="Valentine Fist Weapon" additionalName="" type="Weapon">
+		<!-- Modifies the appearance of a weapon. -->
+		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<for>
+			<add stat="pAtk" val="916.0" />
+			<add stat="mAtk" val="414.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="37693" name="Valentine Spear" additionalName="" type="Weapon">
+		<!-- Modifies the appearance of a weapon. -->
+		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<for>
+			<add stat="pAtk" val="752.0" />
+			<add stat="mAtk" val="414.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="37694" name="Valentine Bow" additionalName="" type="Weapon">
+		<!-- Modifies the appearance of a weapon. -->
+		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<for>
+			<add stat="pAtk" val="1481.0" />
+			<add stat="mAtk" val="414.0" />
+			<add stat="pAtkSpd" val="293.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="37695" name="Valentine Crossbow" additionalName="" type="Weapon">
+		<!-- Modifies the appearance of a weapon. -->
+		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<for>
+			<add stat="pAtk" val="1333.0" />
+			<add stat="mAtk" val="414.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="37696" name="Valentine One-handed Magic Sword" additionalName="" type="Weapon">
+		<!-- Modifies the appearance of a weapon. -->
+		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<for>
+			<add stat="pAtk" val="602.0" />
+			<add stat="mAtk" val="486.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="37697" name="Valentine One-handed Magic Blunt Weapon" additionalName="" type="Weapon">
+		<!-- Modifies the appearance of a weapon. -->
+		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<for>
+			<add stat="pAtk" val="602.0" />
+			<add stat="mAtk" val="486.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="37698" name="Valentine Two-handed Magic Blunt Weapon" additionalName="" type="Weapon">
+		<!-- Modifies the appearance of a weapon. -->
+		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<for>
+			<add stat="pAtk" val="733.0" />
+			<add stat="mAtk" val="535.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="37699" name="Valentine Dualsword" additionalName="" type="Weapon">
+		<!-- Modifies the appearance of a weapon. -->
+		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500" />
+		<for>
+			<add stat="pAtk" val="916.0" />
+			<add stat="mAtk" val="414.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+</list>

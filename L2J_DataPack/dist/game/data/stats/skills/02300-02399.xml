@@ -102,7 +102,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2306" levels="3" name="Primeval Crystals">
+	<skill id="2306" levels="3" name="Blue Primeval Crystal">
 		<!-- Lvl 1 Name - Blue Primeval Crystal -->
 		<!-- Lvl 2 Name - Green Primeval Crystal -->
 		<!-- Lvl 3 Name - Red Primeval Crystal -->
@@ -126,7 +126,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2307" levels="1" name="Remove Petrification Scroll">
+	<skill id="2307" levels="1" name="Scroll: Cancel Petrification">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -219,7 +219,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2310" levels="1" name="Scroll of Guidance - Event Use">
+	<skill id="2310" levels="1" name="Scroll: Guidance (Event)">
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="HIT_UP" />
@@ -238,7 +238,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2311" levels="1" name="Scroll of Death Whisper - Event Use">
+	<skill id="2311" levels="1" name="Scroll: Death Whisper (Event)">
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
@@ -257,7 +257,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2312" levels="1" name="Scroll of Focus - Event Use">
+	<skill id="2312" levels="1" name="Scroll: Focus (Event)">
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
@@ -276,7 +276,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2313" levels="1" name="Scroll of Acumen - Event Use">
+	<skill id="2313" levels="1" name="Scroll: Acumen (Event)">
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
@@ -295,7 +295,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2314" levels="1" name="Scroll of Haste - Event Use">
+	<skill id="2314" levels="1" name="Scroll: Haste (Event)">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
@@ -314,7 +314,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2315" levels="1" name="Scroll of Agility - Event Use">
+	<skill id="2315" levels="1" name="Scroll: Agility (Event)">
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="AVOID_UP" />
@@ -333,7 +333,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2316" levels="1" name="Scroll of Empower - Event Use">
+	<skill id="2316" levels="1" name="Scroll: Empower (Event)">
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MA_UP" />
@@ -352,7 +352,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2317" levels="1" name="Scroll of Might - Event Use">
+	<skill id="2317" levels="1" name="Scroll: Might (Event)">
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PA_UP" />
@@ -371,7 +371,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2318" levels="1" name="Scroll of Wind Walk - Event Use">
+	<skill id="2318" levels="1" name="Scroll: Wind Walk (Event)">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -390,7 +390,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2319" levels="1" name="Scroll of Shield - Event Use">
+	<skill id="2319" levels="1" name="Scroll: Shield (Event)">
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PD_UP" />
@@ -409,7 +409,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2320" levels="1" name="Blessed Scroll of Escape - Event Use">
+	<skill id="2320" levels="1" name="Blessed Scroll of Escape (Event)">
 		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -432,7 +432,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2321" levels="1" name="Blessed Scroll of Resurrection - Event Use">
+	<skill id="2321" levels="1" name="Blessed Scroll of Resurrection (Event)">
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="600" />
@@ -453,7 +453,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2322" levels="1" name="Chest Key - For Events Only">
+	<skill id="2322" levels="1" name="Chest Key (Event)">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
@@ -640,7 +640,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="2333" levels="4" name="Divine Stone">
+	<skill id="2333" levels="4" name="Holy Stone">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -654,7 +654,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="2335" levels="1" name="Fire Resist Potion">
+	<skill id="2335" levels="1" name="Fire Resistance Potion">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="ATTRIBUTE_POTION" />
@@ -671,7 +671,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2336" levels="1" name="Water Resist Potion">
+	<skill id="2336" levels="1" name="Water Resistance Potion">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="ATTRIBUTE_POTION" />
@@ -688,7 +688,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2337" levels="1" name="Wind Resist Potion">
+	<skill id="2337" levels="1" name="Wind Resistance Potion">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="ATTRIBUTE_POTION" />
@@ -705,7 +705,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2338" levels="1" name="Earth Resist Potion">
+	<skill id="2338" levels="1" name="Earth Resistance Potion">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="ATTRIBUTE_POTION" />
@@ -722,7 +722,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2339" levels="1" name="Holy Resist Potion">
+	<skill id="2339" levels="1" name="Holy Attack Resistance Potion">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="ATTRIBUTE_POTION" />
@@ -739,7 +739,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2340" levels="1" name="Unholy Resist Potion">
+	<skill id="2340" levels="1" name="Dark Attack Resistance Potion">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="ATTRIBUTE_POTION" />
@@ -785,7 +785,7 @@
 			<target npcId="35685,35723,35754,35792,35823,35854,35892,35923,35961,35999,36030,36068,36106,36137,36168,36206,36244,36282,36313,36351,36389" />
 		</cond>
 	</skill>
-	<skill id="2343" levels="1" name="Gate Key of Kamael">
+	<skill id="2343" levels="1" name="Gate Key: Kamael">
 		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
 		<set name="castRange" val="200" />
 		<set name="effectPoint" val="-1" />
@@ -807,7 +807,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2344" levels="1" name="Gate Key of Records">
+	<skill id="2344" levels="1" name="Gate Key: Archives">
 		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
 		<set name="castRange" val="200" />
 		<set name="effectPoint" val="-1" />
@@ -829,7 +829,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2345" levels="1" name="Gate Key of Observation">
+	<skill id="2345" levels="1" name="Gate Key: Observation">
 		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
 		<set name="castRange" val="200" />
 		<set name="effectPoint" val="-1" />
@@ -851,7 +851,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2346" levels="1" name="Gate Key of Specula">
+	<skill id="2346" levels="1" name="Gate Key: Spicula">
 		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
 		<set name="castRange" val="200" />
 		<set name="effectPoint" val="-1" />
@@ -917,7 +917,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2349" levels="1" name="Gate Key of Arvitaire">
+	<skill id="2349" levels="1" name="Gate Key: Arviterre">
 		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
 		<set name="castRange" val="200" />
 		<set name="effectPoint" val="-1" />
@@ -961,7 +961,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2351" levels="1" name="Gate Key of Prediction">
+	<skill id="2351" levels="1" name="Gate Key: Prediction">
 		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
 		<set name="castRange" val="200" />
 		<set name="effectPoint" val="-1" />
@@ -983,7 +983,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2352" levels="1" name="Gate Key of Nornil">
+	<skill id="2352" levels="1" name="Gate Key: Nornil">
 		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
 		<set name="castRange" val="200" />
 		<set name="effectPoint" val="-1" />
@@ -1024,7 +1024,7 @@
 			<effect name="DetectHiddenObjects" />
 		</for>
 	</skill>
-	<skill id="2354" levels="1" name="Gate Key of Darkness">
+	<skill id="2354" levels="1" name="Gate Key: Darkness">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
@@ -1047,7 +1047,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2355" levels="1" name="Gate Key of Destruction">
+	<skill id="2355" levels="1" name="Gate Key: Destruction">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
@@ -1070,7 +1070,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2356" levels="1" name="Gate Key of Blood">
+	<skill id="2356" levels="1" name="Gate Key: Blood">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
@@ -1211,7 +1211,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2364" levels="1" name="Blessed Scroll of Fortress Return">
+	<skill id="2364" levels="1" name="Blessed Scroll of Escape: Fortress">
 		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -1235,7 +1235,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2365" levels="1" name="Scroll of Fortress Return">
+	<skill id="2365" levels="1" name="Scroll of Escape: Fortress">
 		<set name="hitTime" val="20000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -1346,7 +1346,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2370" levels="1" name="Scroll of Transformation - Pig">
+	<skill id="2370" levels="1" name="Transformation Scroll: Pig">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
@@ -1369,7 +1369,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2371" levels="1" name="Transform Sealbook - Onyx Beast">
+	<skill id="2371" levels="1" name="Transformation Scroll: Onyx Beast">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
@@ -1392,7 +1392,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2372" levels="1" name="Transform Sealbook - Death Blader">
+	<skill id="2372" levels="1" name="Transformation Scroll: Doom Wraith">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
@@ -1415,7 +1415,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2373" levels="1" name="Transform Sealbook - Grail Apostle">
+	<skill id="2373" levels="1" name="Transformation Scroll: Grail Apostle">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
@@ -1438,7 +1438,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2374" levels="1" name="Transform Sealbook - Unicorn">
+	<skill id="2374" levels="1" name="Transformation Scroll: Unicorn">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
@@ -1461,7 +1461,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2375" levels="1" name="Transform Sealbook - Lilim Knight">
+	<skill id="2375" levels="1" name="Transformation Scroll: Lilim Knight">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
@@ -1484,7 +1484,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2376" levels="1" name="Transform Sealbook - Golem Guardian">
+	<skill id="2376" levels="1" name="Transformation Scroll: Golem Guardian">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
@@ -1507,7 +1507,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2377" levels="1" name="Transform Sealbook - Inferno Drake">
+	<skill id="2377" levels="1" name="Transformation Scroll: Inferno Drake">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
@@ -1530,7 +1530,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2378" levels="1" name="Transform Sealbook - Dragon Bomber">
+	<skill id="2378" levels="1" name="Transformation Scroll: Dragon Bomber">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
@@ -1604,7 +1604,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2382" levels="1" name="Bless Shield">
+	<skill id="2382" levels="1" name="Blessed Shield">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="6" />
 		<set name="abnormalTime" val="1200" />
@@ -1783,7 +1783,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2392" levels="1" name="Blessed Scroll of Battlefield Escape">
+	<skill id="2392" levels="1" name="Blessed Scroll of Escape (Battleground)">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1805,7 +1805,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2393" levels="1" name="Blessed Scroll of Battlefield Resurrection">
+	<skill id="2393" levels="1" name="Blessed Scroll of Resurrection (Battleground)">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="1" />
@@ -1827,7 +1827,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2394" levels="1" name="Scroll of Battlefield Transformation">
+	<skill id="2394" levels="1" name="Transformation Scroll (Battleground)">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
@@ -1850,7 +1850,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2395" levels="1" name="Lesser Battlefield Healing Potion">
+	<skill id="2395" levels="1" name="Healing Potion (Battleground)">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -1905,7 +1905,7 @@
 			<effect name="Petrification" />
 		</for>
 	</skill>
-	<skill id="2398" levels="1" name="Instant Haste Potion">
+	<skill id="2398" levels="1" name="Quick Haste Potion">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="15" />

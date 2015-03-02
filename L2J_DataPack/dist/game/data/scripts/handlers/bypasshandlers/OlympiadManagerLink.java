@@ -223,7 +223,7 @@ public class OlympiadManagerLink implements IBypassHandler
 							iu.addModifiedItem(item);
 							activeChar.sendPacket(iu);
 							
-							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.EARNED_S2_S1_S);
+							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 							sm.addLong(passes);
 							sm.addItemName(item);
 							activeChar.sendPacket(sm);
@@ -279,12 +279,17 @@ public class OlympiadManagerLink implements IBypassHandler
 						
 						target.broadcastPacket(new MagicSkillUse(target, activeChar, skill.getId(), skill.getLevel(), 0, 0));
 						skill.applyEffects(activeChar, activeChar);
-						final L2Summon summon = activeChar.getSummon();
-						if (summon != null)
+						final L2Summon pet = activeChar.getPet();
+						if (pet != null)
 						{
-							target.broadcastPacket(new MagicSkillUse(target, summon, skill.getId(), skill.getLevel(), 0, 0));
-							skill.applyEffects(summon, summon);
+							target.broadcastPacket(new MagicSkillUse(target, pet, skill.getId(), skill.getLevel(), 0, 0));
+							skill.applyEffects(pet, pet);
 						}
+						activeChar.getServitors().values().forEach(s ->
+						{
+							target.broadcastPacket(new MagicSkillUse(target, s, skill.getId(), skill.getLevel(), 0, 0));
+							skill.applyEffects(s, s);
+						});
 					}
 				}
 				

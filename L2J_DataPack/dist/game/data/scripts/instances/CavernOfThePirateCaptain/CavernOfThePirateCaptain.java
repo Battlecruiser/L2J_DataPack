@@ -31,6 +31,7 @@ import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
@@ -180,7 +181,7 @@ public class CavernOfThePirateCaptain extends AbstractNpcAI
 				teleportPlayer(player, ENTER_LOC[getRandom(ENTER_LOC.length)], world.getInstanceId(), false);
 				return;
 			}
-			player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
+			player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
 			return;
 		}
 		
@@ -222,10 +223,12 @@ public class CavernOfThePirateCaptain extends AbstractNpcAI
 		if (!world._is83)
 		{
 			player.stopAllEffectsExceptThoseThatLastThroughDeath();
-			if (player.hasSummon())
+			final L2Summon pet = player.getPet();
+			if (pet != null)
 			{
-				player.getSummon().stopAllEffectsExceptThoseThatLastThroughDeath();
+				pet.stopAllEffectsExceptThoseThatLastThroughDeath();
 			}
+			player.getServitors().values().forEach(L2Summon::stopAllEffectsExceptThoseThatLastThroughDeath);
 		}
 		world.playersInside.add(player);
 		world.addAllowed(player.getObjectId());
@@ -241,7 +244,7 @@ public class CavernOfThePirateCaptain extends AbstractNpcAI
 		
 		if (!player.isInParty())
 		{
-			broadcastSystemMessage(player, null, SystemMessageId.NOT_IN_PARTY_CANT_ENTER, false);
+			broadcastSystemMessage(player, null, SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER, false);
 			return false;
 		}
 		
@@ -252,13 +255,13 @@ public class CavernOfThePirateCaptain extends AbstractNpcAI
 		
 		if (!isPartyLeader)
 		{
-			broadcastSystemMessage(player, null, SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER, false);
+			broadcastSystemMessage(player, null, SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER, false);
 			return false;
 		}
 		
 		if ((members.size() < (is83 ? PLAYERS_83_MIN : PLAYERS_60_MIN)) || (members.size() > (is83 ? PLAYERS_83_MAX : PLAYERS_60_MAX)))
 		{
-			broadcastSystemMessage(player, null, SystemMessageId.PARTY_EXCEEDED_THE_LIMIT_CANT_ENTER, false);
+			broadcastSystemMessage(player, null, SystemMessageId.YOU_CANNOT_ENTER_DUE_TO_THE_PARTY_HAVING_EXCEEDED_THE_LIMIT, false);
 			return false;
 		}
 		
@@ -266,20 +269,20 @@ public class CavernOfThePirateCaptain extends AbstractNpcAI
 		{
 			if (groupMembers.getLevel() < (is83 ? MIN_LV_83 : MIN_LV_60))
 			{
-				broadcastSystemMessage(player, groupMembers, SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT, true);
+				broadcastSystemMessage(player, groupMembers, SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY, true);
 				return false;
 			}
 			
 			if (!player.isInsideRadius(groupMembers, 1000, true, true))
 			{
-				broadcastSystemMessage(player, groupMembers, SystemMessageId.C1_IS_IN_LOCATION_THAT_CANNOT_BE_ENTERED, true);
+				broadcastSystemMessage(player, groupMembers, SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED, true);
 				return false;
 			}
 			
 			final Long reentertime = InstanceManager.getInstance().getInstanceTime(groupMembers.getObjectId(), (is83 ? TEMPLATE_ID_83 : TEMPLATE_ID_60));
 			if (System.currentTimeMillis() < reentertime)
 			{
-				broadcastSystemMessage(player, groupMembers, SystemMessageId.C1_MAY_NOT_REENTER_YET, true);
+				broadcastSystemMessage(player, groupMembers, SystemMessageId.C1_MAY_NOT_RE_ENTER_YET, true);
 				return false;
 			}
 		}
@@ -378,7 +381,7 @@ public class CavernOfThePirateCaptain extends AbstractNpcAI
 					{
 						if (world._is83)
 						{
-							manageScreenMsg(world, NpcStringId.WHO_DARES_AWKAWEN_THE_MIGHTY_ZAKEN);
+							manageScreenMsg(world, NpcStringId.WHO_DARES_AWAKEN_THE_MIGHTY_ZAKEN);
 						}
 						world._zaken.setInvisible(false);
 						world._zaken.setIsParalyzed(false);
@@ -571,7 +574,7 @@ public class CavernOfThePirateCaptain extends AbstractNpcAI
 			}
 		}
 		
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_RESTRICTED);
+		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
 		sm.addString(InstanceManager.getInstance().getInstanceIdName(world.getTemplateId()));
 		
 		for (int objectId : world.getAllowed())

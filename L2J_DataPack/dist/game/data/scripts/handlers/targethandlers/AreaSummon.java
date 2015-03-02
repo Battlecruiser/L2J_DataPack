@@ -39,7 +39,6 @@ public class AreaSummon implements ITargetTypeHandler
 	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
 		List<L2Character> targetList = new ArrayList<>();
-		target = activeChar.getSummon();
 		if ((target == null) || !target.isServitor() || target.isDead())
 		{
 			return EMPTY_TARGET_LIST;
@@ -47,10 +46,13 @@ public class AreaSummon implements ITargetTypeHandler
 		
 		if (onlyFirst)
 		{
-			return new L2Character[]
+			if (activeChar.hasSummon())
 			{
-				target
-			};
+				return new L2Character[]
+				{
+					activeChar.getServitors().values().stream().findFirst().orElse(activeChar.getPet())
+				};
+			}
 		}
 		
 		final boolean srcInArena = (activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE));

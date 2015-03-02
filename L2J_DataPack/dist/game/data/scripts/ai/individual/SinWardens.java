@@ -75,7 +75,7 @@ public final class SinWardens extends AbstractNpcAI
 				
 				if ((killedCount) == 5)
 				{
-					master.broadcastPacket(new NpcSay(master.getObjectId(), Say2.NPC_ALL, master.getId(), NpcStringId.WE_MIGHT_NEED_NEW_SLAVES_ILL_BE_BACK_SOON_SO_WAIT));
+					master.broadcastPacket(new NpcSay(master.getObjectId(), Say2.NPC_ALL, master.getId(), NpcStringId.WE_MIGHT_NEED_NEW_SLAVES_I_LL_BE_BACK_SOON_SO_WAIT));
 					master.doDie(killer);
 					killedMinionsCount.remove(master.getObjectId());
 				}

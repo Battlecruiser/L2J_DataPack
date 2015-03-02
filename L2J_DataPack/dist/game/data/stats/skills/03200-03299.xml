@@ -1139,7 +1139,7 @@
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 	</skill>
-	<skill id="3266" levels="1" name="Large Fireworks Ability">
+	<skill id="3266" levels="1" name="Large Firecracker's Ability">
 		<!-- Allows the use of Large Fireworks. -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1151,7 +1151,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="3267" levels="1" name="Dismiss Agathion">
+	<skill id="3267" levels="1" name="Seal Agathion">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_unsummon_aga_agit_i01" />
@@ -1164,7 +1164,7 @@
 			<effect name="UnsummonAgathion" />
 		</for>
 	</skill>
-	<skill id="3268" levels="1" name="Summon Agathion - Castle">
+	<skill id="3268" levels="1" name="Release Agathion's Seal - Castle">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
@@ -1179,7 +1179,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3269" levels="1" name="Summon Agathion - Rainbow Clan Hall">
+	<skill id="3269" levels="1" name="Release Agathion's Seal - Rainbow Clan Hall">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
@@ -1194,7 +1194,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3270" levels="1" name="Summon Agathion - Beast Farm">
+	<skill id="3270" levels="1" name="Release Agathion's Seal - Beast Farm">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
@@ -1209,7 +1209,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3271" levels="1" name="Blue Talisman of Power">
+	<skill id="3271" levels="1" name="Blue Talisman - P. Atk.">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
@@ -1231,7 +1231,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3272" levels="1" name="Blue Talisman of Defense">
+	<skill id="3272" levels="1" name="Blue Talisman - P. Def.">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
@@ -1253,7 +1253,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3273" levels="1" name="Red Talisman of Recovery">
+	<skill id="3273" levels="1" name="Red Talisman - HP/CP Recovery">
 		<!-- Confirmed CT2.5 -->
 		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="1200" />
@@ -1275,7 +1275,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3274" levels="1" name="Blue Talisman of Protection">
+	<skill id="3274" levels="1" name="Blue Talisman - Shield Defense">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
@@ -1297,7 +1297,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3275" levels="1" name="Blue Talisman of Protection">
+	<skill id="3275" levels="1" name="Blue Talisman - Shield Defense">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
@@ -1319,7 +1319,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3276" levels="1" name="Blue Talisman - Magic Resistance">
+	<skill id="3276" levels="1" name="Blue Talisman - M. Def.">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
@@ -1341,7 +1341,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3277" levels="1" name="Blue Talisman of Wild Magic">
+	<skill id="3277" levels="1" name="Blue Talisman - M. Critical Rate">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
@@ -1363,7 +1363,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3278" levels="1" name="Red Talisman of Mental Regeneration">
+	<skill id="3278" levels="1" name="Red Talisman - Mental Regeneration">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
@@ -1385,7 +1385,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3279" levels="1" name="Red Talisman of Meditation">
+	<skill id="3279" levels="1" name="Red Talisman - Meditation">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
@@ -1411,7 +1411,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3280" levels="1" name="Blue Talisman of Invisibility">
+	<skill id="3280" levels="1" name="Blue Talisman - Invisibility">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
@@ -1434,7 +1434,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3281" levels="1" name="Red Talisman of Minimum Clarity">
+	<skill id="3281" levels="1" name="Red Talisman - Clarity">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
@@ -1458,7 +1458,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3282" levels="1" name="Red Talisman of Maximum Clarity">
+	<skill id="3282" levels="1" name="Red Talisman - Maximum Clarity">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="90" />
@@ -1482,7 +1482,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3283" levels="1" name="Blue Talisman of Healing">
+	<skill id="3283" levels="1" name="Blue Talisman - Healing">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
@@ -1527,7 +1527,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3285" levels="1" name="Blue Talisman of Defense">
+	<skill id="3285" levels="1" name="Blue Talisman - Berserker">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
@@ -1575,7 +1575,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3287" levels="1" name="Black Talisman of Physical Freedom">
+	<skill id="3287" levels="1" name="Black Talisman - Physical Freedom">
 		<!-- Confirmed CT2.5 -->
 		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="1200" />
@@ -1594,7 +1594,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3288" levels="1" name="Black Talisman of Arcane Freedom">
+	<skill id="3288" levels="1" name="Black Talisman - Arcane Freedom">
 		<!-- Confirmed CT2.5 -->
 		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="1200" />
@@ -1632,7 +1632,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3290" levels="1" name="Black Talisman of Rescue">
+	<skill id="3290" levels="1" name="Black Talisman - Rescue">
 		<!-- Confirmed CT2.5 -->
 		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="1200" />
@@ -1651,7 +1651,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3291" levels="1" name="Black Talisman of Vocalization">
+	<skill id="3291" levels="1" name="Black Talisman - Vocalization">
 		<!-- Confirmed CT2.5 -->
 		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="1200" />
@@ -1670,7 +1670,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3292" levels="1" name="Black Talisman of Free Speech">
+	<skill id="3292" levels="1" name="Black Talisman - Free Speech">
 		<!-- Confirmed CT2.5 -->
 		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="1200" />
@@ -1689,7 +1689,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3293" levels="1" name="Yellow Talisman of Power">
+	<skill id="3293" levels="1" name="Yellow Talisman - P. Atk.">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLvl" val="55" />
@@ -1701,7 +1701,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3294" levels="1" name="Yellow Talisman of Arcane Power">
+	<skill id="3294" levels="1" name="Yellow Talisman - M. Atk.">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLvl" val="55" />
@@ -1713,7 +1713,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3295" levels="1" name="Yellow Talisman of Defense">
+	<skill id="3295" levels="1" name="Yellow Talisman - P. Def.">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLvl" val="55" />
@@ -1725,7 +1725,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3296" levels="1" name="Yellow Talisman - Magic Resistance">
+	<skill id="3296" levels="1" name="Yellow Talisman - M. Def.">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLvl" val="55" />
@@ -1737,7 +1737,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3297" levels="1" name="Yellow Talisman of Accuracy">
+	<skill id="3297" levels="1" name="Yellow Talisman - Accuracy">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLvl" val="55" />
@@ -1749,7 +1749,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3298" levels="1" name="Yellow Talisman of Evasion">
+	<skill id="3298" levels="1" name="Yellow Talisman - Evasion">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLvl" val="55" />
@@ -1761,7 +1761,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3299" levels="1" name="Yellow Talisman of Critical Power">
+	<skill id="3299" levels="1" name="Yellow Talisman - Critical Damage">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLvl" val="55" />

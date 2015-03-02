@@ -146,7 +146,7 @@ public class Q00609_MagicalPowerOfWaterPart1 extends Quest
 			npc.setTarget(attacker);
 			npc.doCast(GOW.getSkill());
 			final L2Npc eye = addSpawn(UDANS_EYE, npc);
-			eye.broadcastPacket(new NpcSay(eye, Say2.NPC_ALL, NpcStringId.YOU_CANT_AVOID_THE_EYES_OF_UDAN));
+			eye.broadcastPacket(new NpcSay(eye, Say2.NPC_ALL, NpcStringId.YOU_CAN_T_AVOID_THE_EYES_OF_UDAN));
 			startQuestTimer("eye_despawn", 10000, eye, attacker);
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);

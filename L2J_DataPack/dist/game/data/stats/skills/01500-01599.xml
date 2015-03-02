@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="1500" levels="1" name="Improved Magic">
+	<skill id="1500" levels="1" name="Improve Magic">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="2400" />
@@ -31,7 +31,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1501" levels="1" name="Improved Condition">
+	<skill id="1501" levels="1" name="Improve Condition">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="2400" />
@@ -62,7 +62,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1502" levels="1" name="Improved Critical Attack">
+	<skill id="1502" levels="1" name="Improve Critical Attack">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="2400" />
@@ -93,7 +93,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1503" levels="1" name="Improved Shield Defense">
+	<skill id="1503" levels="1" name="Improve Shield Defense">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="2400" />
@@ -124,7 +124,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1504" levels="1" name="Improved Movement">
+	<skill id="1504" levels="1" name="Improve Movement">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="2400" />
@@ -223,7 +223,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1507" levels="1" name="Lord of Vampire">
+	<skill id="1507" levels="1" name="Lord of Vampires">
 		<set name="abnormalLvl" val="5" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK_SPECIAL" />
@@ -246,7 +246,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1508" levels="1" name="Throne Root">
+	<skill id="1508" levels="1" name="Thorn Root">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
@@ -283,7 +283,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1509" levels="1" name="Seal of Limit">
+	<skill id="1509" levels="6" name="Seal of Limit">
+		<!-- TODO: Auto level parse, Requires manual update -->
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
@@ -482,8 +483,13 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1514" levels="1" name="Soul Barrier" enchantGroup1="1" enchantGroup2="1">
+	<skill id="1514" levels="7" name="Soul Barrier" enchantGroup1="1" enchantGroup2="1">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<table name="#magicLvl"> 58 63 74 85 90 95 99 </table>
+		<table name="#mDef"> 2 2 2.1 2.2 2.3 2.4 2.5 </table>
+		<table name="#mpConsume"> 17 20 22 24 26 27 28 </table>
+		<table name="#mpInitialConsume"> 5 5 6 6 6 7 7 </table>
+		<table name="#res"> 10 15 20 30 35 40 45 </table>
 		<table name="#ench1AbnormalTimes"> 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 </table>
 		<table name="#ench2pDef"> 10 20 30 40 50 60 70 80 90 100 110 120 130 140 150 160 170 180 190 200 210 220 230 240 250 260 270 280 290 300 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
@@ -491,14 +497,14 @@
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="PD_UP_BOW" />
 		<set name="effectPoint" val="138" />
-		<set name="hitTime" val="1500" />
+		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill1514" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="58" />
-		<set name="mpConsume" val="22" />
-		<set name="mpInitialConsume" val="6" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
-		<set name="reuseDelay" val="45000" />
+		<set name="reuseDelay" val="300000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
@@ -506,11 +512,11 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
-				<mul stat="mDef" val="2" />
+				<mul stat="mDef" val="#mDef" />
 			</effect>
 			<effect name="DefenceTrait">
-				<param BOW="10" />
-				<param CROSSBOW="6" />
+				<param BOW="#res" />
+				<param CROSSBOW="#res" />
 			</effect>
 		</for>
 		<enchant2for>
@@ -647,7 +653,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1518" levels="1" name="Chant of Critical Attack">
+	<skill id="1518" levels="1" name="Chant of Critical">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="2400" />
@@ -812,7 +818,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="1524" levels="42" name="Surrender to the Holy">
+	<skill id="1524" levels="42" name="Surrender to Holy">
 		<!-- Confirmed CT2.5 -->
 		<!-- Inquisitor Stance Skill -->
 		<table name="#effectPoints"> -418 -428 -438 -448 -457 -467 -477 -486 -495 -505 -514 -523 -532 -541 -549 -558 -566 -574 -582 -590 -597 -604 -611 -617 -624 -630 -635 -641 -646 -650 -655 -659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689 </table>
@@ -1029,7 +1035,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="1531" levels="7" name="Bless the Blood" enchantGroup1="1" enchantGroup2="1">
+	<skill id="1531" levels="7" name="Blessed Blood" enchantGroup1="1" enchantGroup2="1">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 40 48 56 60 64 68 72 </table>
 		<table name="#mpConsume"> 28 35 41 44 48 51 53 </table>
@@ -1527,7 +1533,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1548" levels="3" name="Resist Earth" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1548" levels="3" name="Earth Resistance" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<!-- High Five Skill -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#earthRes"> 10 15 20 </table>
@@ -1991,7 +1997,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1564" levels="1" name="Piercing Attack">
+	<skill id="1564" levels="1" name="Penetrating Attack">
 		<!-- High Five Skill -->
 		<set name="icon" val="icon.skill1564" />
 		<set name="magicLvl" val="80" />
@@ -2028,5 +2034,337 @@
 				<add stat="maxMp" val="#ench1maxMp" />
 			</effect>
 		</enchant1for>
+	</skill>
+	<skill id="1566" levels="1" name="Class Change">
+		<!-- Change the class. -->
+		<set name="icon" val="icon.skill0810" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="5000" />
+		<set name="reuseDelay" val="3000" />
+		<cond>
+			<player canSwitchSubClass="0" />
+		</cond>
+		<for>
+			<effect name="ClassChange">
+				<param index="0" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="1567" levels="1" name="Class Change">
+		<!-- Change the class. -->
+		<set name="icon" val="icon.skill0810" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="5000" />
+		<set name="reuseDelay" val="3000" />
+		<cond>
+			<player canSwitchSubClass="1" />
+		</cond>
+		<for>
+			<effect name="ClassChange">
+				<param index="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="1568" levels="1" name="Class Change">
+		<!-- Change the class. -->
+		<set name="icon" val="icon.skill0810" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="5000" />
+		<set name="reuseDelay" val="3000" />
+		<cond>
+			<player canSwitchSubClass="2" />
+		</cond>
+		<for>
+			<effect name="ClassChange">
+				<param index="2" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="1569" levels="1" name="Class Change">
+		<!-- Change the class. -->
+		<set name="icon" val="icon.skill0810" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="5000" />
+		<set name="reuseDelay" val="3000" />
+		<cond>
+			<player canSwitchSubClass="3" />
+		</cond>
+		<for>
+			<effect name="ClassChange">
+				<param index="3" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="1570" levels="1" name="Identity Crisis">
+		<!-- For 15 seconds, you are going through an Identity Crisis. Battle abilities are decreased and skills and items cannot be used. However, consumables items can still be used. Also, you cannot switch between main, dual, or sub classes while under the effect of Identity Crisis. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="15" />
+		<set name="abnormalType" val="CHANGE_CLASS" />
+		<set name="icon" val="icon.skill1570" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+		<for>
+			<effect name="Buff">
+				<add stat="runSpd" val="33" />
+				<mul stat="pAtkSpd" val="0.65" />
+				<mul stat="mAtkSpd" val="0.65" />
+				<mul stat="pAtk" val="0.25" />
+				<mul stat="mAtk" val="0.25" />
+			</effect>
+			<effect name="Mute" />
+			<effect name="PhysicalMute" />
+		</for>
+	</skill>
+	<skill id="1571" levels="1" name="Inventory Increase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases inventory slots by 18. -->
+		<set name="icon" val="icon.skill0332" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="1572" levels="1" name="Weight Increase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases weight capacity by 10,000. -->
+		<set name="icon" val="icon.skill0150" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="1573" levels="6" name="Sub - P. Atk./M. Atk. Increase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases P. Atk. by 10 and M. Atk. by 20. -->
+		<set name="icon" val="icon.skill0816" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="1574" levels="6" name="Sub - P. Def./M. Def. Increase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases P. Def. by 15 and M. Def. by 15. -->
+		<set name="icon" val="icon.skill0439" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="1575" levels="3" name="Sub - Atk. Spd./Casting Spd. Increase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Atk. Spd. and Casting Spd. by 10. -->
+		<set name="icon" val="icon.skill0817" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="1576" levels="3" name="Sub - Critical Rate Increase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases P./M. Critical Rate by 10. -->
+		<set name="icon" val="icon.skill0814" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="1577" levels="3" name="Sub - Critical Damage Increase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Critical Damage + 18. M. Critical Damage + 14. -->
+		<set name="icon" val="icon.skill0815" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="1578" levels="3" name="Sub - Physical Attribute Resistance Increase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases resistance to physical attributes by 1. -->
+		<set name="icon" val="icon.skill4084" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="1579" levels="3" name="Sub - Mental Attribute Resistance Increase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Mental Attack Resistance by 1. -->
+		<set name="icon" val="icon.skill4116" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="1580" levels="3" name="Sub - Physical Ability Increase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max CP + 41, Max HP + 51, and Max MP + 36. -->
+		<set name="icon" val="icon.skill1397" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="1581" levels="3" name="Sub - MP Consumption/Cooldown Decrease">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Upon skill use, decreases MP Consumption and Cooldown by 1%. -->
+		<set name="icon" val="icon.skill6274" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="1584" levels="1" name="Equipment Craft">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can read equipment recipe books. -->
+		<set name="icon" val="icon.skill0172" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="1585" levels="1" name="Rhythm of Critical Dark">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 2 minutes, increases party members' Critical Damage by 35% and critical attack rate by 100%. Addtionally increases MP Consumption when the skill is used while song/dance effect is in place. Requires a dualsword to be equipped. -->
+		<set name="icon" val="icon.skill1583" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="60" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="3" />
+	</skill>
+	<skill id="1586" levels="1" name="Rhythm of Critical">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 2 minutes, increases party members' Critical Damage by 35% and critical attack rate by 100%. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
+		<set name="icon" val="icon.skill1583" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="60" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="3" />
+	</skill>
+	<skill id="1587" levels="1" name="Rhythm of Magic Dark">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases all party members' M. Atk. by 20% and M. Def. by 30% for 2 minutes. Addtionally increases MP Consumption when the skill is used while song/dance effect is in place. Requires a dualsword to be equipped. -->
+		<set name="icon" val="icon.skill1588" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="60" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="3" />
+	</skill>
+	<skill id="1588" levels="1" name="Rhythm of Magic">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases all party members' M. Atk. by 20% and M. Def. by 30% for 2 minutes. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
+		<set name="icon" val="icon.skill1588" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="60" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="3" />
+	</skill>
+	<skill id="1589" levels="1" name="Rhythm of Combat Dark">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases all party members' P. Atk. by 12% and P. Def. by 25% for 2 minutes. Addtionally increases MP Consumption when the skill is used while song/dance effect is in place. Requires a dualsword to be equipped. -->
+		<set name="icon" val="icon.skill1584" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="60" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="3" />
+	</skill>
+	<skill id="1590" levels="1" name="Rhythm of Combat">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases all party members' P. Atk. by 12% and P. Def. by 25% for 2 minutes. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
+		<set name="icon" val="icon.skill1584" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="60" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="3" />
+	</skill>
+	<skill id="1591" levels="1" name="Rhythm of Fighter Dark">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases all party members' Atk. Spd. by 15% and Max HP by 30% for 2 minutes. Addtionally increases MP Consumption when the skill is used while song/dance effect is in place. Requires a dualsword to be equipped. -->
+		<set name="icon" val="icon.skill1587" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="60" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="3" />
+	</skill>
+	<skill id="1592" levels="1" name="Rhythm of Fighter">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases all party members' Atk. Spd. by 15% and Max HP by 30% for 2 minutes. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
+		<set name="icon" val="icon.skill1587" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="60" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="3" />
+	</skill>
+	<skill id="1593" levels="1" name="Rhythm of Revenge Dark">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 2 minutes, gives all party members the ability to recover as HP 8% of any damage inflicted on the enemy, and has a chance of giving all party members the ability to return 20% of damage back to the enemy. Additionally increases MP Consumption when the skill is used while song/dance effect is in place. Requires a dualsword to be equipped. -->
+		<set name="icon" val="icon.skill1585" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="60" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="3" />
+	</skill>
+	<skill id="1594" levels="1" name="Rhythm of Revenge">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 2 minutes, gives all party members the ability to recover as HP 8% of any damage inflicted on the enemy, and has a chance of giving all party members the ability to return 20% of damage back to the enemy. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
+		<set name="icon" val="icon.skill1585" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="60" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="3" />
+	</skill>
+	<skill id="1595" levels="1" name="Rhythm of Start Dark">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 2 minutes, decreases all party members' damage attack magic's Critical Rate by 100%, physical/magic/song/dance skills' MP Consumption by 5%, and physical/magic skills' Cooldown by 20%. Addtionally increases MP Consumption when the skill is used while song/dance effect is in place. Requires a dualsword to be equipped. -->
+		<set name="icon" val="icon.skill1586" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="60" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="3" />
+	</skill>
+	<skill id="1596" levels="1" name="Rhythm of Start">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 2 minutes, decreases all party members' damage attack magic's Critical Rate by 100%, physical/magic/song/dance skills' MP Consumption by 5%, and physical/magic skills' Cooldown by 20%. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
+		<set name="icon" val="icon.skill1586" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="60" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="3" />
+	</skill>
+	<skill id="1597" levels="1" name="Weight Increase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases weight capacity by 15000. -->
+		<set name="icon" val="icon.skill0150" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="1598" levels="1" name="Rhythm of Magician Dark">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 2 minutes, decreases all party members' magic cancel damage by 40, MP Consumption for magic skills by 10%, and increases Casting Spd. by 30% and MP recovery bonus by 20%. Addtionally increases MP Consumption when the skill is used while song/dance effect is in place. Requires a dualsword to be equipped. -->
+		<set name="icon" val="icon.skill11005" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="60" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="3" />
+	</skill>
+	<skill id="1599" levels="1" name="Rhythm of Magician">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 2 minutes, decreases all party members' magic cancel damage by 40, MP Consumption for magic skills by 10%, and increases Casting Spd. by 30% and MP recovery bonus by 20%. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
+		<set name="icon" val="icon.skill11005" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="60" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="3" />
 	</skill>
 </list>

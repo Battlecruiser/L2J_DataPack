@@ -85,13 +85,7 @@ public class PcBody implements ITargetTypeHandler
 						if (targetPlayer.isInsideZone(ZoneId.SIEGE) && !targetPlayer.isInSiege())
 						{
 							condGood = false;
-							activeChar.sendPacket(SystemMessageId.CANNOT_BE_RESURRECTED_DURING_SIEGE);
-						}
-						
-						if (targetPlayer.isFestivalParticipant()) // Check to see if the current player target is in a festival.
-						{
-							condGood = false;
-							activeChar.sendMessage("You may not resurrect participants in a festival.");
+							activeChar.sendPacket(SystemMessageId.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEGROUNDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE);
 						}
 					}
 				}
@@ -101,7 +95,7 @@ public class PcBody implements ITargetTypeHandler
 					if (!onlyFirst)
 					{
 						targetList.add(target);
-						return targetList.toArray(new L2Object[targetList.size()]);
+						return targetList.toArray(new L2Character[targetList.size()]);
 					}
 					return new L2Character[]
 					{
@@ -110,7 +104,7 @@ public class PcBody implements ITargetTypeHandler
 				}
 			}
 		}
-		activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
+		activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 		return EMPTY_TARGET_LIST;
 	}
 	

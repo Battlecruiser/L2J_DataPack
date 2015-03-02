@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="16400" levels="1" name="Ferin's Recharge">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Instantly recovers the target's MP with a maximum of 166 power depending on the target's Lv.. Also, for 10 seconds, recovers 12 MP per second. -->
+		<set name="icon" val="icon.skill11760" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="16401" levels="1" name="Dimensional Death Skin">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 sec., received damage - 50%. -->
+		<set name="icon" val="icon.skill0340" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="2400" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="16402" levels="1" name="Dimensional Horror">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts Fear on nearby enemies for 5 sec. -->
+		<set name="icon" val="icon.skill1169" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="2400" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="16403" levels="1" name="Dimensional Judgment">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Sentence target to death. 150,000 damage. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="6" />
+	</skill>
+	<skill id="16404" levels="1" name="Dimensional Wide Judgment">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Sentence enemies to the front to death. 150,000 damage. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="6" />
+	</skill>
+	<skill id="16405" levels="1" name="Dimensional Mass Judgment">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Sentence all nearby enemies to death. 150,000 damage. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="6" />
+	</skill>
+	<skill id="16406" levels="1" name="Dimensional Fear">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts Fear on target for 5 sec. -->
+		<set name="icon" val="icon.skill1169" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="2400" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="16407" levels="1" name="Dimensional Resurrection Block">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Stops target from resurrecting for 60 sec. -->
+		<set name="icon" val="icon.skill_resurrection" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="16408" levels="3" name="Trap Fear">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Moving against your will due to Fear. -->
+		<set name="icon" val="icon.skill1381" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="16409" levels="3" name="Trap Hold">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Immobilized. -->
+		<set name="icon" val="icon.skill4047" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="16410" levels="3" name="Trap Aerial Yoke">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Immobilized. -->
+		<set name="icon" val="icon.skill11050" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="16411" levels="3" name="Trap Stun">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Immobilized. -->
+		<set name="icon" val="icon.skill0100" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="16412" levels="3" name="Trap Petrify">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Immobilized. -->
+		<set name="icon" val="icon.skill4111" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="16413" levels="3" name="Trap Poison">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Poisoned and losing 1,000 HP/second. -->
+		<set name="icon" val="icon.skill4035" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="16414" levels="1" name="Peace Zone Cure">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Recover 10% of Max HP and 30% of Max MP of self and everyone within 200 grids. Cooldown is 10 sec. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="10000" />
+	</skill>
+	<skill id="16415" levels="4" name="Dimensional Dark Forces">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P./M./ Atk. - 10%, and P./M. Critical Rate - 30. -->
+		<set name="icon" val="icon.skill1298" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="16416" levels="10" name="Bluff Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Resistance to Bluff. -->
+		<set name="icon" val="icon.skill0358" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="16417" levels="10" name="Wind Stun Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Resistance to Wind Stun. -->
+		<set name="icon" val="icon.skill4011" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="16418" levels="10" name="Seduction Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Seduction Resistance. -->
+		<set name="icon" val="icon.skill5934" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="16419" levels="2" name="Stocking Fairy's Blessing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 2 hr., STR + 3, INT + 3, Speed + 7. Can obtain item after 2 hr. Must be alive with space in the inventory to receive item. -->
+		<table name="#hitTimes"> 1000 0 </table>
+		<set name="icon" val="BranchSys.icon.br_xmas_present_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="#hitTimes" />
+		<set name="isMagic" val="4" />
+	</skill>
+	<skill id="16420" levels="2" name="Tree Fairy's Blessing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 2 hr., CON + 3, MEN + 3, P. Critical Rate + 30, M. Critical Rate + 30. Can obtain item after 2 hr. Must be alive with space in the inventory to receive item. -->
+		<table name="#hitTimes"> 1000 0 </table>
+		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="#hitTimes" />
+		<set name="isMagic" val="4" />
+	</skill>
+	<skill id="16421" levels="2" name="Snowman Fairy's Blessing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 2 hr., DEX + 3, WIT + 3, Max HP/MP + 2013. Can obtain item after 2 hr. Must be alive with space in the inventory to receive item. -->
+		<table name="#hitTimes"> 1000 0 </table>
+		<set name="icon" val="BranchSys.icon.br_xmas_present_luck_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="#hitTimes" />
+		<set name="isMagic" val="4" />
+	</skill>
+	<skill id="16422" levels="1" name="Winter Holiday Reward">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Receive a Santa's Mark when the blessing from the Stocking/Tree/Snowman Fairy expires. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="16423" levels="1" name="Noelle's Gift">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Recover Vitality for 6 hr. if you're in a peace zone. When the buff expires, you also receive a fixed boost regardless of zone. You must be alive to recover Vitality. -->
+		<set name="icon" val="icon.etc_whiteday_choco" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="4" />
+	</skill>
+	<skill id="16424" levels="1" name="Appearance Stone: Santa Hat">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Changes the appearance of your hair accessory into that of a Santa Hat. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="16425" levels="1" name="Appearance Stone: Santa Suit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 1 hr., changes the appearance of your armor into that of a Santa Suit. -->
+		<set name="icon" val="BranchSys.icon.br_xmas_present_fun_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="100" />
+	</skill>
+	<skill id="16426" levels="1" name="Greater Abelius Cloak (20-day)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 1, CON + 1, INT + 1, MEN + 1 -->
+		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="16427" levels="1" name="Greater Sapyros Cloak (20-day)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 1, CON + 1, INT + 1, MEN + 1 -->
+		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="16428" levels="1" name="Greater Ashagen Cloak (20-day)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 1, CON + 1, INT + 1, MEN + 1 -->
+		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="16429" levels="1" name="Greater Cranigg Cloak (20-day)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 1, CON + 1, INT + 1, MEN + 1 -->
+		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="16430" levels="1" name="Greater Soltkreig Cloak (20-day)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 1, CON + 1, INT + 1, MEN + 1 -->
+		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="16431" levels="1" name="Greater Naviarope Cloak (20-day)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 1, CON + 1, INT + 1, MEN + 1 -->
+		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="16432" levels="1" name="Greater Leister Cloak (20-day)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 1, CON + 1, INT + 1, MEN + 1 -->
+		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="16433" levels="1" name="Greater Lakcis Cloak (20-day)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 1, CON + 1, INT + 1, MEN + 1 -->
+		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="16434" levels="1" name="Greater Sayha Cloak (20-day)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 1, CON + 1, INT + 1, MEN + 1 -->
+		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="16435" levels="1" name="Greater Sayha Cloak (20-day)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 1, CON + 1, INT + 1, MEN + 1 -->
+		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="16436" levels="1" name="Rush">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Charges into the enemy. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="20" />
+		<set name="castRange" val="400" />
+		<set name="hitTime" val="500" />
+		<set name="coolTime" val="200" />
+	</skill>
+	<skill id="16437" levels="1" name="Master's Blessing - GM's Cheers">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- The GM is always with you. XP and SP increases by 100% for 1 hr. Cannot be stacked with Fall of the Dragon. -->
+		<set name="icon" val="icon.skill0919" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1200" />
+		<set name="isMagic" val="4" />
+	</skill>
+	<skill id="16468" levels="1" name="Tauti's Temporary Invincibility">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- A temporary buff that makes Tauti immune to attacks when he's down. -->
+		<set name="icon" val="icon.skill1427" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+</list>

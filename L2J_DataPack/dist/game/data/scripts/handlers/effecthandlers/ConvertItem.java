@@ -57,7 +57,7 @@ public final class ConvertItem extends AbstractEffect
 		}
 		
 		final L2PcInstance player = info.getEffected().getActingPlayer();
-		if (player.isEnchanting())
+		if (player.hasItemRequest())
 		{
 			return;
 		}
@@ -111,13 +111,13 @@ public final class ConvertItem extends AbstractEffect
 			final SystemMessage sm;
 			if (item.getEnchantLevel() > 0)
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.EQUIPMENT_S1_S2_REMOVED);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
 				sm.addInt(item.getEnchantLevel());
 				sm.addItemName(item);
 			}
 			else
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISARMED);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
 				sm.addItemName(item);
 			}
 			player.sendPacket(sm);
@@ -150,13 +150,13 @@ public final class ConvertItem extends AbstractEffect
 		final SystemMessage msg;
 		if (newItem.getEnchantLevel() > 0)
 		{
-			msg = SystemMessage.getSystemMessage(SystemMessageId.S1_S2_EQUIPPED);
+			msg = SystemMessage.getSystemMessage(SystemMessageId.EQUIPPED_S1_S2);
 			msg.addInt(newItem.getEnchantLevel());
 			msg.addItemName(newItem);
 		}
 		else
 		{
-			msg = SystemMessage.getSystemMessage(SystemMessageId.S1_EQUIPPED);
+			msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1);
 			msg.addItemName(newItem);
 		}
 		player.sendPacket(msg);

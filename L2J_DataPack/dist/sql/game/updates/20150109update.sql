@@ -1,0 +1,2 @@
+ALTER TABLE castle CHANGE COLUMN `taxPercent` `side` enum('NEUTRAL','LIGHT','DARK') DEFAULT 'NEUTRAL' NOT NULL AFTER `name`;
+UPDATE castle SET side='LIGHT' WHERE castle.id IN (SELECT hasCastle FROM clan_data);

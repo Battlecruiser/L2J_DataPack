@@ -19,12 +19,12 @@
 package ai.npc.Trainers.HealerTrainer;
 
 import java.util.Collection;
+import java.util.List;
 
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
-import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.model.L2SkillLearn;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -32,7 +32,7 @@ import com.l2jserver.gameserver.model.base.AcquireSkillType;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.AcquireSkillList;
+import com.l2jserver.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
 
 /**
  * Trainer healers AI.
@@ -48,7 +48,7 @@ public final class HealerTrainer extends AbstractNpcAI
 		30144, 30145, 30188, 30194, 30293, 30330, 30375, 30377, 30464, 30473,
 		30476, 30680, 30701, 30720, 30721, 30858, 30859, 30860, 30861, 30864,
 		30906, 30908, 30912, 31280, 31281, 31287, 31329, 31330, 31335, 31969,
-		31970, 31976, 32155, 32162
+		31970, 31976, 32155, 32162, 32161, 32156, 32148
 	};
 	// @formatter:on
 	// Misc
@@ -94,24 +94,14 @@ public final class HealerTrainer extends AbstractNpcAI
 					break;
 				}
 				
-				final AcquireSkillList asl = new AcquireSkillList(AcquireSkillType.TRANSFER);
-				int count = 0;
-				for (L2SkillLearn skillLearn : SkillTreesData.getInstance().getAvailableTransferSkills(player))
+				final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailableTransferSkills(player);
+				if (skills.isEmpty())
 				{
-					if (SkillData.getInstance().getSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel()) != null)
-					{
-						count++;
-						asl.addSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel(), skillLearn.getSkillLevel(), skillLearn.getLevelUpSp(), 0);
-					}
-				}
-				
-				if (count > 0)
-				{
-					player.sendPacket(asl);
+					player.sendPacket(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
 				}
 				else
 				{
-					player.sendPacket(SystemMessageId.NO_MORE_SKILLS_TO_LEARN);
+					player.sendPacket(new ExAcquirableSkillListByClass(skills, AcquireSkillType.TRANSFER));
 				}
 				break;
 			}
@@ -131,7 +121,7 @@ public final class HealerTrainer extends AbstractNpcAI
 				
 				if (player.getAdena() < Config.FEE_DELETE_TRANSFER_SKILLS)
 				{
-					player.sendPacket(SystemMessageId.CANNOT_RESET_SKILL_LINK_BECAUSE_NOT_ENOUGH_ADENA);
+					player.sendPacket(SystemMessageId.YOU_CANNOT_RESET_THE_SKILL_LINK_BECAUSE_THERE_IS_NOT_ENOUGH_ADENA);
 					break;
 				}
 				
@@ -180,17 +170,17 @@ public final class HealerTrainer extends AbstractNpcAI
 		int itemId;
 		switch (player.getClassId())
 		{
-			case cardinal:
+			case CARDINAL:
 			{
 				itemId = 15307;
 				break;
 			}
-			case evaSaint:
+			case EVA_SAINT:
 			{
 				itemId = 15308;
 				break;
 			}
-			case shillienSaint:
+			case SHILLIEN_SAINT:
 			{
 				itemId = 15309;
 				break;

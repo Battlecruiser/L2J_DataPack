@@ -88,7 +88,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
+				activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 				return false;
 			}
 		}
@@ -185,7 +185,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
+				activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 				return false;
 			}
 			

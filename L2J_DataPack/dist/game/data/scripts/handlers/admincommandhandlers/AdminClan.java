@@ -66,7 +66,7 @@ public class AdminClan implements IAdminCommandHandler
 				final L2Clan clan = player.getClan();
 				if (clan == null)
 				{
-					activeChar.sendPacket(SystemMessageId.TARGET_MUST_BE_IN_CLAN);
+					activeChar.sendPacket(SystemMessageId.THE_TARGET_MUST_BE_A_CLAN_MEMBER);
 					return false;
 				}
 				
@@ -97,7 +97,7 @@ public class AdminClan implements IAdminCommandHandler
 				final L2Clan clan = player.getClan();
 				if (clan == null)
 				{
-					activeChar.sendPacket(SystemMessageId.TARGET_MUST_BE_IN_CLAN);
+					activeChar.sendPacket(SystemMessageId.THE_TARGET_MUST_BE_A_CLAN_MEMBER);
 					return false;
 				}
 				
@@ -106,7 +106,7 @@ public class AdminClan implements IAdminCommandHandler
 				{
 					if (player.isAcademyMember())
 					{
-						player.sendPacket(SystemMessageId.RIGHT_CANT_TRANSFERRED_TO_ACADEMY_MEMBER);
+						player.sendPacket(SystemMessageId.THAT_PRIVILEGE_CANNOT_BE_GRANTED_TO_A_CLAN_ACADEMY_MEMBER);
 					}
 					else
 					{
@@ -185,7 +185,7 @@ public class AdminClan implements IAdminCommandHandler
 				player = L2World.getInstance().getPlayer(Integer.parseInt(val));
 				if (player == null)
 				{
-					activeChar.sendPacket(SystemMessageId.TARGET_IS_NOT_FOUND_IN_THE_GAME);
+					activeChar.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
 					return null;
 				}
 			}
@@ -194,7 +194,7 @@ public class AdminClan implements IAdminCommandHandler
 				player = L2World.getInstance().getPlayer(val);
 				if (player == null)
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_NAME_TRY_AGAIN);
+					activeChar.sendPacket(SystemMessageId.INCORRECT_NAME_PLEASE_TRY_AGAIN);
 					return null;
 				}
 			}
@@ -208,7 +208,7 @@ public class AdminClan implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				return null;
 			}
 		}

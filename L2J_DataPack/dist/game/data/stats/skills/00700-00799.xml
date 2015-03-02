@@ -47,7 +47,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="702" levels="1" name="Divine Healer Cleanse">
+	<skill id="702" levels="1" name="Divine Healer Clans">
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="676" />
 		<set name="effectRange" val="1100" />
@@ -318,7 +318,10 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond>
-			<player canSummon="true" />
+		    <and>
+				<player canSummonServitor="true" />
+				<player hasFreeSummonPoints="0" />
+			</and>
 		</cond>
 		<for>
 			<effect name="Summon">
@@ -330,7 +333,6 @@
 		</for>
 	</skill>
 	<skill id="711" levels="1" name="Divine Summoner Transfer Pain">
-		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="icon" val="icon.skill_transform_etc" />
 		<set name="magicLvl" val="80" />
 		<set name="mpInitialConsume" val="72" />
@@ -615,7 +617,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="722" levels="2" name="Anakim Holy Beam">
+	<skill id="722" levels="2" name="Anakim Divine Beam">
 		<!-- Confirmed CT2.5 -->
 		<table name="#effectPoints"> -335 -342 </table>
 		<table name="#magicLvl"> 75 80 </table>
@@ -1099,7 +1101,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="742" levels="3" name="Vale Master Bursting Flame">
+	<skill id="742" levels="3" name="Veil Master Bursting Flame">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 70 73 76 </table>
 		<table name="#mpConsume"> 68 70 73 </table>
@@ -1125,7 +1127,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="743" levels="3" name="Vale Master Dark Explosion">
+	<skill id="743" levels="3" name="Veil Master Dark Explosion">
 		<!-- Confirmed CT2.5 -->
 		<table name="#effectPoints"> -323 -331 -337 </table>
 		<table name="#magicLvl"> 70 73 76 </table>
@@ -1154,7 +1156,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="744" levels="3" name="Vale Master Dark Flare">
+	<skill id="744" levels="3" name="Veil Master Dark Flare">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 70 73 76 </table>
 		<table name="#mpConsume"> 68 70 73 </table>
@@ -1181,7 +1183,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="745" levels="3" name="Vale Master Dark Cure">
+	<skill id="745" levels="3" name="Veil Master Dark Cure">
 		<!-- Confirmed CT2.5 -->
 		<table name="#effectPoints"> 635 650 662 </table>
 		<table name="#magicLvl"> 70 73 76 </table>
@@ -1685,7 +1687,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="764" levels="1" name="Song of Wind Storm" enchantGroup1="5" enchantGroup2="5">
+	<skill id="764" levels="1" name="Windstorm Song" enchantGroup1="5" enchantGroup2="5">
 		<table name="#ench1AbnormalTimes"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
 		<table name="#ench1EffectPoints"> 666 669 673 676 679 681 684 687 689 692 694 696 698 700 702 </table>
 		<table name="#ench2EffectPoints"> 704 706 707 709 710 711 713 714 715 1 1 1 1 1 1 </table>
@@ -1764,7 +1766,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="767" levels="1" name="Expose Weak Point">
+	<skill id="767" levels="1" name="Expose Vulnerability">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill0767" />
 		<set name="magicLvl" val="81" />
@@ -2203,7 +2205,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="784" levels="1" name="Spirit of Phoenix">
+	<skill id="784" levels="1" name="Spirit of the Phoenix">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
@@ -2230,7 +2232,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="785" levels="1" name="Flame Icon">
+	<skill id="785" levels="1" name="Flame Archon">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="60" />
@@ -2420,7 +2422,8 @@
 			<effect name="PhysicalSoulAttack" />
 		</for>
 	</skill>
-	<skill id="791" levels="1" name="Lightning Shock">
+	<skill id="791" levels="5" name="Lightning Shock">
+		<!-- TODO: Auto level parse, Requires manual update -->
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalTime" val="5" />
 		<set name="activateRate" val="50" />
@@ -2488,15 +2491,19 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="793" levels="1" name="Rush Impact" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6" enchantGroup5="6" enchantGroup6="6" enchantGroup7="6" enchantGroup8="6">
-		<!-- Confirmed CT2.5 -->
+	<skill id="793" levels="5" name="Rush Impact" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6" enchantGroup5="6" enchantGroup6="6" enchantGroup7="6" enchantGroup8="6">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<table name="#abnormalLvl"> 1 2 3 4 5 </table>
+		<table name="#magicLvl"> 78 85 90 95 99 </table>
+		<table name="#mpConsume"> 83 92 98 104 110 </table>
+		<table name="#power"> 4040 11557 13553 15150 16747 </table>
 		<table name="#ench1Power"> 4071 4102 4133 4164 4195 4226 4257 4289 4320 4351 4382 4413 4444 4475 4507 </table>
 		<table name="#ench2Cost"> 80 78 76 74 72 70 68 66 64 62 59 57 55 53 51 </table>
 		<table name="#ench3ActivateRates"> 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80 </table>
 		<table name="#ench8Duel"> 4104 4168 4232 4297 4361 4425 4490 4554 4618 4683 4747 4811 4875 4940 5004 </table>
 		<table name="#enchElementAttack"> 4 7 10 14 17 20 24 27 30 34 37 40 43 47 50 </table>
 		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLvl" val="#abnormalLvl" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -2511,14 +2518,15 @@
 		<set name="fanRange" val="0,0,600,60" />
 		<set name="flyType" val="CHARGE" />
 		<set name="hitTime" val="800" />
+		<set name="hpConsume" val="28" />
 		<set name="icon" val="icon.skill0793" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="78" />
-		<set name="mpConsume" val="83" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="DA2" />
-		<set name="power" val="4040" />
+		<set name="power" val="#power" />
 		<set name="rideState" val="NONE" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="targetType" val="FRONT_AREA" />
@@ -2654,7 +2662,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="798" levels="1" name="Divine Warrior Assault Attack">
+	<skill id="798" levels="1" name="Divine Warrior Crippling Attack">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="POISON" />
@@ -2685,7 +2693,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="799" levels="3" name="Master Ability - Defense">
+	<skill id="799" levels="3" name="Master Ability: Defense">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pDefHeavy"> 59.5 119 178.5 </table>
 		<table name="#pDefLight"> 44.625 89.25 133.875 </table>

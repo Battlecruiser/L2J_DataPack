@@ -4,7 +4,6 @@
 		<set name="icon" val="icon.etc_magic_book_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="price" val="10000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -66,7 +65,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5906" type="EtcItem" name="5th Anniversary Gift Box (10 Honey Rice Cake Set)">
+	<item id="5906" type="EtcItem" name="5th Anniversary Gift Box (10 Honey Rice Cakes)">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -81,7 +80,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13420,10,10,100;13419,1,1,100" />
 	</item>
-	<item id="5907" type="EtcItem" name="5th Anniversary Gift Box (9 Honey Rice Cake Set)">
+	<item id="5907" type="EtcItem" name="5th Anniversary Gift Box (9 Honey Rice Cakes)">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -106,7 +105,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="5909" type="EtcItem" name="5th Anniversary Gift Box (8 Honey Rice Cake Set)">
+	<item id="5909" type="EtcItem" name="5th Anniversary Gift Box (8 Honey Rice Cakes)">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -121,7 +120,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13420,8,8,100;13419,1,1,100" />
 	</item>
-	<item id="5910" type="EtcItem" name="5th Anniversary Gift Box (7 Honey Rice Cake Set)">
+	<item id="5910" type="EtcItem" name="5th Anniversary Gift Box (7 Honey Rice Cakes)">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -145,8 +144,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
-	<item id="5912" type="EtcItem" name="5th Anniversary Gift Box (6 Honey Rice Cake Set)">
+	<item id="5912" type="EtcItem" name="5th Anniversary Gift Box (6 Honey Rice Cakes)">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -161,7 +161,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13420,6,6,100;13419,1,1,100" />
 	</item>
-	<item id="5913" type="EtcItem" name="5th Anniversary Gift Box (3 Honey Wheat Cake Set)">
+	<item id="5913" type="EtcItem" name="5th Anniversary Gift Box (3 Honey Wheat Cakes)">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -441,7 +441,7 @@
 		<set name="material" val="LIQUID" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5955" type="EtcItem" name="Ancient Titan Book">
+	<item id="5955" type="EtcItem" name="Ancient Lesser Giant Book">
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -450,7 +450,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2173-1" />
 	</item>
-	<item id="5956" type="EtcItem" name="15 Year Old Wine">
+	<item id="5956" type="EtcItem" name="15-year-old Wine">
 		<set name="icon" val="icon.etc_luxury_wine_a_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -458,7 +458,7 @@
 		<set name="price" val="5900" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5957" type="EtcItem" name="30 Year Old Wine">
+	<item id="5957" type="EtcItem" name="30-year-old Wine">
 		<set name="icon" val="icon.etc_luxury_wine_b_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -466,7 +466,7 @@
 		<set name="price" val="7900" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5958" type="EtcItem" name="60 Year Old Wine">
+	<item id="5958" type="EtcItem" name="60-year-old Wine">
 		<set name="icon" val="icon.etc_luxury_wine_c_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -570,7 +570,7 @@
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5971" type="EtcItem" name="Ancient Joke Book">
+	<item id="5971" type="EtcItem" name="Joke Book of Ancient Times">
 		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />

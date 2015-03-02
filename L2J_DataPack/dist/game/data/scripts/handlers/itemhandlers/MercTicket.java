@@ -18,7 +18,6 @@
  */
 package handlers.itemhandlers;
 
-import com.l2jserver.gameserver.SevenSigns;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.instancemanager.MercTicketManager;
@@ -39,7 +38,7 @@ public class MercTicket implements IItemHandler
 	{
 		if (!playable.isPlayer())
 		{
-			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
+			playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 			return false;
 		}
 		
@@ -60,49 +59,13 @@ public class MercTicket implements IItemHandler
 		}
 		else if (!activeChar.isCastleLord(castleId))
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_AUTHORITY_TO_POSITION_MERCENARIES);
+			activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_AUTHORITY_TO_POSITION_MERCENARIES);
 			return false;
 		}
 		else if ((castle != null) && castle.getSiege().isInProgress())
 		{
 			activeChar.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
 			return false;
-		}
-		
-		// Checking Seven Signs Quest Period
-		if (SevenSigns.getInstance().getCurrentPeriod() != SevenSigns.PERIOD_SEAL_VALIDATION)
-		{
-			// _log.warning("Someone has tried to spawn a guardian during Quest Event Period of The Seven Signs.");
-			activeChar.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
-			return false;
-		}
-		// Checking the Seal of Strife status
-		switch (SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_STRIFE))
-		{
-			case SevenSigns.CABAL_NULL:
-			{
-				if (SevenSigns.getInstance().checkIsDawnPostingTicket(itemId))
-				{
-					// _log.warning("Someone has tried to spawn a Dawn Mercenary though the Seal of Strife is not controlled by anyone.");
-					activeChar.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
-					return false;
-				}
-				break;
-			}
-			case SevenSigns.CABAL_DUSK:
-			{
-				if (!SevenSigns.getInstance().checkIsRookiePostingTicket(itemId))
-				{
-					// _log.warning("Someone has tried to spawn a non-Rookie Mercenary though the Seal of Strife is controlled by Revolutionaries of Dusk.");
-					activeChar.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
-					return false;
-				}
-				break;
-			}
-			case SevenSigns.CABAL_DAWN:
-			{
-				break;
-			}
 		}
 		
 		if (MercTicketManager.getInstance().isAtCasleLimit(item.getId()))
@@ -117,13 +80,13 @@ public class MercTicket implements IItemHandler
 		}
 		else if (MercTicketManager.getInstance().isTooCloseToAnotherTicket(activeChar.getX(), activeChar.getY(), activeChar.getZ()))
 		{
-			activeChar.sendPacket(SystemMessageId.POSITIONING_CANNOT_BE_DONE_BECAUSE_DISTANCE_BETWEEN_MERCENARIES_TOO_SHORT);
+			activeChar.sendPacket(SystemMessageId.POSITIONING_CANNOT_BE_DONE_HERE_BECAUSE_THE_DISTANCE_BETWEEN_MERCENARIES_IS_TOO_SHORT);
 			return false;
 		}
 		
 		MercTicketManager.getInstance().addTicket(item.getId(), activeChar);
 		activeChar.destroyItem("Consume", item.getObjectId(), 1, null, false); // Remove item from char's inventory
-		activeChar.sendPacket(SystemMessageId.PLACE_CURRENT_LOCATION_DIRECTION);
+		activeChar.sendPacket(SystemMessageId.PLACE_S1_IN_THE_CURRENT_LOCATION_AND_DIRECTION_DO_YOU_WISH_TO_CONTINUE);
 		return true;
 	}
 }

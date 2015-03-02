@@ -30,6 +30,7 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.ExMagicAttackInfo;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
@@ -107,6 +108,12 @@ public final class Heal extends AbstractEffect
 			if (info.getSkill().isMagic() && Formulas.calcMCrit(activeChar.getMCriticalHit(target, info.getSkill())))
 			{
 				amount *= 3;
+				activeChar.sendPacket(SystemMessageId.M_CRITICAL);
+				activeChar.sendPacket(new ExMagicAttackInfo(activeChar.getObjectId(), target.getObjectId(), ExMagicAttackInfo.CRITICAL_HEAL));
+				if (target.isPlayer() && (target != activeChar))
+				{
+					target.sendPacket(new ExMagicAttackInfo(activeChar.getObjectId(), target.getObjectId(), ExMagicAttackInfo.CRITICAL_HEAL));
+				}
 			}
 		}
 		
@@ -127,14 +134,14 @@ public final class Heal extends AbstractEffect
 			{
 				if (activeChar.isPlayer() && (activeChar != target))
 				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HP_RESTORED_BY_C1);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HP_HAS_BEEN_RESTORED_BY_C1);
 					sm.addString(activeChar.getName());
 					sm.addInt((int) amount);
 					target.sendPacket(sm);
 				}
 				else
 				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_RESTORED);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_HAS_BEEN_RESTORED);
 					sm.addInt((int) amount);
 					target.sendPacket(sm);
 				}

@@ -163,6 +163,7 @@
 		<set name="material" val="PAPER" />
 		<set name="price" val="5000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="9815" type="EtcItem" name="Dragon Heart">
 		<set name="icon" val="icon.etc_raid_b_i02" />
@@ -170,6 +171,7 @@
 		<set name="material" val="PAPER" />
 		<set name="price" val="5000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="9816" type="EtcItem" name="Earth Egg">
 		<set name="icon" val="icon.etc_raid_c_i02" />
@@ -177,6 +179,7 @@
 		<set name="material" val="PAPER" />
 		<set name="price" val="5000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="9817" type="EtcItem" name="Nonliving Nucleus">
 		<set name="icon" val="icon.etc_raid_d_i02" />
@@ -184,6 +187,7 @@
 		<set name="material" val="PAPER" />
 		<set name="price" val="5000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="9818" type="EtcItem" name="Angelic Essence">
 		<set name="icon" val="icon.etc_raid_e_i02" />
@@ -191,6 +195,7 @@
 		<set name="material" val="PAPER" />
 		<set name="price" val="5000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="9819" type="Weapon" name="Combat flag">
 		<set name="icon" val="icon.weapon_fort_flag_i00" />
@@ -426,7 +431,7 @@
 			<add order="0" stat="pDef" val="24" />
 		</for>
 	</item>
-	<item id="9830" type="Armor" name="Improved Apella Helm">
+	<item id="9830" type="Armor" name="Enhanced Apella Helm">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -444,7 +449,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9831" type="Armor" name="Improved Apella Plate Armor">
+	<item id="9831" type="Armor" name="Enhanced Apella Plate Armor">
 		<set name="icon" val="icon.armor_t1004_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -466,7 +471,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9832" type="Armor" name="Improved Apella Gauntlet - Heavy Armor">
+	<item id="9832" type="Armor" name="Enhanced Apella Gauntlets">
 		<set name="icon" val="icon.armor_t1004_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -487,7 +492,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9833" type="Armor" name="Improved Apella Solleret - Heavy Armor">
+	<item id="9833" type="Armor" name="Enhanced Apella Solleret">
 		<set name="icon" val="icon.armor_t1004_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -508,7 +513,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9834" type="Armor" name="Improved Apella Brigandine">
+	<item id="9834" type="Armor" name="Enhanced Apella Brigandine">
 		<set name="icon" val="icon.armor_t1005_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -527,7 +532,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9835" type="Armor" name="Improved Apella Leather Gloves - Light Armor">
+	<item id="9835" type="Armor" name="Enhanced Apella Leather Gloves">
 		<set name="icon" val="icon.armor_t1005_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -545,7 +550,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9836" type="Armor" name="Improved Apella Boots - Light Armor">
+	<item id="9836" type="Armor" name="Enhanced Apella Boots">
 		<set name="icon" val="icon.armor_t1005_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -563,7 +568,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9837" type="Armor" name="Improved Apella Doublet">
+	<item id="9837" type="Armor" name="Enhanced Apella Doublet">
 		<set name="icon" val="icon.armor_t1006_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -586,7 +591,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9838" type="Armor" name="Improved Apella Silk Gloves - Robe">
+	<item id="9838" type="Armor" name="Enhanced Apella Silk Gloves">
 		<set name="icon" val="icon.armor_t1006_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -607,7 +612,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9839" type="Armor" name="Improved Apella Sandals - Robe">
+	<item id="9839" type="Armor" name="Enhanced Apella Sandals">
 		<set name="icon" val="icon.armor_t1006_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -950,7 +955,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="9854" type="Weapon" name="Dynasty Sword - Focus">
+	<item id="9854" type="Weapon" name="Dynasty Sword">
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -959,7 +964,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
@@ -979,7 +984,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9855" type="Weapon" name="Dynasty Sword - Health">
+	<item id="9855" type="Weapon" name="Dynasty Sword">
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -988,7 +993,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
@@ -1008,7 +1013,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9856" type="Weapon" name="Dynasty Sword - Light">
+	<item id="9856" type="Weapon" name="Dynasty Sword">
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1017,7 +1022,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
@@ -1037,7 +1042,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9857" type="Weapon" name="Dynasty Blade - Focus">
+	<item id="9857" type="Weapon" name="Dynasty Blade">
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1046,7 +1051,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
@@ -1066,7 +1071,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9858" type="Weapon" name="Dynasty Blade - Health">
+	<item id="9858" type="Weapon" name="Dynasty Blade">
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1075,7 +1080,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
@@ -1095,7 +1100,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9859" type="Weapon" name="Dynasty Blade - Light">
+	<item id="9859" type="Weapon" name="Dynasty Blade">
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1104,7 +1109,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
@@ -1124,7 +1129,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9860" type="Weapon" name="Dynasty Phantom - Acumen">
+	<item id="9860" type="Weapon" name="Dynasty Phantom">
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1133,7 +1138,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
@@ -1153,7 +1158,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9861" type="Weapon" name="Dynasty Phantom - Mana Up">
+	<item id="9861" type="Weapon" name="Dynasty Phantom">
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1162,7 +1167,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
@@ -1182,7 +1187,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9862" type="Weapon" name="Dynasty Phantom - Conversion">
+	<item id="9862" type="Weapon" name="Dynasty Phantom">
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1191,7 +1196,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
@@ -1211,7 +1216,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9863" type="Weapon" name="Dynasty Bow - Cheap Shot">
+	<item id="9863" type="Weapon" name="Dynasty Bow">
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1220,7 +1225,7 @@
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
@@ -1243,7 +1248,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9864" type="Weapon" name="Dynasty Bow - Guidance">
+	<item id="9864" type="Weapon" name="Dynasty Bow">
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1252,7 +1257,7 @@
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
@@ -1275,7 +1280,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9865" type="Weapon" name="Dynasty Bow - Focus">
+	<item id="9865" type="Weapon" name="Dynasty Bow">
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1284,7 +1289,7 @@
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
@@ -1307,7 +1312,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9866" type="Weapon" name="Dynasty Knife - Focus">
+	<item id="9866" type="Weapon" name="Dynasty Knife">
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1316,7 +1321,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
@@ -1336,7 +1341,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9867" type="Weapon" name="Dynasty Knife - Evasion">
+	<item id="9867" type="Weapon" name="Dynasty Knife">
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1345,7 +1350,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
@@ -1365,7 +1370,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9868" type="Weapon" name="Dynasty Knife - Critical Damage">
+	<item id="9868" type="Weapon" name="Dynasty Knife">
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1374,7 +1379,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
@@ -1384,6 +1389,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3066-4" />
+		<set name="commissionItemType" val="DAGGER" />
 		<for>
 			<set stat="pAtk" val="291" />
 			<set stat="mAtk" val="151" />
@@ -1394,7 +1400,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9869" type="Weapon" name="Dynasty Halberd - Anger">
+	<item id="9869" type="Weapon" name="Dynasty Halberd">
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1403,7 +1409,7 @@
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
@@ -1423,7 +1429,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9870" type="Weapon" name="Dynasty Halberd - Critical Stun">
+	<item id="9870" type="Weapon" name="Dynasty Halberd">
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1432,7 +1438,7 @@
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
@@ -1444,6 +1450,7 @@
 		<set name="oncrit_chance" val="48" />
 		<set name="oncrit_skill" val="3070-4" />
 		<set name="item_skill" val="3552-2" />
+		<set name="commissionItemType" val="SPEAR" />
 		<for>
 			<set stat="pAtk" val="333" />
 			<set stat="mAtk" val="151" />
@@ -1454,7 +1461,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9871" type="Weapon" name="Dynasty Halberd - Light">
+	<item id="9871" type="Weapon" name="Dynasty Halberd">
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1463,7 +1470,7 @@
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
@@ -1483,7 +1490,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9872" type="Weapon" name="Dynasty Cudgel - Anger">
+	<item id="9872" type="Weapon" name="Dynasty Cudgel">
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1492,7 +1499,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
@@ -1512,7 +1519,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9873" type="Weapon" name="Dynasty Cudgel - Health">
+	<item id="9873" type="Weapon" name="Dynasty Cudgel">
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1521,7 +1528,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
@@ -1550,7 +1557,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
@@ -1570,7 +1577,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9875" type="Weapon" name="Dynasty Mace - Mana Up">
+	<item id="9875" type="Weapon" name="Dynasty Mace">
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1579,7 +1586,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
@@ -1600,7 +1607,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9876" type="Weapon" name="Dynasty Mace - Conversion">
+	<item id="9876" type="Weapon" name="Dynasty Mace">
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1609,7 +1616,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
@@ -1630,7 +1637,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9877" type="Weapon" name="Dynasty Mace - Acumen">
+	<item id="9877" type="Weapon" name="Dynasty Mace">
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1639,7 +1646,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
@@ -1669,7 +1676,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
@@ -1689,7 +1696,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9879" type="Weapon" name="Dynasty Bagh-Nakh - Focus">
+	<item id="9879" type="Weapon" name="Dynasty Bagh-Nakh">
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1698,7 +1705,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
@@ -1718,7 +1725,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9880" type="Weapon" name="Dynasty Bagh-Nakh - Haste">
+	<item id="9880" type="Weapon" name="Dynasty Bagh-Nakh">
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1727,7 +1734,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
@@ -1758,7 +1765,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="9882" type="EtcItem" name="Great Wolf Necklace">
+	<item id="9882" type="EtcItem" name="Great Black Wolf Necklace">
 		<set name="icon" val="icon.etc_summon_wolf_r_01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -1769,11 +1776,12 @@
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<set name="commissionItemType" val="PET_SUPPLIES" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="9883" type="Armor" name="Teddy Bear Hat - Big Head">
+	<item id="9883" type="Armor" name="Teddy Bear Hat">
 		<set name="icon" val="icon.accessory_bear_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1782,7 +1790,7 @@
 		<set name="weight" val="10" />
 		<set name="item_skill" val="3404-1" />
 	</item>
-	<item id="9884" type="Armor" name="Piggy Hat - Big Head">
+	<item id="9884" type="Armor" name="Piggy Hat">
 		<set name="icon" val="icon.accessory_pig_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1791,7 +1799,7 @@
 		<set name="weight" val="10" />
 		<set name="item_skill" val="3404-1" />
 	</item>
-	<item id="9885" type="Armor" name="Jester Hat - Big Head">
+	<item id="9885" type="Armor" name="Jester Hat">
 		<set name="icon" val="icon.accessory_jester_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1799,8 +1807,9 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="item_skill" val="3404-1" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
-	<item id="9886" type="Armor" name="Wizard Hat - Big Head">
+	<item id="9886" type="Armor" name="Wizard Hat">
 		<set name="icon" val="icon.accessory_magic_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1808,8 +1817,9 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="item_skill" val="3404-1" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
-	<item id="9887" type="Armor" name="Dapper Cap - Big Head">
+	<item id="9887" type="Armor" name="Dapper Cap">
 		<set name="icon" val="icon.accessory_dandy_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1818,7 +1828,7 @@
 		<set name="weight" val="10" />
 		<set name="item_skill" val="3404-1" />
 	</item>
-	<item id="9888" type="Armor" name="Romantic Chapeau - Big Head">
+	<item id="9888" type="Armor" name="Romantic Chapeau">
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1827,7 +1837,7 @@
 		<set name="weight" val="10" />
 		<set name="item_skill" val="3404-1" />
 	</item>
-	<item id="9889" type="Armor" name="Iron Circlet - Big Head">
+	<item id="9889" type="Armor" name="Iron Circlet">
 		<set name="icon" val="icon.accessory_iron_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1836,7 +1846,7 @@
 		<set name="weight" val="10" />
 		<set name="item_skill" val="3404-1" />
 	</item>
-	<item id="9890" type="Armor" name="Teddy Bear Hat - Firework">
+	<item id="9890" type="Armor" name="Teddy Bear Hat">
 		<set name="icon" val="icon.accessory_bear_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1845,7 +1855,7 @@
 		<set name="weight" val="10" />
 		<set name="item_skill" val="3405-1" />
 	</item>
-	<item id="9891" type="Armor" name="Piggy Hat - Firework">
+	<item id="9891" type="Armor" name="Piggy Hat">
 		<set name="icon" val="icon.accessory_pig_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1854,7 +1864,7 @@
 		<set name="weight" val="10" />
 		<set name="item_skill" val="3405-1" />
 	</item>
-	<item id="9892" type="Armor" name="Jester Hat - Firework">
+	<item id="9892" type="Armor" name="Jester Hat">
 		<set name="icon" val="icon.accessory_jester_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1863,7 +1873,7 @@
 		<set name="weight" val="10" />
 		<set name="item_skill" val="3405-1" />
 	</item>
-	<item id="9893" type="Armor" name="Wizard Hat - Firework">
+	<item id="9893" type="Armor" name="Wizard Hat">
 		<set name="icon" val="icon.accessory_magic_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1872,7 +1882,7 @@
 		<set name="weight" val="10" />
 		<set name="item_skill" val="3405-1" />
 	</item>
-	<item id="9894" type="Armor" name="Dapper Cap - Firework">
+	<item id="9894" type="Armor" name="Dapper Cap">
 		<set name="icon" val="icon.accessory_dandy_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1881,7 +1891,7 @@
 		<set name="weight" val="10" />
 		<set name="item_skill" val="3405-1" />
 	</item>
-	<item id="9895" type="Armor" name="Romantic Chapeau - Firework">
+	<item id="9895" type="Armor" name="Romantic Chapeau">
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1890,7 +1900,7 @@
 		<set name="weight" val="10" />
 		<set name="item_skill" val="3405-1" />
 	</item>
-	<item id="9896" type="Armor" name="Iron Circlet - Firework">
+	<item id="9896" type="Armor" name="Iron Circlet">
 		<set name="icon" val="icon.accessory_iron_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1899,7 +1909,7 @@
 		<set name="weight" val="10" />
 		<set name="item_skill" val="3405-1" />
 	</item>
-	<item id="9897" type="EtcItem" name="Scroll of Transformation - Pig">
+	<item id="9897" type="EtcItem" name="Transformation Scroll: Pig">
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1910,6 +1920,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2370-1" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="9898" type="EtcItem" name="SP Scroll: Highest Grade">
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
@@ -1930,7 +1941,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
-		<set name="price" val="25" />
+		<set name="price" val="5" />
 		<set name="item_skill" val="3406-1" />
 		<for>
 			<add order="0" stat="mDef" val="24" />

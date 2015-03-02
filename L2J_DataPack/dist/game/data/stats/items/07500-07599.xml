@@ -209,7 +209,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="7519" type="EtcItem" name="Shaved Ice">
+	<item id="7519" type="EtcItem" name="Summer Slushie">
 		<set name="icon" val="icon.etc_broken_crystal_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -484,7 +484,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="7544" type="EtcItem" name="Rib Bone of a Black Magus">
+	<item id="7544" type="EtcItem" name="Black Magus' Rib Bone">
 		<set name="icon" val="icon.etc_rib_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -506,7 +506,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="7546" type="EtcItem" name="Top Quality Meat">
+	<item id="7546" type="EtcItem" name="Prime Meat">
 		<set name="icon" val="icon.etc_meat_of_monstereye_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -517,7 +517,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="7547" type="EtcItem" name="Young Wild Beast Meat">
+	<item id="7547" type="EtcItem" name="Veal">
 		<set name="icon" val="icon.etc_meat_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -583,7 +583,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="7553" type="EtcItem" name="Gold Colored Gemstone">
+	<item id="7553" type="EtcItem" name="Gold-colored Gemstone">
 		<set name="icon" val="icon.etc_gem_yellow_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -689,7 +689,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="1000" />
-		<set name="price" val="30000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -717,6 +716,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="7563" type="EtcItem" name="Galladucci's Order (Document)">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
@@ -859,7 +859,7 @@
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2052" />
+		<set name="crystal_count" val="1368" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1650" />
@@ -871,6 +871,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
+		<set name="commissionItemType" val="BOW" />
 		<for>
 			<set stat="pAtk" val="581" />
 			<set stat="mAtk" val="132" />
@@ -881,7 +882,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="7576" type="Weapon" name="Draconic Bow - Cheap Shot">
+	<item id="7576" type="Weapon" name="Draconic Bow">
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -890,7 +891,7 @@
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2052" />
+		<set name="crystal_count" val="1368" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1650" />
@@ -914,7 +915,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="7577" type="Weapon" name="Draconic Bow - Focus">
+	<item id="7577" type="Weapon" name="Draconic Bow">
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -923,7 +924,7 @@
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2052" />
+		<set name="crystal_count" val="1368" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1650" />
@@ -936,6 +937,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="item_skill" val="3567-1" />
+		<set name="commissionItemType" val="BOW" />
 		<for>
 			<set stat="pAtk" val="581" />
 			<set stat="mAtk" val="132" />
@@ -946,7 +948,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="7578" type="Weapon" name="Draconic Bow - Critical Slow">
+	<item id="7578" type="Weapon" name="Draconic Bow">
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -955,7 +957,7 @@
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2052" />
+		<set name="crystal_count" val="1368" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1650" />
@@ -1064,7 +1066,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="7587" type="EtcItem" name="Legend of Seventeen">
+	<item id="7587" type="EtcItem" name="Legend of the Seventeen">
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1152,7 +1154,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="7595" type="EtcItem" name="Orb of Binding">
+	<item id="7595" type="EtcItem" name="Bound Orb">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1174,7 +1176,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="7597" type="EtcItem" name="Malruk Succubus Claw">
+	<item id="7597" type="EtcItem" name="Maluk Succubus Claw">
 		<set name="icon" val="icon.etc_fang_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

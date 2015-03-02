@@ -1,10 +1,11 @@
 <html><body>Gatekeeper Trisha:<br>
-It might be a better idea to walk slowly taking a rest sometimes to go to other villages. But if you don't have time for that, we can open the door of time and space for you. Where do you want to go?<br>
-<a action="bypass -h npc_%objectId%_Chat 1">Teleport</a><br>
-<a action="bypass -h npc_%objectId%_multisell 002">Exchange Dimension Diamonds.</a><br>
-<a action="bypass -h npc_%objectId%_Quest NoblesseTeleport">[Noblesse Exclusive] Teleport</a><br>
-<a action="bypass -h npc_%objectId%_Quest TeleportToRaceTrack" msg="811;Monster Racetrack">Teleport to Arena & Monster Racetrack (Free).</a><br>
-<a action="bypass -h npc_%objectId%_Quest TeleportToFantasy" msg="811;Fantasy Isle">Teleport to Fantasy Isle (Free).</a><br>
-<a action="bypass -h npc_%objectId%_Quest CharacterBirthday">Call Alegria</a><br>
-<a action="bypass -h npc_%objectId%_Quest">Quest</a>
+Taking a walk and taking in the sights is always good for you, but sometimes you just don't have the time, you know? I can help you if you want to go somewhere through the gate of time and space.<br>
+(If your <font color="LEVEL">main class</font> is <font color="LEVEL">Lv. 76</font> or below, you can teleport for free.)<br>
+<Button ALIGN=LEFT ICON="TELEPORT" action="bypass -h npc_%objectId%_showTeleports">Teleport</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 002">Use Dimension Diamond</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_showNoblesSelect">[Noblesse Exclusive] Teleport</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_Quest TeleportToRaceTrack" msg="811;Monster Race Track">I want to go to the Arena and Monster Race Track for free</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_Quest TeleportToFantasy" msg="811;Fantasy Isle">Move to Fantasy Isle (free)</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_Quest CharacterBirthday">I need to call Alegria</Button>
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h npc_%objectId%_Quest">Quest</Button>
 </body></html>

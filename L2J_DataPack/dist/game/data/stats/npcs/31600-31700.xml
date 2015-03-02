@@ -264,7 +264,7 @@
 			</speed>
 			<hit_time>480</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" talkable="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -384,7 +384,7 @@
 			</speed>
 			<hit_time>710</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" talkable="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -1239,7 +1239,7 @@
 			</speed>
 			<hit_time>710</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" talkable="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -2915,7 +2915,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="false" talkable="false" undying="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -2957,7 +2957,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="false" talkable="false" undying="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -2999,7 +2999,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="false" talkable="false" undying="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -3041,7 +3041,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="false" talkable="false" undying="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -3770,7 +3770,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="31692" level="70" type="L2DawnPriest" name="Priest of Dawn">
+	<npc id="31692" level="70" type="L2Npc" name="Priest of Dawn">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3812,7 +3812,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="31693" level="70" type="L2DuskPriest" name="Priest of Dusk">
+	<npc id="31693" level="70" type="L2Npc" name="Priest of Dusk">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3854,7 +3854,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="31694" level="70" type="L2DawnPriest" name="Priest of Dawn">
+	<npc id="31694" level="70" type="L2Npc" name="Priest of Dawn">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3896,7 +3896,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="31695" level="70" type="L2DuskPriest" name="Priest of Dusk">
+	<npc id="31695" level="70" type="L2Npc" name="Priest of Dusk">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4098,6 +4098,23 @@
 		<collision>
 			<radius normal="8" />
 			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="31700" level="85" type="L2Npc" name="Saintess' Follower" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
 		</collision>
 	</npc>
 </list>

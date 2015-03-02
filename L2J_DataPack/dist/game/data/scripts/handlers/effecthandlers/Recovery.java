@@ -45,7 +45,7 @@ public final class Recovery extends AbstractEffect
 	{
 		if (info.getEffected().isPlayer())
 		{
-			info.getEffected().getActingPlayer().reduceDeathPenaltyBuffLevel();
+			info.getEffected().getActingPlayer().decreaseShilensBreathDebuff();
 		}
 	}
 }

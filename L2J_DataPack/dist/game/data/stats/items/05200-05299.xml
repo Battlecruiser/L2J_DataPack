@@ -213,7 +213,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="5220" type="EtcItem" name="Metal Hardener">
+	<item id="5220" type="EtcItem" name="Corroded Metal Hardener">
 		<set name="icon" val="icon.etc_plate_blue_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -312,7 +312,6 @@
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
-		<set name="price" val="1" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2097-3" />
@@ -341,7 +340,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5232" type="EtcItem" name="White Fabric">
+	<item id="5232" type="EtcItem" name="White Cloth">
 		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -361,7 +360,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1128" />
+		<set name="crystal_count" val="751" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2080" />
@@ -370,6 +369,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3045-17" />
+		<set name="commissionItemType" val="DUALSWORD" />
 		<for>
 			<set stat="pAtk" val="259" />
 			<set stat="mAtk" val="107" />
@@ -379,7 +379,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="5234" type="EtcItem" name="Mystery Potion">
+	<item id="5234" type="EtcItem" name="Mysterious Potion">
 		<set name="icon" val="icon.etc_lesser_potion_clear_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -633,7 +633,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 	</item>
-	<item id="5250" type="EtcItem" name="Greater Compressed Package of Soulshots (No-Grade)">
+	<item id="5250" type="EtcItem" name="Greater Soulshot Compressed Package (No-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -643,7 +643,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2104-1" />
 	</item>
-	<item id="5251" type="EtcItem" name="Greater Compressed Package of Soulshots (D-Grade)">
+	<item id="5251" type="EtcItem" name="Greater Soulshot Compressed Package (D-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -653,7 +653,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2105-1" />
 	</item>
-	<item id="5252" type="EtcItem" name="Greater Compressed Package of Soulshots (C-Grade)">
+	<item id="5252" type="EtcItem" name="Greater Soulshot Compressed Package (C-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -663,7 +663,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2106-1" />
 	</item>
-	<item id="5253" type="EtcItem" name="Greater Compressed Package of Soulshots (B-Grade)">
+	<item id="5253" type="EtcItem" name="Greater Soulshot Compressed Package (B-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -673,7 +673,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2107-1" />
 	</item>
-	<item id="5254" type="EtcItem" name="Greater Compressed Package of Soulshots (A-Grade)">
+	<item id="5254" type="EtcItem" name="Greater Soulshot Compressed Package (A-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -683,7 +683,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2108-1" />
 	</item>
-	<item id="5255" type="EtcItem" name="Greater Compressed Package of Soulshots (S-Grade)">
+	<item id="5255" type="EtcItem" name="Greater Soulshot Compressed Package (S-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -693,7 +693,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2109-1" />
 	</item>
-	<item id="5256" type="EtcItem" name="Greater Compressed Package of Spiritshots (No-Grade)">
+	<item id="5256" type="EtcItem" name="Greater Spiritshot Compressed Package (No-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -703,7 +703,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2110-1" />
 	</item>
-	<item id="5257" type="EtcItem" name="Greater Compressed Package of Spiritshots (D-Grade)">
+	<item id="5257" type="EtcItem" name="Greater Spiritshot Compressed Package (D-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -713,7 +713,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2111-1" />
 	</item>
-	<item id="5258" type="EtcItem" name="Greater Compressed Package of Spiritshots (C-Grade)">
+	<item id="5258" type="EtcItem" name="Greater Spiritshot Compressed Package (C-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -723,7 +723,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2112-1" />
 	</item>
-	<item id="5259" type="EtcItem" name="Greater Compressed Package of Spiritshots (B-Grade)">
+	<item id="5259" type="EtcItem" name="Greater Spiritshot Compressed Package (B-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -733,7 +733,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2113-1" />
 	</item>
-	<item id="5260" type="EtcItem" name="Greater Compressed Package of Spiritshots (A-Grade)">
+	<item id="5260" type="EtcItem" name="Greater Spiritshot Compressed Package (A-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -743,7 +743,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2114-1" />
 	</item>
-	<item id="5261" type="EtcItem" name="Greater Compressed Package of Spiritshots (S-Grade)">
+	<item id="5261" type="EtcItem" name="Greater Spiritshot Compressed Package (S-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -753,7 +753,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2115-1" />
 	</item>
-	<item id="5262" type="EtcItem" name="Greater Compressed Package of Blessed Spiritshots (No-Grade)">
+	<item id="5262" type="EtcItem" name="Greater Blessed Spiritshot Compressed Package (No-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -763,7 +763,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2116-1" />
 	</item>
-	<item id="5263" type="EtcItem" name="Greater Compressed Package of Blessed Spiritshots (D-Grade)">
+	<item id="5263" type="EtcItem" name="Greater Blessed Spiritshot Compressed Package (D-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -773,7 +773,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2117-1" />
 	</item>
-	<item id="5264" type="EtcItem" name="Greater Compressed Package of Blessed Spiritshots (C-Grade)">
+	<item id="5264" type="EtcItem" name="Greater Blessed Spiritshot Compressed Package (C-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -783,7 +783,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2118-1" />
 	</item>
-	<item id="5265" type="EtcItem" name="Greater Compressed Package of Blessed Spiritshots (B-Grade)">
+	<item id="5265" type="EtcItem" name="Greater Blessed Spiritshot Compressed Package (B-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -793,7 +793,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2119-1" />
 	</item>
-	<item id="5266" type="EtcItem" name="Greater Compressed Package of Blessed Spiritshots (A-Grade)">
+	<item id="5266" type="EtcItem" name="Greater Blessed Spiritshot Compressed Package (A-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -803,7 +803,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2120-1" />
 	</item>
-	<item id="5267" type="EtcItem" name="Greater Compressed Package of Blessed Spiritshots (S-Grade)">
+	<item id="5267" type="EtcItem" name="Greater Blessed Spiritshot Compressed Package (S-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -992,6 +992,7 @@
 		<set name="recipe_id" val="512" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
+		<set name="commissionItemType" val="RECIPE" />
 	</item>
 	<item id="5283" type="EtcItem" name="Rice Cake">
 		<set name="icon" val="icon.etc_mochi_i00" />
@@ -1015,7 +1016,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1530" />
-		<set name="price" val="188000" />
+		<set name="price" val="37600" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
@@ -1034,11 +1035,11 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="582" />
+		<set name="crystal_count" val="78" />
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
-		<set name="price" val="315000" />
+		<set name="price" val="63000" />
 		<set name="change_weaponId" val="9210" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -1061,15 +1062,16 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1885" />
+		<set name="crystal_count" val="252" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1380" />
-		<set name="price" val="4713500" />
+		<set name="price" val="942700" />
 		<set name="change_weaponId" val="9296" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<for>
 			<set stat="pAtk" val="190" />
 			<set stat="mAtk" val="83" />
@@ -1085,7 +1087,7 @@
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="285" />
+		<set name="crystal_count" val="189" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="7700" />
@@ -1105,12 +1107,13 @@
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="178" />
+		<set name="crystal_count" val="118" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="3320" />
 		<set name="price" val="2226000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1124,12 +1127,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="107" />
+		<set name="crystal_count" val="71" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="570" />
 		<set name="price" val="1336000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="HELMET" />
 		<for>
 			<add order="0" stat="pDef" val="69" />
 			<enchant stat="pDef" val="0" />
@@ -1140,12 +1144,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
+		<set name="crystal_count" val="47" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="580" />
 		<set name="price" val="890000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="GLOVES" />
 		<for>
 			<add order="0" stat="pDef" val="46" />
 			<enchant stat="pDef" val="0" />
@@ -1156,12 +1161,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
+		<set name="crystal_count" val="47" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="1110" />
 		<set name="price" val="890000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FEET" />
 		<for>
 			<add order="0" stat="pDef" val="46" />
 			<enchant stat="pDef" val="0" />
@@ -1172,7 +1178,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="75" />
+		<set name="crystal_count" val="49" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="1190" />
@@ -1194,7 +1200,7 @@
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="463" />
+		<set name="crystal_count" val="308" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="9780" />
@@ -1213,7 +1219,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="107" />
+		<set name="crystal_count" val="71" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="570" />
@@ -1229,12 +1235,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
+		<set name="crystal_count" val="47" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="580" />
 		<set name="price" val="890000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="GLOVES" />
 		<for>
 			<add order="0" stat="pDef" val="46" />
 			<enchant stat="pDef" val="0" />
@@ -1245,12 +1252,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
+		<set name="crystal_count" val="47" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1130" />
 		<set name="price" val="890000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FEET" />
 		<for>
 			<add order="0" stat="pDef" val="46" />
 			<enchant stat="pDef" val="0" />
@@ -1262,7 +1270,7 @@
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="214" />
+		<set name="crystal_count" val="142" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="4300" />
@@ -1279,12 +1287,13 @@
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="134" />
+		<set name="crystal_count" val="89" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1480" />
 		<set name="price" val="1670000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<for>
 			<add order="0" stat="pDef" val="80" />
 			<enchant stat="pDef" val="0" />
@@ -1295,7 +1304,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="92" />
+		<set name="crystal_count" val="47" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="580" />

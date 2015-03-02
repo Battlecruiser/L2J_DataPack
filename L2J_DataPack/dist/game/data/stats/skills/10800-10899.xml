@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="10800" levels="1" name="Superior Elemental Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2 and Fire/Water/Wind/Earth Resistance + 20. -->
+		<set name="icon" val="icon.skill10044" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="10801" levels="5" name="Bullseye">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases target's Bow/Crossbow Resistance by 40% and M. Def. by 5%. -->
+		<table name="#mpConsumes"> 20 21 22 23 24 </table>
+		<set name="icon" val="icon.skill10801" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10802" levels="1" name="Mass Bullseye">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases target's and nearby enemies' Bow/Crossbow Resistance by 60% and M. Def. by 25%. After a certain time, target explodes, suffering heavy damage. -->
+		<set name="icon" val="icon.skill10782" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="93" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="180000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10803" levels="1" name="Time Bomb">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Boom! -->
+		<set name="icon" val="icon.skill0099" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10804" levels="1" name="Bullseye">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Boom! -->
+		<set name="icon" val="icon.skill0099" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10805" levels="4" name="Quick Charge">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Momentarily teleport 500 forward. -->
+		<table name="#castRanges"> 500 600 700 800 </table>
+		<table name="#mpConsumes"> 41 44 46 48 </table>
+		<set name="icon" val="icon.skill10805" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="#castRanges" />
+		<set name="hitTime" val="100" />
+		<set name="coolTime" val="400" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10806" levels="1" name="Frost Trap">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases Speed, Atk. Spd. and Casting Spd. -->
+		<set name="icon" val="icon.skill0516" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10807" levels="1" name="Gravity Trap">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicted with Hold and unable to move. -->
+		<set name="icon" val="icon.skill0518" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10808" levels="1" name="Decoy Provocation">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decoy's provocation. Cannot change target. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10809" levels="1" name="Survival Movement">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Evasion + 15. Disappears after 4 strikes. -->
+		<set name="icon" val="icon.skill1087" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="4" />
+	</skill>
+	<skill id="10810" levels="4" name="Sniping">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 minutes when a bow or crossbow is equipped, P. Atk. + 5%, Atk. Spd. + 5%, and P. Def./M. Def. + 5%. -->
+		<table name="#mpConsumes"> 62 69 76 83 </table>
+		<set name="icon" val="icon.skill11870" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+	</skill>
+	<skill id="10811" levels="4" name="Superior Hawk Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. + 5% when equipped with a bow or crossbow. -->
+		<set name="icon" val="icon.skill10811" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="10812" levels="3" name="Sneak Shot">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks distant target with 29176 Power added to P. Atk. Inflicts Stun when attacking from behind. Requires a bow/crossbow. Over-hit. Critical. -->
+		<table name="#mpConsumes"> 93 96 99 </table>
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="1800" />
+		<set name="coolTime" val="250" />
+		<set name="reuseDelay" val="30000" />
+	</skill>
+	<skill id="10813" levels="3" name="Sneak Shot: Stun">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Stuns the enemy for 5 sec. Has a chance of canceling enemy's targeting. Requires a bow/crossbow. Over-hit. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1100" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10856" levels="4" name="Rapid Fire Position">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 minutes when a bow or crossbow is equipped, P. Atk. + 5%, chance of receiving an M. Critical Hit - 5%, and P. Skill Cooldown - 5%. -->
+		<table name="#mpConsumes"> 62 69 76 83 </table>
+		<set name="icon" val="icon.skill11871" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+	</skill>
+	<skill id="10857" levels="4" name="Superior Speed Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Speed + 10. -->
+		<set name="icon" val="icon.skill10857" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="10858" levels="3" name="Retreating Shot">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 29176 Power added to P. Atk., cancels their targeting, and retreats 400 grids backward. -->
+		<table name="#castRanges"> 400 400 450 </table>
+		<table name="#mpConsumes"> 32 33 34 </table>
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="#castRanges" />
+		<set name="hitTime" val="700" />
+		<set name="reuseDelay" val="30000" />
+	</skill>
+</list>

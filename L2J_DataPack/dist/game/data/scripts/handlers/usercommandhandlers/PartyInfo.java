@@ -50,19 +50,19 @@ public class PartyInfo implements IUserCommandHandler
 			switch (party.getDistributionType())
 			{
 				case FINDERS_KEEPERS:
-					activeChar.sendPacket(SystemMessageId.LOOTING_FINDERS_KEEPERS);
+					activeChar.sendPacket(SystemMessageId.LOOTING_METHOD_FINDERS_KEEPERS);
 					break;
 				case RANDOM:
-					activeChar.sendPacket(SystemMessageId.LOOTING_RANDOM);
+					activeChar.sendPacket(SystemMessageId.LOOTING_METHOD_RANDOM);
 					break;
 				case RANDOM_INCLUDING_SPOIL:
-					activeChar.sendPacket(SystemMessageId.LOOTING_RANDOM_INCLUDE_SPOIL);
+					activeChar.sendPacket(SystemMessageId.LOOTING_METHOD_RANDOM_INCLUDING_SPOIL);
 					break;
 				case BY_TURN:
-					activeChar.sendPacket(SystemMessageId.LOOTING_BY_TURN);
+					activeChar.sendPacket(SystemMessageId.LOOTING_METHOD_BY_TURN);
 					break;
 				case BY_TURN_INCLUDING_SPOIL:
-					activeChar.sendPacket(SystemMessageId.LOOTING_BY_TURN_INCLUDE_SPOIL);
+					activeChar.sendPacket(SystemMessageId.LOOTING_METHOD_BY_TURN_INCLUDING_SPOIL);
 					break;
 			}
 			
@@ -74,7 +74,7 @@ public class PartyInfo implements IUserCommandHandler
 			}
 			activeChar.sendMessage("Members: " + party.getMemberCount() + "/9"); // TODO: Custom?
 		}
-		activeChar.sendPacket(SystemMessageId.FRIEND_LIST_FOOTER);
+		activeChar.sendPacket(SystemMessageId.EMPTY3);
 		return true;
 	}
 	

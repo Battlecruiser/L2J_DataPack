@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="800" levels="3" name="Master Ability - Magic Defense">
+	<skill id="800" levels="3" name="Master Ability: M. Def.">
 		<!-- Confirmed CT2.5 -->
 		<table name="#mDef"> 50.4 100.8 151.2 </table>
 		<set name="excludedFromCheck" val="true" />
@@ -14,7 +14,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="801" levels="1" name="Warrior Ability - Boost CP">
+	<skill id="801" levels="1" name="Warrior Ability: Boost CP">
 		<!-- Confirmed CT2.5 -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill0440" />
@@ -27,7 +27,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="802" levels="1" name="Wizard Ability - Anti-magic">
+	<skill id="802" levels="1" name="Wizard Ability: Anti-magic">
 		<!-- Confirmed CT2.5 -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill0146" />
@@ -40,7 +40,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="803" levels="1" name="Healer Ability - Divine Protection">
+	<skill id="803" levels="1" name="Healer Ability: Divine Protection">
 		<!-- Confirmed CT2.5 -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill1353" />
@@ -54,7 +54,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="804" levels="1" name="Knight Ability - Resist Critical">
+	<skill id="804" levels="1" name="Knight Ability: Critical Damage Resistance">
 		<!-- Confirmed CT2.5 -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill0232" />
@@ -67,7 +67,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="805" levels="1" name="not used">
+	<skill id="805" levels="1" name="Not in Use">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill0142" />
 		<set name="magicLvl" val="75" />
@@ -368,7 +368,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="817" levels="43" name="Double Strike">
+	<skill id="817" levels="43" name="Double Attack">
 		<!-- Vanguard Stance Skill -->
 		<table name="#effectPoints"> -311 -319 -326 -334 -341 -349 -356 -363 -370 -378 -385 -392 -399 -406 -412 -419 -425 -431 -438 -444 -449 -455 -460 -466 -471 -475 -480 -484 -488 -492 -496 -499 -502 -505 -507 -509 -511 -513 -515 -516 -518 -519 -521 </table>
 		<table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
@@ -547,7 +547,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="825" levels="1" name="Sharp Edge">
+	<skill id="825" levels="1" name="Sharpen Edge">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
@@ -603,7 +603,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="827" levels="1" name="Restring">
+	<skill id="827" levels="1" name="Bowstring">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
@@ -631,7 +631,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="828" levels="1" name="Case Harden">
+	<skill id="828" levels="1" name="Encase Armor">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
@@ -1030,12 +1030,6 @@
 		<set name="reuseDelay" val="600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<cond>
-			<player canCreateOutpost="true" />
-		</cond>
-		<for>
-			<effect name="OutpostCreate" />
-		</for>
 	</skill>
 	<skill id="845" levels="1" name="Outpost Demolition">
 		<set name="castRange" val="100" />
@@ -1048,12 +1042,6 @@
 		<set name="reuseDelay" val="600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
-		<cond msgId="109">
-			<target npcId="36590" />
-		</cond>
-		<for>
-			<effect name="OutpostDestroy" />
-		</for>
 	</skill>
 	<skill id="846" levels="1" name="Possess Ward">
 		<!-- Confirmed CT2.5 -->
@@ -1086,9 +1074,6 @@
 		<cond msgId="109">
 			<target npcId="36590" />
 		</cond>
-		<for>
-			<effect name="TakeTerritoryFlag" />
-		</for>
 	</skill>
 	<skill id="848" levels="1" name="Gludio Territory Benefaction">
 		<!-- Confirmed CT2.5 -->
@@ -1391,7 +1376,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="865" levels="1" name="Magic Leader">
+	<skill id="865" levels="1" name="Wizard Captain">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -1414,7 +1399,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="866" levels="1" name="Kamael Guard Captain">
+	<skill id="866" levels="1" name="Centurion">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -1437,7 +1422,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="867" levels="1" name="Knight of Dawn">
+	<skill id="867" levels="1" name="Knight Captain">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -1460,7 +1445,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="868" levels="1" name="Fortress Captain">
+	<skill id="868" levels="1" name="Commander">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -1505,7 +1490,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="870" levels="8" name="Knight Mercenary Power Strike">
+	<skill id="870" levels="8" name="Royal Guard Captain Power Strike">
 		<!-- Confirmed CT2.5 -->
 		<table name="#effectPoints"> -321 -342 -343 -344 -345 -346 -347 -348 </table>
 		<table name="#magicLvl"> 70 80 81 82 83 84 85 86 </table>
@@ -1552,7 +1537,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="872" levels="8" name="Archer Mercenary Power Shot">
+	<skill id="872" levels="8" name="Archer Captain Power Shot">
 		<!-- Confirmed CT2.5 -->
 		<table name="#effectPoints"> -646 -684 -686 -688 -690 -692 -694 -696 </table>
 		<table name="#magicLvl"> 70 80 81 82 83 84 85 86 </table>
@@ -1597,7 +1582,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="874" levels="8" name="Wizard Mercenary Flame Strike">
+	<skill id="874" levels="8" name="Wizard Captain Flame Strike">
 		<!-- Confirmed CT2.5 -->
 		<table name="#effectPoints"> -676 -679 -681 -684 -687 -689 -692 -694 </table>
 		<table name="#elementPower"> 20 25 30 35 40 45 50 55 </table>
@@ -1649,7 +1634,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="876" levels="8" name="Kamael Captain Mercenary Enuma Elish">
+	<skill id="876" levels="8" name="Centurion Enuma Elish">
 		<!-- Confirmed CT2.5 -->
 		<table name="#effectPoints"> -646 -684 -686 -688 -690 -692 -694 -696 </table>
 		<table name="#magicLvl"> 70 80 81 82 83 84 85 86 </table>
@@ -1676,7 +1661,7 @@
 			<effect name="PhysicalSoulAttack" />
 		</for>
 	</skill>
-	<skill id="877" levels="8" name="Kamael Captain Mercenary Disarm">
+	<skill id="877" levels="8" name="Centurion Disarm">
 		<!-- Confirmed CT2.5 -->
 		<table name="#effectPoints"> -646 -684 -686 -688 -690 -692 -694 -696 </table>
 		<table name="#magicLvl"> 70 80 81 82 83 84 85 86 </table>
@@ -1706,7 +1691,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="878" levels="7" name="Knight Captain Mercenary Power Strike">
+	<skill id="878" levels="7" name="Knight Captain Power Strike">
 		<!-- Confirmed CT2.5 -->
 		<table name="#effectPoints"> -323 -342 -343 -344 -345 -346 -347 </table>
 		<table name="#magicLvl"> 80 81 82 83 84 85 86 </table>
@@ -1729,7 +1714,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="879" levels="7" name="Knight Captain Mercenary Curse Fear">
+	<skill id="879" levels="7" name="Knight Captain Curse Fear">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 80 81 82 83 84 85 86 </table>
 		<set name="abnormalLvl" val="1" />
@@ -1758,7 +1743,7 @@
 			<effect name="Fear" />
 		</for>
 	</skill>
-	<skill id="880" levels="1" name="Knight Captain Mercenary Ultimate Defense">
+	<skill id="880" levels="1" name="Knight Captain Ultimate Defense">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="30" />
@@ -1781,7 +1766,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="881" levels="7" name="Commander Mercenary Twister">
+	<skill id="881" levels="7" name="Commander Twister">
 		<!-- Confirmed CT2.5 -->
 		<table name="#elementPower"> 25 30 35 40 45 50 55 </table>
 		<table name="#magicLvl"> 80 81 82 83 84 85 86 </table>
@@ -1806,7 +1791,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="882" levels="7" name="Commander Mercenary Blaze">
+	<skill id="882" levels="7" name="Commander Blaze">
 		<!-- Confirmed CT2.5 -->
 		<table name="#elementPower"> 25 30 35 40 45 50 55 </table>
 		<table name="#magicLvl"> 80 81 82 83 84 85 86 </table>
@@ -1831,7 +1816,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="883" levels="7" name="Commander Mercenary Seal of Binding">
+	<skill id="883" levels="7" name="Commander Seal of Binding">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 80 81 82 83 84 85 86 </table>
 		<set name="abnormalLvl" val="1" />

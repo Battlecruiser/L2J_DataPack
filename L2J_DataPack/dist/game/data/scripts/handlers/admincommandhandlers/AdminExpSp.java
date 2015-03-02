@@ -98,7 +98,7 @@ public class AdminExpSp implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
@@ -121,7 +121,7 @@ public class AdminExpSp implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return false;
 		}
 		StringTokenizer st = new StringTokenizer(ExpSp);
@@ -133,11 +133,11 @@ public class AdminExpSp implements IAdminCommandHandler
 		String exp = st.nextToken();
 		String sp = st.nextToken();
 		long expval = 0;
-		int spval = 0;
+		long spval = 0;
 		try
 		{
 			expval = Long.parseLong(exp);
-			spval = Integer.parseInt(sp);
+			spval = Long.parseLong(sp);
 		}
 		catch (Exception e)
 		{
@@ -168,7 +168,7 @@ public class AdminExpSp implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return false;
 		}
 		StringTokenizer st = new StringTokenizer(ExpSp);

@@ -23,6 +23,8 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
+import com.l2jserver.gameserver.network.serverpackets.CharInfo;
+import com.l2jserver.gameserver.network.serverpackets.ExUserInfoCubic;
 
 /**
  * Summon Agathion effect implementation.
@@ -61,6 +63,7 @@ public final class SummonAgathion extends AbstractEffect
 		final L2PcInstance player = info.getEffected().getActingPlayer();
 		
 		player.setAgathionId(_npcId);
-		player.broadcastUserInfo();
+		player.sendPacket(new ExUserInfoCubic(player));
+		player.broadcastPacket(new CharInfo(player));
 	}
 }

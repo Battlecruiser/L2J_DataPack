@@ -9,7 +9,7 @@
 		<set name="item_skill" val="2278-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="8601" type="EtcItem" name="Greater Herb of Life">
+	<item id="8601" type="EtcItem" name="Major Herb of Life">
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -36,7 +36,7 @@
 		<set name="item_skill" val="2279-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="8604" type="EtcItem" name="Greater Herb of Mana">
+	<item id="8604" type="EtcItem" name="Major Herb of Mana">
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -72,7 +72,7 @@
 		<set name="item_skill" val="2281-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="8608" type="EtcItem" name="Herb of Alacrity">
+	<item id="8608" type="EtcItem" name="Haste Herb">
 		<set name="icon" val="BranchSys2.icon.etc_attack_sp_herb_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
@@ -102,7 +102,7 @@
 		<set name="item_skill" val="2284-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="8611" type="EtcItem" name="Herb of Speed">
+	<item id="8611" type="EtcItem" name="Wind Walk Herb">
 		<set name="icon" val="BranchSys2.icon.etc_move_herb_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
@@ -122,7 +122,7 @@
 		<set name="item_skill" val="2280-1;2282-1;2284-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="8613" type="EtcItem" name="Herb of the Mystic">
+	<item id="8613" type="EtcItem" name="Wizard Herb">
 		<set name="icon" val="icon.etc_magic_set_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
@@ -179,15 +179,14 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
-		<set name="price" val="500000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SPELLBOOK" />
 	</item>
 	<item id="8620" type="EtcItem" name="Ancient Book: Divine Inspiration (Manuscript)">
 		<set name="icon" val="icon.etc_add_buffslot_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
-		<set name="price" val="500000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8621" type="EtcItem" name="Ancient Book: Divine Inspiration (Original Version)">
@@ -195,10 +194,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
-		<set name="price" val="1000000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8622" type="EtcItem" name="Elixir of Life (No Grade)">
+	<item id="8622" type="EtcItem" name="Elixir of Life (No-grade)">
 		<set name="icon" val="icon.etc_super_hp_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -216,12 +214,11 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="8623" type="EtcItem" name="Elixir of Life (D-Grade)">
+	<item id="8623" type="EtcItem" name="Elixir of Life (D-grade)">
 		<set name="icon" val="icon.etc_super_hp_potion_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="D" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="price" val="3450" />
@@ -235,12 +232,11 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="8624" type="EtcItem" name="Elixir of Life (C-Grade)">
+	<item id="8624" type="EtcItem" name="Elixir of Life (C-grade)">
 		<set name="icon" val="icon.etc_super_hp_potion_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="C" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="price" val="7200" />
@@ -254,12 +250,11 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="8625" type="EtcItem" name="Elixir of Life (B-Grade)">
+	<item id="8625" type="EtcItem" name="Elixir of Life (B-grade)">
 		<set name="icon" val="icon.etc_super_hp_potion_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="B" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="price" val="10000" />
@@ -273,12 +268,11 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="8626" type="EtcItem" name="Elixir of Life (A-Grade)">
+	<item id="8626" type="EtcItem" name="Elixir of Life (A-grade)">
 		<set name="icon" val="icon.etc_super_hp_potion_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="A" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="price" val="12500" />
@@ -292,12 +286,11 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="8627" type="EtcItem" name="Elixir of Life (S-Grade)">
+	<item id="8627" type="EtcItem" name="Elixir of Life (S-grade)">
 		<set name="icon" val="icon.etc_super_hp_potion_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="price" val="15000" />
@@ -311,7 +304,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="8628" type="EtcItem" name="Elixir of Mental Strength (No Grade)">
+	<item id="8628" type="EtcItem" name="Elixir of Mind (No-grade)">
 		<set name="icon" val="icon.etc_super_mp_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -329,12 +322,11 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="8629" type="EtcItem" name="Elixir of Mental Strength (D-Grade)">
+	<item id="8629" type="EtcItem" name="Elixir of Mind (D-grade)">
 		<set name="icon" val="icon.etc_super_mp_potion_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="D" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="price" val="3400" />
@@ -348,12 +340,11 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="8630" type="EtcItem" name="Elixir of Mental Strength (C-Grade)">
+	<item id="8630" type="EtcItem" name="Elixir of Mind (C-grade)">
 		<set name="icon" val="icon.etc_super_mp_potion_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="C" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="price" val="8700" />
@@ -367,12 +358,11 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="8631" type="EtcItem" name="Elixir of Mental Strength (B-Grade)">
+	<item id="8631" type="EtcItem" name="Elixir of Mind (B-grade)">
 		<set name="icon" val="icon.etc_super_mp_potion_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="B" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="price" val="11600" />
@@ -386,12 +376,11 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="8632" type="EtcItem" name="Elixir of Mental Strength (A-Grade)">
+	<item id="8632" type="EtcItem" name="Elixir of Mind (A-grade)">
 		<set name="icon" val="icon.etc_super_mp_potion_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="A" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="price" val="14400" />
@@ -405,12 +394,11 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="8633" type="EtcItem" name="Elixir of Mental Strength (S-Grade)">
+	<item id="8633" type="EtcItem" name="Elixir of Mind (S-grade)">
 		<set name="icon" val="icon.etc_super_mp_potion_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="price" val="16800" />
@@ -424,7 +412,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="8634" type="EtcItem" name="Elixir of CP (No Grade)">
+	<item id="8634" type="EtcItem" name="Elixir of CP (No-grade)">
 		<set name="icon" val="icon.etc_super_cp_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -439,12 +427,11 @@
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2289-1" />
 	</item>
-	<item id="8635" type="EtcItem" name="Elixir of CP (D-Grade)">
+	<item id="8635" type="EtcItem" name="Elixir of CP (D-grade)">
 		<set name="icon" val="icon.etc_super_cp_potion_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="D" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="price" val="1400" />
@@ -455,12 +442,11 @@
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2289-2" />
 	</item>
-	<item id="8636" type="EtcItem" name="Elixir of CP (C-Grade)">
+	<item id="8636" type="EtcItem" name="Elixir of CP (C-grade)">
 		<set name="icon" val="icon.etc_super_cp_potion_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="C" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="price" val="3000" />
@@ -471,12 +457,11 @@
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2289-3" />
 	</item>
-	<item id="8637" type="EtcItem" name="Elixir of CP (B-Grade)">
+	<item id="8637" type="EtcItem" name="Elixir of CP (B-grade)">
 		<set name="icon" val="icon.etc_super_cp_potion_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="B" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="price" val="4000" />
@@ -487,12 +472,11 @@
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2289-4" />
 	</item>
-	<item id="8638" type="EtcItem" name="Elixir of CP (A-Grade)">
+	<item id="8638" type="EtcItem" name="Elixir of CP (A-grade)">
 		<set name="icon" val="icon.etc_super_cp_potion_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="A" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="price" val="5000" />
@@ -503,12 +487,11 @@
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2289-5" />
 	</item>
-	<item id="8639" type="EtcItem" name="Elixir of CP (S-Grade)">
+	<item id="8639" type="EtcItem" name="Elixir of CP (S-grade)">
 		<set name="icon" val="icon.etc_super_cp_potion_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="price" val="6000" />
@@ -780,7 +763,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="8663" type="EtcItem" name="Mystery Potion (Event)">
+	<item id="8663" type="EtcItem" name="Mysterious Potion (Event)">
 		<set name="icon" val="icon.etc_lesser_potion_clear_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -958,7 +941,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2157" />
+		<set name="crystal_count" val="1438" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1300" />
@@ -967,6 +950,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<for>
 			<set stat="pAtk" val="251" />
 			<set stat="mAtk" val="121" />
@@ -985,7 +969,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2157" />
+		<set name="crystal_count" val="1438" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="1820" />
@@ -994,6 +978,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<for>
 			<set stat="pAtk" val="305" />
 			<set stat="mAtk" val="121" />
@@ -1012,7 +997,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2157" />
+		<set name="crystal_count" val="1438" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1550" />
@@ -1020,6 +1005,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<for>
 			<set stat="pAtk" val="251" />
 			<set stat="mAtk" val="121" />
@@ -1039,7 +1025,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2157" />
+		<set name="crystal_count" val="1438" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1890" />
@@ -1047,6 +1033,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
 		<for>
 			<set stat="pAtk" val="305" />
 			<set stat="mAtk" val="121" />
@@ -1066,7 +1053,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2157" />
+		<set name="crystal_count" val="1438" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="930" />
@@ -1074,6 +1061,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="DAGGER" />
 		<for>
 			<set stat="pAtk" val="220" />
 			<set stat="mAtk" val="121" />
@@ -1093,7 +1081,7 @@
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2157" />
+		<set name="crystal_count" val="1438" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="CHRYSOLITE" />
 		<set name="weight" val="1820" />
@@ -1102,6 +1090,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3599-1" />
+		<set name="commissionItemType" val="SPEAR" />
 		<for>
 			<set stat="pAtk" val="251" />
 			<set stat="mAtk" val="121" />
@@ -1121,7 +1110,7 @@
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2157" />
+		<set name="crystal_count" val="1438" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1640" />
@@ -1132,6 +1121,7 @@
 		<set name="mp_consume" val="5" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="820" />
+		<set name="commissionItemType" val="BOW" />
 		<for>
 			<set stat="pAtk" val="570" />
 			<set stat="mAtk" val="133" />
@@ -1151,7 +1141,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2157" />
+		<set name="crystal_count" val="1438" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1330" />
@@ -1159,6 +1149,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
 		<for>
 			<set stat="pAtk" val="305" />
 			<set stat="mAtk" val="121" />
@@ -1178,7 +1169,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2157" />
+		<set name="crystal_count" val="1438" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="820" />
@@ -1187,6 +1178,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<for>
 			<set stat="pAtk" val="202" />
 			<set stat="mAtk" val="161" />
@@ -1205,7 +1197,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2157" />
+		<set name="crystal_count" val="1438" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1510" />
@@ -1214,6 +1206,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<for>
 			<set stat="pAtk" val="202" />
 			<set stat="mAtk" val="161" />
@@ -1233,7 +1226,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2157" />
+		<set name="crystal_count" val="1438" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="880" />
@@ -1242,6 +1235,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 		<for>
 			<set stat="pAtk" val="245" />
 			<set stat="mAtk" val="177" />

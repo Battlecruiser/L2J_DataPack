@@ -42,7 +42,7 @@ public class AdminCamera implements IAdminCommandHandler
 	{
 		if ((activeChar.getTarget() == null) || !activeChar.getTarget().isCharacter())
 		{
-			activeChar.sendPacket(SystemMessageId.TARGET_CANT_FOUND);
+			activeChar.sendPacket(SystemMessageId.YOUR_TARGET_CANNOT_BE_FOUND);
 			return false;
 		}
 		

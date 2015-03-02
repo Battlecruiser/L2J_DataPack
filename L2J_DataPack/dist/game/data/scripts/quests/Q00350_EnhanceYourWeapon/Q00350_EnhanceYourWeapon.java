@@ -273,15 +273,15 @@ public class Q00350_EnhanceYourWeapon extends Quest
 			// Send a sound event and text message to the player
 			if (broke)
 			{
-				player.sendPacket(SystemMessageId.SOUL_CRYSTAL_BROKE);
+				player.sendPacket(SystemMessageId.THE_SOUL_CRYSTAL_BROKE_BECAUSE_IT_WAS_NOT_ABLE_TO_ENDURE_THE_SOUL_ENERGY);
 			}
 			else
 			{
-				player.sendPacket(SystemMessageId.SOUL_CRYSTAL_ABSORBING_SUCCEEDED);
+				player.sendPacket(SystemMessageId.THE_SOUL_CRYSTAL_SUCCEEDED_IN_ABSORBING_A_SOUL);
 			}
 			
 			// Send system message
-			SystemMessage sms = SystemMessage.getSystemMessage(SystemMessageId.EARNED_ITEM_S1);
+			SystemMessage sms = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
 			sms.addItemName(giveid);
 			player.sendPacket(sms);
 			
@@ -339,7 +339,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 		// If the crystal level is way too high for this mob, say that we can't increase it
 		if (!NPC_LEVELING_INFO.get(mob.getId()).containsKey(sc.getLevel()))
 		{
-			player.sendPacket(SystemMessageId.SOUL_CRYSTAL_ABSORBING_REFUSED);
+			player.sendPacket(SystemMessageId.THE_SOUL_CRYSTAL_IS_REFUSING_TO_ABSORB_THE_SOUL);
 			return;
 		}
 		
@@ -349,7 +349,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 		}
 		else
 		{
-			player.sendPacket(SystemMessageId.SOUL_CRYSTAL_ABSORBING_FAILED);
+			player.sendPacket(SystemMessageId.THE_SOUL_CRYSTAL_WAS_NOT_ABLE_TO_ABSORB_THE_SOUL);
 		}
 	}
 	

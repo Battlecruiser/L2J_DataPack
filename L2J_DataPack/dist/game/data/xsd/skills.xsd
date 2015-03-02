@@ -35,16 +35,28 @@
 	<xs:complexType name="playerType">
 		<xs:simpleContent>
 			<xs:extension base="xs:string">
+				<xs:attribute name="isOnSide" use="optional">
+					<xs:simpleType>
+						<xs:restriction base="xs:token">
+							<xs:enumeration value="NEUTRAL" />
+							<xs:enumeration value="LIGHT" />
+							<xs:enumeration value="DARK" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
 				<xs:attribute type="xs:string" name="Charges" use="optional" />
-				<xs:attribute type="xs:string" name="canSummon" use="optional" />
+				<xs:attribute type="xs:string" name="canSummonPet" use="optional" />
+				<xs:attribute type="xs:string" name="canSummonServitor" use="optional" />
+				<xs:attribute type="xs:byte" name="hasFreeSummonPoints" use="optional" />
 				<xs:attribute type="xs:string" name="canResurrect" use="optional" />
 				<xs:attribute type="xs:string" name="canSweep" use="optional" />
+				<xs:attribute type="xs:string" name="canSwitchSubClass" use="optional" />
 				<xs:attribute type="xs:string" name="canSummonSiegeGolem" use="optional" />
 				<xs:attribute type="xs:byte" name="invSize" use="optional" />
 				<xs:attribute type="xs:byte" name="weight" use="optional" />
-				<xs:attribute type="xs:byte" name="hp" use="optional" />
-				<xs:attribute type="xs:byte" name="cp" use="optional" />
-				<xs:attribute type="xs:byte" name="mp" use="optional" />
+				<xs:attribute type="xs:string" name="hp" use="optional" />
+				<xs:attribute type="xs:string" name="cp" use="optional" />
+				<xs:attribute type="xs:string" name="mp" use="optional" />
 				<xs:attribute type="xs:byte" name="souls" use="optional" />
 				<xs:attribute type="xs:string" name="canTransform" use="optional" />
 				<xs:attribute type="xs:string" name="canUntransform" use="optional" />
@@ -84,6 +96,7 @@
 				<xs:attribute type="xs:string" name="class_id_restriction" use="optional" />
 				<xs:attribute type="xs:short" name="siegeZone" use="optional" />
 				<xs:attribute type="xs:byte" name="siegeSide" use="optional" />
+				<xs:attribute type="xs:string" name="incombat" use="optional" />
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -91,7 +104,7 @@
 		<xs:simpleContent>
 			<xs:extension base="xs:string">
 				<xs:attribute type="xs:short" name="mindistance" use="optional" />
-				<xs:attribute type="xs:byte" name="abnormal" use="optional" />
+				<xs:attribute type="xs:string" name="abnormalType" use="optional" />
 				<xs:attribute type="xs:short" name="active_effect_id" use="optional" />
 				<xs:attribute type="xs:short" name="active_skill_id" use="optional" />
 				<xs:attribute type="xs:string" name="class_id_restriction" use="optional" />
@@ -141,8 +154,10 @@
 	<xs:complexType name="paramType">
 		<xs:simpleContent>
 			<xs:extension base="xs:string">
+				<xs:attribute type="xs:string" name="side" use="optional" />
 				<xs:attribute type="xs:string" name="chance" use="optional" />
 				<xs:attribute type="xs:string" name="power" use="optional" />
+				<xs:attribute type="xs:string" name="index" use="optional" />
 				<xs:attribute type="xs:byte" name="criticalChance" use="optional" />
 				<xs:attribute type="xs:string" name="charge" use="optional" />
 				<xs:attribute type="xs:byte" name="cubicId" use="optional" />
@@ -252,6 +267,8 @@
 			<xs:enumeration value="rCrit" />
 			<xs:enumeration value="rShld" />
 			<xs:enumeration value="rEvas" />
+			<xs:enumeration value="mEvas" />
+			<xs:enumeration value="accMagic" />
 			<xs:enumeration value="cAtk" />
 			<xs:enumeration value="runSpd" />
 			<xs:enumeration value="reflectDam" />
@@ -444,6 +461,8 @@
 			<xs:element name="enchant2selfEffects" type="effectsType" />
 			<xs:element name="effect" type="effectType" />
 			<xs:element name="enchant1cond" type="condType" />
+			<xs:element name="enchant2cond" type="condType" />
+			<xs:element name="enchant3cond" type="condType" />
 			<xs:element name="enchant4selfEffects" type="effectsType" />
 			<xs:element name="pvpEffects" type="effectsType" />
 			<xs:element name="pveEffects" type="effectsType" />

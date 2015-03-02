@@ -53,16 +53,16 @@ public final class SinEater extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equals("TALK") && (player != null) && (player.getSummon() != null))
+		if (event.equals("TALK") && (player != null) && (player.getPet() != null))
 		{
 			if (getRandom(100) < 30)
 			{
 				final int random = getRandom(100);
-				final L2Summon summon = player.getSummon();
+				final L2Summon summon = player.getPet();
 				
 				if (random < 20)
 				{
-					broadcastSummonSay(summon, NpcStringId.YAWWWWN_ITS_SO_BORING_HERE_WE_SHOULD_GO_AND_FIND_SOME_ACTION);
+					broadcastSummonSay(summon, NpcStringId.YAWWWWN_IT_S_SO_BORING_HERE_WE_SHOULD_GO_AND_FIND_SOME_ACTION);
 				}
 				else if (random < 40)
 				{
@@ -70,7 +70,7 @@ public final class SinEater extends AbstractNpcAI
 				}
 				else if (random < 60)
 				{
-					broadcastSummonSay(summon, NpcStringId.I_KNOW_YOU_DONT_LIKE_ME_THE_FEELING_IS_MUTUAL);
+					broadcastSummonSay(summon, NpcStringId.I_KNOW_YOU_DON_T_LIKE_ME_THE_FEELING_IS_MUTUAL);
 				}
 				else if (random < 80)
 				{
@@ -78,7 +78,7 @@ public final class SinEater extends AbstractNpcAI
 				}
 				else
 				{
-					broadcastSummonSay(summon, NpcStringId.OH_THIS_IS_DRAGGING_ON_TOO_LONG_AT_THIS_RATE_I_WONT_MAKE_IT_HOME_BEFORE_THE_SEVEN_SEALS_ARE_BROKEN);
+					broadcastSummonSay(summon, NpcStringId.OH_THIS_IS_DRAGGING_ON_TOO_LONG_AT_THIS_RATE_I_WON_T_MAKE_IT_HOME_BEFORE_THE_SEVEN_SEALS_ARE_BROKEN);
 				}
 			}
 			startQuestTimer("TALK", 60000, null, player);
@@ -100,11 +100,11 @@ public final class SinEater extends AbstractNpcAI
 		}
 		else if (random < 70)
 		{
-			broadcastSummonSay(summon, NpcStringId.YOU_INCONSIDERATE_MORON_CANT_YOU_EVEN_TAKE_CARE_OF_LITTLE_OLD_ME);
+			broadcastSummonSay(summon, NpcStringId.YOU_INCONSIDERATE_MORON_CAN_T_YOU_EVEN_TAKE_CARE_OF_LITTLE_OLD_ME);
 		}
 		else
 		{
-			broadcastSummonSay(summon, NpcStringId.OH_NO_THE_MAN_WHO_EATS_ONES_SINS_HAS_DIED_PENITENCE_IS_FURTHER_AWAY);
+			broadcastSummonSay(summon, NpcStringId.OH_NO_THE_MAN_WHO_EATS_ONE_S_SINS_HAS_DIED_PENITENCE_IS_FURTHER_AWAY);
 		}
 	}
 	
@@ -124,7 +124,7 @@ public final class SinEater extends AbstractNpcAI
 			}
 			else if (random < 70)
 			{
-				broadcastSummonSay(summon, NpcStringId.HEY_MASTER_PAY_ATTENTION_IM_DYING_OVER_HERE);
+				broadcastSummonSay(summon, NpcStringId.HEY_MASTER_PAY_ATTENTION_I_M_DYING_OVER_HERE);
 			}
 			else
 			{
@@ -136,7 +136,7 @@ public final class SinEater extends AbstractNpcAI
 	@Override
 	public void onSummonSpawn(L2Summon summon)
 	{
-		broadcastSummonSay(summon, getRandomBoolean() ? NpcStringId.HEY_IT_SEEMS_LIKE_YOU_NEED_MY_HELP_DOESNT_IT : NpcStringId.ALMOST_GOT_IT_OUCH_STOP_DAMN_THESE_BLOODY_MANACLES);
+		broadcastSummonSay(summon, getRandomBoolean() ? NpcStringId.HEY_IT_SEEMS_LIKE_YOU_NEED_MY_HELP_DOESN_T_IT : NpcStringId.ALMOST_GOT_IT_OUCH_STOP_DAMN_THESE_BLOODY_MANACLES);
 		startQuestTimer("TALK", 60000, null, summon.getOwner());
 	}
 	
@@ -157,7 +157,7 @@ public final class SinEater extends AbstractNpcAI
 			}
 			else if (random < 75)
 			{
-				broadcastSummonSay(summon, NpcStringId.UGGGGGH_PUSH_ITS_NOT_COMING_OUT);
+				broadcastSummonSay(summon, NpcStringId.UGGGGGH_PUSH_IT_S_NOT_COMING_OUT);
 			}
 			else
 			{

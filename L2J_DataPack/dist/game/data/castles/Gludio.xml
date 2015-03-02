@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/castleData.xsd">
+	<castle id="1"> <!-- Gludio Castle -->
+		<spawn castleSide="LIGHT">
+			<npc id="35100" x="-18212" y="108827" z="-2472" heading="16384"/> <!-- Chamberlain of Light -->
+			<npc id="36609" x="-14491" y="124176" z="-3120" heading="61450"/> <!-- Proclaimer -->
+		</spawn>
+		<spawn castleSide="DARK">
+			<npc id="36653" x="-18212" y="108827" z="-2472" heading="16384"/> <!-- Chamberlain of Darkness -->
+		</spawn>
+	</castle>
+</list>

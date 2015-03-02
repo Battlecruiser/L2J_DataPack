@@ -35,7 +35,7 @@
 			<effect name="Stun" />
 		</for>
 	</skill>
-	<skill id="5402" levels="1" name="Presentation - Balor 2">
+	<skill id="5402" levels="1" name="Presentation - Baylor 2">
 		<!-- Balor - Magic Skill1 -->
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="4000" />
@@ -44,7 +44,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5403" levels="1" name="Presentation - Balor 3">
+	<skill id="5403" levels="1" name="Presentation - Baylor 3">
 		<!-- Balor - Magic Skill2 -->
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="4000" />
@@ -53,7 +53,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5404" levels="1" name="Presentation - Balor 4">
+	<skill id="5404" levels="1" name="Presentation - Baylor 4">
 		<!-- Balor - Instant Cast Skill -->
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="500" />
@@ -114,7 +114,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 	</skill>
-	<skill id="5410" levels="1" name="Presentation - Balor 10">
+	<skill id="5410" levels="1" name="Presentation - Baylor 10">
 		<!-- Balor Social. -->
 		<set name="hitTime" val="17000" />
 		<set name="magicLvl" val="85" />
@@ -122,14 +122,14 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5411" levels="1" name="Presentation - Balor 11">
+	<skill id="5411" levels="1" name="Presentation - Baylor 11">
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5412" levels="1" name="Presentation - Balor 12">
+	<skill id="5412" levels="1" name="Presentation - Baylor 12">
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
@@ -137,7 +137,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5413" levels="1" name="Performing Agathion - Beast Farm">
+	<skill id="5413" levels="1" name="Agathion Cute Trick - Beast Farm">
 		<!-- TODO: Needs to be verified -->
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -149,7 +149,7 @@
 			<player agathionId="16026" />
 		</cond>
 	</skill>
-	<skill id="5414" levels="1" name="Performing Agathion - Rainbow Clan Hall">
+	<skill id="5414" levels="1" name="Agathion Cute Trick - Rainbow Clan Hall">
 		<!-- TODO: Needs to be verified -->
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -161,7 +161,7 @@
 			<player agathionId="16027" />
 		</cond>
 	</skill>
-	<skill id="5415" levels="1" name="Performing Agathion - Castle">
+	<skill id="5415" levels="1" name="Agathion Cute Trick - Castle">
 		<!-- TODO: Needs to be verified -->
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -183,17 +183,15 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5417" levels="1" name="Invincible">
+	<skill id="5417" levels="1" name="Invincibility">
 		<!-- Invincible against general attack and skill, buff/de-buff. -->
-		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5418" levels="1" name="Invincible">
+	<skill id="5418" levels="1" name="Invincibility">
 		<!-- Invincible against general attack and skill, buff/de-buff. -->
-		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="rideState" val="NONE" />
@@ -208,9 +206,8 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5420" levels="1" name="Invincible">
+	<skill id="5420" levels="1" name="Invincibility">
 		<!-- Invincible against general attack and skill, buff/de-buff. -->
-		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="rideState" val="NONE" />
@@ -409,7 +406,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5431" levels="1" name="Slow">
+	<skill id="5431" levels="1" name="Decrease Speed">
 		<!-- Condition causing target to temporarily decrease attack speed and casting speed. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
@@ -427,7 +424,6 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5432" levels="2" name="Weapon Supply">
-		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="T" />
 		<set name="rideState" val="NONE" />
@@ -530,7 +526,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5438" levels="9" name="NPC party 30 Clan Heal">
+	<skill id="5438" levels="9" name="Heal">
 		<table name="#amount"> 1419 1458 1503 1548 1584 1611 1630 1651 1678 </table>
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 20 35 53 73 96 117 136 145 151 </table>
@@ -552,7 +548,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5439" levels="9" name="NPC party 60 Clan Heal">
+	<skill id="5439" levels="9" name="Heal">
 		<table name="#amount"> 1971 2025 2088 2150 2200 2237 2263 2294 2331 </table>
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 20 35 53 73 96 117 136 145 151 </table>
@@ -574,14 +570,14 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5440" levels="1" name="Presentation - Trap Activate">
+	<skill id="5440" levels="1" name="Trap">
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5441" levels="1" name="Presentation - Tears Mirror Image">
+	<skill id="5441" levels="1" name="Incarnation">
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -873,7 +869,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5457" levels="1" name="NPC Full Recover">
+	<skill id="5457" levels="1" name="Full Recovery">
 		<set name="effectPoint" val="1000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="99" />
@@ -881,7 +877,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5458" levels="1" name="Performing Agathion - Fortress">
+	<skill id="5458" levels="1" name="Agathion Cute Trick - Fortress">
 		<!-- TODO: Needs to be verified -->
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -927,7 +923,7 @@
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="DERANGEMENT" />
 	</skill>
-	<skill id="5461" levels="12" name="Castle Gunner Shot">
+	<skill id="5461" levels="12" name="Power Shot">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 40 45 50 55 60 65 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 19 22 25 28 31 33 36 38 40 42 42 43 </table>
@@ -947,25 +943,25 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5462" levels="1" name="Fire Attacks">
+	<skill id="5462" levels="1" name="Fire Attack">
 		<set name="icon" val="icon.skill4279_new" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5463" levels="1" name="Water Attacks">
+	<skill id="5463" levels="1" name="Water Attack">
 		<set name="icon" val="icon.skill4280_new" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5464" levels="1" name="Wind Attacks">
+	<skill id="5464" levels="1" name="Wind Attack">
 		<set name="icon" val="icon.skill4281_new" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5465" levels="1" name="Earth Attacks">
+	<skill id="5465" levels="1" name="Earth Attack">
 		<set name="icon" val="icon.skill4282_new" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -977,13 +973,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5467" levels="1" name="Dark Attacks">
+	<skill id="5467" levels="1" name="Dark Attack">
 		<set name="icon" val="icon.skill4336_new" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5468" levels="12" name="Castle Gunner Fire">
+	<skill id="5468" levels="12" name="Fire Shot">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 40 45 50 55 60 65 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 19 22 25 28 31 33 36 38 40 42 42 43 </table>
@@ -1005,70 +1001,70 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5469" levels="1" name="Raid Boss - Level 22">
+	<skill id="5469" levels="1" name="Raid Boss (Lv. 22)">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5470" levels="1" name="Raid Boss - Level 81">
+	<skill id="5470" levels="1" name="Raid Boss (Lv. 81)">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5471" levels="1" name="Raid Boss - Level 82">
+	<skill id="5471" levels="1" name="Raid Boss (Lv. 82)">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5472" levels="1" name="Raid Boss - Level 83">
+	<skill id="5472" levels="1" name="Raid Boss (Lv. 83)">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5473" levels="1" name="Raid Boss - Level 81">
+	<skill id="5473" levels="1" name="Raid Boss (Lv. 81)">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5474" levels="1" name="Raid Boss - Level 81">
+	<skill id="5474" levels="1" name="Raid Boss (Lv. 81)">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5475" levels="1" name="Raid Boss - Level 83">
+	<skill id="5475" levels="1" name="Raid Boss (Lv. 83)">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5476" levels="1" name="Raid Boss - Level 83">
+	<skill id="5476" levels="1" name="Raid Boss (Lv. 83)">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5477" levels="1" name="Raid Boss - Level 86">
+	<skill id="5477" levels="1" name="Raid Boss (Lv. 83)">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5478" levels="1" name="Raid Boss - Level 83">
+	<skill id="5478" levels="1" name="Raid Boss (Lv. 83)">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
@@ -1088,7 +1084,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5480" levels="1" name="Balor Invincible Removal">
+	<skill id="5480" levels="1" name="Cancel Baylor Invincibility">
 		<!-- Confirmed CT2.5 -->
 		<!-- Baylor Skills -->
 		<set name="castRange" val="600" />
@@ -1105,7 +1101,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5481" levels="1" name="Transform Penalty">
+	<skill id="5481" levels="1" name="Transformation Penalty">
 		<!-- You cannot be transformed while under this effect. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
@@ -1117,7 +1113,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5482" levels="1" name="Transform Penalty">
+	<skill id="5482" levels="1" name="Transformation Penalty">
 		<!-- You cannot be transformed while under this effect. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="480" />
@@ -1179,7 +1175,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5488" levels="1" name="Counter Critical Power Up">
+	<skill id="5488" levels="1" name="Counter Critical Damage Up">
 		<!-- Increases critical attack power. Effect 1. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
@@ -1233,7 +1229,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5492" levels="12" name="NPC CrossBow Attack">
+	<skill id="5492" levels="12" name="Power Shot">
 		<!-- NPC Skill -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 25 40 56 76 99 121 142 151 159 165 168 170 </table>
@@ -1254,7 +1250,6 @@
 		</for>
 	</skill>
 	<skill id="5493" levels="1" name="Naia Production">
-		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="castRange" val="800" />
 		<set name="channelingSkillId" val="5106" />
 		<set name="channelingSkillId" val="5106" />

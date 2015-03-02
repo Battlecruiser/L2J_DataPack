@@ -175,7 +175,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="4800" />
-		<set name="price" val="845000" />
+		<set name="price" val="169000" />
 		<for>
 			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
@@ -190,7 +190,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="1380" />
-		<set name="price" val="9900" />
+		<set name="price" val="1980" />
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -727,7 +727,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2230-1" />
 	</item>
-	<item id="7063" type="EtcItem" name="Map - Forest of the Dead">
+	<item id="7063" type="EtcItem" name="Map: Forest of the Dead">
 		<set name="icon" val="icon.etc_map_ivory_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -852,18 +852,21 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="7076" type="EtcItem" name="Mysterious Cloth">
 		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="7077" type="EtcItem" name="Jewel Box">
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="7078" type="EtcItem" name="Sewing Kit">
 		<set name="icon" val="icon.etc_treasure_box_i00" />
@@ -881,7 +884,6 @@
 		<set name="icon" val="icon.etc_crystal_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="price" val="20000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -892,7 +894,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
-		<set name="price" val="10000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1077,7 +1078,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="handler" val="Book" />
 	</item>
-	<item id="7096" type="EtcItem" name="The Last Days of Swordsman Iron">
+	<item id="7096" type="EtcItem" name="Last Days of Swordsman Iron">
 		<set name="icon" val="icon.etc_spellbook_blue_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />

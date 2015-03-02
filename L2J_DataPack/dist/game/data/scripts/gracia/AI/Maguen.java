@@ -193,7 +193,7 @@ public final class Maguen extends AbstractNpcAI
 		}
 		else if ((b == 0) && (c == 3) && (r == 0))
 		{
-			showOnScreenMsg(player, NpcStringId.ENOUGH_MAGUEN_PLASMA_COKRAKON_HAVE_GATHERED, 2, 4000);
+			showOnScreenMsg(player, NpcStringId.ENOUGH_MAGUEN_PLASMA_KOKRACON_HAVE_GATHERED, 2, 4000);
 			player.getEffectList().stopSkillEffects(true, C_PLASMA1.getSkill().getAbnormalType());
 			npc.setTarget(player);
 			npc.doCast((getRandom(100) < 70) ? C_BUFF_1.getSkill() : C_BUFF_2.getSkill());

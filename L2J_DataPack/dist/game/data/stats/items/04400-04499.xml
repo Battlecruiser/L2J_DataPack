@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="4400" type="EtcItem" name="White Fabric">
+	<item id="4400" type="EtcItem" name="White Cloth">
 		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -57,7 +57,7 @@
 		<set name="price" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4407" type="EtcItem" name="Bill of Iason Heine">
+	<item id="4407" type="EtcItem" name="Iason Heine's Bill">
 		<set name="icon" val="icon.etc_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -98,6 +98,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2069-1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="4412" type="EtcItem" name="Echo Crystal - Theme of Battle">
 		<set name="icon" val="icon.etc_echo_crystal_i01" />
@@ -120,6 +121,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2070-1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="4414" type="EtcItem" name="Echo Crystal - Theme of Solitude">
 		<set name="icon" val="icon.etc_echo_crystal_i03" />
@@ -131,8 +133,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2072-1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="4415" type="EtcItem" name="Echo Crystal - Theme of the Feast">
+	<item id="4415" type="EtcItem" name="Echo Crystal - Theme of Festival">
 		<set name="icon" val="icon.etc_echo_crystal_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -142,6 +145,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2071-1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="4416" type="EtcItem" name="Echo Crystal - Theme of Celebration">
 		<set name="icon" val="icon.etc_echo_crystal_i00" />
@@ -153,6 +157,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2073-1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="4417" type="EtcItem" name="Echo Crystal - Theme of Comedy">
 		<set name="icon" val="icon.etc_echo_crystal_i01" />
@@ -164,6 +169,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2067-1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="4418" type="EtcItem" name="Musical Score - Theme of Celebration">
 		<set name="icon" val="icon.etc_musical_note_i01" />
@@ -189,7 +195,7 @@
 		<set name="price" val="500" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4421" type="EtcItem" name="Musical Score - Theme of the Feast">
+	<item id="4421" type="EtcItem" name="Musical Score - Theme of Festival">
 		<set name="icon" val="icon.etc_musical_note_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -208,11 +214,12 @@
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<set name="commissionItemType" val="PET_SUPPLIES" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="4423" type="EtcItem" name="Dragon Bugle of Star">
+	<item id="4423" type="EtcItem" name="Star Dragon Bugle">
 		<set name="icon" val="icon.etc_bugle_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -261,7 +268,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="4426" type="EtcItem" name="Manacles of Penitent">
+	<item id="4426" type="EtcItem" name="Penitent's Manacles">
 		<set name="icon" val="icon.etc_leash_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -365,7 +372,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
-		<set name="price" val="28044" />
+		<set name="price" val="5609" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4439" type="EtcItem" name="Avadon Shield Fragment">
@@ -374,7 +381,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
-		<set name="price" val="2900" />
+		<set name="price" val="580" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4440" type="EtcItem" name="Recipe: Knuckle Duster">
@@ -384,7 +391,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
-		<set name="price" val="57400" />
+		<set name="price" val="11480" />
 		<set name="recipe_id" val="495" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
@@ -396,7 +403,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
-		<set name="price" val="10900" />
+		<set name="price" val="2180" />
 		<set name="recipe_id" val="479" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
@@ -415,7 +422,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
-		<set name="price" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -427,7 +433,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
-		<set name="price" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />

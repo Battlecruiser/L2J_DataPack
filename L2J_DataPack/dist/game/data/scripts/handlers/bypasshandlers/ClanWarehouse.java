@@ -54,20 +54,20 @@ public class ClanWarehouse implements IBypassHandler
 			return false;
 		}
 		
-		if (activeChar.isEnchanting())
+		if (activeChar.hasItemRequest())
 		{
 			return false;
 		}
 		
 		if (activeChar.getClan() == null)
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_RIGHT_TO_USE_CLAN_WAREHOUSE);
+			activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_RIGHT_TO_USE_THE_CLAN_WAREHOUSE);
 			return false;
 		}
 		
 		if (activeChar.getClan().getLevel() == 0)
 		{
-			activeChar.sendPacket(SystemMessageId.ONLY_LEVEL_1_CLAN_OR_HIGHER_CAN_USE_WAREHOUSE);
+			activeChar.sendPacket(SystemMessageId.ONLY_CLANS_OF_CLAN_LEVEL_1_OR_ABOVE_CAN_USE_A_CLAN_WAREHOUSE);
 			return false;
 		}
 		
@@ -136,7 +136,7 @@ public class ClanWarehouse implements IBypassHandler
 		
 		if (!player.hasClanPrivilege(ClanPrivilege.CL_VIEW_WAREHOUSE))
 		{
-			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_RIGHT_TO_USE_CLAN_WAREHOUSE);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_RIGHT_TO_USE_THE_CLAN_WAREHOUSE);
 			return;
 		}
 		
@@ -144,7 +144,7 @@ public class ClanWarehouse implements IBypassHandler
 		
 		if (player.getActiveWarehouse().getSize() == 0)
 		{
-			player.sendPacket(SystemMessageId.NO_ITEM_DEPOSITED_IN_WH);
+			player.sendPacket(SystemMessageId.YOU_HAVE_NOT_DEPOSITED_ANY_ITEMS_IN_YOUR_WAREHOUSE);
 			return;
 		}
 		

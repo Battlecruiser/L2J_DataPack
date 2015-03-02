@@ -74,12 +74,12 @@ public final class Harvesting extends AbstractEffect
 					SystemMessage sm = null;
 					if (item.getCount() == 1)
 					{
-						sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_PICKED_UP_S1);
+						sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1);
 						sm.addItemName(item.getId());
 					}
 					else
 					{
-						sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_PICKED_UP_S1_S2);
+						sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
 						sm.addItemName(item.getId());
 						sm.addLong(item.getCount());
 					}
@@ -90,13 +90,13 @@ public final class Harvesting extends AbstractEffect
 					{
 						if (item.getCount() == 1)
 						{
-							sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HARVESTED_S2S);
+							sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HARVESTED_S2);
 							sm.addString(player.getName());
 							sm.addItemName(item.getId());
 						}
 						else
 						{
-							sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HARVESTED_S3_S2S);
+							sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HARVESTED_S3_S2_S);
 							sm.addString(player.getName());
 							sm.addLong(item.getCount());
 							sm.addItemName(item.getId());

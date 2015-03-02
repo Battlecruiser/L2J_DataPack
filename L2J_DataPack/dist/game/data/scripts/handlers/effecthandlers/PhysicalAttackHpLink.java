@@ -72,7 +72,7 @@ public final class PhysicalAttackHpLink extends AbstractEffect
 		
 		if (activeChar.isMovementDisabled())
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addSkillName(info.getSkill());
 			activeChar.sendPacket(sm);
 			return;
@@ -101,7 +101,7 @@ public final class PhysicalAttackHpLink extends AbstractEffect
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.ATTACK_FAILED);
+			activeChar.sendPacket(SystemMessageId.YOUR_ATTACK_HAS_FAILED);
 		}
 	}
 }

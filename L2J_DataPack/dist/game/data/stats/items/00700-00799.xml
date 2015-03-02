@@ -114,7 +114,7 @@
 			<add order="0" stat="pDef" val="75" />
 		</for>
 	</item>
-	<item id="710" type="EtcItem" name="Hard Leather Shirt">
+	<item id="710" type="EtcItem" name="Durable Leather Shirt">
 		<set name="icon" val="icon.armor_leather_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
@@ -174,7 +174,7 @@
 			<add order="0" stat="pDef" val="45" />
 		</for>
 	</item>
-	<item id="714" type="EtcItem" name="Hard Leather Pants">
+	<item id="714" type="EtcItem" name="Durable Leather Pants">
 		<set name="icon" val="icon.armor_leather_pants_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
@@ -234,7 +234,7 @@
 			<add order="0" stat="pDef" val="30" />
 		</for>
 	</item>
-	<item id="718" type="EtcItem" name="Hard Leather Gloves">
+	<item id="718" type="EtcItem" name="Durable Leather Gloves">
 		<set name="icon" val="icon.armor_gauntlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -249,7 +249,7 @@
 			<add order="0" stat="pDef" val="32" />
 		</for>
 	</item>
-	<item id="719" type="EtcItem" name="Crafted Leather Gloves">
+	<item id="719" type="EtcItem" name="Quality Leather Gloves">
 		<set name="icon" val="icon.armor_gauntlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -294,7 +294,7 @@
 			<add order="0" stat="pDef" val="30" />
 		</for>
 	</item>
-	<item id="722" type="EtcItem" name="Hard Leather Boots">
+	<item id="722" type="EtcItem" name="Durable Leather Boots">
 		<set name="icon" val="icon.armor_iron_boots_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -309,7 +309,7 @@
 			<add order="0" stat="pDef" val="32" />
 		</for>
 	</item>
-	<item id="723" type="EtcItem" name="Crafted Leather Boots">
+	<item id="723" type="EtcItem" name="Quality Leather Boots">
 		<set name="icon" val="icon.armor_feet99" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -353,7 +353,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="726" type="EtcItem" name="Mana Drug">
+	<item id="726" type="EtcItem" name="Mana Potion">
 		<set name="icon" val="icon.etc_potion_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -413,6 +413,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2006-1" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 	</item>
 	<item id="730" type="EtcItem" name="Scroll: Enchant Armor (A-Grade)">
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
@@ -426,6 +427,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2007-1" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 	</item>
 	<item id="731" type="EtcItem" name="Crystal Scroll: Enchant Weapon (A-Grade)">
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
@@ -458,7 +460,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="734" type="EtcItem" name="Haste Potion">
+	<item id="734" type="EtcItem" name="Wind Walk Potion">
 		<set name="icon" val="icon.etc_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -476,7 +478,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="735" type="EtcItem" name="Alacrity Potion">
+	<item id="735" type="EtcItem" name="Haste Potion">
 		<set name="icon" val="icon.etc_reagent_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -517,6 +519,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2014-1" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="738" type="Weapon" name="Sword of Solidarity">
 		<set name="icon" val="icon.weapon_long_sword_i00" />
@@ -529,7 +532,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1300" />
-		<set name="price" val="14200" />
+		<set name="price" val="2840" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
@@ -594,7 +597,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
-		<set name="price" val="25800" />
+		<set name="price" val="5160" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
@@ -615,7 +618,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1800" />
-		<set name="price" val="25800" />
+		<set name="price" val="5160" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
@@ -627,7 +630,7 @@
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="745" type="EtcItem" name="Cobendell Medicine">
+	<item id="745" type="EtcItem" name="Cobendell's Medicine">
 		<set name="icon" val="icon.item_normal40" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -660,7 +663,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1300" />
-		<set name="price" val="19500" />
+		<set name="price" val="3900" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
@@ -683,7 +686,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1350" />
-		<set name="price" val="3800" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -707,11 +709,11 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="5" />
+		<set name="crystal_count" val="9" />
 		<set name="crystal_type" val="D" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="100" />
-		<set name="price" val="35800" />
+		<set name="price" val="7160" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_dropable" val="false" />
 		<for>
@@ -779,7 +781,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1700" />
-		<set name="price" val="19500" />
+		<set name="price" val="3900" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
@@ -868,7 +870,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="762" type="EtcItem" name="Gray Bone Chip">
+	<item id="762" type="EtcItem" name="Grey Bone Chip">
 		<set name="icon" val="icon.item_normal05" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1000,7 +1002,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="774" type="EtcItem" name="Fallen Sword of Honor">
+	<item id="774" type="EtcItem" name="Fallen Glorious Sword">
 		<set name="icon" val="icon.weapon_1hs04" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1011,7 +1013,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="775" type="EtcItem" name="Sword of Honor">
+	<item id="775" type="EtcItem" name="Glorious Sword">
 		<set name="icon" val="icon.weapon_1hs05" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

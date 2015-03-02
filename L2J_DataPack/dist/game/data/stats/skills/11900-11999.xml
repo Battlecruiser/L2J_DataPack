@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="11997" levels="1" name="Healer - Individual Passive">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0217" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="11998" levels="1" name="Healer - Individual">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Atk. Spd. + 30% for 5 seconds. -->
+		<set name="icon" val="icon.skill1543" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="4" />
+	</skill>
+	<skill id="11999" levels="1" name="Heavy Hit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a powerful blow on target. -->
+		<set name="icon" val="icon.skill10317" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="2" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isMagic" val="1" />
+	</skill>
+</list>

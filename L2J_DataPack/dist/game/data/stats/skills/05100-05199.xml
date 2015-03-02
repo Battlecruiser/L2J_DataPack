@@ -6,6 +6,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="mpConsume" val="2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
@@ -15,6 +16,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="mpConsume" val="2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
@@ -24,6 +26,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="mpConsume" val="2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
@@ -126,7 +129,7 @@
 			<effect name="Buff" />
 		</for>
 	</skill>
-	<skill id="5109" levels="1" name="Production - Clan Gate">
+	<skill id="5109" levels="1" name="Presentation -  Clan Gate">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="100" />
@@ -224,10 +227,10 @@
 			<effect name="Stun" />
 		</for>
 	</skill>
-	<skill id="5113" levels="12" name="Castle Self AE Dispell Buff">
+	<skill id="5113" levels="12" name="Buff Dispel">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 5 8 11 14 18 22 26 28 29 30 31 31 </table>
+		<table name="#mpConsume"> 7 10 14 18 23 28 33 35 37 38 39 39 </table>
 		<set name="affectRange" val="150" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="6000" />
@@ -246,7 +249,8 @@
 	<skill id="5114" levels="12" name="Hold">
 		<!-- Lvl 1-12 - Temporarily Immobilized. -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 7 10 14 18 23 28 33 35 37 38 39 39 </table>
+		<table name="#mpConsume"> 6 8 11 14 18 22 26 28 30 30 31 31 </table>
+		<table name="#mpInitialConsume"> 1 2 3 4 5 6 7 7 7 8 8 8 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
@@ -262,10 +266,12 @@
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="Root" />
@@ -410,7 +416,7 @@
 			<effect name="Stun" />
 		</for>
 	</skill>
-	<skill id="5121" levels="1" name="Production - Corpse Revival">
+	<skill id="5121" levels="1" name="Presentation -  Corpse Revival">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -427,6 +433,7 @@
 		<set name="magicLvl" val="90" />
 		<set name="mpConsume" val="38" />
 		<set name="operateType" val="A2" />
+		<set name="icon" val="icon.skill4028" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -455,7 +462,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5124" levels="1" name="Anti-Music">
+	<skill id="5124" levels="1" name="Anti-music">
 		<!-- Confirmed CT2.5 -->
 		<set name="affectRange" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -506,7 +513,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5127" levels="1" name="Recover Force">
+	<skill id="5127" levels="1" name="Recover Momentum">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7" />
@@ -570,8 +577,10 @@
 		</for>
 	</skill>
 	<skill id="5130" levels="1" name="Volcano">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="affectRange" val="300" />
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="20" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="300" />
@@ -584,8 +593,10 @@
 		</for>
 	</skill>
 	<skill id="5131" levels="1" name="Tsunami">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="affectRange" val="300" />
+		<set name="element" val="1" /> <!-- Water -->
+		<set name="elementPower" val="20" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="300" />
@@ -598,8 +609,10 @@
 		</for>
 	</skill>
 	<skill id="5132" levels="1" name="Cyclone">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="affectRange" val="300" />
+		<set name="element" val="2" /> <!-- Wind -->
+		<set name="elementPower" val="20" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="300" />
@@ -612,8 +625,10 @@
 		</for>
 	</skill>
 	<skill id="5133" levels="1" name="Gehenna">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="affectRange" val="300" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="20" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="300" />
@@ -625,7 +640,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5134" levels="1" name="Anti-Summoning Field">
+	<skill id="5134" levels="1" name="Anti-summoning Field">
 		<!-- TODO: Update to H5! -->
 		<set name="abnormalTime" val="15" />
 		<set name="affectRange" val="200" />
@@ -635,6 +650,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
+		<set name="isDebuff" val="true" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -670,7 +686,7 @@
 		<set name="affectRange" val="150" />
 		<set name="coolTime" val="733" />
 		<set name="effectPoint" val="-100" />
-		<set name="hitTime" val="1070" />
+		<set name="hitTime" val="1067" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="322" />
 		<set name="operateType" val="A1" />
@@ -683,7 +699,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5137" levels="1" name="Hold of King">
+	<skill id="5137" levels="1" name="Grip of the Cat">
 		<!-- CT2.5 retail confirmed -->
 		<!-- Summon Feline King Skill -->
 		<set name="abnormalLvl" val="1" />
@@ -822,7 +838,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5142" levels="1" name="Corpse Kaboom">
+	<skill id="5142" levels="1" name="Corpse Burst">
 		<!-- CT2.5 retail confirmed -->
 		<!-- Summon Spectral Lord Skill -->
 		<set name="affectRange" val="150" />
@@ -1013,10 +1029,10 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5151" levels="10" name="Mana Gain">
-		<!-- Confirmed CT2.5 -->
+	<skill id="5151" levels="15" name="Mana Gain">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
 		<!-- Augmentation Skill (Trigger) -->
-		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 80 85 90 95 99 </table> <!-- Guessed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
@@ -1078,11 +1094,11 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5154" levels="10" name="Might">
-		<!-- Confirmed CT2.5 -->
+	<skill id="5154" levels="15" name="Might">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
 		<!-- Augmentation Skill (Trigger) -->
-		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<table name="#pAtk"> 23.64 27.96 32.76 37.98 43.62 49.62 55.86 62.28 68.88 79.74 </table>
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 80 85 90 95 99 </table> <!-- Guessed -->
+		<table name="#pAtk"> 23.64 27.96 32.76 37.98 43.62 49.62 55.86 62.28 68.88 79.74 89 95 110 130 150 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
@@ -1101,11 +1117,11 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5156" levels="10" name="Empower">
-		<!-- Confirmed CT2.5 -->
+	<skill id="5156" levels="15" name="Empower">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
 		<!-- Augmentation Skill (Trigger) -->
-		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<table name="#mAtk"> 15.9 18.65 21.6 24.9 28.4 32.15 36.05 40.1 44.2 50.95 </table>
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 80 85 90 95 99 </table> <!-- Guessed -->
+		<table name="#mAtk"> 15.9 18.65 21.6 24.9 28.4 32.15 36.05 40.1 44.2 50.95 56 62 69 75 82  </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
@@ -1147,11 +1163,11 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5158" levels="10" name="Shield">
-		<!-- Confirmed CT2.5 -->
+	<skill id="5158" levels="15" name="Shield">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
 		<!-- Augmentation Skill (Trigger) -->
-		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<table name="#pDef"> 30.2 33.72 37.4 41.28 45.32 49.52 53.88 58.32 62.88 70.6 </table>
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 80 85 90 95 99 </table> <!-- Guessed -->
+		<table name="#pDef"> 30.2 33.72 37.4 41.28 45.32 49.52 53.88 58.32 62.88 70.6 79 80 90 100 110 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
@@ -1170,11 +1186,11 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5159" levels="10" name="Magic Barrier">
-		<!-- Confirmed CT2.5 -->
+	<skill id="5159" levels="15" name="Magic Barrier">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
 		<!-- Augmentation Skill (Trigger) -->
-		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<table name="#mDef"> 37 40 44 48 52 56 61 65 70 77 </table>
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 80 85 90 95 99 </table> <!-- Guessed -->
+		<table name="#mDef"> 37 40 44 48 52 56 61 65 70 77 85 89 95 99 105</table> <!-- Guessed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
@@ -1221,11 +1237,11 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5161" levels="10" name="Agility">
-		<!-- Confirmed CT2.5 -->
+	<skill id="5161" levels="15" name="Agility">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
 		<!-- Augmentation Skill (Trigger) -->
-		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<table name="#rEvas"> 1 1 1 2 2 2 3 3 3 4 </table>
+		<table name="#rEvas"> 1 1 1 2 2 2 3 3 3 4 4 5 5 6 7</table> <!-- Guesssed -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 80 85 90 95 99 </table> <!-- Guessed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
@@ -1244,11 +1260,11 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5162" levels="10" name="Guidance">
-		<!-- Confirmed CT2.5 -->
+	<skill id="5162" levels="15" name="Guidance">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
 		<!-- Augmentation Skill (Trigger) -->
-		<table name="#accCombat"> 1 1 1 2 2 2 3 3 3 4 </table>
-		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#accCombat"> 1 1 1 2 2 2 3 3 3 4 4 5 5 6 7</table> <!-- Guesssed -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 80 85 90 95 99 </table> <!-- Guessed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
@@ -1313,11 +1329,11 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5165" levels="10" name="Charm">
-		<!-- Confirmed CT2.5 -->
+	<skill id="5165" levels="15" name="Charm">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
 		<!-- Augmentation Skill (Trigger) -->
-		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<table name="#power"> -219 -234 -248 -262 -275 -287 -299 -309 -318 -330 </table>
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 80 85 90 95 99 </table> <!-- Guessed -->
+		<table name="#power"> -219 -234 -248 -262 -275 -287 -299 -309 -318 -330 -350 -370 -390 -410 -430 </table> <!-- Guessed -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="1500" />
@@ -1336,10 +1352,10 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5166" levels="10" name="Slow">
-		<!-- Confirmed CT2.5 -->
+	<skill id="5166" levels="15" name="Decrease Speed">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
 		<!-- Augmentation Skill (Trigger) -->
-		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 80 85 90 95 99 </table> <!-- Guessed -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -1363,10 +1379,10 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5167" levels="10" name="Winter">
-		<!-- Confirmed CT2.5 -->
+	<skill id="5167" levels="15" name="Winter">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
 		<!-- Augmentation Skill (Trigger) -->
-		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 80 85 90 95 99 </table> <!-- Guessed -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
@@ -1560,12 +1576,12 @@
 			<!-- FIXME: We need an instant effect that will work only vs monsters and fear them with 40% chance for 20 seconds here -->
 		</for>
 	</skill>
-	<skill id="5174" levels="10" name="Poison">
-		<!-- Confirmed CT2.5 -->
+	<skill id="5174" levels="15" name="Poison">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
 		<!-- Augmentation Skill (Trigger) -->
-		<table name="#abnormalLvls"> 5 5 6 6 6 7 7 7 8 8 </table>
-		<table name="#dot"> 41 41 50 50 50 58 58 58 63 63 </table>
-		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#abnormalLvls"> 5 5 6 6 6 7 7 7 8 8 9 10 11 12 13 </table> <!-- Guessed -->
+		<table name="#dot"> 41 41 50 50 50 58 58 58 63 63 68 73 78 83 88 </table> <!-- Guessed -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 80 85 90 95 99 </table> <!-- Guessed -->
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
@@ -1591,12 +1607,12 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5175" levels="10" name="Bleed">
-		<!-- Confirmed CT2.5 -->
+	<skill id="5175" levels="15" name="Bleed">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
 		<!-- Augmentation Skill (Trigger) -->
-		<table name="#abnormalLvls"> 5 5 6 6 6 7 7 7 8 8 </table>
-		<table name="#dot"> 44 44 54 54 54 62 62 62 67 67 </table>
-		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#abnormalLvls"> 5 5 6 6 6 7 7 7 8 8 9 10 11 12 13 </table> <!-- Guessed -->
+		<table name="#dot"> 44 44 54 54 54 62 62 62 67 67 68 69 70 71 72 </table> <!-- Guessed -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 80 85 90 95 99 </table> <!-- Guessed -->
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
@@ -1685,30 +1701,31 @@
 		<set name="icon" val="icon.action102" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="mpConsume" val="38" />
+		<set name="mpConsume" val="30" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="116" />
+		<set name="mpInitialConsume" val="8" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5179" levels="1" name="Raid Boss - Level 80">
+	<skill id="5179" levels="1" name="Raid Boss (Lv. 80)">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5180" levels="1" name="Raid Boss - Level 80">
+	<skill id="5180" levels="1" name="Raid Boss (Lv. 80)">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5181" levels="1" name="Raid Boss - Level 80">
+	<skill id="5181" levels="1" name="Raid Boss (Lv. 80)">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
@@ -1721,7 +1738,7 @@
 		<set name="abnormalTime" val="7200" />
 		<set name="abnormalType" val="PK_PROTECT" />
 		<set name="canBeDispeled" val="false" />
-		<set name="castRange" val="400" />
+		<set name="castRange" val="700" />
 		<set name="effectRange" val="900" />
 		<set name="icon" val="icon.skill0194" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1744,6 +1761,7 @@
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
+		<set name="isDebuff" val="true" />
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="ThrowUp" />
@@ -1841,8 +1859,8 @@
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#effectPoints"> 331 457 532 </table>
 		<table name="#magicLvl"> 35 48 56 </table>
-		<table name="#mpConsume"> 12 18 21 </table>
-		<table name="#mpInitialConsume"> 3 5 6 </table>
+		<table name="#mpConsume"> 12 18 22 </table>
+		<table name="#mpInitialConsume"> 3 5 5 </table>
 		<table name="#rate"> 1.1 1.15 1.2 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="120" />
@@ -1871,8 +1889,8 @@
 		<table name="#effectPoints"> 597 457 495 532 597 646 </table>
 		<table name="#magicLvl"> 44 48 52 56 64 72 </table>
 		<table name="#maxHp"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
-		<table name="#mpConsume"> 16 18 19 21 24 27 </table>
-		<table name="#mpInitialConsume"> 4 5 5 6 6 7 </table>
+		<table name="#mpConsume"> 16 18 19 22 24 27 </table>
+		<table name="#mpInitialConsume"> 4 5 5 5 6 7 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MAX_HP_UP" />
@@ -1900,8 +1918,8 @@
 		<table name="#effectPoints"> 418 457 495 532 582 635 </table>
 		<table name="#magicLvl"> 44 48 52 56 62 70 </table>
 		<table name="#maxMp"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
-		<table name="#mpConsume"> 16 18 19 21 23 26 </table>
-		<table name="#mpInitialConsume"> 4 5 5 6 6 7 </table>
+		<table name="#mpConsume"> 16 18 19 22 23 26 </table>
+		<table name="#mpInitialConsume"> 4 5 5 5 6 7 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MAX_MP_UP" />
@@ -1929,8 +1947,8 @@
 		<table name="#accCombat"> 2 3 4 </table>
 		<table name="#effectPoints"> 379 457 532 </table>
 		<table name="#magicLvl"> 40 48 56 </table>
-		<table name="#mpConsume"> 14 18 21 </table>
-		<table name="#mpInitialConsume"> 4 5 6 </table>
+		<table name="#mpConsume"> 14 18 22 </table>
+		<table name="#mpInitialConsume"> 4 5 5 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="HIT_UP" />
@@ -2016,8 +2034,8 @@
 		<table name="#effectPoints"> 243 418 495 </table>
 		<table name="#magicLvl"> 25 44 52 </table>
 		<table name="#mAtk"> 1.55 1.65 1.75 </table>
-		<table name="#mpConsume"> 9 16 19 </table>
-		<table name="#mpInitialConsume"> 3 4 5 </table>
+		<table name="#mpConsume"> 10 16 19 </table>
+		<table name="#mpInitialConsume"> 2 4 5 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="MA_UP" />
@@ -2045,8 +2063,8 @@
 		<table name="#amount"> 58 92 148 219 299 380 450 477 500 525 542 550 </table>
 		<table name="#effectPoints"> 83 151 245 362 494 628 743 789 826 867 895 913 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 7 12 18 25 32 39 46 49 51 52 53 53  </table>
-		<table name="#mpInitialConsume"> 2 3 5 7 8 10 12 13 13 13 14 14 </table>
+		<table name="#mpConsume"> 7 12 18 26 32 39 46 50 51 52 54 54 </table>
+		<table name="#mpInitialConsume"> 2 3 5 6 8 10 12 12 13 13 13 13 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="LIFE_FORCE_OTHERS" />
@@ -2062,7 +2080,6 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#amount" /> <!-- TODO: remove after BabyPet rework -->
-		<set name="reuseDelay" val="6000" />
 		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="OWNER_PET" />
@@ -2075,8 +2092,8 @@
 	<skill id="5196" levels="3" name="Pet Wind Shackle">
 		<table name="#effectPoints"> -597 -611 -624 </table>
 		<table name="#magicLvl"> 64 66 68 </table>
-		<table name="#mpConsume"> 48 49 51 </table>
-		<table name="#mpInitialConsume"> 12 13 13 </table>
+		<table name="#mpConsume"> 48 50 51 </table>
+		<table name="#mpInitialConsume"> 12 12 13 </table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
@@ -2106,8 +2123,8 @@
 	<skill id="5197" levels="3" name="Pet Hex">
 		<table name="#effectPoints"> -299 -306 -312 </table>
 		<table name="#magicLvl"> 64 66 68 </table>
-		<table name="#mpConsume"> 24 25 26  </table>
-		<table name="#mpInitialConsume"> 6 7 7 </table>
+		<table name="#mpConsume"> 24 26 26 </table>
+		<table name="#mpInitialConsume"> 6 6 7 </table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PD_DOWN" />
@@ -2137,8 +2154,8 @@
 	<skill id="5198" levels="3" name="Pet Slow">
 		<table name="#effectPoints"> -597 -611 -624 </table>
 		<table name="#magicLvl"> 64 66 68 </table>
-		<table name="#mpConsume"> 48 49 51 </table>
-		<table name="#mpInitialConsume"> 12 13 13 </table>
+		<table name="#mpConsume"> 48 50 51 </table>
+		<table name="#mpInitialConsume"> 12 12 13 </table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -2168,8 +2185,8 @@
 	<skill id="5199" levels="3" name="Pet Curse Gloom">
 		<table name="#effectPoints"> -299 -306 -312 </table>
 		<table name="#magicLvl"> 64 66 68 </table>
-		<table name="#mpConsume"> 48 49 51 </table>
-		<table name="#mpInitialConsume"> 12 13 13 </table>
+		<table name="#mpConsume"> 48 50 51 </table>
+		<table name="#mpInitialConsume"> 12 12 13 </table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="MD_DOWN" />

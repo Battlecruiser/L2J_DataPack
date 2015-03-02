@@ -35,7 +35,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2TamedBeastInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.gameserver.network.serverpackets.AbstractNpcInfo;
+import com.l2jserver.gameserver.network.serverpackets.NpcInfo;
 import com.l2jserver.gameserver.util.Util;
 
 /**
@@ -271,7 +271,7 @@ public final class BeastFarm extends AbstractNpcAI
 					break;
 			}
 			nextNpc.setName(name);
-			nextNpc.broadcastPacket(new AbstractNpcInfo.NpcInfo(nextNpc, player));
+			nextNpc.broadcastPacket(new NpcInfo(nextNpc));
 			nextNpc.setRunning();
 			
 			SkillData st = SkillData.getInstance();

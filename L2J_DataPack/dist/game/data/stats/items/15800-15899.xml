@@ -71,6 +71,7 @@
 		<set name="recipe_id" val="967" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
+		<set name="commissionItemType" val="RECIPE" />
 	</item>
 	<item id="15806" type="EtcItem" name="Recipe - Sealed Vesper Shoes (60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
@@ -342,7 +343,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="15829" type="Weapon" name="Periel Sword - Health">
+	<item id="15829" type="Weapon" name="Periel Sword">
 		<set name="icon" val="icon.weapon_periwing_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -351,8 +352,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="171530000" />
@@ -371,7 +372,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15830" type="Weapon" name="Periel Sword - Focus">
+	<item id="15830" type="Weapon" name="Periel Sword">
 		<set name="icon" val="icon.weapon_periwing_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -380,8 +381,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="171530000" />
@@ -400,7 +401,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15831" type="Weapon" name="Periel Sword - Haste">
+	<item id="15831" type="Weapon" name="Periel Sword">
 		<set name="icon" val="icon.weapon_periwing_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -409,8 +410,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="171530000" />
@@ -429,7 +430,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15832" type="Weapon" name="Skull Edge - HP Drain">
+	<item id="15832" type="Weapon" name="Skull Edge">
 		<set name="icon" val="icon.weapon_skulledge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -438,8 +439,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="171530000" />
@@ -458,7 +459,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15833" type="Weapon" name="Skull Edge - Haste">
+	<item id="15833" type="Weapon" name="Skull Edge">
 		<set name="icon" val="icon.weapon_skulledge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -467,8 +468,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="171530000" />
@@ -487,7 +488,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15834" type="Weapon" name="Skull Edge - Critical Damage">
+	<item id="15834" type="Weapon" name="Skull Edge">
 		<set name="icon" val="icon.weapon_skulledge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -496,8 +497,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="171530000" />
@@ -506,6 +507,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3572-3" />
+		<set name="commissionItemType" val="DAGGER" />
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="183" />
@@ -516,7 +518,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15835" type="Weapon" name="Vigwik Axe - Health">
+	<item id="15835" type="Weapon" name="Vigwik Axe">
 		<set name="icon" val="icon.weapon_vigwik_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -525,8 +527,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="171530000" />
@@ -545,7 +547,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15836" type="Weapon" name="Vigwik Axe - HP Regeneration">
+	<item id="15836" type="Weapon" name="Vigwik Axe">
 		<set name="icon" val="icon.weapon_vigwik_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -554,8 +556,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="171530000" />
@@ -574,7 +576,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15837" type="Weapon" name="Vigwik Axe - HP Drain">
+	<item id="15837" type="Weapon" name="Vigwik Axe">
 		<set name="icon" val="icon.weapon_vigwik_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -583,8 +585,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="171530000" />
@@ -603,7 +605,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15838" type="Weapon" name="Devilish Maul - Health">
+	<item id="15838" type="Weapon" name="Devilish Maul">
 		<set name="icon" val="icon.weapon_evildeity_maul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -612,8 +614,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="171530000" />
@@ -632,7 +634,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15839" type="Weapon" name="Devilish Maul - HP Drain">
+	<item id="15839" type="Weapon" name="Devilish Maul">
 		<set name="icon" val="icon.weapon_evildeity_maul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -641,8 +643,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="171530000" />
@@ -661,7 +663,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15840" type="Weapon" name="Devilish Maul - HP Regeneration">
+	<item id="15840" type="Weapon" name="Devilish Maul">
 		<set name="icon" val="icon.weapon_evildeity_maul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -670,8 +672,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="171530000" />
@@ -690,7 +692,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15841" type="Weapon" name="Feather Eye Blade - Health">
+	<item id="15841" type="Weapon" name="Feather Eye Blade">
 		<set name="icon" val="icon.weapon_feathereye_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -699,8 +701,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="171530000" />
@@ -719,7 +721,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15842" type="Weapon" name="Feather Eye Blade - Focus">
+	<item id="15842" type="Weapon" name="Feather Eye Blade">
 		<set name="icon" val="icon.weapon_feathereye_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -728,8 +730,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="171530000" />
@@ -739,6 +741,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3566-4" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<for>
 			<set stat="pAtk" val="505" />
 			<set stat="mAtk" val="183" />
@@ -748,7 +751,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15843" type="Weapon" name="Feather Eye Blade - Haste">
+	<item id="15843" type="Weapon" name="Feather Eye Blade">
 		<set name="icon" val="icon.weapon_feathereye_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -757,8 +760,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="171530000" />
@@ -777,7 +780,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15844" type="Weapon" name="Octo Claw - Health">
+	<item id="15844" type="Weapon" name="Octo Claw">
 		<set name="icon" val="icon.weapon_octoclaw_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -786,8 +789,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="price" val="171530000" />
@@ -806,7 +809,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15845" type="Weapon" name="Octo Claw - Critical Stun">
+	<item id="15845" type="Weapon" name="Octo Claw">
 		<set name="icon" val="icon.weapon_octoclaw_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -815,8 +818,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="price" val="171530000" />
@@ -837,7 +840,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15846" type="Weapon" name="Octo Claw - Focus">
+	<item id="15846" type="Weapon" name="Octo Claw">
 		<set name="icon" val="icon.weapon_octoclaw_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -846,8 +849,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="price" val="171530000" />
@@ -856,6 +859,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3565-4" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
 		<for>
 			<set stat="pAtk" val="505" />
 			<set stat="mAtk" val="183" />
@@ -866,7 +870,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15847" type="Weapon" name="Doubletop Spear - Guidance">
+	<item id="15847" type="Weapon" name="Doubletop Spear">
 		<set name="icon" val="icon.weapon_doubletopa_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -875,8 +879,8 @@
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="price" val="171530000" />
@@ -895,7 +899,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15848" type="Weapon" name="Doubletop Spear - Haste">
+	<item id="15848" type="Weapon" name="Doubletop Spear">
 		<set name="icon" val="icon.weapon_doubletopa_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -904,8 +908,8 @@
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="price" val="171530000" />
@@ -924,7 +928,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15849" type="Weapon" name="Doubletop Spear - Health">
+	<item id="15849" type="Weapon" name="Doubletop Spear">
 		<set name="icon" val="icon.weapon_doubletopa_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -933,8 +937,8 @@
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="price" val="171530000" />
@@ -953,7 +957,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15850" type="Weapon" name="Rising Star - MP Regeneration">
+	<item id="15850" type="Weapon" name="Rising Star">
 		<set name="icon" val="icon.weapon_cuticle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -962,8 +966,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="171530000" />
@@ -983,7 +987,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15851" type="Weapon" name="Rising Star - Mana Up">
+	<item id="15851" type="Weapon" name="Rising Star">
 		<set name="icon" val="icon.weapon_cuticle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -992,8 +996,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="171530000" />
@@ -1013,7 +1017,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15852" type="Weapon" name="Rising Star - Acumen">
+	<item id="15852" type="Weapon" name="Rising Star">
 		<set name="icon" val="icon.weapon_cuticle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1022,8 +1026,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="171530000" />
@@ -1033,6 +1037,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3047-3" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<for>
 			<set stat="pAtk" val="332" />
 			<set stat="mAtk" val="244" />
@@ -1043,7 +1048,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15853" type="Weapon" name="Black Visage - MP Regeneration">
+	<item id="15853" type="Weapon" name="Black Visage">
 		<set name="icon" val="icon.weapon_blackvisage_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1052,8 +1057,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="171530000" />
@@ -1073,7 +1078,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15854" type="Weapon" name="Black Visage - Magic Hold">
+	<item id="15854" type="Weapon" name="Black Visage">
 		<set name="icon" val="icon.weapon_blackvisage_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1082,8 +1087,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="171530000" />
@@ -1105,7 +1110,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15855" type="Weapon" name="Black Visage - Empower">
+	<item id="15855" type="Weapon" name="Black Visage">
 		<set name="icon" val="icon.weapon_blackvisage_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1114,8 +1119,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="171530000" />
@@ -1135,7 +1140,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15856" type="Weapon" name="Veniplant Sword - Acumen">
+	<item id="15856" type="Weapon" name="Veniplant Sword">
 		<set name="icon" val="icon.weapon_veniplant_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1144,8 +1149,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="171530000" />
@@ -1155,6 +1160,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3047-3" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<for>
 			<set stat="pAtk" val="332" />
 			<set stat="mAtk" val="244" />
@@ -1164,7 +1170,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15857" type="Weapon" name="Veniplant Sword - Magic Hold">
+	<item id="15857" type="Weapon" name="Veniplant Sword">
 		<set name="icon" val="icon.weapon_veniplant_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1173,8 +1179,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="171530000" />
@@ -1195,7 +1201,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15858" type="Weapon" name="Veniplant Sword - Mana Up">
+	<item id="15858" type="Weapon" name="Veniplant Sword">
 		<set name="icon" val="icon.weapon_veniplant_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1204,8 +1210,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="171530000" />
@@ -1224,7 +1230,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15859" type="Weapon" name="Skull Carnium Bow - Focus">
+	<item id="15859" type="Weapon" name="Skull Carnium Bow">
 		<set name="icon" val="icon.weapon_skullgrove_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1233,8 +1239,8 @@
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="171530000" />
@@ -1246,6 +1252,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="item_skill" val="3567-4" />
+		<set name="commissionItemType" val="BOW" />
 		<for>
 			<set stat="pAtk" val="768" />
 			<set stat="mAtk" val="183" />
@@ -1256,7 +1263,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15860" type="Weapon" name="Skull Carnium Bow - Critical Slow">
+	<item id="15860" type="Weapon" name="Skull Carnium Bow">
 		<set name="icon" val="icon.weapon_skullgrove_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1265,8 +1272,8 @@
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="171530000" />
@@ -1290,7 +1297,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15861" type="Weapon" name="Skull Carnium Bow - Cheap Shot">
+	<item id="15861" type="Weapon" name="Skull Carnium Bow">
 		<set name="icon" val="icon.weapon_skullgrove_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1299,8 +1306,8 @@
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="171530000" />
@@ -1322,7 +1329,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15862" type="Weapon" name="Gemtail Rapier - Health">
+	<item id="15862" type="Weapon" name="Gemtail Rapier">
 		<set name="icon" val="icon.weapon_gemtail_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1331,8 +1338,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1280" />
 		<set name="price" val="171530000" />
@@ -1357,7 +1364,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15863" type="Weapon" name="Gemtail Rapier - Focus">
+	<item id="15863" type="Weapon" name="Gemtail Rapier">
 		<set name="icon" val="icon.weapon_gemtail_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1366,8 +1373,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1280" />
 		<set name="price" val="171530000" />
@@ -1392,7 +1399,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15864" type="Weapon" name="Gemtail Rapier - Haste">
+	<item id="15864" type="Weapon" name="Gemtail Rapier">
 		<set name="icon" val="icon.weapon_gemtail_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1401,8 +1408,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1280" />
 		<set name="price" val="171530000" />
@@ -1427,7 +1434,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15865" type="Weapon" name="Finale Blade - Health">
+	<item id="15865" type="Weapon" name="Finale Blade">
 		<set name="icon" val="icon.weapon_findragon blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1436,8 +1443,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1800" />
 		<set name="price" val="171530000" />
@@ -1460,7 +1467,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15866" type="Weapon" name="Finale Blade - Focus">
+	<item id="15866" type="Weapon" name="Finale Blade">
 		<set name="icon" val="icon.weapon_findragon blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1469,8 +1476,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1800" />
 		<set name="price" val="171530000" />
@@ -1493,7 +1500,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15867" type="Weapon" name="Finale Blade - Haste">
+	<item id="15867" type="Weapon" name="Finale Blade">
 		<set name="icon" val="icon.weapon_findragon blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1502,8 +1509,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1800" />
 		<set name="price" val="171530000" />
@@ -1526,7 +1533,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15868" type="Weapon" name="Dominion Crossbow - Focus">
+	<item id="15868" type="Weapon" name="Dominion Crossbow">
 		<set name="icon" val="icon.weapon_rudecutter_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1535,8 +1542,8 @@
 		<set name="attack_range" val="400" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="price" val="171530000" />
@@ -1560,7 +1567,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15869" type="Weapon" name="Dominion Crossbow - Critical Slow">
+	<item id="15869" type="Weapon" name="Dominion Crossbow">
 		<set name="icon" val="icon.weapon_rudecutter_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1569,8 +1576,8 @@
 		<set name="attack_range" val="400" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="price" val="171530000" />
@@ -1596,7 +1603,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15870" type="Weapon" name="Dominion Crossbow - Cheap Shot">
+	<item id="15870" type="Weapon" name="Dominion Crossbow">
 		<set name="icon" val="icon.weapon_rudecutter_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1605,8 +1612,8 @@
 		<set name="attack_range" val="400" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8233" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="5488" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="price" val="171530000" />
@@ -1630,7 +1637,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15871" type="Weapon" name="Eternal Core Sword - Focus">
+	<item id="15871" type="Weapon" name="Eternal Core Sword">
 		<set name="icon" val="icon.weapon_incessantcore_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1639,8 +1646,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="9872" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="6581" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="205668000" />
@@ -1659,7 +1666,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15872" type="Weapon" name="Eternal Core Sword - Haste">
+	<item id="15872" type="Weapon" name="Eternal Core Sword">
 		<set name="icon" val="icon.weapon_incessantcore_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1668,8 +1675,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="9872" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="6581" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="205668000" />
@@ -1688,7 +1695,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15873" type="Weapon" name="Eternal Core Sword - Health">
+	<item id="15873" type="Weapon" name="Eternal Core Sword">
 		<set name="icon" val="icon.weapon_incessantcore_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1697,8 +1704,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="9872" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="6581" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="205668000" />
@@ -1717,7 +1724,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15874" type="Weapon" name="Mamba Edge - Haste">
+	<item id="15874" type="Weapon" name="Mamba Edge">
 		<set name="icon" val="icon.weapon_mambaedge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1726,8 +1733,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="9872" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="6581" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="205668000" />
@@ -1746,7 +1753,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15875" type="Weapon" name="Mamba Edge - Critical Damage">
+	<item id="15875" type="Weapon" name="Mamba Edge">
 		<set name="icon" val="icon.weapon_mambaedge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1755,8 +1762,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="9872" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="6581" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="205668000" />
@@ -1765,6 +1772,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3572-3" />
+		<set name="commissionItemType" val="DAGGER" />
 		<for>
 			<set stat="pAtk" val="382" />
 			<set stat="mAtk" val="192" />
@@ -1775,7 +1783,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15876" type="Weapon" name="Mamba Edge - HP Drain">
+	<item id="15876" type="Weapon" name="Mamba Edge">
 		<set name="icon" val="icon.weapon_mambaedge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1784,8 +1792,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="9872" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="6581" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="205668000" />
@@ -1804,7 +1812,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15877" type="Weapon" name="Eversor Mace - HP Regeneration">
+	<item id="15877" type="Weapon" name="Eversor Mace">
 		<set name="icon" val="icon.weapon_expowder_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1813,8 +1821,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="9872" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="6581" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="205668000" />
@@ -1833,7 +1841,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15878" type="Weapon" name="Eversor Mace - HP Drain">
+	<item id="15878" type="Weapon" name="Eversor Mace">
 		<set name="icon" val="icon.weapon_expowder_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1842,8 +1850,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="9872" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="6581" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="205668000" />
@@ -1862,7 +1870,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15879" type="Weapon" name="Eversor Mace - Health">
+	<item id="15879" type="Weapon" name="Eversor Mace">
 		<set name="icon" val="icon.weapon_expowder_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1871,8 +1879,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="9872" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="6581" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="205668000" />
@@ -1891,7 +1899,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15880" type="Weapon" name="Contristo Hammer - HP Drain">
+	<item id="15880" type="Weapon" name="Contristo Hammer">
 		<set name="icon" val="icon.weapon_pereztear_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1900,8 +1908,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="9872" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="6581" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="205668000" />
@@ -1920,7 +1928,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15881" type="Weapon" name="Contristo Hammer - HP Regeneration">
+	<item id="15881" type="Weapon" name="Contristo Hammer">
 		<set name="icon" val="icon.weapon_pereztear_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1929,8 +1937,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="9872" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="6581" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="205668000" />
@@ -1949,7 +1957,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15882" type="Weapon" name="Contristo Hammer - Health">
+	<item id="15882" type="Weapon" name="Contristo Hammer">
 		<set name="icon" val="icon.weapon_pereztear_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1958,8 +1966,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="9872" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="6581" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="205668000" />
@@ -1978,7 +1986,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15883" type="Weapon" name="Lava Saw - Focus">
+	<item id="15883" type="Weapon" name="Lava Saw">
 		<set name="icon" val="icon.weapon_lavamond_saw_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1987,8 +1995,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="9872" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="6581" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="205668000" />
@@ -2007,7 +2015,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15884" type="Weapon" name="Lava Saw - Haste">
+	<item id="15884" type="Weapon" name="Lava Saw">
 		<set name="icon" val="icon.weapon_lavamond_saw_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2016,8 +2024,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="9872" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="6581" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="205668000" />
@@ -2036,7 +2044,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15885" type="Weapon" name="Lava Saw - Health">
+	<item id="15885" type="Weapon" name="Lava Saw">
 		<set name="icon" val="icon.weapon_lavamond_saw_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2045,8 +2053,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="9872" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="6581" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="205668000" />
@@ -2065,7 +2073,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15886" type="Weapon" name="Jade Claw - Critical Stun">
+	<item id="15886" type="Weapon" name="Jade Claw">
 		<set name="icon" val="icon.weapon_jademice_claw_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2074,8 +2082,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="9872" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="6581" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="price" val="205668000" />
@@ -2096,7 +2104,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15887" type="Weapon" name="Jade Claw - Focus">
+	<item id="15887" type="Weapon" name="Jade Claw">
 		<set name="icon" val="icon.weapon_jademice_claw_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2105,8 +2113,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="9872" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="6581" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="price" val="205668000" />
@@ -2125,7 +2133,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15888" type="Weapon" name="Jade Claw - Health">
+	<item id="15888" type="Weapon" name="Jade Claw">
 		<set name="icon" val="icon.weapon_jademice_claw_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2134,8 +2142,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="9872" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="6581" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="price" val="205668000" />
@@ -2154,7 +2162,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15889" type="Weapon" name="Demitelum - Haste">
+	<item id="15889" type="Weapon" name="Demitelum">
 		<set name="icon" val="icon.weapon_ghostcleaner_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2163,8 +2171,8 @@
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="9872" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="6581" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="price" val="205668000" />
@@ -2183,7 +2191,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15890" type="Weapon" name="Demitelum - Health">
+	<item id="15890" type="Weapon" name="Demitelum">
 		<set name="icon" val="icon.weapon_ghostcleaner_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2192,8 +2200,8 @@
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="9872" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="6581" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="price" val="205668000" />
@@ -2212,7 +2220,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15891" type="Weapon" name="Demitelum - Guidance">
+	<item id="15891" type="Weapon" name="Demitelum">
 		<set name="icon" val="icon.weapon_ghostcleaner_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2221,8 +2229,8 @@
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="9872" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="6581" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="price" val="205668000" />
@@ -2241,7 +2249,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15892" type="Weapon" name="Sacredium - Mana Up">
+	<item id="15892" type="Weapon" name="Sacredium">
 		<set name="icon" val="icon.weapon_sacredumors_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2250,8 +2258,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="9872" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="6581" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="205668000" />
@@ -2271,7 +2279,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15893" type="Weapon" name="Sacredium - Acumen">
+	<item id="15893" type="Weapon" name="Sacredium">
 		<set name="icon" val="icon.weapon_sacredumors_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2280,8 +2288,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="9872" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="6581" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="205668000" />
@@ -2301,7 +2309,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15894" type="Weapon" name="Sacredium - MP Regeneration">
+	<item id="15894" type="Weapon" name="Sacredium">
 		<set name="icon" val="icon.weapon_sacredumors_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2310,8 +2318,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="9872" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="6581" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="205668000" />
@@ -2331,7 +2339,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15895" type="Weapon" name="Cyclic Cane - Magic Hold">
+	<item id="15895" type="Weapon" name="Cyclic Cane">
 		<set name="icon" val="icon.weapon_psyskilt_cane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2340,8 +2348,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="9872" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="6581" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="205668000" />
@@ -2363,7 +2371,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15896" type="Weapon" name="Cyclic Cane - Empower">
+	<item id="15896" type="Weapon" name="Cyclic Cane">
 		<set name="icon" val="icon.weapon_psyskilt_cane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2372,8 +2380,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="9872" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="6581" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="205668000" />
@@ -2393,7 +2401,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15897" type="Weapon" name="Cyclic Cane - MP Regeneration">
+	<item id="15897" type="Weapon" name="Cyclic Cane">
 		<set name="icon" val="icon.weapon_psyskilt_cane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2402,8 +2410,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="9872" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="6581" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="205668000" />
@@ -2423,7 +2431,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15898" type="Weapon" name="Archangel Sword - Magic Hold">
+	<item id="15898" type="Weapon" name="Archangel Sword">
 		<set name="icon" val="icon.weapon_archangel_sword_i001" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2432,8 +2440,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="9872" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="6581" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="205668000" />
@@ -2454,7 +2462,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="15899" type="Weapon" name="Archangel Sword - Mana Up">
+	<item id="15899" type="Weapon" name="Archangel Sword">
 		<set name="icon" val="icon.weapon_archangel_sword_i001" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2463,8 +2471,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="9872" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="6581" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="205668000" />

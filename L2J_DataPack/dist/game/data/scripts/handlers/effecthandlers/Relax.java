@@ -73,7 +73,7 @@ public final class Relax extends AbstractEffect
 		{
 			if (info.getSkill().isToggle())
 			{
-				info.getEffected().sendPacket(SystemMessageId.SKILL_DEACTIVATED_HP_FULL);
+				info.getEffected().sendPacket(SystemMessageId.THAT_SKILL_HAS_BEEN_DE_ACTIVATED_AS_HP_WAS_FULLY_RECOVERED);
 				return false;
 			}
 		}
@@ -83,7 +83,7 @@ public final class Relax extends AbstractEffect
 		{
 			if (info.getSkill().isToggle())
 			{
-				info.getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
+				info.getEffected().sendPacket(SystemMessageId.YOUR_SKILL_WAS_DEACTIVATED_DUE_TO_LACK_OF_MP);
 				return false;
 			}
 		}

@@ -327,7 +327,7 @@ public final class Venom extends AbstractNpcAI
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		updateStatus(DEAD);
-		broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.ITS_NOT_OVER_YET_IT_WONT_BE_OVER_LIKE_THIS_NEVER);
+		broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.IT_S_NOT_OVER_YET_IT_WON_T_BE_OVER_LIKE_THIS_NEVER);
 		if (!CastleManager.getInstance().getCastleById(CASTLE).getSiege().isInProgress())
 		{
 			L2Npc cube = addSpawn(TELEPORT_CUBE, CUBE, false, 0);

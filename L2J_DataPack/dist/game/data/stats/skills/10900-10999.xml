@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="10903" levels="4" name="Hawk Eye">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 minutes when a bow or crossbow is equipped, P. Atk. + 5%, Skill Power + 5%, and received M. Critical Damage - 5%. -->
+		<table name="#mpConsumes"> 62 69 76 83 </table>
+		<set name="icon" val="icon.skill11872" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+	</skill>
+	<skill id="10904" levels="4" name="Superior Skill Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Skill power + 5%. -->
+		<set name="icon" val="icon.skill11874" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="10905" levels="3" name="Fatal Arrow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 29176 Power added to P. Atk. Damage increases as your HP decreases. Requires a bow. Over-hit. -->
+		<table name="#mpConsumes"> 93 96 99 </table>
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="1800" />
+		<set name="coolTime" val="250" />
+		<set name="reuseDelay" val="30000" />
+	</skill>
+	<skill id="10950" levels="4" name="Vengeful Sniper">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 minutes when a bow or crossbow is equipped, P. Atk. + 5%, PvP damage + 5%, received magic skill damage during PvP - 5%. -->
+		<table name="#mpConsumes"> 62 69 76 83 </table>
+		<set name="icon" val="icon.skill11873" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+	</skill>
+	<skill id="10951" levels="4" name="Superior Instinct Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 5%, and P. Atk. + 5% when equipped with a crossbow. -->
+		<set name="icon" val="icon.skill10951" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="10997" levels="1" name="Archer - Individual Passive">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0217" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="10998" levels="1" name="Archer - Individual">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Atk. Spd. + 30% for 5 seconds. -->
+		<set name="icon" val="icon.skill1543" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="4" />
+	</skill>
+	<skill id="10999" levels="1" name="Heavy Hit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks long-range enemies. Hurls arrows like rain near target to inflict damage with 19158 damage added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. -->
+		<set name="icon" val="icon.skill10317" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="700" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="1800" />
+		<set name="reuseDelay" val="10000" />
+	</skill>
+</list>

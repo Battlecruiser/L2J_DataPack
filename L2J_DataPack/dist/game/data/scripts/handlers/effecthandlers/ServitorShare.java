@@ -21,6 +21,7 @@ package handlers.effecthandlers;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
@@ -73,7 +74,8 @@ public final class ServitorShare extends AbstractEffect
 	@Override
 	public void onExit(BuffInfo info)
 	{
-		final L2Character effected = info.getEffected().isPlayer() ? info.getEffected().getSummon() : info.getEffected().getActingPlayer();
+		final L2Character effected = info.getEffected().isSummon() ? ((L2Summon) info.getEffected()).getOwner() : info.getEffected();
+		
 		if (effected != null)
 		{
 			ThreadPoolManager.getInstance().scheduleEffect(new ScheduledEffectExitTask(effected, info.getSkill().getId()), 100);

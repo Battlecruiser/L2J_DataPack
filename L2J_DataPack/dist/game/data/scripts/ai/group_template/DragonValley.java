@@ -89,42 +89,42 @@ public final class DragonValley extends AbstractNpcAI
 	private static final int CLASS_LVL = 3;
 	private static final EnumMap<ClassId, Double> CLASS_POINTS = new EnumMap<>(ClassId.class);
 	{
-		CLASS_POINTS.put(ClassId.adventurer, 0.2);
-		CLASS_POINTS.put(ClassId.arcanaLord, 1.5);
-		CLASS_POINTS.put(ClassId.archmage, 0.3);
-		CLASS_POINTS.put(ClassId.cardinal, -0.6);
-		CLASS_POINTS.put(ClassId.dominator, 0.2);
-		CLASS_POINTS.put(ClassId.doombringer, 0.2);
-		CLASS_POINTS.put(ClassId.doomcryer, 0.1);
-		CLASS_POINTS.put(ClassId.dreadnought, 0.7);
-		CLASS_POINTS.put(ClassId.duelist, 0.2);
-		CLASS_POINTS.put(ClassId.elementalMaster, 1.4);
-		CLASS_POINTS.put(ClassId.evaSaint, -0.6);
-		CLASS_POINTS.put(ClassId.evaTemplar, 0.8);
-		CLASS_POINTS.put(ClassId.femaleSoulhound, 0.4);
-		CLASS_POINTS.put(ClassId.fortuneSeeker, 0.9);
-		CLASS_POINTS.put(ClassId.ghostHunter, 0.2);
-		CLASS_POINTS.put(ClassId.ghostSentinel, 0.2);
-		CLASS_POINTS.put(ClassId.grandKhavatari, 0.2);
-		CLASS_POINTS.put(ClassId.hellKnight, 0.6);
-		CLASS_POINTS.put(ClassId.hierophant, 0.0);
-		CLASS_POINTS.put(ClassId.judicator, 0.1);
-		CLASS_POINTS.put(ClassId.moonlightSentinel, 0.2);
-		CLASS_POINTS.put(ClassId.maestro, 0.7);
-		CLASS_POINTS.put(ClassId.maleSoulhound, 0.4);
-		CLASS_POINTS.put(ClassId.mysticMuse, 0.3);
-		CLASS_POINTS.put(ClassId.phoenixKnight, 0.6);
-		CLASS_POINTS.put(ClassId.sagittarius, 0.2);
-		CLASS_POINTS.put(ClassId.shillienSaint, -0.6);
-		CLASS_POINTS.put(ClassId.shillienTemplar, 0.8);
-		CLASS_POINTS.put(ClassId.soultaker, 0.3);
-		CLASS_POINTS.put(ClassId.spectralDancer, 0.4);
-		CLASS_POINTS.put(ClassId.spectralMaster, 1.4);
-		CLASS_POINTS.put(ClassId.stormScreamer, 0.3);
-		CLASS_POINTS.put(ClassId.swordMuse, 0.4);
-		CLASS_POINTS.put(ClassId.titan, 0.3);
-		CLASS_POINTS.put(ClassId.trickster, 0.5);
-		CLASS_POINTS.put(ClassId.windRider, 0.2);
+		CLASS_POINTS.put(ClassId.ADVENTURER, 0.2);
+		CLASS_POINTS.put(ClassId.ARCANA_LORD, 1.5);
+		CLASS_POINTS.put(ClassId.ARCHMAGE, 0.3);
+		CLASS_POINTS.put(ClassId.CARDINAL, -0.6);
+		CLASS_POINTS.put(ClassId.DOMINATOR, 0.2);
+		CLASS_POINTS.put(ClassId.DOOMBRINGER, 0.2);
+		CLASS_POINTS.put(ClassId.DOOMCRYER, 0.1);
+		CLASS_POINTS.put(ClassId.DREADNOUGHT, 0.7);
+		CLASS_POINTS.put(ClassId.DUELIST, 0.2);
+		CLASS_POINTS.put(ClassId.ELEMENTAL_MASTER, 1.4);
+		CLASS_POINTS.put(ClassId.EVA_SAINT, -0.6);
+		CLASS_POINTS.put(ClassId.EVA_TEMPLAR, 0.8);
+		CLASS_POINTS.put(ClassId.FEMALE_SOUL_HOUND, 0.4);
+		CLASS_POINTS.put(ClassId.FORTUNE_SEEKER, 0.9);
+		CLASS_POINTS.put(ClassId.GHOST_HUNTER, 0.2);
+		CLASS_POINTS.put(ClassId.GHOST_SENTINEL, 0.2);
+		CLASS_POINTS.put(ClassId.GRAND_KHAVATARI, 0.2);
+		CLASS_POINTS.put(ClassId.HELL_KNIGHT, 0.6);
+		CLASS_POINTS.put(ClassId.HIEROPHANT, 0.0);
+		CLASS_POINTS.put(ClassId.JUDICATOR, 0.1);
+		CLASS_POINTS.put(ClassId.MOONLIGHT_SENTINEL, 0.2);
+		CLASS_POINTS.put(ClassId.MAESTRO, 0.7);
+		CLASS_POINTS.put(ClassId.MALE_SOUL_HOUND, 0.4);
+		CLASS_POINTS.put(ClassId.MYSTIC_MUSE, 0.3);
+		CLASS_POINTS.put(ClassId.PHOENIX_KNIGHT, 0.6);
+		CLASS_POINTS.put(ClassId.SAGITTARIUS, 0.2);
+		CLASS_POINTS.put(ClassId.SHILLIEN_SAINT, -0.6);
+		CLASS_POINTS.put(ClassId.SHILLIEN_TEMPLAR, 0.8);
+		CLASS_POINTS.put(ClassId.SOULTAKER, 0.3);
+		CLASS_POINTS.put(ClassId.SPECTRAL_DANCER, 0.4);
+		CLASS_POINTS.put(ClassId.SPECTRAL_MASTER, 1.4);
+		CLASS_POINTS.put(ClassId.STORM_SCREAMER, 0.3);
+		CLASS_POINTS.put(ClassId.SWORD_MUSE, 0.4);
+		CLASS_POINTS.put(ClassId.TITAN, 0.3);
+		CLASS_POINTS.put(ClassId.TRICKSTER, 0.5);
+		CLASS_POINTS.put(ClassId.WIND_RIDER, 0.2);
 	}
 	
 	private DragonValley()
@@ -174,7 +174,7 @@ public final class DragonValley extends AbstractNpcAI
 				final int rnd = getRandom(3, 5);
 				for (int i = 0; i < rnd; i++)
 				{
-					final L2Playable playable = isSummon ? attacker.getSummon() : attacker;
+					final L2Playable playable = isSummon ? attacker.getServitors().values().stream().findFirst().orElse(attacker.getPet()) : attacker;
 					final L2Npc minion = addSpawn(DRAKOS_ASSASSIN, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), true, 0, true);
 					addAttackPlayerDesire(minion, playable);
 				}
@@ -201,7 +201,6 @@ public final class DragonValley extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		((L2Attackable) npc).setOnKillDelay(0);
 		if (npc.getId() == EXPLODING_ORC_GHOST)
 		{
 			startQuestTimer("SELF_DESTRUCTION", 3000, npc, null);
@@ -277,7 +276,7 @@ public final class DragonValley extends AbstractNpcAI
 		if ((npc.getScriptValue() < 2) && (getRandom(100) < chance))
 		{
 			int val = npc.getScriptValue();
-			final L2Playable attacker = isSummon ? player.getSummon() : player;
+			final L2Playable attacker = isSummon ? player.getServitors().values().stream().findFirst().orElse(player.getPet()) : player;
 			final L2Npc ghost1 = addSpawn(EXPLODING_ORC_GHOST, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
 			ghost1.getVariables().set("playable", attacker);
 			addAttackPlayerDesire(ghost1, attacker);

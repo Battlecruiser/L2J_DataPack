@@ -27,13 +27,17 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.data.sql.impl.CrestTable;
 import com.l2jserver.gameserver.data.sql.impl.TeleportLocationTable;
+import com.l2jserver.gameserver.data.xml.impl.AbilityPointsData;
 import com.l2jserver.gameserver.data.xml.impl.AdminData;
+import com.l2jserver.gameserver.data.xml.impl.AppearanceItemData;
 import com.l2jserver.gameserver.data.xml.impl.BuyListData;
 import com.l2jserver.gameserver.data.xml.impl.DoorData;
 import com.l2jserver.gameserver.data.xml.impl.EnchantItemData;
 import com.l2jserver.gameserver.data.xml.impl.EnchantItemGroupsData;
+import com.l2jserver.gameserver.data.xml.impl.ItemCrystalizationData;
 import com.l2jserver.gameserver.data.xml.impl.MultisellData;
 import com.l2jserver.gameserver.data.xml.impl.NpcData;
+import com.l2jserver.gameserver.data.xml.impl.TeleportersData;
 import com.l2jserver.gameserver.data.xml.impl.TransformData;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.datatables.SkillData;
@@ -165,6 +169,7 @@ public class AdminReload implements IAdminCommandHandler
 				case "teleport":
 				{
 					TeleportLocationTable.getInstance().reloadAll();
+					TeleportersData.getInstance().load();
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Teleports.");
 					break;
 				}
@@ -245,6 +250,24 @@ public class AdminReload implements IAdminCommandHandler
 				{
 					TransformData.getInstance().load();
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded transform data.");
+					break;
+				}
+				case "crystalizable":
+				{
+					ItemCrystalizationData.getInstance().load();
+					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded item crystalization data.");
+					break;
+				}
+				case "ability":
+				{
+					AbilityPointsData.getInstance().load();
+					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded ability points data.");
+					break;
+				}
+				case "appearance":
+				{
+					AppearanceItemData.getInstance().load();
+					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded appearance item data.");
 					break;
 				}
 				default:

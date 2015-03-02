@@ -40,8 +40,10 @@ import handlers.admincommandhandlers.AdminBBS;
 import handlers.admincommandhandlers.AdminBuffs;
 import handlers.admincommandhandlers.AdminCHSiege;
 import handlers.admincommandhandlers.AdminCamera;
+import handlers.admincommandhandlers.AdminCastle;
 import handlers.admincommandhandlers.AdminChangeAccessLevel;
 import handlers.admincommandhandlers.AdminClan;
+import handlers.admincommandhandlers.AdminClanHall;
 import handlers.admincommandhandlers.AdminCreateItem;
 import handlers.admincommandhandlers.AdminCursedWeapons;
 import handlers.admincommandhandlers.AdminDebug;
@@ -71,7 +73,6 @@ import handlers.admincommandhandlers.AdminKick;
 import handlers.admincommandhandlers.AdminKill;
 import handlers.admincommandhandlers.AdminLevel;
 import handlers.admincommandhandlers.AdminLogin;
-import handlers.admincommandhandlers.AdminMammon;
 import handlers.admincommandhandlers.AdminManor;
 import handlers.admincommandhandlers.AdminMenu;
 import handlers.admincommandhandlers.AdminMessages;
@@ -83,6 +84,7 @@ import handlers.admincommandhandlers.AdminPcCondOverride;
 import handlers.admincommandhandlers.AdminPetition;
 import handlers.admincommandhandlers.AdminPledge;
 import handlers.admincommandhandlers.AdminPolymorph;
+import handlers.admincommandhandlers.AdminPrimePoints;
 import handlers.admincommandhandlers.AdminPunishment;
 import handlers.admincommandhandlers.AdminQuest;
 import handlers.admincommandhandlers.AdminReload;
@@ -93,14 +95,12 @@ import handlers.admincommandhandlers.AdminScan;
 import handlers.admincommandhandlers.AdminShop;
 import handlers.admincommandhandlers.AdminShowQuests;
 import handlers.admincommandhandlers.AdminShutdown;
-import handlers.admincommandhandlers.AdminSiege;
 import handlers.admincommandhandlers.AdminSkill;
 import handlers.admincommandhandlers.AdminSpawn;
 import handlers.admincommandhandlers.AdminSummon;
 import handlers.admincommandhandlers.AdminTarget;
 import handlers.admincommandhandlers.AdminTargetSay;
 import handlers.admincommandhandlers.AdminTeleport;
-import handlers.admincommandhandlers.AdminTerritoryWar;
 import handlers.admincommandhandlers.AdminTest;
 import handlers.admincommandhandlers.AdminTvTEvent;
 import handlers.admincommandhandlers.AdminUnblockIp;
@@ -112,7 +112,6 @@ import handlers.bypasshandlers.BuyShadowItem;
 import handlers.bypasshandlers.ChatLink;
 import handlers.bypasshandlers.ClanWarehouse;
 import handlers.bypasshandlers.EventEngine;
-import handlers.bypasshandlers.Festival;
 import handlers.bypasshandlers.Freight;
 import handlers.bypasshandlers.ItemAuctionLink;
 import handlers.bypasshandlers.Link;
@@ -129,17 +128,13 @@ import handlers.bypasshandlers.QuestList;
 import handlers.bypasshandlers.ReceivePremium;
 import handlers.bypasshandlers.ReleaseAttribute;
 import handlers.bypasshandlers.RentPet;
-import handlers.bypasshandlers.Rift;
 import handlers.bypasshandlers.SkillList;
-import handlers.bypasshandlers.SupportBlessing;
-import handlers.bypasshandlers.SupportMagic;
 import handlers.bypasshandlers.TerritoryStatus;
 import handlers.bypasshandlers.TutorialClose;
 import handlers.bypasshandlers.VoiceCommand;
 import handlers.bypasshandlers.Wear;
 import handlers.chathandlers.ChatAll;
 import handlers.chathandlers.ChatAlliance;
-import handlers.chathandlers.ChatBattlefield;
 import handlers.chathandlers.ChatClan;
 import handlers.chathandlers.ChatHeroVoice;
 import handlers.chathandlers.ChatParty;
@@ -150,6 +145,7 @@ import handlers.chathandlers.ChatPetition;
 import handlers.chathandlers.ChatShout;
 import handlers.chathandlers.ChatTell;
 import handlers.chathandlers.ChatTrade;
+import handlers.chathandlers.ChatWorld;
 import handlers.communityboard.ClanBoard;
 import handlers.communityboard.FavoriteBoard;
 import handlers.communityboard.FriendsBoard;
@@ -158,6 +154,7 @@ import handlers.communityboard.HomepageBoard;
 import handlers.communityboard.MailBoard;
 import handlers.communityboard.MemoBoard;
 import handlers.communityboard.RegionBoard;
+import handlers.itemhandlers.Appearance;
 import handlers.itemhandlers.BeastSoulShot;
 import handlers.itemhandlers.BeastSpiritShot;
 import handlers.itemhandlers.BlessedSpiritShot;
@@ -165,7 +162,6 @@ import handlers.itemhandlers.Book;
 import handlers.itemhandlers.Bypass;
 import handlers.itemhandlers.Calculator;
 import handlers.itemhandlers.CharmOfCourage;
-import handlers.itemhandlers.Disguise;
 import handlers.itemhandlers.Elixir;
 import handlers.itemhandlers.EnchantAttribute;
 import handlers.itemhandlers.EnchantScrolls;
@@ -183,7 +179,6 @@ import handlers.itemhandlers.PetFood;
 import handlers.itemhandlers.Recipes;
 import handlers.itemhandlers.RollingDice;
 import handlers.itemhandlers.Seed;
-import handlers.itemhandlers.SevenSignsRecord;
 import handlers.itemhandlers.SoulShots;
 import handlers.itemhandlers.SpecialXMas;
 import handlers.itemhandlers.SpiritShot;
@@ -212,6 +207,7 @@ import handlers.targethandlers.FrontAura;
 import handlers.targethandlers.Ground;
 import handlers.targethandlers.Holy;
 import handlers.targethandlers.One;
+import handlers.targethandlers.OneFriendly;
 import handlers.targethandlers.OwnerPet;
 import handlers.targethandlers.Party;
 import handlers.targethandlers.PartyClan;
@@ -336,6 +332,7 @@ public class MasterHandler
 			AdminChangeAccessLevel.class,
 			AdminCHSiege.class,
 			AdminClan.class,
+			AdminCastle.class,
 			AdminPcCondOverride.class,
 			AdminCreateItem.class,
 			AdminCursedWeapons.class,
@@ -366,7 +363,6 @@ public class MasterHandler
 			AdminKill.class,
 			AdminLevel.class,
 			AdminLogin.class,
-			AdminMammon.class,
 			AdminManor.class,
 			AdminMenu.class,
 			AdminMessages.class,
@@ -377,6 +373,7 @@ public class MasterHandler
 			AdminPForge.class,
 			AdminPledge.class,
 			AdminPolymorph.class,
+			AdminPrimePoints.class,
 			AdminPunishment.class,
 			AdminQuest.class,
 			AdminReload.class,
@@ -387,14 +384,13 @@ public class MasterHandler
 			AdminShop.class,
 			AdminShowQuests.class,
 			AdminShutdown.class,
-			AdminSiege.class,
+			AdminClanHall.class,
 			AdminSkill.class,
 			AdminSpawn.class,
 			AdminSummon.class,
 			AdminTarget.class,
 			AdminTargetSay.class,
 			AdminTeleport.class,
-			AdminTerritoryWar.class,
 			AdminTest.class,
 			AdminTvTEvent.class,
 			AdminUnblockIp.class,
@@ -409,7 +405,6 @@ public class MasterHandler
 			ChatLink.class,
 			ClanWarehouse.class,
 			EventEngine.class,
-			Festival.class,
 			Freight.class,
 			ItemAuctionLink.class,
 			Link.class,
@@ -426,10 +421,7 @@ public class MasterHandler
 			ReceivePremium.class,
 			ReleaseAttribute.class,
 			RentPet.class,
-			Rift.class,
 			SkillList.class,
-			SupportBlessing.class,
-			SupportMagic.class,
 			TerritoryStatus.class,
 			TutorialClose.class,
 			VoiceCommand.class,
@@ -439,7 +431,6 @@ public class MasterHandler
 			// Chat Handlers
 			ChatAll.class,
 			ChatAlliance.class,
-			ChatBattlefield.class,
 			ChatClan.class,
 			ChatHeroVoice.class,
 			ChatParty.class,
@@ -450,6 +441,7 @@ public class MasterHandler
 			ChatShout.class,
 			ChatTell.class,
 			ChatTrade.class,
+			ChatWorld.class,
 		},
 		{
 			// Community Board
@@ -464,6 +456,7 @@ public class MasterHandler
 		},
 		{
 			// Item Handlers
+			Appearance.class,
 			BeastSoulShot.class,
 			BeastSpiritShot.class,
 			BlessedSpiritShot.class,
@@ -471,7 +464,6 @@ public class MasterHandler
 			Bypass.class,
 			Calculator.class,
 			CharmOfCourage.class,
-			Disguise.class,
 			Elixir.class,
 			EnchantAttribute.class,
 			EnchantScrolls.class,
@@ -489,7 +481,6 @@ public class MasterHandler
 			Recipes.class,
 			RollingDice.class,
 			Seed.class,
-			SevenSignsRecord.class,
 			SoulShots.class,
 			SpecialXMas.class,
 			SpiritShot.class,
@@ -555,6 +546,7 @@ public class MasterHandler
 			Ground.class,
 			Holy.class,
 			One.class,
+			OneFriendly.class,
 			OwnerPet.class,
 			Party.class,
 			PartyClan.class,

@@ -47,14 +47,14 @@ public class Seed implements IItemHandler
 		}
 		else if (!playable.isPlayer())
 		{
-			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
+			playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 			return false;
 		}
 		
 		final L2Object tgt = playable.getTarget();
 		if (!tgt.isNpc())
 		{
-			playable.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			playable.sendPacket(SystemMessageId.INVALID_TARGET);
 			return false;
 		}
 		else if (!tgt.isMonster() || ((L2MonsterInstance) tgt).isRaid() || (tgt instanceof L2ChestInstance))
@@ -66,7 +66,7 @@ public class Seed implements IItemHandler
 		final L2MonsterInstance target = (L2MonsterInstance) tgt;
 		if (target.isDead())
 		{
-			playable.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			playable.sendPacket(SystemMessageId.INVALID_TARGET);
 			return false;
 		}
 		else if (target.isSeeded())

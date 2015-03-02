@@ -112,7 +112,7 @@
 			<effect name="Fear" />
 		</for>
 	</skill>
-	<skill id="5204" levels="1" name="Production-First Gigantic Pig Combination">
+	<skill id="5204" levels="1" name="Presentation - First Gigantic Pig Combination">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="5800" />
 		<set name="magicLvl" val="76" />
@@ -120,7 +120,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5205" levels="1" name="Boss Regeneration">
+	<skill id="5205" levels="1" name="Heal">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A1" />
@@ -188,7 +188,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5208" levels="1" name="Event Wind walk">
+	<skill id="5208" levels="1" name="Wind Walk (Event)">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
@@ -207,7 +207,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5209" levels="1" name="Event Shield">
+	<skill id="5209" levels="1" name="Shield (Event)">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
@@ -226,7 +226,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5210" levels="1" name="Event Bless the body">
+	<skill id="5210" levels="1" name="Blessed Body (Event)">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="7" />
 		<set name="abnormalTime" val="3600" />
@@ -245,7 +245,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5211" levels="1" name="Event Vampiric rage">
+	<skill id="5211" levels="1" name="Vampiric Rage (Event)">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="5" />
 		<set name="abnormalTime" val="3600" />
@@ -264,7 +264,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5212" levels="1" name="Event Regeneration">
+	<skill id="5212" levels="1" name="Regeneration (Event)">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
@@ -283,7 +283,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5213" levels="1" name="Event Haste">
+	<skill id="5213" levels="1" name="Haste (Event)">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="3600" />
@@ -302,7 +302,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5214" levels="1" name="Event Bless the soul">
+	<skill id="5214" levels="1" name="Blessed Soul (Event)">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="7" />
 		<set name="abnormalTime" val="3600" />
@@ -321,7 +321,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5215" levels="1" name="Event Acumen">
+	<skill id="5215" levels="1" name="Acumen (Event)">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
@@ -340,7 +340,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5216" levels="1" name="Event Concentration">
+	<skill id="5216" levels="1" name="Concentration (Event)">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="3600" />
@@ -359,7 +359,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5217" levels="1" name="Event Empower">
+	<skill id="5217" levels="1" name="Empower (Event)">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="3600" />
@@ -388,7 +388,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 	</skill>
-	<skill id="5219" levels="1" name="Stun of giant mutated animal">
+	<skill id="5219" levels="1" name="Giant Mutant Stun">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
@@ -416,7 +416,7 @@
 			<effect name="Stun" />
 		</for>
 	</skill>
-	<skill id="5220" levels="1" name="Fear of giant mutated animal">
+	<skill id="5220" levels="1" name="Giant Mutant Fear">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
@@ -443,10 +443,9 @@
 			<effect name="Fear" />
 		</for>
 	</skill>
-	<skill id="5221" levels="1" name="Balor - Physical Close Range Weak Point">
+	<skill id="5221" levels="1" name="Baylor - Physical Close Range Vulnerability">
 		<!-- Confirmed CT2.5 -->
 		<!-- Baylor Skills -->
-		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="rideState" val="NONE" />
@@ -463,10 +462,9 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5222" levels="1" name="Balor - Physical Long Range Weak Point">
+	<skill id="5222" levels="1" name="Baylor - Physical Long Range Vulnerability">
 		<!-- Confirmed CT2.5 -->
 		<!-- Baylor Skills -->
-		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="rideState" val="NONE" />
@@ -477,10 +475,9 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5223" levels="1" name="Balor - Magic Weak Point">
+	<skill id="5223" levels="1" name="Baylor - Magic Vulnerability">
 		<!-- Confirmed CT2.5 -->
 		<!-- Baylor Skills -->
-		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="rideState" val="NONE" />
@@ -512,7 +509,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5225" levels="1" name="Invincible">
+	<skill id="5225" levels="1" name="Invincibility">
 		<!-- Confirmed CT2.5 -->
 		<!-- Baylor Skills -->
 		<set name="abnormalLvl" val="1" />
@@ -546,7 +543,8 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 	</skill>
-	<skill id="5227" levels="1" name="Ground Strike">
+	<skill id="5227" levels="2" name="Ground Strike">
+		<!-- TODO: Auto level parse, Requires manual update -->
 		<!-- Confirmed CT2.5 -->
 		<!-- Baylor Skills -->
 		<set name="affectRange" val="200" />
@@ -563,7 +561,8 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5228" levels="1" name="Jump Attack">
+	<skill id="5228" levels="2" name="Jump Attack">
+		<!-- TODO: Auto level parse, Requires manual update -->
 		<!-- Confirmed CT2.5 -->
 		<!-- Baylor Skills -->
 		<set name="affectRange" val="200" />
@@ -581,7 +580,8 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5229" levels="1" name="Strong Punch">
+	<skill id="5229" levels="2" name="Strong Punch">
+		<!-- TODO: Auto level parse, Requires manual update -->
 		<!-- Confirmed CT2.5 -->
 		<!-- Baylor Skills -->
 		<set name="abnormalLvl" val="1" />
@@ -967,7 +967,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5246" levels="12" name="Boss Dark Explosion">
+	<skill id="5246" levels="12" name="Dark Explosion">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 23 32 44 58 74 89 102 107 112 114 116 118 </table>
@@ -1053,7 +1053,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5249" levels="12" name="Boss Dark Circle">
+	<skill id="5249" levels="12" name="Dark Circle">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 14 23 32 42 54 66 78 83 87 90 92 93 </table>
@@ -1405,7 +1405,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5262" levels="12" name="NPC - Rise Shot">
+	<skill id="5262" levels="12" name="Rising Shot">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
@@ -1428,7 +1428,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5263" levels="12" name="NPC _ Chain Lightning">
+	<skill id="5263" levels="12" name="Chain Lightning">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 14 23 32 42 54 66 78 83 87 90 92 93 </table>
@@ -1481,7 +1481,7 @@
 			<effect name="Debuff" />
 		</for>
 	</skill>
-	<skill id="5265" levels="12" name="NPC - Soul Emission">
+	<skill id="5265" levels="12" name="Soul Emission">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 14 23 32 42 54 66 78 83 87 90 92 93 </table>
@@ -1685,7 +1685,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5273" levels="9" name="NPC(party) - Physical Single Close Range Attack">
+	<skill id="5273" levels="9" name="Power Strike">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
@@ -1705,7 +1705,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5274" levels="9" name="NPC(party) - Physical Single Long Range Attack">
+	<skill id="5274" levels="9" name="Power Shot">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 151 156 160 164 167 168 169 171 173 </table>
@@ -1724,7 +1724,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5275" levels="9" name="NPC(party) - Physical Range Close Range Attack">
+	<skill id="5275" levels="9" name="Spinning Slasher">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
@@ -1743,7 +1743,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5276" levels="9" name="NPC(party) - Physical Range Long Range Attack">
+	<skill id="5276" levels="9" name="Burst Shot">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 227 234 240 246 250 252 254 256 259 </table>
@@ -1764,7 +1764,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5277" levels="9" name="NPC(party) - Physical Single Close Range Attack - Fire">
+	<skill id="5277" levels="9" name="Power Strike">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
@@ -1786,7 +1786,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5278" levels="9" name="NPC(party) - Physical Single Long Range Attack - Fire">
+	<skill id="5278" levels="9" name="Power Shot">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 151 156 160 164 167 168 169 171 173 </table>
@@ -1807,7 +1807,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5279" levels="9" name="NPC(party) - Physical Range Close Range Attack - Fire">
+	<skill id="5279" levels="9" name="Spinning Slasher">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
@@ -1827,7 +1827,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5280" levels="9" name="NPC(party) - Physical Range Long Range Attack - Fire">
+	<skill id="5280" levels="9" name="Burst Shot">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 227 234 240 246 250 252 254 256 259 </table>
@@ -1850,7 +1850,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5281" levels="9" name="NPC(party) - Physical Single Close Range Attack - Water">
+	<skill id="5281" levels="9" name="Power Strike">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
@@ -1873,7 +1873,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5282" levels="9" name="NPC(party) - Physical Single Long Range Attack - Water">
+	<skill id="5282" levels="9" name="Power Shot">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 151 156 160 164 167 168 169 171 173 </table>
@@ -1894,7 +1894,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5283" levels="9" name="NPC(party) - Physical Range Close Range Attack - Water">
+	<skill id="5283" levels="9" name="Spinning Slasher">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
@@ -1914,7 +1914,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5284" levels="9" name="NPC(party) - Physical Range Long Range Attack - Water">
+	<skill id="5284" levels="9" name="Burst Shot">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 227 234 240 246 250 252 254 256 259 </table>
@@ -1937,7 +1937,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5285" levels="9" name="NPC(party) - Physical Single Close Range Attack - Wind">
+	<skill id="5285" levels="9" name="Power Strike">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
@@ -1960,7 +1960,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5286" levels="9" name="NPC(party) - Physical Single Long Range Attack - Wind">
+	<skill id="5286" levels="9" name="Power Shot">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 151 156 160 164 167 168 169 171 173 </table>
@@ -1981,7 +1981,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5287" levels="9" name="NPC(party) - Physical Range Close Range Attack - Wind">
+	<skill id="5287" levels="9" name="Spinning Slasher">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
@@ -2001,7 +2001,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5288" levels="9" name="NPC(party) - Physical Range Long Range Attack - Wind">
+	<skill id="5288" levels="9" name="Burst Shot">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 227 234 240 246 250 252 254 256 259 </table>
@@ -2024,7 +2024,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5289" levels="9" name="NPC(party) - Physical Single Close Range Attack - Earth">
+	<skill id="5289" levels="9" name="Power Strike">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
@@ -2047,7 +2047,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5290" levels="9" name="NPC(party) - Physical Single Long Range Attack - Earth">
+	<skill id="5290" levels="9" name="Power Shot">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 151 156 160 164 167 168 169 171 173 </table>
@@ -2068,7 +2068,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5291" levels="9" name="NPC(party) - Physical Range Close Range Attack - Earth">
+	<skill id="5291" levels="9" name="Spinning Slasher">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
@@ -2088,7 +2088,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5292" levels="9" name="NPC(party) - Physical Range Long Range Attack - Earth">
+	<skill id="5292" levels="9" name="Burst Shot">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 227 234 240 246 250 252 254 256 259 </table>
@@ -2111,7 +2111,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5293" levels="9" name="NPC(party) - Physical Single Close Range Attack - Holy">
+	<skill id="5293" levels="9" name="Power Strike">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
@@ -2134,7 +2134,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5294" levels="9" name="NPC(party) - Physical Single Long Range Attack - Holy">
+	<skill id="5294" levels="9" name="Power Shot">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 151 156 160 164 167 168 169 171 173 </table>
@@ -2155,7 +2155,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5295" levels="9" name="NPC(party) - Physical Range Close Range Attack - Holy">
+	<skill id="5295" levels="9" name="Spinning Slasher">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
@@ -2175,7 +2175,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5296" levels="9" name="NPC(party) - Physical Range Long Range Attack - Holy">
+	<skill id="5296" levels="9" name="Burst Shot">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 227 234 240 246 250 252 254 256 259 </table>
@@ -2198,7 +2198,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5297" levels="9" name="NPC(party) - Physical Single Close Range Attack - Dark">
+	<skill id="5297" levels="9" name="Power Strike">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
@@ -2220,7 +2220,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5298" levels="9" name="NPC(party) - Physical Single Long Range Attack - Dark">
+	<skill id="5298" levels="9" name="Power Shot">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 151 156 160 164 167 168 169 171 173 </table>
@@ -2241,7 +2241,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5299" levels="9" name="NPC(party) - Physical Range Close Range Attack - Dark">
+	<skill id="5299" levels="9" name="Spinning Slasher">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>

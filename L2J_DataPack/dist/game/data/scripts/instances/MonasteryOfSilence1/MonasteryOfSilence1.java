@@ -24,6 +24,7 @@ import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
@@ -70,7 +71,7 @@ public final class MonasteryOfSilence1 extends AbstractNpcAI
 	{
 		NpcStringId.IT_SEEMS_THAT_YOU_CANNOT_REMEMBER_TO_THE_ROOM_OF_THE_WATCHER_WHO_FOUND_THE_BOOK,
 		NpcStringId.WE_MUST_SEARCH_HIGH_AND_LOW_IN_EVERY_ROOM_FOR_THE_READING_DESK_THAT_CONTAINS_THE_BOOK_WE_SEEK,
-		NpcStringId.REMEMBER_THE_CONTENT_OF_THE_BOOKS_THAT_YOU_FOUND_YOU_CANT_TAKE_THEM_OUT_WITH_YOU
+		NpcStringId.REMEMBER_THE_CONTENT_OF_THE_BOOKS_THAT_YOU_FOUND_YOU_CAN_T_TAKE_THEM_OUT_WITH_YOU
 	};
 	// Buffs
 	private static final SkillHolder[] BUFFS =
@@ -95,7 +96,7 @@ public final class MonasteryOfSilence1 extends AbstractNpcAI
 		{
 			if (!(world instanceof MoSWorld))
 			{
-				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
+				player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
 			}
 			else
 			{
@@ -223,10 +224,12 @@ public final class MonasteryOfSilence1 extends AbstractNpcAI
 	private static final void removeBuffs(L2Character ch)
 	{
 		ch.stopAllEffectsExceptThoseThatLastThroughDeath();
-		if (ch.hasSummon())
+		final L2Summon pet = ch.getPet();
+		if (pet != null)
 		{
-			ch.getSummon().stopAllEffectsExceptThoseThatLastThroughDeath();
+			pet.stopAllEffectsExceptThoseThatLastThroughDeath();
 		}
+		ch.getServitors().values().forEach(L2Summon::stopAllEffectsExceptThoseThatLastThroughDeath);
 	}
 	
 	protected void spawnNPC(L2PcInstance player, MoSWorld world)

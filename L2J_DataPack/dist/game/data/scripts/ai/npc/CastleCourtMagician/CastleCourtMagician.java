@@ -21,6 +21,7 @@ package ai.npc.CastleCourtMagician;
 import handlers.effecthandlers.CallPc;
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.enums.CastleSide;
 import com.l2jserver.gameserver.model.ClanPrivilege;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -44,12 +45,14 @@ public final class CastleCourtMagician extends AbstractNpcAI
 		35653, // Innadril
 		35654, // Goddard
 		35655, // Rune
-		35656, // Schuttgard
+		35656, // Schuttgart
 	};
 	// Skills
 	private static final int CLAN_GATE = 3632; // Clan Gate
 	private static final SkillHolder DISPLAY_CLAN_GATE = new SkillHolder(5109, 1); // Production - Clan Gate
 	// Items
+	private static final int CLOAK_OF_LIGHT = 34925;
+	private static final int CLOAK_OF_DARK = 34926;
 	private static final int EPAULETTE = 9912; // Knight's Epaulette
 	private static final int RED_MEDITATION = 9931; // Red Talisman of Meditation
 	private static final int BLUE_DIV_PROTECTION = 9932; // Blue Talisman - Divine Protection
@@ -138,6 +141,7 @@ public final class CastleCourtMagician extends AbstractNpcAI
 		{
 			case "courtmagician.html":
 			case "courtmagician-03.html":
+			case "courtmagician-07.html":
 			{
 				htmltext = event;
 				break;
@@ -280,6 +284,18 @@ public final class CastleCourtMagician extends AbstractNpcAI
 						htmltext = "courtmagician-02.html";
 					}
 				}
+				break;
+			}
+			case "giveCloak":
+			{
+				final int cloakId = npc.getCastle().getSide() == CastleSide.DARK ? CLOAK_OF_DARK : CLOAK_OF_LIGHT;
+				
+				if (hasQuestItems(player, cloakId))
+				{
+					htmltext = "courtmagician-08.html";
+					break;
+				}
+				giveItems(player, cloakId, 1);
 				break;
 			}
 		}

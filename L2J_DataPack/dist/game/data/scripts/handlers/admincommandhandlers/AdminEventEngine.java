@@ -37,7 +37,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.L2Event;
 import com.l2jserver.gameserver.model.entity.L2Event.EventState;
 import com.l2jserver.gameserver.network.serverpackets.CharInfo;
-import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 import com.l2jserver.gameserver.network.serverpackets.UserInfo;
@@ -331,7 +330,6 @@ public class AdminEventEngine implements IAdminCommandHandler
 					player.broadcastPacket(info1);
 					UserInfo info2 = new UserInfo(player);
 					player.sendPacket(info2);
-					player.broadcastPacket(new ExBrExtraUserInfo(player));
 				}
 				showEventControl(activeChar);
 			}
@@ -348,7 +346,6 @@ public class AdminEventEngine implements IAdminCommandHandler
 						player.broadcastPacket(info1);
 						UserInfo info2 = new UserInfo(player);
 						player.sendPacket(info2);
-						player.broadcastPacket(new ExBrExtraUserInfo(player));
 					}
 				}
 				showEventControl(activeChar);

@@ -39,16 +39,13 @@ public class PartyNotMe implements ITargetTypeHandler
 	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
 		final List<L2Character> targetList = new ArrayList<>();
+		final int radius = skill.getAffectRange();
 		if (activeChar.getParty() != null)
 		{
 			final List<L2PcInstance> partyList = activeChar.getParty().getMembers();
 			for (L2PcInstance partyMember : partyList)
 			{
-				if ((partyMember == null) || partyMember.isDead())
-				{
-					continue;
-				}
-				else if (partyMember == activeChar)
+				if (partyMember == activeChar)
 				{
 					continue;
 				}
@@ -56,18 +53,28 @@ public class PartyNotMe implements ITargetTypeHandler
 				{
 					continue;
 				}
-				else if ((skill.getAffectRange() > 0) && !Util.checkIfInRange(skill.getAffectRange(), activeChar, partyMember, true))
-				{
-					continue;
-				}
 				else
 				{
-					targetList.add(partyMember);
 					
-					if ((partyMember.getSummon() != null) && !partyMember.getSummon().isDead())
+					if (Skill.addPet(activeChar, partyMember, radius, false))
 					{
-						targetList.add(partyMember.getSummon());
+						targetList.add(partyMember.getPet());
 					}
+					
+					partyMember.getServitors().values().forEach(s ->
+					{
+						if (Skill.addCharacter(activeChar, s, radius, false))
+						{
+							targetList.add(s);
+						}
+					});
+					
+					if (Skill.addCharacter(activeChar, partyMember, radius, false))
+					{
+						targetList.add(partyMember);
+					}
+					
+					targetList.add(partyMember);
 				}
 			}
 		}

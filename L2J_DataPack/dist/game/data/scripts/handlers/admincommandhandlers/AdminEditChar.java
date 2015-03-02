@@ -45,7 +45,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
 import com.l2jserver.gameserver.network.L2GameClient;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
+import com.l2jserver.gameserver.network.serverpackets.AcquireSkillList;
 import com.l2jserver.gameserver.network.serverpackets.ExVoteSystemInfo;
 import com.l2jserver.gameserver.network.serverpackets.GMViewItemList;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -123,7 +123,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
 		}
 		else if (command.startsWith("admin_character_list"))
@@ -196,7 +196,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
 		}
 		// Karma control commands
@@ -234,13 +234,12 @@ public class AdminEditChar implements IAdminCommandHandler
 					player.setPkKills(pk);
 					player.broadcastUserInfo();
 					player.sendPacket(new UserInfo(player));
-					player.sendPacket(new ExBrExtraUserInfo(player));
 					player.sendMessage("A GM changed your PK count to " + pk);
 					activeChar.sendMessage(player.getName() + "'s PK count changed to " + pk);
 				}
 				else
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				}
 			}
 			catch (Exception e)
@@ -265,13 +264,12 @@ public class AdminEditChar implements IAdminCommandHandler
 					player.setPvpKills(pvp);
 					player.broadcastUserInfo();
 					player.sendPacket(new UserInfo(player));
-					player.sendPacket(new ExBrExtraUserInfo(player));
 					player.sendMessage("A GM changed your PVP count to " + pvp);
 					activeChar.sendMessage(player.getName() + "'s PVP count changed to " + pvp);
 				}
 				else
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				}
 			}
 			catch (Exception e)
@@ -296,13 +294,12 @@ public class AdminEditChar implements IAdminCommandHandler
 					player.setFame(fame);
 					player.broadcastUserInfo();
 					player.sendPacket(new UserInfo(player));
-					player.sendPacket(new ExBrExtraUserInfo(player));
 					player.sendMessage("A GM changed your Reputation points to " + fame);
 					activeChar.sendMessage(player.getName() + "'s Fame changed to " + fame);
 				}
 				else
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				}
 			}
 			catch (Exception e)
@@ -327,14 +324,13 @@ public class AdminEditChar implements IAdminCommandHandler
 					player.setRecomHave(recVal);
 					player.broadcastUserInfo();
 					player.sendPacket(new UserInfo(player));
-					player.sendPacket(new ExBrExtraUserInfo(player));
 					player.sendPacket(new ExVoteSystemInfo(player));
 					player.sendMessage("A GM changed your Recommend points to " + recVal);
 					activeChar.sendMessage(player.getName() + "'s Recommend changed to " + recVal);
 				}
 				else
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				}
 			}
 			catch (Exception e)
@@ -349,34 +345,29 @@ public class AdminEditChar implements IAdminCommandHandler
 				String val = command.substring(15).trim();
 				int classidval = Integer.parseInt(val);
 				L2Object target = activeChar.getTarget();
-				L2PcInstance player = null;
-				if (target instanceof L2PcInstance)
-				{
-					player = (L2PcInstance) target;
-				}
-				else
+				if ((target == null) || !target.isPlayer())
 				{
 					return false;
 				}
-				boolean valid = false;
-				for (ClassId classid : ClassId.values())
-				{
-					if (classidval == classid.getId())
-					{
-						valid = true;
-					}
-				}
-				if (valid && (player.getClassId().getId() != classidval))
+				final L2PcInstance player = target.getActingPlayer();
+				if ((ClassId.getClassId(classidval) != null) && (player.getClassId().getId() != classidval))
 				{
 					player.setClassId(classidval);
-					if (!player.isSubClassActive())
+					
+					if (player.isSubClassActive())
 					{
-						player.setBaseClass(classidval);
+						player.getSubClasses().get(player.getClassIndex()).setClassId(player.getActiveClass());
 					}
-					String newclass = ClassListData.getInstance().getClass(player.getClassId()).getClassName();
+					else
+					{
+						player.setBaseClass(player.getActiveClass());
+					}
+					
+					final String newclass = ClassListData.getInstance().getClass(player.getClassId()).getClassName();
 					player.storeMe();
 					player.sendMessage("A GM changed your class to " + newclass + ".");
 					player.broadcastUserInfo();
+					player.sendPacket(new AcquireSkillList(player));
 					activeChar.sendMessage(player.getName() + " is a " + newclass + ".");
 				}
 				else
@@ -542,7 +533,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
 		}
 		else if (command.startsWith("admin_remove_clan_penalty"))
@@ -647,7 +638,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			
 			if (pl == null)
 			{
-				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				return false;
 			}
 			
@@ -789,7 +780,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
 			
 		}
@@ -823,7 +814,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final L2Object target = activeChar.getTarget();
 				if ((target == null) || !target.isCharacter())
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					return false;
 				}
 				((L2Character) target).setCurrentHp(Double.parseDouble(data[1]));
@@ -841,7 +832,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final L2Object target = activeChar.getTarget();
 				if ((target == null) || !target.isCharacter())
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					return false;
 				}
 				((L2Character) target).setCurrentMp(Double.parseDouble(data[1]));
@@ -859,7 +850,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final L2Object target = activeChar.getTarget();
 				if ((target == null) || !target.isCharacter())
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					return false;
 				}
 				((L2Character) target).setCurrentCp(Double.parseDouble(data[1]));
@@ -876,7 +867,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final L2Object target = activeChar.getTarget();
 				if ((target == null) || !target.isPlayable())
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					return false;
 				}
 				final L2Playable playable = ((L2Playable) target);
@@ -1047,7 +1038,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			// update karma
 			player.setKarma(newKarma);
 			// Common character information
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_KARMA_HAS_BEEN_CHANGED_TO_S1);
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_REPUTATION_HAS_BEEN_CHANGED_TO_S1);
 			sm.addInt(newKarma);
 			player.sendPacket(sm);
 			// Admin information

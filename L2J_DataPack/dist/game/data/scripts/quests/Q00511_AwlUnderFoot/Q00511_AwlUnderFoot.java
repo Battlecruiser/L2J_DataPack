@@ -271,7 +271,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 		{
 			if (!(world instanceof FAUWorld))
 			{
-				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
+				player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
 				return "";
 			}
 			teleportPlayer(player, coords, world.getInstanceId());
@@ -349,7 +349,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isSummon)
 	{
-		L2Playable attacker = (isSummon ? player.getSummon() : player);
+		L2Playable attacker = (isSummon ? player.getServitors().values().stream().findFirst().orElse(player.getPet()) : player);
 		if ((attacker.getLevel() - npc.getLevel()) >= 9)
 		{
 			if ((attacker.getBuffCount() > 0) || (attacker.getDanceCount() > 0))

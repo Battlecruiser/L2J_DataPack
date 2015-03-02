@@ -8,7 +8,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
-		<set name="price" val="1" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -25,7 +24,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
-		<set name="price" val="1" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -42,7 +40,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
-		<set name="price" val="1" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -83,6 +80,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22299-1" />
+		<set name="commissionItemType" val="POTION" />
 		<cond msgId="113" addName="1">
 			<player insideZoneId="12010, 12001" />
 		</cond>
@@ -247,8 +245,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="143356000" />
@@ -266,7 +264,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="21920" type="Weapon" name="Hellblade - Haste">
+	<item id="21920" type="Weapon" name="Hellblade">
 		<!-- Description: (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -276,8 +274,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="143356000" />
@@ -295,7 +293,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="21921" type="Weapon" name="Hellblade - Health">
+	<item id="21921" type="Weapon" name="Hellblade">
 		<!-- Description: (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -305,8 +303,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="143356000" />
@@ -324,7 +322,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="21922" type="Weapon" name="Hellblade - Focus">
+	<item id="21922" type="Weapon" name="Hellblade">
 		<!-- Description: (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Critical by 131. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -334,8 +332,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="143356000" />
@@ -363,11 +361,10 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
-		<set name="price" val="143356000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -395,11 +392,10 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
-		<set name="price" val="143356000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -427,11 +423,10 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
-		<set name="price" val="143356000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -459,11 +454,10 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
-		<set name="price" val="143356000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -491,8 +485,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="143356000" />
@@ -510,7 +504,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="21928" type="Weapon" name="Hellblade - Lightning - Haste">
+	<item id="21928" type="Weapon" name="Hellblade - Lightning">
 		<!-- Description: Masterwork Item that increases the critical attack rate. (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -520,8 +514,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="143356000" />
@@ -539,7 +533,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="21929" type="Weapon" name="Hellblade - Lightning - Health">
+	<item id="21929" type="Weapon" name="Hellblade - Lightning">
 		<!-- Description: Masterwork Item that increases the critical attack rate. (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -549,8 +543,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="143356000" />
@@ -568,7 +562,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="21930" type="Weapon" name="Hellblade - Lightning - Focus">
+	<item id="21930" type="Weapon" name="Hellblade - Lightning">
 		<!-- Description: Masterwork Item that increases the critical attack rate. (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Critical by 131. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -578,8 +572,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="143356000" />
@@ -607,11 +601,10 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
-		<set name="price" val="143356000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -639,11 +632,10 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
-		<set name="price" val="143356000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -671,11 +663,10 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
-		<set name="price" val="143356000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -703,11 +694,10 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
-		<set name="price" val="143356000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -735,7 +725,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="5845" />
+		<set name="crystal_count" val="3896" />
 		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2100" />
@@ -746,6 +736,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="8296-1" />
 		<set name="item_skill" val="3552-1;21253-1" />
+		<set name="commissionItemType" val="DUAL_DAGGER" />
 		<cond msgId="1518">
 			<and>
 				<player level="81" />
@@ -772,11 +763,10 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="5845" />
+		<set name="crystal_count" val="3896" />
 		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2100" />
-		<set name="price" val="121780000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -812,7 +802,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="5845" />
+		<set name="crystal_count" val="3896" />
 		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2100" />
@@ -849,11 +839,10 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="5845" />
+		<set name="crystal_count" val="3896" />
 		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2100" />
-		<set name="price" val="121780000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -889,8 +878,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="143356000" />
@@ -909,7 +898,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="21940" type="Weapon" name="Claw of Destruction - HP Drain">
+	<item id="21940" type="Weapon" name="Claw of Destruction">
 		<!-- Description: (Soul Crystal Enhancement). Blunt used by Tiat. Bestows a special power upon the wielder. Recovers 4% of melee damage inflicted upon the enemy to your own HP. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -919,8 +908,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="143356000" />
@@ -939,7 +928,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="21941" type="Weapon" name="Claw of Destruction - Health">
+	<item id="21941" type="Weapon" name="Claw of Destruction">
 		<!-- Description: (Soul Crystal Enhancement). Blunt used by Tiat. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -949,8 +938,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="143356000" />
@@ -969,7 +958,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="21942" type="Weapon" name="Claw of Destruction - HP Regeneration">
+	<item id="21942" type="Weapon" name="Claw of Destruction">
 		<!-- Description: (Soul Crystal Enhancement). Blunt used by Tiat. Bestows a special power upon the wielder. Increases HP recovery rate. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -979,8 +968,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="143356000" />
@@ -1009,11 +998,10 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
-		<set name="price" val="143356000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1042,11 +1030,10 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
-		<set name="price" val="143356000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1075,11 +1062,10 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
-		<set name="price" val="143356000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1108,11 +1094,10 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
-		<set name="price" val="143356000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1141,8 +1126,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="143356000" />
@@ -1161,7 +1146,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="21948" type="Weapon" name="Claw of Destruction - Landslide - HP Drain">
+	<item id="21948" type="Weapon" name="Claw of Destruction - Landslide">
 		<!-- Description: Masterwork Item that has the stun effect at a fixed rate when striking. (Soul Crystal Enhancement). Blunt weapon used by Tiat. Bestows a special power upon the wielder. Recovers 4% of melee damage inflicted upon the enemy to your own HP. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1171,8 +1156,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="143356000" />
@@ -1191,7 +1176,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="21949" type="Weapon" name="Claw of Destruction - Landslide - Health">
+	<item id="21949" type="Weapon" name="Claw of Destruction - Landslide">
 		<!-- Description: Masterwork Item that has the stun effect at a fixed rate when striking. (Soul Crystal Enhancement). Blunt weapon used by Tiat. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1201,8 +1186,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="143356000" />
@@ -1221,7 +1206,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="21950" type="Weapon" name="Claw of Destruction - Landslide - HP Regeneration">
+	<item id="21950" type="Weapon" name="Claw of Destruction - Landslide">
 		<!-- Description: Masterwork Item that has the stun effect at a fixed rate when striking. (Soul Crystal Enhancement). Blunt weapon used by Tiat. Bestows a special power upon the wielder. Increases HP recovery rate. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1231,8 +1216,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="143356000" />
@@ -1261,11 +1246,10 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
-		<set name="price" val="143356000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1294,11 +1278,10 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
-		<set name="price" val="143356000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1327,11 +1310,10 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
-		<set name="price" val="143356000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1360,11 +1342,10 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
-		<set name="price" val="143356000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1393,7 +1374,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
@@ -1423,11 +1404,10 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
-		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1456,7 +1436,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
@@ -1483,11 +1463,10 @@
 		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
-		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1516,7 +1495,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
@@ -1535,7 +1514,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="21960" type="Weapon" name="Blood Brother - Focus">
+	<item id="21960" type="Weapon" name="Blood Brother">
 		<!-- Description: (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases Critical by 111. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1545,7 +1524,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
@@ -1564,7 +1543,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="21961" type="Weapon" name="Blood Brother - Health">
+	<item id="21961" type="Weapon" name="Blood Brother">
 		<!-- Description: (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1574,7 +1553,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
@@ -1593,7 +1572,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="21962" type="Weapon" name="Blood Brother - Light">
+	<item id="21962" type="Weapon" name="Blood Brother">
 		<!-- Description: (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases weight gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1603,7 +1582,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
@@ -1632,11 +1611,10 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
-		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1664,11 +1642,10 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
-		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1696,11 +1673,10 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
-		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1728,7 +1704,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
@@ -1747,7 +1723,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="21967" type="Weapon" name="Blood Brother - Great Gale - Focus">
+	<item id="21967" type="Weapon" name="Blood Brother - Great Gale">
 		<!-- Description: Masterwork Item than increases Atk. Spd. (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases Critical by 111. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1757,7 +1733,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
@@ -1776,7 +1752,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="21968" type="Weapon" name="Blood Brother - Great Gale - Health">
+	<item id="21968" type="Weapon" name="Blood Brother - Great Gale">
 		<!-- Description: Masterwork Item than increases Atk. Spd. (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1786,7 +1762,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
@@ -1805,7 +1781,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="21969" type="Weapon" name="Blood Brother - Great Gale - Light">
+	<item id="21969" type="Weapon" name="Blood Brother - Great Gale">
 		<!-- Description: Masterwork Item than increases Atk. Spd. (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases weight gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1815,7 +1791,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
@@ -1844,11 +1820,10 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
-		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1876,11 +1851,10 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
-		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1908,11 +1882,10 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3597" />
+		<set name="crystal_count" val="2398" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
-		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1940,7 +1913,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="840" />
@@ -1968,7 +1941,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="840" />
@@ -1997,7 +1970,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="840" />
@@ -2028,7 +2001,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="840" />
@@ -2057,7 +2030,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="840" />
@@ -2086,7 +2059,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="840" />
@@ -2115,7 +2088,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="840" />
@@ -2146,7 +2119,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="840" />
@@ -2220,7 +2193,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="21986" type="Armor" name="Agathion Seal Bracelet - Antharas">
+	<item id="21986" type="Armor" name="Agathion - Antharas">
 		<!-- Description: Bracelet that summons a cute Antharas Agathion. Cannot be exchanged, dropped, or sold. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2244,7 +2217,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="21988" type="Armor" name="Shiny Lit Platform Summon Bracelet">
+	<item id="21988" type="Armor" name="Shiny Platform Summon Bracelet">
 		<!-- Description: Can stand upon the shiny platform with brilliant lighting when equipped. Cannot be exchanged, dropped, or sold. -->
 		<set name="icon" val="BranchSys2.Icon.br_shiny_platform_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2311,7 +2284,7 @@
 		<set name="material" val="STEEL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="21994" type="EtcItem" name="Vitality Replenishing Beverage - Pack of 9">
+	<item id="21994" type="EtcItem" name="Vitality Replenishing Potion 9-unit Pack">
 		<!-- Description: Dimensional Item Pack. A pack containing 9 units of Energy Replenishing Beverage. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="material" val="STEEL" />
@@ -2320,7 +2293,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="21995" type="EtcItem" name="Vitality Replenishing Beverage - Pack of 12">
+	<item id="21995" type="EtcItem" name="Vitality Replenishing Potion 12-unit Pack">
 		<!-- Description: Dimensional Item Pack. A pack containing 12 units of Energy Replenishing Beverage. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="material" val="STEEL" />
@@ -2329,7 +2302,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="21996" type="EtcItem" name="Vitality Replenishing Beverage - Pack of 15">
+	<item id="21996" type="EtcItem" name="Vitality Replenishing Potion 15-unit Pack">
 		<!-- Description: Dimensional Item Pack. A pack containing 15 units of Energy Replenishing Beverage. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="material" val="STEEL" />
@@ -2344,7 +2317,7 @@
 		<set name="material" val="STEEL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="21998" type="EtcItem" name="Cannibalistic Stakato Leader Claw">
+	<item id="21998" type="EtcItem" name="Cannibalistic Stakato Captain Claw">
 		<!-- Description: Cannibalistic Stakato Leader Claw. Bring this to Rune Captain Mathias. -->
 		<set name="icon" val="icon.etc_parasite_i00" />
 		<set name="material" val="STEEL" />

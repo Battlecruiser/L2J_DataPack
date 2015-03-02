@@ -36,7 +36,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.clientpackets.RequestAcquireSkill;
-import com.l2jserver.gameserver.network.serverpackets.AcquireSkillList;
+import com.l2jserver.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
 
@@ -48,7 +48,7 @@ import custom.Validators.SubClassSkills;
  * Transformation skill learning and transformation scroll sell.
  * @author Zoey76
  */
-public class AvantGarde extends AbstractNpcAI
+public final class AvantGarde extends AbstractNpcAI
 {
 	// NPC
 	private static final int AVANT_GARDE = 32323;
@@ -309,24 +309,14 @@ public class AvantGarde extends AbstractNpcAI
 	public static void showSubClassSkillList(L2PcInstance player)
 	{
 		final List<L2SkillLearn> subClassSkills = SkillTreesData.getInstance().getAvailableSubClassSkills(player);
-		final AcquireSkillList asl = new AcquireSkillList(AcquireSkillType.SUBCLASS);
-		int count = 0;
 		
-		for (L2SkillLearn s : subClassSkills)
+		if (subClassSkills.isEmpty())
 		{
-			if (SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel()) != null)
-			{
-				count++;
-				asl.addSkill(s.getSkillId(), s.getSkillLevel(), s.getSkillLevel(), 0, 0);
-			}
-		}
-		if (count > 0)
-		{
-			player.sendPacket(asl);
+			player.sendPacket(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
 		}
 		else
 		{
-			player.sendPacket(SystemMessageId.NO_MORE_SKILLS_TO_LEARN);
+			player.sendPacket(new ExAcquirableSkillListByClass(subClassSkills, AcquireSkillType.TRANSFORM));
 		}
 	}
 	
@@ -337,36 +327,25 @@ public class AvantGarde extends AbstractNpcAI
 	public static void showTransformSkillList(L2PcInstance player)
 	{
 		final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailableTransformSkills(player);
-		final AcquireSkillList asl = new AcquireSkillList(AcquireSkillType.TRANSFORM);
-		int counts = 0;
 		
-		for (L2SkillLearn s : skills)
-		{
-			if (SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel()) != null)
-			{
-				counts++;
-				asl.addSkill(s.getSkillId(), s.getSkillLevel(), s.getSkillLevel(), s.getLevelUpSp(), 0);
-			}
-		}
-		
-		if (counts == 0)
+		if (skills.isEmpty())
 		{
 			final int minlevel = SkillTreesData.getInstance().getMinLevelForNewSkill(player, SkillTreesData.getInstance().getTransformSkillTree());
 			if (minlevel > 0)
 			{
 				// No more skills to learn, come back when you level.
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.DO_NOT_HAVE_FURTHER_SKILLS_TO_LEARN_S1);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ANY_FURTHER_SKILLS_TO_LEARN_COME_BACK_WHEN_YOU_HAVE_REACHED_LEVEL_S1);
 				sm.addInt(minlevel);
 				player.sendPacket(sm);
 			}
 			else
 			{
-				player.sendPacket(SystemMessageId.NO_MORE_SKILLS_TO_LEARN);
+				player.sendPacket(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
 			}
 		}
 		else
 		{
-			player.sendPacket(asl);
+			player.sendPacket(new ExAcquirableSkillListByClass(skills, AcquireSkillType.TRANSFORM));
 		}
 	}
 	

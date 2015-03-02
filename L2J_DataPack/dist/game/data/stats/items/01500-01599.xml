@@ -55,7 +55,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
-		<set name="price" val="51" />
+		<set name="price" val="11" />
 		<for>
 			<add order="0" stat="mDef" val="15" />
 		</for>
@@ -67,7 +67,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
-		<set name="price" val="3600" />
+		<set name="price" val="720" />
 		<for>
 			<add order="0" stat="mDef" val="21" />
 		</for>
@@ -79,7 +79,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
-		<set name="price" val="1800" />
+		<set name="price" val="360" />
 		<for>
 			<add order="0" stat="mDef" val="11" />
 		</for>
@@ -91,7 +91,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
-		<set name="price" val="1800" />
+		<set name="price" val="360" />
 		<for>
 			<add order="0" stat="mDef" val="11" />
 		</for>
@@ -107,7 +107,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1450" />
-		<set name="price" val="19500" />
+		<set name="price" val="3900" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
@@ -128,7 +128,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1860" />
-		<set name="price" val="19500" />
+		<set name="price" val="3900" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
@@ -358,8 +358,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2036-1" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
-	<item id="1539" type="EtcItem" name="Greater Healing Potion">
+	<item id="1539" type="EtcItem" name="Major Healing Potion">
 		<set name="icon" val="icon.etc_reagent_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -373,6 +374,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2037-1" />
 		<set name="for_npc" val="true" />
+		<set name="commissionItemType" val="POTION" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -391,6 +393,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2038-1" />
 		<set name="for_npc" val="true" />
+		<set name="commissionItemType" val="POTION" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -560,7 +563,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1556" type="EtcItem" name="Letter to Dark Elf">
+	<item id="1556" type="EtcItem" name="Secret Letter to Dark Elf">
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -571,7 +574,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1557" type="EtcItem" name="Letter to Human">
+	<item id="1557" type="EtcItem" name="Secret Letter to Human">
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -582,7 +585,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1558" type="EtcItem" name="Letter to Elf">
+	<item id="1558" type="EtcItem" name="Secret Letter to Elf">
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -670,7 +673,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1566" type="EtcItem" name="Gem Box">
+	<item id="1566" type="EtcItem" name="Jewel Box">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -736,7 +739,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1572" type="EtcItem" name="Starstone">
+	<item id="1572" type="EtcItem" name="Star Stone">
 		<set name="icon" val="icon.etc_crystal_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -747,7 +750,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1573" type="EtcItem" name="Starstone">
+	<item id="1573" type="EtcItem" name="Star Stone">
 		<set name="icon" val="icon.etc_crystal_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -956,7 +959,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1592" type="EtcItem" name="Mark of Raider">
+	<item id="1592" type="EtcItem" name="Badge of Raider">
 		<set name="icon" val="icon.accessary_earing_of_black_ore_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

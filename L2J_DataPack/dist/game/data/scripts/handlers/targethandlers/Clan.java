@@ -74,10 +74,18 @@ public class Clan implements ITargetTypeHandler
 			final int radius = skill.getAffectRange();
 			final L2Clan clan = player.getClan();
 			
-			if (Skill.addSummon(activeChar, player, radius, false))
+			if (Skill.addPet(activeChar, player, radius, false))
 			{
-				targetList.add(player.getSummon());
+				targetList.add(player.getPet());
 			}
+			
+			player.getServitors().values().forEach(s ->
+			{
+				if (Skill.addCharacter(activeChar, s, radius, false))
+				{
+					targetList.add(s);
+				}
+			});
 			
 			if (clan != null)
 			{
@@ -114,10 +122,18 @@ public class Clan implements ITargetTypeHandler
 						continue;
 					}
 					
-					if (!onlyFirst && Skill.addSummon(activeChar, obj, radius, false))
+					if (Skill.addPet(activeChar, obj, radius, false))
 					{
-						targetList.add(obj.getSummon());
+						targetList.add(obj.getPet());
 					}
+					
+					obj.getServitors().values().forEach(s ->
+					{
+						if (Skill.addCharacter(activeChar, s, radius, false))
+						{
+							targetList.add(s);
+						}
+					});
 					
 					if (!Skill.addCharacter(activeChar, obj, radius, false))
 					{

@@ -1,10 +1,11 @@
 <html><body>Gatekeeper Elisa:<br>
-I am Gatekeeper Elisa, one of the stewards of the door of space and time dispatched here from the Ivory Tower. Aden Castle is renowned as a center of politics, culture and religion, but I have been far too busy to sightsee for myself. Ironic, since I regularly send others to destinations far and wide... Silly, isn't it?<br>
-<a action="bypass -h npc_%objectId%_Chat 1">Teleport</a><br>
-<a action="bypass -h npc_%objectId%_multisell 002">Exchange Dimension Diamonds.</a><br>
-<a action="bypass -h npc_%objectId%_Quest NoblesseTeleport">Noblesse Exclusive Teleport</a><br>
-<a action="bypass -h npc_%objectId%_Quest TeleportToRaceTrack" msg="811;Monster Racetrack">Move to Monster Race Track (free).</a><br>
-<a action="bypass -h npc_%objectId%_Quest TeleportToFantasy" msg="811;Fantasy Isle">Move to Fantasy Isle (free).</a><br>
-<a action="bypass -h npc_%objectId%_Quest CharacterBirthday">Call Alegria</a><br>
-<a action="bypass -h npc_%objectId%_Quest">Quest</a>
+Such a bustling place! I'm new here, and still haven't had the time to check out the hubbub of politics, the religion, the culture... I wish I had more time, but being gatekeeper is busy work!<br>
+(If your <font color="LEVEL">main class</font> is <font color="LEVEL">Lv. 76 or below</font>, you can teleport for free.)<br>
+<Button ALIGN=LEFT ICON="TELEPORT" action="bypass -h npc_%objectId%_showTeleports">"Teleport me, please."</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 002">"I want to exchange some Dimensional Diamonds."</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_showNoblesSelect">[Noblesse Only] "Teleport me, please."</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_Quest TeleportToRaceTrack" msg="811;Monster Race Track">"I want to go to the Arena and Monster Race Track for free."</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_Quest TeleportToFantasy" msg="811;Fantasy Isle">"I want to go to Fantasy Isle for free."</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_Quest CharacterBirthday">"I need to call Alegria."</Button>
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h npc_%objectId%_Quest">Quest</Button>
 </body></html>

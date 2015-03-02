@@ -39,7 +39,7 @@ public class SpiritShot implements IItemHandler
 	{
 		if (!playable.isPlayer())
 		{
-			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
+			playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 			return false;
 		}
 		
@@ -61,7 +61,7 @@ public class SpiritShot implements IItemHandler
 		{
 			if (!activeChar.getAutoSoulShot().contains(itemId))
 			{
-				activeChar.sendPacket(SystemMessageId.CANNOT_USE_SPIRITSHOTS);
+				activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_USE_SPIRITSHOTS);
 			}
 			return false;
 		}
@@ -78,7 +78,7 @@ public class SpiritShot implements IItemHandler
 		{
 			if (!activeChar.getAutoSoulShot().contains(itemId))
 			{
-				activeChar.sendPacket(SystemMessageId.SPIRITSHOTS_GRADE_MISMATCH);
+				activeChar.sendPacket(SystemMessageId.YOUR_SPIRITSHOT_DOES_NOT_MATCH_THE_WEAPON_S_GRADE);
 			}
 			
 			return false;
@@ -89,7 +89,7 @@ public class SpiritShot implements IItemHandler
 		{
 			if (!activeChar.disableAutoShot(itemId))
 			{
-				activeChar.sendPacket(SystemMessageId.NOT_ENOUGH_SPIRITSHOTS);
+				activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SPIRITSHOT_FOR_THAT);
 			}
 			return false;
 		}
@@ -98,7 +98,7 @@ public class SpiritShot implements IItemHandler
 		activeChar.setChargedShot(ShotType.SPIRITSHOTS, true);
 		
 		// Send message to client
-		activeChar.sendPacket(SystemMessageId.ENABLED_SPIRITSHOT);
+		activeChar.sendPacket(SystemMessageId.YOUR_SPIRITSHOT_HAS_BEEN_ENABLED);
 		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, skills[0].getSkillId(), skills[0].getSkillLvl(), 0, 0), 600);
 		return true;
 	}

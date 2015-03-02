@@ -48,7 +48,7 @@
 			<player agathionId="1504" />
 		</cond>
 	</skill>
-	<skill id="23004" levels="1" name="Majo Agathion Special Skill - Mysterious Power">
+	<skill id="23004" levels="1" name="Majo Agathion Special Skill: Mysterious Power">
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BIG_HEAD" />
@@ -67,7 +67,7 @@
 			<player agathionId="1501" />
 		</cond>
 	</skill>
-	<skill id="23005" levels="1" name="Gold Majo Agathion Special Skill - Power of Blessed Resurrection">
+	<skill id="23005" levels="1" name="Gold Majo Agathion Special Skill: Blessed Resurrection">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="1" />
@@ -92,7 +92,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23006" levels="1" name="Black Majo Agathion Special Skill - Power of Blessed Return">
+	<skill id="23006" levels="1" name="Black Majo Agathion Special Skill: Blessed Escape">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="200" />
 		<set name="icon" val="icon.skill_agathion_special" />
@@ -119,7 +119,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23007" levels="1" name="Plaipitak Agathion Special Skill - Mysterious Power">
+	<skill id="23007" levels="1" name="Plaipitak Agathion Special Skill: Mysterious Power">
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BIG_HEAD" />
@@ -138,7 +138,7 @@
 			<player agathionId="1504" />
 		</cond>
 	</skill>
-	<skill id="23008" levels="1" name="Plaipitak Agathion Special Skill - Power of Blessed Return">
+	<skill id="23008" levels="1" name="Plaipitak Agathion Special Skill: Blessed Escape">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="200" />
 		<set name="icon" val="icon.skill_agathion_special" />
@@ -165,7 +165,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23009" levels="1" name="Plaipitak Agathion Special Skill - Power of Blessed Resurrection">
+	<skill id="23009" levels="1" name="Plaipitak Agathion Special Skill: Blessed Resurrection">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="1" />
@@ -226,7 +226,7 @@
 			<player agathionId="1507" />
 		</cond>
 	</skill>
-	<skill id="23013" levels="1" name="Baby Panda Agathion Special Skill - Mysterious Power">
+	<skill id="23013" levels="1" name="Baby Panda Agathion Special Skill: Mysterious Power">
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BIG_HEAD" />
@@ -245,7 +245,7 @@
 			<player agathionId="1505" />
 		</cond>
 	</skill>
-	<skill id="23014" levels="1" name="Bamboo Panda Agathion Special Skill - Power of Blessed Resurrection">
+	<skill id="23014" levels="1" name="Bamboo Panda Agathion Special Skill: Blessed Resurrection">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="1" />
@@ -270,7 +270,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23015" levels="1" name="Sexy Panda Agathion Special Skill - Power of Blessed Return">
+	<skill id="23015" levels="1" name="Sexy Panda Agathion Special Skill: Blessed Escape">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="200" />
 		<set name="icon" val="icon.skill_agathion_special" />
@@ -297,7 +297,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23016" levels="1" name="Rudolph Agathion Special Skill - Ability of Energy">
+	<skill id="23016" levels="1" name="Rudolph Agathion Special Skill: Ability of Vitality">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="VP_UP" />
@@ -321,7 +321,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23017" levels="1" name="Holiday Festival">
+	<skill id="23017" levels="1" name="Winter Holiday Festival">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
@@ -397,7 +397,7 @@
 			<effect name="ImmobileBuff" />
 		</for>
 	</skill>
-	<skill id="23020" levels="1" name="Challenge the Turkey">
+	<skill id="23020" levels="1" name="Attack Turkey">
 		<set name="affectRange" val="500" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="coolTime" val="500" />
@@ -417,7 +417,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="23022" levels="10" name="First Win">
+	<skill id="23022" levels="10" name="First win">
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<table name="#icons"> BranchSys.icon.br_xmas_pcwin1_i00 BranchSys.icon.br_xmas_pcwin2_i00 BranchSys.icon.br_xmas_pcwin3_i00 BranchSys.icon.br_xmas_pcwin4_i00 BranchSys.icon.br_xmas_pcwin5_i00 BranchSys.icon.br_xmas_pcwin6_i00 BranchSys.icon.br_xmas_pcwin7_i00 BranchSys.icon.br_xmas_pcwin8_i00 BranchSys.icon.br_xmas_pcwin9_i00 BranchSys.icon.br_xmas_pcwin10_i00 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -444,7 +444,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="23024" levels="1" name="Agathion of Love Special Skill - Energy Recovery Ability">
+	<skill id="23024" levels="1" name="Love Agathion Special Skill: Vitality Recovery Ability">
 		<!-- Recovers energy when acquiring Exp. for 20 minutes. Reuse Delay 12 hours -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
@@ -529,7 +529,7 @@
 			<player agathionId="1512" />
 		</cond>
 	</skill>
-	<skill id="23030" levels="1" name="White Maneki Neko Agathion Special Skill - Blessed Resurrection Ability">
+	<skill id="23030" levels="1" name="White Maneki Neko Agathion Special Skill: Ability of Blessed Resurrection">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="1" />
@@ -554,7 +554,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23031" levels="1" name="Black Maneki Neko Agathion Special Skill - Ability of Blessed Return">
+	<skill id="23031" levels="1" name="Black Maneki Neko Agathion Special Skill: Ability of Blessed Escape">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="200" />
 		<set name="icon" val="icon.skill_agathion_special" />
@@ -581,7 +581,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23032" levels="1" name="Brown Maneki Neko Agathion Special Skill - Ability of Energy Recovery">
+	<skill id="23032" levels="1" name="Brown Maneki Neko Agathion Special Skill: Ability of Vitality Recovery">
 		<!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
@@ -606,7 +606,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23033" levels="1" name="One-Eyed Bat Drove Agathion Cute Trick">
+	<skill id="23033" levels="1" name="One-eyed Bat Drove Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -618,7 +618,7 @@
 			<player agathionId="1513" />
 		</cond>
 	</skill>
-	<skill id="23034" levels="1" name="One-eyed Bat Drove Agathion Special Skill - Ability of Resist Unholy">
+	<skill id="23034" levels="1" name="One-eyed Bat Drove Agathion Special Skill: Ability of Dark Attack Resistance">
 		<!-- Increases resistance to darkness type attacks by 30% for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
@@ -643,7 +643,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23035" levels="1" name="One-eyed Bat Drove Agathion Special Skill - Ability of Energy Recovery">
+	<skill id="23035" levels="1" name="One-eyed Bat Drove Agathion Special Skill: Ability of Vitality Recovery">
 		<!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
@@ -680,7 +680,7 @@
 			<player agathionId="1514" />
 		</cond>
 	</skill>
-	<skill id="23037" levels="1" name="Pegasus Agathion Special Skill - Ability of Wind Walk">
+	<skill id="23037" levels="1" name="Pegasus Agathion Special Skill: Ability of Wind Walk">
 		<!-- Increases moving speed by 33 for 5 minutes. Reuse Delay 4 hours -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
@@ -705,7 +705,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23038" levels="1" name="Pegasus Agathion Special Skill - Blessed Return Ability">
+	<skill id="23038" levels="1" name="Pegasus Agathion Special Skill: Ability of Blessed Escape">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="200" />
 		<set name="icon" val="icon.skill_agathion_special" />
@@ -732,7 +732,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23039" levels="1" name="Yellow-Robed Tojigong Agathion Cute Trick">
+	<skill id="23039" levels="1" name="Yellow-robed Tojigong Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -744,7 +744,7 @@
 			<player agathionId="1515" />
 		</cond>
 	</skill>
-	<skill id="23040" levels="1" name="Blue-Robed Tojigong Agathion Cute Trick">
+	<skill id="23040" levels="1" name="Blue-robed Tojigong Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -756,7 +756,7 @@
 			<player agathionId="1516" />
 		</cond>
 	</skill>
-	<skill id="23041" levels="1" name="Green-Robed Tojigong Agathion Cute Trick">
+	<skill id="23041" levels="1" name="Green-robed Tojigong Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -768,7 +768,7 @@
 			<player agathionId="1517" />
 		</cond>
 	</skill>
-	<skill id="23042" levels="1" name="Yellow-robed Tojigong Agathion Special Skill - Ability of Greater Heal">
+	<skill id="23042" levels="1" name="Yellow-robed Tojigong Agathion Special Skill: Ability of Greater Heal">
 		<!-- Recovers HP by 444 and increases HP Recovery by 30 for 15 seconds. Reuse Delay 4 hours -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="15" />
@@ -796,7 +796,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23043" levels="1" name="Blue-robed Tojigong Agathion Special Skill - Ability of Reflect Damage">
+	<skill id="23043" levels="1" name="Blue-robed Tojigong Agathion Special Skill: Ability of Reflect Damage">
 		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
@@ -821,7 +821,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23044" levels="1" name="Green-robed Tojigong Agathion Special Skill - Ability of Mana Regeneration">
+	<skill id="23044" levels="1" name="Green-robed Tojigong Agathion Special Skill: Ability of Mana Regeneration">
 		<!-- Increases MP Regeneration by 3% for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
@@ -930,7 +930,7 @@
 			<player agathionId="1521" />
 		</cond>
 	</skill>
-	<skill id="23052" levels="1" name="Button-Eyed Bear Doll Agathion Cute Trick">
+	<skill id="23052" levels="1" name="Button-eyed Bear Doll Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -954,7 +954,7 @@
 			<player agathionId="1523" />
 		</cond>
 	</skill>
-	<skill id="23054" levels="1" name="Dryad Agathion Cute Trick">
+	<skill id="23054" levels="1" name="Agathion Cute Trick - Dryad">
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -990,7 +990,7 @@
 			<player agathionId="1526" />
 		</cond>
 	</skill>
-	<skill id="23057" levels="1" name="Red Sumo Wrestler Agathion Special Skill - Death Whisper Ability">
+	<skill id="23057" levels="1" name="Red Sumo Wrestler Agathion Special Skill: Death Whisper Ability">
 		<!-- Increases Critical attack power by 35% for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
@@ -1013,7 +1013,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23058" levels="1" name="Blue Sumo Wrestler Agathion Special Skill - Wild Magic Ability">
+	<skill id="23058" levels="1" name="Blue Sumo Wrestler Agathion Special Skill: Wild Magic Ability">
 		<!-- For 5 minutes, increases by 2% the occurrence rate of damage that is caused by damage magic. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
@@ -1036,7 +1036,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23059" levels="1" name="Great Sumo Match Agathion Special Skill - Mysterious Power">
+	<skill id="23059" levels="1" name="Great Sumo Match Agathion Special Skill: Mysterious Power">
 		<!-- A mysterious power that no one knows. Use with caution! Reuse Delay 1 hour -->
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="600" />
@@ -1056,7 +1056,7 @@
 			<player agathionId="1521" />
 		</cond>
 	</skill>
-	<skill id="23060" levels="1" name="Great Sumo Match Agathion Special Skill - Ability of Firework">
+	<skill id="23060" levels="1" name="Great Sumo Match Agathion Special Skill: Firecracker's Power">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1069,7 +1069,7 @@
 			<player agathionId="1521" />
 		</cond>
 	</skill>
-	<skill id="23061" levels="1" name="Button-Eyed Bear Doll Agathion Special Skill - Ability of Blessed Return">
+	<skill id="23061" levels="1" name="Button-eyed Bear Doll Agathion Special Skill: Ability of Blessed Escape">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="200" />
 		<set name="icon" val="icon.skill_agathion_special" />
@@ -1096,7 +1096,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23062" levels="1" name="Button-Eyed Bear Doll Agathion Special Skill - Ability of Blessed Resurrection">
+	<skill id="23062" levels="1" name="Button-eyed Bear Doll Agathion Special Skill: Ability of Blessed Resurrection">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="1" />
@@ -1121,7 +1121,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23063" levels="1" name="Button-Eyed Bear Doll Agathion Special Skill - Ability of Energy Recovery">
+	<skill id="23063" levels="1" name="Button-eyed Bear Doll Agathion Special Skill: Ability of Vitality Recovery">
 		<!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
@@ -1146,7 +1146,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23064" levels="1" name="God of Fortune Agathion Special Skill - Energy Recovery Ability">
+	<skill id="23064" levels="1" name="God of Fortune Agathion Special Skill: Vitality Recovery Ability">
 		<!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
@@ -1171,7 +1171,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23065" levels="1" name="Wonboso Agathion Special Skill - Wind Walk Ability">
+	<skill id="23065" levels="1" name="Wonboso Agathion Special Skill: Wind Walk Ability">
 		<!-- Increases moving speed by 20 for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
@@ -1221,7 +1221,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="23067" levels="1" name="Pomona Agathion Cute Trick">
+	<skill id="23067" levels="1" name="Agathion Cute Trick - Pomona">
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1233,7 +1233,7 @@
 			<player agathionId="1527" />
 		</cond>
 	</skill>
-	<skill id="23068" levels="1" name="Pomona Agathion Special Skill - Mental Shield Ability">
+	<skill id="23068" levels="1" name="Pomona Agathion Special Skill: Mental Shield">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="600" />
@@ -1314,7 +1314,6 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="70" />
 		<set name="abnormalType" val="BR_EVENT_BUF2" />
-		<set name="abnormalVisualEffect" val="BR_POWER_OF_EVA" />
 		<set name="affectRange" val="600" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="500" />
@@ -1376,7 +1375,7 @@
 			<player agathionId="1528" />
 		</cond>
 	</skill>
-	<skill id="23077" levels="1" name="Weaver Agathion Special Skill - Power of the Golden Calf">
+	<skill id="23077" levels="1" name="Weaver Agathion Special Skill: Power of the Golden Calf">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
@@ -1403,18 +1402,18 @@
 			<effect name="Buff">
 				<mul stat="maxHp" val="1.6" />
 				<mul stat="maxMp" val="1.6" />
-				<mul stat="maxCp" val="1.6" /> 
+				<mul stat="maxCp" val="1.6" />
 				<mul stat="pDef" val="1.3" />
 				<mul stat="mDef" val="1.3" />
 				<add stat="runSpd" val="30" />
-				<mul stat="pAtk" val="1.2"/>
-				<mul stat="PhysicalMpConsumeRate" val="0.9"/>
+				<mul stat="pAtk" val="1.2" />
+				<mul stat="PhysicalMpConsumeRate" val="0.9" />
 				<mul stat="MagicalMpConsumeRate" val="0.9" />
-				<mul stat="DanceMpConsumeRate" val="0.9"/>
+				<mul stat="DanceMpConsumeRate" val="0.9" />
 			</effect>
 		</for>
 	</skill>
-	<skill id="23078" levels="1" name="Weaver Agathion Special Skill - Flute Sound">
+	<skill id="23078" levels="1" name="Weaver Agathion Special Skill: Flute Sound">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
@@ -1446,13 +1445,13 @@
 				<mul stat="mDef" val="1.3" />
 				<add stat="runSpd" val="20" />
 				<mul stat="mAtk" val="1.45" />
-				<mul stat="PhysicalMpConsumeRate" val="0.9"/>
+				<mul stat="PhysicalMpConsumeRate" val="0.9" />
 				<mul stat="MagicalMpConsumeRate" val="0.85" />
-				<mul stat="DanceMpConsumeRate" val="0.9"/>
+				<mul stat="DanceMpConsumeRate" val="0.9" />
 			</effect>
 		</for>
 	</skill>
-	<skill id="23079" levels="1" name="Chon-chon Agathion Cute Trick">
+	<skill id="23079" levels="1" name="Lucky Girl Agathion Cute Trick">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
@@ -1465,7 +1464,7 @@
 			<player agathionId="1529" />
 		</cond>
 	</skill>
-	<skill id="23080" levels="1" name="Chon-chon Agathion Special Skill - Great Warrior Soul Power">
+	<skill id="23080" levels="1" name="Lucky Girl Agathion Special Skill: Brave Warrior's Soul Power">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
@@ -1484,15 +1483,15 @@
 		</cond>
 		<for>
 			<effect name="Buff">
-				<mul stat="pAtkSpd" val="1.2"/>
+				<mul stat="pAtkSpd" val="1.2" />
 				<mul stat="pDef" val="1.2" />
-				<mul stat="pAtk" val="1.1"/>
+				<mul stat="pAtk" val="1.1" />
 				<mul stat="rCrit" val="1.2" />
 				<mul stat="cAtk" val="1.2" />
 			</effect>
 		</for>
 	</skill>
-	<skill id="23081" levels="1" name="Tang-tang Agathion Cute Trick">
+	<skill id="23081" levels="1" name="Lucky Boy Agathion Cute Trick">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
@@ -1505,7 +1504,7 @@
 			<player agathionId="1530" />
 		</cond>
 	</skill>
-	<skill id="23082" levels="1" name="Tang-tang Agathion Special Skill - Great Wizard Soul Power">
+	<skill id="23082" levels="1" name="Lucky Boy Agathion Special Skill: Great Magician Soul's Ability">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
@@ -1532,7 +1531,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23083" levels="1" name="Dancing Kid Agathion Cute Trick">
+	<skill id="23083" levels="1" name="Dancing Child Agathion Cute Trick">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
@@ -1545,7 +1544,7 @@
 			<player agathionId="1531" />
 		</cond>
 	</skill>
-	<skill id="23084" levels="1" name="Dancing Kid Agathion Special Skill - Great Adventurer Soul Power">
+	<skill id="23084" levels="1" name="Dancing Child Agathion Special Skill: Prominent Adventurer Soul's Ability">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
@@ -1566,13 +1565,13 @@
 			<effect name="Buff">
 				<mul stat="maxHp" val="1.2" />
 				<mul stat="maxMp" val="1.2" />
-				<mul stat="regMp" val="1.2"/>
-				<mul stat="runSpd" val="1.2"/>
-				<mul stat="regHp" val="1.2"/>
+				<mul stat="regMp" val="1.2" />
+				<mul stat="runSpd" val="1.2" />
+				<mul stat="regHp" val="1.2" />
 			</effect>
 		</for>
 	</skill>
-	<skill id="23085" levels="1" name="Monkey King Agathion Cute Trick">
+	<skill id="23085" levels="1" name="Agathion Cute Trick - Monkey King">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
@@ -1585,7 +1584,7 @@
 			<player agathionId="1532" />
 		</cond>
 	</skill>
-	<skill id="23086" levels="1" name="Monkey King Agathion Special Skill - Great Wizard Soul Power">
+	<skill id="23086" levels="1" name="Great Wizard's Soul Power">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
@@ -1612,7 +1611,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23087" levels="1" name="Utanka Agathion Cute Trick">
+	<skill id="23087" levels="1" name="Uthanka Agathion Cute Trick">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
@@ -1625,7 +1624,7 @@
 			<player agathionId="1533" />
 		</cond>
 	</skill>
-	<skill id="23088" levels="1" name="Utanka Agathion Special Skill - Great Warrior Soul Power">
+	<skill id="23088" levels="1" name="Uthanka Agathion Special Skill: Brave Warrior's Soul Power">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
@@ -1644,9 +1643,9 @@
 		</cond>
 		<for>
 			<effect name="Buff">
-				<mul stat="pAtkSpd" val="1.2"/>
+				<mul stat="pAtkSpd" val="1.2" />
 				<mul stat="pDef" val="1.2" />
-				<mul stat="pAtk" val="1.1"/>
+				<mul stat="pAtk" val="1.1" />
 				<mul stat="rCrit" val="1.2" />
 				<mul stat="cAtk" val="1.2" />
 			</effect>
@@ -1665,7 +1664,7 @@
 			<player agathionId="1534" />
 		</cond>
 	</skill>
-	<skill id="23090" levels="1" name="Bonus B Agathion Special Skill - Great Adventurer Soul Power">
+	<skill id="23090" levels="1" name="Bonus B Agathion Special Skill: Prominent Adventurer Soul's Ability">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
@@ -1686,13 +1685,13 @@
 			<effect name="Buff">
 				<mul stat="maxHp" val="1.2" />
 				<mul stat="maxMp" val="1.2" />
-				<mul stat="regMp" val="1.2"/>
-				<mul stat="runSpd" val="1.2"/>
-				<mul stat="regHp" val="1.2"/>
+				<mul stat="regMp" val="1.2" />
+				<mul stat="runSpd" val="1.2" />
+				<mul stat="regHp" val="1.2" />
 			</effect>
 		</for>
 	</skill>
-	<skill id="23091" levels="1" name="Trick of Halloween Children">
+	<skill id="23091" levels="1" name="Three Siblings' Trickery">
 		<!-- By trick of Halloween Children, increase max HP/MP/CP by 40% for 10 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
@@ -1755,7 +1754,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="23097" levels="1" name="First Consecutive Win">
+	<skill id="23097" levels="1" name="First win">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1773,7 +1772,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="23099" levels="1" name="Third Consecutive Win">
+	<skill id="23099" levels="1" name="3rd Consecutive Win">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->

@@ -65,7 +65,7 @@ public class Freight implements IBypassHandler
 				}
 				else
 				{
-					activeChar.sendPacket(SystemMessageId.NO_ITEM_DEPOSITED_IN_WH);
+					activeChar.sendPacket(SystemMessageId.YOU_HAVE_NOT_DEPOSITED_ANY_ITEMS_IN_YOUR_WAREHOUSE);
 				}
 			}
 		}
@@ -73,7 +73,7 @@ public class Freight implements IBypassHandler
 		{
 			if (activeChar.getAccountChars().size() < 1)
 			{
-				activeChar.sendPacket(SystemMessageId.CHARACTER_DOES_NOT_EXIST);
+				activeChar.sendPacket(SystemMessageId.THAT_CHARACTER_DOES_NOT_EXIST);
 			}
 			else
 			{

@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="10300" levels="3" name="Last Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 52746 Power added to P. Atk. Cuts regular monsters' HP down to 1. Usable when target's HP is 10% or below. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. -->
+		<table name="#mpConsumes"> 276 297 315 </table>
+		<set name="icon" val="icon.skill10300" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1690" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+	</skill>
+	<skill id="10301" levels="1" name="Maximum Force Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max Momentum increases to Stage 15. -->
+		<set name="icon" val="icon.skill11842" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="10302" levels="4" name="Triple Sonic Slash">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Gathers Momentum to inflict 22531 damage onto the enemy, increasing the damage as Momentum is consumed. Damage + 30% at max Momentum consumption of 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. -->
+		<table name="#mpConsumes"> 98 105 112 119 </table>
+		<set name="icon" val="icon.skill10302" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+	</skill>
+	<skill id="10303" levels="4" name="Superior Combat Master">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max CP/ HP + 2%. -->
+		<set name="icon" val="icon.skill0430" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="10304" levels="4" name="Superior Dual Sword Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When a dualsword or dual blunt is equipped, P. Atk. + 2% and additional + 709. -->
+		<set name="icon" val="icon.skill11835" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="10305" levels="4" name="Broad Pull">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Spear Resistance - 10%. Pulls enemies from a large radius nearby. Requires a sword, blunt, spear, fist weapon, dual blunt, or dual sword. -->
+		<table name="#mpConsumes"> 62 69 76 83 </table>
+		<set name="icon" val="icon.skill11833" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="4000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10306" levels="4" name="Superior Polearm Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When a spear is equipped, P. Atk. + 2% and additional P. Atk. 583. Increases the number of possible targets by 1. -->
+		<set name="icon" val="icon.skill11836" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="10307" levels="1" name="Fist of Fury">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Greatly increases Atk. Spd. Continuously consumes HP. Requires a sword, blunt, spear, fist weapon, dual blunt, or dual sword. -->
+		<set name="icon" val="icon.skill10307new" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="10308" levels="1" name="Wild Roar">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Shouts loudly to invoke the power of the Bison. For 5 minutes, P. Atk. and Critical Damage + 45%, Critical Rate + 45, and Atk. Spd. - 15%. Requires a sword, blunt, spear, fist weapon, dual blunt, or dualsword. -->
+		<set name="icon" val="icon.skill11834" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="38" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="30000" />
+	</skill>
+	<skill id="10309" levels="4" name="Superior Fist Weapon Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When a fist weapon is equipped, P. Atk. + 2 % and additional + 709. -->
+		<set name="icon" val="icon.skill11837" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="10310" levels="1" name="Primal Rage">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 min., P. Atk. + 15%. Requires a sword, blunt, spear, fist weapon, dual blunt, or dual sword. -->
+		<set name="icon" val="icon.skill10310" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="38" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="30000" />
+	</skill>
+	<skill id="10311" levels="4" name="Superior Two-handed Weapon Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When a two-handed sword or two handed blunt is equipped, P. Atk. + 2 % and additional + 709. -->
+		<set name="icon" val="icon.skill11838" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="10312" levels="4" name="Crafting Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- There is a small chance that the item quantity will double upon crafting. Critical level 1. -->
+		<set name="icon" val="icon.skill10312" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="10313" levels="4" name="Infinite Rush">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Rush toward the frontal enemies to inflict Shock for 9 sec. Requires a sword, blunt, spear, fist weapon, dual blunt, or dual sword. -->
+		<table name="#mpConsumes"> 92 98 104 110 </table>
+		<set name="icon" val="icon.skill10313" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="500" />
+		<set name="coolTime" val="500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10314" levels="4" name="Disarmament">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Disarms enemies for 5 sec. and decreases their P. Atk./ M. Atk. by 40%. Requires a sword, blunt, spear, fist weapon, dual blunt, or dual sword. -->
+		<set name="icon" val="icon.skill0485" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="38" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10315" levels="2" name="Superior Polearm Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When a spear is equipped, P. Atk. + 2 % and additional P. Atk. + 583. -->
+		<set name="icon" val="icon.skill11836" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="10316" levels="4" name="Bloodthirst">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP P. Atk. + 5%. -->
+		<set name="icon" val="icon.skill0193" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="10317" levels="4" name="Thunder Slasher">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Swings a spear to inflict 26003 added to P. Atk. on nearby enemies and Stuns them for 5 sec. Requires a spear. Ignores Shield Defense. Over-hit. Critical. -->
+		<table name="#mpConsumes"> 122 124 129 133 </table>
+		<set name="icon" val="icon.skill10317new" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1390" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10318" levels="4" name="Sonic Flash">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Launches a wave of sword energy to inflict 17348 damage added to P. Atk., increasing the damage as Momentum is consumed. Can consume up to 3. Requires a dual sword, sword, or blunt. Over-hit. Critical. -->
+		<table name="#mpConsumes"> 98 105 112 119 </table>
+		<set name="icon" val="icon.skill10318new" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+	</skill>
+	<skill id="10319" levels="1" name="Duelist's Fury">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. + 30%, Spd. + 66, and increases debuff resistance. -->
+		<set name="icon" val="icon.skll10319" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="300" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isMagic" val="4" />
+	</skill>
+	<skill id="10320" levels="1" name="Faceoff">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Engages target in 1:1 combat. Ignores all normal attacks, skills, and debuffs, except those of the opponent. Increases your P. Atk., Spd., and debuff resistance. -->
+		<set name="icon" val="icon.skll10319" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="43" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="300" />
+		<set name="reuseDelay" val="600000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10321" levels="4" name="Thunder Spear">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks near the enemy by throwing a spear with 22536 Power added to P. Atk. Stuns for 9 seconds. Requires a spear. Over-hit. Critical hit. Ignores Shield Defense. Target cancel. -->
+		<table name="#mpConsumes"> 122 124 129 133 </table>
+		<set name="icon" val="icon.skll10321" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10322" levels="1" name="Wolf's Cry">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Shouts loudly to invoke the power of the Wolf. For 5 minutes, P. Def. and M. Def. + 50%, Max HP + 25%, and Spd. + 20. Requires a sword, blunt, spear, fist weapon, dual blunt, or dualsword. -->
+		<set name="icon" val="icon.skll10320" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="38" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="30000" />
+	</skill>
+	<skill id="10323" levels="1" name="Self Heal (Warrior)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Recovers 10% of Max HP. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="10324" levels="3" name="Momentum Master">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Power of skills that consume Momentum increase by 10%. -->
+		<set name="icon" val="icon.skill10324" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="10325" levels="3" name="Dreadful Roar">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Cancels at least one buff of nearby enemies. Consumes 10 Soulstones. -->
+		<table name="#mpConsumes"> 149 151 154 </table>
+		<set name="icon" val="icon.skill10325" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="120000" />
+	</skill>
+	<skill id="10326" levels="3" name="Bloody Fury">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 sec., P. Atk. + 450, Skill Power + 5%, and HP Recovery is limited to 70%. -->
+		<table name="#mpConsumes"> 45 50 55 </table>
+		<set name="icon" val="icon.skill10326" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="180000" />
+	</skill>
+	<skill id="10327" levels="4" name="Momentum Flash">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 17348 Power added to P. Atk. Requires a sword/dagger/blunt weapon/fist weapon. Damage increases when using Momentum, which you can use up to 3. Over-hit. Critical. -->
+		<table name="#mpConsumes"> 98 105 112 119 </table>
+		<set name="icon" val="icon.skill10327" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+	</skill>
+	<skill id="10328" levels="3" name="Soul Berserker">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When equipped with a sword or blunt weapon, P. Atk. +10%, P. Critical Damage + 10%, and P. Skill MP Consumption + 10%. -->
+		<set name="icon" val="icon.skill10328" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="10329" levels="1" name="Superior Blunt Weapon Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When equipped with a one-handed blunt weapon, P. Atk. + 21% and P. Critical Rate + 60. -->
+		<set name="icon" val="icon.skill10329" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="10330" levels="4" name="Power Hammer Crush">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 18005 Power added to P. Atk. while ignoring 30% of their P. Def. Stuns for 5 sec. Requires a blunt weapon. Over-hit. Critical. -->
+		<table name="#mpConsumes"> 92 96 101 105 </table>
+		<set name="icon" val="icon.skill10330" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="7000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+</list>

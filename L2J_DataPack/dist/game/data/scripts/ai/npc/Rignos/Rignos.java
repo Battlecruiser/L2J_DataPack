@@ -21,6 +21,7 @@ package ai.npc.Rignos;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 
@@ -64,10 +65,15 @@ public class Rignos extends AbstractNpcAI
 					npc.setScriptValue(1);
 					startQuestTimer("TIME_OUT", 1800000, npc, null);
 					TIMER.getSkill().applyEffects(player, player);
-					if (player.hasSummon())
+					final L2Summon pet = player.getPet();
+					if (pet != null)
 					{
-						TIMER.getSkill().applyEffects(player.getSummon(), player.getSummon());
+						TIMER.getSkill().applyEffects(pet, pet);
 					}
+					player.getServitors().values().forEach(s ->
+					{
+						TIMER.getSkill().applyEffects(s, s);
+					});
 					
 					if (hasQuestItems(player, STAMP))
 					{

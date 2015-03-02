@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="19001" levels="1" name="Test Bleed">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Race confirm -->
+		<set name="icon" val="icon.skill0010509" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1080" />
+		<set name="coolTime" val="720" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="19002" levels="1" name="Anchor">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Action prevent item skill confirm -->
+		<set name="icon" val="icon.skill10510" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="400" />
+		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="19003" levels="5" name="Clan Resistance Hall">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases clan members' Holy/Dark Attack Resistance by 3. Applies after the elder stage. -->
+		<set name="icon" val="icon.skill19003" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="19004" levels="5" name="Clan De-Buff Control">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases clan members' Debuff Resistance by 3%. Applies after the elder stage. -->
+		<set name="icon" val="icon.skill19004" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="19005" levels="5" name="Clan Muzzle Control">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases clan members' Paralysis Resistance by 12. Applies after the elder stage. -->
+		<set name="icon" val="icon.skill19005" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="19006" levels="5" name="Clan Mental Control">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases clan members' Mental Attack Resistance by 12. Applies after the elder stage. -->
+		<set name="icon" val="icon.skill19006" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="19007" levels="1" name="Clan Summon">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons a clan member. Consumes 5 Spirit Ores. Consumes 900 Individual Fame. Applies after the viscount stage. -->
+		<set name="icon" val="icon.skill19007" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="-2" />
+		<set name="hitTime" val="15000" />
+		<set name="reuseDelay" val="1800000" />
+	</skill>
+	<skill id="19008" levels="1" name="Clan Guardian">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Uses the clan guardian's power to restore nearby clan members' HP/MP/CP. Consumes 100 Spirit Ores. Consumes 1000 Clan Reputation. Distinguished King or above only. -->
+		<set name="icon" val="icon.skill19008" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="3600000" />
+	</skill>
+	<skill id="19009" levels="1" name="Clan Advent">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When the clan leader logs in, clan members' P. Atk., P. Def., and M. Def. + 5%, M. Atk. + 6%, and HP/MP recovery bonus + 5. -->
+		<set name="icon" val="icon.skill19009" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="4" />
+	</skill>
+	<skill id="19010" levels="1" name="Clan Copy">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons a copy of yourself to cause confusion among the enemy. Consumes 50 Spirit Ores. Consumes 1500 Individual Fame. Marquis or above only. -->
+		<set name="icon" val="icon.skill19010" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="3600000" />
+	</skill>
+	<skill id="19011" levels="1" name="Clan Legend">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases P. Atk. and P. Def. when HP is below 30%. Applies after the lord stage. -->
+		<set name="icon" val="icon.skill19011" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="19012" levels="1" name="Clan Hide">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Hides nearby clan members. Decreases Speed by 50% when hidden. Consumes 150 Soulstones. Consumes 1000 Clan Reputation. Applies after the lord stage. -->
+		<set name="icon" val="icon.skill19012" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="reuseDelay" val="14400000" />
+	</skill>
+	<skill id="19013" levels="1" name="Clan Un-debuff">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Cancels all debuffs of nearby clan members. Consumes 30 Spirit Ore. Consumes 1500 Individual Fame. Applies after the marquis stage. -->
+		<set name="icon" val="icon.skill19013" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="3600000" />
+	</skill>
+	<skill id="19014" levels="1" name="Clan Defense">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Makes nearby clan members invincible. Consumes 30 Spirit Ore. Consumes 1000 Clan Reputation. Applies after the distinguished king stage. -->
+		<set name="icon" val="icon.skill19014" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="3600000" />
+	</skill>
+	<skill id="19015" levels="1" name="Clan Friendly">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases nearby clan members' P. Critical Rate by 3% and M. Critical Rate by 20. Consumes 50 Spirit Ore. Consumes 3500 Individual Fame. Applies after the marquis stage. -->
+		<set name="icon" val="icon.skill19015" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="3600000" />
+	</skill>
+	<skill id="19016" levels="1" name="Clan Boundary">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases nearby clan members' P. Atk. by 3% and P. Def. by 3%. Consumes 50 Spirit Ore. Consumes 3000 Individual Fame. Applies after the count stage. -->
+		<set name="icon" val="icon.skill19016" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="3600000" />
+	</skill>
+	<skill id="19017" levels="1" name="Clan Prison">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 sec., Speed of nearby enemies - 23% and stops them from escaping. Consumes 30 Spirit Ore. Consumes 3000 Individual Fame. Applies after the duke stage. -->
+		<set name="icon" val="icon.skill19017" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="19018" levels="1" name="Clan Guardian Recovery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Restores HP/MP/CP. -->
+		<set name="icon" val="icon.skill19008" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="19019" levels="1" name="Revolution Blade">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts physical damage on target. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed. -->
+		<set name="icon" val="icon.skill10013" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="3000" />
+	</skill>
+	<skill id="19020" levels="1" name="Revolution Eruption">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks frontal targets to inflict physical damage. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed. -->
+		<set name="icon" val="icon.skill10265" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="6000" />
+	</skill>
+	<skill id="19021" levels="1" name="Revolution Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts powerful physical damage on target. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed. -->
+		<set name="icon" val="icon.skill10260" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="30000" />
+	</skill>
+	<skill id="19022" levels="1" name="Revolution Shot">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks distant enemies. Requires a bow or crossbow to be equipped. Over-hit. Critical. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed. -->
+		<set name="icon" val="icon.skill10762" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="3000" />
+	</skill>
+	<skill id="19023" levels="1" name="Revolution Multi-Shot">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Does ranged attacks centered on frontal target. Requires a bow or crossbow to be equipped. Over-hit. Critical. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed. -->
+		<set name="icon" val="icon.skill10771" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="6000" />
+	</skill>
+	<skill id="19024" levels="1" name="Revolution Tornado Shot">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a penetrating attack on enemies at the front. Requires a bow or crossbow to be equipped. Over-hit. Critical. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed. -->
+		<set name="icon" val="icon.skill10760" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="30000" />
+	</skill>
+	<skill id="19025" levels="1" name="Revolution Spike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack on target. Over-hit. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed. -->
+		<set name="icon" val="icon.skill11011" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="3000" />
+	</skill>
+	<skill id="19026" levels="1" name="Revolution Blast">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack on target and enemies near target. Over-hit. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed. -->
+		<set name="icon" val="icon.skill11034" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="6000" />
+	</skill>
+	<skill id="19027" levels="1" name="Revolution Destruction">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a powerful magic attack on target. Over-hit. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed. -->
+		<set name="icon" val="icon.skill11023" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="30000" />
+	</skill>
+	<skill id="19028" levels="2" name="Revolution Spirit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max CP by 10000, P. Def. by 1000, and M. Def. by 1000 for 5 minutes. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed. -->
+		<set name="icon" val="BranchSys2.icon.skill20006" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="3000" />
+	</skill>
+	<skill id="19029" levels="1" name="Revolution Self CP Recovery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases combat spirit to recover your own CP by 2000. Can only be used by characters between lv 40-84 within the castle siege area. Soulshots and Spiritshots are not consumed. -->
+		<set name="icon" val="icon.skill0440" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="3000" />
+	</skill>
+	<skill id="19030" levels="1" name="Revolution CP Recovery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases combat spirit to recover target's CP by 1000. Can only be used by characters between lv 40-84 within the castle siege area. Soulshots and Spiritshots are not consumed. -->
+		<set name="icon" val="icon.skill11755" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="6000" />
+	</skill>
+	<skill id="19031" levels="1" name="Revolution Party CP Recovery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases combat spirit to recover a party member's CP by 1000. Can only be used by characters between lv 40-84 within the castle siege area. Soulshots and Spiritshots are not consumed. -->
+		<set name="icon" val="icon.skill11757" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="6000" />
+	</skill>
+	<skill id="19032" levels="1" name="Ability of Light">
+		<!-- TODO: confirm me -->
+		<!-- Imbued with the Ability of Light. Increases Max CP by 3000 and damage inflicted during PvP by 10%. Effects do not apply when in Chaotic state. Can be used by a Marquis or higher. -->
+		<set name="icon" val="icon.skill19008" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113">
+			<player chaotic="false" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<add stat="maxCp" val="3000" />
+				<mul stat="pvpPhysDmg" val="1.10" />
+				<mul stat="pvpPhysSkillsDmg" val="1.10" />
+				<mul stat="pvpMagicalDmg" val="1.10" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19033" levels="1" name="Ability of Darkness">
+		<!-- TODO: confirm me -->
+		<!-- Imbued with the Ability of Darkness. Increases Max CP by 3000 and damage inflicted during PvP by 10%. Can be used by a Marquis or higher. -->
+		<set name="icon" val="icon.skill19008" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113">
+			<player chaotic="false" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<add stat="maxCp" val="3000" />
+				<mul stat="pvpPhysDmg" val="1.10" />
+				<mul stat="pvpPhysSkillsDmg" val="1.10" />
+				<mul stat="pvpMagicalDmg" val="1.10" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19034" levels="1" name="Imprint of Light">
+		<!-- Engraves the Imprint of Light on the ancient relic that guards the castle. -->
+		<set name="castRange" val="85" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="180000" />
+		<set name="icon" val="icon.skill0246" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="30" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="5000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="HOLY" />
+		<cond>
+			<player canTakeCastle="true" />
+		</cond>
+		<startEffects>
+			<effect name="TakeCastleStart" />
+		</startEffects>
+		<for>
+			<effect name="TakeCastle">
+				<param side="LIGHT" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19035" levels="1" name="Imprint of Darkness">
+		<!-- Engraves the Imprint of Darkness on the ancient relic that guards the castle. -->
+		<set name="castRange" val="85" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="180000" />
+		<set name="icon" val="icon.skill0246" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="30" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="5000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="HOLY" />
+		<cond>
+			<player canTakeCastle="true" />
+		</cond>
+		<startEffects>
+			<effect name="TakeCastleStart" />
+		</startEffects>
+		<for>
+			<effect name="TakeCastle">
+				<param side="DARK" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19036" levels="1" name="Blessing of Light">
+		<!-- TODO: Confir me -->
+		<!-- Acquires 3% additional XP and SP through the blessing of the Guardian of Light. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="4" />
+		<set name="abnormalTime" val="3600" />		
+		<for>
+			<effect name="Buff">
+				<add stat="bonusExp" val="3" />
+				<add stat="bonusSp" val="3" />				
+			</effect>
+		</for>		
+	</skill>
+	<skill id="19037" levels="1" name="Cloak of Radiant Light">
+		<!-- TODO: Confirm me -->
+		<!-- STR/MEN/DEX/CON/INT/WIT + 3, decreased damage received during PvP by 15%. Ineffective in Chaotic state. -->
+		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113">
+			<player chaotic="false" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<mul stat="pvpPhysDef" val="1.15" />
+				<mul stat="pvpMagicalDef" val="1.15" />
+				<mul stat="pvpPhysSkillsDef" val="1.15" />
+				<add stat="STR" val="3" />
+				<add stat="DEX" val="3" />
+				<add stat="CON" val="3" />
+				<add stat="INT" val="3" />
+				<add stat="WIT" val="3" />
+				<add stat="MEN" val="3" />
+				<add stat="pDef" val="100.0" />
+				<add stat="mDef" val="80.0" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19038" levels="1" name="Cold Cloak of Darkness">
+		<!-- TODO: Confirm me -->
+		<!-- STR/MEN/DEX/CON/INT/WIT + 3, decreased damage received during PvP by 15%. -->
+		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pvpPhysDef" val="1.15" />
+				<mul stat="pvpMagicalDef" val="1.15" />
+				<mul stat="pvpPhysSkillsDef" val="1.15" />
+				<add stat="STR" val="3" />
+				<add stat="DEX" val="3" />
+				<add stat="CON" val="3" />
+				<add stat="INT" val="3" />
+				<add stat="WIT" val="3" />
+				<add stat="MEN" val="3" />
+				<add stat="pDef" val="100.0" />
+				<add stat="mDef" val="80.0" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19039" levels="1" name="Cloak of Light">
+		<!-- TODO: Confirm me -->
+		<!-- STR/MEN/DEX/CON/INT/WIT + 2, decreased damage received during PvP by 5%. Ineffective in Chaotic state. -->
+		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff">
+					<mul stat="pvpPhysDef" val="1.05" />
+					<mul stat="pvpMagicalDef" val="1.05" />
+					<mul stat="pvpPhysSkillsDef" val="1.05" />
+					<add stat="STR" val="2" />
+					<add stat="DEX" val="2" />
+					<add stat="CON" val="2" />
+					<add stat="INT" val="2" />
+					<add stat="WIT" val="2" />
+					<add stat="MEN" val="2" />
+					<add stat="pDef" val="50.0" />
+					<add stat="mDef" val="40.0" />
+				</effect>
+			</for>
+	</skill>
+	<skill id="19040" levels="1" name="Cloak of Darkness">
+		<!-- TODO: Confirm me -->
+		<!-- STR/MEN/DEX/CON/INT/WIT + 2, decreased damage received during PvP by 5%. -->
+		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pvpPhysDef" val="1.05" />
+				<mul stat="pvpMagicalDef" val="1.05" />
+				<mul stat="pvpPhysSkillsDef" val="1.05" />
+				<add stat="STR" val="2" />
+				<add stat="DEX" val="2" />
+				<add stat="CON" val="2" />
+				<add stat="INT" val="2" />
+				<add stat="WIT" val="2" />
+				<add stat="MEN" val="2" />
+				<add stat="pDef" val="50.0" />
+				<add stat="mDef" val="40.0" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19041" levels="1" name="Escape: Castle">
+		<!-- TODO: Confirm me -->
+		<!-- Return to Castle. -->
+		<set name="hitTime" val="20000" />
+		<set name="icon" val="icon.skill0000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="1800000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
+		</cond>
+		<for>
+			<effect name="Escape">
+				<param escapeType="CASTLE" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="19042" levels="1" name="Blessed Scroll of Escape: Castle">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Return to Castle. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="200" />
+		<set name="reuseDelay" val="3600000" />
+	</skill>
+	<skill id="19074" levels="2" name="Academy Precept">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 minutes, increases academy members' P. Atk. by 10%, M. Atk. by 10%, Critical Rate by 10%, and M. Critical Rate by 10%. -->
+		<table name="#reuseDelays"> 43200000 21600000 </table>
+		<set name="icon" val="icon.skill19008" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="100" />
+		<set name="castRange" val="400" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="#reuseDelays" />
+	</skill>
+	<skill id="19075" levels="1" name="Clan Relation">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill19008" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="19076" levels="1" name="Clan Academy Reward">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="19080" levels="1" name="Sigel Ixion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Transforms into Ixion. -->
+		<set name="icon" val="icon.skilltransform3" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+	</skill>
+	<skill id="19081" levels="1" name="Tyrr Ixion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Transforms into Ixion. -->
+		<set name="icon" val="icon.skilltransform3" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+	</skill>
+	<skill id="19082" levels="1" name="Othell Ixion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Transforms into Ixion. -->
+		<set name="icon" val="icon.skilltransform3" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+	</skill>
+	<skill id="19083" levels="1" name="Yul Ixion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Transforms into Ixion. -->
+		<set name="icon" val="icon.skilltransform3" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+	</skill>
+	<skill id="19084" levels="1" name="Feoh Ixion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Transforms into Ixion. -->
+		<set name="icon" val="icon.skilltransform3" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+	</skill>
+	<skill id="19085" levels="1" name="Iss Ixion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Transforms into Ixion. -->
+		<set name="icon" val="icon.skilltransform3" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+	</skill>
+	<skill id="19086" levels="1" name="Wynn Ixion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Transforms into Ixion. -->
+		<set name="icon" val="icon.skilltransform3" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+	</skill>
+	<skill id="19087" levels="1" name="Aeore Ixion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Transforms into Ixion. -->
+		<set name="icon" val="icon.skilltransform3" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+	</skill>
+	<skill id="19088" levels="4" name="Summon Siege Golem">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons a siege weapon. Requires 400 R-grade Crystals. Automatically acquired by dwarves at level 85. -->
+		<set name="icon" val="icon.skill0013" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="530" />
+		<set name="hitTime" val="180000" />
+		<set name="reuseDelay" val="7200000" />
+	</skill>
+	<skill id="19089" levels="4" name="Summon Wild Hog Cannon">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons a siege weapon. Can only move in normal mode. During siege mode, it cannot move, and it can inflict ranged attacks. Switching modes takes 30 seconds. Requires 100 R-grade Crystals. Automatically acquired by Maestro class at level 85. -->
+		<set name="icon" val="icon.skill0299" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="530" />
+		<set name="hitTime" val="30000" />
+		<set name="reuseDelay" val="1200000" />
+	</skill>
+	<skill id="19090" levels="4" name="Summon Swoop Cannon">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons a Swoop Cannon. Requires 500 R-grade Crystals. Automatically acquired by dwarves at level 85. -->
+		<set name="icon" val="icon.skill0448" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="530" />
+		<set name="hitTime" val="10000" />
+		<set name="reuseDelay" val="7200000" />
+	</skill>
+	<skill id="19091" levels="1" name="Increase Item Drop Rate">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Item Drop Rate upon PK. -->
+		<set name="icon" val="icon.skill1170" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="19092" levels="2" name="Chat Prohibited">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Chatting is restricted. -->
+		<table name="#castRanges"> 900 -1 </table>
+		<table name="#coolTimes"> 500 0 </table>
+		<table name="#hitTimes"> 2000 1500 </table>
+		<table name="#icons"> icon.skill1170 icon.skill10313 </table>
+		<table name="#isDebuffs"> true false </table>
+		<table name="#isMagics"> 0 1 </table>
+		<table name="#mpConsumes"> 1 2 </table>
+		<table name="#reuseDelays"> 0 150000 </table>
+		<set name="icon" val="#icons" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="#castRanges" />
+		<set name="hitTime" val="#hitTimes" />
+		<set name="coolTime" val="#coolTimes" />
+		<set name="reuseDelay" val="#reuseDelays" />
+		<set name="isMagic" val="#isMagics" />
+		<set name="isDebuff" val="#isDebuffs" />
+	</skill>
+	<skill id="19093" levels="1" name="Added Blow Quiver">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Chance of inflicting damage again upon shooting. -->
+		<set name="icon" val="icon.skill0256" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+	</skill>
+	<skill id="19094" levels="1" name="Increased Damage Quiver">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Great damage occurs if critical occurs while shooting. -->
+		<set name="icon" val="icon.skill0256" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+	</skill>
+	<skill id="19095" levels="1" name="Added Bleed Quiver">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Chance of inflicting bleed if critical occurs while shooting. -->
+		<set name="icon" val="icon.skill0256" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+	</skill>
+	<skill id="19096" levels="1" name="Added Blow">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0056" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+	</skill>
+	<skill id="19097" levels="1" name="Critical Target">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0056" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="reuseDelay" val="10000" />
+	</skill>
+	<skill id="19098" levels="1" name="Bleed Target">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Consumes 100 HP per second for 15 seconds. -->
+		<set name="icon" val="icon.skill0096" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="19099" levels="1" name="GM's Authority">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts petrification on target for 60 minutes. -->
+		<set name="icon" val="icon.skill0367" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+</list>

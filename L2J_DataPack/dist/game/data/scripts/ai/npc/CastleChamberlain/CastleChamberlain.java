@@ -28,16 +28,15 @@ import java.util.StringTokenizer;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.SevenSigns;
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
 import com.l2jserver.gameserver.data.sql.impl.TeleportLocationTable;
+import com.l2jserver.gameserver.enums.CastleSide;
 import com.l2jserver.gameserver.instancemanager.CastleManorManager;
 import com.l2jserver.gameserver.instancemanager.FortManager;
 import com.l2jserver.gameserver.model.ClanPrivilege;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2TeleportLocation;
 import com.l2jserver.gameserver.model.PcCondOverride;
-import com.l2jserver.gameserver.model.SeedProduction;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2MerchantInstance;
@@ -56,7 +55,6 @@ import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExShowCropInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExShowCropSetting;
-import com.l2jserver.gameserver.network.serverpackets.ExShowDominionRegistry;
 import com.l2jserver.gameserver.network.serverpackets.ExShowManorDefaultInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExShowSeedInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExShowSeedSetting;
@@ -70,20 +68,25 @@ import com.l2jserver.gameserver.util.Util;
 public final class CastleChamberlain extends AbstractNpcAI
 {
 	// NPCs
+	//@formatter:off
 	private static final int[] NPC =
 	{
-		35100, // Sayres
-		35142, // Crosby
-		35184, // Saul
-		35226, // Brasseur
-		35274, // Logan
-		35316, // Neurath
-		35363, // Alfred
-		35509, // Frederick
-		35555, // August
+		// Chamberlain of Light / Chamberlain of Darkness
+		35100, 36653, // Gludio
+		35142, 36654, // Dion
+		35184, 36655, // Giran
+		35226, 36656, // Oren
+		35274, 36657, // Aden
+		35316, 36658, // Innadril
+		35363, 36659, // Goddard
+		35509, 36660, // Rune
+		35555, 36661, // Schuttgart
 	};
+	//@formatter:on
 	// Item
 	private static final int CROWN = 6841;
+	private static final int LORD_CLOAK_OF_LIGHT = 34996;
+	private static final int LORD_CLOAK_OF_DARK = 34997;
 	// Fortress
 	private static final Map<Integer, List<Integer>> FORTRESS = new HashMap<>();
 	static
@@ -299,52 +302,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 				break;
 			}
 		}
-		switch (SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_STRIFE))
-		{
-			case SevenSigns.CABAL_DUSK:
-				price *= 3;
-				break;
-			case SevenSigns.CABAL_DAWN:
-				price *= 0.8;
-				break;
-		}
 		return price;
-	}
-	
-	private final String getSealOwner(final int seal)
-	{
-		String npcString;
-		switch (SevenSigns.getInstance().getSealOwner(seal))
-		{
-			case SevenSigns.CABAL_DAWN:
-				npcString = "1000511";
-				break;
-			case SevenSigns.CABAL_DUSK:
-				npcString = "1000510";
-				break;
-			default:
-				npcString = "1000512";
-				break;
-		}
-		return npcString;
-	}
-	
-	private final int getTaxLimit()
-	{
-		final int taxLimit;
-		switch (SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_STRIFE))
-		{
-			case SevenSigns.CABAL_DAWN:
-				taxLimit = 25;
-				break;
-			case SevenSigns.CABAL_DUSK:
-				taxLimit = 5;
-				break;
-			default:
-				taxLimit = 15;
-				break;
-		}
-		return taxLimit;
 	}
 	
 	private final int getTrapUpgradePrice(final int level)
@@ -363,16 +321,6 @@ public final class CastleChamberlain extends AbstractNpcAI
 				break;
 			case 4:
 				price = Config.TRAP_UPGRADE_PRICE4;
-				break;
-		}
-		
-		switch (SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_STRIFE))
-		{
-			case SevenSigns.CABAL_DUSK:
-				price *= 3;
-				break;
-			case SevenSigns.CABAL_DAWN:
-				price *= 0.8;
 				break;
 		}
 		return price;
@@ -465,10 +413,6 @@ public final class CastleChamberlain extends AbstractNpcAI
 					{
 						htmltext = "chamberlain-27.html";
 					}
-					else if (!SevenSigns.getInstance().isCompResultsPeriod())
-					{
-						htmltext = "chamberlain-26.html";
-					}
 					else
 					{
 						htmltext = "chamberlain-12.html";
@@ -498,7 +442,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 					}
 					else
 					{
-						htmltext = npc.getId() + "-du.html";
+						htmltext = npc.getCastle().getName() + "-du.html";
 					}
 				}
 				else
@@ -595,7 +539,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 					}
 					else
 					{
-						htmltext = npc.getId() + "-tu.html";
+						htmltext = npc.getCastle().getName() + "-tu.html";
 					}
 				}
 				else
@@ -676,86 +620,6 @@ public final class CastleChamberlain extends AbstractNpcAI
 						html.replace("%clanleadername%", clan.getLeaderName());
 						html.replace("%clanname%", clan.getName());
 						html.replace("%castlename%", String.valueOf(1001000 + castle.getResidenceId()));
-						
-						switch (SevenSigns.getInstance().getCurrentPeriod())
-						{
-							case SevenSigns.PERIOD_COMP_RECRUITING:
-								html.replace("%ss_event%", "1000509");
-								break;
-							case SevenSigns.PERIOD_COMPETITION:
-								html.replace("%ss_event%", "1000507");
-								break;
-							case SevenSigns.PERIOD_SEAL_VALIDATION:
-							case SevenSigns.PERIOD_COMP_RESULTS:
-								html.replace("%ss_event%", "1000508");
-								break;
-						}
-						html.replace("%ss_avarice%", getSealOwner(1));
-						html.replace("%ss_gnosis%", getSealOwner(2));
-						html.replace("%ss_strife%", getSealOwner(3));
-						player.sendPacket(html);
-					}
-				}
-				else
-				{
-					htmltext = "chamberlain-21.html";
-				}
-				break;
-			}
-			case "manage_tax":
-			{
-				if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_TAXES))
-				{
-					if (castle.getSiege().isInProgress())
-					{
-						htmltext = "chamberlain-08.html";
-					}
-					else
-					{
-						final NpcHtmlMessage html = getHtmlPacket(player, npc, "castlesettaxrate.html");
-						html.replace("%tax_rate%", Integer.toString(castle.getTaxPercent()));
-						html.replace("%next_tax_rate%", "0"); // TODO: Implement me!
-						html.replace("%tax_limit%", Integer.toString(getTaxLimit()));
-						player.sendPacket(html);
-					}
-				}
-				else if (isOwner(player, npc))
-				{
-					final NpcHtmlMessage html = getHtmlPacket(player, npc, "chamberlain-03.html");
-					html.replace("%tax_rate%", Integer.toString(castle.getTaxPercent()));
-					html.replace("%next_tax_rate%", "0"); // TODO: Implement me!
-					player.sendPacket(html);
-				}
-				else
-				{
-					htmltext = "chamberlain-21.html";
-				}
-				break;
-			}
-			case "set_tax":
-			{
-				if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_TAXES))
-				{
-					if (castle.getSiege().isInProgress())
-					{
-						htmltext = "chamberlain-08.html";
-					}
-					else
-					{
-						final NpcHtmlMessage html;
-						final int tax = (st.hasMoreTokens()) ? Integer.parseInt(st.nextToken()) : 0;
-						final int taxLimit = getTaxLimit();
-						if (tax > taxLimit)
-						{
-							html = getHtmlPacket(player, npc, "castletoohightaxrate.html");
-							html.replace("%tax_limit%", Integer.toString(taxLimit));
-						}
-						else
-						{
-							castle.setTaxPercent(tax);
-							html = getHtmlPacket(player, npc, "castleaftersettaxrate.html");
-							html.replace("%next_tax_rate%", Integer.toString(tax));
-						}
 						player.sendPacket(html);
 					}
 				}
@@ -769,23 +633,36 @@ public final class CastleChamberlain extends AbstractNpcAI
 			{
 				if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_TAXES))
 				{
-					long seedIncome = 0;
-					if (Config.ALLOW_MANOR)
-					{
-						for (SeedProduction sp : CastleManorManager.getInstance().getSeedProduction(castle.getResidenceId(), false))
-						{
-							final long diff = sp.getStartAmount() - sp.getAmount();
-							if (diff != 0)
-							{
-								seedIncome += diff * sp.getPrice();
-							}
-						}
-					}
-					
 					final NpcHtmlMessage html = getHtmlPacket(player, npc, "castlemanagevault.html");
 					html.replace("%tax_income%", Util.formatAdena(castle.getTreasury()));
-					html.replace("%tax_income_reserved%", "0"); // TODO: Implement me!
-					html.replace("%seed_income%", Util.formatAdena(seedIncome));
+					player.sendPacket(html);
+				}
+				else
+				{
+					htmltext = "chamberlain-21.html";
+				}
+				break;
+			}
+			case "manage_vault_deposit":
+			{
+				if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_TAXES))
+				{
+					final NpcHtmlMessage html = getHtmlPacket(player, npc, "castlemanagevault_deposit.html");
+					html.replace("%tax_income%", Util.formatAdena(castle.getTreasury()));
+					player.sendPacket(html);
+				}
+				else
+				{
+					htmltext = "chamberlain-21.html";
+				}
+				break;
+			}
+			case "manage_vault_withdraw":
+			{
+				if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_TAXES))
+				{
+					final NpcHtmlMessage html = getHtmlPacket(player, npc, "castlemanagevault_withdraw.html");
+					html.replace("%tax_income%", Util.formatAdena(castle.getTreasury()));
 					player.sendPacket(html);
 				}
 				else
@@ -808,7 +685,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 						}
 						else
 						{
-							player.sendPacket(SystemMessageId.YOU_NOT_ENOUGH_ADENA);
+							player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 						}
 					}
 					htmltext = "chamberlain-01.html";
@@ -908,7 +785,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 				}
 				else
 				{
-					htmltext = npc.getId() + "-d.html";
+					htmltext = npc.getCastle().getName() + "-d.html";
 				}
 				break;
 			}
@@ -1051,7 +928,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 				}
 				else
 				{
-					htmltext = npc.getId() + "-t" + castle.getFunction(Castle.FUNC_TELEPORT).getLvl() + ".html";
+					htmltext = npc.getCastle().getName() + "-t" + castle.getFunction(Castle.FUNC_TELEPORT).getLvl() + ".html";
 				}
 				break;
 			}
@@ -1145,18 +1022,6 @@ public final class CastleChamberlain extends AbstractNpcAI
 				}
 				break;
 			}
-			case "list_territory_clans":
-			{
-				if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_MANAGE_SIEGE))
-				{
-					player.sendPacket(new ExShowDominionRegistry(castle.getResidenceId(), player));
-				}
-				else
-				{
-					htmltext = "chamberlain-21.html";
-				}
-				break;
-			}
 			case "manor":
 			{
 				if (Config.ALLOW_MANOR)
@@ -1195,6 +1060,30 @@ public final class CastleChamberlain extends AbstractNpcAI
 				}
 				break;
 			}
+			case "give_cloak":
+			{
+				if (castle.getSiege().isInProgress())
+				{
+					htmltext = "chamberlain-08.html";
+					break;
+				}
+				else if (npc.isMyLord(player))
+				{
+					final int cloakId = npc.getCastle().getSide() == CastleSide.DARK ? LORD_CLOAK_OF_DARK : LORD_CLOAK_OF_LIGHT;
+					
+					if (hasQuestItems(player, cloakId))
+					{
+						htmltext = "chamberlain-03.html";
+						break;
+					}
+					giveItems(player, cloakId, 1);
+				}
+				else
+				{
+					htmltext = "chamberlain-29.html";
+				}
+				break;
+			}
 			case "give_crown":
 			{
 				if (castle.getSiege().isInProgress())
@@ -1222,88 +1111,6 @@ public final class CastleChamberlain extends AbstractNpcAI
 				}
 				break;
 			}
-			case "manors_cert":
-			{
-				if (npc.isMyLord(player))
-				{
-					if (castle.getSiege().isInProgress())
-					{
-						htmltext = "chamberlain-08.html";
-					}
-					else
-					{
-						if ((SevenSigns.getInstance().getPlayerCabal(player.getObjectId()) == SevenSigns.CABAL_DAWN) && SevenSigns.getInstance().isCompetitionPeriod())
-						{
-							final int ticketCount = castle.getTicketBuyCount();
-							if (ticketCount < (Config.SSQ_DAWN_TICKET_QUANTITY / Config.SSQ_DAWN_TICKET_BUNDLE))
-							{
-								final NpcHtmlMessage html = getHtmlPacket(player, npc, "ssq_selldawnticket.html");
-								html.replace("%DawnTicketLeft%", String.valueOf(Config.SSQ_DAWN_TICKET_QUANTITY - (ticketCount * Config.SSQ_DAWN_TICKET_BUNDLE)));
-								html.replace("%DawnTicketBundle%", String.valueOf(Config.SSQ_DAWN_TICKET_BUNDLE));
-								html.replace("%DawnTicketPrice%", String.valueOf(Config.SSQ_DAWN_TICKET_PRICE * Config.SSQ_DAWN_TICKET_BUNDLE));
-								player.sendPacket(html);
-							}
-							else
-							{
-								htmltext = "ssq_notenoughticket.html";
-							}
-						}
-						else
-						{
-							htmltext = "ssq_notdawnorevent.html";
-						}
-					}
-				}
-				else
-				{
-					htmltext = "chamberlain-21.html";
-				}
-				break;
-			}
-			case "manors_cert_confirm":
-			{
-				if (npc.isMyLord(player))
-				{
-					if (castle.getSiege().isInProgress())
-					{
-						htmltext = "chamberlain-08.html";
-					}
-					else
-					{
-						if ((SevenSigns.getInstance().getPlayerCabal(player.getObjectId()) == SevenSigns.CABAL_DAWN) && SevenSigns.getInstance().isCompetitionPeriod())
-						{
-							final int ticketCount = castle.getTicketBuyCount();
-							if (ticketCount < (Config.SSQ_DAWN_TICKET_QUANTITY / Config.SSQ_DAWN_TICKET_BUNDLE))
-							{
-								final long totalCost = Config.SSQ_DAWN_TICKET_PRICE * Config.SSQ_DAWN_TICKET_BUNDLE;
-								if (player.getAdena() >= totalCost)
-								{
-									takeItems(player, Inventory.ADENA_ID, totalCost);
-									giveItems(player, Config.SSQ_MANORS_AGREEMENT_ID, Config.SSQ_DAWN_TICKET_BUNDLE);
-									castle.setTicketBuyCount(ticketCount + 1);
-								}
-								else
-								{
-									htmltext = "chamberlain-09.html";
-								}
-							}
-							else
-							{
-								htmltext = "ssq_notenoughticket.html";
-							}
-						}
-						else
-						{
-							htmltext = "ssq_notdawnorevent.html";
-						}
-					}
-				}
-				else
-				{
-					htmltext = "chamberlain-21.html";
-				}
-				break;
-			}
 		}
 		return htmltext;
 	}
@@ -1317,7 +1124,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 	// @formatter:off
 	@RegisterEvent(EventType.ON_NPC_MANOR_BYPASS)
 	@RegisterType(ListenerRegisterType.NPC)
-	@Id({35100, 35142, 35184, 35226, 35274,	35316, 35363, 35509, 35555})
+	@Id({35100, 35142, 35184, 35226, 35274,	35316, 35363, 35509, 35555, 36653, 36654, 36655, 36656, 36657, 36658, 36659, 36660, 36661})
 	// @formatter:on
 	public final void onNpcManorBypass(OnNpcManorBypass evt)
 	{

@@ -14,7 +14,7 @@
 			<add stat="maxMp" val="31" />
 		</for>
 	</item>
-	<item id="17201" type="EtcItem" name="Proof of Cheers">
+	<item id="17201" type="EtcItem" name="Mark of Cheers">
 		<!-- Description: National Representative Warrior's tenacity. Mark needed to use the Spell of Blessing and Energy of Victory skill. Cannot be exchanged or dropped. -->
 		<set name="icon" val="BranchSys2.icon.br_cheer_symbol_i00" />
 		<set name="material" val="PAPER" />
@@ -22,7 +22,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17202" type="EtcItem" name="Proof of Cheers 10 Pack">
+	<item id="17202" type="EtcItem" name="Mark of Cheers 10-unit Pack">
 		<!-- Description: Wrapped pack containing 10 proofs of cheers. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
@@ -30,7 +30,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17203" type="Armor" name="Agathion Seal Bracelet - Ball Trapping Gnosian">
+	<item id="17203" type="Armor" name="Agathion - Ball Trapping Gnosian">
 		<!-- Description: Bracelet that summons a ball trapping Gnosian. It wears a red uniform. Cannot be exchanged or dropped. Cannot use a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_kball_male_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -43,7 +43,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8515-1;23236-1;23237-1;3267-1" />
 	</item>
-	<item id="17204" type="Armor" name="Agathion Seal Bracelet - Ball Trapping Orodriel">
+	<item id="17204" type="Armor" name="Agathion - Ball Trapping Orodriel">
 		<!-- Description: Bracelet that summons a ball trapping Orodriel. It wears a red uniform. Cannot be exchanged or dropped. Cannot use a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_kball_female_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -56,7 +56,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8516-1;23236-1;23237-1;3267-1" />
 	</item>
-	<item id="17205" type="Armor" name="Agathion Seal Bracelet - Penalty Kick">
+	<item id="17205" type="Armor" name="Agathion - Penalty Kick">
 		<!-- Description: Bracelet that summons a Gnosian and Orodriel who are practicing penalty kicks. All are wearing red uniforms. Cannot be exchanged or dropped. Cannot use a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_kball_kick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -241,7 +241,7 @@
 		<set name="icon" val="icon.weapon_mace_of_prayer_i01" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="17232" type="EtcItem" name="Ball Trapping Gnosian Agathion Pack">
+	<item id="17232" type="EtcItem" name="Agathion - Ball Trapping Gnosian Pack">
 		<!-- Description: Wrapped pack containing a Ball Trapping Gnosian Agathion. Cannot be exchanged or dropped. Cannot use a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
@@ -250,7 +250,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17233" type="EtcItem" name="Ball Trapping Orodriel Agathion Pack">
+	<item id="17233" type="EtcItem" name="Agathion - Ball Trapping Orodriel Pack">
 		<!-- Description: Wrapped pack containing a Ball Trapping Orodriel Agathion. Cannot be exchanged or dropped. Cannot use a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
@@ -259,7 +259,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17234" type="EtcItem" name="Penalty Kick Agathion Pack">
+	<item id="17234" type="EtcItem" name="Agathion - Penalty Kick Pack">
 		<!-- Description: Wrapped pack containing a Penalty Kick Agathion. Cannot be exchanged or dropped. Cannot use a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
@@ -330,7 +330,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="17242" type="EtcItem" name="Olympiad Class-Free Battle Certificate">
+	<item id="17242" type="EtcItem" name="Olympiad All-Class Battle Certificate">
 		<!-- Description: Certificate that proves participation in the Olympiad class-free battle 5 matches. Take the certificate to the Olympiad Operator. If you take it with the team event and class battle certificates, you can expect a greater reward. -->
 		<set name="icon" val="icon.scroll_of_verification_i03" />
 		<set name="material" val="PAPER" />
@@ -385,7 +385,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="17247" type="EtcItem" name="Party Vitality Herb">
+	<item id="17247" type="EtcItem" name="Party Vitality Replenishing Herb">
 		<!-- Description: Herb that brings Vitality to stage 4 for 10 minutes upon use. Effect works for all party members. -->
 		<set name="material" val="PAPER" />
 	</item>
@@ -394,6 +394,7 @@
 		<set name="icon" val="icon.big_dragon_bone_summon" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="17249" type="EtcItem" name="Large Dragon Skull">
 		<!-- Description: Dragon Skull obtained after finishing off the raid monster that lives in the Dragon Valley. After obtaining the dragon skulls from all 7 different raid monsters, bring them to Gilmore. -->
@@ -512,12 +513,14 @@
 		<set name="icon" val="icon.etc_unholy_potion_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="17267" type="EtcItem" name="Sealed Blood Crystal">
 		<!-- Description: Small crystal particles made from the blood of Antharas. After his blood was spilt, the land absorbed the blood and acted as a filter that separated the poison from the blood creating a pure form of his blood that crystallized over time. Used to create an Atharas's Blood Crystal. Bring it to a Separated Soul. -->
 		<set name="icon" val="icon.etc_powder_red_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="17268" type="EtcItem" name="Antharas Blood Crystal">
 		<!-- Description: Using the power held within the blood of Antharas, this crystal can revive and fully restore EXP of all dead characters in the Command Channel. Can only be used while inside the Lair of Antharas. Reuse time is 1 hour. -->
@@ -533,7 +536,7 @@
 			<player insideZoneId="70050" />
 		</cond>
 	</item>
-	<item id="17269" type="Armor" name="Agathion Seal Bracelet - Antharas">
+	<item id="17269" type="Armor" name="Agathion - Antharas">
 		<!-- Description: Bracelet that summons a cute Antharas Agathion. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -553,7 +556,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="17271" type="Armor" name="Agathion Seal Bracelet - Guardian of the Dawn Kallesin">
+	<item id="17271" type="Armor" name="Agathion - Guardian of Dawn Kallesin">
 		<!-- Description: Bracelet that summons a Guardian of the Dawn Kallesin Agathion. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -563,7 +566,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="17272" type="EtcItem" name="Antharas Agathion PAck">
+	<item id="17272" type="EtcItem" name="Agathion - Antharas Pack">
 		<!-- Description: Special gift that commemorates the conquest of Dragon Valley. When used, you can obtain an Antharas Agathion seal bracelet. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
@@ -575,13 +578,13 @@
 		<set name="material" val="STEEL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17274" type="EtcItem" name="Guardian of the Dawn Kallesin Agathion Pack">
+	<item id="17274" type="EtcItem" name="Agathion - Guardian of Dawn Kallesin Pack">
 		<!-- Description: Special gift that commemorates the completion of the Seven Sign quest. When used, you can obtain a Guardian of the Dawn Kallesin Agathion seal bracelet. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17275" type="EtcItem" name="Strider Pet Exchange Coupon">
+	<item id="17275" type="EtcItem" name="Strider Pet Coupon">
 		<!-- Description: Certificate that shows receipt of a Strider pet. You can exchange the exchange coupon for the Strider pet through the News Informer. Cannot be exchanged, dropped, or put in private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_ticket_i00" />
 		<set name="material" val="PAPER" />
@@ -600,6 +603,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="9180-1" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="17277" type="EtcItem" name="100,000,000 SP scroll">
 		<set name="icon" val="icon.etc_sp_scroll3_i00" />
@@ -611,6 +615,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="9180-2" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="17278" type="EtcItem" name="Strider Pet Exchange Pack">
 		<!-- Description: Dimensional item pack. Wrapped pack containing a Strider pet exchange coupon. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
@@ -697,7 +702,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17287" type="EtcItem" name="2010 Summer Special Pack - Event">
+	<item id="17287" type="EtcItem" name="2010 Summer Special Pack">
 		<!-- Description: Dimensional Item Pack. Gift box containing Nevit's Hourglass, Freya's Refreshing Breeze, and Ice Watermelon Hat. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
@@ -706,7 +711,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17288" type="Armor" name="Ice Watermelon Hat - Event">
+	<item id="17288" type="Armor" name="Ice Watermelon Hat">
 		<!-- Description: Dimensional item. Hat that looks like a watermelon. Just looking at it is refreshing. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_watermelon_cap_a_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -727,5 +732,208 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+	</item>
+	<item id="17290" name="Requiem Shaper" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Guidance, Haste, or Focus. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_aspeda_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="1202" />
+		<set name="weight" val="1520" />
+		<set name="price" val="56345583" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DAGGER" />
+		<for>
+			<add stat="pAtk" val="380.0" />
+			<add stat="mAtk" val="189.0" />
+			<add stat="pAtkSpd" val="433.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="17291" name="Requiem Cutter" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Haste, Focus, or Health. Two functions can be bestowed through a rare soul crystal. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_estia_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="1202" />
+		<set name="weight" val="1520" />
+		<set name="price" val="56345583" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<for>
+			<add stat="pAtk" val="435.0" />
+			<add stat="mAtk" val="189.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="17292" name="Requiem Slasher" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Focus, Damage Up, or Haste. Two functions can be bestowed through a rare soul crystal. Increases P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_polion_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="1202" />
+		<set name="weight" val="1740" />
+		<set name="price" val="56345583" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<for>
+			<add stat="pAtk" val="529.0" />
+			<add stat="mAtk" val="189.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="17293" name="Requiem Avenger" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Haste, P. Critical Damage, or Focus. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_batista_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="1202" />
+		<set name="weight" val="1740" />
+		<set name="price" val="56345583" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<for>
+			<add stat="pAtk" val="435.0" />
+			<add stat="mAtk" val="189.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="17294" name="Requiem Fighter" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Focus, Damage Up, or Haste. Two functions can be bestowed through a rare soul crystal. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_fantasma_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="1202" />
+		<set name="weight" val="1550" />
+		<set name="price" val="56345583" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
+		<for>
+			<add stat="pAtk" val="529.0" />
+			<add stat="mAtk" val="189.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="17295" name="Requiem Stormer" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: HP Drain, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. Increases Multi Attack when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_soryu_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="POLE" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="1202" />
+		<set name="weight" val="2010" />
+		<set name="price" val="56345583" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
+		<for>
+			<add stat="pAtk" val="435.0" />
+			<add stat="mAtk" val="189.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="17296" name="Requiem Thrower" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Damage Up, Focus, or Long Blow. Two functions can be bestowed through a rare soul crystal. Increases P. Skill Power when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_grabathus_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="1202" />
+		<set name="weight" val="1520" />
+		<set name="price" val="56345583" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="BOW" />
+		<for>
+			<add stat="pAtk" val="856.0" />
+			<add stat="mAtk" val="189.0" />
+			<add stat="pAtkSpd" val="293.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="17297" name="Requiem Shooter" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Focus, Critical Slow, or Haste. Two functions can be bestowed through a rare soul crystal. Increases Atk. Spd. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_shyayaka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="1202" />
+		<set name="weight" val="1580" />
+		<set name="price" val="56345583" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="CROSSBOW" />
+		<for>
+			<add stat="pAtk" val="771.0" />
+			<add stat="mAtk" val="189.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="17298" name="Requiem Buster" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Acumen, Magic Hold, or Mana Up. Two functions can be bestowed through a rare soul crystal. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_kaynon_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="1202" />
+		<set name="weight" val="1520" />
+		<set name="price" val="56345583" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
+		<for>
+			<add stat="pAtk" val="348.0" />
+			<add stat="mAtk" val="252.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="17299" name="Requiem Caster" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Empower, Acumen, or Magic Hold. Two functions can be bestowed through a rare soul crystal. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_anatrian_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="1202" />
+		<set name="weight" val="1080" />
+		<set name="price" val="56345583" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<for>
+			<add stat="pAtk" val="348.0" />
+			<add stat="mAtk" val="252.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
 	</item>
 </list>

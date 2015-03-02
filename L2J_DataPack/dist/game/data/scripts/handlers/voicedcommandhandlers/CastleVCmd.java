@@ -51,14 +51,14 @@ public class CastleVCmd implements IVoicedCommandHandler
 				
 				if (!activeChar.isClanLeader())
 				{
-					activeChar.sendPacket(SystemMessageId.ONLY_CLAN_LEADER_CAN_ISSUE_COMMANDS);
+					activeChar.sendPacket(SystemMessageId.ONLY_THE_CLAN_LEADER_MAY_ISSUE_COMMANDS);
 					return false;
 				}
 				
 				final L2DoorInstance door = (L2DoorInstance) activeChar.getTarget();
 				if (door == null)
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					return false;
 				}
 				
@@ -71,13 +71,13 @@ public class CastleVCmd implements IVoicedCommandHandler
 				
 				if (castle.getSiege().isInProgress())
 				{
-					activeChar.sendPacket(SystemMessageId.GATES_NOT_OPENED_CLOSED_DURING_SIEGE);
+					activeChar.sendPacket(SystemMessageId.THE_CASTLE_GATES_CANNOT_BE_OPENED_AND_CLOSED_DURING_A_SIEGE);
 					return false;
 				}
 				
 				if (castle.checkIfInZone(door.getX(), door.getY(), door.getZ()))
 				{
-					activeChar.sendPacket(SystemMessageId.GATE_IS_OPENING);
+					activeChar.sendPacket(SystemMessageId.THE_GATE_IS_BEING_OPENED);
 					door.openMe();
 				}
 				break;
@@ -89,13 +89,13 @@ public class CastleVCmd implements IVoicedCommandHandler
 				}
 				if (!activeChar.isClanLeader())
 				{
-					activeChar.sendPacket(SystemMessageId.ONLY_CLAN_LEADER_CAN_ISSUE_COMMANDS);
+					activeChar.sendPacket(SystemMessageId.ONLY_THE_CLAN_LEADER_MAY_ISSUE_COMMANDS);
 					return false;
 				}
 				final L2DoorInstance door2 = (L2DoorInstance) activeChar.getTarget();
 				if (door2 == null)
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					return false;
 				}
 				final Castle castle2 = CastleManager.getInstance().getCastleById(activeChar.getClan().getCastleId());
@@ -107,7 +107,7 @@ public class CastleVCmd implements IVoicedCommandHandler
 				
 				if (castle2.getSiege().isInProgress())
 				{
-					activeChar.sendPacket(SystemMessageId.GATES_NOT_OPENED_CLOSED_DURING_SIEGE);
+					activeChar.sendPacket(SystemMessageId.THE_CASTLE_GATES_CANNOT_BE_OPENED_AND_CLOSED_DURING_A_SIEGE);
 					return false;
 				}
 				

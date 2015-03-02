@@ -70,7 +70,7 @@ public class ClanWarsList implements IUserCommandHandler
 			// Attack List
 			if (id == 88)
 			{
-				activeChar.sendPacket(SystemMessageId.CLANS_YOU_DECLARED_WAR_ON);
+				activeChar.sendPacket(SystemMessageId.CLANS_YOU_VE_DECLARED_WAR_ON);
 				query = ATTACK_LIST;
 			}
 			// Under Attack List
@@ -82,7 +82,7 @@ public class ClanWarsList implements IUserCommandHandler
 			// War List
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.WAR_LIST);
+				activeChar.sendPacket(SystemMessageId.CLAN_WAR_LIST);
 				query = WAR_LIST;
 			}
 			
@@ -110,14 +110,14 @@ public class ClanWarsList implements IUserCommandHandler
 						else
 						{
 							// Target Without Ally
-							sm = SystemMessage.getSystemMessage(SystemMessageId.S1_NO_ALLI_EXISTS);
+							sm = SystemMessage.getSystemMessage(SystemMessageId.S1_NO_ALLIANCE_EXISTS);
 							sm.addString(clanName);
 						}
 						activeChar.sendPacket(sm);
 					}
 				}
 			}
-			activeChar.sendPacket(SystemMessageId.FRIEND_LIST_FOOTER);
+			activeChar.sendPacket(SystemMessageId.EMPTY3);
 		}
 		catch (Exception e)
 		{

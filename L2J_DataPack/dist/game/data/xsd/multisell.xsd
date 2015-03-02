@@ -22,21 +22,23 @@
 						<xs:sequence minOccurs="1" maxOccurs="1">
 							<xs:element name="ingredient" minOccurs="1" maxOccurs="unbounded">
 								<xs:complexType>
-									<xs:attribute name="count" type="xs:positiveInteger" use="required" />
 									<xs:attribute name="id" type="xs:integer" use="required" />
+									<xs:attribute name="count" type="xs:positiveInteger" use="required" />
 									<xs:attribute name="maintainIngredient" type="xs:boolean" />
 								</xs:complexType>
 							</xs:element>
 							<xs:element name="production" minOccurs="1" maxOccurs="unbounded">
 								<xs:complexType>
-									<xs:attribute name="count" type="xs:positiveInteger" use="required" />
 									<xs:attribute name="id" type="xs:integer" use="required" />
+									<xs:attribute name="count" type="xs:positiveInteger" use="required" />
+									<xs:attribute name="chance" type="xs:integer" use="optional" />
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>
+			<xs:attribute name="isNewMultisell" type="xs:boolean" use="optional" />
 			<xs:attribute name="applyTaxes" type="xs:boolean" />
 			<xs:attribute name="maintainEnchantment" type="xs:boolean" />
 			<xs:attribute name="useRate" type="xs:token" />

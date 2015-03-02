@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="22900" name="Expand Inventory Lv. 1" additionalName="" type="EtcItem">
+		<!-- A spellbook for Expand Inventory skill Lv. 1. Cannot be acquired if you have already learned Expand Inventory skills. -->
+		<set name="icon" val="BranchSys3.lcon.g_inven_expan_book" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22901" name="Expand Inventory Lv. 2" additionalName="" type="EtcItem">
+		<!-- A spellbook for Expand Inventory skill Lv. 2. Expand Inventory Lv. 1 is a prerequisite. -->
+		<set name="icon" val="BranchSys3.lcon.g_inven_expan_book" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22902" name="Spellbook: Expand Warehouse Lv. 1" additionalName="" type="EtcItem">
+		<!-- A spellbook for Expand Warehouse skill Lv. 1. Cannot be acquired if you have already learned Expand Warehouse skills. -->
+		<set name="icon" val="BranchSys3.lcon.g_storage_expan_book" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22903" name="Spellbook: Expand Warehouse Lv. 2" additionalName="" type="EtcItem">
+		<!-- A spellbook for Expand Warehouse skill Lv. 2. Expand Warehouse Lv. 1 is a prerequisite. -->
+		<set name="icon" val="BranchSys3.lcon.g_storage_expan_book" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22904" name="Scroll: Enchant Power Shirt" additionalName="" type="EtcItem">
+		<!-- Enchant Scroll exclusive to Power Shirts.\nIncreases the Power Shirt P. Def. and M. Def. by 1. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3 and can be enchanted up to a max of + 10. Basic stats (CON, MEN, STR, INT, DEX, WIT) are gradually increased with each enchant level starting from + 4. At + 5, + 7, + 8, and + 9, additional bonuses are also applied. -->
+		<set name="icon" val="BranchSys2.icon.etc_scroll_of_enchant_shirt_i01" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22905" name="Blessed Scroll: Enchant Power Shirt" additionalName="" type="EtcItem">
+		<!-- Enchant scroll exclusive to Power Shirts.\nIncreases the Power Shirt P. Def. and M. Def. by 1. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3 and can be enchanted up to a max of + 10. Basic stats (CON, MEN, STR, INT, DEX, WIT) are gradually increased with each enchant level starting from + 4. At + 5, + 7, + 8, and + 9, additional bonuses are also applied. If enchanting fails, the enchant value will be reset to 0. -->
+		<set name="icon" val="BranchSys2.icon.etc_scroll_of_enchant_shirt_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22906" name="XP Rune III (Lv. 1-99) 50% Pack (1-hour)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing XP Rune III (Lv. 1-99) 50% (1-hour). Cannot be exchanged once opened. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22907" name="Straw Hat" additionalName="" type="Armor">
+		<!-- Hat made of straw. Uses 2 hair accessory slots. -->
+		<set name="icon" val="icon.accessory_straw_hat_i00" />
+		<set name="default_action" val="EQUIP" />
+	</item>
+	<item id="22908" name="Scar" additionalName="" type="Armor">
+		<!-- Scar. This is a male-only accessory. -->
+		<set name="icon" val="icon.Accessary_scar_i00" />
+		<set name="default_action" val="EQUIP" />
+	</item>
+	<item id="22909" name="Ruthless Tribe Mask" additionalName="" type="Armor">
+		<!-- Mask worn by a ruthless tribe. -->
+		<set name="icon" val="BranchSys.icon.br_mask_i00" />
+		<set name="default_action" val="EQUIP" />
+	</item>
+	<item id="22910" name="Wedding Cake Pack" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Honeymoon Ticket and a Big Wedding Cake. -->
+		<set name="icon" val="BranchSys2.Icon.br_wedding_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22911" name="Formal Wear" additionalName="30-day" type="Armor">
+		<!-- Tuxedo for male characters, and a wedding dress for female characters. 30-day. Equipping this disables armor. Hair accessories, weapons, and magic armor remain equipped. -->
+		<set name="icon" val="icon.armor_t2000_ul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="time" val="2592000" />
+	</item>
+	<item id="22912" name="Formal Wear Pack (30-day)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Formal Wear. 30-day. -->
+		<set name="icon" val="BranchSys.icon.br_lucky_bag_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22913" name="Wedding Ring - Male" additionalName="" type="Armor">
+		<!-- Wedding ring for groom. -->
+		<set name="icon" val="BranchSys2.Icon.br_wedding_ring_m_i00" />
+		<set name="default_action" val="EQUIP" />
+		<for>
+			<add stat="mDef" val="1.0" />
+		</for>
+	</item>
+	<item id="22914" name="Wedding Ring - Female" additionalName="" type="Armor">
+		<!-- Wedding ring for bride. -->
+		<set name="icon" val="BranchSys2.Icon.br_wedding_ring_f_i00" />
+		<set name="default_action" val="EQUIP" />
+		<for>
+			<add stat="mDef" val="1.0" />
+		</for>
+	</item>
+	<item id="22915" name="Flower Shower" additionalName="" type="EtcItem">
+		<!-- Flower pedals showered upon the bride and the groom. -->
+		<set name="icon" val="BranchSys2.Icon.br_flower_shower_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22916" name="Salvation Bow" additionalName="" type="Weapon">
+		<!-- Shoots a heart with love. Can use the 'Heart Shot' active skill. \nNote: If you use this skill against a monster, you can be attacked by another player. -->
+		<set name="icon" val="icon.weapon_krono_bow_i00" />
+		<set name="default_action" val="EQUIP" />
+		<for>
+			<add stat="pAtk" val="1.0" />
+			<add stat="mAtk" val="1.0" />
+			<add stat="pAtkSpd" val="293.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="22917" name="Refined Jester Hat" additionalName="" type="Armor">
+		<!-- Refined Jester Hat. Uses 2 hair accessory slots. -->
+		<set name="icon" val="icon.accessory_jester_cap_2_i00" />
+		<set name="default_action" val="EQUIP" />
+	</item>
+	<item id="22918" name="Assassin's Bamboo Hat" additionalName="" type="Armor">
+		<!-- Wide-brimmed hat fashioned out of bamboo. Uses 2 hair accessory slots. -->
+		<set name="icon" val="BranchSys.icon.br_Bamboo_Hat_i00" />
+		<set name="default_action" val="EQUIP" />
+	</item>
+	<item id="22919" name="Fire Stone" additionalName="" type="EtcItem">
+		<!-- When used with your weapon, Fire + 5. When used with your armor, Fire + 6 with increased resistance against Water. Attribute Lv. 1-3 only. Armor can have up to 3 unopposing attributes bestowed. -->
+		<set name="icon" val="icon.etc_fire_stone_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22920" name="Water Stone" additionalName="" type="EtcItem">
+		<!-- When used with your weapon, Water + 5. When used with your armor, Water + 6 with increased resistance against Fire. Attribute Lv. 1-3 only. Armor can have up to 3 unopposing attributes bestowed. -->
+		<set name="icon" val="icon.etc_water_stone_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22921" name="Earth Stone" additionalName="" type="EtcItem">
+		<!-- When used with your weapon, Earth + 5. When used with your armor, Earth + 6 with increased resistance against Wind. Attribute Lv. 1-3 only. Armor can have up to 3 unopposing attributes bestowed. -->
+		<set name="icon" val="icon.etc_earth_stone_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22922" name="Wind Stone" additionalName="" type="EtcItem">
+		<!-- When used with your weapon, Fire + 5. When used with your armor, Fire + 6 with increased resistance against Water. Attribute Lv. 1-3 only. Armor can have up to 3 unopposing attributes bestowed. -->
+		<set name="icon" val="icon.etc_wind_stone_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22923" name="Dark Stone" additionalName="" type="EtcItem">
+		<!-- When used with your weapon, Dark + 5. When used with your armor, Dark + 6 with increased resistance against Holy. Attribute Lv. 1-3 only. Additional Elemental attributes cannot be bestowed. Armor can have up to 3 unopposing attributes bestowed. -->
+		<set name="icon" val="icon.etc_unholy_stone_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22924" name="Holy Stone" additionalName="" type="EtcItem">
+		<!-- When used with your weapon, Holy + 5. When used with your armor, Holy + 6 with increased resistance against Dark. Attribute Lv. 1-3 only. Armor can have up to 3 unopposing attributes bestowed. -->
+		<set name="icon" val="icon.etc_holy_stone_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22925" name="Fire Crystal" additionalName="" type="EtcItem">
+		<!-- When used with your weapon, Fire + 5. When used with your armor, Fire + 6 with increased resistance against Water. Attribute Lv. 1-6 only; any further would break the crystal's power. Armor can have up to 3 unopposing attributes bestowed. -->
+		<set name="icon" val="icon.etc_fire_crystal_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22926" name="Water Crystal" additionalName="" type="EtcItem">
+		<!-- When used with your weapon, Water + 5. When used with your armor, Water + 6 with increased resistance against Fire. Attribute Lv. 1-6 only; any further would break the crystal's power. Armor can have up to 3 unopposing attributes bestowed. -->
+		<set name="icon" val="icon.etc_water_crystal_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22927" name="Earth Crystal" additionalName="" type="EtcItem">
+		<!-- When used with your weapon, Earth + 5. When used with your armor, Earth + 6 with increased resistance against Wind. Attribute Lv. 1-6 only; any further would break the crystal's power. Armor can have up to 3 unopposing attributes bestowed. -->
+		<set name="icon" val="icon.etc_earth_crystal_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22928" name="Wind Crystal" additionalName="" type="EtcItem">
+		<!-- When used with your weapon, Wind + 5. When used with your armor, Wind + 6 with increased resistance against Earth. Attribute Lv. 1-6 only; any further would break the crystal's power. Armor can have up to 3 unopposing attributes bestowed. -->
+		<set name="icon" val="icon.etc_wind_crystal_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22929" name="Dark Crystal" additionalName="" type="EtcItem">
+		<!-- When used with your weapon, Dark + 5. When used with your armor, Dark + 6 with increased resistance against Holy. Attribute Lv. 1-6 only; any further would break the crystal's power. Armor can have up to 3 unopposing attributes bestowed. -->
+		<set name="icon" val="icon.etc_unholy_crystal_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22930" name="Holy Crystal" additionalName="" type="EtcItem">
+		<!-- When used with your weapon, Holy + 5. When used with your armor, Holy + 6 with increased resistance against Dark. Attribute Lv. 1-6 only; any further would break the crystal's power. Armor can have up to 3 unopposing attributes bestowed. -->
+		<set name="icon" val="icon.etc_holy_crystal_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22931" name="Warrior's Helmet" additionalName="" type="Armor">
+		<!-- Helmet of a brave ancient warrior. Uses 2 hair accessory slots. -->
+		<set name="icon" val="BranchSys2.icon.br_close_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+	</item>
+	<item id="22932" name="Entrance Pass: Kartia's Labyrinth Lv. 85 Solo" additionalName="" type="EtcItem">
+		<!-- Kartia's Labyrinth Entrance Pass given to adventurers by Kartia Research Center. You can reset the instance timer of the level 85 solo dungeon. Can be used only once a day. -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
+	</item>
+	<item id="22933" name="Entrance Pass: Kartia's Labyrinth Lv. 90 Solo" additionalName="" type="EtcItem">
+		<!-- Kartia's Labyrinth Entrance Pass given to adventurers by Kartia Research Center. You can reset the instance timer of the level 90 solo dungeon. Can be used only once a day. -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
+	</item>
+	<item id="22934" name="Entrance Pass: Kartia's Labyrinth Lv. 95 Solo" additionalName="" type="EtcItem">
+		<!-- Kartia's Labyrinth Entrance Pass given to adventurers by Kartia Research Center. You can reset the instance timer of the level 95 solo dungeon. Can be used only once a day. -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
+	</item>
+	<item id="22935" name="Entrance Pass: Kartia's Labyrinth Lv. 85 Party" additionalName="" type="EtcItem">
+		<!-- Kartia's Labyrinth Entrance Pass given to adventurers by Kartia Research Center. You can reset the instance timer of the level 85 party dungeon. Can be used only once a day. -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
+	</item>
+	<item id="22936" name="Entrance Pass: Kartia's Labyrinth Lv. 90 Party" additionalName="" type="EtcItem">
+		<!-- Kartia's Labyrinth Entrance Pass given to adventurers by Kartia Research Center. You can reset the instance timer of the level 90 party dungeon. Can be used only once a day. -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
+	</item>
+	<item id="22937" name="Entrance Pass: Kartia's Labyrinth Lv. 95 Party" additionalName="" type="EtcItem">
+		<!-- Kartia's Labyrinth Entrance Pass given to adventurers by Kartia Research Center. You can reset the instance timer of the level 95 party dungeon. Can be used only once a day. -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
+	</item>
+	<item id="22938" name="Castle Siege Equipment Repair Tool - Aden Castle" additionalName="" type="Armor">
+		<!-- Repairs the Broken Ballista outside the Aden battleground. Can use the Siege Equipment Repair skill. -->
+		<set name="icon" val="icon.weapon_iron_hammer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="30" />
+	</item>
+	<item id="22939" name="Castle Siege Equipment Repair Tool - Rune Castle" additionalName="" type="Armor">
+		<!-- Repairs the Broken Ballista outside the Rune battleground. Can use the Siege Equipment Repair skill. -->
+		<set name="icon" val="icon.weapon_iron_hammer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="30" />
+	</item>
+	<item id="22940" name="Corrosive Chemical Container - Aden Castle" additionalName="" type="Armor">
+		<!-- Container with strong corrosive compounds. Can use the Throw Corrosive Chemical skill. Battleground only. -->
+		<set name="icon" val="icon.empty_bottle" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="30" />
+	</item>
+	<item id="22941" name="Corrosive Chemical Container - Rune Castle" additionalName="" type="Armor">
+		<!-- Container with strong corrosive compounds. Can use the Throw Corrosive Chemical skill. Battleground only. -->
+		<set name="icon" val="icon.empty_bottle" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="30" />
+	</item>
+	<item id="22942" name="Engraving Activation Stone - Aden Castle" additionalName="" type="Armor">
+		<!-- Reacts to the Holy Artifact in Aden Castle to activate the Engraving. Can use the Relic Engraving Activation skill. Battleground only. -->
+		<set name="icon" val="icon.etc_raid_f_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="30" />
+	</item>
+	<item id="22943" name="Engraving Activation Stone - Rune Castle" additionalName="" type="Armor">
+		<!-- Reacts to the Holy Artifact in Rune Castle to activate the Engraving. Can use the Relic Engraving Activation skill. Battleground only. -->
+		<set name="icon" val="icon.etc_raid_f_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="30" />
+	</item>
+	<item id="22944" name="XP Rune III (Lv. 1-99) 50%" additionalName="1-hour" type="EtcItem">
+		<!-- Ancient characters which bestow a mysterious ability if stored in the inventory. Increases acquired XP by 50%. The remaining time decreases even when not playing. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
+		<set name="time" val="3600" />
+	</item>
+	<item id="22945" name="Honeymoon Ticket (7-day)" additionalName="7-day" type="EtcItem">
+		<!-- Honeymoon ticket given to the bride and groom as a gift. When used, Vitality is maintained for 1 hour. Vitality item with limited usage. -->
+		<set name="icon" val="BranchSys2.Icon.br_weddin_ticket_i00" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="22946" name="Big Wedding Cake" additionalName="" type="EtcItem">
+		<!-- A scroll that summons a large 3-layer wedding cake, a must-have at any wedding. -->
+		<set name="icon" val="BranchSys2.Icon.br_big_wedding_cake_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22947" name="Agathion - Singer and Dancer" additionalName="30-day" type="Armor">
+		<!-- Can summon Singer and Dancer that gleefully sings and dances when equipped. -->
+		<set name="icon" val="BranchSys2.icon.br_aga_singer_dancer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="time" val="2592000" />
+	</item>
+	<item id="22948" name="Mount - Black Bear" additionalName="30-day" type="Armor">
+		<!-- Can ride a Black Bear when equipped. 30-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_black_bear_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="time" val="2592000" />
+	</item>
+	<item id="22949" name="Black Gem Mask" additionalName="30-day" type="Armor">
+		<!-- Black gem mask made of luxurious metal. -->
+		<set name="icon" val="BranchSys.icon.br_black_gem_mask_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="time" val="2592000" />
+	</item>
+	<item id="22950" name="Refined Angel Ring" additionalName="30-day" type="Armor">
+		<!-- Refined Angel Ring. Uses 2 hair accessory slots. -->
+		<set name="icon" val="icon.accessory_angel_ring_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="time" val="2592000" />
+	</item>
+	<item id="22951" name="Refined Devil Horn" additionalName="30-day" type="Armor">
+		<!-- Refined Devil Horn. Uses 2 hair accessory slots. -->
+		<set name="icon" val="icon.accessory_devil_horn_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="time" val="2592000" />
+	</item>
+	<item id="22952" name="Ruthless Tribe Mask" additionalName="30-day" type="Armor">
+		<!-- Mask worn by a ruthless tribe. 30-day. -->
+		<set name="icon" val="BranchSys.icon.br_mask_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="time" val="2592000" />
+	</item>
+	<item id="22953" name="Agathion - Uthanka" additionalName="30-day" type="Armor">
+		<!-- Can summon Uthanka when equipped. -->
+		<set name="icon" val="BranchSys.icon.br_aga_uthanka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="time" val="2592000" />
+	</item>
+	<item id="22954" name="Agathion - Cheerleader Orodriel" additionalName="30-day" type="Armor">
+		<!-- Can summon Cheerleader Orodriel when equipped. -->
+		<set name="icon" val="BranchSys2.icon.br_aga_cheer_FElf_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="time" val="2592000" />
+	</item>
+	<item id="22955" name="Mount - Tame Princess Ant" additionalName="30-day" type="Armor">
+		<!-- Can ride a Tame Princess Ant when equipped. -->
+		<set name="icon" val="BranchSys3.Icon.g_ant_princess_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="time" val="2592000" />
+	</item>
+	<item id="22956" name="Agathion - Dryad" additionalName="30-day" type="Armor">
+		<!-- Can summon Dryad when equipped. 30-day. -->
+		<set name="icon" val="BranchSys.icon.br_aga_dryad_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="time" val="2592000" />
+	</item>
+	<item id="22957" name="Pink Paper Mask Set" additionalName="Blessed Soul (30-day)" type="Armor">
+		<!-- Fancy mask and hat made of pink paper. Cooldown is 1 hr. -->
+		<set name="icon" val="BranchSys.icon.br_party_hat_mask_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="time" val="2592000" />
+	</item>
+	<item id="22958" name="Arrow-pierced Apple" additionalName="30-day" type="Armor">
+		<!-- Arrow-pierced apple that can be worn on the head. Uses 2 hair accessory slots. -->
+		<set name="icon" val="icon.accessory_arrow_apple_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="time" val="2592000" />
+	</item>
+	<item id="22959" name="SP Rune 50%" additionalName="1-hour" type="EtcItem">
+		<!-- Ancient characters which bestow a mysterious ability if stored in the inventory. Increases acquired SP by 50%. The remaining time decreases even when not playing. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
+		<set name="time" val="3600" />
+	</item>
+	<item id="22960" name="XP Rune I (Lv. 1-85) 100%" additionalName="1-hour" type="EtcItem">
+		<!-- Ancient characters which bestow a mysterious ability if stored in the inventory. Increases acquired XP and SP by 100%. Lv. 86 or below. The remaining time decreases even when not playing. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="time" val="3600" />
+	</item>
+	<item id="22961" name="XP Rune I (Lv. 1-85) 200%" additionalName="1-hour" type="EtcItem">
+		<!-- Ancient characters which bestow a mysterious ability if stored in the inventory. Increases acquired XP and SP by 200%. Lv. 86 or below. The remaining time decreases even when not playing. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="time" val="3600" />
+	</item>
+	<item id="22962" name="Fancy Flower Hat" additionalName="" type="Armor">
+		<!-- Fancy Flower Hat. Uses 2 hair accessory slots. -->
+		<set name="icon" val="BranchSys2.icon2.pi_flowerhat_for_lady" />
+		<set name="default_action" val="EQUIP" />
+	</item>
+	<item id="22963" name="Shiny Platform Summon Bracelet" additionalName="" type="Armor">
+		<!-- Can summon a bright stage to stand on when equipped. -->
+		<set name="icon" val="BranchSys2.Icon.br_shiny_platform_i00" />
+		<set name="default_action" val="EQUIP" />
+	</item>
+	<item id="22964" name="Pink Paper Mask Set" additionalName="" type="Armor">
+		<!-- Fancy mask and hat made of pink paper. -->
+		<set name="icon" val="BranchSys.icon.br_party_hat_mask_i00" />
+		<set name="default_action" val="EQUIP" />
+	</item>
+	<item id="22965" name="Arrow-pierced Apple" additionalName="" type="Armor">
+		<!-- Arrow-pierced Apple that can be worn on the head. Uses 2 hair accessory slots. -->
+		<set name="icon" val="icon.accessory_arrow_apple_i00" />
+		<set name="default_action" val="EQUIP" />
+	</item>
+	<item id="22966" name="Vitality Maintaining Potion (1-hour)" additionalName="" type="EtcItem">
+		<!-- Maintains Vitality for 1 hr. Vitality item with limited usage. -->
+		<set name="icon" val="BranchSys2.br_essence_rose_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22967" name="Agathion - Singer and Dancer Pack (30-day)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Singer and Dancer (30-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22968" name="Mount - Black Bear Pack (30-day)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Black Bear (30-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22969" name="Black Gem Mask Pack (30-day)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Black Gem Mask (30-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22970" name="Refined Angel Ring Pack (30-day)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Refined Angel Ring (30-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22971" name="Refined Devil Horn Pack (30-day)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Devil Horn (30-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22972" name="Ruthless Tribe Mask Pack (30-day)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Ruthless Tribe Mask (30-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22973" name="Agathion - Uthanka Pack (30-day)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Uthanka (30-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22974" name="Agathion - Cheerleader Orodriel Pack (30-day)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Cheerleader Orodriel (30-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22975" name="Mount - Tame Princess Ant Pack (30-day)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Tame Princess Ant (30-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22976" name="Agathion - Dryad Pack (30-day)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Dryad (30-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22977" name="Pink Paper Mask Set Pack (30-day)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Pink Paper Mask Set (30-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22978" name="Arrow-pierced Apple Pack (30-day)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Arrow-pierced Apple (30-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22979" name="SP Rune 50% Pack (1-hour)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing SP Rune 50% (1-hour). Cannot be exchanged once open. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22980" name="XP Rune I (Lv. 1-85) 100% Pack (1-hour)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing XP Rune I (Lv. 1-85) 100% (1-hour). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22981" name="XP Rune I (Lv. 1-85) 200% Pack (1-hour)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing XP Rune I (Lv. 1-85) 200% (1-hour). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22982" name="Lv. 1 Giant STR Dye" additionalName="STR + 3 / DEX - 2" type="EtcItem">
+		<!-- STR + 3 / DEX - 2. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<set name="icon" val="icon.lv1_1_dye_str" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22983" name="Lv. 1 Giant DEX Dye" additionalName="DEX + 3 / CON - 2" type="EtcItem">
+		<!-- DEX + 3 / CON - 2. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<set name="icon" val="icon.lv1_1_dye_dex" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22984" name="Lv. 1 Giant CON Dye" additionalName="CON + 3 / STR - 2" type="EtcItem">
+		<!-- CON + 3 / STR - 2. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<set name="icon" val="icon.lv1_1_dye_con" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22985" name="Lv. 1 Giant INT Dye" additionalName="INT + 3 / WIT - 2" type="EtcItem">
+		<!-- INT + 3 / WIT - 2. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<set name="icon" val="icon.lv1_1_dye_int" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22986" name="Lv. 1 Giant WIT Dye" additionalName="WIT + 3 / MEN - 2" type="EtcItem">
+		<!-- WIT + 3 / MEN - 2. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<set name="icon" val="icon.lv1_1_dye_wit" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22987" name="Lv. 1 Giant MEN Dye" additionalName="MEN + 3 / INT - 2" type="EtcItem">
+		<!-- MEN + 3 / INT - 2. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<set name="icon" val="icon.lv1_1_dye_men" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22988" name="Lv. 1 Ancient STR Dye" additionalName="STR + 3 / DEX - 2 / Fire Resistance + 5" type="EtcItem">
+		<!-- STR + 3 / DEX - 2 / Fire Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<set name="icon" val="icon.lv1_2_dye_str" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22989" name="Lv. 1 Ancient DEX Dye" additionalName="DEX + 3 / CON - 2 / Earth Resistance + 5" type="EtcItem">
+		<!-- DEX + 3 / CON - 2 / Earth Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<set name="icon" val="icon.lv1_2_dye_dex" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22990" name="Lv. 1 Ancient CON Dye" additionalName="CON + 3 / STR - 2 / Dark Resistance + 5" type="EtcItem">
+		<!-- CON + 3 / STR - 2 / Dark Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<set name="icon" val="icon.lv1_2_dye_con" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22991" name="Lv. 1 Ancient INT Dye" additionalName="INT + 3 / WIT - 2 / Water Resistance + 5" type="EtcItem">
+		<!-- INT + 3 / WIT - 2 / Water Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<set name="icon" val="icon.lv1_2_dye_int" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22992" name="Lv. 1 Ancient WIT Dye" additionalName="WIT + 3 / MEN - 2 / Wind Resistance + 5" type="EtcItem">
+		<!-- WIT + 3 / MEN - 2 / Wind Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<set name="icon" val="icon.lv1_2_dye_wit" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22993" name="Lv. 1 Ancient MEN Dye" additionalName="MEN + 3 / INT - 2 / Holy Resistance + 5" type="EtcItem">
+		<!-- MEN + 3 / INT - 2 / Holy Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<set name="icon" val="icon.lv1_2_dye_men" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22994" name="Lv. 1 Legendary STR Dye" additionalName="STR + 3 / DEX - 1 / Fire Resistance + 5" type="EtcItem">
+		<!-- STR + 3 / DEX - 1 / Fire Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<set name="icon" val="icon.lv1_3_dye_str" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22995" name="Lv. 1 Legendary DEX Dye" additionalName="DEX + 3 / CON - 1 / Earth Resistance + 5" type="EtcItem">
+		<!-- DEX + 3 / CON - 1 / Earth Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<set name="icon" val="icon.lv1_3_dye_dex" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22996" name="Lv. 1 Legendary CON Dye" additionalName="CON + 3 / STR - 1 / Dark Resistance + 5" type="EtcItem">
+		<!-- CON + 3 / STR - 1 / Dark Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<set name="icon" val="icon.lv1_3_dye_con" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22997" name="Lv. 1 Legendary INT Dye" additionalName="INT + 3 / WIT - 1 / Water Resistance + 5" type="EtcItem">
+		<!-- INT + 3 / WIT - 1 / Water Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<set name="icon" val="icon.lv1_3_dye_int" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22998" name="Lv. 1 Legendary WIT Dye" additionalName="WIT + 3 / MEN - 1 / Wind Resistance + 5" type="EtcItem">
+		<!-- WIT + 3 / MEN - 1 / Wind Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<set name="icon" val="icon.lv1_3_dye_wit" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="22999" name="Lv. 1 Legendary MEN Dye" additionalName="MEN + 3 / INT - 1 / Holy Resistance + 5" type="EtcItem">
+		<!-- MEN + 3 / INT - 1 / Holy Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<set name="icon" val="icon.lv1_3_dye_men" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

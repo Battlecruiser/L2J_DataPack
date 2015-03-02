@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/teleporterData.xsd">
+	<npc id="30540"> <!-- Teleport Device -->
+		<teleport type="NORMAL">
+			<location npcStringId="1010005" x="-14608" y="123920" z="-3128" feeCount="32000" /> <!-- The Town of Gludio -->
+			<location npcStringId="1010574" x="87130" y="-143514" z="-1291" feeCount="4400" /> <!-- Town of Schuttgart -->
+			<location npcStringId="1010156" x="11162" y="16012" z="-4584" feeCount="22000" /> <!-- Dark Elf Village -->
+			<location npcStringId="1010001" x="-113443" y="256656" z="-1504" feeCount="49000" /> <!-- Talking Island Village -->
+			<location npcStringId="1010155" x="44730" y="49210" z="-3059" feeCount="23000" /> <!-- Elven Village -->
+			<location npcStringId="1010157" x="-51029" y="-113641" z="-176" feeCount="17000" /> <!-- Orc Village -->
+			<location npcStringId="1010648" x="-116977" y="46607" z="368" feeCount="32000" /> <!-- Kamael Village -->
+			<location npcStringId="1010596" x="139697" y="-177472" z="-1541" feeCount="690" /> <!-- Abandoned Coal Mines (Lv. 10) -->
+			<location npcStringId="1010189" x="168995" y="-208296" z="-3506" feeCount="2400" /> <!-- Easten Mining Zone (Northeastern Shore (Lv. 18) -->
+			<location npcStringId="1010188" x="136899" y="-205095" z="-3671" feeCount="970" /> <!-- Western Mining Zone (Central Shore) (Lv. 8.) -->
+			<location npcStringId="1010700" x="171946" y="-173352" z="3445" feeCount="11000" /> <!-- Mithril Mines Western Entrance (Lv. 81) -->
+			<location npcStringId="1010701" x="178580" y="-184621" z="-361" feeCount="12000" /> <!-- Mithril Mines Eastern Entrance (Lv. 81) -->
+		</teleport>
+		<teleport type="NOBLES_TOKEN">
+			<location npcStringId="1010506" x="-87334" y="142252" z="-3645" feeId="13722" feeCount="1" /> <!-- Gludin Arena -->
+			<location npcStringId="1010507" x="73579" y="142709" z="-3763" feeId="13722" feeCount="1" /> <!-- Giran Arena -->
+			<location npcStringId="1010595" x="175474" y="-181590" z="-907" feeId="13722" feeCount="1" /> <!-- The Center of the Mithril Mines -->
+			<location npcStringId="1010597" x="144699" y="-173226" z="-1520" feeId="13722" feeCount="1" /> <!-- The Center of the Abandoned Coal Mines -->
+			<location npcStringId="1010053" x="146434" y="46712" z="-3433" feeId="13722" feeCount="1" /> <!-- Coliseum -->
+			<location npcStringId="1010731" x="-186306" y="242822" z="2552" feeId="13722" feeCount="100" /> <!-- Keucereus Alliance Base -->
+		</teleport>
+		<teleport type="NOBLES_ADENA">
+			<location npcStringId="1010506" x="-87334" y="142252" z="-3645" feeCount="1000" /> <!-- Gludin Arena -->
+			<location npcStringId="1010507" x="73579" y="142709" z="-3763" feeCount="1000" /> <!-- Giran Arena -->
+			<location npcStringId="1010595" x="175474" y="-181590" z="-907" feeCount="1000" /> <!-- The Center of the Mithril Mines -->
+			<location npcStringId="1010597" x="144699" y="-173226" z="-1520" feeCount="1000" /> <!-- The Center of the Abandoned Coal Mines -->
+			<location npcStringId="1010053" x="146434" y="46712" z="-3433" feeCount="1000" /> <!-- Coliseum -->
+			<location npcStringId="1010731" x="-186306" y="242822" z="2552" feeCount="100000" /> <!-- Keucereus Alliance Base -->
+		</teleport>
+	</npc>
+</list>

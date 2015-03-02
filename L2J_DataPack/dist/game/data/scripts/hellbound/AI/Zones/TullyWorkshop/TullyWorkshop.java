@@ -546,7 +546,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 		
 		if (TULLY_DOORLIST.containsKey(npcId))
 		{
-			if (classId.equalsOrChildOf(ClassId.maestro))
+			if (classId.equalsOrChildOf(ClassId.MAESTRO))
 			{
 				return "doorman-01c.htm";
 			}
@@ -560,7 +560,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 			}
 			else if (!brokenContraptions.contains(npc.getObjectId()))
 			{
-				if (classId.equalsOrChildOf(ClassId.maestro))
+				if (classId.equalsOrChildOf(ClassId.MAESTRO))
 				{
 					return "32371-01a.htm";
 				}
@@ -849,15 +849,15 @@ public final class TullyWorkshop extends AbstractNpcAI
 			final L2Party party = player.getParty();
 			if (party == null)
 			{
-				player.sendPacket(SystemMessageId.NOT_IN_PARTY_CANT_ENTER);
+				player.sendPacket(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER);
 			}
 			else if (party.getLeaderObjectId() != player.getObjectId())
 			{
-				player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
+				player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);
 			}
 			else if (!Util.checkIfInRange(4000, player, npc, true))
 			{
-				player.sendPacket(SystemMessageId.TOO_FAR_FROM_NPC);
+				player.sendPacket(SystemMessageId.YOU_ARE_TOO_FAR_FROM_THE_NPC_FOR_THAT_TO_WORK);
 			}
 			else
 			{
@@ -877,12 +877,12 @@ public final class TullyWorkshop extends AbstractNpcAI
 			if (event.equalsIgnoreCase("touch_device"))
 			{
 				final int i0 = talkedContraptions.contains(npc.getObjectId()) ? 0 : 1;
-				final int i1 = player.getClassId().equalsOrChildOf(ClassId.maestro) ? 6 : 3;
+				final int i1 = player.getClassId().equalsOrChildOf(ClassId.MAESTRO) ? 6 : 3;
 				
 				if (getRandom(1000) < ((i1 - i0) * 100))
 				{
 					talkedContraptions.add(npc.getObjectId());
-					htmltext = player.getClassId().equalsOrChildOf(ClassId.maestro) ? "32371-03a.htm" : "32371-03.htm";
+					htmltext = player.getClassId().equalsOrChildOf(ClassId.MAESTRO) ? "32371-03a.htm" : "32371-03.htm";
 				}
 				else
 				{
@@ -946,7 +946,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 				{
 					if (party.getLeaderObjectId() != player.getObjectId())
 					{
-						player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
+						player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);
 					}
 					else
 					{
@@ -1050,7 +1050,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 			{
 				if (party.getLeaderObjectId() != player.getObjectId())
 				{
-					player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
+					player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);
 					return null;
 				}
 				
@@ -1081,7 +1081,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 			{
 				if (!party.isLeader(player))
 				{
-					player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
+					player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);
 				}
 				else if (!Util.checkIfInRange(3000, player, npc, true))
 				{
@@ -1223,7 +1223,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 					{
 						if ((_npc != null) && (_npc.getId() == INGENIOUS_CONTRAPTION))
 						{
-							broadcastNpcSay(_npc, Say2.NPC_SHOUT, NpcStringId.S1_MINUTES_REMAINING, Integer.toString((countdownTime / 60000)));
+							broadcastNpcSay(_npc, Say2.NPC_SHOUT, NpcStringId.S1_MINUTE_S_ARE_REMAINING, Integer.toString((countdownTime / 60000)));
 						}
 					}
 				}
@@ -1257,11 +1257,11 @@ public final class TullyWorkshop extends AbstractNpcAI
 				{
 					if ((_npc != null) && (_npc.getId() == INGENIOUS_CONTRAPTION))
 					{
-						broadcastNpcSay(_npc, Say2.NPC_SHOUT, NpcStringId.S1_SECONDS_REMAINING, Integer.toString((countdownTime / 1000)));
+						broadcastNpcSay(_npc, Say2.NPC_SHOUT, NpcStringId.S1_SECOND_S_REMAINING, Integer.toString((countdownTime / 1000)));
 					}
 				}
 			}, 60000, 10000);
-			broadcastNpcSay(postMortemSpawn.get(0), Say2.NPC_SHOUT, NpcStringId.DETONATOR_INITIALIZATION_TIME_S1_MINUTES_FROM_NOW, Integer.toString((countdownTime / 60000)));
+			broadcastNpcSay(postMortemSpawn.get(0), Say2.NPC_SHOUT, NpcStringId.DETONATOR_INITIALIZATION_TIME_SET_FOR_S1_MINUTE_S_FROM_NOW, Integer.toString((countdownTime / 60000)));
 		}
 		else if ((npcId == TIMETWISTER_GOLEM) && (_countdown != null))
 		{
@@ -1371,7 +1371,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 			}
 			else
 			{
-				broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.S1_ILL_BE_BACK_DONT_GET_COMFORTABLE, killer.getName());
+				broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.S1_I_LL_BE_BACK_DON_T_GET_COMFORTABLE, killer.getName());
 			}
 		}
 		else if (((npcId == TEMENIR) || (npcId == DRAXIUS) || (npcId == KIRETCENAH)) && spawnedFollowers.contains(npc))

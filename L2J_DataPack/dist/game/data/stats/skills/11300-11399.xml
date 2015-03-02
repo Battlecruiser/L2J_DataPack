@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="11300" levels="1" name="Yoke Status">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Momentarily immobilized midair. -->
+		<set name="icon" val="icon.skill1042" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11301" levels="8" name="Dimension Storm">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attack nearby enemies with 152 Power added to M. Atk. -->
+		<set name="icon" val="icon.skill0005" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="70" />
+		<set name="hitTime" val="2560" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="11302" levels="8" name="Servitor Major Heal">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Heals the servitor with 1637 Power. -->
+		<set name="icon" val="icon.skill1127" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="70" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="11303" levels="1" name="Mass Servitor Magic Barrier">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases all servitors' M. Def. by 30% for 30 minutes. -->
+		<set name="icon" val="icon.skill1139" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="70" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="11304" levels="1" name="Mass Servitor Haste">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases all servitors' Atk. Spd. by 34% for 30 minutes. -->
+		<set name="icon" val="icon.skill1141" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="70" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="11305" levels="1" name="Mass Servitor Shield">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases all servitors' P. Def. by 15% for 30 minutes. -->
+		<set name="icon" val="icon.skill1140" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="70" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="11306" levels="1" name="Mass Servitor Empower">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases all servitors' M. Atk. by 79% for 30 minutes. -->
+		<set name="icon" val="icon.skill1059" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="70" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="11307" levels="1" name="Mass Servitor Might">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases all servitors' P. Atk. by 17% for 30 minutes. -->
+		<set name="icon" val="icon.skill1146" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="70" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="11308" levels="1" name="Mass Servitor Wind Walk">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases all servitors' Speed by 34 for 30 minutes. -->
+		<set name="icon" val="icon.skill1144" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="70" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="11309" levels="1" name="Mass Servitor Blessing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Dispels debuffs on all servitors. -->
+		<set name="icon" val="icon.skill1301" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="70" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="11310" levels="1" name="Mass Servitor Ultimate Defense">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases all servitor's P. Def. by 4680 and M. Def. by 4212 for 60 seconds. -->
+		<set name="icon" val="icon.skill1299" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="70" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="900000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="11311" levels="3" name="Naviarope Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts 20633 damage. -->
+		<set name="icon" val="icon.skill_transform_etc" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="70" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1490" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="4000" />
+	</skill>
+	<skill id="11312" levels="3" name="Naviarope Flame">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts 18758 ranged damage. -->
+		<set name="icon" val="icon.skill_transform_etc" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="70" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1490" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="4000" />
+	</skill>
+	<skill id="11313" levels="3" name="Naviarope Explosion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts 18758 damage to nearby enemies. -->
+		<set name="icon" val="icon.skill_transform_etc" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="70" />
+		<set name="hitTime" val="1490" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="4000" />
+	</skill>
+	<skill id="11314" levels="3" name="Corpse Blast">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Detonates a corpse to inflict damage on nearby enemies. -->
+		<set name="icon" val="icon.skill_transform_debuff" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="70" />
+		<set name="castRange" val="400" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11315" levels="1" name="Summon Defense">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Bow/Crossbow Resistance + 50 and M. Def. + 50%. -->
+		<set name="icon" val="icon.skill11253" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="11316" levels="1" name="Summon Soulshots">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons 1900 Beast Soulshots. Consumes 1 Crystal (R-grade). -->
+		<set name="icon" val="icon.skill11316" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="398" />
+		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="11317" levels="8" name="Servitor Group Heal">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Restores all servitors' HP by 1191. Not in Use. -->
+		<table name="#mpConsumes"> 278 280 284 289 293 298 303 308 </table>
+		<set name="icon" val="icon.skill1027" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="6500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="6000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="11320" levels="8" name="Summon Wynn Kai the Cat">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons Wynn Kai the Cat. Consumes 2 summon points. -->
+		<table name="#mpConsumes"> 350 360 375 390 405 420 435 455 </table>
+		<set name="icon" val="icon.skill11844" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="11321" levels="8" name="Summon Wynn Feline King">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons Wynn Feline King. Consumes 2 summon points. -->
+		<table name="#mpConsumes"> 350 360 375 390 405 420 435 455 </table>
+		<set name="icon" val="icon.skill11845" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="11322" levels="8" name="Summon Wynn Feline Queen">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons Wynn Feline Queen. Consumes 2 summon points. -->
+		<table name="#mpConsumes"> 350 360 375 390 405 420 435 455 </table>
+		<set name="icon" val="icon.skill11846" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="11323" levels="8" name="Feline Aggression">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Provokes nearby enemies. -->
+		<table name="#mpConsumes"> 73 76 79 81 84 87 90 93 </table>
+		<set name="icon" val="icon.skill0028" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1490" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11324" levels="8" name="Feline Stun">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Temporarily Stuns nearby enemies. -->
+		<table name="#mpConsumes"> 73 76 79 81 84 87 90 93 </table>
+		<set name="icon" val="icon.skill0028" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1490" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11325" levels="8" name="Feline Bite">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts damage on a target with 10508 Power added to P. Atk. -->
+		<table name="#mpConsumes"> 48 50 52 54 56 58 60 62 </table>
+		<set name="icon" val="icon.skill0121" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1490" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="11326" levels="8" name="Feline Pounce">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts damage on a target with 8406 Power added to P. Atk. Speed - 100. -->
+		<table name="#mpConsumes"> 48 50 52 54 56 58 60 62 </table>
+		<set name="icon" val="icon.skill0121" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="100" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11327" levels="8" name="Feline Touch">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts damage on a target with 10508 Power added to P. Atk. -->
+		<table name="#mpConsumes"> 48 50 52 54 56 58 60 62 </table>
+		<set name="icon" val="icon.skill1234" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="2200" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="11328" levels="8" name="Feline Power">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts damage on nearby enemies with 11558 Power added to P. Atk. -->
+		<table name="#mpConsumes"> 73 76 79 81 84 87 90 93 </table>
+		<set name="icon" val="icon.skill1171" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="2900" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="11329" levels="8" name="Summon Wynn Merrow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons Wynn Merrow. Consumes 2 summon points. -->
+		<table name="#mpConsumes"> 350 360 375 390 405 420 435 455 </table>
+		<set name="icon" val="icon.skill11847" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="11330" levels="8" name="Summon Wynn Magnus">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons Wynn Magnus. Consumes 2 summon points. -->
+		<table name="#mpConsumes"> 350 360 375 390 405 420 435 455 </table>
+		<set name="icon" val="icon.skill11848" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="11331" levels="8" name="Summon Wynn Seraphim">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons Wynn Seraphim. Consumes 2 summon points. -->
+		<table name="#mpConsumes"> 350 360 375 390 405 420 435 455 </table>
+		<set name="icon" val="icon.skill11849" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="11332" levels="8" name="Unicorn's Aggression">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Provokes nearby enemies. -->
+		<table name="#mpConsumes"> 73 76 79 81 84 87 90 93 </table>
+		<set name="icon" val="icon.skill0028" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1490" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11333" levels="8" name="Unicorn's Stun">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Temporarily Stuns nearby enemies. -->
+		<table name="#mpConsumes"> 73 76 79 81 84 87 90 93 </table>
+		<set name="icon" val="icon.skill0028" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1490" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11334" levels="8" name="Unicorn's Bite">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts damage on a target with 10508 Power added to P. Atk. -->
+		<table name="#mpConsumes"> 48 50 52 54 56 58 60 62 </table>
+		<set name="icon" val="icon.skill0121" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1490" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="11335" levels="8" name="Unicorn's Pounce">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts damage on a target with 8406 Power added to P. Atk. Speed - 100. -->
+		<table name="#mpConsumes"> 48 50 52 54 56 58 60 62 </table>
+		<set name="icon" val="icon.skill0121" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="100" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11336" levels="8" name="Unicorn's Touch">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts damage on a target with 10508 Power added to P. Atk. -->
+		<table name="#mpConsumes"> 48 50 52 54 56 58 60 62 </table>
+		<set name="icon" val="icon.skill1234" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="2200" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="11337" levels="8" name="Unicorn's Power">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts damage on nearby enemies with 11558 Power added to P. Atk. -->
+		<table name="#mpConsumes"> 73 76 79 81 84 87 90 93 </table>
+		<set name="icon" val="icon.skill1171" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="2900" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="11338" levels="8" name="Summon Wynn Nightshade">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons Wynn Nightshade. Consumes 2 summon points. -->
+		<table name="#mpConsumes"> 350 360 375 390 405 420 435 455 </table>
+		<set name="icon" val="icon.skill11850" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="11339" levels="8" name="Summon Wynn Spectral Lord">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons Wynn Spectral Lord. Consumes 2 summon points. -->
+		<table name="#mpConsumes"> 350 360 375 390 405 420 435 455 </table>
+		<set name="icon" val="icon.skill11851" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="11340" levels="8" name="Summon Wynn Soulless">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons Wynn Soulless. Consumes 2 summon points. -->
+		<table name="#mpConsumes"> 350 360 375 390 405 420 435 455 </table>
+		<set name="icon" val="icon.skill11852" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="11341" levels="8" name="Phantom Aggression">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Provokes nearby enemies. -->
+		<table name="#mpConsumes"> 73 76 79 81 84 87 90 93 </table>
+		<set name="icon" val="icon.skill0028" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1490" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11342" levels="8" name="Phantom Stun">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Temporarily Stuns nearby enemies. -->
+		<table name="#mpConsumes"> 73 76 79 81 84 87 90 93 </table>
+		<set name="icon" val="icon.skill0028" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1490" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11343" levels="8" name="Phantom Bite">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts damage on a target with 10508 Power added to P. Atk. -->
+		<table name="#mpConsumes"> 48 50 52 54 56 58 60 62 </table>
+		<set name="icon" val="icon.skill0121" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1490" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="11344" levels="8" name="Phantom Pounce">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts damage on a target with 8406 Power added to P. Atk. Speed - 100. -->
+		<table name="#mpConsumes"> 48 50 52 54 56 58 60 62 </table>
+		<set name="icon" val="icon.skill0121" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="100" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11345" levels="8" name="Phantom Touch">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts damage on a target with 10508 Power added to P. Atk. -->
+		<table name="#mpConsumes"> 48 50 52 54 56 58 60 62 </table>
+		<set name="icon" val="icon.skill1234" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="2200" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="11346" levels="8" name="Phantom Power">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts damage on nearby enemies with 11558 Power added to P. Atk. -->
+		<table name="#mpConsumes"> 73 76 79 81 84 87 90 93 </table>
+		<set name="icon" val="icon.skill1171" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="2900" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="11347" levels="4" name="Greater Servitor Haste">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 min., all servitors' Atk. Spd. + 10%. -->
+		<table name="#mpConsumes"> 61 67 73 79 </table>
+		<set name="icon" val="icon.skill11347" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="11348" levels="4" name="Servitor Death Whisper">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 min., all servitors' Critical Damage + 10%. -->
+		<table name="#mpConsumes"> 61 67 73 79 </table>
+		<set name="icon" val="icon.skill11348" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="11349" levels="4" name="Greater Servitor Might">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 min., all servitors' P. Atk. + 10%. -->
+		<table name="#mpConsumes"> 61 67 73 79 </table>
+		<set name="icon" val="icon.skill11349" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="11350" levels="4" name="Arcane Rage">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Use Arcana Wrath to inflict severe damage on a target with 188 Power added to M. Atk. -->
+		<table name="#mpConsumes"> 53 60 67 70 </table>
+		<set name="icon" val="icon.skill11350" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="2780" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2400" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="11351" levels="5" name="Arcane Link">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Servitor's wrath. P. Atk. + 1%, Critical Rate + 10%, and Critical Damage + 1%. -->
+		<set name="icon" val="icon.skill11351" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="4" />
+	</skill>
+	<skill id="11352" levels="4" name="Arcane Ability">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Atk. Spd., P. Def. + 3%, and PvP Damage - 3%. -->
+		<set name="icon" val="icon.skill11277" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="11353" levels="4" name="Elemental Rage">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Use Elemental Wrath to inflict severe damage on a target with 188 Power added to M. Atk. -->
+		<table name="#mpConsumes"> 53 60 67 70 </table>
+		<set name="icon" val="icon.skill11353" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="2780" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2400" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="11354" levels="5" name="Elemental Link">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Servitor's wrath. P. Atk. + 1%, Critical Rate + 10%, and Critical Damage + 1%. -->
+		<set name="icon" val="icon.skill11354" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="4" />
+	</skill>
+	<skill id="11355" levels="4" name="Elemental Ability">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Critical Damage + 5%. -->
+		<set name="icon" val="icon.skill11277" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="11356" levels="4" name="Spectral Rage">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Use Spectral Wrath to inflict severe damage on a target with 188 Power added to M. Atk. -->
+		<table name="#mpConsumes"> 53 60 67 70 </table>
+		<set name="icon" val="icon.skill11356" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="2780" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2400" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="11357" levels="5" name="Spectral Link">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Servitor's wrath. P. Atk. + 1%, Critical Rate + 10%, and Critical Damage + 1%. -->
+		<set name="icon" val="icon.skill11357" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="4" />
+	</skill>
+	<skill id="11358" levels="4" name="Spectral Ability">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. + 3%, and PvP Damage - 3%. -->
+		<set name="icon" val="icon.skill11277" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="11359" levels="3" name="Summon Protection Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons a giant shaman stone to temporarily increase party's abilities. Consumes 15 Spirit Ores. -->
+		<table name="#mpConsumes"> 137 132 137 </table>
+		<set name="icon" val="icon.skill11359" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="400000" />
+	</skill>
+	<skill id="11360" levels="3" name="Arcane Protection">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 sec., Received P./M. Critical Rate - 5%, Pull Resistance and Knock Back / Knock Down Resistance - 5. Debuff Resistance + 5%, HP/MP Recovery Bonus + 5%. -->
+		<set name="icon" val="icon.skill11360" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="4000" />
+		<set name="isMagic" val="4" />
+	</skill>
+	<skill id="11361" levels="3" name="Summon Moving Portal">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons an instant Moving Portal for 30 sec. Consumes 5 Spirit Ores. -->
+		<set name="icon" val="icon.skill11361" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="128" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="50000" />
+	</skill>
+	<skill id="11362" levels="3" name="Summon Moving Portal">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- An instant Moving Portal is summoned. -->
+		<set name="icon" val="icon.skill11361" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="11363" levels="3" name="Instant Teleport">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Teleports using the Moving Portal summoned. Consumes 1 Spirit Ore. -->
+		<table name="#mpConsumes"> 108 104 108 </table>
+		<set name="icon" val="icon.skill11363" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1000" />
+		<set name="reuseDelay" val="5000" />
+	</skill>
+	<skill id="11364" levels="3" name="Elemental Dash">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Party's Speed + 15. -->
+		<set name="icon" val="icon.skill0028" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="70" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="4000" />
+	</skill>
+	<skill id="11365" levels="3" name="Summon Demonic Crucifix">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 518 Power added to M. Atk. and casts a curse that decreases target's Atk./Casting Spd. by 30% and Speed by 180. Consumes 3 Spirit Ores. -->
+		<table name="#mpConsumes"> 394 382 394 </table>
+		<set name="icon" val="icon.skill11365" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="2500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11366" levels="3" name="Spectral Curse">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Temporarily renders nearby enemies helpless. -->
+		<set name="icon" val="icon.skill0028" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="70" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="4000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11367" levels="3" name="Arcane Protection">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 sec., Received P./M. Critical Rate - 7%, Pull Resistance and Knock Back / Knock Down Resistance - 10. Debuff Resistance + 10%, HP/MP Recovery Bonus + 10%. -->
+		<set name="icon" val="icon.skill11360" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="4000" />
+		<set name="isMagic" val="4" />
+	</skill>
+	<skill id="11368" levels="3" name="Arcane Protection">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 sec., Debuff Resistance + 15%, Pull Resistance + 15%, Knock Back / Knock Down Resistance + 15%, HP/MP Recovery Bonus + 15%. Received P./M. Critical Rate - 10%. -->
+		<set name="icon" val="icon.skill11360" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="reuseDelay" val="4000" />
+		<set name="isMagic" val="4" />
+	</skill>
+</list>

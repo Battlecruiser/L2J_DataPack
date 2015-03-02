@@ -200,7 +200,7 @@ public final class Core extends AbstractNpcAI
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, objId, npc.getX(), npc.getY(), npc.getZ()));
 			npc.broadcastPacket(new NpcSay(objId, Say2.NPC_ALL, npcId, NpcStringId.A_FATAL_ERROR_HAS_OCCURRED));
 			npc.broadcastPacket(new NpcSay(objId, Say2.NPC_ALL, npcId, NpcStringId.SYSTEM_IS_BEING_SHUT_DOWN));
-			npc.broadcastPacket(new NpcSay(objId, Say2.NPC_ALL, npcId, NpcStringId.DOT_DOT_DOT_DOT_DOT_DOT));
+			npc.broadcastPacket(new NpcSay(objId, Say2.NPC_ALL, npcId, NpcStringId.EMPTY));
 			_FirstAttacked = false;
 			GrandBossManager.getInstance().setBossStatus(CORE, DEAD);
 			// Calculate Min and Max respawn times randomly.

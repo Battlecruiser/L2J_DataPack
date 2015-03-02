@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/teleporterData.xsd">
+	<npc id="30576"> <!-- Teleport Device -->
+		<teleport type="NORMAL">
+			<location npcStringId="1010005" x="-14608" y="123920" z="-3128" feeCount="23000" /> <!-- The Town of Gludio -->
+			<location npcStringId="1010574" x="87130" y="-143514" z="-1291" feeCount="13000" /> <!-- Town of Schuttgart -->
+			<location npcStringId="1010156" x="11162" y="16012" z="-4584" feeCount="13000" /> <!-- Dark Elf Village -->
+			<location npcStringId="1010158" x="115341" y="-178221" z="-928" feeCount="17000" /> <!-- Dwarven Village -->
+			<location npcStringId="1010001" x="-113443" y="256656" z="-1504" feeCount="37000" /> <!-- Talking Island Village -->
+			<location npcStringId="1010155" x="44730" y="49210" z="-3059" feeCount="18000" /> <!-- Elven Village -->
+			<location npcStringId="1010648" x="-116977" y="46607" z="368" feeCount="17000" /> <!-- Kamael Village -->
+			<location npcStringId="1010737" x="16360" y="-114097" z="-226" feeCount="6000" /> <!-- Gainak Village -->
+		</teleport>
+		<teleport type="NOBLES_TOKEN">
+			<location npcStringId="1010506" x="-87334" y="142252" z="-3645" feeId="13722" feeCount="1" /> <!-- Gludin Arena -->
+			<location npcStringId="1010007" x="83551" y="147945" z="-3395" feeId="13722" feeCount="1" /> <!-- The Town of Giran -->
+			<location npcStringId="1010556" x="-25327" y="-131591" z="-697" feeId="13722" feeCount="1" /> <!-- Immortal Plateau, Northern Region -->
+			<location npcStringId="1010053" x="146434" y="46712" z="-3433" feeId="13722" feeCount="1" /> <!-- Coliseum -->
+			<location npcStringId="1010731" x="-186306" y="242822" z="2552" feeId="13722" feeCount="100" /> <!-- Keucereus Alliance Base -->
+		</teleport>
+		<teleport type="NOBLES_ADENA">
+			<location npcStringId="1010506" x="-87334" y="142252" z="-3645" feeCount="1000" /> <!-- Gludin Arena -->
+			<location npcStringId="1010007" x="83551" y="147945" z="-3395" feeCount="1000" /> <!-- The Town of Giran -->
+			<location npcStringId="1010556" x="-25327" y="-131591" z="-697" feeCount="1000" /> <!-- Immortal Plateau, Northern Region -->
+			<location npcStringId="1010053" x="146434" y="46712" z="-3433" feeCount="1000" /> <!-- Coliseum -->
+			<location npcStringId="1010731" x="-186306" y="242822" z="2552" feeCount="100000" /> <!-- Keucereus Alliance Base -->
+		</teleport>
+	</npc>
+</list>

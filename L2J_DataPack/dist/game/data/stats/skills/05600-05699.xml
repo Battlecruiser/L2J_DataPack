@@ -17,7 +17,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5601" levels="12" name="Short-Range Physical Attack Resistance">
+	<skill id="5601" levels="12" name="Melee Attack Resistance">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#traits"> 5 10 15 20 25 30 35 40 45 55 70 100 </table>
@@ -79,7 +79,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5604" levels="1" name="Blunt Mastery">
+	<skill id="5604" levels="1" name="Sword/Blunt Weapon Mastery">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
@@ -215,35 +215,35 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5614" levels="1" name="Raid Boss - Level 87">
+	<skill id="5614" levels="1" name="Raid Boss (Lv. 87)">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5615" levels="1" name="Raid Boss - Level 87">
+	<skill id="5615" levels="1" name="Raid Boss (Lv. 87)">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5616" levels="1" name="Raid Boss - Level 87">
+	<skill id="5616" levels="1" name="Raid Boss (Lv. 87)">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5617" levels="1" name="Raid Boss - Level 87">
+	<skill id="5617" levels="1" name="Raid Boss (Lv. 87)">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5618" levels="1" name="Raid Boss - Level 87">
+	<skill id="5618" levels="1" name="Raid Boss (Lv. 87)">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
@@ -257,7 +257,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5620" levels="12" name="Short-Range Physical Attack Weakness">
+	<skill id="5620" levels="12" name="Melee Attack Vulnerability">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#traits"> -5 -10 -15 -20 -25 -30 -35 -40 -45 -55 -70 -100 </table>
@@ -300,7 +300,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5623" levels="1" name="Weakened Magic Force">
+	<skill id="5623" levels="1" name="Weakened Magic Circle">
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="PD_DOWN" />
@@ -546,7 +546,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5638" levels="4" name="Feline Queen - Bless the Body">
+	<skill id="5638" levels="4" name="Feline Queen - Blessed Body">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 3 4 5 6 </table>
 		<table name="#effectPoints"> 495 532 597 646 </table>
@@ -576,7 +576,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5639" levels="4" name="Feline Queen - Bless the Soul">
+	<skill id="5639" levels="4" name="Feline Queen - Blessed Soul">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 3 4 5 6 </table>
 		<table name="#effectPoints"> 495 532 582 635 </table>
@@ -665,7 +665,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5643" levels="1" name="Unicorn Seraphim - Acumen">
+	<skill id="5643" levels="1" name="Seraphim the Unicorn - Acumen">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="1200" />
@@ -726,17 +726,16 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5646" levels="2" name="Unicorn Seraphim - Wild Magic">
-		<!-- Confirmed CT2.5 -->
-		<!-- 3 lvl not_used, don't add it on skill -->
+	<skill id="5646" levels="3" name="Seraphim the Unicorn - Wild Magic">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#abnormalTypes"> MAGIC_CRITICAL_UP MAGIC_CRITICAL_UP HIT_UP </table>
 		<table name="#effectPoints"> 582 635 532 </table>
 		<table name="#icons"> icon.skill1303 icon.skill1303 icon.skill1240 </table>
-		<table name="#magicLvl"> 64 72 </table>
-		<table name="#mCritRate"> 2 3 </table>
-		<table name="#mpConsume"> 46 52 </table>
-		<table name="#mpInitialConsume"> 12 13 </table>
+		<table name="#magicLvl"> 64 72 80 </table> <!-- Guessed -->
+		<table name="#mCritRate"> 2 3 4 </table> <!-- Guessed -->
+		<table name="#mpConsume"> 46 52 42 </table> <!-- Guessed -->
+		<table name="#mpInitialConsume"> 12 13 10 </table> <!-- Guessed -->
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="#abnormalTypes" />
@@ -759,7 +758,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5647" levels="3" name="Unicorn Seraphim - Clarity">
+	<skill id="5647" levels="3" name="Seraphim the Unicorn - Clarity">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#effectPoints"> 549 611 655 </table>
@@ -795,7 +794,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5648" levels="2" name="Unicorn Seraphim - Empower">
+	<skill id="5648" levels="2" name="Seraphim the Unicorn - Empower">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 2 3 </table>
 		<table name="#effectPoints"> 418 495 </table>
@@ -1117,7 +1116,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5660" levels="5" name="Battlefield Death Syndrome">
+	<skill id="5660" levels="5" name="Battleground Death Syndrome">
 		<!-- Confirmed CT2.5 -->
 		<table name="#val1"> 0.9 0.81 0.73 0.66 0.6 </table>
 		<table name="#val2"> 5 9 13 17 21 </table>
@@ -1162,7 +1161,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5663" levels="5" name="Resistance to Ancient Sword">
+	<skill id="5663" levels="5" name="Ancient Sword Resistance">
 		<!-- Confirmed CT2.5 -->
 		<table name="#trait_ancientsword"> 10 20 30 40 50 </table>
 		<set name="icon" val="icon.skill5663" />
@@ -1175,7 +1174,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5664" levels="5" name="Weakness to Ancient Sword">
+	<skill id="5664" levels="5" name="Ancient Sword Vulnerability">
 		<!-- Confirmed CT2.5 -->
 		<table name="#trait_ancientsword"> -11 -25 -43 -67 -100 </table>
 		<set name="icon" val="icon.skill5664" />
@@ -1575,7 +1574,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5684" levels="1" name="PvP Weapon - Attack Chance">
+	<skill id="5684" levels="1" name="PvP Weapon - Attack Rate">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-1" />
@@ -1821,7 +1820,7 @@
 			<effect name="TargetCancel" />
 		</for>
 	</skill>
-	<skill id="5695" levels="1" name="Talisman - Increase Force">
+	<skill id="5695" levels="1" name="Talisman - Increase Momentum">
 		<!-- Confirmed CT2.5 -->
 		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="100" />
@@ -1884,7 +1883,7 @@
 			<effect name="PhysicalMute" />
 		</for>
 	</skill>
-	<skill id="5698" levels="37" name="Bless the Blood">
+	<skill id="5698" levels="37" name="Blessed Blood">
 		<!-- Confirmed CT2.5 -->
 		<table name="#amount"> 217 281 346 377 406 434 458 470 477 485 492 500 507 515 522 530 537 545 552 560 567 575 582 590 597 605 612 620 627 635 642 650 657 665 672 680 687 </table>
 		<table name="#magicLvl"> 40 48 56 60 64 68 72 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>

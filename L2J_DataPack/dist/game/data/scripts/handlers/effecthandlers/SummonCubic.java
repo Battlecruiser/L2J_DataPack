@@ -24,6 +24,8 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
+import com.l2jserver.gameserver.network.serverpackets.CharInfo;
+import com.l2jserver.gameserver.network.serverpackets.ExUserInfoCubic;
 import com.l2jserver.util.Rnd;
 
 /**
@@ -121,6 +123,7 @@ public final class SummonCubic extends AbstractEffect
 		}
 		// Adding a new cubic.
 		player.addCubic(_cubicId, _cubicSkillLevel, _cubicPower, _cubicDelay, _cubicSkillChance, _cubicMaxCount, _cubicDuration, info.getEffected() != info.getEffector());
-		player.broadcastUserInfo();
+		player.sendPacket(new ExUserInfoCubic(player));
+		player.broadcastPacket(new CharInfo(player));
 	}
 }

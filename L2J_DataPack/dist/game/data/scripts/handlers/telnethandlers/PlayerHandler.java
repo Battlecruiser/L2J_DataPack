@@ -36,7 +36,6 @@ import com.l2jserver.gameserver.model.punishment.PunishmentTask;
 import com.l2jserver.gameserver.model.punishment.PunishmentType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.CharInfo;
-import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.network.serverpackets.UserInfo;
@@ -94,7 +93,7 @@ public class PlayerHandler implements ITelnetHandler
 					InventoryUpdate iu = new InventoryUpdate();
 					iu.addItem(item);
 					player.sendPacket(iu);
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_PICKED_UP_S1_S2);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
 					sm.addItemName(itemId);
 					sm.addLong(amount);
 					player.sendPacket(sm);
@@ -321,7 +320,6 @@ public class PlayerHandler implements ITelnetHandler
 			activeChar.sendPacket(iu);
 			activeChar.broadcastPacket(new CharInfo(activeChar));
 			activeChar.sendPacket(new UserInfo(activeChar));
-			activeChar.broadcastPacket(new ExBrExtraUserInfo(activeChar));
 			
 			// informations
 			activeChar.sendMessage("Changed enchantment of " + activeChar.getName() + "'s " + itemInstance.getItem().getName() + " from " + curEnchant + " to " + ench + ".");

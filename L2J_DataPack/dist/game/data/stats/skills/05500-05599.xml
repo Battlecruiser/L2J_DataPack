@@ -32,7 +32,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5501" levels="1" name="Stuns">
+	<skill id="5501" levels="1" name="Stun">
 		<!-- Confirmed CT2.5 -->
 		<!-- Darion Skills -->
 		<set name="abnormalLvl" val="1" />
@@ -62,7 +62,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5502" levels="1" name="Stuns">
+	<skill id="5502" levels="1" name="Stun">
 		<!-- Confirmed CT2.5 -->
 		<!-- Darion Skills -->
 		<set name="abnormalLvl" val="1" />
@@ -458,7 +458,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5524" levels="1" name="Chain Buff - Resistance to Bow and Magic attacks">
+	<skill id="5524" levels="1" name="Chain Buff - Bow/Magic Resistance">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="MD_UP" />
@@ -481,7 +481,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5525" levels="1" name="Chain Buff - Resistance to Melee Attacks">
+	<skill id="5525" levels="1" name="Chain Buff - Melee Resistance">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PD_UP" />
@@ -557,7 +557,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5529" levels="12" name="Surrender to the Unholy">
+	<skill id="5529" levels="12" name="Surrender to Dark">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 2 2 2 3 3 3 4 4 4 5 5 5 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -608,7 +608,7 @@
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="BLEED" />
 	</skill>
-	<skill id="5531" levels="1" name="Direction-Beleth Magic Skill 1">
+	<skill id="5531" levels="1" name="Presentation - Beleth Magic Skill 1">
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
@@ -616,7 +616,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5532" levels="1" name="Direction-Beleth Summon Skill 1">
+	<skill id="5532" levels="1" name="Presentation - Beleth Summon Skill 1">
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
@@ -624,7 +624,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5533" levels="1" name="Direction-Beleth Self-Destruction Skill 1">
+	<skill id="5533" levels="1" name="Presentation - Beleth Self-destruction Skill 1">
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
@@ -632,14 +632,14 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5534" levels="1" name="Direction-Beleth Transformation Skill 1">
+	<skill id="5534" levels="1" name="Presentation - Beleth Transformation Skill 1">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5535" levels="1" name="Little Angel Cuteness Trick">
+	<skill id="5535" levels="1" name="Little Angel Agathion Cute Trick">
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -650,7 +650,7 @@
 			<player agathionId="16031" />
 		</cond>
 	</skill>
-	<skill id="5536" levels="1" name="Little Devil Cuteness Trick">
+	<skill id="5536" levels="1" name="Little Devil Agathion Cute Trick">
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -672,7 +672,7 @@
 			<player agathionId="16033" />
 		</cond>
 	</skill>
-	<skill id="5538" levels="1" name="Little Angel Agathion Special Skill - Firecrackers">
+	<skill id="5538" levels="1" name="Little Angel Agathion Special Skill: Firecrackers">
 		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -684,7 +684,7 @@
 			<player agathionId="16031" />
 		</cond>
 	</skill>
-	<skill id="5539" levels="1" name="Little Angel Agathion Special Skill - Mysterious Power">
+	<skill id="5539" levels="1" name="Little Angel Agathion Special Skill: Mysterious Power">
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BIG_HEAD" />
@@ -702,7 +702,7 @@
 			<player agathionId="16031" />
 		</cond>
 	</skill>
-	<skill id="5540" levels="1" name="Little Angel Agathion Special Skill - Power of Blessed Return">
+	<skill id="5540" levels="1" name="Little Angel Agathion Special Skill: Blessed Escape">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="200" />
 		<set name="icon" val="icon.skill_agathion_special" />
@@ -729,7 +729,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5541" levels="1" name="Little Angel Agathion Special Skill - Power of Blessed Resurrection">
+	<skill id="5541" levels="1" name="Little Angel Agathion Special Skill: Blessed Resurrection">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="1" />
@@ -754,7 +754,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5542" levels="1" name="Little Devil Agathion Special Skill - Firecrackers">
+	<skill id="5542" levels="1" name="Little Devil Agathion Special Skill: Firecrackers">
 		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -766,7 +766,7 @@
 			<player agathionId="16032" />
 		</cond>
 	</skill>
-	<skill id="5543" levels="1" name="Little Devil Agathion Special Skill - Mysterious Power">
+	<skill id="5543" levels="1" name="Little Devil Agathion Special Skill: Mysterious Power">
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BIG_HEAD" />
@@ -784,7 +784,7 @@
 			<player agathionId="16032" />
 		</cond>
 	</skill>
-	<skill id="5544" levels="1" name="Little Devil Agathion Special Skill - Power of Blessed Return">
+	<skill id="5544" levels="1" name="Little Devil Agathion Special Skill: Blessed Escape">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="200" />
 		<set name="icon" val="icon.skill_agathion_special" />
@@ -811,7 +811,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5545" levels="1" name="Little Devil Agathion Special Skill - Power of Blessed Resurrection">
+	<skill id="5545" levels="1" name="Little Devil Agathion Special Skill: Blessed Resurrection">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="1" />
@@ -866,7 +866,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5548" levels="4" name="Critical Spiritual Energy Attack">
+	<skill id="5548" levels="4" name="Critical Momentum Attack">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 20 40 58 70 </table>
 		<set name="isTriggeredSkill" val="true" />
@@ -886,7 +886,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5549" levels="1" name="Physical Short-range Weakness">
+	<skill id="5549" levels="1" name="Melee Attack Vulnerability">
 		<set name="magicLvl" val="70" />
 		<set name="operateType" val="P" />
 		<for>
@@ -902,7 +902,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5550" levels="12" name="NPC Trigger Stun">
+	<skill id="5550" levels="12" name="Trigger Stun">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#triggeredLvl"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<set name="magicLvl" val="#magicLvl" />
@@ -947,7 +947,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5552" levels="12" name="NPC Hill Up">
+	<skill id="5552" levels="12" name="Heal Up">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#power"> 10 20 30 40 50 60 70 80 90 100 110 120 </table>
 		<set name="magicLvl" val="#magicLvl" />
@@ -960,7 +960,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5553" levels="12" name="NPC HP Region">
+	<skill id="5553" levels="12" name="Recovery">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#power"> 1.2 1.3 1.4 1.5 1.75 2 3 4 5 6 8.5 11 </table>
 		<set name="magicLvl" val="#magicLvl" />
@@ -973,7 +973,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5554" levels="12" name="NPC Silence Resistance enhanced">
+	<skill id="5554" levels="12" name="Enhanced Silence Resistance">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#trait_derangement"> 5 10 15 20 25 30 35 40 45 50 75 100 </table>
 		<set name="magicLvl" val="#magicLvl" />
@@ -986,7 +986,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5555" levels="12" name="NPC Silence Resistance weakened">
+	<skill id="5555" levels="12" name="Weakened Silence Resistance">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#trait_derangement"> -5 -10 -15 -20 -25 -30 -35 -40 -45 -50 -75 -100 </table>
 		<set name="magicLvl" val="#magicLvl" />
@@ -1025,7 +1025,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5557" levels="1" name="Protection of Elemental">
+	<skill id="5557" levels="1" name="Blessing of Resistance">
 		<!-- Not Used Anymore -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
@@ -1115,7 +1115,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5562" levels="3" name="Spirit of Phoenix">
+	<skill id="5562" levels="3" name="Spirit of the Phoenix">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 2 3 4 </table>
 		<table name="#activationChance"> 10 10 0 </table>
@@ -1206,7 +1206,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5565" levels="1" name="Expose Weak Point">
+	<skill id="5565" levels="1" name="Expose Vulnerability">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
@@ -1235,7 +1235,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5566" levels="1" name="Post of Destruction">
+	<skill id="5566" levels="1" name="Force of Destruction">
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill1050" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1349,7 +1349,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5572" levels="1" name="Warrior Ability - Haste">
+	<skill id="5572" levels="1" name="Warrior Ability: Haste">
 		<!-- CT2.5 retail confirmed -->
 		<!-- NOTE: Description says "Excludes damage caused by a skill or ranged attack" but is client typo -->
 		<set name="abnormalLvl" val="1" />
@@ -1371,7 +1371,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5573" levels="1" name="Knight Ability - Defense">
+	<skill id="5573" levels="1" name="Knight Ability: Defense">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
@@ -1393,7 +1393,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5574" levels="1" name="Log Ability - Critical Chance">
+	<skill id="5574" levels="1" name="Rogue Ability: Critical Chance">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
@@ -1414,7 +1414,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5575" levels="1" name="Wizard Ability - Mana Steal">
+	<skill id="5575" levels="1" name="Wizard Ability: Mana Steal">
 		<!-- CT2.5 retail confirmed -->
 		<set name="icon" val="icon.skill1398" />
 		<set name="isTriggeredSkill" val="true" />
@@ -1429,7 +1429,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5576" levels="1" name="Enchanter Ability - Barrier">
+	<skill id="5576" levels="1" name="Enchanter Ability: Barrier">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
@@ -1449,7 +1449,7 @@
 			<effect name="Invincible" />
 		</for>
 	</skill>
-	<skill id="5577" levels="1" name="Healer Ability - Heal">
+	<skill id="5577" levels="1" name="Healer Ability: Heal">
 		<!-- CT2.5 retail confirmed -->
 		<set name="icon" val="icon.skill1011" />
 		<set name="isTriggeredSkill" val="true" />
@@ -1464,7 +1464,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5578" levels="1" name="Summoner Ability - Spirit">
+	<skill id="5578" levels="1" name="Summoner Ability: Spirit">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
@@ -1917,7 +1917,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5597" levels="1" name="Invalid Skill cancel">
+	<skill id="5597" levels="1" name="Cancel Invalid Skill">
 		<set name="magicLvl" val="95" />
 		<set name="operateType" val="P" />
 		<set name="rideState" val="NONE" />
@@ -1928,7 +1928,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5598" levels="12" name="Flash Resistance">
+	<skill id="5598" levels="12" name="Petrification Resistance">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#trait_turn_stone"> 5 10 15 20 25 30 35 40 45 50 75 100 </table>

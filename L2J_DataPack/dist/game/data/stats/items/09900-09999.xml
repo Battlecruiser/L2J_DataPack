@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="9900" type="Armor" name="Quiet Footsteps Ring">
+	<item id="9900" type="Armor" name="Stealth Ring">
 		<set name="icon" val="icon.accessary_ring_of_mana_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
-		<set name="price" val="25" />
 		<set name="equip_reuse_delay" val="30" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -16,7 +15,7 @@
 		<set name="duration" val="400" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
-	<item id="9901" type="Weapon" name="Improved Falchion">
+	<item id="9901" type="Weapon" name="Enhanced Falchion">
 		<set name="icon" val="icon.weapon_falchion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -39,7 +38,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9902" type="Weapon" name="Improved Great Spear">
+	<item id="9902" type="Weapon" name="Enhanced Great Spear">
 		<set name="icon" val="icon.weapon_long_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -64,7 +63,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9903" type="Weapon" name="Improved Iron Hammer">
+	<item id="9903" type="Weapon" name="Enhanced Iron Hammer">
 		<set name="icon" val="icon.weapon_iron_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -88,7 +87,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9904" type="Weapon" name="Improved Sword Breaker">
+	<item id="9904" type="Weapon" name="Enhanced Sword Breaker">
 		<set name="icon" val="icon.weapon_sword_breaker_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -112,7 +111,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9905" type="Weapon" name="Improved Viper Fang">
+	<item id="9905" type="Weapon" name="Enhanced Viper Fang">
 		<set name="icon" val="icon.weapon_vipers_canine_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -136,7 +135,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9906" type="Weapon" name="Improved Composite Bow">
+	<item id="9906" type="Weapon" name="Enhanced Compound Bow">
 		<set name="icon" val="icon.weapon_composition_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -162,7 +161,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9907" type="Weapon" name="Improved Flanged Mace">
+	<item id="9907" type="Weapon" name="Enhanced Flanged Mace">
 		<set name="icon" val="icon.weapon_buzdygan_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -186,7 +185,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9908" type="Weapon" name="Improved Mage Staff">
+	<item id="9908" type="Weapon" name="Enhanced Mage Staff">
 		<set name="icon" val="icon.weapon_apprentices_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -211,7 +210,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9909" type="Armor" name="Agathion Seal Bracelet">
+	<item id="9909" type="Armor" name="Agathion Bracelet">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -253,6 +252,7 @@
 		<set name="material" val="PAPER" />
 		<set name="price" val="1000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="9913" type="Armor" name="Talisman_Test">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
@@ -266,7 +266,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="60" />
 	</item>
-	<item id="9914" type="Armor" name="Blue Talisman of Power">
+	<item id="9914" type="Armor" name="Blue Talisman - P. Atk.">
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -281,7 +281,7 @@
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
-	<item id="9915" type="Armor" name="Blue Talisman of Wild Magic">
+	<item id="9915" type="Armor" name="Blue Talisman - M. Critical Rate">
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -296,7 +296,7 @@
 		<set name="duration" val="75" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
-	<item id="9916" type="Armor" name="Blue Talisman of Defense">
+	<item id="9916" type="Armor" name="Blue Talisman - Berserker">
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -311,7 +311,7 @@
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
-	<item id="9917" type="Armor" name="Red Talisman of Minimum Clarity">
+	<item id="9917" type="Armor" name="Red Talisman - Minimum Clarity">
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -326,7 +326,7 @@
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
-	<item id="9918" type="Armor" name="Red Talisman of Maximum Clarity">
+	<item id="9918" type="Armor" name="Red Talisman - Maximum Clarity">
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -341,7 +341,7 @@
 		<set name="duration" val="74" />
 		<set name="useSkillDisTime" val="15" />
 	</item>
-	<item id="9919" type="Armor" name="Blue Talisman of Reflection">
+	<item id="9919" type="Armor" name="Blue Talisman - Damage Reflect">
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -356,7 +356,7 @@
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
-	<item id="9920" type="Armor" name="Blue Talisman of Invisibility">
+	<item id="9920" type="Armor" name="Blue Talisman - Invisibility">
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -371,7 +371,7 @@
 		<set name="duration" val="64" />
 		<set name="useSkillDisTime" val="3" />
 	</item>
-	<item id="9921" type="Armor" name="Blue Talisman - Shield Protection">
+	<item id="9921" type="Armor" name="Blue Talisman - Shield Defense">
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -416,7 +416,7 @@
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
-	<item id="9924" type="Armor" name="Blue Talisman of Healing">
+	<item id="9924" type="Armor" name="Blue Talisman - Healing">
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -431,7 +431,7 @@
 		<set name="duration" val="64" />
 		<set name="useSkillDisTime" val="5" />
 	</item>
-	<item id="9925" type="Armor" name="Red Talisman of Recovery">
+	<item id="9925" type="Armor" name="Red Talisman - HP/CP Recovery">
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -446,7 +446,7 @@
 		<set name="duration" val="64" />
 		<set name="useSkillDisTime" val="5" />
 	</item>
-	<item id="9926" type="Armor" name="Blue Talisman of Defense">
+	<item id="9926" type="Armor" name="Blue Talisman - P. Def.">
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -461,7 +461,7 @@
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
-	<item id="9927" type="Armor" name="Blue Talisman of Magic Defense">
+	<item id="9927" type="Armor" name="Blue Talisman - M. Def.">
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -476,7 +476,7 @@
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
-	<item id="9928" type="Armor" name="Red Talisman of Mental Regeneration">
+	<item id="9928" type="Armor" name="Red Talisman - Mental Regeneration">
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -491,7 +491,7 @@
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
-	<item id="9929" type="Armor" name="Blue Talisman of Protection">
+	<item id="9929" type="Armor" name="Blue Talisman - Shield Defense">
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -506,7 +506,7 @@
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
-	<item id="9930" type="Armor" name="Blue Talisman of Evasion">
+	<item id="9930" type="Armor" name="Blue Talisman - Evasion">
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -521,7 +521,7 @@
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
-	<item id="9931" type="Armor" name="Red Talisman of Meditation">
+	<item id="9931" type="Armor" name="Red Talisman - Meditation">
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -551,7 +551,7 @@
 		<set name="duration" val="74" />
 		<set name="useSkillDisTime" val="15" />
 	</item>
-	<item id="9933" type="Armor" name="Yellow Talisman of Power">
+	<item id="9933" type="Armor" name="Yellow Talisman - P. Atk.">
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -565,7 +565,7 @@
 		<set name="duration" val="60" />
 		<set name="useSkillDisTime" val="1" />
 	</item>
-	<item id="9934" type="Armor" name="Yellow Talisman of Violent Haste">
+	<item id="9934" type="Armor" name="Yellow Talisman - Atk. Spd.">
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -579,7 +579,7 @@
 		<set name="duration" val="60" />
 		<set name="useSkillDisTime" val="1" />
 	</item>
-	<item id="9935" type="Armor" name="Yellow Talisman of Arcane Defense">
+	<item id="9935" type="Armor" name="Yellow Talisman - M. Def.">
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -593,7 +593,7 @@
 		<set name="duration" val="60" />
 		<set name="useSkillDisTime" val="1" />
 	</item>
-	<item id="9936" type="Armor" name="Yellow Talisman of Arcane Power">
+	<item id="9936" type="Armor" name="Yellow Talisman - M. Atk.">
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -607,7 +607,7 @@
 		<set name="duration" val="60" />
 		<set name="useSkillDisTime" val="1" />
 	</item>
-	<item id="9937" type="Armor" name="Yellow Talisman of Arcane Haste">
+	<item id="9937" type="Armor" name="Yellow Talisman - Casting Spd.">
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -621,7 +621,7 @@
 		<set name="duration" val="60" />
 		<set name="useSkillDisTime" val="1" />
 	</item>
-	<item id="9938" type="Armor" name="Yellow Talisman of Accuracy">
+	<item id="9938" type="Armor" name="Yellow Talisman - Accuracy">
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -635,7 +635,7 @@
 		<set name="duration" val="60" />
 		<set name="useSkillDisTime" val="1" />
 	</item>
-	<item id="9939" type="Armor" name="Yellow Talisman of Defense">
+	<item id="9939" type="Armor" name="Yellow Talisman - P. Def.">
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -649,7 +649,7 @@
 		<set name="duration" val="60" />
 		<set name="useSkillDisTime" val="1" />
 	</item>
-	<item id="9940" type="Armor" name="Yellow Talisman of Alacrity">
+	<item id="9940" type="Armor" name="Yellow Talisman - Alacrity">
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -663,7 +663,7 @@
 		<set name="duration" val="60" />
 		<set name="useSkillDisTime" val="1" />
 	</item>
-	<item id="9941" type="Armor" name="Yellow Talisman of Speed">
+	<item id="9941" type="Armor" name="Yellow Talisman - Speed">
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -677,7 +677,7 @@
 		<set name="duration" val="60" />
 		<set name="useSkillDisTime" val="1" />
 	</item>
-	<item id="9942" type="Armor" name="Yellow Talisman of Critical Reduction">
+	<item id="9942" type="Armor" name="Yellow Talisman - Critical Reduction">
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -691,7 +691,7 @@
 		<set name="duration" val="60" />
 		<set name="useSkillDisTime" val="1" />
 	</item>
-	<item id="9943" type="Armor" name="Yellow Talisman of Critical Damage">
+	<item id="9943" type="Armor" name="Yellow Talisman - Critical Damage">
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -705,7 +705,7 @@
 		<set name="duration" val="60" />
 		<set name="useSkillDisTime" val="1" />
 	</item>
-	<item id="9944" type="Armor" name="Yellow Talisman of Critical Dodging">
+	<item id="9944" type="Armor" name="Yellow Talisman - Critical Dodging">
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -719,7 +719,7 @@
 		<set name="duration" val="60" />
 		<set name="useSkillDisTime" val="1" />
 	</item>
-	<item id="9945" type="Armor" name="Yellow Talisman of Evasion">
+	<item id="9945" type="Armor" name="Yellow Talisman - Evasion">
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -733,7 +733,7 @@
 		<set name="duration" val="60" />
 		<set name="useSkillDisTime" val="1" />
 	</item>
-	<item id="9946" type="Armor" name="Yellow Talisman of Healing">
+	<item id="9946" type="Armor" name="Yellow Talisman - Healing">
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -747,7 +747,7 @@
 		<set name="duration" val="60" />
 		<set name="useSkillDisTime" val="1" />
 	</item>
-	<item id="9947" type="Armor" name="Yellow Talisman of CP Regeneration">
+	<item id="9947" type="Armor" name="Yellow Talisman - CP Regeneration">
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -761,7 +761,7 @@
 		<set name="duration" val="60" />
 		<set name="useSkillDisTime" val="1" />
 	</item>
-	<item id="9948" type="Armor" name="Yellow Talisman of Physical Regeneration">
+	<item id="9948" type="Armor" name="Yellow Talisman - HP Regeneration">
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -775,7 +775,7 @@
 		<set name="duration" val="60" />
 		<set name="useSkillDisTime" val="1" />
 	</item>
-	<item id="9949" type="Armor" name="Yellow Talisman of Mental Regeneration">
+	<item id="9949" type="Armor" name="Yellow Talisman - MP Regeneration">
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -789,7 +789,7 @@
 		<set name="duration" val="60" />
 		<set name="useSkillDisTime" val="1" />
 	</item>
-	<item id="9950" type="Armor" name="Grey Talisman of Weight Training">
+	<item id="9950" type="Armor" name="Grey Talisman - Weight Training">
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -803,7 +803,7 @@
 		<set name="duration" val="60" />
 		<set name="useSkillDisTime" val="1" />
 	</item>
-	<item id="9951" type="Armor" name="Grey Talisman of Mid-Grade Fishing">
+	<item id="9951" type="Armor" name="Grey Talisman - Mid-grade Fishing">
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -848,7 +848,7 @@
 		<set name="duration" val="64" />
 		<set name="useSkillDisTime" val="5" />
 	</item>
-	<item id="9954" type="Armor" name="Orange Talisman - Elixir of Mental Strength">
+	<item id="9954" type="Armor" name="Orange Talisman - Elixir of Mind">
 		<set name="icon" val="icon.etc_talisman_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -938,7 +938,7 @@
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
-	<item id="9960" type="Armor" name="White Talisman of Bravery">
+	<item id="9960" type="Armor" name="White Talisman - Bravery">
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -952,7 +952,7 @@
 		<set name="duration" val="60" />
 		<set name="useSkillDisTime" val="1" />
 	</item>
-	<item id="9961" type="Armor" name="White Talisman of Motion">
+	<item id="9961" type="Armor" name="White Talisman - Paralysis Resistance">
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -966,7 +966,7 @@
 		<set name="duration" val="60" />
 		<set name="useSkillDisTime" val="1" />
 	</item>
-	<item id="9962" type="Armor" name="White Talisman of Grounding">
+	<item id="9962" type="Armor" name="White Talisman - Stun Resistance">
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -980,7 +980,7 @@
 		<set name="duration" val="60" />
 		<set name="useSkillDisTime" val="1" />
 	</item>
-	<item id="9963" type="Armor" name="White Talisman of Attention">
+	<item id="9963" type="Armor" name="White Talisman - Sleep Resistance">
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -994,7 +994,7 @@
 		<set name="duration" val="60" />
 		<set name="useSkillDisTime" val="1" />
 	</item>
-	<item id="9964" type="Armor" name="White Talisman of Bandages">
+	<item id="9964" type="Armor" name="White Talisman - Bleed Resistance">
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1008,7 +1008,7 @@
 		<set name="duration" val="60" />
 		<set name="useSkillDisTime" val="1" />
 	</item>
-	<item id="9965" type="Armor" name="White Talisman of Protection">
+	<item id="9965" type="Armor" name="White Talisman - Cancel Resistance">
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1022,7 +1022,7 @@
 		<set name="duration" val="60" />
 		<set name="useSkillDisTime" val="1" />
 	</item>
-	<item id="9966" type="Armor" name="White Talisman of Freedom">
+	<item id="9966" type="Armor" name="White Talisman - Hold Resistance">
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1083,6 +1083,7 @@
 		<set name="recipe_id" val="875" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
+		<set name="commissionItemType" val="RECIPE" />
 	</item>
 	<item id="9971" type="EtcItem" name="Recipe - Dynasty Knife (60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
@@ -1358,11 +1359,11 @@
 		<set name="attack_range" val="400" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="915" />
+		<set name="crystal_count" val="122" />
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1850" />
-		<set name="price" val="495500" />
+		<set name="price" val="99100" />
 		<set name="change_weaponId" val="276" />
 		<set name="soulshots" val="4" />
 		<set name="spiritshots" val="2" />
@@ -1390,11 +1391,11 @@
 		<set name="attack_range" val="400" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="915" />
+		<set name="crystal_count" val="122" />
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1850" />
-		<set name="price" val="495500" />
+		<set name="price" val="99100" />
 		<set name="change_weaponId" val="277" />
 		<set name="soulshots" val="4" />
 		<set name="spiritshots" val="2" />

@@ -39,6 +39,7 @@
 					<xs:enumeration value="is_sellable" />
 					<xs:enumeration value="is_stackable" />
 					<xs:enumeration value="is_tradable" />
+					<xs:enumeration value="is_infinite" />
 					<xs:enumeration value="isAttackWeapon" />
 					<xs:enumeration value="isForceEquip" />
 					<xs:enumeration value="item_skill" />
@@ -65,6 +66,7 @@
 					<xs:enumeration value="useWeaponSkillsOnly" />
 					<xs:enumeration value="weapon_type" />
 					<xs:enumeration value="weight" />
+					<xs:enumeration value="commissionItemType" />
 				</xs:restriction>
 			</xs:simpleType>
 		</xs:attribute>
@@ -79,6 +81,16 @@
 				</xs:restriction>
 			</xs:simpleType>
 		</xs:attribute>
+		<xs:attribute name="isOnSide" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="NEUTRAL" />
+					<xs:enumeration value="LIGHT" />
+					<xs:enumeration value="DARK" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="isClanLeader" type="xs:boolean" />
 		<xs:attribute name="clanHall" type="xs:normalizedString" />
 		<xs:attribute name="class_id_restriction" type="xs:normalizedString" />
 		<xs:attribute name="cloakStatus" type="xs:boolean" />
@@ -167,9 +179,12 @@
 			<xs:enumeration value="pAtkRange" />
 			<xs:enumeration value="pAtkSpd" />
 			<xs:enumeration value="rCrit" />
+			<xs:enumeration value="mCritRate" />
 			<xs:enumeration value="rShld" />
 			<xs:enumeration value="rEvas" />
+			<xs:enumeration value="mEvas" />
 			<xs:enumeration value="accCombat" />
+			<xs:enumeration value="accMagic" />
 			<xs:enumeration value="darkRes" />
 			<xs:enumeration value="earthRes" />
 			<xs:enumeration value="fireRes" />
@@ -179,6 +194,9 @@
 			<xs:enumeration value="waterRes" />
 			<xs:enumeration value="windRes" />
 			<xs:enumeration value="magicSuccRes" />
+			<xs:enumeration value="runSpd" />
+			<xs:enumeration value="broochJewels" />
+			<xs:enumeration value="inventoryLimit" />
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="condType">
@@ -225,6 +243,7 @@
 			</xs:simpleType>
 		</xs:attribute>
 		<xs:attribute name="name" type="xs:normalizedString" use="required" />
+		<xs:attribute name="additionalName" type="xs:normalizedString" use="optional" />
 		<xs:attribute name="type" use="required">
 			<xs:simpleType>
 				<xs:restriction base="xs:token">
