@@ -160,7 +160,12 @@ public final class OracleTeleport extends AbstractNpcAI
 		String htmltext = "";
 		QuestState st = getQuestState(player, false);
 		
-		int npcId = npc.getId();
+		if (st == null)
+		{
+			return null;
+		}
+		
+		final int npcId = npc.getId();
 		if (event.equalsIgnoreCase("Return"))
 		{
 			if (Util.contains(TEMPLE_PRIEST, npcId) && (st.getState() == State.STARTED))
