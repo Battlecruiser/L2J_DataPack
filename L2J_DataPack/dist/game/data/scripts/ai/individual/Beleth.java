@@ -60,7 +60,7 @@ public final class Beleth extends AbstractNpcAI
 {
 	// NPCs
 	private static final int BELETH_ID_1 = 29118;
-	private static final int BELETH_ID_2 = 29119;
+	private static final int BELETH_ID_2 = 29119; // Fake Beleth
 	protected static L2Npc CAMERA;
 	protected static L2Npc CAMERA2;
 	protected static L2Npc CAMERA3;
@@ -116,28 +116,6 @@ public final class Beleth extends AbstractNpcAI
 	public static void startSpawnTask()
 	{
 		ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(1), DEBUG ? 10000 : 300000);
-	}
-	
-	private static class Cast implements Runnable
-	{
-		SkillHolder _skill;
-		L2Npc _npc;
-		
-		public Cast(SkillHolder skill, L2Npc npc)
-		{
-			_skill = skill;
-			_npc = npc;
-		}
-		
-		@Override
-		public void run()
-		{
-			if ((_npc != null) && !_npc.isDead() && !_npc.isCastingNow())
-			{
-				_npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-				_npc.doCast(_skill.getSkill());
-			}
-		}
 	}
 	
 	private static class Spawn implements Runnable
@@ -224,7 +202,7 @@ public final class Beleth extends AbstractNpcAI
 							int y = (int) ((150 * Math.sin(i * 1.046666667)) + 213059);
 							L2Npc minion = addSpawn(BELETH_ID_2, new Location(x, y, -9357, 49152, BELETH.getInstanceId()));
 							minion.setShowSummonAnimation(true);
-							minion.decayMe();
+							minion.deleteMe();
 							MINIONS.add(minion);
 						}
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(12), 6800);
@@ -260,9 +238,9 @@ public final class Beleth extends AbstractNpcAI
 						break;
 					case 19:
 						ZONE.broadcastPacket(new SpecialCamera(CAMERA3, 40, 260, 0, 0, 4000, 0, 0, 1, 0, 0));
-						for (L2Npc blth : MINIONS)
+						for (L2Npc fakeBeleth : MINIONS)
 						{
-							blth.spawnMe();
+							fakeBeleth.spawnMe();
 						}
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(20), 3000);
 						break;
@@ -284,9 +262,9 @@ public final class Beleth extends AbstractNpcAI
 						break;
 					case 24:
 						BELETH.deleteMe();
-						for (L2Npc bel : MINIONS)
+						for (L2Npc fakeBeleth : MINIONS)
 						{
-							bel.deleteMe();
+							fakeBeleth.deleteMe();
 						}
 						MINIONS.clear();
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(25), 1000);
@@ -373,6 +351,15 @@ public final class Beleth extends AbstractNpcAI
 			{
 				GrandBossManager.getInstance().setBossStatus(BELETH_ID_1, 0);
 				DoorData.getInstance().getDoor(20240001).openMe();
+				break;
+			}
+			case "CAST":
+			{
+				if (!npc.isDead() && !npc.isCastingNow())
+				{
+					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+					npc.doCast(FIREBALL.getSkill());
+				}
 				break;
 			}
 		}
@@ -476,7 +463,7 @@ public final class Beleth extends AbstractNpcAI
 				{
 					fakeBeleth = MINIONS.get(getRandom(MINIONS.size()));
 				}
-				ZONE.broadcastPacket(new CreatureSay(fakeBeleth.getObjectId(), 0, fakeBeleth.getName(), "Miss text."));
+				ZONE.broadcastPacket(new CreatureSay(fakeBeleth.getObjectId(), 0, fakeBeleth.getName(), "Miss text.")); // TODO: Find retail text.
 			}
 			if (getRandom(100) < 40)
 			{
@@ -526,7 +513,7 @@ public final class Beleth extends AbstractNpcAI
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
 					double speed = npc.isRunning() ? npc.getRunSpeed() : npc.getWalkSpeed();
 					int time = (int) (((distance2 - 890) / speed) * 1000);
-					ThreadPoolManager.getInstance().scheduleGeneral(new Cast(FIREBALL, npc), time);
+					startQuestTimer("CAST", time, npc, null);
 				}
 				else if (distance2 < 890)
 				{
@@ -696,28 +683,28 @@ public final class Beleth extends AbstractNpcAI
 			xm[i] = (int) ((1700 * Math.cos((i * 1.57) + 0.78)) + 16323);
 			ym[i] = (int) ((1700 * Math.sin((i * 1.57) + 0.78)) + 213170);
 			npc = addSpawn(BELETH_ID_2, new Location(xm[i], ym[i], -9357, 49152));
-			npc.setIsOverloaded(true);
+			npc.setIsImmobilized(true);
 			MINIONS.add(npc);
 		}
 		xm[4] = (xm[0] + xm[1]) / 2;
 		ym[4] = (ym[0] + ym[1]) / 2;
 		npc = addSpawn(BELETH_ID_2, new Location(xm[4], ym[4], -9357, 49152));
-		npc.setIsOverloaded(true);
+		npc.setIsImmobilized(true);
 		MINIONS.add(npc);
 		xm[5] = (xm[1] + xm[2]) / 2;
 		ym[5] = (ym[1] + ym[2]) / 2;
 		npc = addSpawn(BELETH_ID_2, new Location(xm[5], ym[5], -9357, 49152));
-		npc.setIsOverloaded(true);
+		npc.setIsImmobilized(true);
 		MINIONS.add(npc);
 		xm[6] = (xm[2] + xm[3]) / 2;
 		ym[6] = (ym[2] + ym[3]) / 2;
 		npc = addSpawn(BELETH_ID_2, new Location(xm[6], ym[6], -9357, 49152));
-		npc.setIsOverloaded(true);
+		npc.setIsImmobilized(true);
 		MINIONS.add(npc);
 		xm[7] = (xm[3] + xm[0]) / 2;
 		ym[7] = (ym[3] + ym[0]) / 2;
 		npc = addSpawn(BELETH_ID_2, new Location(xm[7], ym[7], -9357, 49152));
-		npc.setIsOverloaded(true);
+		npc.setIsImmobilized(true);
 		MINIONS.add(npc);
 		xm[8] = (xm[0] + xm[4]) / 2;
 		ym[8] = (ym[0] + ym[4]) / 2;
