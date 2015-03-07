@@ -115,8 +115,10 @@ public final class Q00662_AGameOfCards extends Quest
 			{
 				if (player.getLevel() >= MIN_LEVEL)
 				{
-					st.setState(State.STARTED);
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ACCEPT);
+					if (st.isCreated())
+					{
+						st.startQuest();
+					}
 					htmltext = event;
 				}
 				break;
@@ -239,8 +241,7 @@ public final class Q00662_AGameOfCards extends Quest
 					{
 						i5 = i5 - 14;
 					}
-					
-					st.setCond((i4 * 1000000) + (i3 * 10000) + (i2 * 100) + i1);
+					st.set("v1", (i4 * 1000000) + (i3 * 10000) + (i2 * 100) + i1);
 					st.set("ex", i5);
 					st.takeItems(RED_GEM, REQUIRED_CHIP_COUNT);
 					htmltext = event;
@@ -253,7 +254,7 @@ public final class Q00662_AGameOfCards extends Quest
 			case "turncard4":
 			case "turncard5":
 			{
-				final int cond = st.getCond();
+				final int cond = st.getInt("v1");
 				int i1 = st.getInt("ex");
 				int i5 = i1 % 100;
 				int i9 = i1 / 100;
@@ -495,7 +496,7 @@ public final class Q00662_AGameOfCards extends Quest
 						st.giveItems(959, 3);
 						st.giveItems(729, 1);
 						st.set("ex", 0);
-						st.setCond(0);
+						st.set("v1", 0);
 						htmltext = getHtm(player.getHtmlPrefix(), "30845-13.html");
 					}
 					else if (i6 == 30)
@@ -503,7 +504,7 @@ public final class Q00662_AGameOfCards extends Quest
 						st.giveItems(959, 2);
 						st.giveItems(951, 2);
 						st.set("ex", 0);
-						st.setCond(0);
+						st.set("v1", 0);
 						htmltext = getHtm(player.getHtmlPrefix(), "30845-14.html");
 					}
 					else if ((i6 == 21) || (i6 == 12))
@@ -512,34 +513,34 @@ public final class Q00662_AGameOfCards extends Quest
 						st.giveItems(947, 2);
 						st.giveItems(955, 1);
 						st.set("ex", 0);
-						st.setCond(0);
+						st.set("v1", 0);
 						htmltext = getHtm(player.getHtmlPrefix(), "30845-15.html");
 					}
 					else if (i6 == 20)
 					{
 						st.giveItems(951, 2);
 						st.set("ex", 0);
-						st.setCond(0);
+						st.set("v1", 0);
 						htmltext = getHtm(player.getHtmlPrefix(), "30845-16.html");
 					}
 					else if (i6 == 11)
 					{
 						st.giveItems(951, 1);
 						st.set("ex", 0);
-						st.setCond(0);
+						st.set("v1", 0);
 						htmltext = getHtm(player.getHtmlPrefix(), "30845-17.html");
 					}
 					else if (i6 == 10)
 					{
 						st.giveItems(956, 2);
 						st.set("ex", 0);
-						st.setCond(0);
+						st.set("v1", 0);
 						htmltext = getHtm(player.getHtmlPrefix(), "30845-18.html");
 					}
 					else if (i6 == 0)
 					{
 						st.set("ex", 0);
-						st.setCond(0);
+						st.set("v1", 0);
 						htmltext = getHtm(player.getHtmlPrefix(), "30845-19.html");
 					}
 				}
@@ -627,13 +628,13 @@ public final class Q00662_AGameOfCards extends Quest
 			}
 			case State.STARTED:
 			{
-				if (st.isCond(0))
+				if (st.isCond(1))
 				{
-					htmltext = "30845-04.html";
+					htmltext = st.getQuestItemsCount(RED_GEM) < REQUIRED_CHIP_COUNT ? "30845-04.html" : "30845-05.html";
 				}
 				else if (st.getInt("ex") != 0)
 				{
-					int i0 = st.getCond();
+					int i0 = st.getInt("v1");
 					int i1 = st.getInt("ex");
 					int i5 = i1 % 100;
 					int i9 = i1 / 100;
