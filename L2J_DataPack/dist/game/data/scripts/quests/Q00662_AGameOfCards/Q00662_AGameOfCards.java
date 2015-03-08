@@ -242,7 +242,7 @@ public final class Q00662_AGameOfCards extends Quest
 						i5 = i5 - 14;
 					}
 					st.set("v1", (i4 * 1000000) + (i3 * 10000) + (i2 * 100) + i1);
-					st.set("ex", i5);
+					st.set("ExMemoState", i5);
 					st.takeItems(RED_GEM, REQUIRED_CHIP_COUNT);
 					htmltext = event;
 				}
@@ -255,7 +255,7 @@ public final class Q00662_AGameOfCards extends Quest
 			case "turncard5":
 			{
 				final int cond = st.getInt("v1");
-				int i1 = st.getInt("ex");
+				int i1 = st.getInt("ExMemoState");
 				int i5 = i1 % 100;
 				int i9 = i1 / 100;
 				i1 = cond % 100;
@@ -272,7 +272,7 @@ public final class Q00662_AGameOfCards extends Quest
 						}
 						if ((i9 % 32) < 31)
 						{
-							st.set("ex", (i9 * 100) + i5);
+							st.set("ExMemoState", (i9 * 100) + i5);
 						}
 						break;
 					}
@@ -284,7 +284,7 @@ public final class Q00662_AGameOfCards extends Quest
 						}
 						if ((i9 % 32) < 31)
 						{
-							st.set("ex", (i9 * 100) + i5);
+							st.set("ExMemoState", (i9 * 100) + i5);
 						}
 						break;
 					}
@@ -296,7 +296,7 @@ public final class Q00662_AGameOfCards extends Quest
 						}
 						if ((i9 % 32) < 31)
 						{
-							st.set("ex", (i9 * 100) + i5);
+							st.set("ExMemoState", (i9 * 100) + i5);
 						}
 						break;
 					}
@@ -308,7 +308,7 @@ public final class Q00662_AGameOfCards extends Quest
 						}
 						if ((i9 % 32) < 31)
 						{
-							st.set("ex", (i9 * 100) + i5);
+							st.set("ExMemoState", (i9 * 100) + i5);
 						}
 						break;
 					}
@@ -320,7 +320,7 @@ public final class Q00662_AGameOfCards extends Quest
 						}
 						if ((i9 % 32) < 31)
 						{
-							st.set("ex", (i9 * 100) + i5);
+							st.set("ExMemoState", (i9 * 100) + i5);
 						}
 						break;
 					}
@@ -495,7 +495,7 @@ public final class Q00662_AGameOfCards extends Quest
 						st.giveItems(ZIGGOS_GEMSTONE, 43);
 						st.giveItems(959, 3);
 						st.giveItems(729, 1);
-						st.set("ex", 0);
+						st.set("ExMemoState", 0);
 						st.set("v1", 0);
 						htmltext = getHtm(player.getHtmlPrefix(), "30845-13.html");
 					}
@@ -503,7 +503,7 @@ public final class Q00662_AGameOfCards extends Quest
 					{
 						st.giveItems(959, 2);
 						st.giveItems(951, 2);
-						st.set("ex", 0);
+						st.set("ExMemoState", 0);
 						st.set("v1", 0);
 						htmltext = getHtm(player.getHtmlPrefix(), "30845-14.html");
 					}
@@ -512,34 +512,34 @@ public final class Q00662_AGameOfCards extends Quest
 						st.giveItems(729, 1);
 						st.giveItems(947, 2);
 						st.giveItems(955, 1);
-						st.set("ex", 0);
+						st.set("ExMemoState", 0);
 						st.set("v1", 0);
 						htmltext = getHtm(player.getHtmlPrefix(), "30845-15.html");
 					}
 					else if (i6 == 20)
 					{
 						st.giveItems(951, 2);
-						st.set("ex", 0);
+						st.set("ExMemoState", 0);
 						st.set("v1", 0);
 						htmltext = getHtm(player.getHtmlPrefix(), "30845-16.html");
 					}
 					else if (i6 == 11)
 					{
 						st.giveItems(951, 1);
-						st.set("ex", 0);
+						st.set("ExMemoState", 0);
 						st.set("v1", 0);
 						htmltext = getHtm(player.getHtmlPrefix(), "30845-17.html");
 					}
 					else if (i6 == 10)
 					{
 						st.giveItems(956, 2);
-						st.set("ex", 0);
+						st.set("ExMemoState", 0);
 						st.set("v1", 0);
 						htmltext = getHtm(player.getHtmlPrefix(), "30845-18.html");
 					}
 					else if (i6 == 0)
 					{
-						st.set("ex", 0);
+						st.set("ExMemoState", 0);
 						st.set("v1", 0);
 						htmltext = getHtm(player.getHtmlPrefix(), "30845-19.html");
 					}
@@ -632,10 +632,10 @@ public final class Q00662_AGameOfCards extends Quest
 				{
 					htmltext = st.getQuestItemsCount(RED_GEM) < REQUIRED_CHIP_COUNT ? "30845-04.html" : "30845-05.html";
 				}
-				else if (st.getInt("ex") != 0)
+				else if (st.getInt("ExMemoState") != 0)
 				{
 					int i0 = st.getInt("v1");
-					int i1 = st.getInt("ex");
+					int i1 = st.getInt("ExMemoState");
 					int i5 = i1 % 100;
 					int i9 = i1 / 100;
 					i1 = i0 % 100;
