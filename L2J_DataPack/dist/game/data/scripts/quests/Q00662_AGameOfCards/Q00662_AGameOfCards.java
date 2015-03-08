@@ -23,7 +23,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -492,47 +491,47 @@ public final class Q00662_AGameOfCards extends Quest
 					
 					if (i6 == 40)
 					{
-						st.giveItems(ZIGGOS_GEMSTONE, 43);
-						st.giveItems(959, 3);
-						st.giveItems(729, 1);
+						rewardItems(player, ZIGGOS_GEMSTONE, 43);
+						rewardItems(player, 959, 3);
+						rewardItems(player, 729, 1);
 						st.set("ExMemoState", 0);
 						st.set("v1", 0);
 						htmltext = getHtm(player.getHtmlPrefix(), "30845-13.html");
 					}
 					else if (i6 == 30)
 					{
-						st.giveItems(959, 2);
-						st.giveItems(951, 2);
+						rewardItems(player, 959, 2);
+						rewardItems(player, 951, 2);
 						st.set("ExMemoState", 0);
 						st.set("v1", 0);
 						htmltext = getHtm(player.getHtmlPrefix(), "30845-14.html");
 					}
 					else if ((i6 == 21) || (i6 == 12))
 					{
-						st.giveItems(729, 1);
-						st.giveItems(947, 2);
-						st.giveItems(955, 1);
+						rewardItems(player, 729, 1);
+						rewardItems(player, 947, 2);
+						rewardItems(player, 955, 1);
 						st.set("ExMemoState", 0);
 						st.set("v1", 0);
 						htmltext = getHtm(player.getHtmlPrefix(), "30845-15.html");
 					}
 					else if (i6 == 20)
 					{
-						st.giveItems(951, 2);
+						rewardItems(player, 951, 2);
 						st.set("ExMemoState", 0);
 						st.set("v1", 0);
 						htmltext = getHtm(player.getHtmlPrefix(), "30845-16.html");
 					}
 					else if (i6 == 11)
 					{
-						st.giveItems(951, 1);
+						rewardItems(player, 951, 1);
 						st.set("ExMemoState", 0);
 						st.set("v1", 0);
 						htmltext = getHtm(player.getHtmlPrefix(), "30845-17.html");
 					}
 					else if (i6 == 10)
 					{
-						st.giveItems(956, 2);
+						rewardItems(player, 956, 2);
 						st.set("ExMemoState", 0);
 						st.set("v1", 0);
 						htmltext = getHtm(player.getHtmlPrefix(), "30845-18.html");
@@ -734,8 +733,7 @@ public final class Q00662_AGameOfCards extends Quest
 				final QuestState st = getQuestState(player, false);
 				if (st != null)
 				{
-					st.giveItems(RED_GEM, 1);
-					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					giveItemRandomly(st.getPlayer(), npc, RED_GEM, 1, 0, MONSTERS.get(npc.getId()), true);
 				}
 			}
 		}
