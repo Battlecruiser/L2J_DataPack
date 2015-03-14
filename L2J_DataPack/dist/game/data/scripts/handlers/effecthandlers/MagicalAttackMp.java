@@ -43,17 +43,9 @@ public final class MagicalAttackMp extends AbstractEffect
 	@Override
 	public boolean calcSuccess(BuffInfo info)
 	{
-		if (info.getEffected().isInvul())
+		if (info.getEffected().isInvul() || !Formulas.calcMagicAffected(info.getEffector(), info.getEffected(), info.getSkill()))
 		{
-			return false;
-		}
-		
-		if (!Formulas.calcMagicAffected(info.getEffector(), info.getEffected(), info.getSkill()))
-		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_YOUR_S2);
-			sm.addCharName(info.getEffected());
-			sm.addSkillName(info.getSkill());
-			info.getEffector().sendPacket(sm);
+			info.getEffector().sendPacket(SystemMessageId.MISSED_TARGET);
 			return false;
 		}
 		return true;
@@ -97,19 +89,10 @@ public final class MagicalAttackMp extends AbstractEffect
 		
 		if (target.isPlayer())
 		{
-			if (Math.abs(damage - 1.0) < 1e-6)
-			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SLIGHTLY_RESISTED_C1_MAGICC);
-				sm.addCharName(activeChar);
-				target.sendPacket(sm);
-			}
-			else
-			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_MP_HAS_BEEN_DRAINED_BY_C1);
-				sm.addCharName(activeChar);
-				sm.addInt((int) mp);
-				target.sendPacket(sm);
-			}
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_MP_HAS_BEEN_DRAINED_BY_C1);
+			sm.addCharName(activeChar);
+			sm.addInt((int) mp);
+			target.sendPacket(sm);
 		}
 		
 		if (activeChar.isPlayer())
