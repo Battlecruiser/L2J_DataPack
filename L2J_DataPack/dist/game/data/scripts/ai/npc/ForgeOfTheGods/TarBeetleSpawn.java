@@ -20,9 +20,8 @@ package ai.npc.ForgeOfTheGods;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
-
-import javolution.util.FastList;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -191,7 +190,7 @@ public class TarBeetleSpawn implements IXmlReader
 	private final class SpawnZone
 	{
 		private final List<Zone> _zones = new ArrayList<>();
-		private final List<L2Npc> _spawn = new FastList<>();
+		private final List<L2Npc> _spawn = new CopyOnWriteArrayList<>();
 		private final int _maxNpcCount;
 		private final int _index;
 		

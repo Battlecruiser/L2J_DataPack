@@ -18,9 +18,9 @@
  */
 package ai.group_template;
 
+import java.util.HashMap;
 import java.util.Map;
 
-import javolution.util.FastMap;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.actor.L2Attackable;
@@ -32,7 +32,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  */
 public final class PolymorphingAngel extends AbstractNpcAI
 {
-	private static final Map<Integer, Integer> ANGELSPAWNS = new FastMap<>();
+	private static final Map<Integer, Integer> ANGELSPAWNS = new HashMap<>();
 	static
 	{
 		ANGELSPAWNS.put(20830, 20859);

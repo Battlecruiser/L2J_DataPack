@@ -19,8 +19,11 @@
 package instances.DarkCloudMansion;
 
 import instances.AbstractInstance;
-import javolution.util.FastList;
-import javolution.util.FastMap;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.L2Party;
@@ -45,7 +48,7 @@ public final class DarkCloudMansion extends AbstractInstance
 {
 	protected class DMCWorld extends InstanceWorld
 	{
-		protected FastMap<String, DMCRoom> rooms = new FastMap<>();
+		protected Map<String, DMCRoom> rooms = new ConcurrentHashMap<>();
 	}
 	
 	// NPCs
@@ -229,7 +232,7 @@ public final class DarkCloudMansion extends AbstractInstance
 	
 	protected static class DMCRoom
 	{
-		public FastList<DMCNpc> npcList = new FastList<>();
+		public List<DMCNpc> npcList = new ArrayList<>();
 		public int counter = 0;
 		public int reset = 0;
 		public int founded = 0;

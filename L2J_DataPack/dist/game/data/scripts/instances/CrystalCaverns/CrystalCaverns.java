@@ -20,11 +20,12 @@ package instances.CrystalCaverns;
 
 import instances.AbstractInstance;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
-import javolution.util.FastList;
-import javolution.util.FastMap;
 import quests.Q00131_BirdInACage.Q00131_BirdInACage;
 
 import com.l2jserver.Config;
@@ -84,15 +85,15 @@ public final class CrystalCaverns extends AbstractInstance
 	
 	private class CCWorld extends InstanceWorld
 	{
-		public Map<L2Npc, Boolean> npcList1 = new FastMap<>();
+		public Map<L2Npc, Boolean> npcList1 = new HashMap<>();
 		public L2Npc tears;
 		public boolean isUsedInvulSkill = false;
 		public long dragonScaleStart = 0;
 		public int dragonScaleNeed = 0;
 		public int cleanedRooms = 0;
 		public long endTime = 0;
-		public List<L2Npc> copys = new FastList<>();
-		public Map<L2Npc, CrystalGolem> crystalGolems = new FastMap<>();
+		public List<L2Npc> copys = new ArrayList<>();
+		public Map<L2Npc, CrystalGolem> crystalGolems = new HashMap<>();
 		public int correctGolems = 0;
 		public boolean[] OracleTriggered =
 		{
@@ -108,18 +109,18 @@ public final class CrystalCaverns extends AbstractInstance
 			0,
 			0
 		}; // 0: not spawned, 1: spawned, 2: cleared
-		public Map<L2DoorInstance, L2PcInstance> openedDoors = new FastMap<>();
-		public Map<Integer, Map<L2Npc, Boolean>> npcList2 = new FastMap<>();
-		public Map<L2Npc, L2Npc> oracles = new FastMap<>();
-		public List<L2Npc> keyKeepers = new FastList<>();
-		public List<L2Npc> guards = new FastList<>();
-		public List<L2Npc> oracle = new FastList<>();
+		public Map<L2DoorInstance, L2PcInstance> openedDoors = new ConcurrentHashMap<>();
+		public Map<Integer, Map<L2Npc, Boolean>> npcList2 = new HashMap<>();
+		public Map<L2Npc, L2Npc> oracles = new HashMap<>();
+		public List<L2Npc> keyKeepers = new ArrayList<>();
+		public List<L2Npc> guards = new ArrayList<>();
+		public List<L2Npc> oracle = new ArrayList<>();
 		// baylor variables
-		protected final List<L2PcInstance> _raiders = new FastList<>();
+		protected final List<L2PcInstance> _raiders = new ArrayList<>();
 		protected int _raidStatus = 0;
 		protected long _dragonClawStart = 0;
 		protected int _dragonClawNeed = 0;
-		protected final List<L2Npc> _animationMobs = new FastList<>();
+		protected final List<L2Npc> _animationMobs = new ArrayList<>();
 		protected L2Npc _camera = null;
 		protected L2Npc _baylor = null;
 		protected L2Npc _alarm = null;
@@ -791,7 +792,7 @@ public final class CrystalCaverns extends AbstractInstance
 	{
 		world.setStatus(3);
 		
-		Map<L2Npc, Boolean> spawnList = new FastMap<>();
+		Map<L2Npc, Boolean> spawnList = new HashMap<>();
 		for (int[] spawn : EMERALD_SPAWNS)
 		{
 			L2Npc mob = addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false, world.getInstanceId());
@@ -802,7 +803,7 @@ public final class CrystalCaverns extends AbstractInstance
 	
 	protected void runEmeraldRooms(CCWorld world, int[][] spawnList, int room)
 	{
-		Map<L2Npc, Boolean> spawned = new FastMap<>();
+		Map<L2Npc, Boolean> spawned = new HashMap<>();
 		for (int[] spawn : spawnList)
 		{
 			L2Npc mob = addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false, world.getInstanceId());
@@ -830,7 +831,7 @@ public final class CrystalCaverns extends AbstractInstance
 	{
 		world.setStatus(status);
 		
-		Map<L2Npc, Boolean> spawned = new FastMap<>();
+		Map<L2Npc, Boolean> spawned = new HashMap<>();
 		for (int[] spawn : spawnList)
 		{
 			L2Npc mob = addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false, world.getInstanceId());
@@ -1367,27 +1368,24 @@ public final class CrystalCaverns extends AbstractInstance
 				{
 					return "";
 				}
+				
 				CrystalGolem cryGolem = world.crystalGolems.get(npc);
-				List<L2Object> crystals = new FastList<>();
+				int minDist = 300000;
 				for (L2Object object : L2World.getInstance().getVisibleObjects(npc, 300))
 				{
-					if ((object instanceof L2ItemInstance) && (object.getId() == CRYSTALFOOD))
+					if (object.isItem() && (object.getId() == CRYSTALFOOD))
 					{
-						crystals.add(object);
+						int dx = npc.getX() - object.getX();
+						int dy = npc.getY() - object.getY();
+						int d = (dx * dx) + (dy * dy);
+						if (d < minDist)
+						{
+							minDist = d;
+							cryGolem.foodItem = (L2ItemInstance) object;
+						}
 					}
 				}
-				int minDist = 300000;
-				for (L2Object crystal : crystals)
-				{
-					int dx = npc.getX() - crystal.getX();
-					int dy = npc.getY() - crystal.getY();
-					int d = (dx * dx) + (dy * dy);
-					if (d < minDist)
-					{
-						minDist = d;
-						cryGolem.foodItem = (L2ItemInstance) crystal;
-					}
-				}
+				
 				if (minDist != 300000)
 				{
 					startQuestTimer("getFood", 2000, npc, null);

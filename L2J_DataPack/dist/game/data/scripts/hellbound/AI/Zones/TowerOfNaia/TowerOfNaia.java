@@ -23,9 +23,9 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 
-import javolution.util.FastList;
-import javolution.util.FastMap;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
@@ -157,9 +157,9 @@ public final class TowerOfNaia extends AbstractNpcAI
 	private int _challengeState;
 	private int _winIndex;
 	
-	private final Map<Integer, Boolean> _activeRooms = new FastMap<>();
-	private final Map<Integer, List<L2Npc>> _spawns = new FastMap<>();
-	private final FastList<L2Npc> _sporeSpawn = new FastList<L2Npc>().shared();
+	private final Map<Integer, Boolean> _activeRooms = new HashMap<>();
+	private final Map<Integer, List<L2Npc>> _spawns = new ConcurrentHashMap<>();
+	private final List<L2Npc> _sporeSpawn = new CopyOnWriteArrayList<>();
 	static
 	{
 		// Format: entrance_door, exit_door
@@ -902,7 +902,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 		if (SPAWNS.containsKey(managerId))
 		{
 			int[][] spawnList = SPAWNS.get(managerId);
-			List<L2Npc> spawned = new FastList<>();
+			List<L2Npc> spawned = new CopyOnWriteArrayList<>();
 			for (int[] spawn : spawnList)
 			{
 				L2Npc spawnedNpc = addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false);

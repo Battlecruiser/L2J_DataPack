@@ -18,9 +18,8 @@
  */
 package custom.EchoCrystals;
 
+import java.util.HashMap;
 import java.util.Map;
-
-import javolution.util.FastMap;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -29,8 +28,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Echo Crystals AI.<br>
- * Original Jython script by DrLecter, formerly based on Elektra's script.
+ * Echo Crystals AI.
  * @author Plim
  */
 public final class EchoCrystals extends Quest
@@ -44,7 +42,7 @@ public final class EchoCrystals extends Quest
 	private static final int ADENA = 57;
 	private static final int COST = 200;
 	
-	private static final Map<Integer, ScoreData> SCORES = new FastMap<>();
+	private static final Map<Integer, ScoreData> SCORES = new HashMap<>();
 	
 	private class ScoreData
 	{
