@@ -163,30 +163,35 @@ public final class Beleth extends AbstractNpcAI
 				ZONE.broadcastPacket(new SpecialCamera(_camera1, 400, 75, -25, 0, 2500, 0, 0, 1, 0, 0));
 				
 				startQuestTimer("SPAWN2", 300, null, null);
+				break;
 			}
 			case "SPAWN2":
 			{
 				ZONE.broadcastPacket(new SpecialCamera(_camera1, 1800, -45, -45, 5000, 5000, 0, 0, 1, 0, 0));
 				
 				startQuestTimer("SPAWN3", 4900, null, null);
+				break;
 			}
 			case "SPAWN3":
 			{
 				ZONE.broadcastPacket(new SpecialCamera(_camera1, 2500, -120, -45, 5000, 5000, 0, 0, 1, 0, 0));
 				
 				startQuestTimer("SPAWN4", 4900, null, null);
+				break;
 			}
 			case "SPAWN4":
 			{
 				ZONE.broadcastPacket(new SpecialCamera(_camera2, 2200, 130, 0, 0, 1500, -20, 15, 1, 0, 0));
 				
 				startQuestTimer("SPAWN5", 1400, null, null);
+				break;
 			}
 			case "SPAWN5":
 			{
 				ZONE.broadcastPacket(new SpecialCamera(_camera2, 2300, 100, 0, 2000, 4500, 0, 10, 1, 0, 0));
 				
 				startQuestTimer("SPAWN6", 2500, null, null);
+				break;
 			}
 			case "SPAWN6":
 			{
@@ -197,6 +202,7 @@ public final class Beleth extends AbstractNpcAI
 				ZONE.broadcastPacket(new DoorStatusUpdate(door));
 				
 				startQuestTimer("SPAWN7", 1700, null, null);
+				break;
 			}
 			case "SPAWN7":
 			{
@@ -204,6 +210,7 @@ public final class Beleth extends AbstractNpcAI
 				ZONE.broadcastPacket(new SpecialCamera(_camera4, 900, 255, 0, 5000, 6500, 0, 10, 1, 0, 0));
 				
 				startQuestTimer("SPAWN8", 6000, null, null);
+				break;
 			}
 			case "SPAWN8":
 			{
@@ -212,12 +219,14 @@ public final class Beleth extends AbstractNpcAI
 				ZONE.broadcastPacket(new SpecialCamera(_camera4, 900, 255, 0, 0, 1500, 0, 10, 1, 0, 0));
 				
 				startQuestTimer("SPAWN9", 1000, null, null);
+				break;
 			}
 			case "SPAWN9":
 			{
 				ZONE.broadcastPacket(new SpecialCamera(_camera4, 1000, 255, 0, 7000, 17000, 0, 25, 1, 0, 0));
 				
 				startQuestTimer("SPAWN10", 3000, null, null);
+				break;
 			}
 			case "SPAWN10":
 			{
@@ -227,6 +236,7 @@ public final class Beleth extends AbstractNpcAI
 				_beleth.setIsImmobilized(true);
 				
 				startQuestTimer("SPAWN11", 200, null, null);
+				break;
 			}
 			case "SPAWN11":
 			{
@@ -244,18 +254,21 @@ public final class Beleth extends AbstractNpcAI
 				}
 				
 				startQuestTimer("SPAWN12", 6800, null, null);
+				break;
 			}
 			case "SPAWN12":
 			{
 				ZONE.broadcastPacket(new SpecialCamera(_beleth, 0, 270, -5, 0, 4000, 0, 0, 1, 0, 0));
 				
 				startQuestTimer("SPAWN13", 3500, null, null);
+				break;
 			}
 			case "SPAWN13":
 			{
 				ZONE.broadcastPacket(new SpecialCamera(_beleth, 800, 270, 10, 3000, 6000, 0, 0, 1, 0, 0));
 				
 				startQuestTimer("SPAWN14", 5000, null, null);
+				break;
 			}
 			case "SPAWN14":
 			{
@@ -263,30 +276,35 @@ public final class Beleth extends AbstractNpcAI
 				ZONE.broadcastPacket(new SpecialCamera(_camera3, 100, 270, 15, 0, 5000, 0, 0, 1, 0, 0));
 				
 				startQuestTimer("SPAWN15", 100, null, null);
+				break;
 			}
 			case "SPAWN15":
 			{
 				ZONE.broadcastPacket(new SpecialCamera(_camera3, 100, 270, 15, 3000, 6000, 0, 5, 1, 0, 0));
 				
 				startQuestTimer("SPAWN16", 1400, null, null);
+				break;
 			}
 			case "SPAWN16":
 			{
 				_beleth.teleToLocation(BELETH_SPAWN);
 				
 				startQuestTimer("SPAWN17", 200, null, null);
+				break;
 			}
 			case "SPAWN17":
 			{
 				ZONE.broadcastPacket(new MagicSkillUse(_beleth, _beleth, 5532, 1, 2000, 0));
 				
 				startQuestTimer("SPAWN18", 2000, null, null);
+				break;
 			}
 			case "SPAWN18":
 			{
 				ZONE.broadcastPacket(new SpecialCamera(_camera3, 700, 270, 20, 1500, 8000, 0, 0, 1, 0, 0));
 				
 				startQuestTimer("SPAWN19", 6900, null, null);
+				break;
 			}
 			case "SPAWN19":
 			{
@@ -301,30 +319,35 @@ public final class Beleth extends AbstractNpcAI
 				}
 				
 				startQuestTimer("SPAWN20", 3000, null, null);
+				break;
 			}
 			case "SPAWN20":
 			{
 				ZONE.broadcastPacket(new SpecialCamera(_camera3, 40, 280, 0, 0, 4000, 5, 0, 1, 0, 0));
 				
 				startQuestTimer("SPAWN21", 3000, null, null);
+				break;
 			}
 			case "SPAWN21":
 			{
 				ZONE.broadcastPacket(new SpecialCamera(_camera3, 5, 250, 5, 0, 13000, 20, 15, 1, 0, 0));
 				
 				startQuestTimer("SPAWN22", 1000, null, null);
+				break;
 			}
 			case "SPAWN22":
 			{
 				ZONE.broadcastPacket(new SocialAction(_beleth.getObjectId(), 3));
 				
 				startQuestTimer("SPAWN23", 4000, null, null);
+				break;
 			}
 			case "SPAWN23":
 			{
 				ZONE.broadcastPacket(new MagicSkillUse(_beleth, _beleth, 5533, 1, 2000, 0));
 				
 				startQuestTimer("SPAWN24", 6800, null, null);
+				break;
 			}
 			case "SPAWN24":
 			{
@@ -350,6 +373,7 @@ public final class Beleth extends AbstractNpcAI
 				}
 				
 				startQuestTimer("SPAWN25", 60000, null, null);
+				break;
 			}
 			case "SPAWN25":
 			{
@@ -431,10 +455,12 @@ public final class Beleth extends AbstractNpcAI
 				_minions.add(addSpawn(FAKE_BELETH, new Location(xm[15], ym[15], -9357, 49152)));
 				
 				_allowedObjId = _minions.get(getRandom(_minions.size())).getObjectId();
+				break;
 			}
 			case "SPAWN_REAL":
 			{
 				_beleth = addSpawn(REAL_BELETH, new Location(16323, 213170, -9357, 49152));
+				break;
 			}
 			case "SPAWN26":
 			{
@@ -449,18 +475,21 @@ public final class Beleth extends AbstractNpcAI
 				ZONE.broadcastPacket(new SocialAction(_beleth.getObjectId(), 5));
 				
 				startQuestTimer("SPAWN27", 4000, null, null);
+				break;
 			}
 			case "SPAWN27":
 			{
 				ZONE.broadcastPacket(new SpecialCamera(_camera1, 400, 295, 25, 4000, 5000, 0, 0, 1, 0, 0));
 				
 				startQuestTimer("SPAWN28", 4500, null, null);
+				break;
 			}
 			case "SPAWN28":
 			{
 				ZONE.broadcastPacket(new SpecialCamera(_camera1, 400, 295, 10, 4000, 11000, 0, 25, 1, 0, 0));
 				
 				startQuestTimer("SPAWN29", 9000, null, null);
+				break;
 			}
 			case "SPAWN29":
 			{
@@ -468,6 +497,7 @@ public final class Beleth extends AbstractNpcAI
 				ZONE.broadcastPacket(new SpecialCamera(_camera1, 250, 90, 25, 0, 10000, 0, 0, 1, 0, 0));
 				
 				startQuestTimer("SPAWN30", 2000, null, null);
+				break;
 			}
 			case "SPAWN30":
 			{
@@ -477,6 +507,7 @@ public final class Beleth extends AbstractNpcAI
 				_camera2 = addSpawn(29121, new Location(14056, 213170, -9357));
 				
 				startQuestTimer("SPAWN31", 3500, null, null);
+				break;
 			}
 			case "SPAWN31":
 			{
@@ -501,6 +532,7 @@ public final class Beleth extends AbstractNpcAI
 					c.setIsInvul(false);
 					c.setIsImmobilized(false);
 				}
+				break;
 			}
 		}
 		return super.onAdvEvent(event, npc, player);
