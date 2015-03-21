@@ -307,6 +307,7 @@
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.skill0122" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
@@ -321,6 +322,7 @@
 		<set name="effectPoint" val="-707" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1201" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="51" />
 		<set name="operateType" val="A2" />
@@ -335,6 +337,7 @@
 		<set name="effectPoint" val="-707" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1201" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="95" />
 		<set name="operateType" val="A2" />
@@ -1000,7 +1003,6 @@
 		<set name="effectRange" val="650" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill1231" />
-		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1147,6 +1149,7 @@
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="ENTRY_FOR_GAME" />
 		<set name="icon" val="icon.skill5661" />
+		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE" />
@@ -1499,7 +1502,6 @@
 	<skill id="5680" levels="1" name="Oblivion Trap">
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
-		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="A1" />
@@ -1536,7 +1538,6 @@
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="icon.skill1056" />
-		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
@@ -1808,7 +1809,6 @@
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="icon.skill0445" />
-		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
@@ -1847,6 +1847,7 @@
 		<set name="abnormalType" val="INVINCIBILITY" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill0837" />
+		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="74" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />

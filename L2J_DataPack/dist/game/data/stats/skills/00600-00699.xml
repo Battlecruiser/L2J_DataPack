@@ -219,7 +219,7 @@
 	<skill id="616" levels="3" name="Dark Squad">
 		<!-- Confirmed CT2.5 -->
 		<table name="#mAtk"> 7.17 19.32 19.32 </table>
-		<table name="#mCritRate"> 0 0 0.01 </table>
+		<table name="#mCritRate"> 1 1 1.01 </table>
 		<set name="icon" val="icon.skill1443" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1592,7 +1592,6 @@
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="700" />
 		<set name="icon" val="icon.skill_transform_etc" />
-		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="51" />
@@ -1617,7 +1616,6 @@
 		<set name="effectPoint" val="-6752" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill_transform_etc" />
-		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="144" />
@@ -1911,6 +1909,7 @@
 		<set name="effectRange" val="650" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill_transform_debuff" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="73" />

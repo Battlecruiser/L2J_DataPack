@@ -19,7 +19,6 @@
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill1400" />
-		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
 		<set name="itemConsumeId" val="3031" />
@@ -658,7 +657,6 @@
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill1417" />
-		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
 		<set name="itemConsumeId" val="3031" />
@@ -996,7 +994,6 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="FORCE_MEDITATION" />
-		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1430" />
@@ -2788,7 +2785,7 @@
 		<table name="#effectPoints"> 523 582 624 </table>
 		<table name="#magicLvl"> 55 62 68 </table>
 		<table name="#mAtk"> 1.75 1.85 1.95 </table>
-		<table name="#mCritRate"> 1 2 3 </table>
+		<table name="#mCritRate"> 2 3 4 </table>
 		<table name="#mpConsume"> 80 92 101 </table>
 		<table name="#mpInitialConsume"> 20 23 26 </table>
 		<table name="#ench1MpConsume"> 99 97 95 94 92 90 89 87 85 84 82 80 78 77 75 73 72 70 68 67 65 63 62 60 58 57 55 53 52 50 </table>
@@ -2939,6 +2936,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill1482" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -2987,6 +2985,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill1483" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -3035,6 +3034,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill1484" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />

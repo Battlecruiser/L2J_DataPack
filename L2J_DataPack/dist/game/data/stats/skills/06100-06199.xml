@@ -351,6 +351,7 @@
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill0092" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="95" />
 		<set name="operateType" val="A2" />
@@ -371,6 +372,7 @@
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="6000" />
 		<set name="icon" val="icon.skill0092" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="95" />
 		<set name="operateType" val="A2" />
@@ -388,6 +390,7 @@
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1160" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="95" />
@@ -405,6 +408,7 @@
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill4038" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="95" />
@@ -421,6 +425,7 @@
 		<set name="activateRate" val="0" />
 		<set name="effectPoint" val="-1" />
 		<set name="icon" val="icon.skill2513" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="95" />
 		<set name="operateType" val="A2" />
@@ -437,6 +442,7 @@
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill4038" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="95" />
@@ -456,6 +462,7 @@
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="6000" />
 		<set name="icon" val="icon.skill0092" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="95" />
 		<set name="operateType" val="A2" />
@@ -523,6 +530,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SPEED_DOWN" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
@@ -534,6 +542,7 @@
 		<set name="abnormalTime" val="-1" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
 		<set name="basicProperty" val="MEN" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="85" />
@@ -609,6 +618,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="PD_DOWN" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
@@ -720,6 +730,7 @@
 		<set name="abnormalType" val="PD_DOWN" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="#icons" />
+		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE" />
@@ -757,6 +768,7 @@
 		<set name="abnormalType" val="SIGNAL_A" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="#icons" />
+		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE" />
@@ -797,6 +809,7 @@
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="#icons" />
+		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE" />
@@ -813,6 +826,7 @@
 		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill4047" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="81" />
@@ -832,6 +846,7 @@
 		<set name="coolTime" val="800" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0100" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="10" />
 		<set name="operateType" val="A2" />
@@ -849,6 +864,7 @@
 		<set name="coolTime" val="800" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0100" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="10" />
 		<set name="operateType" val="A2" />

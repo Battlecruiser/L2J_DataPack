@@ -19,7 +19,6 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.data.xml.impl.NpcData;
-import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2TrapInstance;
@@ -84,7 +83,7 @@ public final class SummonTrap extends AbstractEffect
 			return;
 		}
 		
-		final L2TrapInstance trap = new L2TrapInstance(IdFactory.getInstance().getNextId(), npcTemplate, player, _despawnTime);
+		final L2TrapInstance trap = new L2TrapInstance(npcTemplate, player, _despawnTime);
 		trap.setCurrentHp(trap.getMaxHp());
 		trap.setCurrentMp(trap.getMaxMp());
 		trap.setIsInvul(true);

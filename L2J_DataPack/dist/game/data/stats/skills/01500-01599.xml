@@ -1104,7 +1104,7 @@
 			<effect name="Buff">
 				<mul stat="mAtk" val="1.4" />
 				<mul stat="mAtkSpd" val="1.5" />
-				<mul stat="mCritRate" val="0.5" />
+				<mul stat="mCritRate" val="1.5" />
 				<mul stat="MagicalMpConsumeRate" val="0.1" />
 			</effect>
 		</for>
@@ -1129,7 +1129,7 @@
 				<mul stat="mAtk" val="1.1" />
 				<mul stat="healEffect" val="1.4" />
 				<mul stat="mAtkSpd" val="1.5" />
-				<mul stat="mCritRate" val="0.5" />
+				<mul stat="mCritRate" val="1.5" />
 				<mul stat="MagicalMpConsumeRate" val="0.1" />
 			</effect>
 		</for>
@@ -1330,6 +1330,7 @@
 		<set name="effectPoint" val="343" />
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.skill1540" />
+		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
@@ -1899,9 +1900,8 @@
 	<skill id="1561" levels="5" name="Battle Cry">
 		<!-- High Five Skill -->
 		<table name="#abnormalLvls"> 2 3 4 5 6 </table>
-		<table name="#amount"> 15 20 25 30 35 </table>
+		<table name="#MaxHp"> 15 20 25 30 35 </table>
 		<table name="#magicLvl"> 40 49 58 64 70 </table>
-		<table name="#maxHp"> 1.15 1.2 1.25 1.3 1.35 </table>
 		<table name="#mpConsume"> 18 22 27 30 33 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="600" />
@@ -1916,11 +1916,10 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="#maxHp" />
-			</effect>
-			<effect name="HealPercent">
-				<param power="#amount" />
+			<effect name="MaxHp">
+				<param power="#MaxHp" />
+				<param type="PER" />
+				<param heal="true" />
 			</effect>
 		</for>
 	</skill>

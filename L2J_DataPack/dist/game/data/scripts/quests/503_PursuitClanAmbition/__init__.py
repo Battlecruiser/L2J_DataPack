@@ -57,7 +57,7 @@ DROPLIST = {
 }
 
 def suscribe_members(st) :
-  clan=st.getPlayer().getClan().getClanId()
+  clan=st.getPlayer().getClan().getId()
   con=L2DatabaseFactory.getInstance().getConnection()
   offline=con.prepareStatement("SELECT charId FROM characters WHERE clanid=? AND online=0")
   offline.setInt(1, clan)

@@ -1061,7 +1061,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#cAtk"> 1.05 1.1 </table>
 		<table name="#icons"> icon.skill6366_1 icon.skill6366_2 </table>
-		<table name="#mCritRate"> 0.02 0.04 </table>
+		<table name="#mCritPower"> 1.02 1.04 </table>
 		<table name="#rCrit"> 1.04 1.08 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
@@ -1083,7 +1083,7 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="rCrit" val="#rCrit" />
-				<mul stat="mCritRate" val="#mCritRate" />
+				<mul stat="mCritPower" val="#mCritPower" />
 				<mul stat="cAtk" val="#cAtk" />
 			</effect>
 		</for>
@@ -1163,6 +1163,7 @@
 		<set name="abnormalType" val="DAMAGE_AMPLIFY" />
 		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-1" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="85" />
@@ -1202,6 +1203,7 @@
 		<set name="abnormalType" val="DAMAGE_AMPLIFY" />
 		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-1" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="85" />
@@ -1261,6 +1263,7 @@
 		<set name="activateRate" val="50" />
 		<set name="effectPoint" val="-1000" />
 		<set name="icon" val="icon.skill0347" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
@@ -1279,6 +1282,7 @@
 		<set name="effectPoint" val="-574" />
 		<set name="fanRange" val="0,0,150,120" />
 		<set name="icon" val="icon.skill0096" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="85" />
 		<set name="nextActionAttack" val="true" />
@@ -1484,7 +1488,6 @@
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="2000" />
 		<set name="ignoreShld" val="true" />
-		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="121" />
 		<set name="operateType" val="A1" />

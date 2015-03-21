@@ -685,11 +685,10 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.03" />
-			</effect>
-			<effect name="HealPercent">
+			<effect name="MaxHp">
 				<param power="3" />
+				<param type="PER" />
+				<param heal="true" />
 			</effect>
 		</for>
 	</skill>

@@ -123,30 +123,34 @@ public final class WyvernManager extends AbstractNpcAI
 	
 	private boolean isOwnerClan(L2Npc npc, L2PcInstance player)
 	{
+		if (!player.isClanLeader())
+		{
+			return false;
+		}
 		switch (MANAGERS.get(npc.getId()))
 		{
 			case CASTLE:
 			{
-				if ((player.getClan() != null) && (npc.getCastle() != null))
+				if (npc.getCastle() != null)
 				{
-					return (player.isClanLeader() && (player.getClanId() == npc.getCastle().getOwnerId()));
+					return player.getClanId() == npc.getCastle().getOwnerId();
 				}
 				return false;
 			}
 			case CLAN_HALL:
 			{
-				if ((player.getClan() != null) && (npc.getConquerableHall() != null))
+				if (npc.getConquerableHall() != null)
 				{
-					return (player.isClanLeader() && (player.getClanId() == npc.getConquerableHall().getOwnerId()));
+					return player.getClanId() == npc.getConquerableHall().getOwnerId();
 				}
 				return false;
 			}
 			case FORT:
 			{
 				final Fort fort = npc.getFort();
-				if ((player.getClan() != null) && (fort != null) && (fort.getOwnerClan() != null))
+				if ((fort != null) && (fort.getOwnerClan() != null))
 				{
-					return (player.isClanLeader() && (player.getClanId() == npc.getFort().getOwnerClan().getId()));
+					return player.getClanId() == npc.getFort().getOwnerClan().getId();
 				}
 				return false;
 			}

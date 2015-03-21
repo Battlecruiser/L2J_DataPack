@@ -1076,7 +1076,7 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Buff">
-				<mul stat="mCritRate" val="2" />
+				<add stat="mCritRate" val="2" />
 			</effect>
 		</for>
 	</skill>
@@ -1113,7 +1113,7 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Buff">
-				<mul stat="mCritRate" val="2" />
+				<add stat="mCritRate" val="2" />
 				<mul stat="regMp" val="1.2" />
 				<mul stat="pAtk" val="1.1" />
 				<mul stat="pDef" val="1.2" />
@@ -1144,7 +1144,7 @@
 			<effect name="Buff">
 				<mul stat="maxMp" val="1.2" />
 				<mul stat="regHp" val="1.2" />
-				<mul stat="mCritRate" val="2" />
+				<add stat="mCritRate" val="2" />
 				<mul stat="cAtk" val="1.2" />
 				<mul stat="pAtk" val="1.1" />
 				<mul stat="pDef" val="1.2" />
@@ -1173,7 +1173,7 @@
 			<effect name="Buff">
 				<mul stat="maxHp" val="1.2" />
 				<mul stat="rCrit" val="1.2" />
-				<mul stat="mCritRate" val="0.2" />
+				<mul stat="mCritPower" val="1.2" />
 				<mul stat="pAtk" val="1.1" />
 				<mul stat="pDef" val="1.2" />
 				<mul stat="pAtkSpd" val="1.2" />
@@ -1198,9 +1198,11 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.2" />
-				<mul stat="mCritRate" val="0.2" />
+			<effect name="MaxHp">
+				<param power="20" />
+				<param type="PER" />
+				<param heal="true" />
+				<add stat="mCritRate" val="2" />
 				<mul stat="cAtk" val="1.2" />
 				<mul stat="pAtk" val="1.1" />
 				<mul stat="pDef" val="1.2" />
@@ -1211,9 +1213,6 @@
 				<sub stat="debuffVuln" val="10" />
 				<add stat="accCombat" val="4" />
 				<mul stat="runSpd" val="0.8" />
-			</effect>
-			<effect name="HealPercent">
-				<param power="20" />
 			</effect>
 		</for>
 	</skill>

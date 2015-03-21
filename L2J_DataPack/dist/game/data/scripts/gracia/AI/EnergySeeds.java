@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.data.xml.impl.DoorData;
 import com.l2jserver.gameserver.data.xml.impl.NpcData;
-import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.instancemanager.GraciaSeedsManager;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.L2Object;
@@ -345,8 +344,8 @@ public class EnergySeeds extends AbstractNpcAI
 	
 	private L2MonsterInstance spawnSupriseMob(L2Npc energy, int npcId)
 	{
-		L2NpcTemplate supriseMobTemplate = NpcData.getInstance().getTemplate(npcId);
-		L2MonsterInstance monster = new L2MonsterInstance(IdFactory.getInstance().getNextId(), supriseMobTemplate);
+		L2NpcTemplate surpriseMobTemplate = NpcData.getInstance().getTemplate(npcId);
+		L2MonsterInstance monster = new L2MonsterInstance(surpriseMobTemplate);
 		monster.setCurrentHpMp(monster.getMaxHp(), monster.getMaxMp());
 		monster.setHeading(energy.getHeading());
 		monster.setInstanceId(energy.getInstanceId());

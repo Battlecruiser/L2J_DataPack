@@ -188,7 +188,7 @@
 			<effect name="Buff">
 				<mul stat="maxHp" val="1.2" />
 				<mul stat="rCrit" val="1.2" />
-				<mul stat="mCritRate" val="0.2" />
+				<mul stat="mCritPower" val="1.2" />
 				<mul stat="pAtk" val="1.1" />
 				<mul stat="pDef" val="1.2" />
 				<mul stat="pAtkSpd" val="1.2" />
@@ -366,12 +366,14 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SERVITOR" />
 		<for>
-			<effect name="Buff">
+			<effect name="MaxHp">
+				<param power="20" />
+				<param type="PER" />
+				<param heal="true" />
 				<mul stat="rCrit" val="1.2" />
 				<mul stat="pAtk" val="1.1" />
 				<mul stat="cAtk" val="1.2" />
 				<mul stat="pAtkSpd" val="1.2" />
-				<mul stat="maxHp" val="1.2" />
 				<mul stat="runSpd" val="0.8" />
 				<add stat="accCombat" val="4" />
 				<mul stat="pDef" val="1.2" />
@@ -379,9 +381,6 @@
 				<mul stat="mAtk" val="1.2" />
 				<mul stat="mAtkSpd" val="1.2" />
 				<sub stat="debuffVuln" val="20" />
-			</effect>
-			<effect name="HealPercent">
-				<param power="20" />
 			</effect>
 		</for>
 	</skill>
@@ -1249,6 +1248,7 @@
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill_transform_debuff" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1304,6 +1304,7 @@
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
 		<set name="icon" val="icon.skill_transform_debuff" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1388,6 +1389,7 @@
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
 		<set name="icon" val="icon.skill_transform_debuff" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -2472,6 +2474,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.skill0792" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="78" />
@@ -2523,7 +2526,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpConsume" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="DA2" />
 		<set name="power" val="#power" />
@@ -2534,7 +2537,7 @@
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2Cost" />
+		<enchant2 name="mpInitialConsume" val="#ench2Cost" />
 		<enchant3 name="activateRate" val="#ench3ActivateRates" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="element" val="0" /> <!-- Fire -->

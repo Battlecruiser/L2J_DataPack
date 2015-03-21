@@ -119,6 +119,7 @@
 		<set name="effectPoint" val="-409" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="mpConsume" val="153" />
@@ -923,7 +924,7 @@
 			<effect name="Buff">
 				<mul stat="maxHp" val="1.2" />
 				<mul stat="rCrit" val="1.2" />
-				<mul stat="mCritRate" val="0.2" />
+				<mul stat="mCritPower" val="1.2" />
 				<mul stat="pAtk" val="1.1" />
 				<mul stat="pDef" val="1.2" />
 				<mul stat="pAtkSpd" val="1.2" />
@@ -953,8 +954,10 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.2" />
+			<effect name="MaxHp">
+				<param power="20" />
+				<param type="PER" />
+				<param heal="true" />
 				<add stat="mCritRate" val="2" />
 				<mul stat="cAtk" val="1.2" />
 				<mul stat="pAtk" val="1.1" />
@@ -966,9 +969,6 @@
 				<sub stat="debuffVuln" val="10" />
 				<add stat="accCombat" val="4" />
 				<mul stat="runSpd" val="0.8" />
-			</effect>
-			<effect name="HealPercent">
-				<param power="20" />
 			</effect>
 		</for>
 	</skill>
@@ -993,6 +993,7 @@
 		<set name="basicProperty" val="CON" />
 		<set name="coolTime" val="200" />
 		<set name="hitTime" val="800" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="75" />
 		<set name="nextActionAttack" val="true" />
@@ -1013,6 +1014,7 @@
 		<set name="basicProperty" val="CON" />
 		<set name="coolTime" val="200" />
 		<set name="hitTime" val="800" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="75" />
 		<set name="nextActionAttack" val="true" />
@@ -1117,6 +1119,7 @@
 		<set name="hitTime" val="1080" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="70" />
+		<set name="isDebuff" val="true" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE" />
@@ -1129,6 +1132,7 @@
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="magicLvl" val="70" />
+		<set name="isDebuff" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
@@ -1184,6 +1188,7 @@
 		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="70" />
+		<set name="isDebuff" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />

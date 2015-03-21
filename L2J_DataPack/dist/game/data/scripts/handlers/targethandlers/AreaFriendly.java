@@ -28,9 +28,11 @@ import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SiegeFlagInstance;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
+import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
@@ -42,9 +44,11 @@ public class AreaFriendly implements ITargetTypeHandler
 	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
 		List<L2Character> targetList = new ArrayList<>();
-		if (!checkTarget(activeChar, target) && (skill.getCastRange() >= 0))
+		L2PcInstance player = activeChar.getActingPlayer();
+		
+		if (!checkTarget(player, target) && (skill.getCastRange() >= 0))
 		{
-			activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
+			player.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 			return EMPTY_TARGET_LIST;
 		}
 		
@@ -56,11 +60,11 @@ public class AreaFriendly implements ITargetTypeHandler
 			};
 		}
 		
-		if (activeChar.getActingPlayer().isInOlympiadMode())
+		if (player.getActingPlayer().isInOlympiadMode())
 		{
 			return new L2Character[]
 			{
-				activeChar
+				player
 			};
 		}
 		targetList.add(target); // Add target to target list
@@ -75,7 +79,7 @@ public class AreaFriendly implements ITargetTypeHandler
 			
 			for (L2Character obj : objs)
 			{
-				if (!checkTarget(activeChar, obj) || (obj == activeChar))
+				if (!checkTarget(player, obj) || (obj == activeChar))
 				{
 					continue;
 				}
@@ -96,7 +100,7 @@ public class AreaFriendly implements ITargetTypeHandler
 		return targetList.toArray(new L2Character[targetList.size()]);
 	}
 	
-	private boolean checkTarget(L2Character activeChar, L2Character target)
+	private boolean checkTarget(L2PcInstance activeChar, L2Character target)
 	{
 		if (!GeoData.getInstance().canSeeTarget(activeChar, target))
 		{
@@ -108,29 +112,41 @@ public class AreaFriendly implements ITargetTypeHandler
 			return false;
 		}
 		
-		if ((target.getActingPlayer() != null) && (target.getActingPlayer() != activeChar) && (target.getActingPlayer().inObserverMode() || target.getActingPlayer().isInOlympiadMode()))
-		{
-			return false;
-		}
-		
 		if (target.isPlayable())
 		{
-			if ((target != activeChar) && activeChar.isInParty() && target.isInParty())
+			L2PcInstance targetPlayer = target.getActingPlayer();
+			
+			if (activeChar == targetPlayer)
 			{
-				return (activeChar.getParty().getLeader() == target.getParty().getLeader());
+				return true;
 			}
 			
-			if ((activeChar.getClanId() != 0) && (target.getClanId() != 0))
+			if (targetPlayer.inObserverMode() || targetPlayer.isInOlympiadMode())
 			{
-				return (activeChar.getClanId() == target.getClanId());
+				return false;
 			}
 			
-			if ((activeChar.getAllyId() != 0) && (target.getAllyId() != 0))
+			if (activeChar.isInDuelWith(target))
 			{
-				return (activeChar.getAllyId() == target.getAllyId());
+				return false;
 			}
 			
-			if ((target != activeChar) && (target.getActingPlayer().getPvpFlag() > 0))
+			if (activeChar.isInPartyWith(target))
+			{
+				return true;
+			}
+			
+			if (target.isInsideZone(ZoneId.PVP))
+			{
+				return false;
+			}
+			
+			if (activeChar.isInClanWith(target) || activeChar.isInAllyWith(target) || activeChar.isInCommandChannelWith(target))
+			{
+				return true;
+			}
+			
+			if ((targetPlayer.getPvpFlag() > 0) || (targetPlayer.getKarma() > 0))
 			{
 				return false;
 			}

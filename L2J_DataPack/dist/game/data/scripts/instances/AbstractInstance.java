@@ -19,10 +19,8 @@
 package instances;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-import java.util.logging.Logger;
 
 import ai.npc.AbstractNpcAI;
 
@@ -46,8 +44,6 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  */
 public abstract class AbstractInstance extends AbstractNpcAI
 {
-	public final Logger _log = Logger.getLogger(getClass().getSimpleName());
-	
 	public AbstractInstance(String name, String desc)
 	{
 		super(name, desc);
@@ -181,7 +177,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	
 	protected void handleRemoveBuffs(InstanceWorld world)
 	{
-		for (Integer objId : world.getAllowed())
+		for (int objId : world.getAllowed())
 		{
 			final L2PcInstance player = L2World.getInstance().getPlayer(objId);
 			
@@ -201,8 +197,8 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	
 	/**
 	 * Spawns group of instance NPC's
-	 * @param groupName - name of group from XML definition to spawn
-	 * @param instanceId - ID of instance
+	 * @param groupName the name of group from XML definition to spawn
+	 * @param instanceId the instance ID
 	 * @return list of spawned NPC's
 	 */
 	protected List<L2Npc> spawnGroup(String groupName, int instanceId)
@@ -211,9 +207,9 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	}
 	
 	/**
-	 * Save Reenter time for every player in InstanceWorld.
-	 * @param world - the InstanceWorld
-	 * @param time - Time in miliseconds
+	 * Sets reenter time for every player in the instance.
+	 * @param world the instance
+	 * @param time the time in milliseconds
 	 */
 	protected void setReenterTime(InstanceWorld world, long time)
 	{
@@ -236,8 +232,6 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	private void handleRemoveBuffs(L2PcInstance player, InstanceWorld world)
 	{
 		final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
-		final List<BuffInfo> buffToRemove = new ArrayList<>();
-		
 		switch (inst.getRemoveBuffType())
 		{
 			case ALL:
@@ -259,7 +253,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 				{
 					if (!inst.getBuffExceptionList().contains(info.getSkill().getId()))
 					{
-						buffToRemove.add(info);
+						info.getEffected().getEffectList().stopSkillEffects(true, info.getSkill());
 					}
 				}
 				
@@ -269,7 +263,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 					{
 						if (!inst.getBuffExceptionList().contains(info.getSkill().getId()))
 						{
-							buffToRemove.add(info);
+							info.getEffected().getEffectList().stopSkillEffects(true, info.getSkill());
 						}
 					}
 				}
@@ -281,7 +275,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 					{
 						if (!inst.getBuffExceptionList().contains(info.getSkill().getId()))
 						{
-							buffToRemove.add(info);
+							info.getEffected().getEffectList().stopSkillEffects(true, info.getSkill());
 						}
 					}
 				}
@@ -293,7 +287,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 				{
 					if (inst.getBuffExceptionList().contains(info.getSkill().getId()))
 					{
-						buffToRemove.add(info);
+						info.getEffected().getEffectList().stopSkillEffects(true, info.getSkill());
 					}
 				}
 				
@@ -303,7 +297,8 @@ public abstract class AbstractInstance extends AbstractNpcAI
 					{
 						if (inst.getBuffExceptionList().contains(info.getSkill().getId()))
 						{
-							buffToRemove.add(info);
+							info.getEffected().getEffectList().stopSkillEffects(true, info.getSkill());
+							
 						}
 					}
 				}
@@ -315,17 +310,12 @@ public abstract class AbstractInstance extends AbstractNpcAI
 					{
 						if (inst.getBuffExceptionList().contains(info.getSkill().getId()))
 						{
-							buffToRemove.add(info);
+							info.getEffected().getEffectList().stopSkillEffects(true, info.getSkill());
 						}
 					}
 				}
 				break;
 			}
-		}
-		
-		for (BuffInfo info : buffToRemove)
-		{
-			info.getEffected().getEffectList().stopSkillEffects(true, info.getSkill());
 		}
 	}
 }

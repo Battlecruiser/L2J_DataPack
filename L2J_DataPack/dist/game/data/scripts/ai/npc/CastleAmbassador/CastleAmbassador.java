@@ -140,7 +140,7 @@ public final class CastleAmbassador extends AbstractNpcAI
 		final int fortOwner = fortresss.getOwnerClan() == null ? 0 : fortresss.getOwnerClan().getId();
 		String htmltext = null;
 		
-		if (player.isClanLeader() && (player.getClan() != null) && (player.getClanId() == fortOwner))
+		if (player.isClanLeader() && (player.getClanId() == fortOwner))
 		{
 			htmltext = (fortresss.isBorderFortress()) ? "ambassador-01.html" : "ambassador.html";
 		}

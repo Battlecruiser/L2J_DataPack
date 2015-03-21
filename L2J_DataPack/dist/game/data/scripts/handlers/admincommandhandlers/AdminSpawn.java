@@ -396,23 +396,21 @@ public class AdminSpawn implements IAdminCommandHandler
 			target = activeChar;
 		}
 		
-		L2NpcTemplate template1;
+		L2NpcTemplate template;
 		if (monsterId.matches("[0-9]*"))
 		{
 			// First parameter was an ID number
-			int monsterTemplate = Integer.parseInt(monsterId);
-			template1 = NpcData.getInstance().getTemplate(monsterTemplate);
+			template = NpcData.getInstance().getTemplate(Integer.parseInt(monsterId));
 		}
 		else
 		{
 			// First parameter wasn't just numbers so go by name not ID
-			monsterId = monsterId.replace('_', ' ');
-			template1 = NpcData.getInstance().getTemplateByName(monsterId);
+			template = NpcData.getInstance().getTemplateByName(monsterId.replace('_', ' '));
 		}
 		
 		try
 		{
-			L2Spawn spawn = new L2Spawn(template1);
+			final L2Spawn spawn = new L2Spawn(template);
 			if (Config.SAVE_GMSPAWN_ON_CUSTOM)
 			{
 				spawn.setCustom(true);
@@ -435,15 +433,15 @@ public class AdminSpawn implements IAdminCommandHandler
 			// TODO add checks for GrandBossSpawnManager
 			if (RaidBossSpawnManager.getInstance().isDefined(spawn.getId()))
 			{
-				activeChar.sendMessage("You cannot spawn another instance of " + template1.getName() + ".");
+				activeChar.sendMessage("You cannot spawn another instance of " + template.getName() + ".");
 			}
 			else
 			{
-				if (RaidBossSpawnManager.getInstance().getValidTemplate(spawn.getId()) != null)
+				if (template.isType("L2RaidBoss"))
 				{
 					spawn.setRespawnMinDelay(43200);
 					spawn.setRespawnMaxDelay(129600);
-					RaidBossSpawnManager.getInstance().addNewSpawn(spawn, 0, template1.getBaseHpMax(), template1.getBaseMpMax(), permanent);
+					RaidBossSpawnManager.getInstance().addNewSpawn(spawn, 0, template.getBaseHpMax(), template.getBaseMpMax(), permanent);
 				}
 				else
 				{
@@ -454,7 +452,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				{
 					spawn.stopRespawn();
 				}
-				activeChar.sendMessage("Created " + template1.getName() + " on " + target.getObjectId());
+				activeChar.sendMessage("Created " + template.getName() + " on " + target.getObjectId());
 			}
 		}
 		catch (Exception e)

@@ -35,7 +35,6 @@ import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
-import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.instancemanager.CHSiegeManager;
@@ -715,7 +714,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 			{
 				try
 				{
-					_gourds[i] = new L2Spawn(NpcData.getInstance().getTemplate(GOURDS[i]));
+					_gourds[i] = new L2Spawn(GOURDS[i]);
 					_gourds[i].setX(ARENAS[i].getX() + 150);
 					_gourds[i].setY(ARENAS[i].getY() + 150);
 					_gourds[i].setZ(ARENAS[i].getZ());
