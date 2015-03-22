@@ -29,12 +29,12 @@ import org.w3c.dom.Node;
 
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.data.xml.IXmlReader;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.L2Territory;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.util.Rnd;
+import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * Tar Beetle zone spawn
