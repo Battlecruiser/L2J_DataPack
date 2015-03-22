@@ -247,7 +247,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 			}
 			case WHITELIST:
 			{
-				for (BuffInfo info : player.getEffectList().getBuffs().values())
+				for (BuffInfo info : player.getEffectList().getBuffs())
 				{
 					if (!inst.getBuffExceptionList().contains(info.getSkill().getId()))
 					{
@@ -258,7 +258,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 				final L2Summon summon = player.getSummon();
 				if (summon != null)
 				{
-					for (BuffInfo info : summon.getEffectList().getBuffs().values())
+					for (BuffInfo info : summon.getEffectList().getBuffs())
 					{
 						if (!inst.getBuffExceptionList().contains(info.getSkill().getId()))
 						{
@@ -270,7 +270,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 			}
 			case BLACKLIST:
 			{
-				for (BuffInfo info : player.getEffectList().getBuffs().values())
+				for (BuffInfo info : player.getEffectList().getBuffs())
 				{
 					if (inst.getBuffExceptionList().contains(info.getSkill().getId()))
 					{
@@ -281,7 +281,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 				final L2Summon summon = player.getSummon();
 				if (summon != null)
 				{
-					for (BuffInfo info : summon.getEffectList().getBuffs().values())
+					for (BuffInfo info : summon.getEffectList().getBuffs())
 					{
 						if (inst.getBuffExceptionList().contains(info.getSkill().getId()))
 						{
