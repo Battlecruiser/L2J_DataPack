@@ -220,9 +220,9 @@ public final class TerritoryManagers extends AbstractNpcAI
 			case "ReceiveRewards":
 			{
 				int badgeId = 57;
-				if (TerritoryWarManager.getInstance().TERRITORY_ITEM_IDS.containsKey(territoryId))
+				if (TerritoryWarManager.TERRITORY_ITEM_IDS.containsKey(territoryId))
 				{
-					badgeId = TerritoryWarManager.getInstance().TERRITORY_ITEM_IDS.get(territoryId);
+					badgeId = TerritoryWarManager.TERRITORY_ITEM_IDS.get(territoryId);
 				}
 				int[] reward = TerritoryWarManager.getInstance().calcReward(player);
 				final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
