@@ -20,9 +20,8 @@ package ai.npc.ForgeOfTheGods;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
-
-import javolution.util.FastList;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -30,12 +29,12 @@ import org.w3c.dom.Node;
 
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.data.xml.IXmlReader;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.L2Territory;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.util.Rnd;
+import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * Tar Beetle zone spawn
@@ -191,7 +190,7 @@ public class TarBeetleSpawn implements IXmlReader
 	private final class SpawnZone
 	{
 		private final List<Zone> _zones = new ArrayList<>();
-		private final List<L2Npc> _spawn = new FastList<>();
+		private final List<L2Npc> _spawn = new CopyOnWriteArrayList<>();
 		private final int _maxNpcCount;
 		private final int _index;
 		

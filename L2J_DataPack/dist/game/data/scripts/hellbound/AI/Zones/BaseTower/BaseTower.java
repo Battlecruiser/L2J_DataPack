@@ -19,8 +19,8 @@
 package hellbound.AI.Zones.BaseTower;
 
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
-import javolution.util.FastMap;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.data.xml.impl.DoorData;
@@ -42,7 +42,7 @@ public final class BaseTower extends AbstractNpcAI
 	// Skills
 	private static final SkillHolder DEATH_WORD = new SkillHolder(5256, 1);
 	// Misc
-	private static final Map<Integer, L2PcInstance> BODY_DESTROYER_TARGET_LIST = new FastMap<>();
+	private static final Map<Integer, L2PcInstance> BODY_DESTROYER_TARGET_LIST = new ConcurrentHashMap<>();
 	
 	public BaseTower()
 	{

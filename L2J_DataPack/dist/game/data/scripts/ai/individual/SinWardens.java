@@ -19,8 +19,8 @@
 package ai.individual;
 
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
-import javolution.util.FastMap;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -54,7 +54,7 @@ public final class SinWardens extends AbstractNpcAI
 		22438
 	};
 	
-	private final Map<Integer, Integer> killedMinionsCount = new FastMap<>();
+	private final Map<Integer, Integer> killedMinionsCount = new ConcurrentHashMap<>();
 	
 	private SinWardens()
 	{
