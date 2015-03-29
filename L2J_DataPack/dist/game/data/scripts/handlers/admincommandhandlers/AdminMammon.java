@@ -70,14 +70,13 @@ public class AdminMammon implements IAdminCommandHandler
 			
 			if (blackSpawnInst != null)
 			{
-				final L2Npc[] blackInst = blackSpawnInst.getNPCInstanceList();
-				if (blackInst.length > 0)
+				final L2Npc blackInst = blackSpawnInst.getNPCInstanceList().peek();
+				if (blackInst != null)
 				{
-					final int x1 = blackInst[0].getX(), y1 = blackInst[0].getY(), z1 = blackInst[0].getZ();
-					activeChar.sendMessage("Blacksmith of Mammon: " + x1 + " " + y1 + " " + z1);
+					activeChar.sendMessage("Blacksmith of Mammon: " + blackInst.getX() + " " + blackInst.getY() + " " + blackInst.getZ());
 					if (teleportIndex == 1)
 					{
-						activeChar.teleToLocation(blackInst[0].getLocation(), true);
+						activeChar.teleToLocation(blackInst.getLocation(), true);
 					}
 				}
 			}
@@ -88,14 +87,13 @@ public class AdminMammon implements IAdminCommandHandler
 			
 			if (merchSpawnInst != null)
 			{
-				final L2Npc[] merchInst = merchSpawnInst.getNPCInstanceList();
-				if (merchInst.length > 0)
+				final L2Npc merchInst = merchSpawnInst.getNPCInstanceList().peek();
+				if (merchInst != null)
 				{
-					final int x2 = merchInst[0].getX(), y2 = merchInst[0].getY(), z2 = merchInst[0].getZ();
-					activeChar.sendMessage("Merchant of Mammon: " + x2 + " " + y2 + " " + z2);
+					activeChar.sendMessage("Merchant of Mammon: " + merchInst.getX() + " " + merchInst.getY() + " " + merchInst.getZ());
 					if (teleportIndex == 2)
 					{
-						activeChar.teleToLocation(merchInst[0].getLocation(), true);
+						activeChar.teleToLocation(merchInst.getLocation(), true);
 					}
 				}
 			}
