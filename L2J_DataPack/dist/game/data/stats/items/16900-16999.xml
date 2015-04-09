@@ -13,7 +13,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="58" />
+			<add order="0" stat="pDef" val="58" />
 		</for>
 	</item>
 	<item id="16901" type="Armor" name="Full Plate Armor of Fortune - 90-day limited period">
@@ -33,7 +33,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="239" />
+			<add order="0" stat="pDef" val="239" />
 		</for>
 	</item>
 	<item id="16902" type="Armor" name="Full Plate Boots of Fortune - 90-day limited period">
@@ -49,7 +49,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="39" />
+			<add order="0" stat="pDef" val="39" />
 		</for>
 	</item>
 	<item id="16903" type="Armor" name="Full Plate Gauntlet of Fortune - 90-day limited period">
@@ -65,7 +65,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="39" />
+			<add order="0" stat="pDef" val="39" />
 		</for>
 	</item>
 	<item id="16904" type="Armor" name="Full Plate Shield of Fortune - 90-day limited period">
@@ -85,9 +85,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="203" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="203" />
 		</for>
 	</item>
 	<item id="16905" type="Armor" name="Manticore Skin Shirt of Fortune - 90-day limited period">
@@ -104,7 +104,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="77" />
+			<add order="0" stat="pDef" val="77" />
 		</for>
 	</item>
 	<item id="16906" type="Armor" name="Manticore Skin Gaiters of Fortune - 90-day limited period">
@@ -121,7 +121,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="48" />
+			<add order="0" stat="pDef" val="48" />
 		</for>
 	</item>
 	<item id="16907" type="Armor" name="Manticore Skin Boots of Fortune - 90-day limited period">
@@ -137,7 +137,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="27" />
+			<add order="0" stat="pDef" val="27" />
 		</for>
 	</item>
 	<item id="16908" type="Armor" name="Manticore Skin Gloves of Fortune - 90-day limited period">
@@ -153,7 +153,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="27" />
+			<add order="0" stat="pDef" val="27" />
 		</for>
 	</item>
 	<item id="16909" type="Armor" name="Brigandine of Fortune - 90-day limited period">
@@ -173,7 +173,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="103" />
+			<add order="0" stat="pDef" val="103" />
 		</for>
 	</item>
 	<item id="16910" type="Armor" name="Brigandine Gaiters of Fortune - 90-day limited period">
@@ -193,7 +193,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="64" />
+			<add order="0" stat="pDef" val="64" />
 		</for>
 	</item>
 	<item id="16911" type="Armor" name="Brigandine Helmet of Fortune - 90-day limited period">
@@ -209,7 +209,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="41" />
+			<add order="0" stat="pDef" val="41" />
 		</for>
 	</item>
 	<item id="16912" type="Armor" name="Brigandine Boots of Fortune - 90-day limited period">
@@ -225,7 +225,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="27" />
+			<add order="0" stat="pDef" val="27" />
 		</for>
 	</item>
 	<item id="16913" type="Armor" name="Brigandine Gauntlet of Fortune - 90-day limited period">
@@ -241,7 +241,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="27" />
+			<add order="0" stat="pDef" val="27" />
 		</for>
 	</item>
 	<item id="16914" type="Armor" name="Brigandine Shield of Fortune - 90-day limited period">
@@ -261,9 +261,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="142" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="142" />
 		</for>
 	</item>
 	<item id="16915" type="Armor" name="Fortune Armor of Nightmare - 90-day limited period">
@@ -283,7 +283,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="293" />
+			<add order="0" stat="pDef" val="293" />
 		</for>
 	</item>
 	<item id="16916" type="Armor" name="Fortune Helm of Nightmare - 90-day limited period">
@@ -299,7 +299,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="73" />
+			<add order="0" stat="pDef" val="73" />
 		</for>
 	</item>
 	<item id="16917" type="Armor" name="Fortune Gauntlet of Nightmare - Heavy Armor - 90-day limited period">
@@ -318,7 +318,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="49" />
+			<add order="0" stat="pDef" val="49" />
 		</for>
 	</item>
 	<item id="16918" type="Armor" name="Fortune Boots of Nightmare - Heavy Armor - 90-day limited period">
@@ -337,7 +337,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="49" />
+			<add order="0" stat="pDef" val="49" />
 		</for>
 	</item>
 	<item id="16919" type="Armor" name="Fortune Shield of Nightmare - 90-day limited period">
@@ -357,9 +357,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="256" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="256" />
 		</for>
 	</item>
 	<item id="16920" type="Weapon" name="Sword of Miracles of Fortune - 90-day limited period">
@@ -385,10 +385,10 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="186" />
-			<set order="0x08" stat="mAtk" val="152" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="186" />
+			<set stat="mAtk" val="152" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="16921" type="Weapon" name="Wizard's Tear of Fortune - 90-day limited period">
@@ -414,10 +414,10 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="155" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="155" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="16922" type="Weapon" name="Homunkulus's Sword of Fortune - 90-day limited period">
@@ -443,10 +443,10 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="111" />
-			<set order="0x08" stat="mAtk" val="101" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="111" />
+			<set stat="mAtk" val="101" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="16923" type="Weapon" name="Fortune Staff of Life - 90-day limited period">
@@ -471,11 +471,11 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="74" />
-			<set order="0x08" stat="mAtk" val="72" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="74" />
+			<set stat="mAtk" val="72" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="16924" type="Weapon" name="Naga Storm of Fortune - 90-day limited period">
@@ -500,11 +500,11 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="220" />
-			<set order="0x08" stat="mAtk" val="121" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="220" />
+			<set stat="mAtk" val="121" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="16925" type="Weapon" name="Kris of Fortune - 90-day limited period">
@@ -529,11 +529,11 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="153" />
-			<set order="0x08" stat="mAtk" val="91" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="153" />
+			<set stat="mAtk" val="91" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="16926" type="Weapon" name="Dark Screamer of Fortune - 90-day limited period">
@@ -558,11 +558,11 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="122" />
-			<set order="0x08" stat="mAtk" val="76" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="122" />
+			<set stat="mAtk" val="76" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="16927" type="Weapon" name="Mithril Dagger of Fortune - 90-day limited period">
@@ -586,11 +586,11 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="80" />
-			<set order="0x08" stat="mAtk" val="54" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="80" />
+			<set stat="mAtk" val="54" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="16928" type="Weapon" name="Shyeed's Bow of Fortune - 90-day limited period">
@@ -617,11 +617,11 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="570" />
-			<set order="0x08" stat="mAtk" val="133" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="227" />
+			<set stat="pAtk" val="570" />
+			<set stat="mAtk" val="133" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="227" />
 		</for>
 	</item>
 	<item id="16929" type="Weapon" name="Fortune Bow of Peril - 90-day limited period">
@@ -648,11 +648,11 @@
 		<set name="reduced_mp_consume" val="42,2" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="400" />
-			<set order="0x08" stat="mAtk" val="99" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="400" />
+			<set stat="mAtk" val="99" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
 	<item id="16930" type="Weapon" name="Eminence Bow of Fortune - 90-day limited period">
@@ -679,11 +679,11 @@
 		<set name="reduced_mp_consume" val="42,1" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="323" />
-			<set order="0x08" stat="mAtk" val="83" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="323" />
+			<set stat="mAtk" val="83" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
 	<item id="16931" type="Weapon" name="Light Crossbow of Fortune - 90-day limited period">
@@ -709,11 +709,11 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="191" />
-			<set order="0x08" stat="mAtk" val="54" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="191" />
+			<set stat="mAtk" val="54" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
 	<item id="16932" type="Weapon" name="Barakiel's Axe of Fortune - 90-day limited period">
@@ -738,11 +738,11 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="251" />
-			<set order="0x08" stat="mAtk" val="121" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="251" />
+			<set stat="mAtk" val="121" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="16933" type="Weapon" name="Art of Battle Axe of Fortune - 90-day limited period">
@@ -767,11 +767,11 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="194" />
-			<set order="0x08" stat="mAtk" val="99" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="194" />
+			<set stat="mAtk" val="99" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="16934" type="Weapon" name="Yaksa Mace of Fortune - 90-day limited period">
@@ -796,11 +796,11 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="156" />
-			<set order="0x08" stat="mAtk" val="83" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="156" />
+			<set stat="mAtk" val="83" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="16935" type="Weapon" name="Bonebreaker of Fortune - 90-day limited period">
@@ -824,11 +824,11 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="92" />
-			<set order="0x08" stat="mAtk" val="54" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="92" />
+			<set stat="mAtk" val="54" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="16936" type="Weapon" name="Sirra's Blade of Fortune - 90-day limited period">
@@ -853,10 +853,10 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="251" />
-			<set order="0x08" stat="mAtk" val="121" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="251" />
+			<set stat="mAtk" val="121" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="16937" type="Weapon" name="Fortune Sword of Damascus - 90-day limited period">
@@ -881,10 +881,10 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="194" />
-			<set order="0x08" stat="mAtk" val="99" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="194" />
+			<set stat="mAtk" val="99" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="16938" type="Weapon" name="Samurai Longsword of Fortune - 90-day limited period">
@@ -909,10 +909,10 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="156" />
-			<set order="0x08" stat="mAtk" val="83" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="156" />
+			<set stat="mAtk" val="83" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="16939" type="Weapon" name="Elven Long Sword of Fortune - 90-day limited period">
@@ -936,10 +936,10 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="92" />
-			<set order="0x08" stat="mAtk" val="54" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="92" />
+			<set stat="mAtk" val="54" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="16940" type="Weapon" name="Fortune Sword of Ipos - 90-day limited period">
@@ -964,10 +964,10 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="305" />
-			<set order="0x08" stat="mAtk" val="121" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="305" />
+			<set stat="mAtk" val="121" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="16941" type="Weapon" name="Guardian Sword of Fortune - 90-day limited period">
@@ -992,10 +992,10 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="236" />
-			<set order="0x08" stat="mAtk" val="99" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="236" />
+			<set stat="mAtk" val="99" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="16942" type="Weapon" name="Berserker Blade of Fortune - 90-day limited period">
@@ -1020,10 +1020,10 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="190" />
-			<set order="0x08" stat="mAtk" val="83" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="190" />
+			<set stat="mAtk" val="83" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="16943" type="Weapon" name="Claymore of Fortune - 90-day limited period">
@@ -1047,10 +1047,10 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="112" />
-			<set order="0x08" stat="mAtk" val="54" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="112" />
+			<set stat="mAtk" val="54" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="16944" type="Weapon" name="Sobekk's Hurricane of Fortune - 90-day limited period">
@@ -1075,11 +1075,11 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="305" />
-			<set order="0x08" stat="mAtk" val="121" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="305" />
+			<set stat="mAtk" val="121" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="16945" type="Weapon" name="Bellion Cestus of Fortune - 90-day limited period">
@@ -1104,11 +1104,11 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="236" />
-			<set order="0x08" stat="mAtk" val="99" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="236" />
+			<set stat="mAtk" val="99" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="16946" type="Weapon" name="Great Pata of Fortune - 90-day limited period">
@@ -1133,11 +1133,11 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="190" />
-			<set order="0x08" stat="mAtk" val="83" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="190" />
+			<set stat="mAtk" val="83" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="16947" type="Weapon" name="Scallop Jamadhr of Fortune - 90-day limited period">
@@ -1161,11 +1161,11 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="112" />
-			<set order="0x08" stat="mAtk" val="54" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="112" />
+			<set stat="mAtk" val="54" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="16948" type="Weapon" name="Tallum Blade*Damascus of Fortune - 90-day limited period">
@@ -1190,10 +1190,10 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="305" />
-			<set order="0x08" stat="mAtk" val="121" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="305" />
+			<set stat="mAtk" val="121" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="16949" type="Weapon" name="Samurai Long Sword*Samurai Long Sword of Fortune - 90-day limited period">
@@ -1218,10 +1218,10 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="236" />
-			<set order="0x08" stat="mAtk" val="99" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="236" />
+			<set stat="mAtk" val="99" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="16950" type="Weapon" name="Spirit Sword*Raid Sword of Fortune - 90-day limited period">
@@ -1246,10 +1246,10 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="190" />
-			<set order="0x08" stat="mAtk" val="83" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="190" />
+			<set stat="mAtk" val="83" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="16951" type="Weapon" name="Bastard Sword*Elven Sword of Fortune - 90-day limited period">
@@ -1273,10 +1273,10 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="107" />
-			<set order="0x08" stat="mAtk" val="51" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="107" />
+			<set stat="mAtk" val="51" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="16952" type="Weapon" name="Tiphon's Spear of Fortune - 90-day limited period">
@@ -1301,11 +1301,11 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="251" />
-			<set order="0x08" stat="mAtk" val="121" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="251" />
+			<set stat="mAtk" val="121" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="16953" type="Weapon" name="Lance of Fortune - 90-day limited period">
@@ -1330,11 +1330,11 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="194" />
-			<set order="0x08" stat="mAtk" val="99" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="194" />
+			<set stat="mAtk" val="99" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="16954" type="Weapon" name="Orcish Poleaxe of Fortune - 90-day limited period">
@@ -1359,11 +1359,11 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="156" />
-			<set order="0x08" stat="mAtk" val="83" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="156" />
+			<set stat="mAtk" val="83" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="16955" type="Weapon" name="Glaive of Fortune - 90-day limited period">
@@ -1388,11 +1388,11 @@
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="92" />
-			<set order="0x08" stat="mAtk" val="54" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="92" />
+			<set stat="mAtk" val="54" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="16956" type="Weapon" name="Durendal of Fortune - 90-day limited period">
@@ -1420,11 +1420,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="272" />
-			<set order="0x08" stat="mAtk" val="121" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="2" />
-			<set order="0x08" stat="pAtkSpd" val="350" />
+			<set stat="pAtk" val="272" />
+			<set stat="mAtk" val="121" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="2" />
+			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="16957" type="Weapon" name="Dismantler of Fortune - 90-day limited period">
@@ -1452,11 +1452,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="210" />
-			<set order="0x08" stat="mAtk" val="99" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="2" />
-			<set order="0x08" stat="pAtkSpd" val="350" />
+			<set stat="pAtk" val="210" />
+			<set stat="mAtk" val="99" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="2" />
+			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="16958" type="Weapon" name="Saber Tooth of Fortune - 90-day limited period">
@@ -1484,11 +1484,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="169" />
-			<set order="0x08" stat="mAtk" val="83" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="2" />
-			<set order="0x08" stat="pAtkSpd" val="350" />
+			<set stat="pAtk" val="169" />
+			<set stat="mAtk" val="83" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="2" />
+			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="16959" type="Weapon" name="General's Katzbalger of Fortune - 90-day limited period">
@@ -1515,11 +1515,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="100" />
-			<set order="0x08" stat="mAtk" val="54" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="2" />
-			<set order="0x08" stat="pAtkSpd" val="350" />
+			<set stat="pAtk" val="100" />
+			<set stat="mAtk" val="54" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="2" />
+			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="16960" type="Weapon" name="Eclair Bijou of Fortune - 90-day limited period">
@@ -1548,11 +1548,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="228" />
-			<set order="0x08" stat="mAtk" val="121" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="228" />
+			<set stat="mAtk" val="121" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="406" />
 		</for>
 	</item>
 	<item id="16961" type="Weapon" name="Colichemarde of Fortune - 90-day limited period">
@@ -1581,11 +1581,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="176" />
-			<set order="0x08" stat="mAtk" val="99" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="176" />
+			<set stat="mAtk" val="99" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="406" />
 		</for>
 	</item>
 	<item id="16962" type="Weapon" name="Admiral's Estoc of Fortune - 90-day limited period">
@@ -1614,11 +1614,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="141" />
-			<set order="0x08" stat="mAtk" val="83" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="141" />
+			<set stat="mAtk" val="83" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="406" />
 		</for>
 	</item>
 	<item id="16963" type="Weapon" name="Grand Epee of Fortune - 90-day limited period">
@@ -1646,11 +1646,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="83" />
-			<set order="0x08" stat="mAtk" val="54" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="83" />
+			<set stat="mAtk" val="54" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="406" />
 		</for>
 	</item>
 	<item id="16964" type="Weapon" name="Screaming Vengeance of Fortune - 90-day limited period">
@@ -1679,11 +1679,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="318" />
-			<set order="0x08" stat="mAtk" val="121" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="318" />
+			<set stat="mAtk" val="121" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
 	<item id="16965" type="Weapon" name="Hell Hound of Fortune - 90-day limited period">
@@ -1712,11 +1712,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="245" />
-			<set order="0x08" stat="mAtk" val="99" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="245" />
+			<set stat="mAtk" val="99" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
 	<item id="16966" type="Weapon" name="Sharpshooter of Fortune - 90-day limited period">
@@ -1745,11 +1745,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="198" />
-			<set order="0x08" stat="mAtk" val="83" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="198" />
+			<set stat="mAtk" val="83" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
 	<item id="16967" type="Weapon" name="Cranequin of Fortune - 90-day limited period">
@@ -1777,11 +1777,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="117" />
-			<set order="0x08" stat="mAtk" val="54" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="117" />
+			<set stat="mAtk" val="54" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
 	<item id="16968" type="EtcItem" name="Knight Class Equipment Set - 90-day limited period">

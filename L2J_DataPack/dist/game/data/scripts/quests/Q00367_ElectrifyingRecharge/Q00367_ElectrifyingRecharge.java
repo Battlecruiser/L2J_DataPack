@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -99,7 +99,7 @@ public final class Q00367_ElectrifyingRecharge extends Quest
 			return super.onAttack(npc, attacker, damage, isSummon);
 		}
 		
-		QuestState qs = attacker.getQuestState(getName());
+		QuestState qs = getQuestState(attacker, false);
 		if ((qs == null) || !qs.isStarted())
 		{
 			return super.onAttack(npc, attacker, damage, isSummon);
@@ -120,7 +120,7 @@ public final class Q00367_ElectrifyingRecharge extends Quest
 		{
 			return super.onAttack(npc, attacker, damage, isSummon);
 		}
-		qs = luckyPlayer.getQuestState(getName());
+		qs = getQuestState(luckyPlayer, false);
 		
 		if ((qs != null) && qs.isStarted() && !hasQuestItems(luckyPlayer, TITAN_LAMP5))
 		{

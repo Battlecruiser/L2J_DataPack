@@ -70,7 +70,7 @@ class Quest (JQuest) :
 
   def onAdvEvent (self,event,npc, player) :
     htmltext = event
-    st = player.getQuestState(qn)
+    st = self.getQuestState(player, False)
     if not st : return
     #accept quest
     if event == "1" :
@@ -138,7 +138,7 @@ class Quest (JQuest) :
 
   def onTalk (self,npc,player):
     htmltext = Quest.getNoQuestMsg(player)
-    st = player.getQuestState(qn)
+    st = self.getQuestState(player, True)
     if not st : return htmltext
 
     npcId = npc.getId()
@@ -288,7 +288,7 @@ class Quest (JQuest) :
     return htmltext
 
   def onAttack (self, npc, player, damage, isPet, skill):
-    st = player.getQuestState(qn)
+    st = self.getQuestState(player, False)
     if not st : return 
     if st.getState() != State.STARTED : return 
     if isPet : return
@@ -325,7 +325,7 @@ class Quest (JQuest) :
         if stw.getQuestItemsCount(dropId) >= 30:
           stw.set("cond","9")
       else:
-        st = player.getQuestState(qn)
+        st = self.getQuestState(player, False)
         if not st : return
         if st.getState() != State.STARTED : return
         if npcId in DROPLIST.keys() :

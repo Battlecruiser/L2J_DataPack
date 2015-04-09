@@ -8,7 +8,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x10" stat="CON" val="2" />
+				<add stat="CON" val="2" />
 			</effect>
 		</for>
 	</skill>
@@ -20,7 +20,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x10" stat="INT" val="2" />
+				<add stat="INT" val="2" />
 			</effect>
 		</for>
 	</skill>
@@ -32,7 +32,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x10" stat="WIT" val="2" />
+				<add stat="WIT" val="2" />
 			</effect>
 		</for>
 	</skill>
@@ -44,7 +44,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x10" stat="MEN" val="2" />
+				<add stat="MEN" val="2" />
 			</effect>
 		</for>
 	</skill>
@@ -104,12 +104,12 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x10" stat="STR" val="1" />
-				<add order="0x10" stat="DEX" val="1" />
-				<add order="0x10" stat="CON" val="1" />
-				<add order="0x10" stat="INT" val="1" />
-				<add order="0x10" stat="WIT" val="1" />
-				<add order="0x10" stat="MEN" val="1" />
+				<add stat="STR" val="1" />
+				<add stat="DEX" val="1" />
+				<add stat="CON" val="1" />
+				<add stat="INT" val="1" />
+				<add stat="WIT" val="1" />
+				<add stat="MEN" val="1" />
 			</effect>
 		</for>
 	</skill>
@@ -122,6 +122,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -144,6 +145,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 		<cond msgId="113" addName="1">
 			<not>
@@ -179,6 +181,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -194,6 +197,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -209,6 +213,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -237,6 +242,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -250,6 +256,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -263,6 +270,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">

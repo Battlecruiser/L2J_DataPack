@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -37,6 +37,7 @@ public final class Kanaf extends AbstractNpcAI
 		super(Kanaf.class.getSimpleName(), "hellbound/AI/NPC");
 		addStartNpc(KANAF);
 		addTalkId(KANAF);
+		addFirstTalkId(KANAF);
 	}
 	
 	@Override

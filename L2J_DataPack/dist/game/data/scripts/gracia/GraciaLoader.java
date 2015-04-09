@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,9 +18,6 @@
  */
 package gracia;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import gracia.AI.EnergySeeds;
 import gracia.AI.Lindvior;
 import gracia.AI.Maguen;
@@ -35,12 +32,15 @@ import gracia.AI.NPC.ZealotOfShilen.ZealotOfShilen;
 import gracia.AI.SeedOfAnnihilation.SeedOfAnnihilation;
 import gracia.instances.SecretArea.SecretArea;
 import gracia.instances.SeedOfDestruction.Stage1;
-import gracia.instances.SeedOfInfinity.HallOfSuffering;
+import gracia.instances.SeedOfInfinity.HallOfSuffering.HallOfSuffering;
 import gracia.vehicles.AirShipGludioGracia.AirShipGludioGracia;
 import gracia.vehicles.KeucereusNorthController.KeucereusNorthController;
 import gracia.vehicles.KeucereusSouthController.KeucereusSouthController;
 import gracia.vehicles.SoDController.SoDController;
 import gracia.vehicles.SoIController.SoIController;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Gracia class-loader.

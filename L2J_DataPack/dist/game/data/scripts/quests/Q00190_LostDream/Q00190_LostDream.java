@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -24,7 +24,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * Lost Dream (190)
@@ -33,10 +32,10 @@ import com.l2jserver.gameserver.model.quest.State;
 public final class Q00190_LostDream extends Quest
 {
 	// NPCs
-	private static final int HEAD_BLACKSMITH_KUSTO = 30512;
-	private static final int RESEARCHER_LORAIN = 30673;
-	private static final int MAESTRO_NIKOLA = 30621;
 	private static final int JURIS = 30113;
+	private static final int HEAD_BLACKSMITH_KUSTO = 30512;
+	private static final int MAESTRO_NIKOLA = 30621;
+	private static final int RESEARCHER_LORAIN = 30673;
 	// Misc
 	private static final int MIN_LEVEL = 42;
 	private static final int MAX_LEVEL_FOR_EXP_SP = 48;
@@ -51,43 +50,49 @@ public final class Q00190_LostDream extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
-		
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
+		
 		String htmltext = null;
 		switch (event)
 		{
-			case "30113-02.html":
-			{
-				htmltext = event;
-				break;
-			}
 			case "30512-03.htm":
 			{
-				if (st.isCreated())
+				if (qs.isCreated())
 				{
-					st.startQuest();
+					qs.startQuest();
+					qs.setMemoState(1);
 					htmltext = event;
 				}
 				break;
 			}
 			case "30512-06.html":
 			{
-				if (st.isCond(2))
+				if (qs.isMemoState(2))
 				{
-					st.setCond(3, true);
+					qs.setMemoState(3);
+					qs.setCond(3, true);
+					htmltext = event;
+				}
+				break;
+			}
+			case "30113-02.html":
+			{
+				if (qs.isMemoState(1))
+				{
 					htmltext = event;
 				}
 				break;
 			}
 			case "30113-03.html":
 			{
-				if (st.isCond(1))
+				if (qs.isMemoState(1))
 				{
-					st.setCond(2, true);
+					qs.setMemoState(2);
+					qs.setCond(2, true);
 					htmltext = event;
 				}
 				break;
@@ -99,122 +104,97 @@ public final class Q00190_LostDream extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
+		final QuestState qs = getQuestState(player, true);
+		final int memoState = qs.getMemoState();
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
+		if (qs.isCreated())
 		{
-			return htmltext;
+			if (npc.getId() == HEAD_BLACKSMITH_KUSTO)
+			{
+				final QuestState q187 = player.getQuestState(Q00187_NikolasHeart.class.getSimpleName());
+				if ((q187 != null) && q187.isCompleted())
+				{
+					htmltext = (player.getLevel() >= MIN_LEVEL) ? "30512-01.htm" : "30512-02.htm";
+				}
+			}
 		}
-		
-		switch (npc.getId())
+		else if (qs.isStarted())
 		{
-			case HEAD_BLACKSMITH_KUSTO:
+			switch (npc.getId())
 			{
-				switch (st.getState())
+				case HEAD_BLACKSMITH_KUSTO:
 				{
-					case State.CREATED:
+					if (memoState == 1)
 					{
-						final QuestState qs = player.getQuestState(Q00187_NikolasHeart.class.getSimpleName());
-						if ((qs != null) && qs.isCompleted())
+						htmltext = "30512-04.html";
+					}
+					else if (memoState == 2)
+					{
+						htmltext = "30512-05.html";
+					}
+					else if ((memoState >= 3) && (memoState <= 4))
+					{
+						htmltext = "30512-07.html";
+					}
+					else if (memoState == 5)
+					{
+						htmltext = "30512-08.html";
+						giveAdena(player, 109427, true);
+						if (player.getLevel() < MAX_LEVEL_FOR_EXP_SP)
 						{
-							htmltext = (player.getLevel() >= MIN_LEVEL) ? "30512-01.htm" : "30512-02.htm";
+							addExpAndSp(player, 309467, 20614);
 						}
-						break;
+						qs.exitQuest(false, true);
 					}
-					case State.STARTED:
-					{
-						switch (st.getCond())
-						{
-							case 1:
-							{
-								htmltext = "30512-04.html";
-								break;
-							}
-							case 2:
-							{
-								htmltext = "30512-05.html";
-								break;
-							}
-							case 3:
-							case 4:
-							{
-								htmltext = "30512-07.html";
-								break;
-							}
-							case 5:
-							{
-								htmltext = "30512-08.html";
-								st.giveAdena(109427, true);
-								if (player.getLevel() < MAX_LEVEL_FOR_EXP_SP)
-								{
-									st.addExpAndSp(309467, 20614);
-								}
-								st.exitQuest(false, true);
-								break;
-							}
-						}
-						break;
-					}
-					case State.COMPLETED:
-					{
-						htmltext = getAlreadyCompletedMsg(player);
-						break;
-					}
+					break;
 				}
-				break;
-			}
-			case RESEARCHER_LORAIN:
-			{
-				switch (st.getCond())
+				case JURIS:
 				{
-					case 3:
-					{
-						st.setCond(4, true);
-						htmltext = "30673-01.html";
-						break;
-					}
-					case 4:
-					{
-						htmltext = "30673-02.html";
-						break;
-					}
-				}
-				break;
-			}
-			case MAESTRO_NIKOLA:
-			{
-				switch (st.getCond())
-				{
-					case 4:
-					{
-						st.setCond(5, true);
-						htmltext = "30621-01.html";
-						break;
-					}
-					case 5:
-					{
-						htmltext = "30621-02.html";
-						break;
-					}
-				}
-				break;
-			}
-			case JURIS:
-			{
-				switch (st.getCond())
-				{
-					case 1:
+					if (memoState == 1)
 					{
 						htmltext = "30113-01.html";
-						break;
 					}
-					case 2:
+					else if (memoState == 2)
 					{
 						htmltext = "30113-04.html";
-						break;
 					}
+					break;
 				}
-				break;
+				case MAESTRO_NIKOLA:
+				{
+					if (memoState == 4)
+					{
+						qs.setMemoState(5);
+						qs.setCond(5, true);
+						htmltext = "30621-01.html";
+					}
+					else if (memoState == 5)
+					{
+						htmltext = "30621-02.html";
+					}
+					break;
+				}
+				case RESEARCHER_LORAIN:
+				{
+					if (memoState == 3)
+					{
+						qs.setMemoState(4);
+						qs.setCond(4, true);
+						htmltext = "30673-01.html";
+					}
+					else if (memoState == 4)
+					{
+						htmltext = "30673-02.html";
+					}
+					break;
+				}
+			}
+		}
+		else if (qs.isCompleted())
+		{
+			if (npc.getId() == HEAD_BLACKSMITH_KUSTO)
+			{
+				htmltext = getAlreadyCompletedMsg(player);
 			}
 		}
 		return htmltext;

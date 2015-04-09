@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -148,7 +148,7 @@ public final class Q00456_DontKnowDontCare extends Quest
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = player.getQuestState(getName());
+		final QuestState qs = getQuestState(player, false);
 		final Set<Integer> allowedPlayers = allowedPlayerMap.get(npc.getObjectId());
 		
 		if ((qs == null) || !qs.isCond(1) || (allowedPlayers == null) || !allowedPlayers.contains(player.getObjectId()))
@@ -184,7 +184,7 @@ public final class Q00456_DontKnowDontCare extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = player.getQuestState(getName());
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
 		if (qs == null)
@@ -235,7 +235,7 @@ public final class Q00456_DontKnowDontCare extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs;
+		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
 		
 		switch (event)
@@ -243,14 +243,12 @@ public final class Q00456_DontKnowDontCare extends Quest
 			case "32864-04.htm":
 			case "32864-05.htm":
 			case "32864-06.htm":
-				qs = player.getQuestState(getName());
 				if ((qs != null) && qs.isCreated())
 				{
 					htmltext = event;
 				}
 				break;
 			case "32864-07.htm":
-				qs = player.getQuestState(getName());
 				if ((qs != null) && qs.isCreated())
 				{
 					qs.startQuest();

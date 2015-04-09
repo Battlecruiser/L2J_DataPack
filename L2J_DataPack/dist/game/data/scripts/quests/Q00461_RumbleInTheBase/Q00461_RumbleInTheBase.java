@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -69,7 +69,7 @@ public class Q00461_RumbleInTheBase extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = null;
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return htmltext;
@@ -98,7 +98,7 @@ public class Q00461_RumbleInTheBase extends Quest
 		
 		if (npc.getId() == 18908)
 		{
-			st = player.getQuestState(getName());
+			st = getQuestState(player, false);
 			if ((st != null) && st.isCond(1) && (st.getQuestItemsCount(SHINY_SALMON) < 5))
 			{
 				st.giveItems(SHINY_SALMON, 1);
@@ -117,7 +117,7 @@ public class Q00461_RumbleInTheBase extends Quest
 				return super.onKill(npc, player, isSummon);
 			}
 			
-			st = member.getQuestState(getName());
+			st = getQuestState(member, false);
 			if (st.getQuestItemsCount(SHOES_STRING_OF_SEL_MAHUM) < 10)
 			{
 				st.giveItems(SHOES_STRING_OF_SEL_MAHUM, 1);
@@ -135,7 +135,7 @@ public class Q00461_RumbleInTheBase extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, true);
 		if (st == null)
 		{
 			return htmltext;

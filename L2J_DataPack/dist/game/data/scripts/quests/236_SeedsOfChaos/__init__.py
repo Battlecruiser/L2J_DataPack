@@ -69,7 +69,7 @@ class Quest (JQuest) :
     self.questItemId = [BLACK_ECHO_CRYSTAL, SHINING_MEDALLION]
  
  def onAdvEvent (self,event,npc, player) :
-    st = player.getQuestState(qn)
+    st = self.getQuestState(player, False)
     if not st : return
     if event == "1" : #Go talk to the wizard!
         st.setState(State.STARTED)
@@ -143,7 +143,7 @@ class Quest (JQuest) :
  
  def onTalk (self,npc,player):
     htmltext = Quest.getNoQuestMsg(player)
-    st = player.getQuestState(qn)
+    st = self.getQuestState(player, True)
     if not st : return htmltext
     npcId = npc.getId()
     id = st.getState()
@@ -151,7 +151,7 @@ class Quest (JQuest) :
     if npcId == KEKROPUS :
         if id == State.CREATED :
             st.set("cond","0")
-            if player.getRace() != Race.Kamael :
+            if player.getRace() != Race.KAMAEL :
                 st.exitQuest(1)
                 htmltext = "<html><body>I'm sorry, but I can only give this quest to Kamael. Talk to Magister Ladd.</body></html>"
             elif player.getLevel() < 75 :
@@ -230,7 +230,7 @@ class Quest (JQuest) :
     return htmltext
  
  def onKill(self,npc,player,isPet):
-    st = player.getQuestState(qn)
+    st = self.getQuestState(player, False)
     if not st : return 
     if st.getState() != State.STARTED : return 
     #The following algorithm should work for both quest mobs and drops for this quest.... hopefully.

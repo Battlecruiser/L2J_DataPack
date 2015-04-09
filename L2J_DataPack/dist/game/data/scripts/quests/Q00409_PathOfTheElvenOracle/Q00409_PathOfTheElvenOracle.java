@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,8 +18,6 @@
  */
 package quests.Q00409_PathOfTheElvenOracle;
 
-import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
@@ -130,12 +128,9 @@ public final class Q00409_PathOfTheElvenOracle extends Quest
 			case "replay_1":
 			{
 				qs.setMemoState(2);
-				final L2Attackable monster1 = (L2Attackable) addSpawn(lIZARDMAN_WARRIOR, npc, true, 0, false);
-				final L2Attackable monster2 = (L2Attackable) addSpawn(LIZARDMAN_SCOUT, npc, true, 0, false);
-				final L2Attackable monster3 = (L2Attackable) addSpawn(LIZARDMAN_SOLDIER, npc, true, 0, false);
-				attackPlayer(monster1, player);
-				attackPlayer(monster2, player);
-				attackPlayer(monster3, player);
+				addAttackPlayerDesire(addSpawn(lIZARDMAN_WARRIOR, npc, true, 0, false), player);
+				addAttackPlayerDesire(addSpawn(LIZARDMAN_SCOUT, npc, true, 0, false), player);
+				addAttackPlayerDesire(addSpawn(LIZARDMAN_SOLDIER, npc, true, 0, false), player);
 				break;
 			}
 			case "30428-02.html":
@@ -152,8 +147,7 @@ public final class Q00409_PathOfTheElvenOracle extends Quest
 				if (qs.isMemoState(2))
 				{
 					qs.setMemoState(3);
-					final L2Attackable monster = (L2Attackable) addSpawn(TAMIL, npc, true, 0, true);
-					attackPlayer(monster, player);
+					addAttackPlayerDesire(addSpawn(TAMIL, npc, true, 0, true), player);
 				}
 				break;
 			}
@@ -406,15 +400,5 @@ public final class Q00409_PathOfTheElvenOracle extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	private static void attackPlayer(L2Attackable npc, L2PcInstance player)
-	{
-		if ((npc != null) && (player != null))
-		{
-			npc.setIsRunning(true);
-			npc.addDamageHate(player, 0, 999);
-			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
-		}
 	}
 }

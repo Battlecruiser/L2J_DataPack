@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,7 +18,6 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.StatsSet;
@@ -98,16 +97,11 @@ public final class ThrowUp extends AbstractEffect
 		int y = info.getEffector().getY() - (int) (offset * sin);
 		int z = info.getEffected().getZ();
 		
-		if (Config.GEODATA > 0)
-		{
-			Location destiny = GeoData.getInstance().moveCheck(info.getEffected().getX(), info.getEffected().getY(), info.getEffected().getZ(), x, y, z, info.getEffected().getInstanceId());
-			x = destiny.getX();
-			y = destiny.getY();
-		}
+		final Location destination = GeoData.getInstance().moveCheck(info.getEffected().getX(), info.getEffected().getY(), info.getEffected().getZ(), x, y, z, info.getEffected().getInstanceId());
 		
-		info.getEffected().broadcastPacket(new FlyToLocation(info.getEffected(), x, y, z, FlyType.THROW_UP));
+		info.getEffected().broadcastPacket(new FlyToLocation(info.getEffected(), destination, FlyType.THROW_UP));
 		// TODO: Review.
-		info.getEffected().setXYZ(x, y, z);
+		info.getEffected().setXYZ(destination);
 		info.getEffected().broadcastPacket(new ValidateLocation(info.getEffected()));
 	}
 }

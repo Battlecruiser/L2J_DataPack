@@ -192,7 +192,7 @@ class Quest (JQuest) :
 
  def onTalk (self,npc,player):
     htmltext = Quest.getNoQuestMsg(player)
-    st = player.getQuestState(qn)
+    st = self.getQuestState(player, True)
     if not st : return htmltext
 
     npcId = npc.getId()
@@ -346,7 +346,7 @@ class Quest (JQuest) :
     return htmltext
 
  def onAttack (self, npc, player, damage, isPet, skill):
-     st = player.getQuestState(qn)
+     st = self.getQuestState(player, False)
      if not st : return
      if st.getState() != State.STARTED : return
 
@@ -374,7 +374,7 @@ class Quest (JQuest) :
      return
 
  def onKill(self,npc,player,isPet):
-     st = player.getQuestState(qn)
+     st = self.getQuestState(player, False)
      if not st : return
      if st.getState() != State.STARTED : return
 

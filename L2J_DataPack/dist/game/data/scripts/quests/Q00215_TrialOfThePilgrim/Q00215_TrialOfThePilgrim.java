@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -102,7 +102,7 @@ public final class Q00215_TrialOfThePilgrim extends Quest
 					{
 						giveItems(player, DIMENSIONAL_DIAMOND, 49);
 						player.getVariables().set("2ND_CLASS_DIAMOND_REWARD", 1);
-						htmltext = "30648-4a.htm";
+						htmltext = "30648-04a.htm";
 					}
 					else
 					{

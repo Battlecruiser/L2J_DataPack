@@ -326,11 +326,11 @@
 		<set name="reuse_delay" val="1500" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="82" />
-			<set order="0x08" stat="mAtk" val="26" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="82" />
+			<set stat="mAtk" val="26" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
 	<item id="8528" type="Weapon" name="For Monsters Only (Doom Hammer)">
@@ -352,11 +352,11 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="41" />
-			<set order="0x08" stat="mAtk" val="43" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="41" />
+			<set stat="mAtk" val="43" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="8529" type="Weapon" name="For Monsters Only (Knife)">
@@ -374,11 +374,11 @@
 		<set name="spiritshots" val="1" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="10" />
-			<set order="0x08" stat="mAtk" val="9" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="10" />
+			<set stat="mAtk" val="9" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="8530" type="Weapon" name="For Monsters Only (Squire's Sword)">
@@ -399,10 +399,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="6" />
-			<set order="0x08" stat="mAtk" val="5" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="6" />
+			<set stat="mAtk" val="5" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="8531" type="Weapon" name="For Monsters Only (Bone Staff)">
@@ -424,11 +424,11 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="39" />
-			<set order="0x08" stat="mAtk" val="35" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="39" />
+			<set stat="mAtk" val="35" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="8532" type="Weapon" name="For Monsters Only (Spinebone Sword)">
@@ -449,10 +449,10 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="51" />
-			<set order="0x08" stat="mAtk" val="32" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="51" />
+			<set stat="mAtk" val="32" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="8533" type="Weapon" name="For Monsters Only (Crimson Sword)">
@@ -473,10 +473,10 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="64" />
-			<set order="0x08" stat="mAtk" val="39" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="64" />
+			<set stat="mAtk" val="39" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="8534" type="EtcItem" name="Adventurer's Box: C-Grade Accessory (Low Grade)">
@@ -563,8 +563,8 @@
 			<player categoryType="BABY_PET_GROUP" />
 		</cond>
 		<for>
-			<add order="0x10" stat="mDef" val="25" />
-			<add order="0x10" stat="pDef" val="10" />
+			<add order="0" stat="mDef" val="25" />
+			<add order="0" stat="pDef" val="10" />
 		</for>
 	</item>
 	<item id="8542" type="EtcItem" name="Newbie Travel Token">
@@ -933,11 +933,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="23" />
-			<set order="0x08" stat="mAtk" val="24" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="23" />
+			<set stat="mAtk" val="24" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="8577" type="Weapon" name="Bone Club (Event)">
@@ -957,11 +957,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="24" />
-			<set order="0x08" stat="mAtk" val="17" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="24" />
+			<set stat="mAtk" val="17" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="8578" type="Weapon" name="Shining Knife (Event)">
@@ -981,11 +981,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="21" />
-			<set order="0x08" stat="mAtk" val="17" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="21" />
+			<set stat="mAtk" val="17" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="8579" type="Weapon" name="Cestus (Event)">
@@ -1005,11 +1005,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="29" />
-			<set order="0x08" stat="mAtk" val="17" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="29" />
+			<set stat="mAtk" val="17" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="8580" type="Weapon" name="Forest Bow (Event)">
@@ -1031,11 +1031,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="49" />
-			<set order="0x08" stat="mAtk" val="17" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="49" />
+			<set stat="mAtk" val="17" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
 	<item id="8581" type="Weapon" name="Long Sword (Event)">
@@ -1055,10 +1055,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="24" />
-			<set order="0x08" stat="mAtk" val="17" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="24" />
+			<set stat="mAtk" val="17" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="8582" type="Weapon" name="Mace of Prayer (Event)">
@@ -1080,11 +1080,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="41" />
-			<set order="0x08" stat="mAtk" val="43" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="41" />
+			<set stat="mAtk" val="43" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="8583" type="Weapon" name="Dark Elven Bow (Event)">
@@ -1107,11 +1107,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="105" />
-			<set order="0x08" stat="mAtk" val="32" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="105" />
+			<set stat="mAtk" val="32" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
 	<item id="8584" type="Weapon" name="Long Bow (Event)">
@@ -1134,11 +1134,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="114" />
-			<set order="0x08" stat="mAtk" val="35" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="227" />
+			<set stat="pAtk" val="114" />
+			<set stat="mAtk" val="35" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="227" />
 		</for>
 	</item>
 	<item id="8585" type="Weapon" name="Staff of Mana (Event)">
@@ -1160,11 +1160,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="50" />
-			<set order="0x08" stat="mAtk" val="47" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="50" />
+			<set stat="mAtk" val="47" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="8586" type="Weapon" name="Bastard Sword (Event)">
@@ -1185,10 +1185,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="51" />
-			<set order="0x08" stat="mAtk" val="32" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="51" />
+			<set stat="mAtk" val="32" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="8587" type="Weapon" name="Divine Tomb (Event)">
@@ -1210,10 +1210,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="41" />
-			<set order="0x08" stat="mAtk" val="43" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="41" />
+			<set stat="mAtk" val="43" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="8588" type="Weapon" name="Single-Edged Jamadhr (Event)">
@@ -1234,11 +1234,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="62" />
-			<set order="0x08" stat="mAtk" val="32" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="62" />
+			<set stat="mAtk" val="32" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="8589" type="Weapon" name="Tomahawk (Event)">
@@ -1259,11 +1259,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="51" />
-			<set order="0x08" stat="mAtk" val="32" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="51" />
+			<set stat="mAtk" val="32" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="8590" type="Weapon" name="Poniard Dagger (Event)">
@@ -1284,11 +1284,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="45" />
-			<set order="0x08" stat="mAtk" val="32" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="45" />
+			<set stat="mAtk" val="32" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="8591" type="Weapon" name="Pike (Event)">
@@ -1310,11 +1310,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3599-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="51" />
-			<set order="0x08" stat="mAtk" val="32" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="51" />
+			<set stat="mAtk" val="32" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="8592" type="EtcItem" name="Weapon Exchange Coupon - No Grade">

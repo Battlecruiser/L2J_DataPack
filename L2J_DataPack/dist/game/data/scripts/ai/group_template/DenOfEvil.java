@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -37,7 +37,7 @@ import com.l2jserver.gameserver.util.Util;
  * Dummy AI for spawns/respawns only for testing.
  * @author Gnacik
  */
-public class DenOfEvil extends AbstractNpcAI
+public final class DenOfEvil extends AbstractNpcAI
 {
 	// private static final int _buffer_id = 32656;
 	protected static final int[] EYE_IDS =

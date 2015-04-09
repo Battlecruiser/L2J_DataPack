@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,8 +20,8 @@ package handlers.effecthandlers;
 
 import java.util.logging.Level;
 
-import com.l2jserver.gameserver.datatables.NpcData;
-import com.l2jserver.gameserver.datatables.PetDataTable;
+import com.l2jserver.gameserver.data.xml.impl.NpcData;
+import com.l2jserver.gameserver.data.xml.impl.PetDataTable;
 import com.l2jserver.gameserver.model.L2PetData;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;

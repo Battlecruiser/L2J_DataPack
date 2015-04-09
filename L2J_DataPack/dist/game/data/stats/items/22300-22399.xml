@@ -29,8 +29,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="4320" />
 		<for>
-			<add order="0x10" stat="mDef" val="94" />
-			<add order="0x40" stat="maxMp" val="37" />
+			<add order="0" stat="mDef" val="94" />
+			<add stat="maxMp" val="37" />
 		</for>
 	</item>
 	<item id="22303" type="Armor" name="Antharas's Earring - 7-day limited period (event)">
@@ -45,8 +45,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="10080" />
 		<for>
-			<add order="0x10" stat="mDef" val="94" />
-			<add order="0x40" stat="maxMp" val="37" />
+			<add order="0" stat="mDef" val="94" />
+			<add stat="maxMp" val="37" />
 		</for>
 	</item>
 	<item id="22304" type="Armor" name="Baium's Ring - 3-day limited period (event)">
@@ -61,8 +61,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="4320" />
 		<for>
-			<add order="0x10" stat="mDef" val="48" />
-			<add order="0x40" stat="maxMp" val="21" />
+			<add order="0" stat="mDef" val="48" />
+			<add stat="maxMp" val="21" />
 		</for>
 	</item>
 	<item id="22305" type="Armor" name="Baium's Ring - 7-day limited period (event)">
@@ -75,8 +75,8 @@
 		<set name="weight" val="150" />
 		<set name="time" val="10080" />
 		<for>
-			<add order="0x10" stat="mDef" val="48" />
-			<add order="0x40" stat="maxMp" val="21" />
+			<add order="0" stat="mDef" val="48" />
+			<add stat="maxMp" val="21" />
 		</for>
 	</item>
 	<item id="22306" type="EtcItem" name="Scroll: Enchant Weapon (S-Grade) - Event">
@@ -131,7 +131,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<for>
-			<add order="0x10" stat="pDef" val="10" />
+			<add order="0" stat="pDef" val="10" />
 		</for>
 	</item>
 	<item id="22313" type="Armor" name="Top-Grade Magic Pouch Cloth Belt">
@@ -146,7 +146,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<for>
-			<add order="0x10" stat="pDef" val="10" />
+			<add order="0" stat="pDef" val="10" />
 		</for>
 	</item>
 	<item id="22314" type="EtcItem" name="Blessed Scroll: Enchant Weapon (S-Grade)">

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,8 +20,8 @@ package quests.Q00101_SwordOfSolidarity;
 
 import quests.Q00281_HeadForTheHills.Q00281_HeadForTheHills;
 
-import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.enums.QuestSound;
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
@@ -77,7 +77,7 @@ public class Q00101_SwordOfSolidarity extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		String htmltext = null;
 		if (st != null)
 		{
@@ -131,7 +131,7 @@ public class Q00101_SwordOfSolidarity extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState st = killer.getQuestState(getName());
+		final QuestState st = getQuestState(killer, false);
 		if ((st != null) && st.isCond(2) && (getRandom(5) == 0))
 		{
 			if (!st.hasQuestItems(BROKEN_BLADE_TOP))
@@ -165,7 +165,7 @@ public class Q00101_SwordOfSolidarity extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		if (st != null)
 		{

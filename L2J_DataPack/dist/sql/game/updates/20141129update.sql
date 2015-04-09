@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00216_TrialOfTheGuildsman' WHERE name='216_TrialOfGuildsman'; 

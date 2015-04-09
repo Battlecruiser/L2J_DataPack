@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -19,9 +19,11 @@
 package village_master.KamaelChange2;
 
 import quests.Q00064_CertifiedBerserker.Q00064_CertifiedBerserker;
+import quests.Q00065_CertifiedSoulBreaker.Q00065_CertifiedSoulBreaker;
+import quests.Q00066_CertifiedArbalester.Q00066_CertifiedArbalester;
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.datatables.CategoryData;
+import com.l2jserver.gameserver.data.xml.impl.CategoryData;
 import com.l2jserver.gameserver.enums.CategoryType;
 import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -182,7 +184,7 @@ public final class KamaelChange2 extends AbstractNpcAI
 					}
 					else if (classId == 128)
 					{
-						QuestState qs = player.getQuestState("65_CertifiedSoulBreaker");
+						QuestState qs = player.getQuestState(Q00065_CertifiedSoulBreaker.class.getSimpleName());
 						if (player.getLevel() < 40)
 						{
 							if ((qs != null) && qs.isCompleted())
@@ -225,7 +227,7 @@ public final class KamaelChange2 extends AbstractNpcAI
 				{
 					if (classId == 129)
 					{
-						QuestState qs = player.getQuestState("65_CertifiedSoulBreaker");
+						QuestState qs = player.getQuestState(Q00065_CertifiedSoulBreaker.class.getSimpleName());
 						if (player.getLevel() < 40)
 						{
 							if ((qs != null) && qs.isCompleted())
@@ -254,7 +256,7 @@ public final class KamaelChange2 extends AbstractNpcAI
 					}
 					else if (classId == 130)
 					{
-						QuestState qs = player.getQuestState("66_CertifiedArbalester");
+						QuestState qs = player.getQuestState(Q00066_CertifiedArbalester.class.getSimpleName());
 						if (player.getLevel() < 40)
 						{
 							if ((qs != null) && qs.isCompleted())

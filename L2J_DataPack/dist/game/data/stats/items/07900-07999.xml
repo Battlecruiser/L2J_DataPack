@@ -18,13 +18,13 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="213" />
-			<set order="0x08" stat="mAtk" val="91" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="213" />
+			<set stat="mAtk" val="91" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="7901" type="Weapon" name="Star Buster">
@@ -45,13 +45,13 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="236" />
-			<set order="0x08" stat="mAtk" val="99" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="236" />
+			<set stat="mAtk" val="99" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="7902" type="Weapon" name="Doom Crusher">
@@ -72,13 +72,13 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="282" />
-			<set order="0x08" stat="mAtk" val="114" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="282" />
+			<set stat="mAtk" val="114" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="7903" type="Weapon" name="Frintezza's Sword">
@@ -97,10 +97,10 @@
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="78" />
-			<set order="0x08" stat="mAtk" val="39" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="78" />
+			<set stat="mAtk" val="39" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="7904" type="EtcItem" name="Boat Ticket: Rune to Gludin">

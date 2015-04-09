@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,7 +18,7 @@
  */
 package handlers.itemhandlers;
 
-import com.l2jserver.gameserver.datatables.RecipeData;
+import com.l2jserver.gameserver.data.xml.impl.RecipeData;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.L2RecipeList;
 import com.l2jserver.gameserver.model.actor.L2Playable;

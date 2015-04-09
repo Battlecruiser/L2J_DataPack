@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,7 +18,7 @@
  */
 package instances.PailakaSongOfIceAndFire;
 
-import ai.npc.AbstractNpcAI;
+import instances.AbstractInstance;
 
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.Location;
@@ -28,14 +28,13 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
  * Pailaka Song of Ice and Fire Instance zone.
  * @author Gnacik, St3eT
  */
-public final class PailakaSongOfIceAndFire extends AbstractNpcAI
+public final class PailakaSongOfIceAndFire extends AbstractInstance
 {
 	protected class PSoIWorld extends InstanceWorld
 	{
@@ -59,9 +58,9 @@ public final class PailakaSongOfIceAndFire extends AbstractNpcAI
 	private static final int TEMPLATE_ID = 43;
 	private static final int ZONE = 20108;
 	
-	private PailakaSongOfIceAndFire()
+	public PailakaSongOfIceAndFire()
 	{
-		super(PailakaSongOfIceAndFire.class.getSimpleName(), "instances");
+		super(PailakaSongOfIceAndFire.class.getSimpleName());
 		addStartNpc(ADLER1);
 		addTalkId(ADLER1);
 		addAttackId(BOTTLE, BRAZIER);
@@ -71,27 +70,14 @@ public final class PailakaSongOfIceAndFire extends AbstractNpcAI
 		addKillId(BLOOM);
 	}
 	
-	private void enterInstance(L2PcInstance player, String template)
+	@Override
+	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
 	{
-		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-		
-		if (world != null)
+		if (firstEntrance)
 		{
-			if (world instanceof PSoIWorld)
-			{
-				teleportPlayer(player, TELEPORT, world.getInstanceId());
-				return;
-			}
-			player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
-			return;
+			world.addAllowed(player.getObjectId());
 		}
-		world = new PSoIWorld();
-		world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
-		world.setTemplateId(TEMPLATE_ID);
-		InstanceManager.getInstance().addWorld(world);
-		world.addAllowed(player.getObjectId());
 		teleportPlayer(player, TELEPORT, world.getInstanceId());
-		_log.info("Pailaka Song of Ice and Fire" + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
 	}
 	
 	@Override
@@ -101,7 +87,7 @@ public final class PailakaSongOfIceAndFire extends AbstractNpcAI
 		{
 			case "enter":
 			{
-				enterInstance(player, "PailakaSongOfIceAndFire.xml");
+				enterInstance(player, new PSoIWorld(), "PailakaSongOfIceAndFire.xml", TEMPLATE_ID);
 				break;
 			}
 			case "GARGOS_LAUGH":
@@ -217,10 +203,5 @@ public final class PailakaSongOfIceAndFire extends AbstractNpcAI
 		npc.setInvisible(true);
 		startQuestTimer("BLOOM_TIMER", 1000, npc, null);
 		return super.onSpawn(npc);
-	}
-	
-	public static void main(String[] args)
-	{
-		new PailakaSongOfIceAndFire();
 	}
 }

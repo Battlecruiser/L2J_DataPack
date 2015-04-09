@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -43,9 +43,23 @@ public final class MagicalAttackMp extends AbstractEffect
 	@Override
 	public boolean calcSuccess(BuffInfo info)
 	{
-		if (info.getEffected().isInvul() || !Formulas.calcMagicAffected(info.getEffector(), info.getEffected(), info.getSkill()))
+		if (info.getEffected().isInvul())
 		{
-			info.getEffector().sendPacket(SystemMessageId.MISSED_TARGET);
+			return false;
+		}
+		if (!Formulas.calcMagicAffected(info.getEffector(), info.getEffected(), info.getSkill()))
+		{
+			if (info.getEffector().isPlayer())
+			{
+				info.getEffector().sendPacket(SystemMessageId.ATTACK_FAILED);
+			}
+			if (info.getEffected().isPlayer())
+			{
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_C2_DRAIN2);
+				sm.addCharName(info.getEffected());
+				sm.addCharName(info.getEffector());
+				info.getEffected().sendPacket(sm);
+			}
 			return false;
 		}
 		return true;

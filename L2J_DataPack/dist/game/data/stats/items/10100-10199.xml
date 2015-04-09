@@ -159,9 +159,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="305" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="305" />
 		</for>
 	</item>
 	<item id="10118" type="EtcItem" name="Chaotic Dynasty Sigil">
@@ -175,9 +175,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="321" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="321" />
 		</for>
 	</item>
 	<item id="10119" type="Armor" name="Dynasty Sigil">
@@ -197,9 +197,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<add order="0x10" stat="pDef" val="15" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<sub stat="rEvas" val="8" />
+			<add order="0" stat="pDef" val="15" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="10120" type="Armor" name="Sealed Dynasty Sigil">
@@ -218,9 +218,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<add order="0x10" stat="pDef" val="15" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<sub stat="rEvas" val="8" />
+			<add order="0" stat="pDef" val="15" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="10121" type="Armor" name="Sealed Arcana Sigil">
@@ -239,9 +239,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<add order="0x10" stat="pDef" val="13" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<sub stat="rEvas" val="8" />
+			<add order="0" stat="pDef" val="13" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="10122" type="Armor" name="Red Crescent Earring">
@@ -258,7 +258,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<add order="0x10" stat="mDef" val="24" />
+			<add order="0" stat="mDef" val="24" />
 		</for>
 	</item>
 	<item id="10123" type="Armor" name="Necklace of Devotion">
@@ -275,7 +275,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<add order="0x10" stat="mDef" val="32" />
+			<add order="0" stat="mDef" val="32" />
 		</for>
 	</item>
 	<item id="10124" type="Armor" name="Ring of Devotion">
@@ -292,7 +292,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<add order="0x10" stat="mDef" val="16" />
+			<add order="0" stat="mDef" val="16" />
 		</for>
 	</item>
 	<item id="10125" type="Weapon" name="Shadow Item - War Axe">
@@ -314,13 +314,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="300" />
 		<for>
-			<set order="0x08" stat="pAtk" val="139" />
-			<set order="0x08" stat="mAtk" val="76" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="139" />
+			<set stat="mAtk" val="76" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="10126" type="Armor" name="Dynasty Leather Armor - Force Master">
@@ -343,8 +343,8 @@
 			</and>
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="170" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="170" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="10127" type="Armor" name="Dynasty Leather Armor - Weapon Master">
@@ -364,8 +364,8 @@
 			<player categoryType="WEAPON_MASTER" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="170" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="170" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="10128" type="Weapon" name="For Monster only (Crossbow)">
@@ -383,10 +383,10 @@
 		<set name="spiritshots" val="2" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="31" />
-			<set order="0x08" stat="mAtk" val="21" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="31" />
+			<set stat="mAtk" val="21" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="10129" type="EtcItem" name="Scroll of Escape: Fortress">
@@ -539,8 +539,8 @@
 		<set name="duration" val="250" />
 		<set name="useSkillDisTime" val="2" />
 		<for>
-			<add order="0x10" stat="mDef" val="24" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="24" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="10141" type="Armor" name="Grey Talisman - Yeti Transform">
@@ -940,10 +940,10 @@
 		<set name="unequip_skill" val="839-1" />
 		<set name="item_skill" val="3418-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="1" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="1" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="10168" type="Armor" name="Dynasty Leather Armor - Enchanter">
@@ -963,8 +963,8 @@
 			<player categoryType="BUFF_MASTER" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="170" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="170" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="10169" type="Armor" name="Enchanter Circlet (Kamael only)">
@@ -993,10 +993,10 @@
 		<set name="price" val="12185000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="mDef" val="71" />
-			<add order="0x40" stat="maxMp" val="31" />
-			<add order="0x40" stat="darkRes" val="30" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="71" />
+			<add stat="maxMp" val="31" />
+			<add stat="darkRes" val="30" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="10171" type="EtcItem" name="Seed: Dark Coda">

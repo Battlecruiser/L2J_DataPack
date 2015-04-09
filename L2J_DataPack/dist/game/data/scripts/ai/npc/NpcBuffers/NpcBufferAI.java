@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J Server
+ * Copyright (C) 2004-2015 L2J Server
  * 
  * This file is part of L2J Server.
  * 
@@ -19,7 +19,6 @@
 package ai.npc.NpcBuffers;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -133,32 +132,27 @@ public class NpcBufferAI implements Runnable
 				return true;
 			}
 			
-			if (player.isInParty() && targetPlayer.isInParty())
-			{
-				final L2Party party = player.getParty();
-				
-				if (party.containsPlayer(targetPlayer))
-				{
-					return true;
-				}
-				
-				if (party.isInCommandChannel() && party.getCommandChannel().containsPlayer(targetPlayer))
-				{
-					return true;
-				}
-			}
-			
-			if ((player.getClanId() > 0) && (player.getClanId() == targetPlayer.getClanId()))
+			if (player.isInPartyWith(targetPlayer))
 			{
 				return true;
 			}
 			
-			if ((player.getAllyId() > 0) && (player.getAllyId() == targetPlayer.getAllyId()))
+			if (player.isInCommandChannelWith(targetPlayer))
 			{
 				return true;
 			}
 			
-			if ((player.getSiegeState() > 0) && player.isInsideZone(ZoneId.SIEGE) && (player.getSiegeState() == targetPlayer.getSiegeState()) && (player.getSiegeSide() == targetPlayer.getSiegeSide()))
+			if (player.isInClanWith(targetPlayer))
+			{
+				return true;
+			}
+			
+			if (player.isInAllyWith(targetPlayer))
+			{
+				return true;
+			}
+			
+			if (player.isOnSameSiegeSideWith(targetPlayer))
 			{
 				return true;
 			}
@@ -205,7 +199,7 @@ public class NpcBufferAI implements Runnable
 					return true;
 				}
 				
-				if ((player.getClan() != null) && (targetPlayer.getClan() != null) && player.getClan().isAtWarWith(targetPlayer.getClan()))
+				if (player.isAtWarWith(targetPlayer))
 				{
 					return true;
 				}

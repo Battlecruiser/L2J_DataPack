@@ -8,7 +8,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="runSpd" val="5" />
+				<add stat="runSpd" val="5" />
 			</effect>
 		</for>
 	</skill>
@@ -20,7 +20,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="pAtkSpd" val="10" />
+				<add stat="pAtkSpd" val="10" />
 			</effect>
 		</for>
 	</skill>
@@ -32,7 +32,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="mAtkSpd" val="8" />
+				<add stat="mAtkSpd" val="8" />
 			</effect>
 		</for>
 	</skill>
@@ -116,7 +116,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<sub order="0x40" stat="cancelVuln" val="100" />
+				<sub stat="cancelVuln" val="100" />
 			</effect>
 		</for>
 	</skill>
@@ -128,7 +128,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="regHp" val="1.03" />
+				<mul stat="regHp" val="1.03" />
 			</effect>
 		</for>
 	</skill>
@@ -140,7 +140,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="regCp" val="1.03" />
+				<mul stat="regCp" val="1.03" />
 			</effect>
 		</for>
 	</skill>
@@ -152,7 +152,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="healEffect" val="40" />
+				<add stat="healEffect" val="40" />
 			</effect>
 		</for>
 	</skill>
@@ -164,9 +164,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="pAtkSpd" val="5" />
-				<add order="0x40" stat="mAtkSpd" val="4" />
-				<add order="0x40" stat="runSpd" val="3" />
+				<add stat="pAtkSpd" val="5" />
+				<add stat="mAtkSpd" val="4" />
+				<add stat="runSpd" val="3" />
 			</effect>
 		</for>
 	</skill>
@@ -178,7 +178,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="weightLimit" val="1.1" />
+				<mul stat="weightLimit" val="1.1" />
 			</effect>
 		</for>
 	</skill>
@@ -197,7 +197,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="defCritRate" val="0.97" />
+				<mul stat="defCritRate" val="0.97" />
 			</effect>
 		</for>
 	</skill>
@@ -209,7 +209,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<sub order="0x40" stat="defCritDamageAdd" val="100" />
+				<sub stat="defCritDamageAdd" val="100" />
 			</effect>
 		</for>
 	</skill>
@@ -223,6 +223,7 @@
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="CA1" />
 		<set name="reuseDelay" val="5000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="FLAGPOLE" />
 		<cond>
 			<player canTakeFort="true" />
@@ -252,7 +253,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="regMp" val="1.03" />
+				<mul stat="regMp" val="1.03" />
 			</effect>
 		</for>
 	</skill>
@@ -270,12 +271,13 @@
 		<set name="mpInitialConsume" val="4" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="rEvas" val="2" />
-				<mul order="0x30" stat="defCritRate" val="0.95" />
+				<add stat="rEvas" val="2" />
+				<mul stat="defCritRate" val="0.95" />
 			</effect>
 		</for>
 	</skill>
@@ -363,6 +365,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="11500" />
 		<set name="reuseDelay" val="60000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -382,6 +385,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="11500" />
 		<set name="reuseDelay" val="60000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -403,6 +407,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="60000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -420,6 +425,7 @@
 		<set name="effectRange" val="200" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill3631" />
+		<set name="rideState" val="NONE" />
 		<!-- <set name="isDebuff" val="true" /> -->
 		<!-- <set name="lvlBonusRate" val="1" /> -->
 		<set name="magicLvl" val="78" />
@@ -446,6 +452,7 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="300000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
@@ -472,6 +479,7 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
@@ -498,6 +506,7 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
@@ -523,6 +532,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="56" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond>
 			<player canTransform="true" />
@@ -544,6 +554,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="56" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond>
 			<player canTransform="true" />
@@ -569,6 +580,7 @@
 		<set name="magicLvl" val="56" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond>
 			<player canTransform="true" />
@@ -637,10 +649,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pDef" val="1.054" /> <!-- P. Def. +5.4% -->
-				<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 effect -->
-				<mul order="0x30" stat="healEffect" val="1.03" /> <!-- Received Increased Heal +3% -->
-				<add order="0x40" stat="darkRes" val="8" /> <!-- Darkness resistance is increased +8 -->
+				<mul stat="pDef" val="1.054" /> <!-- P. Def. +5.4% -->
+				<add stat="maxHp" val="492" /> <!-- Max HP +492 effect -->
+				<mul stat="healEffect" val="1.03" /> <!-- Received Increased Heal +3% -->
+				<add stat="darkRes" val="8" /> <!-- Darkness resistance is increased +8 -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="13" />
@@ -656,11 +668,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.054" /> <!-- P. Atk +5.4% -->
-				<add order="0x40" stat="maxHp" val="492" /> <!-- MaxHP +492 -->
-				<add order="0x40" stat="rCrit" val="24.6" /> <!-- Critical Damage Chance +24.6 -->
-				<add order="0x40" stat="cAtkAdd" val="234" /> <!-- Critical Damage +234 -->
-				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<mul stat="pAtk" val="1.054" /> <!-- P. Atk +5.4% -->
+				<add stat="maxHp" val="492" /> <!-- MaxHP +492 -->
+				<add stat="rCrit" val="24.6" /> <!-- Critical Damage Chance +24.6 -->
+				<add stat="cAtkAdd" val="234" /> <!-- Critical Damage +234 -->
+				<add stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -673,10 +685,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.054" /> <!-- P. Atk. +5.4% -->
-				<add order="0x40" stat="maxHp" val="492" /> <!-- HP +492 -->
-				<add order="0x40" stat="darkRes" val="8" /> <!-- Resistance to Darkness attacks +8 -->
-				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" /> <!-- MP consumption of the active skill is decreased -5% -->
+				<mul stat="pAtk" val="1.054" /> <!-- P. Atk. +5.4% -->
+				<add stat="maxHp" val="492" /> <!-- HP +492 -->
+				<add stat="darkRes" val="8" /> <!-- Resistance to Darkness attacks +8 -->
+				<mul stat="PhysicalMpConsumeRate" val="0.95" /> <!-- MP consumption of the active skill is decreased -5% -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -689,10 +701,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pDef" val="1.054" /> <!-- P. Def. +5.4% -->
-				<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 effect -->
-				<mul order="0x30" stat="DanceMpConsumeRate" val="0.95" /> <!-- MP consumption is decreased when song and dance skills are used -5% -->
-				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
+				<mul stat="pDef" val="1.054" /> <!-- P. Def. +5.4% -->
+				<add stat="maxHp" val="492" /> <!-- Max HP +492 effect -->
+				<mul stat="DanceMpConsumeRate" val="0.95" /> <!-- MP consumption is decreased when song and dance skills are used -5% -->
+				<add stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -705,10 +717,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="rEvas" val="4.3" /> <!-- Evasion +4.3 -->
-				<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 Effect -->
-				<mul order="0x30" stat="pAtkSpd" val="1.0266" /> <!-- Atk. Spd. are increased +2.66% -->
-				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
+				<add stat="rEvas" val="4.3" /> <!-- Evasion +4.3 -->
+				<add stat="maxHp" val="492" /> <!-- Max HP +492 Effect -->
+				<mul stat="pAtkSpd" val="1.0266" /> <!-- Atk. Spd. are increased +2.66% -->
+				<add stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param HOLD="13" />
@@ -724,11 +736,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="accCombat" val="4.3" /> <!-- Accuracy +4.3 -->
-				<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 Effect -->
-				<mul order="0x30" stat="pAtkSpd" val="1.0266" /> <!-- Atk. Spd. are increased +2.66% -->
-				<add order="0x40" stat="regMp" val="1.72" /> <!-- MP recovery are increased +1.72 -->
-				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
+				<add stat="accCombat" val="4.3" /> <!-- Accuracy +4.3 -->
+				<add stat="maxMp" val="321" /> <!-- Max MP +321 Effect -->
+				<mul stat="pAtkSpd" val="1.0266" /> <!-- Atk. Spd. are increased +2.66% -->
+				<add stat="regMp" val="1.72" /> <!-- MP recovery are increased +1.72 -->
+				<add stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -741,11 +753,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
-				<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
-				<add order="0x40" stat="healEffect" val="20" /> <!-- Increase amount of heal +20 -->
-				<sub order="0x40" stat="cancel" val="15" /> <!-- Decrease magic cancel rate -15% -->
-				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<mul stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+				<add stat="maxMp" val="321" /> <!-- Max MP +321 -->
+				<add stat="healEffect" val="20" /> <!-- Increase amount of heal +20 -->
+				<sub stat="cancel" val="15" /> <!-- Decrease magic cancel rate -15% -->
+				<add stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -758,11 +770,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
-				<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
-				<sub order="0x40" stat="cancel" val="15" /> <!-- Decrease magic cancel rate -15% -->
-				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" /> <!-- Decrease MP consumption -5% -->
-				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<mul stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+				<add stat="maxMp" val="321" /> <!-- Max MP +321 -->
+				<sub stat="cancel" val="15" /> <!-- Decrease magic cancel rate -15% -->
+				<mul stat="MagicalMpConsumeRate" val="0.95" /> <!-- Decrease MP consumption -5% -->
+				<add stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -775,11 +787,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
-				<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
-				<mul order="0x30" stat="pDef" val="1.026" /> <!-- P. Def. +2.6% -->
-				<mul order="0x30" stat="pAtk" val="1.026" /> <!-- Increase P. Atk. +2.6% -->
-				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<mul stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+				<add stat="maxMp" val="321" /> <!-- Max MP +321 -->
+				<mul stat="pDef" val="1.026" /> <!-- P. Def. +2.6% -->
+				<mul stat="pAtk" val="1.026" /> <!-- Increase P. Atk. +2.6% -->
+				<add stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -792,10 +804,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
-				<mul order="0x30" stat="mAtk" val="1.054" /> <!-- Increase M. Atk +5.4% -->
-				<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
-				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<mul stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+				<mul stat="mAtk" val="1.054" /> <!-- Increase M. Atk +5.4% -->
+				<add stat="maxMp" val="321" /> <!-- Max MP +321 -->
+				<add stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -809,11 +821,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="runSpd" val="0.2" />
-				<mul order="0x30" stat="pAtkSpd" val="0.2" />
-				<mul order="0x30" stat="pAtk" val="0.2" />
-				<mul order="0x30" stat="mAtkSpd" val="0.2" />
-				<mul order="0x30" stat="mAtk" val="0.2" />
+				<mul stat="runSpd" val="0.2" />
+				<mul stat="pAtkSpd" val="0.2" />
+				<mul stat="pAtk" val="0.2" />
+				<mul stat="mAtkSpd" val="0.2" />
+				<mul stat="mAtk" val="0.2" />
 			</effect>
 		</for>
 	</skill>
@@ -828,6 +840,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="56" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond>
 			<player canTransform="true" />
@@ -845,8 +858,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.88" />
-				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.88" />
+				<mul stat="PhysicalMpConsumeRate" val="0.88" />
+				<mul stat="MagicalMpConsumeRate" val="0.88" />
 			</effect>
 		</for>
 	</skill>
@@ -857,6 +870,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="65" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">

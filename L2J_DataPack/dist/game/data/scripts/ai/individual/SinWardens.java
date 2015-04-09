@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -19,8 +19,8 @@
 package ai.individual;
 
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
-import javolution.util.FastMap;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -54,7 +54,7 @@ public final class SinWardens extends AbstractNpcAI
 		22438
 	};
 	
-	private final Map<Integer, Integer> killedMinionsCount = new FastMap<>();
+	private final Map<Integer, Integer> killedMinionsCount = new ConcurrentHashMap<>();
 	
 	private SinWardens()
 	{
@@ -67,7 +67,7 @@ public final class SinWardens extends AbstractNpcAI
 	{
 		if (npc.isMinion())
 		{
-			L2MonsterInstance master = ((L2MonsterInstance) npc).getLeader();
+			final L2MonsterInstance master = ((L2MonsterInstance) npc).getLeader();
 			if ((master != null) && !master.isDead())
 			{
 				int killedCount = killedMinionsCount.containsKey(master.getObjectId()) ? killedMinionsCount.get(master.getObjectId()) : 0;

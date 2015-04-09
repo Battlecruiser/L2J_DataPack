@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,8 +21,6 @@ package ai.individual;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jserver.gameserver.model.holders.MinionHolder;
 
 /**
  * Grove Robber's AI.<br>
@@ -46,23 +44,8 @@ public final class GraveRobbers extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		if (getRandom(2) == 0)
-		{
-			spawnMinions(npc, "Privates1");
-		}
-		else
-		{
-			spawnMinions(npc, "Privates2");
-		}
+		spawnMinions(npc, "Privates" + getRandom(1, 2));
 		return super.onSpawn(npc);
-	}
-	
-	private void spawnMinions(final L2Npc npc, final String spawnName)
-	{
-		for (MinionHolder is : npc.getTemplate().getParameters().getMinionList(spawnName))
-		{
-			addMinion((L2MonsterInstance) npc, is.getId());
-		}
 	}
 	
 	public static void main(String[] args)

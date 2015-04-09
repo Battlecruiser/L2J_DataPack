@@ -4,6 +4,11 @@
 	<allowSummon val="false" />
 	<emptyDestroyTime val="600" />
 	<spawnPoint spawnX="115717" spawnY="-125734" spawnZ="-3392" />
+	<reenter additionStyle="ON_INSTANCE_FINISH" >
+		<reset day="Wednesday" hour="6" minute="30" />
+		<reset day="Saturday" hour="6" minute="30" />
+	</reenter>
+	<removeBuffs type="ALL" />
 	<doorlist>
 		<door doorId="23140101" />
 	</doorlist>

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.SkillTreesData;
+import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -247,7 +247,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		}
 		else
 		{
-			effects.addAll(target.getEffectList().getPassives().values());
+			effects.addAll(target.getEffectList().getPassives());
 		}
 		
 		if ((page > ((effects.size() / PAGE_LIMIT) + 1)) || (page < 1))

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -74,7 +74,7 @@ public final class Q00235_MimirsElixir extends Quest
 	@Override
 	public boolean checkPartyMember(L2PcInstance member, L2Npc npc)
 	{
-		final QuestState st = member.getQuestState(getName());
+		final QuestState st = getQuestState(member, false);
 		return ((st != null) && (st.isMemoState(3) || st.isMemoState(6)));
 	}
 	

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,10 +18,10 @@
  */
 package instances.ElcadiasTent;
 
+import instances.AbstractInstance;
 import quests.Q10292_SevenSignsGirlOfDoubt.Q10292_SevenSignsGirlOfDoubt;
 import quests.Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom;
 import quests.Q10294_SevenSignsToTheMonasteryOfSilence.Q10294_SevenSignsToTheMonasteryOfSilence;
-import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.Location;
@@ -29,30 +29,30 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
  * Elcadia's Tent instance zone.
  * @author Adry_85
  */
-public final class ElcadiasTent extends AbstractNpcAI
+public final class ElcadiasTent extends AbstractInstance
 {
 	protected class ETWorld extends InstanceWorld
 	{
 		
 	}
 	
-	private static final int TEMPLATE_ID = 158;
 	// NPCs
 	private static final int ELCADIA = 32784;
 	private static final int GRUFF_LOOKING_MAN = 32862;
 	// Locations
 	private static final Location START_LOC = new Location(89706, -238074, -9632, 0, 0);
 	private static final Location EXIT_LOC = new Location(43316, -87986, -2832, 0, 0);
+	// Misc
+	private static final int TEMPLATE_ID = 158;
 	
-	private ElcadiasTent()
+	public ElcadiasTent()
 	{
-		super(ElcadiasTent.class.getSimpleName(), "instances");
+		super(ElcadiasTent.class.getSimpleName());
 		addFirstTalkId(GRUFF_LOOKING_MAN, ELCADIA);
 		addStartNpc(GRUFF_LOOKING_MAN, ELCADIA);
 		addTalkId(GRUFF_LOOKING_MAN, ELCADIA);
@@ -71,7 +71,7 @@ public final class ElcadiasTent extends AbstractNpcAI
 				|| ((ForbiddenBook != null) && ForbiddenBook.isStarted()) //
 				|| ((ForbiddenBook != null) && ForbiddenBook.isCompleted() && (Monastery == null)))
 			{
-				enterInstance(talker, "ElcadiasTent.xml", START_LOC);
+				enterInstance(talker, new ETWorld(), "ElcadiasTent.xml", TEMPLATE_ID);
 			}
 			else
 			{
@@ -88,37 +88,13 @@ public final class ElcadiasTent extends AbstractNpcAI
 		return super.onTalk(npc, talker);
 	}
 	
-	private void enterInstance(L2PcInstance player, String template, Location loc)
+	@Override
+	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
 	{
-		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-		if (world != null)
+		if (firstEntrance)
 		{
-			if (!(world instanceof ETWorld))
-			{
-				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
-			}
-			else
-			{
-				teleportPlayer(player, loc, world.getInstanceId(), false);
-			}
-		}
-		else
-		{
-			// New instance.
-			world = new ETWorld();
-			world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
-			world.setTemplateId(TEMPLATE_ID);
-			world.setStatus(0);
-			InstanceManager.getInstance().addWorld(world);
-			_log.info("Elcadia's Tent started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
-			// Teleport players.
-			teleportPlayer(player, loc, world.getInstanceId(), false);
 			world.addAllowed(player.getObjectId());
 		}
-	}
-	
-	public static void main(String[] args)
-	{
-		new ElcadiasTent();
+		teleportPlayer(player, START_LOC, world.getInstanceId(), false);
 	}
 }

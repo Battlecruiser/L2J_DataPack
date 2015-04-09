@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -17,6 +17,8 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package quests.Q00021_HiddenTruth;
+
+import quests.Q00022_TragedyInVonHellmannForest.Q00022_TragedyInVonHellmannForest;
 
 import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.instancemanager.WalkingManager;
@@ -75,7 +77,7 @@ public class Q00021_HiddenTruth extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		String htmltext = null;
 		if (st != null)
 		{
@@ -216,7 +218,7 @@ public class Q00021_HiddenTruth extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		if (st != null)
 		{
@@ -420,7 +422,7 @@ public class Q00021_HiddenTruth extends Quest
 					}
 					else if (st.isCompleted())
 					{
-						st = player.getQuestState("22_TragedyInVonHellmanForest");
+						st = player.getQuestState(Q00022_TragedyInVonHellmannForest.class.getSimpleName());
 						if (st == null)
 						{
 							htmltext = "31328-06.html";

@@ -18,12 +18,12 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="156" />
-			<set order="0x08" stat="mAtk" val="83" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="156" />
+			<set stat="mAtk" val="83" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="5801" type="Weapon" name="For NPC (Dusk)">
@@ -44,12 +44,12 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="156" />
-			<set order="0x08" stat="mAtk" val="83" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="156" />
+			<set stat="mAtk" val="83" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="5802" type="Weapon" name="For NPC (Dawn)">
@@ -70,12 +70,12 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="156" />
-			<set order="0x08" stat="mAtk" val="83" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="156" />
+			<set stat="mAtk" val="83" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="5803" type="EtcItem" name="Lucky Charm (D-Grade)">
@@ -244,11 +244,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="item_skill" val="3599-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="1" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="1" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="5818" type="EtcItem" name="Alternative Dark Coda">

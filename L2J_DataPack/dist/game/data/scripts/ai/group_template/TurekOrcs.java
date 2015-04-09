@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -103,7 +103,7 @@ public final class TurekOrcs extends AbstractNpcAI
 			((L2Attackable) receiver).addDamageHate(reference.getActingPlayer(), 0, 99999);
 			receiver.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, reference.getActingPlayer());
 		}
-		return null;
+		return super.onEventReceived(eventName, sender, receiver, reference);
 	}
 	
 	@Override

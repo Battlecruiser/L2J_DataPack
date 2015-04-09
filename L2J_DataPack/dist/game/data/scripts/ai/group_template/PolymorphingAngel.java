@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,9 +18,9 @@
  */
 package ai.group_template;
 
+import java.util.HashMap;
 import java.util.Map;
 
-import javolution.util.FastMap;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.actor.L2Attackable;
@@ -30,9 +30,9 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 /**
  * Angel spawns...when one of the angels in the keys dies, the other angel will spawn.
  */
-public class PolymorphingAngel extends AbstractNpcAI
+public final class PolymorphingAngel extends AbstractNpcAI
 {
-	private static final Map<Integer, Integer> ANGELSPAWNS = new FastMap<>();
+	private static final Map<Integer, Integer> ANGELSPAWNS = new HashMap<>();
 	static
 	{
 		ANGELSPAWNS.put(20830, 20859);
@@ -51,7 +51,7 @@ public class PolymorphingAngel extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		L2Attackable newNpc = (L2Attackable) addSpawn(ANGELSPAWNS.get(npc.getId()), npc);
+		final L2Attackable newNpc = (L2Attackable) addSpawn(ANGELSPAWNS.get(npc.getId()), npc);
 		newNpc.setRunning();
 		return super.onKill(npc, killer, isSummon);
 	}

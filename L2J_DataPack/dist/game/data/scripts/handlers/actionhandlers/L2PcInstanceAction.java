@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,7 +18,6 @@
  */
 package handlers.actionhandlers;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.enums.InstanceType;
@@ -101,15 +100,7 @@ public class L2PcInstanceAction implements IActionHandler
 					}
 					else
 					{
-						if (Config.GEODATA > 0)
-						{
-							if (GeoData.getInstance().canSeeTarget(activeChar, target))
-							{
-								activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
-								activeChar.onActionRequest();
-							}
-						}
-						else
+						if (GeoData.getInstance().canSeeTarget(activeChar, target))
 						{
 							activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 							activeChar.onActionRequest();
@@ -120,14 +111,7 @@ public class L2PcInstanceAction implements IActionHandler
 				{
 					// This Action Failed packet avoids activeChar getting stuck when clicking three or more times
 					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-					if (Config.GEODATA > 0)
-					{
-						if (GeoData.getInstance().canSeeTarget(activeChar, target))
-						{
-							activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, target);
-						}
-					}
-					else
+					if (GeoData.getInstance().canSeeTarget(activeChar, target))
 					{
 						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, target);
 					}

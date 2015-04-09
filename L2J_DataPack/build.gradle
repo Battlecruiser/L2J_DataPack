@@ -1,0 +1,9 @@
+defaultTasks('zip')
+
+task zip(type: Zip) {
+	baseName = 'build/L2J_DataPack'
+	from('dist')
+}
+task wrapper(type: Wrapper) {
+	gradleVersion = '2.2.1'
+}

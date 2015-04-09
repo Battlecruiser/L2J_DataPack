@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -209,7 +209,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 		}
 		for (L2PcInstance partyMember : party.getMembers())
 		{
-			QuestState st = partyMember.getQuestState(getName());
+			final QuestState st = getQuestState(partyMember, false);
 			if ((st == null) || (st.getInt("cond") < 1))
 			{
 				return getHtm(player.getHtmlPrefix(), "FortressWarden-05.htm").replace("%player%", partyMember.getName());
@@ -271,7 +271,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 		{
 			if (!(world instanceof FAUWorld))
 			{
-				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
+				player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
 				return "";
 			}
 			teleportPlayer(player, coords, world.getInstanceId());
@@ -312,10 +312,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 			{
 				teleportPlayer(partyMember, coords, instanceId);
 				world.addAllowed(partyMember.getObjectId());
-				if (partyMember.getQuestState(getName()) == null)
-				{
-					newQuestState(partyMember);
-				}
+				getQuestState(partyMember, true);
 			}
 		}
 		return getHtm(player.getHtmlPrefix(), "FortressWarden-08.htm").replace("%clan%", player.getClan().getName());
@@ -333,11 +330,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 			tele[2] = -6580;
 			return enterInstance(player, "fortdungeon.xml", tele, _fortDungeons.get(npc.getId()), checkFortCondition(player, npc, true));
 		}
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			st = newQuestState(player);
-		}
+		QuestState st = getQuestState(player, true);
 		
 		if (event.equalsIgnoreCase("FortressWarden-10.htm"))
 		{
@@ -417,7 +410,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = Quest.getNoQuestMsg(player);
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, true);
 		String ret = checkFortCondition(player, npc, false);
 		if (ret != null)
 		{
@@ -467,7 +460,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 	
 	private void rewardPlayer(L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		if (st.isCond(1))
 		{
 			st.giveItems(DL_MARK, 140);

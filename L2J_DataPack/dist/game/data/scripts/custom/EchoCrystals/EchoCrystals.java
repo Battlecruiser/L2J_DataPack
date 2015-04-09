@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,9 +18,8 @@
  */
 package custom.EchoCrystals;
 
+import java.util.HashMap;
 import java.util.Map;
-
-import javolution.util.FastMap;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -29,8 +28,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Echo Crystals AI.<br>
- * Original Jython script by DrLecter, formerly based on Elektra's script.
+ * Echo Crystals AI.
  * @author Plim
  */
 public final class EchoCrystals extends Quest
@@ -44,7 +42,7 @@ public final class EchoCrystals extends Quest
 	private static final int ADENA = 57;
 	private static final int COST = 200;
 	
-	private static final Map<Integer, ScoreData> SCORES = new FastMap<>();
+	private static final Map<Integer, ScoreData> SCORES = new HashMap<>();
 	
 	private class ScoreData
 	{
@@ -118,18 +116,18 @@ public final class EchoCrystals extends Quest
 				String noadena = SCORES.get(score).getNoAdenaMsg();
 				String noscore = SCORES.get(score).getNoScoreMsg();
 				
-				if (!st.hasQuestItems(score))
+				if (!hasQuestItems(player, score))
 				{
 					htmltext = npc.getId() + "-" + noscore + ".htm";
 				}
-				else if (st.getQuestItemsCount(ADENA) < COST)
+				else if (getQuestItemsCount(player, ADENA) < COST)
 				{
 					htmltext = npc.getId() + "-" + noadena + ".htm";
 				}
 				else
 				{
-					st.takeItems(ADENA, COST);
-					st.giveItems(crystal, 1);
+					takeItems(player, ADENA, COST);
+					giveItems(player, crystal, 1);
 					htmltext = npc.getId() + "-" + ok + ".htm";
 				}
 			}

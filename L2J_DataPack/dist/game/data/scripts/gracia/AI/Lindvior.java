@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -86,9 +86,9 @@ public class Lindvior extends AbstractNpcAI
 				}
 				break;
 			case "start":
-				_lindviorCamera = SpawnTable.getInstance().getFirstSpawn(LINDVIOR_CAMERA).getLastSpawn();
-				_tomaris = SpawnTable.getInstance().getFirstSpawn(TOMARIS).getLastSpawn();
-				_artius = SpawnTable.getInstance().getFirstSpawn(ARTIUS).getLastSpawn();
+				_lindviorCamera = SpawnTable.getInstance().findAny(LINDVIOR_CAMERA).getLastSpawn();
+				_tomaris = SpawnTable.getInstance().findAny(TOMARIS).getLastSpawn();
+				_artius = SpawnTable.getInstance().findAny(ARTIUS).getLastSpawn();
 				
 				startQuestTimer("tomaris_shout1", 1000, _tomaris, null);
 				startQuestTimer("artius_shout", 60000, _artius, null);

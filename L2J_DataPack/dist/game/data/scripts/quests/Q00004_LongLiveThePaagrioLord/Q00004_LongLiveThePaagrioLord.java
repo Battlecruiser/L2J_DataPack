@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,8 +18,8 @@
  */
 package quests.Q00004_LongLiveThePaagrioLord;
 
-import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.enums.QuestSound;
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -63,7 +63,7 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -88,12 +88,7 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
+		final QuestState st = getQuestState(player, true);
 		switch (npc.getId())
 		{
 			case NAKUSIN:
@@ -109,11 +104,11 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 						}
 						else
 						{
-							st.giveItems(CLUB, 1);
+							giveItems(player, CLUB, 1);
 							// Newbie Guide
 							showOnScreenMsg(player, NpcStringId.DELIVERY_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_GUIDE, 2, 5000);
-							st.addExpAndSp(4254, 335);
-							st.giveAdena(1850, true);
+							addExpAndSp(player, 4254, 335);
+							giveAdena(player, 1850, true);
 							st.exitQuest(false, true);
 							htmltext = "30578-06.html";
 						}
@@ -124,40 +119,40 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 				}
 				break;
 			case VARKEES:
-				htmltext = giveItem(st, npc.getId(), HONEY_KHANDAR, getRegisteredItemIds());
+				htmltext = giveItem(player, st, npc.getId(), HONEY_KHANDAR, getRegisteredItemIds());
 				break;
 			case URUTU:
-				htmltext = giveItem(st, npc.getId(), DEEP_SEA_ORB, getRegisteredItemIds());
+				htmltext = giveItem(player, st, npc.getId(), DEEP_SEA_ORB, getRegisteredItemIds());
 				break;
 			case HESTUI:
-				htmltext = giveItem(st, npc.getId(), BEAR_FUR_CLOAK, getRegisteredItemIds());
+				htmltext = giveItem(player, st, npc.getId(), BEAR_FUR_CLOAK, getRegisteredItemIds());
 				break;
 			case KUNAI:
-				htmltext = giveItem(st, npc.getId(), SPIDER_DUST, getRegisteredItemIds());
+				htmltext = giveItem(player, st, npc.getId(), SPIDER_DUST, getRegisteredItemIds());
 				break;
 			case USKA:
-				htmltext = giveItem(st, npc.getId(), ANCESTOR_SKULL, getRegisteredItemIds());
+				htmltext = giveItem(player, st, npc.getId(), ANCESTOR_SKULL, getRegisteredItemIds());
 				break;
 			case GROOKIN:
-				htmltext = giveItem(st, npc.getId(), BLOODY_AXE, getRegisteredItemIds());
+				htmltext = giveItem(player, st, npc.getId(), BLOODY_AXE, getRegisteredItemIds());
 				break;
 		}
 		return htmltext;
 	}
 	
-	private static String giveItem(QuestState st, int npcId, int itemId, int... items)
+	private static String giveItem(L2PcInstance player, QuestState st, int npcId, int itemId, int... items)
 	{
 		if (!st.isStarted())
 		{
-			return getNoQuestMsg(st.getPlayer());
+			return getNoQuestMsg(player);
 		}
-		else if (st.hasQuestItems(itemId))
+		else if (hasQuestItems(player, itemId))
 		{
 			return npcId + "-02.html";
 		}
-		st.giveItems(itemId, 1);
-		st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-		if (st.hasQuestItems(items))
+		giveItems(player, itemId, 1);
+		playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+		if (hasQuestItems(player, items))
 		{
 			st.setCond(2, true);
 		}

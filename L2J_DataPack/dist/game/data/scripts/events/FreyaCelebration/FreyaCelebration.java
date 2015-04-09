@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -23,8 +23,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.event.LongTimeEvent;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
-import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -79,15 +77,9 @@ public final class FreyaCelebration extends LongTimeEvent
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return null;
-		}
-		
 		if (event.equalsIgnoreCase("give_potion"))
 		{
-			if (st.getQuestItemsCount(Inventory.ADENA_ID) > 1)
+			if (getQuestItemsCount(player, Inventory.ADENA_ID) > 1)
 			{
 				long _curr_time = System.currentTimeMillis();
 				String value = loadGlobalQuestVar(player.getAccountName());
@@ -95,9 +87,8 @@ public final class FreyaCelebration extends LongTimeEvent
 				
 				if (_curr_time > _reuse_time)
 				{
-					st.setState(State.STARTED);
-					st.takeItems(Inventory.ADENA_ID, 1);
-					st.giveItems(FREYA_POTION, 1);
+					takeItems(player, Inventory.ADENA_ID, 1);
+					giveItems(player, FREYA_POTION, 1);
 					saveGlobalQuestVar(player.getAccountName(), Long.toString(System.currentTimeMillis() + (HOURS * 3600000)));
 				}
 				else
@@ -156,10 +147,6 @@ public final class FreyaCelebration extends LongTimeEvent
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (player.getQuestState(getName()) == null)
-		{
-			newQuestState(player);
-		}
 		return "13296.htm";
 	}
 	

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -163,8 +163,7 @@ public final class MonasteryOfSilence extends AbstractNpcAI
 					}
 					npc.setScriptValue(1);
 					broadcastNpcSay(npc, Say2.ALL, NpcStringId.FOR_THE_GLORY_OF_SOLINA);
-					final L2Attackable knight = (L2Attackable) addSpawn(KNIGHT, npc);
-					attackPlayer(knight, player);
+					addAttackPlayerDesire(addSpawn(KNIGHT, npc), player);
 				}
 				break;
 			}
@@ -258,7 +257,7 @@ public final class MonasteryOfSilence extends AbstractNpcAI
 				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.YOU_CANNOT_CARRY_A_WEAPON_WITHOUT_AUTHORIZATION);
 			}
 			
-			attackPlayer((L2Attackable) npc, player);
+			addAttackPlayerDesire(npc, player);
 		}
 		return super.onAggroRangeEnter(npc, player, isSummon);
 	}
@@ -273,7 +272,7 @@ public final class MonasteryOfSilence extends AbstractNpcAI
 				if (obj.equals(npc))
 				{
 					broadcastNpcSay(npc, Say2.NPC_ALL, DIVINITY_MSG[getRandom(DIVINITY_MSG.length)], caster.getName());
-					attackPlayer((L2Attackable) npc, caster);
+					addAttackPlayerDesire(npc, caster);
 					break;
 				}
 			}

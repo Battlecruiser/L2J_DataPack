@@ -12,7 +12,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="293" />
+			<add order="0" stat="pDef" val="293" />
 		</for>
 	</item>
 	<item id="12601" type="EtcItem" name="Foundation Sealed Armor of Nightmare">
@@ -27,7 +27,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="293" />
+			<add order="0" stat="pDef" val="293" />
 		</for>
 	</item>
 	<item id="12602" type="EtcItem" name="Foundation Sealed Gauntlet of Nightmare">
@@ -38,7 +38,7 @@
 		<set name="weight" val="550" />
 		<set name="price" val="1355000" />
 		<for>
-			<add order="0x10" stat="pDef" val="49" />
+			<add order="0" stat="pDef" val="49" />
 		</for>
 	</item>
 	<item id="12603" type="EtcItem" name="Foundation Sealed Leather Armor of Nightmare">
@@ -50,7 +50,7 @@
 		<set name="weight" val="5300" />
 		<set name="price" val="6603000" />
 		<for>
-			<add order="0x10" stat="pDef" val="220" />
+			<add order="0" stat="pDef" val="220" />
 		</for>
 	</item>
 	<item id="12604" type="EtcItem" name="Foundation Sealed Robe of Nightmare">
@@ -65,8 +65,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="147" />
-			<add order="0x40" stat="maxMp" val="718" />
+			<add order="0" stat="pDef" val="147" />
+			<add stat="maxMp" val="718" />
 		</for>
 	</item>
 	<item id="12605" type="EtcItem" name="Foundation Sealed Boots of Nightmare">
@@ -77,7 +77,7 @@
 		<set name="weight" val="1110" />
 		<set name="price" val="1355000" />
 		<for>
-			<add order="0x10" stat="pDef" val="49" />
+			<add order="0" stat="pDef" val="49" />
 		</for>
 	</item>
 	<item id="12606" type="EtcItem" name="Foundation Sealed Shield of Nightmare">
@@ -91,9 +91,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="256" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="256" />
 		</for>
 	</item>
 	<item id="12607" type="EtcItem" name="Foundation Sealed Helm of Nightmare">
@@ -104,7 +104,7 @@
 		<set name="weight" val="560" />
 		<set name="price" val="2032000" />
 		<for>
-			<add order="0x10" stat="pDef" val="73" />
+			<add order="0" stat="pDef" val="73" />
 		</for>
 	</item>
 	<item id="12608" type="EtcItem" name="Foundation Armor of Nightmare">
@@ -119,7 +119,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="293" />
+			<add order="0" stat="pDef" val="293" />
 		</for>
 	</item>
 	<item id="12609" type="EtcItem" name="Foundation Gauntlet of Nightmare">
@@ -133,7 +133,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="49" />
+			<add order="0" stat="pDef" val="49" />
 		</for>
 	</item>
 	<item id="12610" type="EtcItem" name="Foundation Gauntlet of Nightmare">
@@ -144,7 +144,7 @@
 		<set name="weight" val="550" />
 		<set name="price" val="1355000" />
 		<for>
-			<add order="0x10" stat="pDef" val="49" />
+			<add order="0" stat="pDef" val="49" />
 		</for>
 	</item>
 	<item id="12611" type="EtcItem" name="Foundation Gauntlet of Nightmare">
@@ -158,7 +158,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="49" />
+			<add order="0" stat="pDef" val="49" />
 		</for>
 	</item>
 	<item id="12612" type="EtcItem" name="Foundation Leather Armor of Nightmare">
@@ -170,7 +170,7 @@
 		<set name="weight" val="5300" />
 		<set name="price" val="6603000" />
 		<for>
-			<add order="0x10" stat="pDef" val="220" />
+			<add order="0" stat="pDef" val="220" />
 		</for>
 	</item>
 	<item id="12613" type="EtcItem" name="Foundation Robe of Nightmare">
@@ -185,8 +185,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="147" />
-			<add order="0x40" stat="maxMp" val="718" />
+			<add order="0" stat="pDef" val="147" />
+			<add stat="maxMp" val="718" />
 		</for>
 	</item>
 	<item id="12614" type="EtcItem" name="Foundation Boots of Nightmare">
@@ -200,7 +200,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="49" />
+			<add order="0" stat="pDef" val="49" />
 		</for>
 	</item>
 	<item id="12615" type="EtcItem" name="Foundation Boots of Nightmare">
@@ -211,7 +211,7 @@
 		<set name="weight" val="1110" />
 		<set name="price" val="1355000" />
 		<for>
-			<add order="0x10" stat="pDef" val="49" />
+			<add order="0" stat="pDef" val="49" />
 		</for>
 	</item>
 	<item id="12616" type="EtcItem" name="Foundation Boots of Nightmare">
@@ -225,7 +225,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="49" />
+			<add order="0" stat="pDef" val="49" />
 		</for>
 	</item>
 	<item id="12617" type="EtcItem" name="Foundation Shield of Nightmare">
@@ -239,9 +239,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="256" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="256" />
 		</for>
 	</item>
 	<item id="12618" type="EtcItem" name="Foundation Helm of Nightmare">
@@ -252,7 +252,7 @@
 		<set name="weight" val="560" />
 		<set name="price" val="2032000" />
 		<for>
-			<add order="0x10" stat="pDef" val="73" />
+			<add order="0" stat="pDef" val="73" />
 		</for>
 	</item>
 	<item id="12619" type="EtcItem" name="Foundation Draconic Leather Gloves">
@@ -263,7 +263,7 @@
 		<set name="weight" val="540" />
 		<set name="price" val="3195000" />
 		<for>
-			<add order="0x10" stat="pDef" val="55" />
+			<add order="0" stat="pDef" val="55" />
 		</for>
 	</item>
 	<item id="12620" type="EtcItem" name="Foundation Draconic Leather Boots">
@@ -274,7 +274,7 @@
 		<set name="weight" val="1110" />
 		<set name="price" val="3195000" />
 		<for>
-			<add order="0x10" stat="pDef" val="55" />
+			<add order="0" stat="pDef" val="55" />
 		</for>
 	</item>
 	<item id="12621" type="EtcItem" name="Foundation Draconic Leather Armor">
@@ -294,7 +294,7 @@
 		<set name="weight" val="550" />
 		<set name="price" val="4793000" />
 		<for>
-			<add order="0x10" stat="pDef" val="83" />
+			<add order="0" stat="pDef" val="83" />
 		</for>
 	</item>
 	<item id="12623" type="EtcItem" name="Foundation Major Arcana Gloves">
@@ -308,7 +308,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="55" />
+			<add order="0" stat="pDef" val="55" />
 		</for>
 	</item>
 	<item id="12624" type="EtcItem" name="Foundation Major Arcana Robe">
@@ -323,7 +323,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x40" stat="maxMp" val="866" />
+			<add stat="maxMp" val="866" />
 		</for>
 	</item>
 	<item id="12625" type="EtcItem" name="Foundation Major Arcana Boots">
@@ -337,7 +337,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="55" />
+			<add order="0" stat="pDef" val="55" />
 		</for>
 	</item>
 	<item id="12626" type="EtcItem" name="Foundation Major Arcana Circlet">
@@ -351,7 +351,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="83" />
+			<add order="0" stat="pDef" val="83" />
 		</for>
 	</item>
 	<item id="12627" type="EtcItem" name="Foundation Sealed Draconic Leather Gloves">
@@ -362,7 +362,7 @@
 		<set name="weight" val="540" />
 		<set name="price" val="3195000" />
 		<for>
-			<add order="0x10" stat="pDef" val="55" />
+			<add order="0" stat="pDef" val="55" />
 		</for>
 	</item>
 	<item id="12628" type="EtcItem" name="Foundation Sealed Draconic Leather Boots">
@@ -373,7 +373,7 @@
 		<set name="weight" val="1110" />
 		<set name="price" val="3195000" />
 		<for>
-			<add order="0x10" stat="pDef" val="55" />
+			<add order="0" stat="pDef" val="55" />
 		</for>
 	</item>
 	<item id="12629" type="EtcItem" name="Foundation Sealed Draconic Leather Armor">
@@ -393,7 +393,7 @@
 		<set name="weight" val="550" />
 		<set name="price" val="4793000" />
 		<for>
-			<add order="0x10" stat="pDef" val="83" />
+			<add order="0" stat="pDef" val="83" />
 		</for>
 	</item>
 	<item id="12631" type="EtcItem" name="Foundation Sealed Major Arcana Gloves">
@@ -407,7 +407,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="55" />
+			<add order="0" stat="pDef" val="55" />
 		</for>
 	</item>
 	<item id="12632" type="EtcItem" name="Foundation Sealed Major Arcana Robe">
@@ -422,7 +422,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x40" stat="maxMp" val="866" />
+			<add stat="maxMp" val="866" />
 		</for>
 	</item>
 	<item id="12633" type="EtcItem" name="Foundation Sealed Major Arcana Boots">
@@ -436,7 +436,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="55" />
+			<add order="0" stat="pDef" val="55" />
 		</for>
 	</item>
 	<item id="12634" type="EtcItem" name="Foundation Sealed Major Arcana Circlet">
@@ -450,7 +450,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="83" />
+			<add order="0" stat="pDef" val="83" />
 		</for>
 	</item>
 	<item id="12635" type="EtcItem" name="Foundation Sealed Imperial Crusader Gaiters">
@@ -476,7 +476,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="55" />
+			<add order="0" stat="pDef" val="55" />
 		</for>
 	</item>
 	<item id="12637" type="EtcItem" name="Foundation Sealed Imperial Crusader Boots">
@@ -490,7 +490,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="55" />
+			<add order="0" stat="pDef" val="55" />
 		</for>
 	</item>
 	<item id="12638" type="EtcItem" name="Foundation Sealed Imperial Crusader Shield">
@@ -504,8 +504,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
 		</for>
 	</item>
 	<item id="12639" type="EtcItem" name="Foundation Sealed Imperial Crusader Helmet">
@@ -519,7 +519,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="83" />
+			<add order="0" stat="pDef" val="83" />
 		</for>
 	</item>
 	<item id="12640" type="EtcItem" name="Foundation Sealed Imperial Crusader Breastplate">
@@ -557,7 +557,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="55" />
+			<add order="0" stat="pDef" val="55" />
 		</for>
 	</item>
 	<item id="12643" type="EtcItem" name="Foundation Imperial Crusader Boots">
@@ -571,7 +571,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="55" />
+			<add order="0" stat="pDef" val="55" />
 		</for>
 	</item>
 	<item id="12644" type="EtcItem" name="Foundation Imperial Crusader Shield">
@@ -585,8 +585,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
 		</for>
 	</item>
 	<item id="12645" type="EtcItem" name="Foundation Imperial Crusader Helmet">
@@ -600,7 +600,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="83" />
+			<add order="0" stat="pDef" val="83" />
 		</for>
 	</item>
 	<item id="12646" type="EtcItem" name="Foundation Imperial Crusader Breastplate">
@@ -627,7 +627,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="141" />
+			<add order="0" stat="pDef" val="141" />
 		</for>
 	</item>
 	<item id="12648" type="EtcItem" name="Foundation Dynasty Gauntlet">
@@ -641,7 +641,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="61" />
+			<add order="0" stat="pDef" val="61" />
 		</for>
 	</item>
 	<item id="12649" type="EtcItem" name="Foundation Dynasty Gloves">
@@ -655,7 +655,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="61" />
+			<add order="0" stat="pDef" val="61" />
 		</for>
 	</item>
 	<item id="12650" type="EtcItem" name="Foundation Dynasty Leather Gloves">
@@ -666,7 +666,7 @@
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
 		<for>
-			<add order="0x10" stat="pDef" val="61" />
+			<add order="0" stat="pDef" val="61" />
 		</for>
 	</item>
 	<item id="12651" type="EtcItem" name="Foundation Dynasty Leather Leggings">
@@ -678,7 +678,7 @@
 		<set name="weight" val="1370" />
 		<set name="price" val="11436000" />
 		<for>
-			<add order="0x10" stat="pDef" val="106" />
+			<add order="0" stat="pDef" val="106" />
 		</for>
 	</item>
 	<item id="12652" type="EtcItem" name="Foundation Dynasty Leather Armor">
@@ -690,7 +690,7 @@
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
 		<for>
-			<add order="0x10" stat="pDef" val="170" />
+			<add order="0" stat="pDef" val="170" />
 		</for>
 	</item>
 	<item id="12653" type="EtcItem" name="Foundation Dynasty Leather Armor">
@@ -705,7 +705,7 @@
 			<player categoryType="DAGGER_MASTER" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="170" />
+			<add order="0" stat="pDef" val="170" />
 		</for>
 	</item>
 	<item id="12654" type="EtcItem" name="Foundation Dynasty Leather Armor">
@@ -720,7 +720,7 @@
 			<player categoryType="BOW_MASTER" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="170" />
+			<add order="0" stat="pDef" val="170" />
 		</for>
 	</item>
 	<item id="12655" type="EtcItem" name="Foundation Dynasty Leather Armor">
@@ -738,7 +738,7 @@
 			</and>
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="170" />
+			<add order="0" stat="pDef" val="170" />
 		</for>
 	</item>
 	<item id="12656" type="EtcItem" name="Foundation Dynasty Leather Armor">
@@ -756,7 +756,7 @@
 			</and>
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="170" />
+			<add order="0" stat="pDef" val="170" />
 		</for>
 	</item>
 	<item id="12657" type="EtcItem" name="Foundation Dynasty Leather Armor">
@@ -771,7 +771,7 @@
 			<player categoryType="BUFF_MASTER" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="170" />
+			<add order="0" stat="pDef" val="170" />
 		</for>
 	</item>
 	<item id="12658" type="EtcItem" name="Foundation Dynasty Leather Armor">
@@ -786,7 +786,7 @@
 			<player categoryType="SUMMON_MASTER" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="170" />
+			<add order="0" stat="pDef" val="170" />
 		</for>
 	</item>
 	<item id="12659" type="EtcItem" name="Foundation Dynasty Leather Boots">
@@ -797,7 +797,7 @@
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
 		<for>
-			<add order="0x10" stat="pDef" val="61" />
+			<add order="0" stat="pDef" val="61" />
 		</for>
 	</item>
 	<item id="12660" type="EtcItem" name="Foundation Dynasty Leather Helmet">
@@ -808,7 +808,7 @@
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
 		<for>
-			<add order="0x10" stat="pDef" val="92" />
+			<add order="0" stat="pDef" val="92" />
 		</for>
 	</item>
 	<item id="12661" type="EtcItem" name="Foundation Dynasty Boots">
@@ -822,7 +822,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="61" />
+			<add order="0" stat="pDef" val="61" />
 		</for>
 	</item>
 	<item id="12662" type="EtcItem" name="Foundation Dynasty Breastplate">
@@ -837,7 +837,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="226" />
+			<add order="0" stat="pDef" val="226" />
 		</for>
 	</item>
 	<item id="12663" type="EtcItem" name="Foundation Dynasty Breastplate">
@@ -855,7 +855,7 @@
 			</and>
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="226" />
+			<add order="0" stat="pDef" val="226" />
 		</for>
 	</item>
 	<item id="12664" type="EtcItem" name="Foundation Dynasty Breastplate">
@@ -873,7 +873,7 @@
 			</and>
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="226" />
+			<add order="0" stat="pDef" val="226" />
 		</for>
 	</item>
 	<item id="12665" type="EtcItem" name="Foundation Dynasty Breastplate">
@@ -891,7 +891,7 @@
 			</and>
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="226" />
+			<add order="0" stat="pDef" val="226" />
 		</for>
 	</item>
 	<item id="12666" type="EtcItem" name="Foundation Dynasty Breastplate">
@@ -909,7 +909,7 @@
 			</and>
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="226" />
+			<add order="0" stat="pDef" val="226" />
 		</for>
 	</item>
 	<item id="12667" type="EtcItem" name="Foundation Dynasty Shield">
@@ -923,9 +923,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="321" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="321" />
 		</for>
 	</item>
 	<item id="12668" type="EtcItem" name="Foundation Dynasty Shoes">
@@ -939,7 +939,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="61" />
+			<add order="0" stat="pDef" val="61" />
 		</for>
 	</item>
 	<item id="12669" type="EtcItem" name="Foundation Dynasty Silver Satin Tunic">
@@ -954,7 +954,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x40" stat="maxMp" val="592" />
+			<add stat="maxMp" val="592" />
 		</for>
 	</item>
 	<item id="12670" type="EtcItem" name="Foundation Dynasty Silver Satin Tunic">
@@ -972,7 +972,7 @@
 			</and>
 		</cond>
 		<for>
-			<add order="0x40" stat="maxMp" val="592" />
+			<add stat="maxMp" val="592" />
 		</for>
 	</item>
 	<item id="12671" type="EtcItem" name="Foundation Dynasty Silver Satin Tunic">
@@ -990,7 +990,7 @@
 			</and>
 		</cond>
 		<for>
-			<add order="0x40" stat="maxMp" val="592" />
+			<add stat="maxMp" val="592" />
 		</for>
 	</item>
 	<item id="12672" type="EtcItem" name="Foundation Dynasty Silver Satin Tunic">
@@ -1008,7 +1008,7 @@
 			</and>
 		</cond>
 		<for>
-			<add order="0x40" stat="maxMp" val="592" />
+			<add stat="maxMp" val="592" />
 		</for>
 	</item>
 	<item id="12673" type="EtcItem" name="Foundation Dynasty Silver Satin Tunic">
@@ -1026,7 +1026,7 @@
 			</and>
 		</cond>
 		<for>
-			<add order="0x40" stat="maxMp" val="592" />
+			<add stat="maxMp" val="592" />
 		</for>
 	</item>
 	<item id="12674" type="EtcItem" name="Foundation Dynasty Circlet">
@@ -1040,7 +1040,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="92" />
+			<add order="0" stat="pDef" val="92" />
 		</for>
 	</item>
 	<item id="12675" type="EtcItem" name="Foundation Dynasty Jewel Leather Armor">
@@ -1136,8 +1136,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="113" />
-			<add order="0x40" stat="maxMp" val="592" />
+			<add order="0" stat="pDef" val="113" />
+			<add stat="maxMp" val="592" />
 		</for>
 	</item>
 	<item id="12683" type="EtcItem" name="Foundation Dynasty Tunic">
@@ -1155,8 +1155,8 @@
 			</and>
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="113" />
-			<add order="0x40" stat="maxMp" val="592" />
+			<add order="0" stat="pDef" val="113" />
+			<add stat="maxMp" val="592" />
 		</for>
 	</item>
 	<item id="12684" type="EtcItem" name="Foundation Dynasty Tunic">
@@ -1174,8 +1174,8 @@
 			</and>
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="113" />
-			<add order="0x40" stat="maxMp" val="592" />
+			<add order="0" stat="pDef" val="113" />
+			<add stat="maxMp" val="592" />
 		</for>
 	</item>
 	<item id="12685" type="EtcItem" name="Foundation Dynasty Tunic">
@@ -1193,8 +1193,8 @@
 			</and>
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="113" />
-			<add order="0x40" stat="maxMp" val="592" />
+			<add order="0" stat="pDef" val="113" />
+			<add stat="maxMp" val="592" />
 		</for>
 	</item>
 	<item id="12686" type="EtcItem" name="Foundation Dynasty Tunic">
@@ -1212,8 +1212,8 @@
 			</and>
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="113" />
-			<add order="0x40" stat="maxMp" val="592" />
+			<add order="0" stat="pDef" val="113" />
+			<add stat="maxMp" val="592" />
 		</for>
 	</item>
 	<item id="12687" type="EtcItem" name="Foundation Dynasty Platinum Plate">
@@ -1299,7 +1299,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="92" />
+			<add order="0" stat="pDef" val="92" />
 		</for>
 	</item>
 	<item id="12693" type="EtcItem" name="Foundation Dynasty Stockings">
@@ -1314,8 +1314,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="71" />
-			<add order="0x40" stat="maxMp" val="370" />
+			<add order="0" stat="pDef" val="71" />
+			<add stat="maxMp" val="370" />
 		</for>
 	</item>
 	<item id="12694" type="EtcItem" name="Foundation Sealed Dynasty Gaiters">
@@ -1330,7 +1330,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="134" />
+			<add order="0" stat="pDef" val="134" />
 		</for>
 	</item>
 	<item id="12695" type="EtcItem" name="Foundation Sealed Dynasty Gauntlet">
@@ -1344,7 +1344,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="61" />
+			<add order="0" stat="pDef" val="61" />
 		</for>
 	</item>
 	<item id="12696" type="EtcItem" name="Foundation Sealed Dynasty Gloves">
@@ -1358,7 +1358,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="61" />
+			<add order="0" stat="pDef" val="61" />
 		</for>
 	</item>
 	<item id="12697" type="EtcItem" name="Foundation Sealed Dynasty Leather Gloves">
@@ -1369,7 +1369,7 @@
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
 		<for>
-			<add order="0x10" stat="pDef" val="61" />
+			<add order="0" stat="pDef" val="61" />
 		</for>
 	</item>
 	<item id="12698" type="EtcItem" name="Foundation Sealed Dynasty Leather Leggings">
@@ -1381,7 +1381,7 @@
 		<set name="weight" val="1370" />
 		<set name="price" val="11436000" />
 		<for>
-			<add order="0x10" stat="pDef" val="100" />
+			<add order="0" stat="pDef" val="100" />
 		</for>
 	</item>
 	<item id="12699" type="EtcItem" name="Foundation Sealed Dynasty Leather Armor">
@@ -1393,7 +1393,7 @@
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
 		<for>
-			<add order="0x10" stat="pDef" val="161" />
+			<add order="0" stat="pDef" val="161" />
 		</for>
 	</item>
 </list>

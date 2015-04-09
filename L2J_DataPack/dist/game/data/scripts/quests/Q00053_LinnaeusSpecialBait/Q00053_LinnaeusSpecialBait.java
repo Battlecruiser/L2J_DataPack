@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -57,7 +57,7 @@ public class Q00053_LinnaeusSpecialBait extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -94,7 +94,7 @@ public class Q00053_LinnaeusSpecialBait extends Quest
 			return null;
 		}
 		
-		final QuestState st = partyMember.getQuestState(getName());
+		final QuestState st = getQuestState(partyMember, false);
 		
 		if (st.getQuestItemsCount(CRIMSON_DRAKE_HEART) < 100)
 		{
@@ -119,7 +119,7 @@ public class Q00053_LinnaeusSpecialBait extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, true);
 		if (st == null)
 		{
 			return htmltext;

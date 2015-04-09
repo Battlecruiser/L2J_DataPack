@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -29,8 +29,8 @@ import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.SevenSigns;
-import com.l2jserver.gameserver.datatables.ClanTable;
-import com.l2jserver.gameserver.datatables.TeleportLocationTable;
+import com.l2jserver.gameserver.data.sql.impl.ClanTable;
+import com.l2jserver.gameserver.data.sql.impl.TeleportLocationTable;
 import com.l2jserver.gameserver.instancemanager.CastleManorManager;
 import com.l2jserver.gameserver.instancemanager.FortManager;
 import com.l2jserver.gameserver.model.ClanPrivilege;

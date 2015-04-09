@@ -131,7 +131,7 @@ class Quest (JQuest) :
     def onAdvEvent(self,event,npc,player):
         if Config.DISABLE_TUTORIAL :
             return
-        st = player.getQuestState(qn)
+        st = self.getQuestState(player, True)
         classId = int(st.getPlayer().getClassId().getId())
         string = event[0:2]
         htmltext = ""

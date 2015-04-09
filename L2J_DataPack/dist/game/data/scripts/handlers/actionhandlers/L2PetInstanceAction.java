@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,7 +18,6 @@
  */
 package handlers.actionhandlers;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.enums.InstanceType;
@@ -61,32 +60,16 @@ public class L2PetInstanceAction implements IActionHandler
 			// Check if the pet is attackable (without a forced attack) and isn't dead
 			if (target.isAutoAttackable(activeChar) && !isOwner)
 			{
-				if (Config.GEODATA > 0)
+				if (GeoData.getInstance().canSeeTarget(activeChar, target))
 				{
-					if (GeoData.getInstance().canSeeTarget(activeChar, target))
-					{
-						// Set the L2PcInstance Intention to AI_INTENTION_ATTACK
-						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
-						activeChar.onActionRequest();
-					}
-				}
-				else
-				{
+					// Set the L2PcInstance Intention to AI_INTENTION_ATTACK
 					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 					activeChar.onActionRequest();
 				}
 			}
 			else if (!((L2Character) target).isInsideRadius(activeChar, 150, false, false))
 			{
-				if (Config.GEODATA > 0)
-				{
-					if (GeoData.getInstance().canSeeTarget(activeChar, target))
-					{
-						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
-						activeChar.onActionRequest();
-					}
-				}
-				else
+				if (GeoData.getInstance().canSeeTarget(activeChar, target))
 				{
 					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
 					activeChar.onActionRequest();

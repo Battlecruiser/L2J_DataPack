@@ -5,6 +5,7 @@
 		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#pAtkSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
+		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
@@ -17,19 +18,20 @@
 		<set name="icon" val="icon.skill1206" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
+				<mul stat="pAtkSpd" val="#pAtkSpd" />
 			</effect>
 		</for>
-		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4201" levels="12" name="Sleep">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
+		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SLEEP" />
@@ -43,19 +45,20 @@
 		<set name="icon" val="icon.skill1069" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="removedOnDamage" val="true" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SLEEP" />
 		<for>
 			<effect name="Sleep" />
 		</for>
-		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4202" levels="12" name="Hold">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
+		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
@@ -69,19 +72,20 @@
 		<set name="icon" val="icon.skill1201" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="Root" />
 		</for>
-		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4203" levels="12" name="Decrease Speed">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
+		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<table name="#runSpd"> 0.9 0.8 0.8 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="60" />
@@ -95,21 +99,22 @@
 		<set name="icon" val="icon.skill1160" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="runSpd" val="#runSpd" />
+				<mul stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
-		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4204" levels="12" name="Bleed">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<table name="#damage"> 19 28 38 49 60 69 75 75 78 78 79 79 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
+		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
@@ -123,7 +128,9 @@
 		<set name="icon" val="icon.skill0096" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -131,12 +138,11 @@
 				<param power="#damage" />
 			</effect>
 		</for>
-		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4205" levels="12" name="Paralysis">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
+		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PARALYZE" />
@@ -150,20 +156,21 @@
 		<set name="icon" val="icon.skill1170" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="40" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="Paralyze" />
 		</for>
-		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4206" levels="12" name="Decrease MP">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 2 2 2 2 2 3 4 5 6 7 8 8 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
+		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<table name="#mdot"> 2 2 2 2 2 4 5 7 8 10 12 12 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
@@ -178,15 +185,15 @@
 		<set name="icon" val="icon.skill1170" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="ManaDamOverTime" ticks="5">
 				<param power="#mdot" />
 			</effect>
 		</for>
-		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4207" levels="12" name="BOSS Power Shot">
 		<!-- Freya retail confirmed -->
@@ -201,6 +208,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -227,6 +235,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -247,6 +256,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Heal">
@@ -272,6 +282,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="HealOverTime" ticks="1">
@@ -285,6 +296,7 @@
 	<skill id="4211" levels="12" name="BOSS Might">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
+		<table name="#mpConsume"> 6 10 13 18 23 28 33 35 36 38 39 39 </table>
 		<set name="abnormalLvl" val="99" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="PA_UP" />
@@ -292,19 +304,20 @@
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.5" />
+				<mul stat="pAtk" val="1.5" />
 			</effect>
 		</for>
-		<table name="#mpConsume"> 6 10 13 18 23 28 33 35 36 38 39 39 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4212" levels="12" name="BOSS Shield">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
+		<table name="#mpConsume"> 6 10 13 18 23 28 33 35 36 38 39 39 </table>
 		<set name="abnormalLvl" val="99" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="PD_UP" />
@@ -312,19 +325,20 @@
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pDef" val="1.5" />
+				<mul stat="pDef" val="1.5" />
 			</effect>
 		</for>
-		<table name="#mpConsume"> 6 10 13 18 23 28 33 35 36 38 39 39 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4213" levels="12" name="BOSS Haste">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
+		<table name="#mpConsume"> 6 10 13 18 23 28 33 35 36 38 39 39 </table>
 		<set name="abnormalLvl" val="99" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
@@ -332,19 +346,20 @@
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtkSpd" val="1.5" />
+				<mul stat="pAtkSpd" val="1.5" />
 			</effect>
 		</for>
-		<table name="#mpConsume"> 6 10 13 18 23 28 33 35 36 38 39 39 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4214" levels="12" name="BOSS Reflect Damage">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
+		<table name="#mpConsume"> 6 10 13 18 23 28 33 35 36 38 39 39 </table>
 		<set name="abnormalLvl" val="99" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="DMG_SHIELD" />
@@ -352,15 +367,15 @@
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="reflectDam" val="20" />
+				<add stat="reflectDam" val="20" />
 			</effect>
 		</for>
-		<table name="#mpConsume"> 6 10 13 18 23 28 33 35 36 38 39 39 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4215" levels="1" name="Raid Curse">
 		<!-- Freya retail confirmed -->
@@ -376,6 +391,7 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="100" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Mute" />
@@ -393,6 +409,7 @@
 		<set name="hitTime" val="2900" />
 		<set name="magicLvl" val="60" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4217" levels="1" name="None">
@@ -407,6 +424,7 @@
 		<set name="hitTime" val="2900" />
 		<set name="magicLvl" val="60" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="4218" levels="1" name="Absorb HP MP">
@@ -423,6 +441,7 @@
 		<set name="magicLvl" val="60" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="57" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="HpDrain">
@@ -451,6 +470,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="60" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="HOLD" />
 		<for>
@@ -468,6 +488,7 @@
 		<set name="magicLvl" val="60" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="9390" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -483,6 +504,7 @@
 		<set name="magicLvl" val="60" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="5164" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -495,6 +517,7 @@
 		<set name="hitTime" val="500" />
 		<set name="magicLvl" val="60" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4223" levels="1" name="Face Chance: Night to Day">
@@ -508,6 +531,7 @@
 		<set name="hitTime" val="1100" />
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" />
@@ -524,6 +548,7 @@
 		<set name="hitTime" val="1100" />
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<!-- TODO: Abnormal Change Texture for Day to Night Face -->
@@ -549,7 +574,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="healEffect" val="0" />
+				<mul stat="healEffect" val="0" />
 			</effect>
 		</for>
 	</skill>
@@ -561,10 +586,11 @@
 		<set name="abnormalType" val="HP_REGEN_UP" />
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="regHp" val="20" />
+				<mul stat="regHp" val="20" />
 			</effect>
 		</for>
 	</skill>
@@ -582,6 +608,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="17000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -601,6 +628,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="17000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -617,6 +645,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="1330120" />
 		<set name="reuseDelay" val="10500" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -639,6 +668,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -659,6 +689,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="6000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -673,7 +704,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="absorbDam" val="15" />
+				<add stat="absorbDam" val="15" />
 			</effect>
 		</for>
 	</skill>
@@ -690,6 +721,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -701,6 +733,7 @@
 		<set name="hitTime" val="15000" />
 		<set name="magicLvl" val="70" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4236" levels="1" name="Decrease Heal">
@@ -724,11 +757,12 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="51" />
 		<set name="reuseDelay" val="75000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="PhysicalAttack" />
 			<effect name="Debuff">
-				<mul order="0x30" stat="healEffect" val="0.5" />
+				<mul stat="healEffect" val="0.5" />
 			</effect>
 		</for>
 	</skill>
@@ -754,11 +788,12 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="72" />
 		<set name="reuseDelay" val="75000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
 			<effect name="MagicalAttack" />
 			<effect name="Debuff">
-				<mul order="0x30" stat="runSpd" val="0.7" />
+				<mul stat="runSpd" val="0.7" />
 			</effect>
 		</for>
 	</skill>
@@ -776,11 +811,12 @@
 		<set name="magicLvl" val="70" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="75000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff">
-				<mul stat="pReuse" order="0x30" val="3.0" />
-				<mul stat="mReuse" order="0x30" val="3.0" />
+				<mul stat="pReuse" val="3.0" />
+				<mul stat="mReuse" val="3.0" />
 			</effect>
 		</for>
 	</skill>
@@ -792,10 +828,11 @@
 		<set name="abnormalType" val="HP_REGEN_DOWN" />
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="regHp" val="0.4" />
+				<mul stat="regHp" val="0.4" />
 			</effect>
 		</for>
 	</skill>
@@ -807,10 +844,11 @@
 		<set name="abnormalType" val="HP_REGEN_DOWN" />
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="regHp" val="0.7" />
+				<mul stat="regHp" val="0.7" />
 			</effect>
 		</for>
 	</skill>
@@ -822,10 +860,11 @@
 		<set name="abnormalType" val="HP_REGEN_DOWN" />
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="regHp" val="1" />
+				<mul stat="regHp" val="1" />
 			</effect>
 		</for>
 	</skill>
@@ -837,6 +876,7 @@
 		<set name="abnormalType" val="HP_REGEN_UP" />
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" />
@@ -857,6 +897,7 @@
 		<set name="magicLvl" val="70" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="100" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="DamOverTime" ticks="5">
@@ -881,6 +922,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="6000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -891,14 +933,16 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="PUBLIC_SLOT" />
+		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtkSpd" val="1.42" />
-				<mul order="0x30" stat="pDef" val="1.76" />
-				<mul order="0x30" stat="mDef" val="1.76" />
+				<mul stat="pAtkSpd" val="1.42" />
+				<mul stat="pDef" val="1.76" />
+				<mul stat="mDef" val="1.76" />
 			</effect>
 		</for>
 	</skill>
@@ -909,7 +953,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mDef" val="2.0" />
+				<mul stat="mDef" val="2.0" />
 			</effect>
 			<effect name="DefenceTrait">
 				<param BOW="50" />
@@ -933,6 +977,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -954,6 +999,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="HpDrain">
@@ -964,6 +1010,7 @@
 	<skill id="4249" levels="12" name="Decrease Speed">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
 		<table name="#power"> 4 5 8 11 15 19 24 24 24 24 24 24 </table>
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="60" />
@@ -982,17 +1029,17 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" />
 			<effect name="Debuff">
-				<mul order="0x30" stat="runSpd" val="0.8" />
+				<mul stat="runSpd" val="0.8" />
 			</effect>
 		</for>
-		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4250" levels="12" name="NPC Twister - Slow">
 		<!-- Freya retail confirmed -->
@@ -1010,6 +1057,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1029,6 +1077,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1049,6 +1098,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1070,6 +1120,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1091,6 +1142,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1110,6 +1162,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1143,6 +1196,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1163,10 +1217,11 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="runSpd" val="0.7" />
+				<mul stat="runSpd" val="0.7" />
 			</effect>
 		</for>
 	</skill>
@@ -1176,6 +1231,7 @@
 		<table name="#cast"> 500 600 600 750 750 750 750 750 750 750 750 750 </table>
 		<table name="#dot"> 16 24 32 41 50 58 63 63 66 66 68 68 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
@@ -1193,8 +1249,10 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="POISON" />
 		<for>
@@ -1202,8 +1260,6 @@
 				<param power="#dot" />
 			</effect>
 		</for>
-		<table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4260" levels="12" name="Steal Blood">
 		<!-- Freya retail confirmed -->
@@ -1224,6 +1280,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="HpDrain">
@@ -1249,6 +1306,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1268,10 +1326,11 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="30" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="runSpd" val="33" />
+				<add stat="runSpd" val="33" />
 			</effect>
 		</for>
 	</skill>
@@ -1288,10 +1347,11 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="44" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtkSpd" val="1.15" />
+				<mul stat="pAtkSpd" val="1.15" />
 			</effect>
 		</for>
 	</skill>
@@ -1308,10 +1368,11 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="25" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mAtk" val="1.55" />
+				<mul stat="mAtk" val="1.55" />
 			</effect>
 		</for>
 	</skill>
@@ -1329,10 +1390,11 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.15" />
+				<mul stat="pAtk" val="1.15" />
 			</effect>
 		</for>
 	</skill>
@@ -1350,10 +1412,11 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="44" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pDef" val="1.15" />
+				<mul stat="pDef" val="1.15" />
 			</effect>
 		</for>
 	</skill>
@@ -1394,9 +1457,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="regHp" val="#rate" />
-				<mul order="0x30" stat="regMp" val="#rate" />
-				<mul order="0x30" stat="runSpd" val="#rateSpd" />
+				<mul stat="regHp" val="#rate" />
+				<mul stat="regMp" val="#rate" />
+				<mul stat="runSpd" val="#rateSpd" />
 			</effect>
 		</for>
 	</skill>
@@ -1490,7 +1553,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="darkPower" val="20" />
+				<add stat="darkPower" val="20" />
 			</effect>
 		</for>
 	</skill>
@@ -1530,7 +1593,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mDef" val="2" />
+				<mul stat="mDef" val="2" />
 			</effect>
 		</for>
 	</skill>
@@ -1612,10 +1675,8 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="379" />
 		<set name="reuseDelay" val="6000" />
+		<set name="rideState" val="WYVERN" />
 		<set name="targetType" val="AREA" />
-		<cond msg="You can only use Wyvern Breath when flying"> <!-- This skill really have condition ? -->
-			<player flying="true" />
-		</cond>
 		<for>
 			<effect name="MagicalAttack" />
 		</for>

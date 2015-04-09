@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,28 +20,27 @@ package ai.npc.ForgeOfTheGods;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 
-import javolution.util.FastList;
-
+import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.datatables.NpcData;
-import com.l2jserver.gameserver.engines.DocumentParser;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.L2Territory;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.util.Rnd;
+import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * Tar Beetle zone spawn
  * @author malyelfik
  */
-public class TarBeetleSpawn extends DocumentParser
+public class TarBeetleSpawn implements IXmlReader
 {
 	private final List<SpawnZone> zones = new ArrayList<>();
 	private ScheduledFuture<?> spawnTask;
@@ -64,10 +63,10 @@ public class TarBeetleSpawn extends DocumentParser
 	}
 	
 	@Override
-	protected void parseDocument()
+	public void parseDocument(Document doc)
 	{
 		int i = 0;
-		for (Node d = getCurrentDocument().getFirstChild(); d != null; d = d.getNextSibling())
+		for (Node d = doc.getFirstChild(); d != null; d = d.getNextSibling())
 		{
 			if (d.getNodeName().equals("list"))
 			{
@@ -191,7 +190,7 @@ public class TarBeetleSpawn extends DocumentParser
 	private final class SpawnZone
 	{
 		private final List<Zone> _zones = new ArrayList<>();
-		private final List<L2Npc> _spawn = new FastList<>();
+		private final List<L2Npc> _spawn = new CopyOnWriteArrayList<>();
 		private final int _maxNpcCount;
 		private final int _index;
 		
@@ -227,7 +226,7 @@ public class TarBeetleSpawn extends DocumentParser
 					final Location location = _zones.get(Rnd.get(_zones.size())).getRandomPoint();
 					if (location != null)
 					{
-						final L2Spawn spawn = new L2Spawn(NpcData.getInstance().getTemplate(18804));
+						final L2Spawn spawn = new L2Spawn(18804);
 						spawn.setHeading(Rnd.get(65535));
 						spawn.setX(location.getX());
 						spawn.setY(location.getY());

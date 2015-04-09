@@ -8,6 +8,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -23,6 +24,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -38,6 +40,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -52,6 +55,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -71,10 +75,11 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1080000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="runSpd" val="20" />
+				<add stat="runSpd" val="20" />
 			</effect>
 		</for>
 	</skill>
@@ -89,10 +94,11 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="86400000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="rEvas" val="4" />
+				<add stat="rEvas" val="4" />
 			</effect>
 		</for>
 	</skill>
@@ -103,6 +109,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="21007" levels="1" name="Ability of Doubt">
@@ -117,6 +124,7 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 	</skill>
@@ -127,6 +135,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -141,6 +150,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -155,6 +165,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -175,10 +186,11 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="43200000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
+				<sub stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
 	</skill>
@@ -195,10 +207,11 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="43200000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
+				<sub stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
 	</skill>
@@ -215,10 +228,11 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="43200000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
+				<sub stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
 	</skill>
@@ -232,6 +246,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="109">
 			<target npcId="13183" />
@@ -246,6 +261,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="109">
 			<target npcId="13183" />
@@ -260,6 +276,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="109">
 			<target npcId="13183" />
@@ -272,9 +289,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxCp" val="1.3" />
-				<add order="0x40" stat="rCrit" val="100" />
-				<add order="0x40" stat="absorbDam" val="10" />
+				<mul stat="maxCp" val="1.3" />
+				<add stat="rCrit" val="100" />
+				<add stat="absorbDam" val="10" />
 			</effect>
 		</for>
 	</skill>
@@ -285,9 +302,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxCp" val="1.3" />
-				<add order="0x40" stat="rCrit" val="100" />
-				<mul order="0x30" stat="cAtk" val="1.25" />
+				<mul stat="maxCp" val="1.3" />
+				<add stat="rCrit" val="100" />
+				<mul stat="cAtk" val="1.25" />
 			</effect>
 		</for>
 	</skill>
@@ -298,9 +315,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxCp" val="1.3" />
-				<mul order="0x30" stat="blowRate" val="1.25" />
-				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.8" />
+				<mul stat="maxCp" val="1.3" />
+				<mul stat="blowRate" val="1.25" />
+				<mul stat="MagicalMpConsumeRate" val="0.8" />
 			</effect>
 		</for>
 	</skill>
@@ -311,9 +328,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxCp" val="1.3" />
-				<add order="0x40" stat="rCrit" val="100" />
-				<add order="0x40" stat="absorbDam" val="10" />
+				<mul stat="maxCp" val="1.3" />
+				<add stat="rCrit" val="100" />
+				<add stat="absorbDam" val="10" />
 			</effect>
 		</for>
 	</skill>
@@ -324,9 +341,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxCp" val="1.3" />
-				<add order="0x40" stat="rCrit" val="100" />
-				<mul order="0x30" stat="cAtk" val="1.25" />
+				<mul stat="maxCp" val="1.3" />
+				<add stat="rCrit" val="100" />
+				<mul stat="cAtk" val="1.25" />
 			</effect>
 		</for>
 	</skill>
@@ -337,9 +354,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxCp" val="1.3" />
-				<mul order="0x30" stat="mAtkSpd" val="1.25" />
-				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.8" />
+				<mul stat="maxCp" val="1.3" />
+				<mul stat="mAtkSpd" val="1.25" />
+				<mul stat="MagicalMpConsumeRate" val="0.8" />
 			</effect>
 		</for>
 	</skill>
@@ -350,9 +367,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxCp" val="1.3" />
-				<mul order="0x30" stat="mAtk" val="1.5" />
-				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.8" />
+				<mul stat="maxCp" val="1.3" />
+				<mul stat="mAtk" val="1.5" />
+				<mul stat="MagicalMpConsumeRate" val="0.8" />
 			</effect>
 		</for>
 	</skill>
@@ -363,9 +380,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxCp" val="1.3" />
-				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.8" />
-				<add order="0x40" stat="absorbDam" val="10" />
+				<mul stat="maxCp" val="1.3" />
+				<mul stat="MagicalMpConsumeRate" val="0.8" />
+				<add stat="absorbDam" val="10" />
 			</effect>
 		</for>
 	</skill>
@@ -376,9 +393,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxCp" val="1.3" />
-				<mul order="0x30" stat="pAtkRange" val="1.25" />
-				<basemul order="0x30" stat="rCrit" val="0.25" />
+				<mul stat="maxCp" val="1.3" />
+				<mul stat="pAtkRange" val="1.25" />
+				<mul stat="rCrit" val="1.25" />
 			</effect>
 		</for>
 	</skill>
@@ -389,9 +406,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxCp" val="1.3" />
-				<add order="0x40" stat="atkCountMax" val="10" />
-				<add order="0x40" stat="absorbDam" val="10" />
+				<mul stat="maxCp" val="1.3" />
+				<add stat="atkCountMax" val="10" />
+				<add stat="absorbDam" val="10" />
 			</effect>
 		</for>
 	</skill>
@@ -402,10 +419,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxCp" val="1.3" />
-				<mul order="0x30" stat="pAtkSpd" val="1.25" />
-				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.8" />
-				<mul order="0x30" stat="DanceMpConsumeRate" val="0.8" />
+				<mul stat="maxCp" val="1.3" />
+				<mul stat="pAtkSpd" val="1.25" />
+				<mul stat="PhysicalMpConsumeRate" val="0.8" />
+				<mul stat="DanceMpConsumeRate" val="0.8" />
 			</effect>
 		</for>
 	</skill>
@@ -416,9 +433,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxCp" val="1.3" />
-				<add order="0x40" stat="rCrit" val="100" />
-				<add order="0x40" stat="absorbDam" val="10" />
+				<mul stat="maxCp" val="1.3" />
+				<add stat="rCrit" val="100" />
+				<add stat="absorbDam" val="10" />
 			</effect>
 		</for>
 	</skill>
@@ -429,9 +446,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxCp" val="1.3" />
-				<add order="0x40" stat="rCrit" val="100" />
-				<mul order="0x30" stat="cAtk" val="1.25" />
+				<mul stat="maxCp" val="1.3" />
+				<add stat="rCrit" val="100" />
+				<mul stat="cAtk" val="1.25" />
 			</effect>
 		</for>
 	</skill>
@@ -442,9 +459,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxCp" val="1.3" />
-				<add order="0x40" stat="rEvas" val="5" />
-				<add order="0x40" stat="accCombat" val="5" />
+				<mul stat="maxCp" val="1.3" />
+				<add stat="rEvas" val="5" />
+				<add stat="accCombat" val="5" />
 			</effect>
 		</for>
 	</skill>
@@ -455,6 +472,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -469,6 +487,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -483,6 +502,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -497,6 +517,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -511,6 +532,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -525,6 +547,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -539,6 +562,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -553,6 +577,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -567,6 +592,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -581,6 +607,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -595,6 +622,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -611,6 +639,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1800000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="HealPercent">
@@ -628,6 +657,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -642,6 +672,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -656,6 +687,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -670,6 +702,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -684,6 +717,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -698,6 +732,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -712,6 +747,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -726,6 +762,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -741,6 +778,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond>
 			<player canTransform="true" />
@@ -762,10 +800,11 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxHp" val="1.25" />
+				<mul stat="maxHp" val="1.25" />
 			</effect>
 		</for>
 	</skill>
@@ -780,10 +819,11 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxMp" val="1.25" />
+				<mul stat="maxMp" val="1.25" />
 			</effect>
 		</for>
 	</skill>
@@ -799,6 +839,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="43200000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="PC_BODY" />
 		<cond>
 			<player canResurrect="true" />
@@ -821,10 +862,11 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1080000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="runSpd" val="20" />
+				<add stat="runSpd" val="20" />
 			</effect>
 		</for>
 	</skill>
@@ -839,10 +881,11 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="86400000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="rEvas" val="4" />
+				<add stat="rEvas" val="4" />
 			</effect>
 		</for>
 	</skill>
@@ -859,11 +902,12 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="reflectDam" val="20" />
+				<add stat="reflectDam" val="20" />
 			</effect>
 		</for>
 	</skill>
@@ -880,11 +924,12 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="regMp" val="3.09" />
+				<add stat="regMp" val="3.09" />
 			</effect>
 		</for>
 	</skill>
@@ -901,6 +946,7 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
@@ -924,10 +970,11 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="cAtk" val="1.35" />
+				<mul stat="cAtk" val="1.35" />
 			</effect>
 		</for>
 	</skill>
@@ -942,10 +989,11 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="86400000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="rEvas" val="4" />
+				<add stat="rEvas" val="4" />
 			</effect>
 		</for>
 	</skill>
@@ -961,10 +1009,11 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="mCritRate" val="2" />
+				<add stat="mCritRate" val="2" />
 			</effect>
 		</for>
 	</skill>
@@ -980,10 +1029,11 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1080000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="runSpd" val="20" />
+				<add stat="runSpd" val="20" />
 			</effect>
 		</for>
 	</skill>
@@ -1000,11 +1050,12 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="regMp" val="3.09" />
+				<add stat="regMp" val="3.09" />
 			</effect>
 		</for>
 	</skill>
@@ -1021,11 +1072,12 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="reflectDam" val="20" />
+				<add stat="reflectDam" val="20" />
 			</effect>
 		</for>
 	</skill>
@@ -1042,11 +1094,12 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
 			<effect name="Buff">
-				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
+				<sub stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
 	</skill>
@@ -1059,6 +1112,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="43200000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1087,11 +1141,12 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="darkRes" val="30" />
+				<add stat="darkRes" val="30" />
 			</effect>
 		</for>
 	</skill>
@@ -1107,10 +1162,11 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1080000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="runSpd" val="20" />
+				<add stat="runSpd" val="20" />
 			</effect>
 		</for>
 	</skill>
@@ -1126,10 +1182,11 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="cAtk" val="1.35" />
+				<mul stat="cAtk" val="1.35" />
 			</effect>
 		</for>
 	</skill>
@@ -1144,10 +1201,11 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="86400000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="rEvas" val="4" />
+				<add stat="rEvas" val="4" />
 			</effect>
 		</for>
 	</skill>
@@ -1163,10 +1221,11 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="mCritRate" val="2" />
+				<add stat="mCritRate" val="2" />
 			</effect>
 		</for>
 	</skill>
@@ -1183,11 +1242,12 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="regMp" val="3.09" />
+				<add stat="regMp" val="3.09" />
 			</effect>
 		</for>
 	</skill>
@@ -1204,11 +1264,12 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="reflectDam" val="20" />
+				<add stat="reflectDam" val="20" />
 			</effect>
 		</for>
 	</skill>
@@ -1225,6 +1286,7 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
@@ -1249,11 +1311,12 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="darkRes" val="30" />
+				<add stat="darkRes" val="30" />
 			</effect>
 		</for>
 	</skill>
@@ -1269,10 +1332,11 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1080000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="runSpd" val="20" />
+				<add stat="runSpd" val="20" />
 			</effect>
 		</for>
 	</skill>
@@ -1288,10 +1352,11 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="cAtk" val="1.35" />
+				<mul stat="cAtk" val="1.35" />
 			</effect>
 		</for>
 	</skill>
@@ -1306,10 +1371,11 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="86400000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="rEvas" val="4" />
+				<add stat="rEvas" val="4" />
 			</effect>
 		</for>
 	</skill>
@@ -1325,10 +1391,11 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="mCritRate" val="2" />
+				<add stat="mCritRate" val="2" />
 			</effect>
 		</for>
 	</skill>
@@ -1345,11 +1412,12 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="regMp" val="3.09" />
+				<add stat="regMp" val="3.09" />
 			</effect>
 		</for>
 	</skill>
@@ -1366,11 +1434,12 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="reflectDam" val="20" />
+				<add stat="reflectDam" val="20" />
 			</effect>
 		</for>
 	</skill>
@@ -1387,6 +1456,7 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
@@ -1411,11 +1481,12 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
 			<effect name="Buff">
-				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
+				<sub stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
 	</skill>
@@ -1426,6 +1497,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -1448,6 +1520,7 @@
 		<set name="operateType" val="A2" />
 		<set name="removedOnAnyActionExceptMove" val="true" />
 		<set name="reuseDelay" val="14400000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Invincible" />
@@ -1465,17 +1538,18 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.08" />
-				<mul order="0x30" stat="pAtkSpd" val="1.08" />
-				<mul order="0x30" stat="mAtk" val="1.16" />
-				<mul order="0x30" stat="mAtkSpd" val="1.08" />
-				<add order="0x40" stat="runSpd" val="8" />
-				<mul order="0x30" stat="pDef" val="0.92" />
-				<mul order="0x30" stat="mDef" val="0.84" />
-				<sub order="0x40" stat="rEvas" val="4" />
+				<mul stat="pAtk" val="1.08" />
+				<mul stat="pAtkSpd" val="1.08" />
+				<mul stat="mAtk" val="1.16" />
+				<mul stat="mAtkSpd" val="1.08" />
+				<add stat="runSpd" val="8" />
+				<mul stat="pDef" val="0.92" />
+				<mul stat="mDef" val="0.84" />
+				<sub stat="rEvas" val="4" />
 			</effect>
 		</for>
 	</skill>
@@ -1491,6 +1565,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<cond>
 			<and>
@@ -1523,10 +1598,11 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SilentMove">
-				<mul order="0x30" stat="runSpd" val="0.5" />
+				<mul stat="runSpd" val="0.5" />
 			</effect>
 		</for>
 	</skill>
@@ -1543,6 +1619,7 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="86400000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1558,6 +1635,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -1595,6 +1673,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="43200000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="PC_BODY" />
 		<cond>
 			<player canResurrect="true" />
@@ -1617,11 +1696,12 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<basemul order="0x30" stat="rCrit" val="0.3" />
-				<mul order="0x30" stat="cAtk" val="1.35" />
+				<mul stat="rCrit" val="1.3" />
+				<mul stat="cAtk" val="1.35" />
 			</effect>
 		</for>
 	</skill>
@@ -1637,6 +1717,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<cond>
 			<and>
@@ -1667,13 +1748,14 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxHp" val="1.2" />
-				<mul order="0x30" stat="maxMp" val="1.2" />
-				<add order="0x40" stat="runSpd" val="20" />
-				<sub order="0x40" stat="debuffVuln" val="10" />
+				<mul stat="maxHp" val="1.2" />
+				<mul stat="maxMp" val="1.2" />
+				<add stat="runSpd" val="20" />
+				<sub stat="debuffVuln" val="10" />
 			</effect>
 		</for>
 	</skill>
@@ -1689,13 +1771,14 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtkSpd" val="1.2" />
-				<mul order="0x30" stat="pDef" val="1.2" />
-				<mul order="0x30" stat="pAtk" val="1.1" />
-				<add order="0x40" stat="absorbDam" val="5" />
+				<mul stat="pAtkSpd" val="1.2" />
+				<mul stat="pDef" val="1.2" />
+				<mul stat="pAtk" val="1.1" />
+				<add stat="absorbDam" val="5" />
 			</effect>
 		</for>
 	</skill>

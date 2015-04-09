@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -24,7 +24,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * Vain Conclusion (191)
@@ -33,10 +32,10 @@ import com.l2jserver.gameserver.model.quest.State;
 public final class Q00191_VainConclusion extends Quest
 {
 	// NPCs
+	private static final int SHEGFIELD = 30068;
 	private static final int HEAD_BLACKSMITH_KUSTO = 30512;
 	private static final int RESEARCHER_LORAIN = 30673;
 	private static final int DOROTHY_LOCKSMITH = 30970;
-	private static final int SHEGFIELD = 30068;
 	// Items
 	private static final int REPAIRED_METALLOGRAPH = 10371;
 	// Misc
@@ -54,15 +53,15 @@ public final class Q00191_VainConclusion extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
+		
 		String htmltext = null;
 		switch (event)
 		{
-			case "30068-02.html":
 			case "30970-03.htm":
 			{
 				htmltext = event;
@@ -70,43 +69,54 @@ public final class Q00191_VainConclusion extends Quest
 			}
 			case "30970-04.htm":
 			{
-				if (st.isCreated())
+				if (qs.isCreated())
 				{
-					st.startQuest();
-					st.giveItems(REPAIRED_METALLOGRAPH, 1);
+					qs.startQuest();
+					qs.setMemoState(1);
+					giveItems(player, REPAIRED_METALLOGRAPH, 1);
 					htmltext = event;
 				}
 				break;
 			}
-			case "30512-02.html":
+			case "30068-02.html":
 			{
-				if (st.isCond(4))
+				if (qs.isMemoState(2))
 				{
-					st.giveAdena(117327, true);
-					if (player.getLevel() < MAX_LEVEL_FOR_EXP_SP)
-					{
-						st.addExpAndSp(309467, 20614);
-					}
-					st.exitQuest(false, true);
-					htmltext = event;
-				}
-				break;
-			}
-			case "30673-02.html":
-			{
-				if (st.isCond(1))
-				{
-					st.setCond(2, true);
-					st.takeItems(REPAIRED_METALLOGRAPH, -1);
 					htmltext = event;
 				}
 				break;
 			}
 			case "30068-03.html":
 			{
-				if (st.isCond(2))
+				if (qs.isMemoState(2))
 				{
-					st.setCond(3, true);
+					qs.setMemoState(3);
+					qs.setCond(3, true);
+					htmltext = event;
+				}
+				break;
+			}
+			case "30512-02.html":
+			{
+				if (qs.isMemoState(4))
+				{
+					giveAdena(player, 117327, true);
+					if (player.getLevel() < MAX_LEVEL_FOR_EXP_SP)
+					{
+						addExpAndSp(player, 309467, 20614);
+					}
+					qs.exitQuest(false, true);
+					htmltext = event;
+				}
+				break;
+			}
+			case "30673-02.html":
+			{
+				if (qs.isMemoState(1))
+				{
+					qs.setMemoState(2);
+					qs.setCond(2, true);
+					takeItems(player, REPAIRED_METALLOGRAPH, -1);
 					htmltext = event;
 				}
 				break;
@@ -118,96 +128,92 @@ public final class Q00191_VainConclusion extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
+		if (qs.isCreated())
 		{
-			return htmltext;
+			if (npc.getId() == DOROTHY_LOCKSMITH)
+			{
+				final QuestState q188 = player.getQuestState(Q00188_SealRemoval.class.getSimpleName());
+				if ((q188 != null) && q188.isCompleted())
+				{
+					htmltext = (player.getLevel() >= MIN_LEVEL) ? "30970-01.htm" : "30970-02.htm";
+				}
+			}
 		}
-		
-		switch (npc.getId())
+		else if (qs.isStarted())
 		{
-			case DOROTHY_LOCKSMITH:
+			switch (npc.getId())
 			{
-				switch (st.getState())
+				case DOROTHY_LOCKSMITH:
 				{
-					case State.CREATED:
+					if (qs.getMemoState() >= 1)
 					{
-						final QuestState qs = player.getQuestState(Q00188_SealRemoval.class.getName());
-						if ((qs != null) && qs.isCompleted())
+						htmltext = "30970-05.html";
+					}
+					break;
+				}
+				case SHEGFIELD:
+				{
+					switch (qs.getCond())
+					{
+						case 2:
 						{
-							htmltext = (player.getLevel() >= MIN_LEVEL) ? "30970-01.htm" : "30970-02.htm";
+							htmltext = "30068-01.html";
+							break;
 						}
-						break;
-					}
-					case State.STARTED:
-					{
-						if (st.getCond() >= 1)
+						case 3:
 						{
-							htmltext = "30970-05.html";
+							htmltext = "30068-04.html";
+							break;
 						}
-						break;
 					}
-					case State.COMPLETED:
-					{
-						htmltext = getAlreadyCompletedMsg(player);
-						break;
-					}
+					break;
 				}
-				break;
-			}
-			case HEAD_BLACKSMITH_KUSTO:
-			{
-				if (st.isCond(4))
+				case HEAD_BLACKSMITH_KUSTO:
 				{
-					htmltext = "30512-01.html";
+					if (qs.isMemoState(4))
+					{
+						htmltext = "30512-01.html";
+					}
+					break;
 				}
-				break;
-			}
-			case RESEARCHER_LORAIN:
-			{
-				switch (st.getCond())
+				case RESEARCHER_LORAIN:
 				{
-					case 1:
+					switch (qs.getCond())
 					{
-						htmltext = "30673-01.html";
-						break;
+						case 1:
+						{
+							htmltext = "30673-01.html";
+							break;
+						}
+						case 2:
+						{
+							htmltext = "30673-03.html";
+							break;
+						}
+						case 3:
+						{
+							qs.setMemoState(4);
+							qs.setCond(4, true);
+							htmltext = "30673-04.html";
+							break;
+						}
+						case 4:
+						{
+							htmltext = "30673-05.html";
+							break;
+						}
 					}
-					case 2:
-					{
-						htmltext = "30673-03.html";
-						break;
-					}
-					case 3:
-					{
-						st.setCond(4, true);
-						htmltext = "30673-04.html";
-						break;
-					}
-					case 4:
-					{
-						htmltext = "30673-05.html";
-						break;
-					}
+					break;
 				}
-				break;
 			}
-			case SHEGFIELD:
+		}
+		else if (qs.isCompleted())
+		{
+			if (npc.getId() == DOROTHY_LOCKSMITH)
 			{
-				switch (st.getCond())
-				{
-					case 2:
-					{
-						htmltext = "30068-01.html";
-						break;
-					}
-					case 3:
-					{
-						htmltext = "30068-04.html";
-						break;
-					}
-				}
-				break;
+				htmltext = getAlreadyCompletedMsg(player);
 			}
 		}
 		return htmltext;

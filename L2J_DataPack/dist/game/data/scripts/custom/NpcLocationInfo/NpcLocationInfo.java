@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -23,7 +23,6 @@ import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.util.Util;
 
 /**
@@ -273,12 +272,6 @@ public final class NpcLocationInfo extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
-		
-		if (st == null)
-		{
-			return htmltext;
-		}
 		
 		if (Util.isDigit(event))
 		{
@@ -288,17 +281,16 @@ public final class NpcLocationInfo extends Quest
 			if (Util.contains(NPCRADAR, npcId))
 			{
 				int x = 0, y = 0, z = 0;
-				final L2Spawn spawn = SpawnTable.getInstance().getFirstSpawn(npcId);
+				final L2Spawn spawn = SpawnTable.getInstance().findAny(npcId);
 				if (spawn != null)
 				{
 					x = spawn.getX();
 					y = spawn.getY();
 					z = spawn.getZ();
 				}
-				st.addRadar(x, y, z);
+				addRadar(player, x, y, z);
 				htmltext = "MoveToLoc.htm";
 			}
-			st.exitQuest(true);
 		}
 		return htmltext;
 	}
@@ -308,6 +300,7 @@ public final class NpcLocationInfo extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		int npcId = npc.getId();
+		getQuestState(player, true);
 		
 		if (Util.contains(NPC, npcId))
 		{

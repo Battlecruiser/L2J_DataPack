@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -28,12 +28,10 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import com.l2jserver.L2DatabaseFactory;
-import com.l2jserver.gameserver.Announcements;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.ai.L2SpecialSiegeGuardAI;
-import com.l2jserver.gameserver.datatables.ClanTable;
-import com.l2jserver.gameserver.datatables.NpcData;
+import com.l2jserver.gameserver.data.sql.impl.ClanTable;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2ClanMember;
 import com.l2jserver.gameserver.model.L2SiegeClan;
@@ -44,7 +42,6 @@ import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.TeleportWhereType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.entity.Siegable;
 import com.l2jserver.gameserver.model.entity.clanhall.ClanHallSiegeEngine;
 import com.l2jserver.gameserver.model.entity.clanhall.SiegeStatus;
@@ -52,6 +49,7 @@ import com.l2jserver.gameserver.model.zone.type.L2ResidenceHallTeleportZone;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.util.Broadcast;
 
 /**
  * @author BiggBoss
@@ -458,7 +456,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 		_hall.banishForeigners();
 		SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.REGISTRATION_TERM_FOR_S1_ENDED);
 		msg.addString(getName());
-		Announcements.getInstance().announceToAll(msg);
+		Broadcast.toAllOnlinePlayers(msg);
 		_hall.updateSiegeStatus(SiegeStatus.WAITING_BATTLE);
 		
 		_siegeTask = ThreadPoolManager.getInstance().scheduleGeneral(new SiegeStarts(), 3600000);
@@ -474,7 +472,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 			_hall.updateNextSiege();
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SIEGE_OF_S1_HAS_BEEN_CANCELED_DUE_TO_LACK_OF_INTEREST);
 			sm.addString(_hall.getName());
-			Announcements.getInstance().announceToAll(sm);
+			Broadcast.toAllOnlinePlayers(sm);
 			return;
 		}
 		
@@ -629,20 +627,6 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	{
 		try
 		{
-			L2NpcTemplate mahumTemplate = NpcData.getInstance().getTemplate(data.npc);
-			L2NpcTemplate flagTemplate = NpcData.getInstance().getTemplate(data.flag);
-			
-			if (flagTemplate == null)
-			{
-				_log.warning(getName() + ": Flag L2NpcTemplate[" + data.flag + "] does not exist!");
-				throw new NullPointerException();
-			}
-			else if (mahumTemplate == null)
-			{
-				_log.warning(getName() + ": Ally L2NpcTemplate[" + data.npc + "] does not exist!");
-				throw new NullPointerException();
-			}
-			
 			int index = 0;
 			if (_firstPhase)
 			{
@@ -654,13 +638,13 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 			}
 			Location loc = FLAG_COORDS[index];
 			
-			data.flagInstance = new L2Spawn(flagTemplate);
+			data.flagInstance = new L2Spawn(data.flag);
 			data.flagInstance.setLocation(loc);
 			data.flagInstance.setRespawnDelay(10000);
 			data.flagInstance.setAmount(1);
 			data.flagInstance.init();
 			
-			data.warrior = new L2Spawn(mahumTemplate);
+			data.warrior = new L2Spawn(data.npc);
 			data.warrior.setLocation(loc);
 			data.warrior.setRespawnDelay(10000);
 			data.warrior.setAmount(1);

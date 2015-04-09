@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -26,12 +26,12 @@ import java.util.StringTokenizer;
 import javax.script.ScriptException;
 
 import com.l2jserver.gameserver.cache.HtmCache;
+import com.l2jserver.gameserver.data.sql.impl.TeleportLocationTable;
+import com.l2jserver.gameserver.data.xml.impl.MultisellData;
+import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.datatables.ItemTable;
-import com.l2jserver.gameserver.datatables.MultisellData;
-import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.datatables.SpawnTable;
-import com.l2jserver.gameserver.datatables.TeleportLocationTable;
 import com.l2jserver.gameserver.handler.ITelnetHandler;
 import com.l2jserver.gameserver.instancemanager.DayNightSpawnManager;
 import com.l2jserver.gameserver.instancemanager.QuestManager;

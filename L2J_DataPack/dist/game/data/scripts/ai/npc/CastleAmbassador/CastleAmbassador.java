@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -140,7 +140,7 @@ public final class CastleAmbassador extends AbstractNpcAI
 		final int fortOwner = fortresss.getOwnerClan() == null ? 0 : fortresss.getOwnerClan().getId();
 		String htmltext = null;
 		
-		if (player.isClanLeader() && (player.getClan() != null) && (player.getClanId() == fortOwner))
+		if (player.isClanLeader() && (player.getClanId() == fortOwner))
 		{
 			htmltext = (fortresss.isBorderFortress()) ? "ambassador-01.html" : "ambassador.html";
 		}

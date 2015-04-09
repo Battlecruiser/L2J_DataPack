@@ -79,7 +79,7 @@ class Quest (JQuest) :
      self.questItemIds = range(3678,3683)+range(3684,3692)
 
  def onAdvEvent (self,event,npc,player):
-   st = player.getQuestState(qn)
+   st = self.getQuestState(player, False)
    if not st: return
    htmltext = event
    player=st.getPlayer()
@@ -228,7 +228,7 @@ class Quest (JQuest) :
 
  def onTalk (self,npc,player):
    htmltext = Quest.getNoQuestMsg(player)
-   st = player.getQuestState(qn)
+   st = self.getQuestState(player, True)
    if not st : return htmltext
    npcId = npc.getId()
    cond = st.getInt("cond")
@@ -277,7 +277,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill(self,npc,player,isPet):
-   st = player.getQuestState(qn)
+   st = self.getQuestState(player, False)
    if not st : return
    id = st.getState()
    if id == State.CREATED: return

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,9 +18,7 @@
  */
 package quests.Q00414_PathOfTheOrcRaider;
 
-import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.enums.QuestSound;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
@@ -176,8 +174,7 @@ public final class Q00414_PathOfTheOrcRaider extends Quest
 						if (getRandom(100) < (getQuestItemsCount(killer, GREEN_BLOOD) * 5))
 						{
 							takeItems(killer, GREEN_BLOOD, -1);
-							final L2Attackable monster = (L2Attackable) addSpawn(KURUKA_RATMAN_LEADER, npc, true, 0, true);
-							attackPlayer(monster, killer);
+							addAttackPlayerDesire(addSpawn(KURUKA_RATMAN_LEADER, npc, true, 0, true), killer);
 						}
 						else
 						{
@@ -359,15 +356,5 @@ public final class Q00414_PathOfTheOrcRaider extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	private static void attackPlayer(L2Attackable npc, L2PcInstance player)
-	{
-		if ((npc != null) && (player != null))
-		{
-			npc.setIsRunning(true);
-			npc.addDamageHate(player, 0, 999);
-			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
-		}
 	}
 }

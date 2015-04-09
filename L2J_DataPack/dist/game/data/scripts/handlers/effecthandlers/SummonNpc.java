@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,8 +18,7 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.datatables.NpcData;
-import com.l2jserver.gameserver.idfactory.IdFactory;
+import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.StatsSet;
@@ -101,7 +100,7 @@ public final class SummonNpc extends AbstractEffect
 		{
 			case "L2Decoy":
 			{
-				final L2DecoyInstance decoy = new L2DecoyInstance(IdFactory.getInstance().getNextId(), npcTemplate, player, _despawnDelay);
+				final L2DecoyInstance decoy = new L2DecoyInstance(npcTemplate, player, _despawnDelay);
 				decoy.setCurrentHp(decoy.getMaxHp());
 				decoy.setCurrentMp(decoy.getMaxMp());
 				decoy.setHeading(player.getHeading());
@@ -113,7 +112,7 @@ public final class SummonNpc extends AbstractEffect
 			}
 			case "L2EffectPoint": // TODO: Implement proper signet skills.
 			{
-				final L2EffectPointInstance effectPoint = new L2EffectPointInstance(IdFactory.getInstance().getNextId(), npcTemplate, player);
+				final L2EffectPointInstance effectPoint = new L2EffectPointInstance(npcTemplate, player);
 				effectPoint.setCurrentHp(effectPoint.getMaxHp());
 				effectPoint.setCurrentMp(effectPoint.getMaxMp());
 				int x = player.getX();
@@ -146,7 +145,7 @@ public final class SummonNpc extends AbstractEffect
 				L2Spawn spawn;
 				try
 				{
-					spawn = new L2Spawn(npcTemplate);
+					spawn = new L2Spawn(_npcId);
 				}
 				catch (Exception e)
 				{

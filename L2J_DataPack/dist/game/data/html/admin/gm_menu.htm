@@ -26,8 +26,7 @@
 <td><button value="TradeOff" action="bypass -h admin_tradeoff" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 <td><button value="Invul" action="bypass -h admin_invul" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr><tr>
-<td><button value="Announc" action="bypass -h admin_list_announcements" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="AutoAnn" action="bypass -h admin_list_autoann $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Announces" action="bypass -h admin_announces list" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 <td><button value="Enhance" action="bypass -h admin_enchant" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 <td><button value="GM Shop" action="bypass -h admin_gmshop" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr><tr>
@@ -47,9 +46,10 @@
 </tr></table><br>
 <center><multiedit var="new_announcement" width=250 height=50></center>
 <table width="160"><tr>
-<td><button value="Announce" action="bypass -h admin_announce_menu $new_announcement" width=95 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Crit. Announce" action="bypass -h admin_critannounce_menu $new_announcement" width=95 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="GM Chat" action="bypass -h admin_gmchat_menu $new_announcement" width=95 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Announce" action="bypass -h admin_announce $new_announcement" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Critical" action="bypass -h admin_announce_crit $new_announcement" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="On-Screen" action="bypass -h admin_announce_screen $new_announcement" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="GM Chat" action="bypass -h admin_gmchat_menu $new_announcement" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr></table><br>
 <table width=270><tr>
 <td><button value="Fenrir" action="bypass -h admin_ride_wolf" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>

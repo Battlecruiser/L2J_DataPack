@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,11 +18,10 @@
  */
 package custom.NewbieCoupons;
 
-import com.l2jserver.gameserver.datatables.MultisellData;
+import com.l2jserver.gameserver.data.xml.impl.MultisellData;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
  * Newbie Weapon/Accesories Coupons for the Hellbound opening event.<br>
@@ -79,7 +78,6 @@ public final class NewbieCoupons extends Quest
 			return htmltext;
 		}
 		
-		QuestState st = player.getQuestState(getName());
 		int newbie = player.getNewbie();
 		int level = player.getLevel();
 		int occupation_level = player.getClassId().level();
@@ -95,7 +93,7 @@ public final class NewbieCoupons extends Quest
 				if ((newbie | NEWBIE_WEAPON) != newbie)
 				{
 					player.setNewbie(newbie | NEWBIE_WEAPON);
-					st.giveItems(COUPON_ONE, 5);
+					giveItems(player, COUPON_ONE, 5);
 					htmltext = "30598-2.htm"; // here's the coupon you requested
 				}
 				else
@@ -116,7 +114,7 @@ public final class NewbieCoupons extends Quest
 				if ((newbie | NEWBIE_ACCESORY) != newbie)
 				{
 					player.setNewbie(newbie | NEWBIE_ACCESORY);
-					st.giveItems(COUPON_TWO, 1);
+					giveItems(player, COUPON_TWO, 1);
 					htmltext = "30598-5.htm"; // here's the coupon you requested
 				}
 				else
@@ -154,11 +152,7 @@ public final class NewbieCoupons extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			st = newQuestState(player);
-		}
+		getQuestState(player, true);
 		
 		return "30598.htm";
 	}

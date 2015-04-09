@@ -422,10 +422,10 @@
 			<player categoryType="ALL_WOLF_GROUP" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pAtk" val="7" />
-			<add order="0x10" stat="mAtk" val="8" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="277" />
+			<add stat="pAtk" val="7" />
+			<add stat="mAtk" val="8" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="277" />
 		</for>
 	</item>
 	<item id="3440" type="EtcItem" name="Cargo Box">
@@ -689,11 +689,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="10" />
-			<set order="0x08" stat="mAtk" val="9" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="10" />
+			<set stat="mAtk" val="9" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="3472" type="EtcItem" name="Blood Medusa">

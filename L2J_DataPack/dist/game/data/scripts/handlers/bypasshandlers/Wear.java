@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -22,7 +22,7 @@ import java.util.StringTokenizer;
 import java.util.logging.Level;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.BuyListData;
+import com.l2jserver.gameserver.data.xml.impl.BuyListData;
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;

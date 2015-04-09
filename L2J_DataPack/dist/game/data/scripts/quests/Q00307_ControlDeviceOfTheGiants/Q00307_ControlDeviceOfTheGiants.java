@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -59,7 +59,7 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -124,7 +124,7 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 		{
 			return super.onKill(npc, player, isSummon);
 		}
-		final QuestState st = partyMember.getQuestState(getName());
+		final QuestState st = getQuestState(partyMember, false);
 		
 		switch (npc.getId())
 		{
@@ -152,7 +152,7 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 				{
 					for (L2PcInstance pl : player.getParty().getMembers())
 					{
-						final QuestState qs = pl.getQuestState(getName());
+						final QuestState qs = getQuestState(pl, false);
 						
 						if ((qs != null) && qs.isCond(1))
 						{
@@ -171,7 +171,7 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, true);
 		if (st == null)
 		{
 			return htmltext;

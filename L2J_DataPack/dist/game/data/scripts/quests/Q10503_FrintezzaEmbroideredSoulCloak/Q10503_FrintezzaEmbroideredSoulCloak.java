@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -56,20 +56,20 @@ public class Q10503_FrintezzaEmbroideredSoulCloak extends Quest
 	@Override
 	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
 		{
-			final long currentCount = st.getQuestItemsCount(FRINTEZZAS_SOUL_FRAGMENT);
+			final long currentCount = getQuestItemsCount(player, FRINTEZZAS_SOUL_FRAGMENT);
 			final long count = getRandom(1, 3);
 			if (count >= (FRAGMENT_COUNT - currentCount))
 			{
-				st.giveItems(FRINTEZZAS_SOUL_FRAGMENT, FRAGMENT_COUNT - currentCount);
+				giveItems(player, FRINTEZZAS_SOUL_FRAGMENT, FRAGMENT_COUNT - currentCount);
 				st.setCond(2, true);
 			}
 			else
 			{
-				st.giveItems(FRINTEZZAS_SOUL_FRAGMENT, count);
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				giveItems(player, FRINTEZZAS_SOUL_FRAGMENT, count);
+				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 	}
@@ -77,7 +77,7 @@ public class Q10503_FrintezzaEmbroideredSoulCloak extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if ((st != null) && (player.getLevel() >= MIN_LEVEL) && event.equals("32612-04.html"))
 		{
 			st.startQuest();
@@ -96,12 +96,7 @@ public class Q10503_FrintezzaEmbroideredSoulCloak extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return getNoQuestMsg(player);
-		}
-		
+		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		switch (st.getState())
 		{
@@ -121,10 +116,10 @@ public class Q10503_FrintezzaEmbroideredSoulCloak extends Quest
 					}
 					case 2:
 					{
-						if (st.getQuestItemsCount(FRINTEZZAS_SOUL_FRAGMENT) >= FRAGMENT_COUNT)
+						if (getQuestItemsCount(player, FRINTEZZAS_SOUL_FRAGMENT) >= FRAGMENT_COUNT)
 						{
-							st.giveItems(SOUL_CLOAK_OF_FRINTEZZA, 1);
-							st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+							giveItems(player, SOUL_CLOAK_OF_FRINTEZZA, 1);
+							playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 							st.exitQuest(false, true);
 							htmltext = "32612-06.html";
 						}

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -69,9 +69,9 @@ public class AdminPathNode implements IAdminCommandHandler
 		}
 		else if (command.equals("admin_find_path"))
 		{
-			if (Config.GEODATA < 2)
+			if (Config.PATHFINDING == 0)
 			{
-				activeChar.sendMessage("PathFinding has not been enabled.");
+				activeChar.sendMessage("PathFinding is disabled.");
 				return true;
 			}
 			if (activeChar.getTarget() != null)

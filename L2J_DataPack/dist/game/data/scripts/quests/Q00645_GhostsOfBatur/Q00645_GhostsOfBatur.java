@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -62,7 +62,7 @@ public class Q00645_GhostsOfBatur extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -104,7 +104,7 @@ public class Q00645_GhostsOfBatur extends Quest
 		{
 			if (getRandom(1000) < CHANCES[npc.getId() - CONTAMINATED_MOREK_WARRIOR])
 			{
-				final QuestState st = player.getQuestState(getName());
+				final QuestState st = getQuestState(player, false);
 				st.giveItems(CURSED_BURIAL_ITEMS, 1);
 				if (st.isCond(1) && (st.getQuestItemsCount(CURSED_BURIAL_ITEMS) >= 500))
 				{
@@ -122,7 +122,7 @@ public class Q00645_GhostsOfBatur extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, true);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);

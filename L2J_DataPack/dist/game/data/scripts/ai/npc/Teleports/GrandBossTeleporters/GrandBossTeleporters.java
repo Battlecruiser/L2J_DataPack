@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -22,7 +22,7 @@ import ai.individual.Valakas;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.DoorTable;
+import com.l2jserver.gameserver.data.xml.impl.DoorData;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.model.Location;
@@ -69,14 +69,9 @@ public final class GrandBossTeleporters extends AbstractNpcAI
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		
-		if (st == null)
-		{
-			st = newQuestState(player);
-		}
-		
-		if (st.hasQuestItems(VACUALITE_FLOATING_STONE))
+		if (hasQuestItems(player, VACUALITE_FLOATING_STONE))
 		{
 			player.teleToLocation(ENTER_HALL_OF_FLAMES);
 			st.set("allowEnter", "1");
@@ -92,12 +87,7 @@ public final class GrandBossTeleporters extends AbstractNpcAI
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
-		QuestState st = player.getQuestState(getName());
-		
-		if (st == null)
-		{
-			return null;
-		}
+		final QuestState st = getQuestState(player, true);
 		
 		switch (npc.getId())
 		{
@@ -156,17 +146,17 @@ public final class GrandBossTeleporters extends AbstractNpcAI
 			}
 			case 31384:
 			{
-				DoorTable.getInstance().getDoor(24210004).openMe();
+				DoorData.getInstance().getDoor(24210004).openMe();
 				break;
 			}
 			case 31686:
 			{
-				DoorTable.getInstance().getDoor(24210006).openMe();
+				DoorData.getInstance().getDoor(24210006).openMe();
 				break;
 			}
 			case 31687:
 			{
-				DoorTable.getInstance().getDoor(24210005).openMe();
+				DoorData.getInstance().getDoor(24210005).openMe();
 				break;
 			}
 			case 31540:

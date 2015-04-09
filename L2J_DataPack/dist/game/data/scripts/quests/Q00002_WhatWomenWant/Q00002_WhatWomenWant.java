@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -58,7 +58,7 @@ public class Q00002_WhatWomenWant extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -69,20 +69,20 @@ public class Q00002_WhatWomenWant extends Quest
 		{
 			case "30223-04.htm":
 				st.startQuest();
-				st.giveItems(ARUJIENS_LETTER1, 1);
+				giveItems(player, ARUJIENS_LETTER1, 1);
 				break;
 			case "30223-08.html":
-				st.takeItems(ARUJIENS_LETTER3, -1);
-				st.giveItems(POETRY_BOOK, 1);
+				takeItems(player, ARUJIENS_LETTER3, -1);
+				giveItems(player, POETRY_BOOK, 1);
 				st.setCond(4, true);
 				break;
 			case "30223-09.html":
-				st.giveAdena(450, true);
+				giveAdena(player, 450, true);
 				st.exitQuest(false, true);
 				// Newbie Guide
 				showOnScreenMsg(player, NpcStringId.DELIVERY_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_GUIDE, 2, 5000);
-				st.addExpAndSp(4254, 335);
-				st.giveAdena(1850, true);
+				addExpAndSp(player, 4254, 335);
+				giveAdena(player, 1850, true);
 				break;
 			case "30223-03.html":
 				break;
@@ -97,12 +97,7 @@ public class Q00002_WhatWomenWant extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
+		final QuestState st = getQuestState(player, true);
 		switch (npc.getId())
 		{
 			case ARUJIEN:
@@ -127,13 +122,13 @@ public class Q00002_WhatWomenWant extends Quest
 								htmltext = "30223-10.html";
 								break;
 							case 5:
-								st.giveItems(EARRING, 1);
+								giveItems(player, EARRING, 1);
 								st.exitQuest(false, true);
 								htmltext = "30223-11.html";
 								// Newbie Guide
 								showOnScreenMsg(player, NpcStringId.DELIVERY_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_GUIDE, 2, 5000);
-								st.addExpAndSp(4254, 335);
-								st.giveAdena(1850, true);
+								addExpAndSp(player, 4254, 335);
+								giveAdena(player, 1850, true);
 								break;
 						}
 						break;
@@ -148,8 +143,8 @@ public class Q00002_WhatWomenWant extends Quest
 					if (st.isCond(1))
 					{
 						st.setCond(2, true);
-						st.takeItems(ARUJIENS_LETTER1, -1);
-						st.giveItems(ARUJIENS_LETTER2, 1);
+						takeItems(player, ARUJIENS_LETTER1, -1);
+						giveItems(player, ARUJIENS_LETTER2, 1);
 						htmltext = "30146-01.html";
 					}
 					else
@@ -164,8 +159,8 @@ public class Q00002_WhatWomenWant extends Quest
 					if (st.isCond(2))
 					{
 						st.setCond(3, true);
-						st.takeItems(ARUJIENS_LETTER2, -1);
-						st.giveItems(ARUJIENS_LETTER3, 1);
+						takeItems(player, ARUJIENS_LETTER2, -1);
+						giveItems(player, ARUJIENS_LETTER3, 1);
 						htmltext = "30150-01.html";
 					}
 					else
@@ -180,8 +175,8 @@ public class Q00002_WhatWomenWant extends Quest
 					if (st.isCond(4))
 					{
 						st.setCond(5, true);
-						st.takeItems(POETRY_BOOK, -1);
-						st.giveItems(GREENIS_LETTER, 1);
+						takeItems(player, POETRY_BOOK, -1);
+						giveItems(player, GREENIS_LETTER, 1);
 						htmltext = "30157-02.html";
 					}
 					else if (st.isCond(5))

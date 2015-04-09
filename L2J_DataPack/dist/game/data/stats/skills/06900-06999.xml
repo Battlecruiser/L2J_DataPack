@@ -61,6 +61,7 @@
 		<!-- Transforms into a game Master. -->
 		<set name="abnormalTime" val="-1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Transformation">
@@ -97,11 +98,12 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="pDef" val="360" />
-				<add order="0x40" stat="mDef" val="270" />
+				<add stat="pDef" val="360" />
+				<add stat="mDef" val="270" />
 			</effect>
 		</for>
 	</skill>
@@ -143,16 +145,17 @@
 		<set name="icon" val="BranchSys2.icon.skill0952" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="74" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" /> <!-- FIXME: value unconfirmed -->
 		<set name="reuseDelay" val="15000" /> <!-- FIXME: value unconfirmed -->
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.15" />
-				<basemul order="0x30" stat="rCrit" val="0.1" />
-				<mul order="0x30" stat="cAtk" val="1.1" />
-				<mul order="0x30" stat="pAtkSpd" val="1.03" />
-				<add order="0x40" stat="runSpd" val="5" />
+				<mul stat="pAtk" val="1.15" />
+				<mul stat="rCrit" val="1.1" />
+				<mul stat="cAtk" val="1.1" />
+				<mul stat="pAtkSpd" val="1.03" />
+				<add stat="runSpd" val="5" />
 			</effect>
 		</for>
 	</skill>

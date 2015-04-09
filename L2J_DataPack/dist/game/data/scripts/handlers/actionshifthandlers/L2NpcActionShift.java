@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,8 @@
  */
 package handlers.actionshifthandlers;
 
+import handlers.bypasshandlers.NpcViewMod;
+
 import java.util.Set;
 
 import com.l2jserver.Config;
@@ -33,8 +35,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.util.Util;
-
-import handlers.bypasshandlers.NpcViewMod;
 
 public class L2NpcActionShift implements IActionShiftHandler
 {

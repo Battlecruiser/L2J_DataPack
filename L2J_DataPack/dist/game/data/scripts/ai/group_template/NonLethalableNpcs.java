@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -25,14 +25,17 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 /**
  * @author UnAfraid
  */
-public class NonLethalableNpcs extends AbstractNpcAI
+public final class NonLethalableNpcs extends AbstractNpcAI
 {
-	private static final int HEADQUARTERS = 35062;
+	private static final int[] NPCS =
+	{
+		35062, // Headquarters
+	};
 	
 	public NonLethalableNpcs()
 	{
 		super(NonLethalableNpcs.class.getSimpleName(), "ai/group_template");
-		addSpawnId(HEADQUARTERS);
+		addSpawnId(NPCS);
 	}
 	
 	@Override

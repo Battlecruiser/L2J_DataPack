@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -115,7 +115,7 @@ public class TerritoryWarSuperClass extends Quest
 	
 	private void handleKillTheQuest(L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		int kill = 1;
 		int max = 10;
 		if (st == null)
@@ -140,7 +140,7 @@ public class TerritoryWarSuperClass extends Quest
 			if (kill >= max)
 			{
 				TerritoryWarManager.getInstance().giveTWQuestPoint(player);
-				st.addExpAndSp(534000, 51000);
+				addExpAndSp(player, 534000, 51000);
 				st.set("doneDate", String.valueOf(Calendar.getInstance().get(Calendar.DAY_OF_YEAR)));
 				st.exitQuest(true);
 				player.sendPacket(new ExShowScreenMessage(npcString[1], 2, 10000));

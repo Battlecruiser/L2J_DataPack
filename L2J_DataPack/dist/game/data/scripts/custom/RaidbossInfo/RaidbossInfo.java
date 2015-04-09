@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,7 +21,7 @@ package custom.RaidbossInfo;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.l2jserver.gameserver.datatables.NpcData;
+import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.Location;
@@ -81,7 +81,7 @@ public final class RaidbossInfo extends Quest
 			
 			if (RAIDS.contains(bossId))
 			{
-				final L2Spawn spawn = SpawnTable.getInstance().getFirstSpawn(bossId);
+				final L2Spawn spawn = SpawnTable.getInstance().findAny(bossId);
 				if (spawn != null)
 				{
 					final Location loc = spawn.getLocation();

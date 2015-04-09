@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -70,7 +70,7 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -124,7 +124,7 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 		final L2PcInstance partyMember = getRandomPartyMember(player, 1);
 		if (partyMember != null)
 		{
-			final QuestState st = partyMember.getQuestState(getName());
+			final QuestState st = getQuestState(partyMember, false);
 			if (st.isCond(1) && (getRandom(1000) < MOBS_SAC.get(npc.getId())))
 			{
 				st.giveItems(BRACELET_OF_LIZARDMAN, 1);
@@ -145,7 +145,7 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, true);
 		if (st == null)
 		{
 			return htmltext;

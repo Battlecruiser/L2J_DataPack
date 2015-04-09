@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -168,16 +168,12 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 					creature1.setIsNoRndWalk(true);
 					final L2Npc creature2 = addSpawn(CREATURE_OF_THE_DUSK2, 89524, -238131, -9632, 56, false, 0, false, player.getInstanceId());
 					creature2.setIsNoRndWalk(true);
-					ThreadPoolManager.getInstance().scheduleGeneral(new Runnable()
+					ThreadPoolManager.getInstance().scheduleGeneral(() ->
 					{
-						@Override
-						public void run()
-						{
-							creature1.deleteMe();
-							creature2.deleteMe();
-							st.unset("ex");
-							isBusy = false;
-						}
+						creature1.deleteMe();
+						creature2.deleteMe();
+						st.unset("ex");
+						isBusy = false;
 					}, 60000);
 				}
 				break;

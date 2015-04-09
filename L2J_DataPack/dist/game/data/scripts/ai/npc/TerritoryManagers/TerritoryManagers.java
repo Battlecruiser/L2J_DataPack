@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,7 +20,7 @@ package ai.npc.TerritoryManagers;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.datatables.MultisellData;
+import com.l2jserver.gameserver.data.xml.impl.MultisellData;
 import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
@@ -39,7 +39,7 @@ import com.l2jserver.gameserver.network.serverpackets.UserInfo;
 /**
  * Retail AI for Territory Managers.
  * @author Zoey76
- * @version 1.0b
+ * @version 1.1
  */
 public final class TerritoryManagers extends AbstractNpcAI
 {
@@ -220,9 +220,9 @@ public final class TerritoryManagers extends AbstractNpcAI
 			case "ReceiveRewards":
 			{
 				int badgeId = 57;
-				if (TerritoryWarManager.getInstance().TERRITORY_ITEM_IDS.containsKey(territoryId))
+				if (TerritoryWarManager.TERRITORY_ITEM_IDS.containsKey(territoryId))
 				{
-					badgeId = TerritoryWarManager.getInstance().TERRITORY_ITEM_IDS.get(territoryId);
+					badgeId = TerritoryWarManager.TERRITORY_ITEM_IDS.get(territoryId);
 				}
 				int[] reward = TerritoryWarManager.getInstance().calcReward(player);
 				final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
@@ -289,7 +289,7 @@ public final class TerritoryManagers extends AbstractNpcAI
 			{
 				for (int itemId : itemIds)
 				{
-					qs.takeItems(itemId, -1);
+					takeItems(player, itemId, -1);
 				}
 			}
 			// Completes the quest.

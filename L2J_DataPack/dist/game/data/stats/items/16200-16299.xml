@@ -22,13 +22,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3552-1;3653-1;3569-2;3896-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="482" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="482" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="16201" type="Weapon" name="Vesper Retributer - Gale {PvP} - Health">
@@ -53,13 +53,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3552-1;3653-1;3013-3;3896-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="482" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="482" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="16202" type="Weapon" name="Vesper Retributer - Gale {PvP} - HP Drain">
@@ -84,13 +84,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3552-1;3653-1;3568-2;3896-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="482" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="482" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="16203" type="Weapon" name="Vesper Caster - Cleverness {PvP} - Acumen">
@@ -116,13 +116,13 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3552-1;3654-1;3047-2;3853-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="317" />
-			<set order="0x08" stat="mAtk" val="234" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="317" />
+			<set stat="mAtk" val="234" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="16204" type="Weapon" name="Vesper Caster - Cleverness {PvP} - MP Regeneration">
@@ -148,13 +148,13 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3552-1;3654-1;3576-2;3853-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="317" />
-			<set order="0x08" stat="mAtk" val="234" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="317" />
+			<set stat="mAtk" val="234" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="16205" type="Weapon" name="Vesper Caster - Cleverness {PvP} - Mana Up">
@@ -180,13 +180,13 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3552-1;3654-1;3014-2;3853-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="317" />
-			<set order="0x08" stat="mAtk" val="234" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="317" />
+			<set stat="mAtk" val="234" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="16206" type="Weapon" name="Vesper Singer - Hail {PvP} - Empower">
@@ -212,13 +212,13 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3552-1;3654-1;3575-2;3899-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="386" />
-			<set order="0x08" stat="mAtk" val="257" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="386" />
+			<set stat="mAtk" val="257" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="16207" type="Weapon" name="Vesper Singer - Hail {PvP} - MP Regeneration">
@@ -244,13 +244,13 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3552-1;3654-1;3576-2;3899-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="386" />
-			<set order="0x08" stat="mAtk" val="257" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="386" />
+			<set stat="mAtk" val="257" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="16208" type="Weapon" name="Vesper Singer - Hail {PvP} - Magic Hold">
@@ -278,13 +278,13 @@
 		<set name="onmagic_skill" val="3577-2" />
 		<set name="item_skill" val="3552-3;3654-1;3899-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="386" />
-			<set order="0x08" stat="mAtk" val="257" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="386" />
+			<set stat="mAtk" val="257" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="16209" type="Weapon" name="Vesper Thrower - Clairvoyance {PvP} - Cheap Shot">
@@ -311,13 +311,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3552-3;3655-1;8312-2;3865-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="724" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="293" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="724" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="293" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="16210" type="Weapon" name="Vesper Thrower - Clairvoyance {PvP} - Focus">
@@ -344,13 +344,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3552-1;3655-1;3567-3;3865-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="724" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="293" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="724" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="293" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="16211" type="Weapon" name="Vesper Thrower - Clairvoyance {PvP} - Critical Slow">
@@ -378,13 +378,13 @@
 		<set name="oncrit_skill" val="3574-3" />
 		<set name="item_skill" val="3552-3;3655-1;3865-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="724" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="293" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="724" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="293" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="16212" type="Weapon" name="Vesper Pincer- Thunder {PvP} - Haste">
@@ -413,13 +413,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="359" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="406" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="359" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="406" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="16213" type="Weapon" name="Vesper Pincer- Thunder {PvP} - Health">
@@ -448,13 +448,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="359" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="406" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="359" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="406" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="16214" type="Weapon" name="Vesper Pincer- Thunder {PvP} - Focus">
@@ -483,13 +483,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="359" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="406" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="359" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="406" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="16215" type="Weapon" name="Vesper Shooter - Clairvoyance {PvP} - Cheap Shot">
@@ -518,13 +518,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="444" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="303" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="444" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="303" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="16216" type="Weapon" name="Vesper Shooter - Clairvoyance {PvP} - Focus">
@@ -553,13 +553,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="444" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="303" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="444" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="303" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="16217" type="Weapon" name="Vesper Shooter - Clairvoyance {PvP} - Critical Slow">
@@ -589,13 +589,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="444" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="303" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="444" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="303" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="16218" type="Weapon" name="Vesper Nagan - Gale {PvP} - Haste">
@@ -623,13 +623,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="429" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="2" />
-			<set order="0x08" stat="pAtkSpd" val="350" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="429" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="2" />
+			<set stat="pAtkSpd" val="350" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="16219" type="Weapon" name="Vesper Nagan - Gale {PvP} - Health">
@@ -657,13 +657,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="429" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="2" />
-			<set order="0x08" stat="pAtkSpd" val="350" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="429" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="2" />
+			<set stat="pAtkSpd" val="350" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="16220" type="Weapon" name="Vesper Nagan - Gale {PvP} - Focus">
@@ -691,13 +691,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="429" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="2" />
-			<set order="0x08" stat="pAtkSpd" val="350" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="429" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="2" />
+			<set stat="pAtkSpd" val="350" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="16221" type="EtcItem" name="Sealed Moirai Helmet of Chaos">
@@ -711,7 +711,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="96" />
+			<add order="0" stat="pDef" val="96" />
 		</for>
 	</item>
 	<item id="16222" type="EtcItem" name="Sealed Moirai Leather Helmet of Chaos">
@@ -722,7 +722,7 @@
 		<set name="weight" val="530" />
 		<set name="price" val="12627000" />
 		<for>
-			<add order="0x10" stat="pDef" val="96" />
+			<add order="0" stat="pDef" val="96" />
 		</for>
 	</item>
 	<item id="16223" type="EtcItem" name="Sealed Moirai Circlet of Chaos">
@@ -736,7 +736,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="96" />
+			<add order="0" stat="pDef" val="96" />
 		</for>
 	</item>
 	<item id="16224" type="EtcItem" name="Sealed Moirai Breastplate of Chaos">
@@ -751,7 +751,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="225" />
+			<add order="0" stat="pDef" val="225" />
 		</for>
 	</item>
 	<item id="16225" type="EtcItem" name="Sealed Moirai Leather Breastplate of Chaos">
@@ -763,7 +763,7 @@
 		<set name="weight" val="4140" />
 		<set name="price" val="25255000" />
 		<for>
-			<add order="0x10" stat="pDef" val="169" />
+			<add order="0" stat="pDef" val="169" />
 		</for>
 	</item>
 	<item id="16226" type="EtcItem" name="Sealed Moirai Tunic of Chaos">
@@ -778,8 +778,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="112" />
-			<add order="0x40" stat="maxMp" val="614" />
+			<add order="0" stat="pDef" val="112" />
+			<add stat="maxMp" val="614" />
 		</for>
 	</item>
 	<item id="16227" type="EtcItem" name="Sealed Moirai Gaiter of Chaos">
@@ -794,7 +794,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="141" />
+			<add order="0" stat="pDef" val="141" />
 		</for>
 	</item>
 	<item id="16228" type="EtcItem" name="Sealed Moirai Leather Legging of Chaos">
@@ -806,7 +806,7 @@
 		<set name="weight" val="1320" />
 		<set name="price" val="15784000" />
 		<for>
-			<add order="0x10" stat="pDef" val="105" />
+			<add order="0" stat="pDef" val="105" />
 		</for>
 	</item>
 	<item id="16229" type="EtcItem" name="Sealed Moirai Stockings of Chaos">
@@ -821,8 +821,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="70" />
-			<add order="0x40" stat="maxMp" val="392" />
+			<add order="0" stat="pDef" val="70" />
+			<add stat="maxMp" val="392" />
 		</for>
 	</item>
 	<item id="16230" type="EtcItem" name="Sealed Moirai Gauntlet of Chaos">
@@ -836,7 +836,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="64" />
+			<add order="0" stat="pDef" val="64" />
 		</for>
 	</item>
 	<item id="16231" type="EtcItem" name="Sealed Moirai Leather Gloves of Chaos">
@@ -847,7 +847,7 @@
 		<set name="weight" val="510" />
 		<set name="price" val="8418000" />
 		<for>
-			<add order="0x10" stat="pDef" val="64" />
+			<add order="0" stat="pDef" val="64" />
 		</for>
 	</item>
 	<item id="16232" type="EtcItem" name="Sealed Moirai Gloves of Chaos">
@@ -861,7 +861,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="64" />
+			<add order="0" stat="pDef" val="64" />
 		</for>
 	</item>
 	<item id="16233" type="EtcItem" name="Sealed Moirai Boots of Chaos">
@@ -875,7 +875,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="64" />
+			<add order="0" stat="pDef" val="64" />
 		</for>
 	</item>
 	<item id="16234" type="EtcItem" name="Sealed Moirai Leather Boots of Chaos">
@@ -886,7 +886,7 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="8418000" />
 		<for>
-			<add order="0x10" stat="pDef" val="64" />
+			<add order="0" stat="pDef" val="64" />
 		</for>
 	</item>
 	<item id="16235" type="EtcItem" name="Sealed Moirai Shoes of Chaos">
@@ -900,7 +900,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="64" />
+			<add order="0" stat="pDef" val="64" />
 		</for>
 	</item>
 	<item id="16236" type="EtcItem" name="Sealed Moirai Shield of Chaos">
@@ -914,9 +914,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="337" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="337" />
 		</for>
 	</item>
 	<item id="16237" type="EtcItem" name="Sealed Moirai Sigil of Chaos">
@@ -930,7 +930,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="16238" type="EtcItem" name="Sealed Vesper Helmet of Chaos">
@@ -944,7 +944,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="101" />
+			<add order="0" stat="pDef" val="101" />
 		</for>
 	</item>
 	<item id="16239" type="EtcItem" name="Sealed Vesper Leather Helmet of Chaos">
@@ -955,7 +955,7 @@
 		<set name="weight" val="530" />
 		<set name="price" val="17500000" />
 		<for>
-			<add order="0x10" stat="pDef" val="101" />
+			<add order="0" stat="pDef" val="101" />
 		</for>
 	</item>
 	<item id="16240" type="EtcItem" name="Sealed Vesper Circlet of Chaos">
@@ -969,7 +969,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="101" />
+			<add order="0" stat="pDef" val="101" />
 		</for>
 	</item>
 	<item id="16241" type="EtcItem" name="Sealed Vesper Breastplate of Chaos">
@@ -984,7 +984,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="250" />
+			<add order="0" stat="pDef" val="250" />
 		</for>
 	</item>
 	<item id="16242" type="EtcItem" name="Sealed Vesper Leather Breastplate of Chaos">
@@ -996,7 +996,7 @@
 		<set name="weight" val="4140" />
 		<set name="price" val="35000000" />
 		<for>
-			<add order="0x10" stat="pDef" val="187" />
+			<add order="0" stat="pDef" val="187" />
 		</for>
 	</item>
 	<item id="16243" type="EtcItem" name="Sealed Moirai Tunic of Chaos">
@@ -1011,8 +1011,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="125" />
-			<add order="0x40" stat="maxMp" val="637" />
+			<add order="0" stat="pDef" val="125" />
+			<add stat="maxMp" val="637" />
 		</for>
 	</item>
 	<item id="16244" type="EtcItem" name="Sealed Vesper Gaiter of Chaos">
@@ -1027,7 +1027,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="156" />
+			<add order="0" stat="pDef" val="156" />
 		</for>
 	</item>
 	<item id="16245" type="EtcItem" name="Sealed Vesper Leather Legging of Chaos">
@@ -1039,7 +1039,7 @@
 		<set name="weight" val="1320" />
 		<set name="price" val="21876000" />
 		<for>
-			<add order="0x10" stat="pDef" val="117" />
+			<add order="0" stat="pDef" val="117" />
 		</for>
 	</item>
 	<item id="16246" type="EtcItem" name="Sealed Vesper Stockings of Chaos">
@@ -1054,8 +1054,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="78" />
-			<add order="0x40" stat="maxMp" val="415" />
+			<add order="0" stat="pDef" val="78" />
+			<add stat="maxMp" val="415" />
 		</for>
 	</item>
 	<item id="16247" type="EtcItem" name="Sealed Vesper Gauntlet of Chaos">
@@ -1069,7 +1069,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="68" />
+			<add order="0" stat="pDef" val="68" />
 		</for>
 	</item>
 	<item id="16248" type="EtcItem" name="Sealed Vesper Leather Gloves of Chaos">
@@ -1080,7 +1080,7 @@
 		<set name="weight" val="510" />
 		<set name="price" val="11667000" />
 		<for>
-			<add order="0x10" stat="pDef" val="68" />
+			<add order="0" stat="pDef" val="68" />
 		</for>
 	</item>
 	<item id="16249" type="EtcItem" name="Sealed Vesper Gloves of Chaos">
@@ -1094,7 +1094,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="68" />
+			<add order="0" stat="pDef" val="68" />
 		</for>
 	</item>
 	<item id="16250" type="EtcItem" name="Sealed Vesper Boots of Chaos">
@@ -1108,7 +1108,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="68" />
+			<add order="0" stat="pDef" val="68" />
 		</for>
 	</item>
 	<item id="16251" type="EtcItem" name="Sealed Vesper Leather Boots of Chaos">
@@ -1119,7 +1119,7 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="11667000" />
 		<for>
-			<add order="0x10" stat="pDef" val="68" />
+			<add order="0" stat="pDef" val="68" />
 		</for>
 	</item>
 	<item id="16252" type="EtcItem" name="Sealed Vesper Shoes of Chaos">
@@ -1133,7 +1133,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="68" />
+			<add order="0" stat="pDef" val="68" />
 		</for>
 	</item>
 	<item id="16253" type="EtcItem" name="Sealed Vesper Shield of Chaos">
@@ -1147,9 +1147,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="352" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="352" />
 		</for>
 	</item>
 	<item id="16254" type="EtcItem" name="Sealed Vesper Sigil of Chaos">
@@ -1163,7 +1163,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="16255" type="EtcItem" name="Moirai Helmet of Chaos">
@@ -1178,7 +1178,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="96" />
+			<add order="0" stat="pDef" val="96" />
 		</for>
 	</item>
 	<item id="16256" type="EtcItem" name="Moirai Leather Helmet of Chaos">
@@ -1190,7 +1190,7 @@
 		<set name="weight" val="530" />
 		<set name="price" val="12627000" />
 		<for>
-			<add order="0x10" stat="pDef" val="96" />
+			<add order="0" stat="pDef" val="96" />
 		</for>
 	</item>
 	<item id="16257" type="EtcItem" name="Moirai Circlet of Chaos">
@@ -1205,7 +1205,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="96" />
+			<add order="0" stat="pDef" val="96" />
 		</for>
 	</item>
 	<item id="16258" type="EtcItem" name="Moirai Breastplate of Chaos">
@@ -1221,7 +1221,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="238" />
+			<add order="0" stat="pDef" val="238" />
 		</for>
 	</item>
 	<item id="16259" type="EtcItem" name="Moirai Leather Breastplate of Chaos">
@@ -1234,7 +1234,7 @@
 		<set name="weight" val="4140" />
 		<set name="price" val="25255000" />
 		<for>
-			<add order="0x10" stat="pDef" val="178" />
+			<add order="0" stat="pDef" val="178" />
 		</for>
 	</item>
 	<item id="16260" type="EtcItem" name="Moirai Tunic of Chaos">
@@ -1250,8 +1250,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="119" />
-			<add order="0x40" stat="maxMp" val="614" />
+			<add order="0" stat="pDef" val="119" />
+			<add stat="maxMp" val="614" />
 		</for>
 	</item>
 	<item id="16261" type="EtcItem" name="Moirai Gaiter of Chaos">
@@ -1267,7 +1267,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="149" />
+			<add order="0" stat="pDef" val="149" />
 		</for>
 	</item>
 	<item id="16262" type="EtcItem" name="Moirai Leather Legging of Chaos">
@@ -1280,7 +1280,7 @@
 		<set name="weight" val="1320" />
 		<set name="price" val="15784000" />
 		<for>
-			<add order="0x10" stat="pDef" val="111" />
+			<add order="0" stat="pDef" val="111" />
 		</for>
 	</item>
 	<item id="16263" type="EtcItem" name="Moirai Stockings of Chaos">
@@ -1296,8 +1296,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="74" />
-			<add order="0x40" stat="maxMp" val="392" />
+			<add order="0" stat="pDef" val="74" />
+			<add stat="maxMp" val="392" />
 		</for>
 	</item>
 	<item id="16264" type="EtcItem" name="Moirai Gauntlet of Chaos">
@@ -1312,7 +1312,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="64" />
+			<add order="0" stat="pDef" val="64" />
 		</for>
 	</item>
 	<item id="16265" type="EtcItem" name="Moirai Leather Gloves of Chaos">
@@ -1324,7 +1324,7 @@
 		<set name="weight" val="510" />
 		<set name="price" val="8418000" />
 		<for>
-			<add order="0x10" stat="pDef" val="64" />
+			<add order="0" stat="pDef" val="64" />
 		</for>
 	</item>
 	<item id="16266" type="EtcItem" name="Moirai Gloves of Chaos">
@@ -1339,7 +1339,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="64" />
+			<add order="0" stat="pDef" val="64" />
 		</for>
 	</item>
 	<item id="16267" type="EtcItem" name="Moirai Boots of Chaos">
@@ -1354,7 +1354,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="64" />
+			<add order="0" stat="pDef" val="64" />
 		</for>
 	</item>
 	<item id="16268" type="EtcItem" name="Moirai Leather Boots of Chaos">
@@ -1366,7 +1366,7 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="8418000" />
 		<for>
-			<add order="0x10" stat="pDef" val="64" />
+			<add order="0" stat="pDef" val="64" />
 		</for>
 	</item>
 	<item id="16269" type="EtcItem" name="Moirai Shoes of Chaos">
@@ -1381,7 +1381,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="64" />
+			<add order="0" stat="pDef" val="64" />
 		</for>
 	</item>
 	<item id="16270" type="EtcItem" name="Moirai Shield of Chaos">
@@ -1396,9 +1396,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="355" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="355" />
 		</for>
 	</item>
 	<item id="16271" type="EtcItem" name="Moirai Sigil of Chaos">
@@ -1414,9 +1414,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="355" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="355" />
 		</for>
 	</item>
 	<item id="16272" type="EtcItem" name="Vesper Helmet of Chaos">
@@ -1431,7 +1431,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="101" />
+			<add order="0" stat="pDef" val="101" />
 		</for>
 	</item>
 	<item id="16273" type="EtcItem" name="Vesper Leather Helmet of Chaos">
@@ -1443,7 +1443,7 @@
 		<set name="weight" val="530" />
 		<set name="price" val="17500000" />
 		<for>
-			<add order="0x10" stat="pDef" val="101" />
+			<add order="0" stat="pDef" val="101" />
 		</for>
 	</item>
 	<item id="16274" type="EtcItem" name="Vesper Circlet of Chaos">
@@ -1458,7 +1458,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="101" />
+			<add order="0" stat="pDef" val="101" />
 		</for>
 	</item>
 	<item id="16275" type="EtcItem" name="Vesper Breastplate of Chaos">
@@ -1474,7 +1474,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="250" />
+			<add order="0" stat="pDef" val="250" />
 		</for>
 	</item>
 	<item id="16276" type="EtcItem" name="Vesper Leather Breastplate of Chaos">
@@ -1487,7 +1487,7 @@
 		<set name="weight" val="4140" />
 		<set name="price" val="35000000" />
 		<for>
-			<add order="0x10" stat="pDef" val="187" />
+			<add order="0" stat="pDef" val="187" />
 		</for>
 	</item>
 	<item id="16277" type="EtcItem" name="Vesper Tunic of Chaos">
@@ -1503,8 +1503,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="125" />
-			<add order="0x40" stat="maxMp" val="637" />
+			<add order="0" stat="pDef" val="125" />
+			<add stat="maxMp" val="637" />
 		</for>
 	</item>
 	<item id="16278" type="EtcItem" name="Vesper Gaiter of Chaos">
@@ -1520,7 +1520,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="156" />
+			<add order="0" stat="pDef" val="156" />
 		</for>
 	</item>
 	<item id="16279" type="EtcItem" name="Vesper Leather Legging of Chaos">
@@ -1533,7 +1533,7 @@
 		<set name="weight" val="1320" />
 		<set name="price" val="21876000" />
 		<for>
-			<add order="0x10" stat="pDef" val="117" />
+			<add order="0" stat="pDef" val="117" />
 		</for>
 	</item>
 	<item id="16280" type="EtcItem" name="Vesper Stockings of Chaos">
@@ -1549,8 +1549,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="78" />
-			<add order="0x40" stat="maxMp" val="415" />
+			<add order="0" stat="pDef" val="78" />
+			<add stat="maxMp" val="415" />
 		</for>
 	</item>
 	<item id="16281" type="EtcItem" name="Vesper Gauntlet of Chaos">
@@ -1565,7 +1565,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="68" />
+			<add order="0" stat="pDef" val="68" />
 		</for>
 	</item>
 	<item id="16282" type="EtcItem" name="Vesper Leather Gloves of Chaos">
@@ -1577,7 +1577,7 @@
 		<set name="weight" val="510" />
 		<set name="price" val="11667000" />
 		<for>
-			<add order="0x10" stat="pDef" val="68" />
+			<add order="0" stat="pDef" val="68" />
 		</for>
 	</item>
 	<item id="16283" type="EtcItem" name="Vesper Gloves of Chaos">
@@ -1592,7 +1592,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="68" />
+			<add order="0" stat="pDef" val="68" />
 		</for>
 	</item>
 	<item id="16284" type="EtcItem" name="Vesper Boots of Chaos">
@@ -1607,7 +1607,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="68" />
+			<add order="0" stat="pDef" val="68" />
 		</for>
 	</item>
 	<item id="16285" type="EtcItem" name="Vesper Leather Boots of Chaos">
@@ -1619,7 +1619,7 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="11667000" />
 		<for>
-			<add order="0x10" stat="pDef" val="68" />
+			<add order="0" stat="pDef" val="68" />
 		</for>
 	</item>
 	<item id="16286" type="EtcItem" name="Vesper Shoes of Chaos">
@@ -1634,7 +1634,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="68" />
+			<add order="0" stat="pDef" val="68" />
 		</for>
 	</item>
 	<item id="16287" type="EtcItem" name="Vesper Shield of Chaos">
@@ -1649,9 +1649,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="371" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="371" />
 		</for>
 	</item>
 	<item id="16288" type="EtcItem" name="Vesper Sigil of Chaos">
@@ -1667,8 +1667,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<add order="0x10" stat="pDef" val="17" />
+			<sub stat="rEvas" val="8" />
+			<add order="0" stat="pDef" val="17" />
 		</for>
 	</item>
 	<item id="16289" type="Armor" name="Moirai Helmet">
@@ -1688,8 +1688,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="96" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="96" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="16290" type="Armor" name="Moirai Leather Helmet">
@@ -1706,8 +1706,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8424-1" />
 		<for>
-			<add order="0x10" stat="pDef" val="96" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="96" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="16291" type="Armor" name="Moirai Circlet">
@@ -1727,8 +1727,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="96" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="96" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="16292" type="Armor" name="Moirai Breastplate">
@@ -1749,8 +1749,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="238" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="238" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="16293" type="Armor" name="Moirai Leather Breastplate">
@@ -1768,8 +1768,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8425-1" />
 		<for>
-			<add order="0x10" stat="pDef" val="178" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="178" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="16294" type="Armor" name="Moirai Tunic">
@@ -1790,9 +1790,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="119" />
-			<add order="0x40" stat="maxMp" val="614" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="119" />
+			<add stat="maxMp" val="614" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="16295" type="Armor" name="Moirai Gaiter">
@@ -1813,8 +1813,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="149" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="149" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="16296" type="Armor" name="Moirai Leather Legging">
@@ -1832,8 +1832,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8426-1" />
 		<for>
-			<add order="0x10" stat="pDef" val="111" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="111" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="16297" type="Armor" name="Moirai Stockings">
@@ -1854,9 +1854,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="74" />
-			<add order="0x40" stat="maxMp" val="392" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="74" />
+			<add stat="maxMp" val="392" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="16298" type="Armor" name="Moirai Gauntlet">
@@ -1876,8 +1876,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="64" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="64" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="16299" type="Armor" name="Moirai Leather Gloves">
@@ -1894,8 +1894,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8427-1" />
 		<for>
-			<add order="0x10" stat="pDef" val="64" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="64" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 </list>

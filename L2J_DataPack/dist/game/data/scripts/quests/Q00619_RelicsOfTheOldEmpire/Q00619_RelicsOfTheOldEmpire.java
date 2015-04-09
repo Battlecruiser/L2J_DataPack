@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -68,7 +68,7 @@ public final class Q00619_RelicsOfTheOldEmpire extends Quest
 	private static final int ENTRANCE_PASS_TO_THE_SEPULCHER = 7075;
 	private static final int BROKEN_RELIC_PART = 7254;
 	// Misc
-	private static final int MIN_LEVEL = 75;
+	private static final int MIN_LEVEL = 74;
 	private static final int REQUIRED_RELIC_COUNT = 1000;
 	// Reward
 	private static final int[] RECIPES =
@@ -226,7 +226,7 @@ public final class Q00619_RelicsOfTheOldEmpire extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -306,7 +306,7 @@ public final class Q00619_RelicsOfTheOldEmpire extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		if (st == null)
 		{

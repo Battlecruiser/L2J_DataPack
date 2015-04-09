@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -42,7 +42,10 @@ import quests.Q00018_MeetingWithTheGoldenRam.Q00018_MeetingWithTheGoldenRam;
 import quests.Q00019_GoToThePastureland.Q00019_GoToThePastureland;
 import quests.Q00020_BringUpWithLove.Q00020_BringUpWithLove;
 import quests.Q00021_HiddenTruth.Q00021_HiddenTruth;
+import quests.Q00022_TragedyInVonHellmannForest.Q00022_TragedyInVonHellmannForest;
+import quests.Q00023_LidiasHeart.Q00023_LidiasHeart;
 import quests.Q00024_InhabitantsOfTheForestOfTheDead.Q00024_InhabitantsOfTheForestOfTheDead;
+import quests.Q00025_HidingBehindTheTruth.Q00025_HidingBehindTheTruth;
 import quests.Q00026_TiredOfWaiting.Q00026_TiredOfWaiting;
 import quests.Q00027_ChestCaughtWithABaitOfWind.Q00027_ChestCaughtWithABaitOfWind;
 import quests.Q00028_ChestCaughtWithABaitOfIcyAir.Q00028_ChestCaughtWithABaitOfIcyAir;
@@ -70,9 +73,47 @@ import quests.Q00050_LanoscosSpecialBait.Q00050_LanoscosSpecialBait;
 import quests.Q00051_OFullesSpecialBait.Q00051_OFullesSpecialBait;
 import quests.Q00052_WilliesSpecialBait.Q00052_WilliesSpecialBait;
 import quests.Q00053_LinnaeusSpecialBait.Q00053_LinnaeusSpecialBait;
+import quests.Q00060_GoodWorksReward.Q00060_GoodWorksReward;
+import quests.Q00061_LawEnforcement.Q00061_LawEnforcement;
 import quests.Q00062_PathOfTheTrooper.Q00062_PathOfTheTrooper;
 import quests.Q00063_PathOfTheWarder.Q00063_PathOfTheWarder;
 import quests.Q00064_CertifiedBerserker.Q00064_CertifiedBerserker;
+import quests.Q00065_CertifiedSoulBreaker.Q00065_CertifiedSoulBreaker;
+import quests.Q00066_CertifiedArbalester.Q00066_CertifiedArbalester;
+import quests.Q00067_SagaOfTheDoombringer.Q00067_SagaOfTheDoombringer;
+import quests.Q00068_SagaOfTheSoulHound.Q00068_SagaOfTheSoulHound;
+import quests.Q00069_SagaOfTheTrickster.Q00069_SagaOfTheTrickster;
+import quests.Q00070_SagaOfThePhoenixKnight.Q00070_SagaOfThePhoenixKnight;
+import quests.Q00071_SagaOfEvasTemplar.Q00071_SagaOfEvasTemplar;
+import quests.Q00072_SagaOfTheSwordMuse.Q00072_SagaOfTheSwordMuse;
+import quests.Q00073_SagaOfTheDuelist.Q00073_SagaOfTheDuelist;
+import quests.Q00074_SagaOfTheDreadnought.Q00074_SagaOfTheDreadnought;
+import quests.Q00075_SagaOfTheTitan.Q00075_SagaOfTheTitan;
+import quests.Q00076_SagaOfTheGrandKhavatari.Q00076_SagaOfTheGrandKhavatari;
+import quests.Q00077_SagaOfTheDominator.Q00077_SagaOfTheDominator;
+import quests.Q00078_SagaOfTheDoomcryer.Q00078_SagaOfTheDoomcryer;
+import quests.Q00079_SagaOfTheAdventurer.Q00079_SagaOfTheAdventurer;
+import quests.Q00080_SagaOfTheWindRider.Q00080_SagaOfTheWindRider;
+import quests.Q00081_SagaOfTheGhostHunter.Q00081_SagaOfTheGhostHunter;
+import quests.Q00082_SagaOfTheSagittarius.Q00082_SagaOfTheSagittarius;
+import quests.Q00083_SagaOfTheMoonlightSentinel.Q00083_SagaOfTheMoonlightSentinel;
+import quests.Q00084_SagaOfTheGhostSentinel.Q00084_SagaOfTheGhostSentinel;
+import quests.Q00085_SagaOfTheCardinal.Q00085_SagaOfTheCardinal;
+import quests.Q00086_SagaOfTheHierophant.Q00086_SagaOfTheHierophant;
+import quests.Q00087_SagaOfEvasSaint.Q00087_SagaOfEvasSaint;
+import quests.Q00088_SagaOfTheArchmage.Q00088_SagaOfTheArchmage;
+import quests.Q00089_SagaOfTheMysticMuse.Q00089_SagaOfTheMysticMuse;
+import quests.Q00090_SagaOfTheStormScreamer.Q00090_SagaOfTheStormScreamer;
+import quests.Q00091_SagaOfTheArcanaLord.Q00091_SagaOfTheArcanaLord;
+import quests.Q00092_SagaOfTheElementalMaster.Q00092_SagaOfTheElementalMaster;
+import quests.Q00093_SagaOfTheSpectralMaster.Q00093_SagaOfTheSpectralMaster;
+import quests.Q00094_SagaOfTheSoultaker.Q00094_SagaOfTheSoultaker;
+import quests.Q00095_SagaOfTheHellKnight.Q00095_SagaOfTheHellKnight;
+import quests.Q00096_SagaOfTheSpectralDancer.Q00096_SagaOfTheSpectralDancer;
+import quests.Q00097_SagaOfTheShillienTemplar.Q00097_SagaOfTheShillienTemplar;
+import quests.Q00098_SagaOfTheShillienSaint.Q00098_SagaOfTheShillienSaint;
+import quests.Q00099_SagaOfTheFortuneSeeker.Q00099_SagaOfTheFortuneSeeker;
+import quests.Q00100_SagaOfTheMaestro.Q00100_SagaOfTheMaestro;
 import quests.Q00101_SwordOfSolidarity.Q00101_SwordOfSolidarity;
 import quests.Q00102_SeaOfSporesFever.Q00102_SeaOfSporesFever;
 import quests.Q00103_SpiritOfCraftsman.Q00103_SpiritOfCraftsman;
@@ -89,9 +130,13 @@ import quests.Q00113_StatusOfTheBeaconTower.Q00113_StatusOfTheBeaconTower;
 import quests.Q00114_ResurrectionOfAnOldManager.Q00114_ResurrectionOfAnOldManager;
 import quests.Q00115_TheOtherSideOfTruth.Q00115_TheOtherSideOfTruth;
 import quests.Q00116_BeyondTheHillsOfWinter.Q00116_BeyondTheHillsOfWinter;
+import quests.Q00117_TheOceanOfDistantStars.Q00117_TheOceanOfDistantStars;
+import quests.Q00118_ToLeadAndBeLed.Q00118_ToLeadAndBeLed;
 import quests.Q00119_LastImperialPrince.Q00119_LastImperialPrince;
+import quests.Q00120_PavelsLastResearch.Q00120_PavelsLastResearch;
 import quests.Q00121_PavelTheGiant.Q00121_PavelTheGiant;
 import quests.Q00122_OminousNews.Q00122_OminousNews;
+import quests.Q00123_TheLeaderAndTheFollower.Q00123_TheLeaderAndTheFollower;
 import quests.Q00124_MeetingTheElroki.Q00124_MeetingTheElroki;
 import quests.Q00125_TheNameOfEvil1.Q00125_TheNameOfEvil1;
 import quests.Q00126_TheNameOfEvil2.Q00126_TheNameOfEvil2;
@@ -132,14 +177,18 @@ import quests.Q00167_DwarvenKinship.Q00167_DwarvenKinship;
 import quests.Q00168_DeliverSupplies.Q00168_DeliverSupplies;
 import quests.Q00169_OffspringOfNightmares.Q00169_OffspringOfNightmares;
 import quests.Q00170_DangerousSeduction.Q00170_DangerousSeduction;
+import quests.Q00171_ActsOfEvil.Q00171_ActsOfEvil;
 import quests.Q00172_NewHorizons.Q00172_NewHorizons;
 import quests.Q00173_ToTheIsleOfSouls.Q00173_ToTheIsleOfSouls;
 import quests.Q00174_SupplyCheck.Q00174_SupplyCheck;
 import quests.Q00175_TheWayOfTheWarrior.Q00175_TheWayOfTheWarrior;
 import quests.Q00176_StepsForHonor.Q00176_StepsForHonor;
+import quests.Q00178_IconicTrinity.Q00178_IconicTrinity;
 import quests.Q00179_IntoTheLargeCavern.Q00179_IntoTheLargeCavern;
 import quests.Q00182_NewRecruits.Q00182_NewRecruits;
 import quests.Q00183_RelicExploration.Q00183_RelicExploration;
+import quests.Q00184_ArtOfPersuasion.Q00184_ArtOfPersuasion;
+import quests.Q00185_NikolasCooperation.Q00185_NikolasCooperation;
 import quests.Q00186_ContractExecution.Q00186_ContractExecution;
 import quests.Q00187_NikolasHeart.Q00187_NikolasHeart;
 import quests.Q00188_SealRemoval.Q00188_SealRemoval;
@@ -158,10 +207,24 @@ import quests.Q00212_TrialOfDuty.Q00212_TrialOfDuty;
 import quests.Q00213_TrialOfTheSeeker.Q00213_TrialOfTheSeeker;
 import quests.Q00214_TrialOfTheScholar.Q00214_TrialOfTheScholar;
 import quests.Q00215_TrialOfThePilgrim.Q00215_TrialOfThePilgrim;
+import quests.Q00216_TrialOfTheGuildsman.Q00216_TrialOfTheGuildsman;
 import quests.Q00217_TestimonyOfTrust.Q00217_TestimonyOfTrust;
 import quests.Q00218_TestimonyOfLife.Q00218_TestimonyOfLife;
 import quests.Q00219_TestimonyOfFate.Q00219_TestimonyOfFate;
+import quests.Q00220_TestimonyOfGlory.Q00220_TestimonyOfGlory;
 import quests.Q00221_TestimonyOfProsperity.Q00221_TestimonyOfProsperity;
+import quests.Q00222_TestOfTheDuelist.Q00222_TestOfTheDuelist;
+import quests.Q00223_TestOfTheChampion.Q00223_TestOfTheChampion;
+import quests.Q00224_TestOfSagittarius.Q00224_TestOfSagittarius;
+import quests.Q00225_TestOfTheSearcher.Q00225_TestOfTheSearcher;
+import quests.Q00226_TestOfTheHealer.Q00226_TestOfTheHealer;
+import quests.Q00227_TestOfTheReformer.Q00227_TestOfTheReformer;
+import quests.Q00228_TestOfMagus.Q00228_TestOfMagus;
+import quests.Q00229_TestOfWitchcraft.Q00229_TestOfWitchcraft;
+import quests.Q00230_TestOfTheSummoner.Q00230_TestOfTheSummoner;
+import quests.Q00231_TestOfTheMaestro.Q00231_TestOfTheMaestro;
+import quests.Q00232_TestOfTheLord.Q00232_TestOfTheLord;
+import quests.Q00233_TestOfTheWarSpirit.Q00233_TestOfTheWarSpirit;
 import quests.Q00235_MimirsElixir.Q00235_MimirsElixir;
 import quests.Q00237_WindsOfChange.Q00237_WindsOfChange;
 import quests.Q00238_SuccessFailureOfBusiness.Q00238_SuccessFailureOfBusiness;
@@ -238,12 +301,18 @@ import quests.Q00327_RecoverTheFarmland.Q00327_RecoverTheFarmland;
 import quests.Q00328_SenseForBusiness.Q00328_SenseForBusiness;
 import quests.Q00329_CuriosityOfADwarf.Q00329_CuriosityOfADwarf;
 import quests.Q00331_ArrowOfVengeance.Q00331_ArrowOfVengeance;
+import quests.Q00333_HuntOfTheBlackLion.Q00333_HuntOfTheBlackLion;
 import quests.Q00338_AlligatorHunter.Q00338_AlligatorHunter;
+import quests.Q00340_SubjugationOfLizardmen.Q00340_SubjugationOfLizardmen;
 import quests.Q00341_HuntingForWildBeasts.Q00341_HuntingForWildBeasts;
 import quests.Q00344_1000YearsTheEndOfLamentation.Q00344_1000YearsTheEndOfLamentation;
+import quests.Q00345_MethodToRaiseTheDead.Q00345_MethodToRaiseTheDead;
 import quests.Q00347_GoGetTheCalculator.Q00347_GoGetTheCalculator;
 import quests.Q00350_EnhanceYourWeapon.Q00350_EnhanceYourWeapon;
+import quests.Q00351_BlackSwan.Q00351_BlackSwan;
+import quests.Q00352_HelpRoodRaiseANewPet.Q00352_HelpRoodRaiseANewPet;
 import quests.Q00354_ConquestOfAlligatorIsland.Q00354_ConquestOfAlligatorIsland;
+import quests.Q00355_FamilyHonor.Q00355_FamilyHonor;
 import quests.Q00356_DigUpTheSeaOfSpores.Q00356_DigUpTheSeaOfSpores;
 import quests.Q00357_WarehouseKeepersAmbition.Q00357_WarehouseKeepersAmbition;
 import quests.Q00358_IllegitimateChildOfTheGoddess.Q00358_IllegitimateChildOfTheGoddess;
@@ -258,11 +327,16 @@ import quests.Q00367_ElectrifyingRecharge.Q00367_ElectrifyingRecharge;
 import quests.Q00368_TrespassingIntoTheHolyGround.Q00368_TrespassingIntoTheHolyGround;
 import quests.Q00369_CollectorOfJewels.Q00369_CollectorOfJewels;
 import quests.Q00370_AnElderSowsSeeds.Q00370_AnElderSowsSeeds;
+import quests.Q00371_ShrieksOfGhosts.Q00371_ShrieksOfGhosts;
+import quests.Q00373_SupplierOfReagents.Q00373_SupplierOfReagents;
 import quests.Q00376_ExplorationOfTheGiantsCavePart1.Q00376_ExplorationOfTheGiantsCavePart1;
 import quests.Q00377_ExplorationOfTheGiantsCavePart2.Q00377_ExplorationOfTheGiantsCavePart2;
+import quests.Q00378_GrandFeast.Q00378_GrandFeast;
+import quests.Q00379_FantasyWine.Q00379_FantasyWine;
 import quests.Q00380_BringOutTheFlavorOfIngredients.Q00380_BringOutTheFlavorOfIngredients;
 import quests.Q00381_LetsBecomeARoyalMember.Q00381_LetsBecomeARoyalMember;
 import quests.Q00382_KailsMagicCoin.Q00382_KailsMagicCoin;
+import quests.Q00383_TreasureHunt.Q00383_TreasureHunt;
 import quests.Q00385_YokeOfThePast.Q00385_YokeOfThePast;
 import quests.Q00401_PathOfTheWarrior.Q00401_PathOfTheWarrior;
 import quests.Q00402_PathOfTheHumanKnight.Q00402_PathOfTheHumanKnight;
@@ -285,12 +359,14 @@ import quests.Q00418_PathOfTheArtisan.Q00418_PathOfTheArtisan;
 import quests.Q00420_LittleWing.Q00420_LittleWing;
 import quests.Q00421_LittleWingsBigAdventure.Q00421_LittleWingsBigAdventure;
 import quests.Q00423_TakeYourBestShot.Q00423_TakeYourBestShot;
+import quests.Q00426_QuestForFishingShot.Q00426_QuestForFishingShot;
 import quests.Q00431_WeddingMarch.Q00431_WeddingMarch;
 import quests.Q00432_BirthdayPartySong.Q00432_BirthdayPartySong;
 import quests.Q00450_GraveRobberRescue.Q00450_GraveRobberRescue;
 import quests.Q00451_LuciensAltar.Q00451_LuciensAltar;
 import quests.Q00452_FindingtheLostSoldiers.Q00452_FindingtheLostSoldiers;
 import quests.Q00453_NotStrongEnoughAlone.Q00453_NotStrongEnoughAlone;
+import quests.Q00454_CompletelyLost.Q00454_CompletelyLost;
 import quests.Q00455_WingsOfSand.Q00455_WingsOfSand;
 import quests.Q00456_DontKnowDontCare.Q00456_DontKnowDontCare;
 import quests.Q00457_LostAndFound.Q00457_LostAndFound;
@@ -298,6 +374,7 @@ import quests.Q00458_PerfectForm.Q00458_PerfectForm;
 import quests.Q00461_RumbleInTheBase.Q00461_RumbleInTheBase;
 import quests.Q00463_IMustBeaGenius.Q00463_IMustBeaGenius;
 import quests.Q00464_Oath.Q00464_Oath;
+import quests.Q00501_ProofOfClanAlliance.Q00501_ProofOfClanAlliance;
 import quests.Q00504_CompetitionForTheBanditStronghold.Q00504_CompetitionForTheBanditStronghold;
 import quests.Q00508_AClansReputation.Q00508_AClansReputation;
 import quests.Q00509_AClansFame.Q00509_AClansFame;
@@ -356,6 +433,7 @@ import quests.Q00651_RunawayYouth.Q00651_RunawayYouth;
 import quests.Q00652_AnAgedExAdventurer.Q00652_AnAgedExAdventurer;
 import quests.Q00653_WildMaiden.Q00653_WildMaiden;
 import quests.Q00654_JourneyToASettlement.Q00654_JourneyToASettlement;
+import quests.Q00655_AGrandPlanForTamingWildBeasts.Q00655_AGrandPlanForTamingWildBeasts;
 import quests.Q00659_IdRatherBeCollectingFairyBreath.Q00659_IdRatherBeCollectingFairyBreath;
 import quests.Q00660_AidingTheFloranVillage.Q00660_AidingTheFloranVillage;
 import quests.Q00661_MakingTheHarvestGroundsSafe.Q00661_MakingTheHarvestGroundsSafe;
@@ -410,7 +488,7 @@ import quests.Q10504_JewelOfAntharas.Q10504_JewelOfAntharas;
 import quests.Q10505_JewelOfValakas.Q10505_JewelOfValakas;
 
 /**
- * @author Nos
+ * @author NosBit
  */
 public class QuestMasterHandler
 {
@@ -439,7 +517,10 @@ public class QuestMasterHandler
 		Q00019_GoToThePastureland.class,
 		Q00020_BringUpWithLove.class,
 		Q00021_HiddenTruth.class,
+		Q00022_TragedyInVonHellmannForest.class,
+		Q00023_LidiasHeart.class,
 		Q00024_InhabitantsOfTheForestOfTheDead.class,
+		Q00025_HidingBehindTheTruth.class,
 		Q00026_TiredOfWaiting.class,
 		Q00027_ChestCaughtWithABaitOfWind.class,
 		Q00028_ChestCaughtWithABaitOfIcyAir.class,
@@ -467,9 +548,47 @@ public class QuestMasterHandler
 		Q00051_OFullesSpecialBait.class,
 		Q00052_WilliesSpecialBait.class,
 		Q00053_LinnaeusSpecialBait.class,
+		Q00060_GoodWorksReward.class,
+		Q00061_LawEnforcement.class,
 		Q00062_PathOfTheTrooper.class,
 		Q00063_PathOfTheWarder.class,
 		Q00064_CertifiedBerserker.class,
+		Q00065_CertifiedSoulBreaker.class,
+		Q00066_CertifiedArbalester.class,
+		Q00067_SagaOfTheDoombringer.class,
+		Q00068_SagaOfTheSoulHound.class,
+		Q00069_SagaOfTheTrickster.class,
+		Q00070_SagaOfThePhoenixKnight.class,
+		Q00071_SagaOfEvasTemplar.class,
+		Q00072_SagaOfTheSwordMuse.class,
+		Q00073_SagaOfTheDuelist.class,
+		Q00074_SagaOfTheDreadnought.class,
+		Q00075_SagaOfTheTitan.class,
+		Q00076_SagaOfTheGrandKhavatari.class,
+		Q00077_SagaOfTheDominator.class,
+		Q00078_SagaOfTheDoomcryer.class,
+		Q00079_SagaOfTheAdventurer.class,
+		Q00080_SagaOfTheWindRider.class,
+		Q00081_SagaOfTheGhostHunter.class,
+		Q00082_SagaOfTheSagittarius.class,
+		Q00083_SagaOfTheMoonlightSentinel.class,
+		Q00084_SagaOfTheGhostSentinel.class,
+		Q00085_SagaOfTheCardinal.class,
+		Q00086_SagaOfTheHierophant.class,
+		Q00087_SagaOfEvasSaint.class,
+		Q00088_SagaOfTheArchmage.class,
+		Q00089_SagaOfTheMysticMuse.class,
+		Q00090_SagaOfTheStormScreamer.class,
+		Q00091_SagaOfTheArcanaLord.class,
+		Q00092_SagaOfTheElementalMaster.class,
+		Q00093_SagaOfTheSpectralMaster.class,
+		Q00094_SagaOfTheSoultaker.class,
+		Q00095_SagaOfTheHellKnight.class,
+		Q00096_SagaOfTheSpectralDancer.class,
+		Q00097_SagaOfTheShillienTemplar.class,
+		Q00098_SagaOfTheShillienSaint.class,
+		Q00099_SagaOfTheFortuneSeeker.class,
+		Q00100_SagaOfTheMaestro.class,
 		Q00101_SwordOfSolidarity.class,
 		Q00102_SeaOfSporesFever.class,
 		Q00103_SpiritOfCraftsman.class,
@@ -486,9 +605,13 @@ public class QuestMasterHandler
 		Q00114_ResurrectionOfAnOldManager.class,
 		Q00115_TheOtherSideOfTruth.class,
 		Q00116_BeyondTheHillsOfWinter.class,
+		Q00117_TheOceanOfDistantStars.class,
+		Q00118_ToLeadAndBeLed.class,
 		Q00119_LastImperialPrince.class,
+		Q00120_PavelsLastResearch.class,
 		Q00121_PavelTheGiant.class,
 		Q00122_OminousNews.class,
+		Q00123_TheLeaderAndTheFollower.class,
 		Q00124_MeetingTheElroki.class,
 		Q00125_TheNameOfEvil1.class,
 		Q00126_TheNameOfEvil2.class,
@@ -529,14 +652,18 @@ public class QuestMasterHandler
 		Q00168_DeliverSupplies.class,
 		Q00169_OffspringOfNightmares.class,
 		Q00170_DangerousSeduction.class,
+		Q00171_ActsOfEvil.class,
 		Q00172_NewHorizons.class,
 		Q00173_ToTheIsleOfSouls.class,
 		Q00174_SupplyCheck.class,
 		Q00175_TheWayOfTheWarrior.class,
 		Q00176_StepsForHonor.class,
+		Q00178_IconicTrinity.class,
 		Q00179_IntoTheLargeCavern.class,
 		Q00182_NewRecruits.class,
 		Q00183_RelicExploration.class,
+		Q00184_ArtOfPersuasion.class,
+		Q00185_NikolasCooperation.class,
 		Q00186_ContractExecution.class,
 		Q00187_NikolasHeart.class,
 		Q00188_SealRemoval.class,
@@ -555,10 +682,24 @@ public class QuestMasterHandler
 		Q00213_TrialOfTheSeeker.class,
 		Q00214_TrialOfTheScholar.class,
 		Q00215_TrialOfThePilgrim.class,
+		Q00216_TrialOfTheGuildsman.class,
 		Q00217_TestimonyOfTrust.class,
 		Q00218_TestimonyOfLife.class,
 		Q00219_TestimonyOfFate.class,
+		Q00220_TestimonyOfGlory.class,
 		Q00221_TestimonyOfProsperity.class,
+		Q00222_TestOfTheDuelist.class,
+		Q00223_TestOfTheChampion.class,
+		Q00224_TestOfSagittarius.class,
+		Q00225_TestOfTheSearcher.class,
+		Q00226_TestOfTheHealer.class,
+		Q00227_TestOfTheReformer.class,
+		Q00228_TestOfMagus.class,
+		Q00229_TestOfWitchcraft.class,
+		Q00230_TestOfTheSummoner.class,
+		Q00231_TestOfTheMaestro.class,
+		Q00232_TestOfTheLord.class,
+		Q00233_TestOfTheWarSpirit.class,
 		Q00235_MimirsElixir.class,
 		Q00237_WindsOfChange.class,
 		Q00238_SuccessFailureOfBusiness.class,
@@ -635,12 +776,18 @@ public class QuestMasterHandler
 		Q00328_SenseForBusiness.class,
 		Q00329_CuriosityOfADwarf.class,
 		Q00331_ArrowOfVengeance.class,
+		Q00333_HuntOfTheBlackLion.class,
 		Q00338_AlligatorHunter.class,
+		Q00340_SubjugationOfLizardmen.class,
 		Q00341_HuntingForWildBeasts.class,
 		Q00344_1000YearsTheEndOfLamentation.class,
+		Q00345_MethodToRaiseTheDead.class,
 		Q00347_GoGetTheCalculator.class,
 		Q00350_EnhanceYourWeapon.class,
+		Q00351_BlackSwan.class,
+		Q00352_HelpRoodRaiseANewPet.class,
 		Q00354_ConquestOfAlligatorIsland.class,
+		Q00355_FamilyHonor.class,
 		Q00356_DigUpTheSeaOfSpores.class,
 		Q00357_WarehouseKeepersAmbition.class,
 		Q00358_IllegitimateChildOfTheGoddess.class,
@@ -655,11 +802,16 @@ public class QuestMasterHandler
 		Q00368_TrespassingIntoTheHolyGround.class,
 		Q00369_CollectorOfJewels.class,
 		Q00370_AnElderSowsSeeds.class,
+		Q00371_ShrieksOfGhosts.class,
+		Q00373_SupplierOfReagents.class,
 		Q00376_ExplorationOfTheGiantsCavePart1.class,
 		Q00377_ExplorationOfTheGiantsCavePart2.class,
+		Q00378_GrandFeast.class,
+		Q00379_FantasyWine.class,
 		Q00380_BringOutTheFlavorOfIngredients.class,
 		Q00381_LetsBecomeARoyalMember.class,
 		Q00382_KailsMagicCoin.class,
+		Q00383_TreasureHunt.class,
 		Q00385_YokeOfThePast.class,
 		Q00401_PathOfTheWarrior.class,
 		Q00402_PathOfTheHumanKnight.class,
@@ -682,12 +834,14 @@ public class QuestMasterHandler
 		Q00420_LittleWing.class,
 		Q00421_LittleWingsBigAdventure.class,
 		Q00423_TakeYourBestShot.class,
+		Q00426_QuestForFishingShot.class,
 		Q00431_WeddingMarch.class,
 		Q00432_BirthdayPartySong.class,
 		Q00450_GraveRobberRescue.class,
 		Q00451_LuciensAltar.class,
 		Q00452_FindingtheLostSoldiers.class,
 		Q00453_NotStrongEnoughAlone.class,
+		Q00454_CompletelyLost.class,
 		Q00455_WingsOfSand.class,
 		Q00456_DontKnowDontCare.class,
 		Q00457_LostAndFound.class,
@@ -695,6 +849,7 @@ public class QuestMasterHandler
 		Q00461_RumbleInTheBase.class,
 		Q00463_IMustBeaGenius.class,
 		Q00464_Oath.class,
+		Q00501_ProofOfClanAlliance.class,
 		Q00504_CompetitionForTheBanditStronghold.class,
 		Q00508_AClansReputation.class,
 		Q00509_AClansFame.class,
@@ -753,6 +908,7 @@ public class QuestMasterHandler
 		Q00652_AnAgedExAdventurer.class,
 		Q00653_WildMaiden.class,
 		Q00654_JourneyToASettlement.class,
+		Q00655_AGrandPlanForTamingWildBeasts.class,
 		Q00659_IdRatherBeCollectingFairyBreath.class,
 		Q00660_AidingTheFloranVillage.class,
 		Q00661_MakingTheHarvestGroundsSafe.class,

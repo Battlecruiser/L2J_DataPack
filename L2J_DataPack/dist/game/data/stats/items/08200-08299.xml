@@ -50,8 +50,8 @@
 		<set name="spiritshots" val="1" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="8204" type="Weapon" name="Monster Only (Follower of Frintezza Calibur)">
@@ -69,8 +69,8 @@
 		<set name="spiritshots" val="2" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="8205" type="Weapon" name="Monster Only (Heretic Priest Sigil)">
@@ -88,9 +88,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="8206" type="Weapon" name="Monster Only (Heretic Priest Sword)">
@@ -108,8 +108,8 @@
 		<set name="spiritshots" val="1" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="8207" type="Weapon" name="Monster Only (Heretic Private Axe)">
@@ -127,8 +127,8 @@
 		<set name="spiritshots" val="1" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="8208" type="Weapon" name="Monster Only (Heretic Private Staff)">
@@ -146,9 +146,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="8209" type="Weapon" name="Monster Only (Lidia Von Helmann Sword)">
@@ -166,8 +166,8 @@
 		<set name="spiritshots" val="2" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="8210" type="Armor" name="Monster Only (Monk Warrior Shield)">
@@ -179,9 +179,9 @@
 		<set name="weight" val="4800" />
 		<set name="for_npc" val="true" />
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="230" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="230" />
 		</for>
 	</item>
 	<item id="8211" type="Weapon" name="Monster Only (Monk Warrior Sword)">
@@ -199,8 +199,8 @@
 		<set name="spiritshots" val="2" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="8212" type="Weapon" name="Monster Only (Solina Brother Mace)">
@@ -218,9 +218,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="8213" type="Weapon" name="Monster Only (Solina Father Mace)">
@@ -238,9 +238,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="8214" type="Weapon" name="Monster Only (Solina Priest Pole)">
@@ -258,9 +258,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="8215" type="Weapon" name="Monster Only (Zombie Enlisted Man Sword)">
@@ -278,8 +278,8 @@
 		<set name="spiritshots" val="3" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="8216" type="Weapon" name="Monster Only (Zombie Enlisted Man Claw)">
@@ -297,9 +297,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="8217" type="Weapon" name="Monster Only (Zombie Gateguard Spear)">
@@ -317,8 +317,8 @@
 		<set name="spiritshots" val="2" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="8218" type="Weapon" name="Monster Only (Zombie Laborer Axe)">
@@ -336,9 +336,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="8219" type="Weapon" name="Monster Only (Zombie Laborer Sword)">
@@ -356,8 +356,8 @@
 		<set name="spiritshots" val="2" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="8220" type="Weapon" name="Monster Only (Grail Apostle Bow)">
@@ -377,9 +377,9 @@
 		<set name="reuse_delay" val="1500" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="293" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
 	<item id="8221" type="Weapon" name="Monster Only (Grail Apostle Spear)">
@@ -397,9 +397,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="8222" type="Weapon" name="Monster Only (Follower of Frintezza Tran Calibur)">
@@ -417,8 +417,8 @@
 		<set name="spiritshots" val="2" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="8223" type="EtcItem" name="Seed: Twin Codran">

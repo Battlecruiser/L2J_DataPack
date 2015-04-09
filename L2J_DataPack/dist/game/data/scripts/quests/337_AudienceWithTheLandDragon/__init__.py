@@ -57,7 +57,7 @@ class Quest (JQuest) :
 
  def onAdvEvent (self,event,npc,player):
      if player :
-         st = player.getQuestState(qn)
+         st = self.getQuestState(player, False)
          if not st : return
          htmltext = event
          if event == "30753-02.htm" :
@@ -102,7 +102,7 @@ class Quest (JQuest) :
 
  def onTalk (self,npc,player):
     htmltext = Quest.getNoQuestMsg(player)
-    st = player.getQuestState(qn)
+    st = self.getQuestState(player, True)
     if not st : return htmltext
     npcId = npc.getId()
     cond = st.getInt("cond")
@@ -247,7 +247,7 @@ class Quest (JQuest) :
     return htmltext
 
  def onAttack (self, npc, player, damage, isPet, skill):
-   st = player.getQuestState(qn)
+   st = self.getQuestState(player, False)
    if st :
      npcId = npc.getId()
      maxHp = npc.getMaxHp()
@@ -302,7 +302,7 @@ class Quest (JQuest) :
 
  def onKill(self,npc,player,isPet):
     npcId = npc.getId()
-    st = player.getQuestState(qn)
+    st = self.getQuestState(player, False)
     if st :
         cond = st.getInt("cond")
         if cond == 1 :

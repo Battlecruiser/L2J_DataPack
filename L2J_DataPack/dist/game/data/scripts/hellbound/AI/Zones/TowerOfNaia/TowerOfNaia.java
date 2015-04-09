@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -23,14 +23,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 
-import javolution.util.FastList;
-import javolution.util.FastMap;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.DoorTable;
+import com.l2jserver.gameserver.data.xml.impl.DoorData;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
@@ -157,9 +157,9 @@ public final class TowerOfNaia extends AbstractNpcAI
 	private int _challengeState;
 	private int _winIndex;
 	
-	private final Map<Integer, Boolean> _activeRooms = new FastMap<>();
-	private final Map<Integer, List<L2Npc>> _spawns = new FastMap<>();
-	private final FastList<L2Npc> _sporeSpawn = new FastList<L2Npc>().shared();
+	private final Map<Integer, Boolean> _activeRooms = new HashMap<>();
+	private final Map<Integer, List<L2Npc>> _spawns = new ConcurrentHashMap<>();
+	private final List<L2Npc> _sporeSpawn = new CopyOnWriteArrayList<>();
 	static
 	{
 		// Format: entrance_door, exit_door
@@ -657,7 +657,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 				if (spawned.isEmpty() && DOORS.containsKey(managerId))
 				{
 					int[] doorList = DOORS.get(managerId);
-					DoorTable.getInstance().getDoor(doorList[1]).openMe();
+					DoorData.getInstance().getDoor(doorList[1]).openMe();
 					_spawns.remove(managerId);
 				}
 			}
@@ -666,7 +666,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 		{
 			_challengeState = STATE_SPORE_CHALLENGE_IN_PROGRESS;
 			markElpyRespawn();
-			DoorTable.getInstance().getDoor(18250025).closeMe();
+			DoorData.getInstance().getDoor(18250025).closeMe();
 			ZoneManager.getInstance().getZoneById(200100).setEnabled(true);
 			
 			for (int i = 0; i < 10; i++)
@@ -762,7 +762,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 		
 		if (npcId == MUTATED_ELPY)
 		{
-			DoorTable.getInstance().getDoor(18250025).openMe();
+			DoorData.getInstance().getDoor(18250025).openMe();
 			ZoneManager.getInstance().getZoneById(200100).setEnabled(false);
 			ZoneManager.getInstance().getZoneById(200101).setEnabled(true);
 			ZoneManager.getInstance().getZoneById(200101).setEnabled(false);
@@ -808,8 +808,8 @@ public final class TowerOfNaia extends AbstractNpcAI
 		if (DOORS.containsKey(managerId))
 		{
 			int[] doorList = DOORS.get(managerId);
-			DoorTable.getInstance().getDoor(doorList[0]).openMe();
-			DoorTable.getInstance().getDoor(doorList[1]).closeMe();
+			DoorData.getInstance().getDoor(doorList[0]).openMe();
+			DoorData.getInstance().getDoor(doorList[1]).closeMe();
 		}
 		
 		if (_spawns.containsKey(managerId) && (_spawns.get(managerId) != null))
@@ -896,13 +896,13 @@ public final class TowerOfNaia extends AbstractNpcAI
 		if (DOORS.containsKey(managerId))
 		{
 			int[] doorList = DOORS.get(managerId);
-			DoorTable.getInstance().getDoor(doorList[0]).closeMe();
+			DoorData.getInstance().getDoor(doorList[0]).closeMe();
 		}
 		
 		if (SPAWNS.containsKey(managerId))
 		{
 			int[][] spawnList = SPAWNS.get(managerId);
-			List<L2Npc> spawned = new FastList<>();
+			List<L2Npc> spawned = new CopyOnWriteArrayList<>();
 			for (int[] spawn : spawnList)
 			{
 				L2Npc spawnedNpc = addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false);

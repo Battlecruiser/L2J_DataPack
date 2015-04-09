@@ -37,9 +37,9 @@ class Quest (JQuest) :
       JQuest.__init__(self,id,name,descr)
       self.questItemIds = [ANTIQUE_BROOCH,SEALED_BOX,7256,7257,7258,7259,GRAVE_PASS]
 
-  def onTalk (Self,npc,player) :
+  def onTalk (self,npc,player) :
     htmltext = Quest.getNoQuestMsg(player)
-    st = player.getQuestState(qn)
+    st = self.getQuestState(player, True)
     id = st.getState()
     if id == State.CREATED :
       st.set("cond","0")
@@ -115,7 +115,7 @@ class Quest (JQuest) :
     return htmltext
 
   def onKill (self,npc,player,isPet) :
-    st = player.getQuestState(qn)
+    st = self.getQuestState(player, False)
     npcId = npc.getId()
     if st:
       if int(st.get("cond")) == 1 or int(st.get("cond")) == 2 :
@@ -127,7 +127,7 @@ class Quest (JQuest) :
 
   def onAdvEvent (self,event,npc,player) :
     htmltext = event
-    st = player.getQuestState(qn)
+    st = self.getQuestState(player, False)
     htmltext = event
     if event == "Enter" : 
       FourSepulchersManager.getInstance().tryEntry(npc,player)

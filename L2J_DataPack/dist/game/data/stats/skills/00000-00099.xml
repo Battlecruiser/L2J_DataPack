@@ -25,6 +25,7 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -66,6 +67,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -92,6 +94,7 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
 			<using kind="SWORD,BLUNT" />
@@ -116,10 +119,11 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="runSpd" val="#spd" />
+				<add stat="runSpd" val="#spd" />
 			</effect>
 		</for>
 	</skill>
@@ -146,6 +150,7 @@
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
@@ -217,6 +222,7 @@
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
@@ -304,6 +310,7 @@
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AREA" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
@@ -365,6 +372,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="5" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<using kind="DUAL,SWORD,BLUNT" />
@@ -407,6 +415,7 @@
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="FRONT_AREA" />
 		<!-- charge values -->
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -477,6 +486,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
@@ -505,6 +515,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -531,6 +542,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -553,6 +565,7 @@
 		<set name="mpInitialConsume" val="530" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond>
 			<and>
@@ -585,13 +598,13 @@
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0015" />
-		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="15000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -619,6 +632,7 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
 			<using kind="DAGGER" />
@@ -654,6 +668,7 @@
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="FRONT_AREA" />
 		<!-- charge values -->
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -726,6 +741,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="40000" />
+		<set name="rideState" val="NONE" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="AURA" />
 		<enchant1 name="effectPoint" val="#ench1EffectPoints" />
@@ -738,13 +754,13 @@
 		</for>
 		<enchant2for>
 			<effect name="TargetMe">
-				<mul order="0x30" stat="pDef" val="#enchpDefAtk" />
+				<mul stat="pDef" val="#enchpDefAtk" />
 			</effect>
 			<effect name="GetAgro" />
 		</enchant2for>
 		<enchant3for>
 			<effect name="TargetMe">
-				<mul order="0x30" stat="pAtk" val="#enchpDefAtk" />
+				<mul stat="pAtk" val="#enchpDefAtk" />
 			</effect>
 			<effect name="GetAgro" />
 		</enchant3for>
@@ -772,6 +788,7 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -813,6 +830,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="DispelBySlot">
@@ -839,6 +857,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
@@ -875,6 +894,7 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="6000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AREA" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -907,6 +927,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<cond>
 			<player canSummon="true" />
@@ -945,6 +966,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="30000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="UNLOCKABLE" />
 		<for>
 			<effect name="OpenDoor">
@@ -975,6 +997,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
+		<set name="rideState" val="NONE" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="effectPoint" val="#ench1EffectPoints" />
@@ -987,13 +1010,13 @@
 		</for>
 		<enchant2for>
 			<effect name="TargetMe">
-				<mul order="0x30" stat="pDef" val="#enchpDefAtk" />
+				<mul stat="pDef" val="#enchpDefAtk" />
 			</effect>
 			<effect name="GetAgro" />
 		</enchant2for>
 		<enchant3for>
 			<effect name="TargetMe">
-				<mul order="0x30" stat="pAtk" val="#enchpDefAtk" />
+				<mul stat="pAtk" val="#enchpDefAtk" />
 			</effect>
 			<effect name="GetAgro" />
 		</enchant3for>
@@ -1016,6 +1039,7 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="4000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
 			<using kind="DUALFIST" />
@@ -1052,6 +1076,7 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -1100,6 +1125,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
@@ -1127,6 +1153,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="DispelBySlot">
@@ -1158,6 +1185,7 @@
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="5000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AREA" />
 		<!-- charge values -->
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -1233,6 +1261,7 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="4000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -1273,6 +1302,7 @@
 		<set name="mpConsume" val="3" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="500" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="CORPSE_MOB" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="reuseDelay" val="0" />
@@ -1315,6 +1345,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="DispelBySlot">
@@ -1337,6 +1368,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Heal">
@@ -1363,6 +1395,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="5000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="CORPSE_MOB" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
@@ -1411,6 +1444,7 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="5000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="SHOCK" />
 		<enchant1 name="activateRate" val="#ench1ActivateRates" />
@@ -1455,6 +1489,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -1481,6 +1516,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="5" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<using kind="DUALFIST" />
@@ -1510,6 +1546,7 @@
 		<set name="mpConsume" val="44" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="castRange" val="#ench1castRange" />
@@ -1543,6 +1580,7 @@
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="4000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<!-- charge values -->
 		<set name="chargeConsume" val="1" />
@@ -1609,6 +1647,7 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="6000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
 			<using kind="BOW" />
@@ -1636,6 +1675,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
@@ -1676,6 +1716,7 @@
 		<set name="magicLvl" val="40" />
 		<set name="mpConsume" val="200" />
 		<set name="operateType" val="T" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="FakeDeath" ticks="5">
@@ -1698,6 +1739,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="DispelBySlot">
@@ -1729,6 +1771,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -1752,6 +1795,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
@@ -1780,6 +1824,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="hpConsume" val="#ench2HpConsume" />
@@ -1841,6 +1886,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="4000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -1884,18 +1930,19 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mDef" val="#mDef" />
+				<mul stat="mDef" val="#mDef" />
 			</effect>
 		</for>
 		<enchant2for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mDef" val="#ench2mDef" />
+				<mul stat="mDef" val="#ench2mDef" />
 			</effect>
 		</enchant2for>
 	</skill>
@@ -1910,6 +1957,7 @@
 		<set name="mpConsume" val="14" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="AttackTrait">
@@ -1928,19 +1976,20 @@
 		<set name="mpConsume" val="25" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="23000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<using kind="DUALFIST" />
 		</cond>
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.2">
+				<mul stat="pAtk" val="1.2">
 					<using kind="DUALFIST" />
 				</mul>
-				<mul order="0x30" stat="cAtk" val="1.2">
+				<mul stat="cAtk" val="1.2">
 					<using kind="DUALFIST" />
 				</mul>
-				<mul order="0x30" stat="runSpd" val="0.7" />
+				<mul stat="runSpd" val="0.7" />
 			</effect>
 		</for>
 	</skill>
@@ -1963,10 +2012,11 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="#rate" />
+				<mul stat="pAtk" val="#rate" />
 			</effect>
 		</for>
 	</skill>
@@ -1986,10 +2036,11 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="45000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="#pAtk" />
+				<mul stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
 	</skill>
@@ -2004,6 +2055,7 @@
 		<set name="mpConsume" val="24" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="AttackTrait">
@@ -2031,6 +2083,7 @@
 		<set name="hitTime" val="1360" />
 		<set name="hpConsume" val="#hpConsume" />
 		<set name="icon" val="icon.skill0081" />
+		<set name="isDebuff" val="true" />
 		<set name="ignoreShld" val="true" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -2039,6 +2092,7 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="300000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -2075,20 +2129,21 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pDef" val="#pDef" />
-				<sub order="0x40" stat="rEvas" val="#rEvas" />
+				<mul stat="pDef" val="#pDef" />
+				<sub stat="rEvas" val="#rEvas" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pDef" val="#ench1pDef" />
-				<sub order="0x40" stat="rEvas" val="6" />
+				<mul stat="pDef" val="#ench1pDef" />
+				<sub stat="rEvas" val="6" />
 			</effect>
 		</enchant1for>
 	</skill>
@@ -2103,16 +2158,17 @@
 		<set name="mpConsume" val="19" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="23000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<using kind="DUALFIST" />
 		</cond>
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="runSpd" val="1.2">
+				<mul stat="runSpd" val="1.2">
 					<using kind="DUALFIST" />
 				</mul>
-				<add order="0x40" stat="accCombat" val="3">
+				<add stat="accCombat" val="3">
 					<using kind="DUALFIST" />
 				</add>
 			</effect>
@@ -2148,6 +2204,7 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="1" />
 		<set name="reuseDelay" val="15000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="POISON" />
 		<enchant1 name="activateRate" val="#ench1ActivateRates" />
@@ -2196,6 +2253,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -2204,12 +2262,12 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="reflectDam" val="#reflectDam" />
+				<add stat="reflectDam" val="#reflectDam" />
 			</effect>
 		</for>
 		<enchant2for>
 			<effect name="Buff">
-				<add order="0x40" stat="reflectDam" val="#ench2reflectDam" />
+				<add stat="reflectDam" val="#ench2reflectDam" />
 			</effect>
 		</enchant2for>
 	</skill>
@@ -2224,6 +2282,7 @@
 		<set name="mpConsume" val="18" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="AttackTrait">
@@ -2242,6 +2301,7 @@
 		<set name="mpConsume" val="27" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="AttackTrait">
@@ -2268,10 +2328,11 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pDef" val="#rate" />
+				<mul stat="pDef" val="#rate" />
 			</effect>
 		</for>
 	</skill>
@@ -2303,6 +2364,7 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -2329,22 +2391,22 @@
 		</for>
 		<enchant3for>
 			<effect name="Stun">
-				<sub order="0x40" stat="fireRes" val="#Vuln" />
+				<sub stat="fireRes" val="#Vuln" />
 			</effect>
 		</enchant3for>
 		<enchant4for>
 			<effect name="Stun">
-				<sub order="0x40" stat="waterRes" val="#Vuln" />
+				<sub stat="waterRes" val="#Vuln" />
 			</effect>
 		</enchant4for>
 		<enchant5for>
 			<effect name="Stun">
-				<sub order="0x40" stat="windRes" val="#Vuln" />
+				<sub stat="windRes" val="#Vuln" />
 			</effect>
 		</enchant5for>
 		<enchant6for>
 			<effect name="Stun">
-				<sub order="0x40" stat="earthRes" val="#Vuln" />
+				<sub stat="earthRes" val="#Vuln" />
 			</effect>
 		</enchant6for>
 	</skill>
@@ -2369,73 +2431,74 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="75000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.2" />
-				<mul order="0x30" stat="pAtk" val="#swordbluntpole">
+				<mul stat="pAtk" val="1.2" />
+				<mul stat="pAtk" val="#swordbluntpole">
 					<using kind="SWORD,BLUNT,POLE" />
 				</mul>
-				<mul order="0x30" stat="pAtk" val="#twohands">
+				<mul stat="pAtk" val="#twohands">
 					<and>
 						<using kind="SWORD,BLUNT" />
 						<using slot="lrhand" />
 					</and>
 				</mul>
-				<add order="0x40" stat="accCombat" val="#accCombat">
+				<add stat="accCombat" val="#accCombat">
 					<and>
 						<using kind="SWORD,BLUNT" />
 						<using slot="lrhand" />
 					</and>
 				</add>
-				<mul order="0x30" stat="pDef" val="0.8" />
-				<sub order="0x40" stat="rEvas" val="3" />
+				<mul stat="pDef" val="0.8" />
+				<sub stat="rEvas" val="3" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.2" />
-				<mul order="0x30" stat="pAtk" val="#ench1atk">
+				<mul stat="pAtk" val="1.2" />
+				<mul stat="pAtk" val="#ench1atk">
 					<using kind="SWORD,BLUNT,POLE" />
 				</mul>
-				<mul order="0x30" stat="pAtk" val="1.06">
+				<mul stat="pAtk" val="1.06">
 					<and>
 						<using kind="SWORD,BLUNT" />
 						<using slot="lrhand" />
 					</and>
 				</mul>
-				<add order="0x40" stat="accCombat" val="4">
+				<add stat="accCombat" val="4">
 					<and>
 						<using kind="SWORD,BLUNT" />
 						<using slot="lrhand" />
 					</and>
 				</add>
-				<mul order="0x30" stat="pDef" val="0.8" />
-				<sub order="0x40" stat="rEvas" val="3" />
+				<mul stat="pDef" val="0.8" />
+				<sub stat="rEvas" val="3" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.2" />
-				<mul order="0x30" stat="pAtk" val="1.29">
+				<mul stat="pAtk" val="1.2" />
+				<mul stat="pAtk" val="1.29">
 					<using kind="SWORD,BLUNT,POLE" />
 				</mul>
-				<mul order="0x30" stat="pAtk" val="#ench2atk">
+				<mul stat="pAtk" val="#ench2atk">
 					<and>
 						<using kind="SWORD,BLUNT" />
 						<using slot="lrhand" />
 					</and>
 				</mul>
-				<add order="0x40" stat="accCombat" val="4">
+				<add stat="accCombat" val="4">
 					<and>
 						<using kind="SWORD,BLUNT" />
 						<using slot="lrhand" />
 					</and>
 				</add>
-				<mul order="0x30" stat="pDef" val="0.8" />
-				<sub order="0x40" stat="rEvas" val="3" />
+				<mul stat="pDef" val="0.8" />
+				<sub stat="rEvas" val="3" />
 			</effect>
 		</enchant2for>
 	</skill>
@@ -2466,6 +2529,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="activateRate" val="#ench1ActivateRates" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -2476,7 +2540,7 @@
 		</cond>
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="runSpd" val="#runSpd" />
+				<mul stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
 	</skill>
@@ -2509,6 +2573,7 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -2521,7 +2586,7 @@
 		<for>
 			<effect name="DamOverTime" ticks="5">
 				<param power="#dot" />
-				<mul order="0x30" stat="runSpd" val="0.8" />
+				<mul stat="runSpd" val="0.8" />
 			</effect>
 		</for>
 		<enchant2for>
@@ -2530,13 +2595,13 @@
 			</effect>
 			<effect name="DamOverTime" ticks="5">
 				<param power="67" />
-				<mul order="0x30" stat="runSpd" val="0.8" />
+				<mul stat="runSpd" val="0.8" />
 			</effect>
 		</enchant2for>
 		<enchant3for>
 			<effect name="DamOverTime" ticks="5">
 				<param power="#ench3dot" />
-				<mul order="0x30" stat="runSpd" val="0.8" />
+				<mul stat="runSpd" val="0.8" />
 			</effect>
 		</enchant3for>
 	</skill>
@@ -2565,6 +2630,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AREA" />
 		<enchant1 name="activateRate" val="#ench1ActivateRates" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -2578,19 +2644,19 @@
 		</cond>
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="pAtk" val="0.77" />
+				<mul stat="pAtk" val="0.77" />
 			</effect>
 		</for>
 		<enchant3for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="pAtk" val="0.77" />
+				<mul stat="pAtk" val="0.77" />
 			</effect>
 			<effect name="PhysicalAttack" />
 		</enchant3for>
 		<enchant4for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="pAtk" val="0.77" />
-				<mul order="0x30" stat="defCritRate" val="#ench4defCritRate" />
+				<mul stat="pAtk" val="0.77" />
+				<mul stat="defCritRate" val="#ench4defCritRate" />
 			</effect>
 		</enchant4for>
 	</skill>
@@ -2620,6 +2686,7 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="15000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -2649,6 +2716,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -2657,7 +2725,7 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtkSpd" val="#rate">
+				<mul stat="pAtkSpd" val="#rate">
 					<using kind="BOW" />
 				</mul>
 			</effect>

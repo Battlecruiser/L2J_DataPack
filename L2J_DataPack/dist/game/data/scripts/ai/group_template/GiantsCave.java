@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,7 +20,6 @@ package ai.group_template;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -65,8 +64,7 @@ public final class GiantsCave extends AbstractNpcAI
 			{
 				if ((characters != null) && (characters.isAttackable()) && (getRandomBoolean()))
 				{
-					L2Attackable monster = (L2Attackable) characters;
-					attackPlayer(monster, player);
+					addAttackPlayerDesire((L2Npc) characters, player);
 				}
 			}
 		}

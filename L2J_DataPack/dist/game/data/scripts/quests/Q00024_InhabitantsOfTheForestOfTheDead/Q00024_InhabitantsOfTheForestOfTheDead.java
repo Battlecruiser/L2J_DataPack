@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -17,6 +17,9 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package quests.Q00024_InhabitantsOfTheForestOfTheDead;
+
+import quests.Q00023_LidiasHeart.Q00023_LidiasHeart;
+import quests.Q00025_HidingBehindTheTruth.Q00025_HidingBehindTheTruth;
 
 import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -61,7 +64,7 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -72,7 +75,7 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 		{
 		// Dorian
 			case "31389-02.htm":
-				final QuestState qs = player.getQuestState("23_LidiasHeart");
+				final QuestState qs = player.getQuestState(Q00023_LidiasHeart.class.getSimpleName());
 				if ((player.getLevel() >= 65) && (qs != null) && qs.isCompleted())
 				{
 					st.startQuest();
@@ -206,7 +209,7 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		
 		if ((st != null) && st.isCond(9) && (getRandom(100) < 10))
 		{
@@ -220,7 +223,7 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, true);
 		
 		if (st == null)
 		{
@@ -283,7 +286,7 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 				}
 				else if (st.isCompleted())
 				{
-					final QuestState qs = player.getQuestState("25_HidingBehindTheTruth");
+					final QuestState qs = player.getQuestState(Q00025_HidingBehindTheTruth.class.getSimpleName());
 					if (!((qs != null) && (qs.isStarted() || qs.isStarted())))
 					{
 						htmltext = "31522-22.html";

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,12 +18,12 @@
  */
 package custom.Validators;
 
+import java.util.ArrayList;
 import java.util.Arrays;
-
-import javolution.util.FastList;
+import java.util.List;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.ClassListData;
+import com.l2jserver.gameserver.data.xml.impl.ClassListData;
 import com.l2jserver.gameserver.enums.IllegalActionPunishmentType;
 import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -107,49 +107,36 @@ public final class SubClassSkills extends Quest
 			return null;
 		}
 		
-		final Skill[] certSkills = getCertSkills(player);
+		final List<Skill> certSkills = getCertSkills(player);
 		if (player.isSubClassActive())
 		{
-			if (certSkills != null)
+			for (Skill s : certSkills)
 			{
-				for (Skill s : certSkills)
+				Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has cert skill on subclass :" + s.getName() + "(" + s.getId() + "/" + s.getLevel() + "), class:" + ClassListData.getInstance().getClass(player.getClassId()).getClassName(), IllegalActionPunishmentType.NONE);
+				
+				if (Config.SKILL_CHECK_REMOVE)
 				{
-					Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has cert skill on subclass :" + s.getName() + "(" + s.getId() + "/" + s.getLevel() + "), class:" + ClassListData.getInstance().getClass(player.getClassId()).getClassName(), IllegalActionPunishmentType.NONE);
-					
-					if (Config.SKILL_CHECK_REMOVE)
-					{
-						player.removeSkill(s);
-					}
+					player.removeSkill(s);
 				}
 			}
 			return null;
 		}
 		
-		Skill skill;
-		int[][] cSkills = null; // skillId/skillLvl
-		if (certSkills != null)
+		int[][] cSkills = new int[certSkills.size()][2]; // skillId/skillLvl
+		for (int i = certSkills.size(); --i >= 0;)
 		{
-			cSkills = new int[certSkills.length][2];
-			for (int i = certSkills.length; --i >= 0;)
-			{
-				skill = certSkills[i];
-				cSkills[i][0] = skill.getId();
-				cSkills[i][1] = skill.getLevel();
-			}
+			Skill skill = certSkills.get(i);
+			cSkills[i][0] = skill.getId();
+			cSkills[i][1] = skill.getLevel();
 		}
 		
-		L2ItemInstance item;
-		int[][] cItems = null; // objectId/number
-		final L2ItemInstance[] certItems = getCertItems(player);
-		if (certItems != null)
+		final List<L2ItemInstance> certItems = getCertItems(player);
+		int[][] cItems = new int[certItems.size()][2]; // objectId/number
+		for (int i = certItems.size(); --i >= 0;)
 		{
-			cItems = new int[certItems.length][2];
-			for (int i = certItems.length; --i >= 0;)
-			{
-				item = certItems[i];
-				cItems[i][0] = item.getObjectId();
-				cItems[i][1] = (int) Math.min(item.getCount(), Integer.MAX_VALUE);
-			}
+			L2ItemInstance item = certItems.get(i);
+			cItems[i][0] = item.getObjectId();
+			cItems[i][1] = (int) Math.min(item.getCount(), Integer.MAX_VALUE);
 		}
 		
 		QuestState st = player.getQuestState("SubClassSkills");
@@ -177,17 +164,17 @@ public final class SubClassSkills extends Quest
 					{
 						id = Integer.parseInt(qValue.replace(";", ""));
 						
-						skill = null;
+						Skill skill = null;
 						if (certSkills != null)
 						{
 							// searching skill in test array
 							if (cSkills != null)
 							{
-								for (index = certSkills.length; --index >= 0;)
+								for (index = certSkills.size(); --index >= 0;)
 								{
 									if (cSkills[index][0] == id)
 									{
-										skill = certSkills[index];
+										skill = certSkills.get(index);
 										cSkills[index][1]--;
 										break;
 									}
@@ -227,17 +214,17 @@ public final class SubClassSkills extends Quest
 							continue;
 						}
 						
-						item = null;
+						L2ItemInstance item = null;
 						if (certItems != null)
 						{
 							// searching item in test array
 							if (cItems != null)
 							{
-								for (index = certItems.length; --index >= 0;)
+								for (index = certItems.size(); --index >= 0;)
 								{
 									if (cItems[index][0] == id)
 									{
-										item = certItems[index];
+										item = certItems.get(index);
 										cItems[index][1]--;
 										break;
 									}
@@ -278,7 +265,7 @@ public final class SubClassSkills extends Quest
 					continue;
 				}
 				
-				skill = certSkills[i];
+				Skill skill = certSkills.get(i);
 				if (cSkills[i][1] > 0)
 				{
 					if (cSkills[i][1] == skill.getLevel())
@@ -311,7 +298,7 @@ public final class SubClassSkills extends Quest
 					continue;
 				}
 				
-				item = certItems[i];
+				L2ItemInstance item = certItems.get(i);
 				Util.handleIllegalPlayerAction(player, "Invalid cert item without variable or with wrong count:" + item.getObjectId(), IllegalActionPunishmentType.NONE);
 			}
 		}
@@ -319,54 +306,30 @@ public final class SubClassSkills extends Quest
 		return null;
 	}
 	
-	private Skill[] getCertSkills(L2PcInstance player)
+	private List<Skill> getCertSkills(L2PcInstance player)
 	{
-		FastList<Skill> tmp = null;
+		final List<Skill> tmp = new ArrayList<>();
 		for (Skill s : player.getAllSkills())
 		{
 			if ((s != null) && (Arrays.binarySearch(_allCertSkillIds, s.getId()) >= 0))
 			{
-				if (tmp == null)
-				{
-					tmp = FastList.newInstance();
-				}
-				
 				tmp.add(s);
 			}
 		}
-		if (tmp == null)
-		{
-			return null;
-		}
-		
-		final Skill[] result = tmp.toArray(new Skill[tmp.size()]);
-		FastList.recycle(tmp);
-		return result;
+		return tmp;
 	}
 	
-	private L2ItemInstance[] getCertItems(L2PcInstance player)
+	private List<L2ItemInstance> getCertItems(L2PcInstance player)
 	{
-		FastList<L2ItemInstance> tmp = null;
+		final List<L2ItemInstance> tmp = new ArrayList<>();
 		for (L2ItemInstance i : player.getInventory().getItems())
 		{
 			if ((i != null) && (Arrays.binarySearch(_allCertItemIds, i.getId()) >= 0))
 			{
-				if (tmp == null)
-				{
-					tmp = FastList.newInstance();
-				}
-				
 				tmp.add(i);
 			}
 		}
-		if (tmp == null)
-		{
-			return null;
-		}
-		
-		final L2ItemInstance[] result = tmp.toArray(new L2ItemInstance[tmp.size()]);
-		FastList.recycle(tmp);
-		return result;
+		return tmp;
 	}
 	
 	public static void main(String[] args)

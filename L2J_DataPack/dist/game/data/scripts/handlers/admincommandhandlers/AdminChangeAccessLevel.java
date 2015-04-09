@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -24,7 +24,7 @@ import java.sql.SQLException;
 
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
-import com.l2jserver.gameserver.datatables.AdminTable;
+import com.l2jserver.gameserver.data.xml.impl.AdminData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2AccessLevel;
 import com.l2jserver.gameserver.model.L2World;
@@ -120,9 +120,9 @@ public final class AdminChangeAccessLevel implements IAdminCommandHandler
 	{
 		if (lvl >= 0)
 		{
-			if (AdminTable.getInstance().hasAccessLevel(lvl))
+			if (AdminData.getInstance().hasAccessLevel(lvl))
 			{
-				final L2AccessLevel acccessLevel = AdminTable.getInstance().getAccessLevel(lvl);
+				final L2AccessLevel acccessLevel = AdminData.getInstance().getAccessLevel(lvl);
 				player.setAccessLevel(lvl);
 				player.sendMessage("Your access level has been changed to " + acccessLevel.getName() + " (" + acccessLevel.getLevel() + ").");
 				activeChar.sendMessage(player.getName() + "'s access level has been changed to " + acccessLevel.getName() + " (" + acccessLevel.getLevel() + ").");

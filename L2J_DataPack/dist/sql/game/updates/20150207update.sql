@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00227_TestOfTheReformer' WHERE name='227_TestOfReformer'; 

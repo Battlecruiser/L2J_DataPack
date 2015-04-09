@@ -9,10 +9,11 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxHp" val="1.2" />
+				<mul stat="maxHp" val="1.2" />
 			</effect>
 		</for>
 	</skill>
@@ -25,10 +26,11 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxMp" val="1.2" />
+				<mul stat="maxMp" val="1.2" />
 			</effect>
 		</for>
 	</skill>
@@ -40,6 +42,7 @@
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2803" levels="1" name="Seed of Revenge">
@@ -50,6 +53,7 @@
 		<set name="itemConsumeId" val="14170" /> <!-- Forgotten Scroll - Seed of Revenge -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -77,6 +81,7 @@
 		<set name="itemConsumeId" val="14171" /> <!-- Forgotten Scroll - Hell Scream -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -101,6 +106,7 @@
 		<set name="itemConsumeId" val="14172" /> <!-- Forgotten Scroll - Spirit of Phoenix -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -128,6 +134,7 @@
 		<set name="itemConsumeId" val="14173" /> <!-- Forgotten Scroll - Eva's Will / Touch of Eva -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -155,6 +162,7 @@
 		<set name="itemConsumeId" val="14174" /> <!-- Forgotten Scroll - Pain of Shillien -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -182,6 +190,7 @@
 		<set name="itemConsumeId" val="14175" /> <!-- Forgotten Scroll - Exciting Adventure -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -206,6 +215,7 @@
 		<set name="itemConsumeId" val="14176" /> <!-- Forgotten Scroll - Wind Riding -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -230,6 +240,7 @@
 		<set name="itemConsumeId" val="14177" /> <!-- Forgotten Scroll - Ghost Walking -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -254,6 +265,7 @@
 		<set name="itemConsumeId" val="14178" /> <!-- Forgotten Scroll - Flame Hawk -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -278,6 +290,7 @@
 		<set name="itemConsumeId" val="14179" /> <!-- Forgotten Scroll - Arrow Rain -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -302,6 +315,7 @@
 		<set name="itemConsumeId" val="14180" /> <!-- Forgotten Scroll - Ghost Piercing -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -326,6 +340,7 @@
 		<set name="itemConsumeId" val="14181" /> <!-- Forgotten Scroll - Dread Pool -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -350,6 +365,7 @@
 		<set name="itemConsumeId" val="14182" /> <!-- Forgotten Scroll - Force of Destruction -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -374,6 +390,7 @@
 		<set name="itemConsumeId" val="14183" /> <!-- Forgotten Scroll - Demolition Impact -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -398,6 +415,7 @@
 		<set name="itemConsumeId" val="14184" /> <!-- Forgotten Scroll - Golem Armor -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -422,6 +440,7 @@
 		<set name="itemConsumeId" val="14185" /> <!-- Forgotten Scroll - Wild Shot -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -446,6 +465,7 @@
 		<set name="itemConsumeId" val="14186" /> <!-- Forgotten Scroll - Lightning Shock -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -470,6 +490,7 @@
 		<set name="itemConsumeId" val="14187" /> <!-- Forgotten Scroll - Flame Armor -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -494,6 +515,7 @@
 		<set name="itemConsumeId" val="14188" /> <!-- Forgotten Scroll - Frost Armor -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -518,6 +540,7 @@
 		<set name="itemConsumeId" val="14189" /> <!-- Forgotten Scroll - Hurricane Armor -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -542,6 +565,7 @@
 		<set name="itemConsumeId" val="14190" /> <!-- Forgotten Scroll - Vampiric Mist -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -566,6 +590,7 @@
 		<set name="itemConsumeId" val="14191" /> <!-- Forgotten Scroll - Meteor -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -590,6 +615,7 @@
 		<set name="itemConsumeId" val="14192" /> <!-- Forgotten Scroll - Star Fall -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -614,6 +640,7 @@
 		<set name="itemConsumeId" val="14193" /> <!-- Forgotten Scroll - Sublime Self Sacrifice -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -638,6 +665,7 @@
 		<set name="itemConsumeId" val="14194" /> <!-- Forgotten Scroll - Blessing of Eva -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -662,6 +690,7 @@
 		<set name="itemConsumeId" val="14195" /> <!-- Forgotten Scroll - Lord of Vampire -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -686,6 +715,7 @@
 		<set name="itemConsumeId" val="14196" /> <!-- Forgotten Scroll - Thorn Root -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -710,6 +740,7 @@
 		<set name="itemConsumeId" val="14197" /> <!-- Forgotten Scroll - Seal of Limit -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -734,6 +765,7 @@
 		<set name="itemConsumeId" val="14203" /> <!-- Forgotten Scroll - Weapon Blockade -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -759,6 +791,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -779,6 +812,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -799,6 +833,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -819,6 +854,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -839,6 +875,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -856,6 +893,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2838" levels="1" name="Treasure Sack of the Ancient Giants">
@@ -868,6 +906,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -890,8 +929,10 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="13855" /> <!-- Sacred Light Fragment -->
 		<set name="magicLvl" val="99" />
+		<set name="isDebuff" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2840" levels="1" name="Star Stone Gathering">
@@ -902,6 +943,7 @@
 		<set name="itemConsumeId" val="13728" /> <!-- Expert Text - Star Stone Extraction Skill. Level 1 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -924,6 +966,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2842" levels="1" name="Duel Supplies">
@@ -937,6 +980,7 @@
 		<set name="itemConsumeId" val="13777" /> <!-- Jewel Ornamented Duel Supplies -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -959,6 +1003,7 @@
 		<set name="itemConsumeId" val="13778" /> <!-- Mother-of-Pearl Ornamented Duel Supplies -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -981,6 +1026,7 @@
 		<set name="itemConsumeId" val="13779" /> <!-- Gold-Ornamented Duel Supplies -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -1003,6 +1049,7 @@
 		<set name="itemConsumeId" val="13780" /> <!-- Silver-Ornamented Duel Supplies -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -1025,6 +1072,7 @@
 		<set name="itemConsumeId" val="13781" /> <!-- Bronze-Ornamented Duel Supplies -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -1047,6 +1095,7 @@
 		<set name="itemConsumeId" val="13782" /> <!-- Non-Ornamented Duel Supplies -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -1069,6 +1118,7 @@
 		<set name="itemConsumeId" val="13783" /> <!-- Weak-Looking Duel Supplies -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -1091,6 +1141,7 @@
 		<set name="itemConsumeId" val="13784" /> <!-- Sad-Looking Duel Supplies -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -1113,6 +1164,7 @@
 		<set name="itemConsumeId" val="13785" /> <!-- Poor-Looking Duel Supplies -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -1135,6 +1187,7 @@
 		<set name="itemConsumeId" val="13786" /> <!-- Worthless Duel Supplies -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -1157,6 +1210,7 @@
 		<set name="itemConsumeId" val="14635" /> <!-- Low Quality Battle Reward Chest -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -1179,6 +1233,7 @@
 		<set name="itemConsumeId" val="14636" /> <!-- Middle Quality Battle Reward Chest -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -1201,6 +1256,7 @@
 		<set name="itemConsumeId" val="14637" /> <!-- High-Grade Battle Reward Chest -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -1223,6 +1279,7 @@
 		<set name="itemConsumeId" val="14638" /> <!-- Best Quality Battle Reward Chest -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -1246,25 +1303,26 @@
 		<set name="itemConsumeId" val="14614" /> <!-- Lineage II Devotee Scroll -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="cAtk" val="1.2" />
-				<sub order="0x40" stat="debuffVuln" val="10" />
-				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
-				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" />
-				<mul order="0x30" stat="DanceMpConsumeRate" val="0.95" />
-				<mul order="0x30" stat="mAtk" val="1.2" />
-				<mul order="0x30" stat="mAtkSpd" val="1.2" />
-				<mul order="0x30" stat="maxMp" val="1.2" />
-				<add order="0x40" stat="mCritRate" val="2" />
-				<mul order="0x30" stat="mDef" val="1.2" />
-				<mul order="0x30" stat="pAtk" val="1.1" />
-				<mul order="0x30" stat="pAtkSpd" val="1.2" />
-				<mul order="0x30" stat="pDef" val="1.2" />
-				<mul order="0x30" stat="regHp" val="1.2" />
-				<mul order="0x30" stat="regMp" val="1.2" />
-				<mul order="0x30" stat="runSpd" val="0.8" />
+				<mul stat="cAtk" val="1.2" />
+				<sub stat="debuffVuln" val="10" />
+				<mul stat="MagicalMpConsumeRate" val="0.95" />
+				<mul stat="PhysicalMpConsumeRate" val="0.95" />
+				<mul stat="DanceMpConsumeRate" val="0.95" />
+				<mul stat="mAtk" val="1.2" />
+				<mul stat="mAtkSpd" val="1.2" />
+				<mul stat="maxMp" val="1.2" />
+				<add stat="mCritRate" val="2" />
+				<mul stat="mDef" val="1.2" />
+				<mul stat="pAtk" val="1.1" />
+				<mul stat="pAtkSpd" val="1.2" />
+				<mul stat="pDef" val="1.2" />
+				<mul stat="regHp" val="1.2" />
+				<mul stat="regMp" val="1.2" />
+				<mul stat="runSpd" val="0.8" />
 			</effect>
 		</for>
 	</skill>
@@ -1280,22 +1338,23 @@
 		<set name="itemConsumeId" val="14615" /> <!-- Scroll of Christmas Festival - Mage Type -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<sub order="0x40" stat="debuffVuln" val="10" />
-				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
-				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" />
-				<mul order="0x30" stat="DanceMpConsumeRate" val="0.95" />
-				<mul order="0x30" stat="mAtk" val="1.2" />
-				<mul order="0x30" stat="mAtkSpd" val="1.2" />
-				<add order="0x40" stat="mCritRate" val="2" />
-				<mul order="0x30" stat="mDef" val="1.2" />
-				<mul order="0x30" stat="pAtk" val="1.1" />
-				<mul order="0x30" stat="pAtkSpd" val="1.2" />
-				<mul order="0x30" stat="pDef" val="1.2" />
-				<mul order="0x30" stat="regMp" val="1.2" />
-				<mul order="0x30" stat="runSpd" val="0.8" />
+				<sub stat="debuffVuln" val="10" />
+				<mul stat="MagicalMpConsumeRate" val="0.95" />
+				<mul stat="PhysicalMpConsumeRate" val="0.95" />
+				<mul stat="DanceMpConsumeRate" val="0.95" />
+				<mul stat="mAtk" val="1.2" />
+				<mul stat="mAtkSpd" val="1.2" />
+				<add stat="mCritRate" val="2" />
+				<mul stat="mDef" val="1.2" />
+				<mul stat="pAtk" val="1.1" />
+				<mul stat="pAtkSpd" val="1.2" />
+				<mul stat="pDef" val="1.2" />
+				<mul stat="regMp" val="1.2" />
+				<mul stat="runSpd" val="0.8" />
 			</effect>
 		</for>
 	</skill>
@@ -1310,6 +1369,7 @@
 		<set name="itemConsumeId" val="14612" /> <!-- Christmas Red Sock -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -1328,6 +1388,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2860" levels="6" name="Highest Power Secret Medicine of Life">
@@ -1340,6 +1401,7 @@
 		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<player levelRange="#levelRange" />
@@ -1360,6 +1422,7 @@
 		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<player levelRange="#levelRange" />
@@ -1380,6 +1443,7 @@
 		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<player levelRange="#levelRange" />
@@ -1401,6 +1465,7 @@
 		<set name="itemConsumeId" val="14700" /> <!-- Greater Healing Potion -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="HealOverTime" ticks="3">
@@ -1415,6 +1480,7 @@
 		<set name="itemConsumeId" val="14701" /> <!-- Greater Quick Healing Potion -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Heal">
@@ -1433,6 +1499,7 @@
 		<set name="itemConsumeId" val="14676" /> <!-- Agathion's New Year's Gift -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -1455,6 +1522,7 @@
 		<set name="itemConsumeId" val="14677" /> <!-- Agathion's New Year's Gift -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -1475,6 +1543,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2868" levels="1" name="Cupid's Enhanced Cure">
@@ -1486,6 +1555,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2869" levels="1" name="Event - Milk Cow Summon Scroll">
@@ -1498,6 +1568,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonNpc">
@@ -1515,6 +1586,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonNpc">
@@ -1530,6 +1602,7 @@
 		<set name="itemConsumeId" val="14726" /> <!-- Event - Gloomy Milk Cow Summon Scroll -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonNpc">
@@ -1545,6 +1618,7 @@
 		<set name="itemConsumeId" val="14727" /> <!-- Event - Gloomy Head Milk Cow Summon Scroll -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonNpc">
@@ -1562,10 +1636,11 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="20" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.15" />
+				<mul stat="pAtk" val="1.15" />
 			</effect>
 		</for>
 	</skill>
@@ -1579,10 +1654,11 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="30" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="runSpd" val="33" />
+				<add stat="runSpd" val="33" />
 			</effect>
 		</for>
 	</skill>
@@ -1596,10 +1672,11 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="44" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtkSpd" val="1.33" />
+				<mul stat="pAtkSpd" val="1.33" />
 			</effect>
 		</for>
 	</skill>
@@ -1613,10 +1690,11 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="44" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="absorbDam" val="9" />
+				<add stat="absorbDam" val="9" />
 			</effect>
 		</for>
 	</skill>
@@ -1630,17 +1708,18 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="35" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mAtk" val="1.16" />
-				<mul order="0x30" stat="pAtk" val="1.08" />
-				<mul order="0x30" stat="mDef" val="0.84" />
-				<mul order="0x30" stat="pDef" val="0.92" />
-				<mul order="0x30" stat="mAtkSpd" val="1.08" />
-				<mul order="0x30" stat="pAtkSpd" val="1.08" />
-				<add order="0x40" stat="runSpd" val="8" />
-				<sub order="0x40" stat="rEvas" val="4" />
+				<mul stat="mAtk" val="1.16" />
+				<mul stat="pAtk" val="1.08" />
+				<mul stat="mDef" val="0.84" />
+				<mul stat="pDef" val="0.92" />
+				<mul stat="mAtkSpd" val="1.08" />
+				<mul stat="pAtkSpd" val="1.08" />
+				<add stat="runSpd" val="8" />
+				<sub stat="rEvas" val="4" />
 			</effect>
 		</for>
 	</skill>
@@ -1654,10 +1733,11 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="44" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mAtk" val="1.75" />
+				<mul stat="mAtk" val="1.75" />
 			</effect>
 		</for>
 	</skill>
@@ -1671,10 +1751,11 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="35" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mAtkSpd" val="1.3" />
+				<mul stat="mAtkSpd" val="1.3" />
 			</effect>
 		</for>
 	</skill>
@@ -1688,6 +1769,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonNpc">
@@ -1705,6 +1787,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonNpc">
@@ -1724,6 +1807,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -1749,6 +1833,7 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2884" levels="1" name="Energy Replenishing Herb Tea">
@@ -1765,6 +1850,7 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2885" levels="1" name="Shield">
@@ -1777,10 +1863,11 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="25" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pDef" val="1.15" />
+				<mul stat="pDef" val="1.15" />
 			</effect>
 		</for>
 	</skill>
@@ -1794,10 +1881,11 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="44" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<basemul order="0x30" stat="rCrit" val="0.3" />
+				<mul stat="rCrit" val="1.3" />
 			</effect>
 		</for>
 	</skill>
@@ -1811,10 +1899,11 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="48" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="cAtk" val="1.35" />
+				<mul stat="cAtk" val="1.35" />
 			</effect>
 		</for>
 	</skill>
@@ -1828,10 +1917,11 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="48" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="accCombat" val="4" />
+				<add stat="accCombat" val="4" />
 			</effect>
 		</for>
 	</skill>
@@ -1845,12 +1935,13 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.9" />
-				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.8" />
-				<mul order="0x30" stat="DanceMpConsumeRate" val="0.8" />
+				<mul stat="MagicalMpConsumeRate" val="0.9" />
+				<mul stat="PhysicalMpConsumeRate" val="0.8" />
+				<mul stat="DanceMpConsumeRate" val="0.8" />
 			</effect>
 		</for>
 	</skill>
@@ -1864,10 +1955,11 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="70" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="mCritRate" val="2" />
+				<add stat="mCritRate" val="2" />
 			</effect>
 		</for>
 	</skill>
@@ -1881,10 +1973,11 @@
 		<set name="icon" val="icon.etc_fresh_milk_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<sub order="0x40" stat="cancel" val="53" />
+				<sub stat="cancel" val="53" />
 			</effect>
 		</for>
 	</skill>
@@ -1894,6 +1987,7 @@
 		<set name="itemConsumeId" val="14765" /> <!-- For Events - Extra Entrance Pass - Rim Kamaloka -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2893" levels="1" name="Solo Escape Petition">
@@ -1910,6 +2004,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2894" levels="1" name="White Day Candy">
@@ -1920,6 +2015,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="VitalityPointUp">
@@ -1938,6 +2034,7 @@
 		<set name="itemConsumeId" val="14766" /> <!-- Special White Day Candy Basket -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -1960,6 +2057,7 @@
 		<set name="itemConsumeId" val="14767" /> <!-- White Day Candy Basket -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -1984,11 +2082,12 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxHp" val="1.1" />
-				<mul order="0x30" stat="regHp" val="1.2" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="regHp" val="1.2" />
 			</effect>
 		</for>
 	</skill>
@@ -2005,16 +2104,17 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxHp" val="1.1" />
-				<mul order="0x30" stat="maxMp" val="1.1" />
-				<mul order="0x30" stat="mAtkSpd" val="1.1" />
-				<mul order="0x30" stat="pDef" val="1.1" />
-				<mul order="0x30" stat="mDef" val="1.1" />
-				<mul order="0x30" stat="pAtkSpd" val="1.15" />
-				<add order="0x40" stat="runSpd" val="10" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxMp" val="1.1" />
+				<mul stat="mAtkSpd" val="1.1" />
+				<mul stat="pDef" val="1.1" />
+				<mul stat="mDef" val="1.1" />
+				<mul stat="pAtkSpd" val="1.15" />
+				<add stat="runSpd" val="10" />
 			</effect>
 		</for>
 	</skill>
@@ -2031,11 +2131,12 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxMp" val="1.1" />
-				<mul order="0x30" stat="regMp" val="1.2" />
+				<mul stat="maxMp" val="1.1" />
+				<mul stat="regMp" val="1.2" />
 			</effect>
 		</for>
 	</skill>

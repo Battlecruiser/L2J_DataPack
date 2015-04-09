@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,16 +18,14 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2DefenderInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2FortCommanderInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2ServitorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SiegeFlagInstance;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
@@ -52,11 +50,9 @@ public final class Fear extends AbstractEffect
 	@Override
 	public boolean canStart(BuffInfo info)
 	{
-		if ((info.getEffected() instanceof L2NpcInstance) || (info.getEffected() instanceof L2DefenderInstance) || (info.getEffected() instanceof L2FortCommanderInstance) || (info.getEffected() instanceof L2SiegeFlagInstance) || (info.getEffected() instanceof L2ServitorInstance))
-		{
-			return false;
-		}
-		return true;
+		return info.getEffected().isPlayer() || info.getEffected().isSummon() || (info.getEffected().isAttackable() && //
+		!((info.getEffected() instanceof L2DefenderInstance) || (info.getEffected() instanceof L2FortCommanderInstance) || //
+			(info.getEffected() instanceof L2SiegeFlagInstance) || (info.getEffected().getTemplate().getRace() == Race.SIEGE_WEAPON)));
 	}
 	
 	@Override
@@ -104,18 +100,12 @@ public final class Fear extends AbstractEffect
 		int posY = (int) (info.getEffected().getY() + (FEAR_RANGE * Math.sin(radians)));
 		int posZ = info.getEffected().getZ();
 		
-		if (Config.GEODATA > 0)
-		{
-			Location destiny = GeoData.getInstance().moveCheck(info.getEffected().getX(), info.getEffected().getY(), info.getEffected().getZ(), posX, posY, posZ, info.getEffected().getInstanceId());
-			posX = destiny.getX();
-			posY = destiny.getY();
-		}
-		
 		if (!info.getEffected().isPet())
 		{
 			info.getEffected().setRunning();
 		}
 		
-		info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(posX, posY, posZ));
+		final Location destination = GeoData.getInstance().moveCheck(info.getEffected().getX(), info.getEffected().getY(), info.getEffected().getZ(), posX, posY, posZ, info.getEffected().getInstanceId());
+		info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);
 	}
 }

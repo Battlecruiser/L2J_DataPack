@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,7 +21,6 @@ package custom.events.Elpies;
 import java.util.concurrent.ScheduledFuture;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.Announcements;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.model.L2Spawn;
@@ -29,6 +28,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2EventMonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Event;
+import com.l2jserver.gameserver.util.Broadcast;
 
 public final class Elpies extends Event
 {
@@ -110,19 +110,15 @@ public final class Elpies extends Event
 			CURRENT_ELPY_COUNT++;
 		}
 		
-		Announcements.getInstance().announceToAll("*Squeak Squeak*");
-		Announcements.getInstance().announceToAll("Elpy invasion in " + randomLoc.getName());
-		Announcements.getInstance().announceToAll("Help us exterminate them!");
-		Announcements.getInstance().announceToAll("You have " + EVENT_DURATION_MINUTES + " minutes!");
+		Broadcast.toAllOnlinePlayers("*Squeak Squeak*");
+		Broadcast.toAllOnlinePlayers("Elpy invasion in " + randomLoc.getName());
+		Broadcast.toAllOnlinePlayers("Help us exterminate them!");
+		Broadcast.toAllOnlinePlayers("You have " + EVENT_DURATION_MINUTES + " minutes!");
 		
-		_eventTask = ThreadPoolManager.getInstance().scheduleGeneral(new Runnable()
+		_eventTask = ThreadPoolManager.getInstance().scheduleGeneral(() ->
 		{
-			@Override
-			public void run()
-			{
-				Announcements.getInstance().announceToAll("Time is up!");
-				eventStop();
-			}
+			Broadcast.toAllOnlinePlayers("Time is up!");
+			eventStop();
 		}, despawnDelay);
 		return true;
 	}
@@ -152,8 +148,8 @@ public final class Elpies extends Event
 			}
 		}
 		
-		Announcements.getInstance().announceToAll("*Squeak Squeak*");
-		Announcements.getInstance().announceToAll("Elpy Event finished!");
+		Broadcast.toAllOnlinePlayers("*Squeak Squeak*");
+		Broadcast.toAllOnlinePlayers("Elpy Event finished!");
 		return true;
 	}
 	
@@ -168,7 +164,7 @@ public final class Elpies extends Event
 			
 			if (CURRENT_ELPY_COUNT <= 0)
 			{
-				Announcements.getInstance().announceToAll("All elpies have been killed!");
+				Broadcast.toAllOnlinePlayers("All elpies have been killed!");
 				eventStop();
 			}
 		}

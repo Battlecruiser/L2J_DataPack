@@ -82,6 +82,8 @@
 					<item id="15794" min="1" max="1" chance="0.2951" /> <!-- Recipe - Sealed Vesper Circlet (60%) -->
 					<item id="15808" min="1" max="1" chance="0.4216" /> <!-- Recipe - Sealed Vesper Shield (60%) -->
 					<item id="15807" min="1" max="1" chance="0.4216" /> <!-- Recipe - Sealed Vesper Sigil (60%) -->
+					<item id="10578" min="1" max="1" chance="0.0500" /> <!-- Forgotten Scroll - Mutual Response -->
+					<item id="14191" min="1" max="1" chance="0.0500" /> <!-- Forgotten Scroll - Meteor -->
 				</group>
 				<group chance="7">
 					<item id="15690" min="1" max="1" chance="15" /> <!-- Secret Key -->
@@ -3683,7 +3685,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="22843" level="85" type="L2Monster" name="Maluk Sniper ">
+	<npc id="22843" level="85" type="L2Monster" name="Maluk Sniper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -4035,7 +4037,7 @@
 			<height normal="49.9" />
 		</collision>
 	</npc>
-	<npc id="22847" level="85" type="L2Monster" name="Dragon Knight Warrior ">
+	<npc id="22847" level="85" type="L2Monster" name="Dragon Knight Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6760" level="1" /> <!-- Dragon Strike -->

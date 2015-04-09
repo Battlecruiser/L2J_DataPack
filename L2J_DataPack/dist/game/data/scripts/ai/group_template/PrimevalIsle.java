@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -217,7 +217,7 @@ public final class PrimevalIsle extends AbstractNpcAI
 					{
 						npc.setTarget(player);
 						npc.doCast(LONGRANGEDMAGIC1.getSkill());
-						attackPlayer((L2Attackable) npc, player);
+						addAttackPlayerDesire(npc, player);
 					}
 				}
 				break;
@@ -332,7 +332,7 @@ public final class PrimevalIsle extends AbstractNpcAI
 					if ((characters != null) && (characters.isAttackable()) && (getRandomBoolean()))
 					{
 						L2Attackable monster = (L2Attackable) characters;
-						attackPlayer(monster, playable);
+						addAttackPlayerDesire(monster, playable);
 					}
 				}
 			}

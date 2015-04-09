@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,10 +21,8 @@ package handlers.admincommandhandlers;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
-import javolution.text.TextBuilder;
-
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.AdminTable;
+import com.l2jserver.gameserver.data.xml.impl.AdminData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Hero;
@@ -80,13 +78,13 @@ public class AdminAdmin implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_gmliston"))
 		{
-			AdminTable.getInstance().showGm(activeChar);
+			AdminData.getInstance().showGm(activeChar);
 			activeChar.sendMessage("Registered into gm list");
 			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 		}
 		else if (command.startsWith("admin_gmlistoff"))
 		{
-			AdminTable.getInstance().hideGm(activeChar);
+			AdminData.getInstance().hideGm(activeChar);
 			activeChar.sendMessage("Removed from gm list");
 			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 		}
@@ -142,9 +140,15 @@ public class AdminAdmin implements IAdminCommandHandler
 			}
 			
 			final L2PcInstance target = activeChar.getTarget().isPlayer() ? activeChar.getTarget().getActingPlayer() : activeChar;
-			if (Hero.getInstance().isClaimed(target.getObjectId()))
+			if (Hero.getInstance().isHero(target.getObjectId()))
 			{
 				activeChar.sendMessage("This player has already claimed the hero status.");
+				return false;
+			}
+			
+			if (!Hero.getInstance().isUnclaimedHero(target.getObjectId()))
+			{
+				activeChar.sendMessage("This player cannot claim the hero status.");
 				return false;
 			}
 			Hero.getInstance().claimHero(target);
@@ -335,7 +339,7 @@ public class AdminAdmin implements IAdminCommandHandler
 	public void showConfigPage(L2PcInstance activeChar)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
-		TextBuilder replyMSG = new TextBuilder("<html><title>L2J :: Config</title><body>");
+		StringBuilder replyMSG = new StringBuilder("<html><title>L2J :: Config</title><body>");
 		replyMSG.append("<center><table width=270><tr><td width=60><button value=\"Main\" action=\"bypass -h admin_admin\" width=60 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=150>Config Server Panel</td><td width=60><button value=\"Back\" action=\"bypass -h admin_admin4\" width=60 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table></center><br>");
 		replyMSG.append("<center><table width=260><tr><td width=140></td><td width=40></td><td width=40></td></tr>");
 		replyMSG.append("<tr><td><font color=\"00AA00\">Drop:</font></td><td></td><td></td></tr>");

@@ -50,7 +50,7 @@ class Quest (JQuest) :
 
  def onAdvEvent (self,event,npc,player) :
     htmltext = event
-    st = player.getQuestState(qn)
+    st = self.getQuestState(player, False)
     if not st: return
     if event == "Start" :
         st.playSound("ItemSound.quest_accept")
@@ -126,9 +126,9 @@ class Quest (JQuest) :
         st.exitQuest(1)
     return htmltext
 
- def onTalk (Self,npc,player):
+ def onTalk (self,npc,player):
    htmltext = Quest.getNoQuestMsg(player)
-   st = player.getQuestState(qn)
+   st = self.getQuestState(player, True)
    if not st : return htmltext
    condition = st.getInt("cond")
    npcId = npc.getId()
@@ -243,7 +243,7 @@ class Quest (JQuest) :
 
 
  def onKill(self,npc,player,isPet) :
-   st = player.getQuestState(qn)
+   st = self.getQuestState(player, False)
    if not st : return
    if st.getState() != State.STARTED : return
    condition = st.getInt("cond")

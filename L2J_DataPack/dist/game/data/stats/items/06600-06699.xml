@@ -20,13 +20,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3602-9" />
 		<for>
-			<set order="0x08" stat="pAtk" val="281" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="281" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="6601" type="Weapon" name="Saint Spear - Haste">
@@ -49,13 +49,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3601-9" />
 		<for>
-			<set order="0x08" stat="pAtk" val="281" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="281" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="6602" type="Weapon" name="Demon Splinter - Focus">
@@ -78,13 +78,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3565-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="342" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="342" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="6603" type="Weapon" name="Demon Splinter - Health">
@@ -107,13 +107,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3013-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="342" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="342" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="6604" type="Weapon" name="Demon Splinter - Critical Stun">
@@ -138,13 +138,13 @@
 		<set name="oncrit_skill" val="3571-1" />
 		<set name="item_skill" val="3552-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="342" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="342" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="6605" type="Weapon" name="Heavens Divider - Haste">
@@ -168,12 +168,12 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3564-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="342" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="342" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="6606" type="Weapon" name="Heavens Divider - Health">
@@ -197,12 +197,12 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3013-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="342" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="342" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="6607" type="Weapon" name="Heavens Divider - Focus">
@@ -226,12 +226,12 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3566-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="342" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="342" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="6608" type="Weapon" name="Arcana Mace - Acumen">
@@ -255,13 +255,13 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3047-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="225" />
-			<set order="0x08" stat="mAtk" val="175" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="225" />
+			<set stat="mAtk" val="175" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="6609" type="Weapon" name="Arcana Mace - MP Regeneration">
@@ -285,13 +285,13 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3576-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="225" />
-			<set order="0x08" stat="mAtk" val="175" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="225" />
+			<set stat="mAtk" val="175" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="6610" type="Weapon" name="Arcana Mace - Mana Up">
@@ -315,13 +315,13 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3014-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="225" />
-			<set order="0x08" stat="mAtk" val="175" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="225" />
+			<set stat="mAtk" val="175" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="6611" type="Weapon" name="Infinity Blade">
@@ -350,11 +350,11 @@
 			<player isHero="true" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="524" />
-			<set order="0x08" stat="mAtk" val="230" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<add order="0x40" stat="holyPower" val="250" />
+			<set stat="pAtk" val="524" />
+			<set stat="mAtk" val="230" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<add stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="6612" type="Weapon" name="Infinity Cleaver">
@@ -382,11 +382,11 @@
 			<player isHero="true" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="638" />
-			<set order="0x08" stat="mAtk" val="230" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<add order="0x40" stat="holyPower" val="250" />
+			<set stat="pAtk" val="638" />
+			<set stat="mAtk" val="230" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<add stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="6613" type="Weapon" name="Infinity Axe">
@@ -415,12 +415,12 @@
 			<player isHero="true" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="524" />
-			<set order="0x08" stat="mAtk" val="230" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<add order="0x40" stat="holyPower" val="250" />
+			<set stat="pAtk" val="524" />
+			<set stat="mAtk" val="230" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<add stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="6614" type="Weapon" name="Infinity Rod">
@@ -450,12 +450,12 @@
 			<player isHero="true" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="420" />
-			<set order="0x08" stat="mAtk" val="307" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<add order="0x40" stat="holyPower" val="250" />
+			<set stat="pAtk" val="420" />
+			<set stat="mAtk" val="307" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<add stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="6615" type="Weapon" name="Infinity Crusher">
@@ -484,12 +484,12 @@
 			<player isHero="true" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="638" />
-			<set order="0x08" stat="mAtk" val="230" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<add order="0x40" stat="holyPower" val="250" />
+			<set stat="pAtk" val="638" />
+			<set stat="mAtk" val="230" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<add stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="6616" type="Weapon" name="Infinity Scepter">
@@ -519,12 +519,12 @@
 			<player isHero="true" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="511" />
-			<set order="0x08" stat="mAtk" val="337" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<add order="0x40" stat="holyPower" val="250" />
+			<set stat="pAtk" val="511" />
+			<set stat="mAtk" val="337" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<add stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="6617" type="Weapon" name="Infinity Stinger">
@@ -553,12 +553,12 @@
 			<player isHero="true" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="458" />
-			<set order="0x08" stat="mAtk" val="230" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
-			<add order="0x40" stat="holyPower" val="250" />
+			<set stat="pAtk" val="458" />
+			<set stat="mAtk" val="230" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
+			<add stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="6618" type="Weapon" name="Infinity Fang">
@@ -587,12 +587,12 @@
 			<player isHero="true" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="638" />
-			<set order="0x08" stat="mAtk" val="230" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<add order="0x40" stat="holyPower" val="250" />
+			<set stat="pAtk" val="638" />
+			<set stat="mAtk" val="230" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<add stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="6619" type="Weapon" name="Infinity Bow">
@@ -623,12 +623,12 @@
 			<player isHero="true" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="952" />
-			<set order="0x08" stat="mAtk" val="230" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="293" />
-			<add order="0x40" stat="holyPower" val="250" />
+			<set stat="pAtk" val="952" />
+			<set stat="mAtk" val="230" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="293" />
+			<add stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="6620" type="Weapon" name="Infinity Wing">
@@ -657,11 +657,11 @@
 			<player isHero="true" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="638" />
-			<set order="0x08" stat="mAtk" val="230" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<add order="0x40" stat="holyPower" val="250" />
+			<set stat="pAtk" val="638" />
+			<set stat="mAtk" val="230" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<add stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="6621" type="Weapon" name="Infinity Spear">
@@ -690,12 +690,12 @@
 			<player isHero="true" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="524" />
-			<set order="0x08" stat="mAtk" val="230" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<add order="0x40" stat="holyPower" val="250" />
+			<set stat="pAtk" val="524" />
+			<set stat="mAtk" val="230" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
+			<add stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="6622" type="EtcItem" name="Giant's Codex">
@@ -1043,9 +1043,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3558-1" />
 		<for>
-			<add order="0x10" stat="mDef" val="94" />
-			<add order="0x40" stat="maxMp" val="37" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="94" />
+			<add stat="maxMp" val="37" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="6657" type="Armor" name="Necklace of Valakas">
@@ -1061,9 +1061,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3557-1" />
 		<for>
-			<add order="0x10" stat="mDef" val="125" />
-			<add order="0x40" stat="maxMp" val="50" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="125" />
+			<add stat="maxMp" val="50" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="6658" type="Armor" name="Ring of Baium">
@@ -1079,9 +1079,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3561-1" />
 		<for>
-			<add order="0x10" stat="mDef" val="48" />
-			<add order="0x40" stat="maxMp" val="21" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="48" />
+			<add stat="maxMp" val="21" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="6659" type="Armor" name="Earring of Zaken">
@@ -1097,9 +1097,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3559-1" />
 		<for>
-			<add order="0x10" stat="mDef" val="71" />
-			<add order="0x40" stat="maxMp" val="31" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="71" />
+			<add stat="maxMp" val="31" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="6660" type="Armor" name="Ring of Queen Ant">
@@ -1115,9 +1115,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3562-1" />
 		<for>
-			<add order="0x10" stat="mDef" val="48" />
-			<add order="0x40" stat="maxMp" val="21" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="48" />
+			<add stat="maxMp" val="21" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="6661" type="Armor" name="Earring of Orfen">
@@ -1133,9 +1133,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3560-1" />
 		<for>
-			<add order="0x10" stat="mDef" val="71" />
-			<add order="0x40" stat="maxMp" val="31" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="71" />
+			<add stat="maxMp" val="31" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="6662" type="Armor" name="Ring of Core">
@@ -1151,9 +1151,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3563-1" />
 		<for>
-			<add order="0x10" stat="mDef" val="48" />
-			<add order="0x40" stat="maxMp" val="21" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="48" />
+			<add stat="maxMp" val="21" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="6663" type="EtcItem" name="Scroll of Escape: Orc Village">
@@ -1255,8 +1255,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="193" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="193" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="6675" type="Armor" name="Sealed Imperial Crusader Gaiters">
@@ -1276,8 +1276,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="121" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="121" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="6676" type="Armor" name="Sealed Imperial Crusader Gauntlet">
@@ -1296,8 +1296,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="55" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="55" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="6677" type="Armor" name="Sealed Imperial Crusader Boots">
@@ -1316,8 +1316,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="55" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="55" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="6678" type="Armor" name="Sealed Imperial Crusader Shield">
@@ -1335,10 +1335,10 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="276" />
-			<enchant val="0" order="0x0C" stat="sDef" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="276" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 	<item id="6679" type="Armor" name="Sealed Imperial Crusader Helmet">
@@ -1357,8 +1357,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="83" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="83" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="6680" type="Armor" name="Sealed Draconic Leather Armor">
@@ -1375,8 +1375,8 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="236" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="236" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="6681" type="Armor" name="Sealed Draconic Leather Glove">
@@ -1392,8 +1392,8 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="55" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="55" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="6682" type="Armor" name="Sealed Draconic Leather Boots">
@@ -1409,8 +1409,8 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="55" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="55" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="6683" type="Armor" name="Sealed Draconic Leather Helmet">
@@ -1426,8 +1426,8 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="83" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="83" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="6684" type="Armor" name="Sealed Major Arcana Robe">
@@ -1447,9 +1447,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="157" />
-			<add order="0x40" stat="maxMp" val="866" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="157" />
+			<add stat="maxMp" val="866" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="6685" type="Armor" name="Sealed Major Arcana Glove">
@@ -1468,8 +1468,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="55" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="55" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="6686" type="Armor" name="Sealed Major Arcana Boots">
@@ -1488,8 +1488,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="55" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="55" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="6687" type="Armor" name="Sealed Major Arcana Circlet">
@@ -1508,8 +1508,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="83" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="83" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="6688" type="EtcItem" name="Forgotten Blade Edge">

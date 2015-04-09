@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -60,14 +60,13 @@ public final class Spoil extends AbstractEffect
 		}
 		
 		final L2MonsterInstance target = (L2MonsterInstance) info.getEffected();
-		if (target.isSpoil())
+		if (target.isSpoiled())
 		{
 			info.getEffector().sendPacket(SystemMessageId.ALREADY_SPOILED);
 			return;
 		}
 		
-		target.setSpoil(true);
-		target.setIsSpoiledBy(info.getEffector().getObjectId());
+		target.setSpoilerObjectId(info.getEffector().getObjectId());
 		info.getEffector().sendPacket(SystemMessageId.SPOIL_SUCCESS);
 		target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, info.getEffector());
 	}

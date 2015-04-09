@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -22,7 +22,7 @@ import quests.Q00062_PathOfTheTrooper.Q00062_PathOfTheTrooper;
 import quests.Q00063_PathOfTheWarder.Q00063_PathOfTheWarder;
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.datatables.CategoryData;
+import com.l2jserver.gameserver.data.xml.impl.CategoryData;
 import com.l2jserver.gameserver.enums.CategoryType;
 import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;

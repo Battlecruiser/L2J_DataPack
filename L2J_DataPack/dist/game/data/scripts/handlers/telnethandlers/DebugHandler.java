@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -27,18 +27,18 @@ import java.lang.management.ThreadInfo;
 import java.lang.management.ThreadMXBean;
 import java.net.Socket;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.StringTokenizer;
 
-import javolution.util.FastComparator;
-import javolution.util.FastTable;
-
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.LoginServerThread;
 import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.datatables.AdminTable;
+import com.l2jserver.gameserver.data.xml.impl.AdminData;
 import com.l2jserver.gameserver.enums.ItemLocation;
 import com.l2jserver.gameserver.handler.ITelnetHandler;
 import com.l2jserver.gameserver.model.L2Object;
@@ -206,36 +206,9 @@ public class DebugHandler implements ITelnetHandler
 					sb.append("## Threads Information ##\n");
 					Map<Thread, StackTraceElement[]> allThread = Thread.getAllStackTraces();
 					
-					FastTable<Entry<Thread, StackTraceElement[]>> entries = new FastTable<>();
-					entries.setValueComparator(new FastComparator<Entry<Thread, StackTraceElement[]>>()
-					{
-						
-						/**
-						 * 
-						 */
-						private static final long serialVersionUID = 1L;
-						
-						@Override
-						public boolean areEqual(Entry<Thread, StackTraceElement[]> e1, Entry<Thread, StackTraceElement[]> e2)
-						{
-							return e1.getKey().getName().equals(e2.getKey().getName());
-						}
-						
-						@Override
-						public int compare(Entry<Thread, StackTraceElement[]> e1, Entry<Thread, StackTraceElement[]> e2)
-						{
-							return e1.getKey().getName().compareTo(e2.getKey().getName());
-						}
-						
-						@Override
-						public int hashCodeOf(Entry<Thread, StackTraceElement[]> e)
-						{
-							return e.hashCode();
-						}
-						
-					});
-					entries.addAll(allThread.entrySet());
-					entries.sort();
+					final List<Entry<Thread, StackTraceElement[]>> entries = new ArrayList<>(allThread.entrySet());
+					Collections.sort(entries, (e1, e2) -> e1.getKey().getName().compareTo(e2.getKey().getName()));
+					
 					for (Entry<Thread, StackTraceElement[]> entry : entries)
 					{
 						StackTraceElement[] stes = entry.getValue();
@@ -464,7 +437,7 @@ public class DebugHandler implements ITelnetHandler
 	
 	private int getOnlineGMS()
 	{
-		return AdminTable.getInstance().getAllGms(true).size();
+		return AdminData.getInstance().getAllGms(true).size();
 	}
 	
 	private String getUptime(int time)

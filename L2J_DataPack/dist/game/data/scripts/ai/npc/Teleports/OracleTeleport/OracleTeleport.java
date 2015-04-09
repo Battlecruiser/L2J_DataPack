@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -158,9 +158,14 @@ public final class OracleTeleport extends AbstractNpcAI
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		
-		int npcId = npc.getId();
+		if (st == null)
+		{
+			return null;
+		}
+		
+		final int npcId = npc.getId();
 		if (event.equalsIgnoreCase("Return"))
 		{
 			if (Util.contains(TEMPLE_PRIEST, npcId) && (st.getState() == State.STARTED))
@@ -229,27 +234,27 @@ public final class OracleTeleport extends AbstractNpcAI
 			int playerLevel = player.getLevel();
 			if ((playerLevel >= 20) && (playerLevel < 30))
 			{
-				st.takeItems(Inventory.ADENA_ID, 2000);
+				takeItems(player, Inventory.ADENA_ID, 2000);
 			}
 			else if ((playerLevel >= 30) && (playerLevel < 40))
 			{
-				st.takeItems(Inventory.ADENA_ID, 4500);
+				takeItems(player, Inventory.ADENA_ID, 4500);
 			}
 			else if ((playerLevel >= 40) && (playerLevel < 50))
 			{
-				st.takeItems(Inventory.ADENA_ID, 8000);
+				takeItems(player, Inventory.ADENA_ID, 8000);
 			}
 			else if ((playerLevel >= 50) && (playerLevel < 60))
 			{
-				st.takeItems(Inventory.ADENA_ID, 12500);
+				takeItems(player, Inventory.ADENA_ID, 12500);
 			}
 			else if ((playerLevel >= 60) && (playerLevel < 70))
 			{
-				st.takeItems(Inventory.ADENA_ID, 18000);
+				takeItems(player, Inventory.ADENA_ID, 18000);
 			}
 			else if (playerLevel >= 70)
 			{
-				st.takeItems(Inventory.ADENA_ID, 24500);
+				takeItems(player, Inventory.ADENA_ID, 24500);
 			}
 			int i = 0;
 			for (int ziggurat : TELEPORTERS)
@@ -262,7 +267,7 @@ public final class OracleTeleport extends AbstractNpcAI
 			}
 			st.set("id", Integer.toString(i));
 			st.setState(State.STARTED);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ACCEPT);
+			playSound(player, QuestSound.ITEMSOUND_QUEST_ACCEPT);
 			htmltext = "ziggurat_rift.htm";
 			player.teleToLocation(new Location(-114755, -179466, -6752));
 		}
@@ -273,7 +278,7 @@ public final class OracleTeleport extends AbstractNpcAI
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, true);
 		
 		int npcId = npc.getId();
 		if (Util.contains(TOWN_DAWN, npcId))
@@ -289,7 +294,7 @@ public final class OracleTeleport extends AbstractNpcAI
 				i++;
 			}
 			st.set("id", Integer.toString(i));
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ACCEPT);
+			playSound(player, QuestSound.ITEMSOUND_QUEST_ACCEPT);
 			player.teleToLocation(new Location(-80157, 111344, -4901));
 			player.setIsIn7sDungeon(true);
 		}
@@ -306,7 +311,7 @@ public final class OracleTeleport extends AbstractNpcAI
 				i++;
 			}
 			st.set("id", Integer.toString(i));
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ACCEPT);
+			playSound(player, QuestSound.ITEMSOUND_QUEST_ACCEPT);
 			player.teleToLocation(new Location(-81261, 86531, -5157));
 			player.setIsIn7sDungeon(true);
 		}
@@ -322,7 +327,7 @@ public final class OracleTeleport extends AbstractNpcAI
 				htmltext = "1a.htm";
 				st.exitQuest(true);
 			}
-			else if (!st.hasQuestItems(DIMENSIONAL_FRAGMENT))
+			else if (!hasQuestItems(player, DIMENSIONAL_FRAGMENT))
 			{
 				htmltext = "3.htm";
 			}
@@ -345,7 +350,7 @@ public final class OracleTeleport extends AbstractNpcAI
 				player.sendPacket(SystemMessageId.TOO_MANY_QUESTS);
 				st.exitQuest(true);
 			}
-			else if (!st.hasQuestItems(DIMENSIONAL_FRAGMENT))
+			else if (!hasQuestItems(player, DIMENSIONAL_FRAGMENT))
 			{
 				htmltext = "ziggurat_nofrag.htm";
 				st.exitQuest(true);

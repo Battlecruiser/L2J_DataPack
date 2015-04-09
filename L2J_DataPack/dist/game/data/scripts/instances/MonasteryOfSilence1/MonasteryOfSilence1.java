@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,31 +18,28 @@
  */
 package instances.MonasteryOfSilence1;
 
-import ai.npc.AbstractNpcAI;
+import instances.AbstractInstance;
 
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
  * Monastery of Silence instance zone.
  * @author Adry_85
  */
-public final class MonasteryOfSilence1 extends AbstractNpcAI
+public final class MonasteryOfSilence1 extends AbstractInstance
 {
 	protected static final class MoSWorld extends InstanceWorld
 	{
 		protected L2Npc elcadia = null;
 	}
 	
-	private static final int TEMPLATE_ID = 151;
 	// NPCs
 	private static final int ELCADIA_INSTANCE = 32787;
 	private static final int ERIS_EVIL_THOUGHTS = 32792;
@@ -56,6 +53,13 @@ public final class MonasteryOfSilence1 extends AbstractNpcAI
 	private static final int TELEPORT_CONTROL_DEVICE2 = 32818;
 	private static final int TELEPORT_CONTROL_DEVICE3 = 32819;
 	private static final int TELEPORT_CONTROL_DEVICE4 = 32820;
+	// Skills
+	private static final SkillHolder[] BUFFS =
+	{
+		new SkillHolder(6725, 1), // Bless the Blood of Elcadia
+		new SkillHolder(6728, 1), // Recharge of Elcadia
+		new SkillHolder(6730, 1), // Greater Battle Heal of Elcadia
+	};
 	// Locations
 	private static final Location START_LOC = new Location(120710, -86971, -3392);
 	private static final Location EXIT_LOC = new Location(115983, -87351, -3397, 0, 0);
@@ -72,72 +76,44 @@ public final class MonasteryOfSilence1 extends AbstractNpcAI
 		NpcStringId.WE_MUST_SEARCH_HIGH_AND_LOW_IN_EVERY_ROOM_FOR_THE_READING_DESK_THAT_CONTAINS_THE_BOOK_WE_SEEK,
 		NpcStringId.REMEMBER_THE_CONTENT_OF_THE_BOOKS_THAT_YOU_FOUND_YOU_CANT_TAKE_THEM_OUT_WITH_YOU
 	};
-	// Buffs
-	private static final SkillHolder[] BUFFS =
-	{
-		new SkillHolder(6725, 1), // Bless the Blood of Elcadia
-		new SkillHolder(6728, 1), // Recharge of Elcadia
-		new SkillHolder(6730, 1), // Greater Battle Heal of Elcadia
-	};
+	// Misc
+	private static final int TEMPLATE_ID = 151;
 	
-	private MonasteryOfSilence1()
+	public MonasteryOfSilence1()
 	{
-		super(MonasteryOfSilence1.class.getSimpleName(), "instances");
+		super(MonasteryOfSilence1.class.getSimpleName());
 		addFirstTalkId(TELEPORT_CONTROL_DEVICE1, TELEPORT_CONTROL_DEVICE2, TELEPORT_CONTROL_DEVICE3, TELEPORT_CONTROL_DEVICE4, ERIS_EVIL_THOUGHTS);
 		addStartNpc(ODD_GLOBE, TELEPORT_CONTROL_DEVICE1, TELEPORT_CONTROL_DEVICE2, TELEPORT_CONTROL_DEVICE3, TELEPORT_CONTROL_DEVICE4, ERIS_EVIL_THOUGHTS);
 		addTalkId(ODD_GLOBE, ERIS_EVIL_THOUGHTS, RELIC_GUARDIAN, RELIC_WATCHER1, RELIC_WATCHER2, RELIC_WATCHER3, RELIC_WATCHER4, TELEPORT_CONTROL_DEVICE1, TELEPORT_CONTROL_DEVICE2, TELEPORT_CONTROL_DEVICE3, TELEPORT_CONTROL_DEVICE4, ERIS_EVIL_THOUGHTS);
 	}
 	
-	private void enterInstance(L2PcInstance player, String template)
+	@Override
+	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
 	{
-		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-		if (world != null)
+		if (firstEntrance)
 		{
-			if (!(world instanceof MoSWorld))
-			{
-				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
-			}
-			else
-			{
-				// Teleport player.
-				teleportPlayer(player, START_LOC, world.getInstanceId(), false);
-				spawnNPC(player, (MoSWorld) world);
-				removeBuffs(player);
-			}
-		}
-		else
-		{
-			// New instance.
-			world = new MoSWorld();
-			world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
-			world.setTemplateId(TEMPLATE_ID);
-			world.setStatus(0);
-			InstanceManager.getInstance().addWorld(world);
-			_log.info("Monastery of Silence started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
-			// Teleport players.
-			teleportPlayer(player, START_LOC, world.getInstanceId(), false);
-			spawnNPC(player, (MoSWorld) world);
-			removeBuffs(player);
 			world.addAllowed(player.getObjectId());
 		}
+		teleportPlayer(player, START_LOC, world.getInstanceId(), false);
+		spawnElcadia(player, (MoSWorld) world);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
 		if (!(tmpworld instanceof MoSWorld))
 		{
 			return null;
 		}
 		
-		MoSWorld world = (MoSWorld) tmpworld;
+		final MoSWorld world = (MoSWorld) tmpworld;
 		switch (event)
 		{
 			case "TELE2":
 			{
 				teleportPlayer(player, CENTRAL_ROOM_LOC, world.getInstanceId());
-				world.elcadia.teleToLocation(CENTRAL_ROOM_LOC.getX(), CENTRAL_ROOM_LOC.getY(), CENTRAL_ROOM_LOC.getZ(), 0, world.getInstanceId());
+				world.elcadia.teleToLocation(CENTRAL_ROOM_LOC, 0, world.getInstanceId());
 				startQuestTimer("START_MOVIE", 2000, npc, player);
 				break;
 			}
@@ -156,37 +132,37 @@ public final class MonasteryOfSilence1 extends AbstractNpcAI
 			case "BACK":
 			{
 				teleportPlayer(player, BACK_LOC, world.getInstanceId());
-				world.elcadia.teleToLocation(BACK_LOC.getX(), BACK_LOC.getY(), BACK_LOC.getZ(), 0, world.getInstanceId());
+				world.elcadia.teleToLocation(BACK_LOC, 0, world.getInstanceId());
 				break;
 			}
 			case "EAST":
 			{
 				teleportPlayer(player, EAST_WATCHERS_ROOM_LOC, world.getInstanceId());
-				world.elcadia.teleToLocation(EAST_WATCHERS_ROOM_LOC.getX(), EAST_WATCHERS_ROOM_LOC.getY(), EAST_WATCHERS_ROOM_LOC.getZ(), 0, world.getInstanceId());
+				world.elcadia.teleToLocation(EAST_WATCHERS_ROOM_LOC, 0, world.getInstanceId());
 				break;
 			}
 			case "WEST":
 			{
 				teleportPlayer(player, WEST_WATCHERS_ROOM_LOC, world.getInstanceId());
-				world.elcadia.teleToLocation(WEST_WATCHERS_ROOM_LOC.getX(), WEST_WATCHERS_ROOM_LOC.getY(), WEST_WATCHERS_ROOM_LOC.getZ(), 0, world.getInstanceId());
+				world.elcadia.teleToLocation(WEST_WATCHERS_ROOM_LOC, 0, world.getInstanceId());
 				break;
 			}
 			case "NORTH":
 			{
 				teleportPlayer(player, NORTH_WATCHERS_ROOM_LOC, world.getInstanceId());
-				world.elcadia.teleToLocation(NORTH_WATCHERS_ROOM_LOC.getX(), NORTH_WATCHERS_ROOM_LOC.getY(), NORTH_WATCHERS_ROOM_LOC.getZ(), 0, world.getInstanceId());
+				world.elcadia.teleToLocation(NORTH_WATCHERS_ROOM_LOC, 0, world.getInstanceId());
 				break;
 			}
 			case "SOUTH":
 			{
 				teleportPlayer(player, SOUTH_WATCHERS_ROOM_LOC, world.getInstanceId());
-				world.elcadia.teleToLocation(SOUTH_WATCHERS_ROOM_LOC.getX(), SOUTH_WATCHERS_ROOM_LOC.getY(), SOUTH_WATCHERS_ROOM_LOC.getZ(), 0, world.getInstanceId());
+				world.elcadia.teleToLocation(SOUTH_WATCHERS_ROOM_LOC, 0, world.getInstanceId());
 				break;
 			}
 			case "CENTER":
 			{
 				teleportPlayer(player, CENTRAL_ROOM_LOC, world.getInstanceId());
-				world.elcadia.teleToLocation(CENTRAL_ROOM_LOC.getX(), CENTRAL_ROOM_LOC.getY(), CENTRAL_ROOM_LOC.getZ(), 0, world.getInstanceId());
+				world.elcadia.teleToLocation(CENTRAL_ROOM_LOC, 0, world.getInstanceId());
 				break;
 			}
 			case "FOLLOW":
@@ -215,29 +191,18 @@ public final class MonasteryOfSilence1 extends AbstractNpcAI
 	{
 		if (npc.getId() == ODD_GLOBE)
 		{
-			enterInstance(talker, "MonasteryOfSilence.xml");
+			enterInstance(talker, new MoSWorld(), "MonasteryOfSilence.xml", TEMPLATE_ID);
 		}
 		return super.onTalk(npc, talker);
 	}
 	
-	private static final void removeBuffs(L2Character ch)
+	protected void spawnElcadia(L2PcInstance player, MoSWorld world)
 	{
-		ch.stopAllEffectsExceptThoseThatLastThroughDeath();
-		if (ch.hasSummon())
+		if (world.elcadia != null)
 		{
-			ch.getSummon().stopAllEffectsExceptThoseThatLastThroughDeath();
+			world.elcadia.deleteMe();
 		}
-	}
-	
-	protected void spawnNPC(L2PcInstance player, MoSWorld world)
-	{
-		final L2Npc npc = addSpawn(ELCADIA_INSTANCE, player.getX(), player.getY(), player.getZ(), 0, false, 0, false, player.getInstanceId());
-		world.elcadia = npc;
-		startQuestTimer("FOLLOW", 3000, npc, player);
-	}
-	
-	public static void main(String[] args)
-	{
-		new MonasteryOfSilence1();
+		world.elcadia = addSpawn(ELCADIA_INSTANCE, player.getX(), player.getY(), player.getZ(), 0, false, 0, false, player.getInstanceId());
+		startQuestTimer("FOLLOW", 3000, world.elcadia, player);
 	}
 }

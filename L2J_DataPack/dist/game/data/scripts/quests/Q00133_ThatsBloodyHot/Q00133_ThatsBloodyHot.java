@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q00133_ThatsBloodyHot;
 
+import hellbound.HellboundEngine;
 import quests.Q00131_BirdInACage.Q00131_BirdInACage;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -25,8 +26,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-
-import hellbound.HellboundEngine;
 
 /**
  * That's Bloody Hot! (133)
@@ -53,7 +52,7 @@ public class Q00133_ThatsBloodyHot extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -152,7 +151,7 @@ public class Q00133_ThatsBloodyHot extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		if (st == null)
 		{

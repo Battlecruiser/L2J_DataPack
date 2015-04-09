@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -52,25 +52,21 @@ public final class Detection extends AbstractEffect
 		
 		final L2PcInstance player = info.getEffector().getActingPlayer();
 		final L2PcInstance target = info.getEffected().getActingPlayer();
-		final boolean hasParty = player.isInParty();
-		final boolean hasClan = player.getClanId() > 0;
-		final boolean hasAlly = player.getAllyId() > 0;
 		
 		if (target.isInvisible())
 		{
-			if (hasParty && (target.isInParty()) && (player.getParty().getLeaderObjectId() == target.getParty().getLeaderObjectId()))
+			if (player.isInPartyWith(target))
 			{
 				return;
 			}
-			else if (hasClan && (player.getClanId() == target.getClanId()))
+			if (player.isInClanWith(target))
 			{
 				return;
 			}
-			else if (hasAlly && (player.getAllyId() == target.getAllyId()))
+			if (player.isInAllyWith(target))
 			{
 				return;
 			}
-			
 			// Remove Hide.
 			target.getEffectList().stopSkillEffects(true, AbnormalType.HIDE);
 		}

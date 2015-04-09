@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -28,7 +28,6 @@ import java.util.logging.Logger;
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.MapRegionManager;
@@ -41,7 +40,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2RaidBossInstance;
-import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.util.StringUtil;
@@ -526,16 +524,6 @@ public class AdminTeleport implements IAdminCommandHandler
 		if ((obj instanceof L2Npc) && !((L2Npc) obj).isMinion() && !(obj instanceof L2RaidBossInstance) && !(obj instanceof L2GrandBossInstance))
 		{
 			L2Npc target = (L2Npc) obj;
-			
-			int monsterTemplate = target.getTemplate().getId();
-			L2NpcTemplate template1 = NpcData.getInstance().getTemplate(monsterTemplate);
-			if (template1 == null)
-			{
-				activeChar.sendMessage("Incorrect monster template.");
-				_log.warning("ERROR: NPC " + target.getObjectId() + " has a 'null' template.");
-				return;
-			}
-			
 			L2Spawn spawn = target.getSpawn();
 			if (spawn == null)
 			{
@@ -551,9 +539,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			
 			try
 			{
-				// L2MonsterInstance mob = new L2MonsterInstance(monsterTemplate, template1);
-				
-				spawn = new L2Spawn(template1);
+				spawn = new L2Spawn(target.getTemplate().getId());
 				if (Config.SAVE_GMSPAWN_ON_CUSTOM)
 				{
 					spawn.setCustom(true);
@@ -575,7 +561,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				SpawnTable.getInstance().addNewSpawn(spawn, true);
 				spawn.init();
 				
-				activeChar.sendMessage("Created " + template1.getName() + " on " + target.getObjectId() + ".");
+				activeChar.sendMessage("Created " + target.getTemplate().getName() + " on " + target.getObjectId() + ".");
 				
 				if (Config.DEBUG)
 				{
@@ -604,8 +590,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			RaidBossSpawnManager.getInstance().deleteSpawn(spawn, true);
 			try
 			{
-				L2NpcTemplate template = NpcData.getInstance().getTemplate(target.getId());
-				L2Spawn spawnDat = new L2Spawn(template);
+				final L2Spawn spawnDat = new L2Spawn(target.getId());
 				if (Config.SAVE_GMSPAWN_ON_CUSTOM)
 				{
 					spawn.setCustom(true);

@@ -57,7 +57,7 @@ DROPLIST = {
 }
 
 def suscribe_members(st) :
-  clan=st.getPlayer().getClan().getClanId()
+  clan=st.getPlayer().getClan().getId()
   con=L2DatabaseFactory.getInstance().getConnection()
   offline=con.prepareStatement("SELECT charId FROM characters WHERE clanid=? AND online=0")
   offline.setInt(1, clan)
@@ -296,7 +296,7 @@ class Quest (JQuest) :
 
   def onTalk (self,npc,player):
     htmltext = Quest.getNoQuestMsg(player)
-    st = player.getQuestState(qn)
+    st = self.getQuestState(player, True)
     if not st : return htmltext
 
     npcId = npc.getId()
@@ -498,7 +498,7 @@ class Quest (JQuest) :
     # only if the leader is online and within a certain distance!
     leader_st = 0
     if player.isClanLeader() :
-      leader_st = player.getQuestState(qn)
+      leader_st = self.getQuestState(player, False)
     else :
       clan = player.getClan()
       if clan:

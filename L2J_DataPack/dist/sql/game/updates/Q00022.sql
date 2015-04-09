@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00022_TragedyInVonHellmannForest' WHERE name='22_TragedyInVonHellmannForest';

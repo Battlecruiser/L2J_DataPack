@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -45,14 +45,9 @@ public final class ChamberOfDelusionEast extends Chamber
 	private static final int INSTANCEID = 127;
 	private static final String INSTANCE_TEMPLATE = "ChamberOfDelusionEast.xml";
 	
-	private ChamberOfDelusionEast()
+	public ChamberOfDelusionEast()
 	{
-		super(-1, ChamberOfDelusionEast.class.getSimpleName(), "instances", INSTANCEID, INSTANCE_TEMPLATE, ENTRANCE_GATEKEEPER, ROOM_GATEKEEPER_FIRST, ROOM_GATEKEEPER_LAST, AENKINEL, BOX);
+		super(ChamberOfDelusionEast.class.getSimpleName(), "instances", INSTANCEID, INSTANCE_TEMPLATE, ENTRANCE_GATEKEEPER, ROOM_GATEKEEPER_FIRST, ROOM_GATEKEEPER_LAST, AENKINEL, BOX);
 		ROOM_ENTER_POINTS = ENTER_POINTS;
-	}
-	
-	public static void main(String[] args)
-	{
-		new ChamberOfDelusionEast();
 	}
 }

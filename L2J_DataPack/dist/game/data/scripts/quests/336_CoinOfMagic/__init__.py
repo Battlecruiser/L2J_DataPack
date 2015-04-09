@@ -292,7 +292,7 @@ class Quest (JQuest) :
 
  def onTalk (self,npc,player):
    htmltext = Quest.getNoQuestMsg(player)
-   st = player.getQuestState(qn)
+   st = self.getQuestState(player, True)
    if not st : return htmltext
 
    npcId = npc.getId()
@@ -345,7 +345,7 @@ class Quest (JQuest) :
    st = 0
    # solo section of the quest
    if npcId in [HARITMATR, HARITSHA] :
-      st = player.getQuestState(qn)
+      st = self.getQuestState(player, False)
       if not st: return
       if st.getState() != State.STARTED or not st.get("part") or st.get("part") != "SOLO" : return
    if not npcId in [HARITMATR, HARITSHA] :

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,7 +18,6 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.Location;
@@ -80,11 +79,8 @@ public final class TeleportToTarget extends AbstractEffect
 		int x = (int) (px + (25 * Math.cos(ph)));
 		int y = (int) (py + (25 * Math.sin(ph)));
 		int z = target.getZ();
-		Location loc = new Location(x, y, z);
-		if (Config.GEODATA > 0)
-		{
-			loc = GeoData.getInstance().moveCheck(activeChar.getX(), activeChar.getY(), activeChar.getZ(), x, y, z, activeChar.getInstanceId());
-		}
+		
+		final Location loc = GeoData.getInstance().moveCheck(activeChar.getX(), activeChar.getY(), activeChar.getZ(), x, y, z, activeChar.getInstanceId());
 		
 		activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		activeChar.broadcastPacket(new FlyToLocation(activeChar, loc.getX(), loc.getY(), loc.getZ(), FlyType.DUMMY));

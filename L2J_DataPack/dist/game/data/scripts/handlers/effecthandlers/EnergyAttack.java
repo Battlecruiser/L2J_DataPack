@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -36,7 +36,7 @@ import com.l2jserver.util.Rnd;
 
 /**
  * Energy Attack effect implementation.
- * @author Nos
+ * @author NosBit
  */
 public final class EnergyAttack extends AbstractEffect
 {
@@ -145,7 +145,7 @@ public final class EnergyAttack extends AbstractEffect
 			{
 				damage *= attacker.getStat().calcStat(Stats.PVP_PHYS_SKILL_DMG, 1.0);
 				damage *= target.getStat().calcStat(Stats.PVP_PHYS_SKILL_DEF, 1.0);
-				damage *= attacker.getStat().calcStat(Stats.PHYSICAL_SKILL_POWER, 1.0);
+				damage = attacker.getStat().calcStat(Stats.PHYSICAL_SKILL_POWER, damage);
 			}
 			
 			critical = (BaseStats.STR.calcBonus(attacker) * _criticalChance) > (Rnd.nextDouble() * 100);

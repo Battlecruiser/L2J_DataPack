@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -24,7 +24,6 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.Announcements;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -35,6 +34,7 @@ import com.l2jserver.gameserver.model.skills.AbnormalType;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jserver.gameserver.util.Broadcast;
 
 /**
  * @author Gnacik
@@ -136,18 +136,11 @@ public final class Race extends Event
 		_npc = recordSpawn(_start_npc, 18429, 145861, -3090, 0, false, 0);
 		
 		// Announce event start
-		Announcements.getInstance().announceToAll("* Race Event started! *");
-		Announcements.getInstance().announceToAll("Visit Event Manager in Dion village and signup, you have " + _time_register + " min before Race Start...");
+		Broadcast.toAllOnlinePlayers("* Race Event started! *");
+		Broadcast.toAllOnlinePlayers("Visit Event Manager in Dion village and signup, you have " + _time_register + " min before Race Start...");
 		
 		// Schedule Event end
-		_eventTask = ThreadPoolManager.getInstance().scheduleGeneral(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				StartRace();
-			}
-		}, _time_register * 60 * 1000);
+		_eventTask = ThreadPoolManager.getInstance().scheduleGeneral(() -> StartRace(), _time_register * 60 * 1000);
 		
 		return true;
 		
@@ -158,14 +151,14 @@ public final class Race extends Event
 		// Abort race if no players signup
 		if (_players.isEmpty())
 		{
-			Announcements.getInstance().announceToAll("Race aborted, nobody signup.");
+			Broadcast.toAllOnlinePlayers("Race aborted, nobody signup.");
 			eventStop();
 			return;
 		}
 		// Set state
 		_isRaceStarted = true;
 		// Announce
-		Announcements.getInstance().announceToAll("Race started!");
+		Broadcast.toAllOnlinePlayers("Race started!");
 		// Get random Finish
 		int location = getRandom(0, _locations.length - 1);
 		_randspawn = _coords[location];
@@ -190,14 +183,7 @@ public final class Race extends Event
 			}
 		}
 		// Schedule timeup for Race
-		_eventTask = ThreadPoolManager.getInstance().scheduleGeneral(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				timeUp();
-			}
-		}, _time_race * 60 * 1000);
+		_eventTask = ThreadPoolManager.getInstance().scheduleGeneral(() -> timeUp(), _time_race * 60 * 1000);
 	}
 	
 	@Override
@@ -240,7 +226,7 @@ public final class Race extends Event
 		_npclist.clear();
 		_players.clear();
 		// Announce event end
-		Announcements.getInstance().announceToAll("* Race Event finished *");
+		Broadcast.toAllOnlinePlayers("* Race Event finished *");
 		
 		return true;
 	}
@@ -290,7 +276,7 @@ public final class Race extends Event
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -344,11 +330,8 @@ public final class Race extends Event
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			st = newQuestState(player);
-		}
+		getQuestState(player, true);
+		
 		if (npc.getId() == _start_npc)
 		{
 			if (_isRaceStarted)
@@ -411,7 +394,7 @@ public final class Race extends Event
 	
 	protected void timeUp()
 	{
-		Announcements.getInstance().announceToAll("Time up, nobody wins!");
+		Broadcast.toAllOnlinePlayers("Time up, nobody wins!");
 		eventStop();
 	}
 	
@@ -419,7 +402,7 @@ public final class Race extends Event
 	{
 		int[] _reward = _rewards[getRandom(_rewards.length - 1)];
 		player.addItem("eventModRace", _reward[0], _reward[1], _npc, true);
-		Announcements.getInstance().announceToAll(player.getName() + " is a winner!");
+		Broadcast.toAllOnlinePlayers(player.getName() + " is a winner!");
 		eventStop();
 	}
 	

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -570,7 +570,7 @@ public final class Q00212_TrialOfDuty extends Quest
 	{
 		final PlayerVariables vars = player.getVariables();
 		
-		if (!vars.getBoolean("2ND_CLASS_DIAMOND_REWARD", false))
+		if (vars.getInt("2ND_CLASS_DIAMOND_REWARD", 0) == 0)
 		{
 			if (player.getClassId() == ClassId.knight)
 			{
@@ -581,7 +581,7 @@ public final class Q00212_TrialOfDuty extends Quest
 				rewardItems(player, DIMENSIONAL_DIAMOND, 61);
 			}
 			
-			vars.set("2ND_CLASS_DIAMOND_REWARD", true);
+			vars.set("2ND_CLASS_DIAMOND_REWARD", 1);
 			return true;
 		}
 		return false;

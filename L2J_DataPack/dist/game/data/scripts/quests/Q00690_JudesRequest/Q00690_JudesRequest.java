@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -76,7 +76,7 @@ public class Q00690_JudesRequest extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		
 		if (st == null)
 		{
@@ -131,7 +131,7 @@ public class Q00690_JudesRequest extends Quest
 		{
 			return null;
 		}
-		final QuestState st = partyMember.getQuestState(getName());
+		final QuestState st = getQuestState(partyMember, false);
 		
 		final int npcId = npc.getId();
 		int chance = 0;
@@ -160,7 +160,7 @@ public class Q00690_JudesRequest extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, true);
 		
 		if (st == null)
 		{

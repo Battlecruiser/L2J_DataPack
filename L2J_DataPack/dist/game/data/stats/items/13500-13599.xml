@@ -258,10 +258,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="24" />
-			<set order="0x08" stat="mAtk" val="17" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="24" />
+			<set stat="mAtk" val="17" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="13525" type="Armor" name="Gracian Soldier Shield">
@@ -277,9 +277,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="101" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="101" />
 		</for>
 	</item>
 	<item id="13526" type="Armor" name="Test Belt">
@@ -292,7 +292,7 @@
 		<set name="weight" val="4830" />
 		<set name="price" val="113" />
 		<for>
-			<add order="0x10" stat="pDef" val="36" />
+			<add order="0" stat="pDef" val="36" />
 		</for>
 	</item>
 	<item id="13527" type="Armor" name="Test Cloak">
@@ -304,7 +304,7 @@
 		<set name="weight" val="260" />
 		<set name="price" val="37" />
 		<for>
-			<add order="0x10" stat="pDef" val="2" />
+			<add order="0" stat="pDef" val="2" />
 		</for>
 	</item>
 	<item id="13528" type="Weapon" name="Test Dual Daggers">
@@ -324,10 +324,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="200" />
-			<set order="0x08" stat="mAtk" val="6" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="200" />
+			<set stat="mAtk" val="6" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13529" type="Armor" name="Test Sigil">
@@ -342,10 +342,10 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="47" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="47" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13530" type="Weapon" name="Flag of Gludio">
@@ -368,7 +368,7 @@
 		<set name="isAttackWeapon" val="false" />
 		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13531" type="Weapon" name="Flag of Dion">
@@ -391,7 +391,7 @@
 		<set name="isAttackWeapon" val="false" />
 		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13532" type="Weapon" name="Flag of Giran">
@@ -414,7 +414,7 @@
 		<set name="isAttackWeapon" val="false" />
 		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13533" type="Weapon" name="Flag of Oren">
@@ -437,7 +437,7 @@
 		<set name="isAttackWeapon" val="false" />
 		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13534" type="Weapon" name="Flag of Aden">
@@ -460,7 +460,7 @@
 		<set name="isAttackWeapon" val="false" />
 		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13535" type="Weapon" name="Flag of Innadril">
@@ -483,7 +483,7 @@
 		<set name="isAttackWeapon" val="false" />
 		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13536" type="Weapon" name="Goddard Flag">
@@ -506,7 +506,7 @@
 		<set name="isAttackWeapon" val="false" />
 		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13537" type="Weapon" name="Flag of Rune">
@@ -529,7 +529,7 @@
 		<set name="isAttackWeapon" val="false" />
 		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13538" type="Weapon" name="Flag of Schuttgart">
@@ -552,7 +552,7 @@
 		<set name="isAttackWeapon" val="false" />
 		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13539" type="Weapon" name="Staff of Master Yogi">
@@ -572,13 +572,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="11" />
-			<set order="0x08" stat="mAtk" val="12" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="11" />
+			<set stat="mAtk" val="12" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="13540" type="EtcItem" name="Master Yogi's Scroll: Enchant Weapon">
@@ -814,10 +814,10 @@
 		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="1" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="1" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="13557" type="Weapon" name="Airship Cannon">
@@ -832,10 +832,10 @@
 		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="1" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="1" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="13558" type="Weapon" name="Airship Cannon Briquet">
@@ -850,10 +850,10 @@
 		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="1" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="1" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="13559" type="EtcItem" name="Airship Summon License">
@@ -890,7 +890,7 @@
 		<set name="isAttackWeapon" val="false" />
 		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13561" type="Weapon" name="Dion Ward">
@@ -915,7 +915,7 @@
 		<set name="isAttackWeapon" val="false" />
 		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13562" type="Weapon" name="Giran Ward">
@@ -940,7 +940,7 @@
 		<set name="isAttackWeapon" val="false" />
 		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13563" type="Weapon" name="Oren Ward">
@@ -965,7 +965,7 @@
 		<set name="isAttackWeapon" val="false" />
 		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13564" type="Weapon" name="Aden Ward">
@@ -990,7 +990,7 @@
 		<set name="isAttackWeapon" val="false" />
 		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13565" type="Weapon" name="Innadril Ward">
@@ -1015,7 +1015,7 @@
 		<set name="isAttackWeapon" val="false" />
 		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13566" type="Weapon" name="Goddard Ward">
@@ -1040,7 +1040,7 @@
 		<set name="isAttackWeapon" val="false" />
 		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13567" type="Weapon" name="Rune Ward">
@@ -1065,7 +1065,7 @@
 		<set name="isAttackWeapon" val="false" />
 		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13568" type="Weapon" name="Schuttgart Ward">
@@ -1090,7 +1090,7 @@
 		<set name="isAttackWeapon" val="false" />
 		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13569" type="EtcItem" name="Transformation Scroll: Gludio Human Mercenary">

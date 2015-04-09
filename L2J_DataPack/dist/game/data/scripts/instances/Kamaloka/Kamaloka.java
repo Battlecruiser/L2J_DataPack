@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -17,6 +17,8 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package instances.Kamaloka;
+
+import instances.AbstractInstance;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -38,13 +40,12 @@ import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
-import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
-public final class Kamaloka extends Quest
+public final class Kamaloka extends AbstractInstance
 {
 	/*
 	 * Reset time for all kamaloka Default: 6:30AM on server time
@@ -1176,9 +1177,9 @@ public final class Kamaloka extends Quest
 		public L2Npc boss = null; // boss
 	}
 	
-	private Kamaloka()
+	public Kamaloka()
 	{
-		super(-1, Kamaloka.class.getSimpleName(), "instances");
+		super(Kamaloka.class.getSimpleName());
 		addFirstTalkId(TELEPORTER);
 		addTalkId(TELEPORTER);
 		for (int cap : CAPTAINS)
@@ -1226,7 +1227,7 @@ public final class Kamaloka extends Quest
 	 * @param index (0-18) index of the kamaloka in arrays
 	 * @return true if party allowed to enter
 	 */
-	private static final boolean checkConditions(L2PcInstance player, int index)
+	private static final boolean checkPartyConditions(L2PcInstance player, int index)
 	{
 		final L2Party party = player.getParty();
 		// player must be in party
@@ -1260,7 +1261,7 @@ public final class Kamaloka extends Quest
 			// player level must be in range
 			if (Math.abs(partyMember.getLevel() - level) > MAX_LEVEL_DIFFERENCE)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED);
 				sm.addPcName(partyMember);
 				player.sendPacket(sm);
 				return false;
@@ -1268,7 +1269,7 @@ public final class Kamaloka extends Quest
 			// player must be near party leader
 			if (!partyMember.isInsideRadius(player, 1000, true, true))
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_LOCATION_THAT_CANNOT_BE_ENTERED);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED);
 				sm.addPcName(partyMember);
 				player.sendPacket(sm);
 				return false;
@@ -1288,7 +1289,7 @@ public final class Kamaloka extends Quest
 					// if found instance still can't be reentered - exit
 					if (System.currentTimeMillis() < instanceTimes.get(id))
 					{
-						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_REENTER_YET);
+						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET);
 						sm.addPcName(partyMember);
 						player.sendPacket(sm);
 						return false;
@@ -1305,13 +1306,14 @@ public final class Kamaloka extends Quest
 	 */
 	private static final void removeBuffs(L2Character ch)
 	{
-		Function<BuffInfo, Boolean> removeBuffs = info ->
+		final Function<BuffInfo, Boolean> removeBuffs = info ->
 		{
 			if ((info != null) && !info.getSkill().isStayAfterDeath() && (Arrays.binarySearch(BUFFS_WHITELIST, info.getSkill().getId()) < 0))
 			{
 				info.getEffected().getEffectList().stopSkillEffects(true, info.getSkill());
+				return true;
 			}
-			return true;
+			return false;
 		};
 		
 		ch.getEffectList().forEach(removeBuffs, false);
@@ -1347,13 +1349,13 @@ public final class Kamaloka extends Quest
 			// but not in kamaloka
 			if (!(world instanceof KamaWorld) || (world.getTemplateId() != templateId))
 			{
-				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
+				player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
 				return;
 			}
 			// check for level difference again on reenter
 			if (Math.abs(player.getLevel() - LEVEL[((KamaWorld) world).index]) > MAX_LEVEL_DIFFERENCE)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED);
 				sm.addPcName(player);
 				player.sendPacket(sm);
 				return;
@@ -1368,7 +1370,7 @@ public final class Kamaloka extends Quest
 			return;
 		}
 		// Creating new kamaloka instance
-		if (!checkConditions(player, index))
+		if (!checkPartyConditions(player, index))
 		{
 			return;
 		}
@@ -1412,7 +1414,8 @@ public final class Kamaloka extends Quest
 	 * Called on instance finish and handles reenter time for instance
 	 * @param world instanceWorld
 	 */
-	private static final void finishInstance(InstanceWorld world)
+	@Override
+	protected final void finishInstance(InstanceWorld world)
 	{
 		if (world instanceof KamaWorld)
 		{
@@ -1425,7 +1428,7 @@ public final class Kamaloka extends Quest
 			}
 			reenter.set(Calendar.HOUR_OF_DAY, RESET_HOUR);
 			
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_RESTRICTED);
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_FROM_HERE_S1_S_ENTRY_HAS_BEEN_RESTRICTED);
 			sm.addInstanceName(world.getTemplateId());
 			
 			// set instance reenter time for all allowed players
@@ -1721,8 +1724,9 @@ public final class Kamaloka extends Quest
 		return super.onKill(npc, player, isSummon);
 	}
 	
-	public static void main(String[] args)
+	@Override
+	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
 	{
-		new Kamaloka();
+		
 	}
 }

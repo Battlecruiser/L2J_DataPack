@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,7 +20,7 @@ package handlers.admincommandhandlers;
 
 import java.util.logging.Logger;
 
-import com.l2jserver.gameserver.datatables.AdminTable;
+import com.l2jserver.gameserver.data.xml.impl.AdminData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
@@ -41,7 +41,7 @@ public class AdminGm implements IAdminCommandHandler
 	{
 		if (command.equals("admin_gm") && activeChar.isGM())
 		{
-			AdminTable.getInstance().deleteGm(activeChar);
+			AdminData.getInstance().deleteGm(activeChar);
 			activeChar.setAccessLevel(0);
 			activeChar.sendMessage("You no longer have GM status.");
 			_log.info("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") turned his GM status off");

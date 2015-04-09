@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -23,21 +23,20 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.datatables.SpawnTable;
-import com.l2jserver.gameserver.engines.DocumentParser;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * Hellbound Spawns parser.
  * @author Zoey76
  */
-public final class HellboundSpawns extends DocumentParser
+public final class HellboundSpawns implements IXmlReader
 {
 	private final List<L2Spawn> _spawns = new ArrayList<>();
 	private final Map<Integer, int[]> _spawnLevels = new HashMap<>();
@@ -53,13 +52,13 @@ public final class HellboundSpawns extends DocumentParser
 		_spawns.clear();
 		_spawnLevels.clear();
 		parseDatapackFile("data/scripts/hellbound/hellboundSpawns.xml");
-		_log.info(getClass().getSimpleName() + ": Loaded " + _spawns.size() + " Hellbound spawns.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _spawns.size() + " Hellbound spawns.");
 	}
 	
 	@Override
-	protected void parseDocument()
+	public void parseDocument(Document doc)
 	{
-		for (Node node = getCurrentDocument().getFirstChild(); node != null; node = node.getNextSibling())
+		for (Node node = doc.getFirstChild(); node != null; node = node.getNextSibling())
 		{
 			if ("list".equals(node.getNodeName()))
 			{
@@ -82,18 +81,11 @@ public final class HellboundSpawns extends DocumentParser
 			final Node id = npc.getAttributes().getNamedItem("id");
 			if (id == null)
 			{
-				_log.severe(getClass().getSimpleName() + ":  Missing NPC ID, skipping record!");
+				LOGGER.severe(getClass().getSimpleName() + ":  Missing NPC ID, skipping record!");
 				return;
 			}
 			
 			final int npcId = Integer.parseInt(id.getNodeValue());
-			final L2NpcTemplate template = NpcData.getInstance().getTemplate(npcId);
-			if (template == null)
-			{
-				_log.warning(getClass().getSimpleName() + ": Missing NPC template for ID: " + npcId + "!");
-				return;
-			}
-			
 			Location loc = null;
 			int delay = 0;
 			int randomInterval = 0;
@@ -128,11 +120,11 @@ public final class HellboundSpawns extends DocumentParser
 			
 			try
 			{
-				final L2Spawn spawn = new L2Spawn(template);
+				final L2Spawn spawn = new L2Spawn(npcId);
 				spawn.setAmount(1);
 				if (loc == null)
 				{
-					_log.warning("location is null");
+					LOGGER.warning("Hellbound spawn location is null!");
 				}
 				spawn.setLocation(loc);
 				spawn.setRespawnDelay(delay, randomInterval);
@@ -146,7 +138,7 @@ public final class HellboundSpawns extends DocumentParser
 			}
 			catch (SecurityException | ClassNotFoundException | NoSuchMethodException e)
 			{
-				_log.warning(getClass().getSimpleName() + ": Couldn't load spawns: " + e.getMessage());
+				LOGGER.warning(getClass().getSimpleName() + ": Couldn't load spawns: " + e.getMessage());
 			}
 		}
 	}

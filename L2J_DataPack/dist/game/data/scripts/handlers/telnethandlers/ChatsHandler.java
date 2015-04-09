@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -22,13 +22,13 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.StringTokenizer;
 
-import com.l2jserver.gameserver.Announcements;
-import com.l2jserver.gameserver.datatables.AdminTable;
+import com.l2jserver.gameserver.data.xml.impl.AdminData;
 import com.l2jserver.gameserver.handler.ITelnetHandler;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
+import com.l2jserver.gameserver.util.Broadcast;
 
 /**
  * @author UnAfraid
@@ -50,7 +50,7 @@ public class ChatsHandler implements ITelnetHandler
 			try
 			{
 				command = command.substring(9);
-				Announcements.getInstance().announceToAll(command);
+				Broadcast.toAllOnlinePlayers(command);
 				_print.println("Announcement Sent!");
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -90,7 +90,7 @@ public class ChatsHandler implements ITelnetHandler
 			{
 				command = command.substring(7);
 				CreatureSay cs = new CreatureSay(0, Say2.ALLIANCE, "Telnet GM Broadcast from " + _cSocket.getInetAddress().getHostAddress(), command);
-				AdminTable.getInstance().broadcastToGMs(cs);
+				AdminData.getInstance().broadcastToGMs(cs);
 				_print.println("Your Message Has Been Sent To " + getOnlineGMS() + " GM(s).");
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -103,7 +103,7 @@ public class ChatsHandler implements ITelnetHandler
 	
 	private int getOnlineGMS()
 	{
-		return AdminTable.getInstance().getAllGms(true).size();
+		return AdminData.getInstance().getAllGms(true).size();
 	}
 	
 	@Override

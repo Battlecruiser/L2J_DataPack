@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 
@@ -104,10 +105,10 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 			{
 				if ((target != null) && target.isAttackable())
 				{
-					final L2Attackable monster = (L2Attackable) target;
+					final L2Npc monster = (L2Npc) target;
 					npc.setTarget(monster);
 					npc.doCast(STUN_EFFECT.getSkill());
-					attackPlayer(monster, player);
+					addAttackPlayerDesire(monster, player);
 				}
 			}
 			npc.doDie(player);
@@ -165,8 +166,7 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 		// Tanta Guard
 		if (getRandom(1000) == 0)
 		{
-			final L2Npc guard = addSpawn(TANTA_GUARD, npc);
-			attackPlayer((L2Attackable) guard, killer);
+			addAttackPlayerDesire(addSpawn(TANTA_GUARD, npc), killer);
 		}
 		
 		// Invisible buff npc
@@ -230,13 +230,11 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 		}
 	}
 	
-	private void castSkill(L2Npc npc, L2Character target, SkillHolder skill)
+	@Override
+	protected void castSkill(L2Npc npc, L2Playable target, SkillHolder skill)
 	{
 		npc.doDie(target);
-		
-		final L2Npc buffer = addSpawn(INVISIBLE_NPC, npc.getLocation(), false, 6000);
-		buffer.setTarget(target);
-		buffer.doCast(skill.getSkill());
+		super.castSkill(addSpawn(INVISIBLE_NPC, npc, false, 6000), target, skill);
 	}
 	
 	public static void main(String[] args)

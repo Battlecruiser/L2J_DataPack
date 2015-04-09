@@ -19,10 +19,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="175" />
-			<set order="0x08" stat="mAtk" val="78" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="175" />
+			<set stat="mAtk" val="78" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="9001" type="Weapon" name="Shadow Item: Great Sword">
@@ -44,10 +44,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="213" />
-			<set order="0x08" stat="mAtk" val="91" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="213" />
+			<set stat="mAtk" val="91" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="9002" type="Weapon" name="Shadow Item: Heavy War Axe">
@@ -69,11 +69,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="175" />
-			<set order="0x08" stat="mAtk" val="91" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="175" />
+			<set stat="mAtk" val="91" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="9003" type="Weapon" name="Shadow Item: Sprite's Staff">
@@ -96,11 +96,11 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="170" />
-			<set order="0x08" stat="mAtk" val="134" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="170" />
+			<set stat="mAtk" val="134" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="9004" type="Weapon" name="Shadow Item: Keshanberk">
@@ -122,10 +122,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="175" />
-			<set order="0x08" stat="mAtk" val="91" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="175" />
+			<set stat="mAtk" val="91" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="9005" type="Weapon" name="Shadow Item: Sword of Valhalla">
@@ -148,10 +148,10 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="140" />
-			<set order="0x08" stat="mAtk" val="122" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="140" />
+			<set stat="mAtk" val="122" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="9006" type="Weapon" name="Shadow Item: Kris">
@@ -173,11 +173,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="153" />
-			<set order="0x08" stat="mAtk" val="91" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="153" />
+			<set stat="mAtk" val="91" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="9007" type="Weapon" name="Shadow Item: Arthro Nail">
@@ -199,11 +199,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="213" />
-			<set order="0x08" stat="mAtk" val="91" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="213" />
+			<set stat="mAtk" val="91" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="9008" type="Weapon" name="Shadow Item: Dark Elven Long Bow">
@@ -227,11 +227,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="397" />
-			<set order="0x08" stat="mAtk" val="100" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="227" />
+			<set stat="pAtk" val="397" />
+			<set stat="mAtk" val="100" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="227" />
 		</for>
 	</item>
 	<item id="9009" type="Weapon" name="Shadow Item: Sword of Delusion*Sword of Delusion">
@@ -253,10 +253,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="213" />
-			<set order="0x08" stat="mAtk" val="91" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="213" />
+			<set stat="mAtk" val="91" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="9010" type="Weapon" name="Shadow Item: Great Axe">
@@ -279,11 +279,11 @@
 		<set name="item_skill" val="3599-1" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="175" />
-			<set order="0x08" stat="mAtk" val="91" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="175" />
+			<set stat="mAtk" val="91" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="9011" type="Weapon" name="Shadow Item: Tallum Blade">
@@ -305,10 +305,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="213" />
-			<set order="0x08" stat="mAtk" val="107" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="213" />
+			<set stat="mAtk" val="107" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="9012" type="Weapon" name="Shadow Item: Halberd">
@@ -331,11 +331,11 @@
 		<set name="item_skill" val="3599-1" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="213" />
-			<set order="0x08" stat="mAtk" val="107" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="213" />
+			<set stat="mAtk" val="107" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="9013" type="Weapon" name="Shadow Item: Dasparion's Staff">
@@ -358,11 +358,11 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="207" />
-			<set order="0x08" stat="mAtk" val="157" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="207" />
+			<set stat="mAtk" val="157" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="9014" type="Weapon" name="Shadow Item: Bloody Orchid">
@@ -384,11 +384,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="186" />
-			<set order="0x08" stat="mAtk" val="107" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="186" />
+			<set stat="mAtk" val="107" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="9015" type="Weapon" name="Shadow Item: Blood Tornado">
@@ -410,11 +410,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="259" />
-			<set order="0x08" stat="mAtk" val="107" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="259" />
+			<set stat="mAtk" val="107" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="9016" type="Weapon" name="Shadow Item: Carnage Bow">
@@ -438,11 +438,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="440" />
-			<set order="0x08" stat="mAtk" val="107" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="440" />
+			<set stat="mAtk" val="107" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
 	<item id="9017" type="Weapon" name="Shadow Item: Keshanberk*Keshanberk">
@@ -464,10 +464,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="259" />
-			<set order="0x08" stat="mAtk" val="107" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="259" />
+			<set stat="mAtk" val="107" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="9018" type="Weapon" name="Shadow Item: Meteor Shower">
@@ -489,11 +489,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="213" />
-			<set order="0x08" stat="mAtk" val="107" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="213" />
+			<set stat="mAtk" val="107" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="9019" type="Weapon" name="Shadow Item: Inferno Master">
@@ -515,10 +515,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="259" />
-			<set order="0x08" stat="mAtk" val="107" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="259" />
+			<set stat="mAtk" val="107" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="9020" type="Weapon" name="Shadow Item: Keshanberk*Damascus">
@@ -541,10 +541,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="275" />
-			<set order="0x08" stat="mAtk" val="112" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="275" />
+			<set stat="mAtk" val="112" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="9021" type="Weapon" name="Shadow Item: Dragon Slayer">
@@ -566,10 +566,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="282" />
-			<set order="0x08" stat="mAtk" val="114" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="282" />
+			<set stat="mAtk" val="114" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="9022" type="Weapon" name="Shadow Item: Sword of Miracles">
@@ -592,10 +592,10 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="186" />
-			<set order="0x08" stat="mAtk" val="152" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="186" />
+			<set stat="mAtk" val="152" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="9023" type="Weapon" name="Shadow Item: Elysian">
@@ -617,11 +617,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="232" />
-			<set order="0x08" stat="mAtk" val="114" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="232" />
+			<set stat="mAtk" val="114" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="9024" type="Weapon" name="Shadow Item: Branch of the Mother Tree">
@@ -644,11 +644,11 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="226" />
-			<set order="0x08" stat="mAtk" val="167" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="226" />
+			<set stat="mAtk" val="167" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="9025" type="Weapon" name="Shadow Item: Soul Separator">
@@ -670,11 +670,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="203" />
-			<set order="0x08" stat="mAtk" val="114" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="203" />
+			<set stat="mAtk" val="114" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="9026" type="Weapon" name="Shadow Item: Dragon Grinder">
@@ -696,11 +696,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="282" />
-			<set order="0x08" stat="mAtk" val="114" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="282" />
+			<set stat="mAtk" val="114" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="9027" type="Weapon" name="Shadow Item: Soul Bow">
@@ -724,11 +724,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="528" />
-			<set order="0x08" stat="mAtk" val="125" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="227" />
+			<set stat="pAtk" val="528" />
+			<set stat="mAtk" val="125" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="227" />
 		</for>
 	</item>
 	<item id="9028" type="Weapon" name="Shadow Item: Tallum Glaive">
@@ -751,11 +751,11 @@
 		<set name="item_skill" val="3599-1" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="232" />
-			<set order="0x08" stat="mAtk" val="114" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="232" />
+			<set stat="mAtk" val="114" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="9029" type="Weapon" name="Shadow Item: Dark Legion's Edge">
@@ -777,10 +777,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="232" />
-			<set order="0x08" stat="mAtk" val="114" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="232" />
+			<set stat="mAtk" val="114" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="9030" type="Armor" name="Shadow Item: Bronze Breastplate">
@@ -799,7 +799,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="68" />
+			<add order="0" stat="pDef" val="68" />
 		</for>
 	</item>
 	<item id="9031" type="Armor" name="Shadow Item: Bronze Gaiters">
@@ -818,7 +818,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="43" />
+			<add order="0" stat="pDef" val="43" />
 		</for>
 	</item>
 	<item id="9032" type="Armor" name="Shadow Item: Hard Leather Shirt">
@@ -834,7 +834,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="53" />
+			<add order="0" stat="pDef" val="53" />
 		</for>
 	</item>
 	<item id="9033" type="Armor" name="Shadow Item: Hard Leather Gaiters">
@@ -850,7 +850,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="33" />
+			<add order="0" stat="pDef" val="33" />
 		</for>
 	</item>
 	<item id="9034" type="Armor" name="Shadow Item: Tunic of Magic">
@@ -869,8 +869,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="34" />
-			<add order="0x40" stat="maxMp" val="86" />
+			<add order="0" stat="pDef" val="34" />
+			<add stat="maxMp" val="86" />
 		</for>
 	</item>
 	<item id="9035" type="Armor" name="Shadow Item: Stockings of Magic">
@@ -889,8 +889,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="21" />
-			<add order="0x40" stat="maxMp" val="54" />
+			<add order="0" stat="pDef" val="21" />
+			<add stat="maxMp" val="54" />
 		</for>
 	</item>
 	<item id="9036" type="Armor" name="Shadow Item: Bone Shield">
@@ -908,9 +908,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="90" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="90" />
 		</for>
 	</item>
 	<item id="9037" type="Armor" name="Shadow Item: Hard Leather Helmet">
@@ -925,7 +925,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="26" />
+			<add order="0" stat="pDef" val="26" />
 		</for>
 	</item>
 	<item id="9038" type="Armor" name="Shadow Item: Boots">
@@ -940,7 +940,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="17" />
+			<add order="0" stat="pDef" val="17" />
 		</for>
 	</item>
 	<item id="9039" type="Armor" name="Shadow Item: Bracer">
@@ -955,7 +955,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="17" />
+			<add order="0" stat="pDef" val="17" />
 		</for>
 	</item>
 	<item id="9040" type="Armor" name="Shadow Item: Mithril Breastplate">
@@ -975,7 +975,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="95" />
+			<add order="0" stat="pDef" val="95" />
 		</for>
 	</item>
 	<item id="9041" type="Armor" name="Shadow Item: Mithril Gaiters">
@@ -995,7 +995,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="61" />
+			<add order="0" stat="pDef" val="61" />
 		</for>
 	</item>
 	<item id="9042" type="Armor" name="Shadow Item: Gauntlet">
@@ -1011,7 +1011,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="24" />
+			<add order="0" stat="pDef" val="24" />
 		</for>
 	</item>
 	<item id="9043" type="Armor" name="Shadow Item: Iron Boots">
@@ -1027,7 +1027,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="24" />
+			<add order="0" stat="pDef" val="24" />
 		</for>
 	</item>
 	<item id="9044" type="Armor" name="Shadow Item: Hoplon">
@@ -1046,9 +1046,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="128" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="128" />
 		</for>
 	</item>
 	<item id="9045" type="Armor" name="Shadow Item: Reinforced Leather Shirt">
@@ -1065,7 +1065,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="73" />
+			<add order="0" stat="pDef" val="73" />
 		</for>
 	</item>
 	<item id="9046" type="Armor" name="Shadow Item: Reinforced Leather Gaiters">
@@ -1082,7 +1082,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="46" />
+			<add order="0" stat="pDef" val="46" />
 		</for>
 	</item>
 	<item id="9047" type="Armor" name="Shadow Item: Reinforced Leather Gloves">
@@ -1098,7 +1098,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="24" />
+			<add order="0" stat="pDef" val="24" />
 		</for>
 	</item>
 	<item id="9048" type="Armor" name="Shadow Item: Reinforced Leather Boots">
@@ -1114,7 +1114,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="24" />
+			<add order="0" stat="pDef" val="24" />
 		</for>
 	</item>
 	<item id="9049" type="Armor" name="Shadow Item: Tunic of Knowledge">
@@ -1134,8 +1134,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="49" />
-			<add order="0x40" stat="maxMp" val="147" />
+			<add order="0" stat="pDef" val="49" />
+			<add stat="maxMp" val="147" />
 		</for>
 	</item>
 	<item id="9050" type="Armor" name="Shadow Item: Stockings of Knowledge">
@@ -1155,8 +1155,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="30" />
-			<add order="0x40" stat="maxMp" val="92" />
+			<add order="0" stat="pDef" val="30" />
+			<add stat="maxMp" val="92" />
 		</for>
 	</item>
 	<item id="9051" type="Armor" name="Shadow Item: Gloves of Knowledge">
@@ -1172,7 +1172,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="24" />
+			<add order="0" stat="pDef" val="24" />
 		</for>
 	</item>
 	<item id="9052" type="Armor" name="Shadow Item: Boots of Knowledge">
@@ -1188,7 +1188,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="24" />
+			<add order="0" stat="pDef" val="24" />
 		</for>
 	</item>
 	<item id="9053" type="Armor" name="Shadow Item: Helmet">
@@ -1204,7 +1204,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="37" />
+			<add order="0" stat="pDef" val="37" />
 		</for>
 	</item>
 	<item id="9054" type="Armor" name="Shadow Item: Composite Armor">
@@ -1224,7 +1224,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="224" />
+			<add order="0" stat="pDef" val="224" />
 		</for>
 	</item>
 	<item id="9055" type="Armor" name="Shadow Item: Composite Boots">
@@ -1240,7 +1240,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="36" />
+			<add order="0" stat="pDef" val="36" />
 		</for>
 	</item>
 	<item id="9056" type="Armor" name="Shadow Item: Composite Shield">
@@ -1259,9 +1259,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="190" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="190" />
 		</for>
 	</item>
 	<item id="9057" type="Armor" name="Shadow Item: Composite Helmet">
@@ -1277,7 +1277,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="54" />
+			<add order="0" stat="pDef" val="54" />
 		</for>
 	</item>
 	<item id="9058" type="Armor" name="Shadow Item: Theca Leather Armor">
@@ -1294,7 +1294,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="106" />
+			<add order="0" stat="pDef" val="106" />
 		</for>
 	</item>
 	<item id="9059" type="Armor" name="Shadow Item: Theca Leather Gaiters">
@@ -1311,7 +1311,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="66" />
+			<add order="0" stat="pDef" val="66" />
 		</for>
 	</item>
 	<item id="9060" type="Armor" name="Shadow Item: Theca Leather Boots">
@@ -1327,7 +1327,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="37" />
+			<add order="0" stat="pDef" val="37" />
 		</for>
 	</item>
 	<item id="9061" type="Armor" name="Shadow Item: Theca Leather Gloves">
@@ -1343,7 +1343,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="37" />
+			<add order="0" stat="pDef" val="37" />
 		</for>
 	</item>
 	<item id="9062" type="Armor" name="Shadow Item: Demon's Tunic">
@@ -1363,8 +1363,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="69" />
-			<add order="0x40" stat="maxMp" val="284" />
+			<add order="0" stat="pDef" val="69" />
+			<add stat="maxMp" val="284" />
 		</for>
 	</item>
 	<item id="9063" type="Armor" name="Shadow Item: Demon's Stockings">
@@ -1384,8 +1384,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="43" />
-			<add order="0x40" stat="maxMp" val="177" />
+			<add order="0" stat="pDef" val="43" />
+			<add stat="maxMp" val="177" />
 		</for>
 	</item>
 	<item id="9064" type="Armor" name="Shadow Item: Demon's Boots">
@@ -1401,7 +1401,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="36" />
+			<add order="0" stat="pDef" val="36" />
 		</for>
 	</item>
 	<item id="9065" type="Armor" name="Shadow Item: Demon's Gloves">
@@ -1417,7 +1417,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="36" />
+			<add order="0" stat="pDef" val="36" />
 		</for>
 	</item>
 	<item id="9066" type="Armor" name="Shadow Item: Shining Circlet">
@@ -1433,7 +1433,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="54" />
+			<add order="0" stat="pDef" val="54" />
 		</for>
 	</item>
 	<item id="9067" type="Armor" name="Shadow Item: Zubei's Breastplate">
@@ -1453,7 +1453,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="157" />
+			<add order="0" stat="pDef" val="157" />
 		</for>
 	</item>
 	<item id="9068" type="Armor" name="Shadow Item: Zubei's Gaiters">
@@ -1473,7 +1473,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="98" />
+			<add order="0" stat="pDef" val="98" />
 		</for>
 	</item>
 	<item id="9069" type="Armor" name="Shadow Item: Zubei's Helmet">
@@ -1489,7 +1489,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="62" />
+			<add order="0" stat="pDef" val="62" />
 		</for>
 	</item>
 	<item id="9070" type="Armor" name="Shadow Item: Zubei's Shield">
@@ -1508,9 +1508,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="216" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="216" />
 		</for>
 	</item>
 	<item id="9071" type="Armor" name="Shadow Item: Zubei's Gauntlet">
@@ -1529,7 +1529,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="41" />
+			<add order="0" stat="pDef" val="41" />
 		</for>
 	</item>
 	<item id="9072" type="Armor" name="Shadow Item: Zubei's Boots">
@@ -1548,7 +1548,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="41" />
+			<add order="0" stat="pDef" val="41" />
 		</for>
 	</item>
 	<item id="9073" type="Armor" name="Shadow Item: Zubei's Leather Shirt">
@@ -1565,7 +1565,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="117" />
+			<add order="0" stat="pDef" val="117" />
 		</for>
 	</item>
 	<item id="9074" type="Armor" name="Shadow Item: Zubei's Leather Gaiters">
@@ -1582,7 +1582,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="73" />
+			<add order="0" stat="pDef" val="73" />
 		</for>
 	</item>
 	<item id="9075" type="Armor" name="Shadow Item: Zubei's Gauntlet">
@@ -1598,7 +1598,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="41" />
+			<add order="0" stat="pDef" val="41" />
 		</for>
 	</item>
 	<item id="9076" type="Armor" name="Shadow Item: Zubei's Boots">
@@ -1614,7 +1614,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="41" />
+			<add order="0" stat="pDef" val="41" />
 		</for>
 	</item>
 	<item id="9077" type="Armor" name="Shadow Item: Tunic of Zubei">
@@ -1634,8 +1634,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="78" />
-			<add order="0x40" stat="maxMp" val="345" />
+			<add order="0" stat="pDef" val="78" />
+			<add stat="maxMp" val="345" />
 		</for>
 	</item>
 	<item id="9078" type="Armor" name="Shadow Item: Stockings of Zubei">
@@ -1655,8 +1655,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="49" />
-			<add order="0x40" stat="maxMp" val="216" />
+			<add order="0" stat="pDef" val="49" />
+			<add stat="maxMp" val="216" />
 		</for>
 	</item>
 	<item id="9079" type="Armor" name="Shadow Item: Zubei's Gauntlet">
@@ -1675,7 +1675,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="41" />
+			<add order="0" stat="pDef" val="41" />
 		</for>
 	</item>
 	<item id="9080" type="Armor" name="Shadow Item: Zubei's Boots">
@@ -1694,7 +1694,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="41" />
+			<add order="0" stat="pDef" val="41" />
 		</for>
 	</item>
 	<item id="9081" type="Armor" name="Shadow Item: Dark Crystal Breastplate">
@@ -1714,7 +1714,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="171" />
+			<add order="0" stat="pDef" val="171" />
 		</for>
 	</item>
 	<item id="9082" type="Armor" name="Shadow Item: Dark Crystal Gaiters">
@@ -1734,7 +1734,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="107" />
+			<add order="0" stat="pDef" val="107" />
 		</for>
 	</item>
 	<item id="9083" type="Armor" name="Shadow Item: Dark Crystal Helmet">
@@ -1750,7 +1750,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="69" />
+			<add order="0" stat="pDef" val="69" />
 		</for>
 	</item>
 	<item id="9084" type="Armor" name="Shadow Item: Dark Crystal Shield">
@@ -1769,9 +1769,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="243" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="243" />
 		</for>
 	</item>
 	<item id="9085" type="Armor" name="Shadow Item: Dark Crystal Gloves">
@@ -1790,7 +1790,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="46" />
+			<add order="0" stat="pDef" val="46" />
 		</for>
 	</item>
 	<item id="9086" type="Armor" name="Shadow Item: Dark Crystal Boots">
@@ -1809,7 +1809,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="46" />
+			<add order="0" stat="pDef" val="46" />
 		</for>
 	</item>
 	<item id="9087" type="Armor" name="Shadow Item: Dark Crystal Leather Armor">
@@ -1826,7 +1826,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="128" />
+			<add order="0" stat="pDef" val="128" />
 		</for>
 	</item>
 	<item id="9088" type="Armor" name="Shadow Item: Dark Crystal Leggings">
@@ -1843,7 +1843,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="80" />
+			<add order="0" stat="pDef" val="80" />
 		</for>
 	</item>
 	<item id="9089" type="Armor" name="Shadow Item: Dark Crystal Gloves">
@@ -1859,7 +1859,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="46" />
+			<add order="0" stat="pDef" val="46" />
 		</for>
 	</item>
 	<item id="9090" type="Armor" name="Shadow Item: Dark Crystal Boots">
@@ -1875,7 +1875,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="46" />
+			<add order="0" stat="pDef" val="46" />
 		</for>
 	</item>
 	<item id="9091" type="Armor" name="Shadow Item: Dark Crystal Robe">
@@ -1895,8 +1895,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="139" />
-			<add order="0x40" stat="maxMp" val="665" />
+			<add order="0" stat="pDef" val="139" />
+			<add stat="maxMp" val="665" />
 		</for>
 	</item>
 	<item id="9092" type="Armor" name="Shadow Item: Dark Crystal Gloves">
@@ -1915,7 +1915,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="46" />
+			<add order="0" stat="pDef" val="46" />
 		</for>
 	</item>
 	<item id="9093" type="Armor" name="Shadow Item: Dark Crystal Boots">
@@ -1934,7 +1934,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="46" />
+			<add order="0" stat="pDef" val="46" />
 		</for>
 	</item>
 	<item id="9094" type="Armor" name="Shadow Item: Majestic Plate Armor">
@@ -1954,7 +1954,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="293" />
+			<add order="0" stat="pDef" val="293" />
 		</for>
 	</item>
 	<item id="9095" type="Armor" name="Shadow Item: Majestic Circlet">
@@ -1970,7 +1970,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="73" />
+			<add order="0" stat="pDef" val="73" />
 		</for>
 	</item>
 	<item id="9096" type="Armor" name="Shadow Item: Majestic Gauntlet">
@@ -1989,7 +1989,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="49" />
+			<add order="0" stat="pDef" val="49" />
 		</for>
 	</item>
 	<item id="9097" type="Armor" name="Shadow Item: Majestic Boots">
@@ -2008,7 +2008,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="49" />
+			<add order="0" stat="pDef" val="49" />
 		</for>
 	</item>
 	<item id="9098" type="Armor" name="Shadow Item: Majestic Leather Armor">
@@ -2025,7 +2025,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="220" />
+			<add order="0" stat="pDef" val="220" />
 		</for>
 	</item>
 	<item id="9099" type="Armor" name="Shadow Item: Majestic Gauntlet">
@@ -2041,7 +2041,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<for>
-			<add order="0x10" stat="pDef" val="49" />
+			<add order="0" stat="pDef" val="49" />
 		</for>
 	</item>
 </list>

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Call Skill effect implementation.
- * @author Nos
+ * @author NosBit
  */
 public final class CallSkill extends AbstractEffect
 {

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -63,7 +63,7 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -98,7 +98,7 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 			final L2PcInstance partyMember = getRandomPartyMember(killer, 1);
 			if (partyMember != null)
 			{
-				final QuestState st = partyMember.getQuestState(getName());
+				final QuestState st = getQuestState(partyMember, false);
 				if (st.getQuestItemsCount(BROKEN_PIECE_OF_MAGIC_FORCE) < BROKEN_PIECE_OF_MAGIC_FORCE_NEEDED)
 				{
 					st.giveItems(BROKEN_PIECE_OF_MAGIC_FORCE, 1);
@@ -118,7 +118,7 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 			final L2PcInstance partyMember = getRandomPartyMember(killer, 3);
 			if ((partyMember != null) && (getRandom(100) < CHANCE_FOR_FRAGMENT))
 			{
-				final QuestState st = partyMember.getQuestState(getName());
+				final QuestState st = getQuestState(partyMember, false);
 				if (st.getQuestItemsCount(GUARDIAN_SPIRIT_FRAGMENT) < GUARDIAN_SPIRIT_FRAGMENT_NEEDED)
 				{
 					st.giveItems(GUARDIAN_SPIRIT_FRAGMENT, 1);
@@ -140,7 +140,7 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
 		String htmltext = getNoQuestMsg(talker);
-		final QuestState st = talker.getQuestState(getName());
+		final QuestState st = getQuestState(talker, true);
 		if (st == null)
 		{
 			return htmltext;

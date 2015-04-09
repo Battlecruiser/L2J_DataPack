@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,11 +18,12 @@
  */
 package instances.PailakaDevilsLegacy;
 
+import instances.AbstractInstance;
+
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import quests.Q00129_PailakaDevilsLegacy.Q00129_PailakaDevilsLegacy;
-import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
@@ -35,18 +36,17 @@ import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
-import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
  * Pailaka Devil's Legacy Instance zone.
  * @author St3eT
  */
-public final class PailakaDevilsLegacy extends AbstractNpcAI
+public final class PailakaDevilsLegacy extends AbstractInstance
 {
 	protected class DIWorld extends InstanceWorld
 	{
-		L2Attackable _lematanNpc = null;
-		List<L2Attackable> _followerslist = new CopyOnWriteArrayList<>();
+		protected L2Attackable _lematanNpc = null;
+		protected List<L2Attackable> _followerslist = new CopyOnWriteArrayList<>();
 	}
 	
 	// NPCs
@@ -88,9 +88,9 @@ public final class PailakaDevilsLegacy extends AbstractNpcAI
 	private static final int TEMPLATE_ID = 44;
 	private static final int ZONE = 20109;
 	
-	private PailakaDevilsLegacy()
+	public PailakaDevilsLegacy()
 	{
-		super(PailakaDevilsLegacy.class.getSimpleName(), "instances");
+		super(PailakaDevilsLegacy.class.getSimpleName());
 		addTalkId(SURVIVOR);
 		addAttackId(POWDER_KEG, TREASURE_BOX, LEMATAN);
 		addKillId(LEMATAN);
@@ -108,7 +108,7 @@ public final class PailakaDevilsLegacy extends AbstractNpcAI
 		if (event.equals("enter"))
 		{
 			final QuestState qs = player.getQuestState(Q00129_PailakaDevilsLegacy.class.getSimpleName());
-			enterInstance(player, "PailakaDevilsLegacy.xml");
+			enterInstance(player, new DIWorld(), "PailakaDevilsLegacy.xml", TEMPLATE_ID);
 			if (qs.isCond(1))
 			{
 				qs.setCond(2, true);
@@ -304,28 +304,15 @@ public final class PailakaDevilsLegacy extends AbstractNpcAI
 		}
 	}
 	
-	private void enterInstance(L2PcInstance player, String template)
+	@Override
+	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
 	{
-		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-		
-		if (world != null)
+		if (firstEntrance)
 		{
-			if (world instanceof DIWorld)
-			{
-				teleportPlayer(player, TELEPORT, world.getInstanceId());
-				return;
-			}
-			player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
-			return;
+			world.addAllowed(player.getObjectId());
+			((DIWorld) world)._lematanNpc = (L2Attackable) addSpawn(LEMATAN, LEMATAN_SPAWN, false, 0, false, world.getInstanceId());
 		}
-		world = new DIWorld();
-		world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
-		world.setTemplateId(TEMPLATE_ID);
-		InstanceManager.getInstance().addWorld(world);
-		world.addAllowed(player.getObjectId());
 		teleportPlayer(player, TELEPORT, world.getInstanceId());
-		((DIWorld) world)._lematanNpc = (L2Attackable) addSpawn(LEMATAN, LEMATAN_SPAWN, false, 0, false, world.getInstanceId());
-		_log.info("Pailaka Devils Legacy" + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
 	}
 	
 	public static void main(String[] args)

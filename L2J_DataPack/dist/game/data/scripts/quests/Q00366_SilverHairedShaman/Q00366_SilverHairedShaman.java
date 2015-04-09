@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -59,7 +59,7 @@ public final class Q00366_SilverHairedShaman extends Quest
 	@Override
 	public boolean checkPartyMember(L2PcInstance member, L2Npc npc)
 	{
-		final QuestState qs = member.getQuestState(getName());
+		final QuestState qs = getQuestState(member, false);
 		return ((qs != null) && qs.isStarted());
 	}
 	

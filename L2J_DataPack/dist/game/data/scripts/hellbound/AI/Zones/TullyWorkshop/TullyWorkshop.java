@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,20 +18,21 @@
  */
 package hellbound.AI.Zones.TullyWorkshop;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 
-import javolution.util.FastList;
-import javolution.util.FastMap;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.DoorTable;
+import com.l2jserver.gameserver.data.xml.impl.DoorData;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.instancemanager.RaidBossSpawnManager;
 import com.l2jserver.gameserver.instancemanager.RaidBossSpawnManager.StatusEnum;
@@ -111,8 +112,8 @@ public final class TullyWorkshop extends AbstractNpcAI
 		22383
 	};
 	
-	private static final Map<Integer, int[]> TULLY_DOORLIST = new FastMap<>();
-	private static final Map<Integer, Location[]> TELE_COORDS = new FastMap<>();
+	private static final Map<Integer, int[]> TULLY_DOORLIST = new HashMap<>();
+	private static final Map<Integer, Location[]> TELE_COORDS = new HashMap<>();
 	
 	protected int countdownTime;
 	private int nextServantIdx = 0;
@@ -125,14 +126,13 @@ public final class TullyWorkshop extends AbstractNpcAI
 	protected ScheduledFuture<?> _countdown = null;
 	
 	// NPC's, spawned after Tully's death are stored here
-	protected static List<L2Npc> postMortemSpawn = new FastList<>();
-	// TODO: Zoey76: Not thread-safe, probably will lead to problems.
-	protected static Set<Integer> brokenContraptions = new HashSet<>();
+	protected static List<L2Npc> postMortemSpawn = new ArrayList<>();
+	protected static Set<Integer> brokenContraptions = ConcurrentHashMap.newKeySet();
 	protected static Set<Integer> rewardedContraptions = new HashSet<>();
 	protected static Set<Integer> talkedContraptions = new HashSet<>();
 	
-	private final List<L2MonsterInstance> spawnedFollowers = new FastList<>();
-	private final List<L2MonsterInstance> spawnedFollowerMinions = new FastList<>();
+	private final List<L2MonsterInstance> spawnedFollowers = new ArrayList<>();
+	private final List<L2MonsterInstance> spawnedFollowerMinions = new ArrayList<>();
 	private L2Npc spawnedAgent = null;
 	private L2Spawn pillarSpawn = null;
 	
@@ -740,7 +740,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 			final int[] doors = TULLY_DOORLIST.get(npcId);
 			for (int doorId : doors)
 			{
-				DoorTable.getInstance().getDoor(doorId).closeMe();
+				DoorData.getInstance().getDoor(doorId).closeMe();
 			}
 		}
 		
@@ -837,7 +837,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 			final int[] doors = TULLY_DOORLIST.get(npcId);
 			for (int doorId : doors)
 			{
-				DoorTable.getInstance().getDoor(doorId).openMe();
+				DoorData.getInstance().getDoor(doorId).openMe();
 			}
 			
 			startQuestTimer("close", 120000, npc, null);
@@ -1205,8 +1205,8 @@ public final class TullyWorkshop extends AbstractNpcAI
 				postMortemSpawn.add(spawnedNpc);
 			}
 			
-			DoorTable.getInstance().getDoor(19260051).openMe();
-			DoorTable.getInstance().getDoor(19260052).openMe();
+			DoorData.getInstance().getDoor(19260051).openMe();
+			DoorData.getInstance().getDoor(19260052).openMe();
 			
 			countdownTime = 600000;
 			_countdown = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(() ->
@@ -1570,8 +1570,8 @@ public final class TullyWorkshop extends AbstractNpcAI
 	
 	private void handleDoorsOnDeath()
 	{
-		DoorTable.getInstance().getDoor(20250005).openMe();
-		DoorTable.getInstance().getDoor(20250004).openMe();
+		DoorData.getInstance().getDoor(20250005).openMe();
+		DoorData.getInstance().getDoor(20250004).openMe();
 		ThreadPoolManager.getInstance().scheduleGeneral(new DoorTask(new int[]
 		{
 			20250006,
@@ -1594,8 +1594,8 @@ public final class TullyWorkshop extends AbstractNpcAI
 	
 	private void handleDoorsOnRespawn()
 	{
-		DoorTable.getInstance().getDoor(20250009).closeMe();
-		DoorTable.getInstance().getDoor(20250008).closeMe();
+		DoorData.getInstance().getDoor(20250009).closeMe();
+		DoorData.getInstance().getDoor(20250008).closeMe();
 		ThreadPoolManager.getInstance().scheduleGeneral(new DoorTask(new int[]
 		{
 			20250777,
@@ -1627,7 +1627,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 			L2DoorInstance door;
 			for (int doorId : _doorIds)
 			{
-				door = DoorTable.getInstance().getDoor(doorId);
+				door = DoorData.getInstance().getDoor(doorId);
 				if (door != null)
 				{
 					switch (_state)

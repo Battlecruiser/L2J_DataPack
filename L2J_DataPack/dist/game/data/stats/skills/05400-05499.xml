@@ -10,6 +10,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="30000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5401" levels="1" name="Stun">
@@ -26,6 +27,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -39,6 +41,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5403" levels="1" name="Presentation - Balor 3">
@@ -47,6 +50,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5404" levels="1" name="Presentation - Balor 4">
@@ -57,6 +61,7 @@
 		<set name="hitTime" val="3500" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5405" levels="1" name="Presentation - Demonic 1">
@@ -66,6 +71,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5406" levels="1" name="Presentation - Demonic 2">
@@ -75,6 +81,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5407" levels="1" name="Presentation - Crystalline Golem 1">
@@ -82,6 +89,7 @@
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5408" levels="1" name="Presentation - Crystalline Golem 2">
@@ -92,6 +100,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5409" levels="1" name="Presentation - Crystalline Golem 3">
@@ -102,6 +111,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5410" levels="1" name="Presentation - Balor 10">
@@ -109,12 +119,14 @@
 		<set name="hitTime" val="17000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5411" levels="1" name="Presentation - Balor 11">
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5412" levels="1" name="Presentation - Balor 12">
@@ -122,6 +134,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5413" levels="1" name="Performing Agathion - Beast Farm">
@@ -130,6 +143,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
 			<player agathionId="16026" />
@@ -141,6 +155,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
 			<player agathionId="16027" />
@@ -152,6 +167,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
 			<player agathionId="16028" />
@@ -164,6 +180,7 @@
 		<set name="effectPoint" val="100" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5417" levels="1" name="Invincible">
@@ -171,6 +188,7 @@
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5418" levels="1" name="Invincible">
@@ -178,6 +196,7 @@
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5419" levels="1" name="Invincible Blow">
@@ -186,6 +205,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5420" levels="1" name="Invincible">
@@ -193,6 +213,7 @@
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5422" levels="12" name="Flame">
@@ -215,12 +236,13 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="DamOverTime" ticks="5">
 				<param power="#dot" />
-				<add order="0x40" stat="mAtk" val="#mAtk" />
-				<mul order="0x30" stat="runSpd" val="0.7" />
+				<add stat="mAtk" val="#mAtk" />
+				<mul stat="runSpd" val="0.7" />
 			</effect>
 		</for>
 	</skill>
@@ -242,12 +264,13 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="POISON" />
 		<for>
 			<effect name="DamOverTime" ticks="5">
 				<param power="#dot" />
-				<mul order="0x30" stat="runSpd" val="0.7" />
+				<mul stat="runSpd" val="0.7" />
 			</effect>
 		</for>
 	</skill>
@@ -269,12 +292,13 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="DamOverTime" ticks="5">
 				<param power="#dot" />
-				<mul order="0x30" stat="runSpd" val="0.7" />
+				<mul stat="runSpd" val="0.7" />
 			</effect>
 		</for>
 	</skill>
@@ -288,10 +312,11 @@
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="sDef" val="1.3" />
+				<mul stat="sDef" val="1.3" />
 			</effect>
 		</for>
 	</skill>
@@ -305,11 +330,12 @@
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" />
-				<mul order="0x30" stat="mAtkSpd" val="0.85" />
+				<mul stat="PhysicalMpConsumeRate" val="0.95" />
+				<mul stat="mAtkSpd" val="0.85" />
 			</effect>
 		</for>
 	</skill>
@@ -324,10 +350,11 @@
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="PARTY" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtkSpd" val="1.15">
+				<mul stat="pAtkSpd" val="1.15">
 					<using kind="BOW,CROSSBOW" />
 				</mul>
 			</effect>
@@ -344,10 +371,11 @@
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="PARTY" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="runSpd" val="40" />
+				<add stat="runSpd" val="40" />
 			</effect>
 		</for>
 	</skill>
@@ -357,6 +385,7 @@
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ManaHealByLevel">
@@ -374,6 +403,7 @@
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="115" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -389,21 +419,25 @@
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="2000" />
 		<set name="lvlBonusRate" val="2" />
+		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="40" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5432" levels="2" name="Weapon Supply">
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="T" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5433" levels="1" name="Presentation - Gathering of Evil Power">
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5434" levels="1" name="Gust">
@@ -423,6 +457,7 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="86" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="GUST" />
 		<for>
@@ -453,6 +488,7 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="86" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="GUST" />
 		<for>
@@ -473,6 +509,7 @@
 		<set name="effectPoint" val="100" />
 		<set name="magicLvl" val="20" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5437" levels="2" name="Dissonance">
@@ -485,12 +522,12 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="0.05" />
-				<mul order="0x30" stat="mAtk" val="0.05" />
-				<sub order="0x40" stat="accCombat" val="50" />
-				<sub order="0x40" stat="rEvas" val="#avoid" />
-				<mul order="0x30" stat="pDef" val="#def" />
-				<mul order="0x30" stat="mDef" val="#def" />
+				<mul stat="pAtk" val="0.05" />
+				<mul stat="mAtk" val="0.05" />
+				<sub stat="accCombat" val="50" />
+				<sub stat="rEvas" val="#avoid" />
+				<mul stat="pDef" val="#def" />
+				<mul stat="mDef" val="#def" />
 			</effect>
 		</for>
 	</skill>
@@ -508,6 +545,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Heal">
@@ -529,6 +567,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Heal">
@@ -540,12 +579,14 @@
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5441" levels="1" name="Presentation - Tears Mirror Image">
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5442" levels="4" name="Bite Attack">
@@ -563,6 +604,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="10000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -587,10 +629,11 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="pAtkSpd" val="0.77" />
+				<mul stat="pAtkSpd" val="0.77" />
 			</effect>
 		</for>
 	</skill>
@@ -619,6 +662,7 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="11000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -639,17 +683,18 @@
 		<set name="mpConsume" val="71" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.08" />
-				<mul order="0x30" stat="pAtkSpd" val="1.08" />
-				<mul order="0x30" stat="mAtk" val="1.16" />
-				<mul order="0x30" stat="mAtkSpd" val="1.08" />
-				<add order="0x40" stat="runSpd" val="8" />
-				<mul order="0x30" stat="pDef" val="0.92" />
-				<mul order="0x30" stat="mDef" val="0.84" />
-				<sub order="0x40" stat="rEvas" val="4" />
+				<mul stat="pAtk" val="1.08" />
+				<mul stat="pAtkSpd" val="1.08" />
+				<mul stat="mAtk" val="1.16" />
+				<mul stat="mAtkSpd" val="1.08" />
+				<add stat="runSpd" val="8" />
+				<mul stat="pDef" val="0.92" />
+				<mul stat="mDef" val="0.84" />
+				<sub stat="rEvas" val="4" />
 			</effect>
 		</for>
 	</skill>
@@ -680,6 +725,7 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="PARALYZE" />
 		<for>
@@ -691,6 +737,7 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TargetCancel" />
@@ -704,6 +751,7 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Stun" />
@@ -722,6 +770,7 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="DamOverTime" ticks="5">
@@ -737,12 +786,13 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="runSpd" val="0.7" />
-				<mul order="0x30" stat="pAtkSpd" val="0.77" />
-				<mul order="0x30" stat="mAtkSpd" val="0.7" />
+				<mul stat="runSpd" val="0.7" />
+				<mul stat="pAtkSpd" val="0.77" />
+				<mul stat="mAtkSpd" val="0.7" />
 			</effect>
 		</for>
 	</skill>
@@ -756,10 +806,11 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="defCritDamage" val="#defCritDamage" />
+				<mul stat="defCritDamage" val="#defCritDamage" />
 			</effect>
 		</for>
 	</skill>
@@ -771,6 +822,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="MagicalAttackMp" />
@@ -785,6 +837,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="77" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5455" levels="1" name="Voice Bind">
@@ -796,6 +849,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="77" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5456" levels="1" name="Stubborn Resistance">
@@ -806,16 +860,18 @@
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1400" />
+		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="90" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="DispelByCategory">
 				<param slot="buff" rate="100" max="20" />
 			</effect>
 			<effect name="Debuff">
-				<mul order="0x30" stat="pAtkSpd" val="0.7" />
-				<mul order="0x30" stat="runSpd" val="0.7" />
+				<mul stat="pAtkSpd" val="0.7" />
+				<mul stat="runSpd" val="0.7" />
 			</effect>
 		</for>
 	</skill>
@@ -824,6 +880,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5458" levels="1" name="Performing Agathion - Fortress">
@@ -832,6 +889,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
 			<player agathionId="16029" />
@@ -847,9 +905,11 @@
 		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill1170" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="PARALYZE" />
 	</skill>
@@ -863,9 +923,11 @@
 		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill1092" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="DERANGEMENT" />
 	</skill>
@@ -883,6 +945,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -940,6 +1003,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1037,6 +1101,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="DispelBySlot">
@@ -1051,8 +1116,10 @@
 		<set name="abnormalType" val="TRANSFORM_HANGOVER" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform3" />
+		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5482" levels="1" name="Transform Penalty">
@@ -1062,14 +1129,17 @@
 		<set name="abnormalType" val="TRANSFORM_HANGOVER" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform3" />
+		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5483" levels="1" name="Counter Aggression">
 		<set name="effectPoint" val="-662" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5484" levels="1" name="Endurance Defense Up">
@@ -1081,6 +1151,7 @@
 		<set name="effectPoint" val="660" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5485" levels="1" name="Endurance Defense Up">
@@ -1092,6 +1163,7 @@
 		<set name="effectPoint" val="660" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5486" levels="1" name="Endurance Offense Up">
@@ -1103,12 +1175,14 @@
 		<set name="effectPoint" val="660" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5487" levels="1" name="Counter Delete Aggression">
 		<set name="effectPoint" val="-662" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5488" levels="1" name="Counter Critical Power Up">
@@ -1120,6 +1194,7 @@
 		<set name="effectPoint" val="660" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5489" levels="1" name="Counter Critical Rate Up">
@@ -1131,6 +1206,7 @@
 		<set name="effectPoint" val="660" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5490" levels="1" name="Weakened Life">
@@ -1143,6 +1219,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5491" levels="1" name="Decrease Bow/Crossbow Atk. Spd.">
@@ -1153,10 +1230,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtkSpd" val="0.5">
+				<mul stat="pAtkSpd" val="0.5">
 					<using kind="BOW" />
 				</mul>
-				<mul order="0x30" stat="pAtkSpd" val="0.79">
+				<mul stat="pAtkSpd" val="0.79">
 					<using kind="CROSSBOW" />
 				</mul>
 			</effect>
@@ -1176,6 +1253,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="17000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1196,6 +1274,7 @@
 		<set name="mpPerChanneling" val="15" />
 		<set name="operateType" val="CA5" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5494" levels="1" name="Gust">
@@ -1206,6 +1285,7 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="86" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ThrowUp" />
@@ -1229,6 +1309,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="2616" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -1252,6 +1333,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="607" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1278,6 +1360,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="2319" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1296,6 +1379,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="TargetMeProbability">
@@ -1317,6 +1401,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="200" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />

@@ -168,8 +168,8 @@
 			<player categoryType="ALL_WOLF_GROUP" />
 		</cond>
 		<for>
-			<add order="0x10" stat="mDef" val="58" />
-			<add order="0x10" stat="pDef" val="71" />
+			<add order="0" stat="mDef" val="58" />
+			<add order="0" stat="pDef" val="71" />
 		</for>
 	</item>
 	<item id="5217" type="Weapon" name="Wolf's Level 75 Weapon">
@@ -189,10 +189,10 @@
 			<player categoryType="ALL_WOLF_GROUP" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pAtk" val="194" />
-			<add order="0x10" stat="mAtk" val="136" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="277" />
+			<add stat="pAtk" val="194" />
+			<add stat="mAtk" val="136" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="277" />
 		</for>
 	</item>
 	<item id="5218" type="EtcItem" name="Mercenary Posting Ticket (Teleporter2)">
@@ -371,12 +371,12 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3045-17" />
 		<for>
-			<set order="0x08" stat="pAtk" val="259" />
-			<set order="0x08" stat="mAtk" val="107" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="259" />
+			<set stat="mAtk" val="107" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="5234" type="EtcItem" name="Mystery Potion">
@@ -1019,10 +1019,10 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="38" />
-			<set order="0x08" stat="mAtk" val="21" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="38" />
+			<set stat="mAtk" val="21" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="5285" type="Weapon" name="Heavy Sword">
@@ -1044,12 +1044,12 @@
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="49" />
-			<set order="0x08" stat="mAtk" val="26" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="49" />
+			<set stat="mAtk" val="26" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="5286" type="Weapon" name="Berserker Blade">
@@ -1071,12 +1071,12 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="190" />
-			<set order="0x08" stat="mAtk" val="83" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="190" />
+			<set stat="mAtk" val="83" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="5287" type="Armor" name="Sealed Dark Crystal breastplate">
@@ -1095,8 +1095,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="171" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="171" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="5288" type="Armor" name="Sealed Dark Crystal Gaiters">
@@ -1115,8 +1115,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="107" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="107" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="5289" type="Armor" name="Sealed Dark Crystal Helmet">
@@ -1131,8 +1131,8 @@
 		<set name="price" val="1336000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="69" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="69" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="5290" type="Armor" name="Sealed Dark Crystal Gloves">
@@ -1147,8 +1147,8 @@
 		<set name="price" val="890000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="46" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="46" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="5291" type="Armor" name="Sealed Dark Crystal Boots">
@@ -1163,8 +1163,8 @@
 		<set name="price" val="890000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="46" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="46" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="5292" type="Armor" name="Sealed Dark Crystal Shield">
@@ -1182,10 +1182,10 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="243" />
-			<enchant val="0" order="0x0C" stat="sDef" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="243" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 	<item id="5293" type="Armor" name="Sealed Tallum Plate Armor">
@@ -1204,8 +1204,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="278" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="278" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="5294" type="Armor" name="Sealed Tallum Helmet">
@@ -1220,8 +1220,8 @@
 		<set name="price" val="1336000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="69" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="69" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="5295" type="Armor" name="Sealed Tallum Gloves">
@@ -1236,8 +1236,8 @@
 		<set name="price" val="890000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="46" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="46" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="5296" type="Armor" name="Sealed Tallum Boots">
@@ -1252,8 +1252,8 @@
 		<set name="price" val="890000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="46" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="46" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="5297" type="Armor" name="Sealed Dark Crystal Leather Armor">
@@ -1269,8 +1269,8 @@
 		<set name="price" val="2671000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="128" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="128" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="5298" type="Armor" name="Sealed Dark Crystal Leggings">
@@ -1286,8 +1286,8 @@
 		<set name="price" val="1670000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="80" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="80" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="5299" type="Armor" name="Sealed Gloves of Underworld">
@@ -1302,8 +1302,8 @@
 		<set name="price" val="890000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="45" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="45" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 </list>

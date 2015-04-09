@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,10 +18,9 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.datatables.ExperienceTable;
-import com.l2jserver.gameserver.datatables.NpcData;
+import com.l2jserver.gameserver.data.xml.impl.ExperienceData;
+import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.enums.Race;
-import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2ServitorInstance;
@@ -75,7 +74,7 @@ public final class Summon extends AbstractEffect
 		
 		final L2PcInstance player = info.getEffected().getActingPlayer();
 		final L2NpcTemplate template = NpcData.getInstance().getTemplate(_npcId);
-		final L2ServitorInstance summon = new L2ServitorInstance(IdFactory.getInstance().getNextId(), template, player);
+		final L2ServitorInstance summon = new L2ServitorInstance(template, player);
 		final int consumeItemInterval = (_consumeItemInterval > 0 ? _consumeItemInterval : (template.getRace() != Race.SIEGE_WEAPON ? 240 : 60)) * 1000;
 		
 		summon.setName(template.getName());
@@ -86,14 +85,14 @@ public final class Summon extends AbstractEffect
 		summon.setItemConsume(_consumeItem);
 		summon.setItemConsumeInterval(consumeItemInterval);
 		
-		if (summon.getLevel() >= ExperienceTable.getInstance().getMaxPetLevel())
+		if (summon.getLevel() >= ExperienceData.getInstance().getMaxPetLevel())
 		{
-			summon.getStat().setExp(ExperienceTable.getInstance().getExpForLevel(ExperienceTable.getInstance().getMaxPetLevel() - 1));
-			_log.warning(Summon.class.getSimpleName() + ": (" + summon.getName() + ") NpcID: " + summon.getId() + " has a level above " + ExperienceTable.getInstance().getMaxPetLevel() + ". Please rectify.");
+			summon.getStat().setExp(ExperienceData.getInstance().getExpForLevel(ExperienceData.getInstance().getMaxPetLevel() - 1));
+			_log.warning(Summon.class.getSimpleName() + ": (" + summon.getName() + ") NpcID: " + summon.getId() + " has a level above " + ExperienceData.getInstance().getMaxPetLevel() + ". Please rectify.");
 		}
 		else
 		{
-			summon.getStat().setExp(ExperienceTable.getInstance().getExpForLevel(summon.getLevel() % ExperienceTable.getInstance().getMaxPetLevel()));
+			summon.getStat().setExp(ExperienceData.getInstance().getExpForLevel(summon.getLevel() % ExperienceData.getInstance().getMaxPetLevel()));
 		}
 		
 		summon.setCurrentHp(summon.getMaxHp());

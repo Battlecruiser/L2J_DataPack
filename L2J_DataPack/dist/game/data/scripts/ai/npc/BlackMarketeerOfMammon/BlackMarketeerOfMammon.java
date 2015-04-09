@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -57,13 +57,13 @@ public final class BlackMarketeerOfMammon extends AbstractNpcAI
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState qs = player.getQuestState(getName());
 		if ("exchange".equals(event))
 		{
 			if (exchangeAvailable())
 			{
 				if (player.getLevel() >= MIN_LEVEL)
 				{
+					final QuestState qs = getQuestState(player, true);
 					if (!qs.isNowAvailable())
 					{
 						htmltext = "31092-03.html";

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -170,7 +170,7 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 					giveItems(player, ELMOREDEN_HOLY_WATER, 1);
 					giveItems(player, SACRED_SWORD_OF_EINHASAD, 1);
 					st.setCond(4, true);
-					player.sendPacket(SystemMessageId.USING_EINHASAD_HOLY_SWORD_DEFEAT_LILIMS);
+					player.sendPacket(SystemMessageId.BY_USING_THE_SKILL_OF_EINHASAD_S_HOLY_SWORD_DEFEAT_THE_EVIL_LILIMS);
 					player.sendPacket(SystemMessageId.USING_EINHASAD_HOLY_WATER_TO_OPEN_DOOR);
 					htmltext = event;
 				}
@@ -331,7 +331,7 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 										htmltext = "32586-09.html";
 										giveItems(player, SACRED_SWORD_OF_EINHASAD, 1);
 									}
-									player.sendPacket(SystemMessageId.USING_EINHASAD_HOLY_SWORD_DEFEAT_LILIMS);
+									player.sendPacket(SystemMessageId.BY_USING_THE_SKILL_OF_EINHASAD_S_HOLY_SWORD_DEFEAT_THE_EVIL_LILIMS);
 									player.sendPacket(SystemMessageId.USING_EINHASAD_HOLY_WATER_TO_OPEN_DOOR);
 								}
 								else

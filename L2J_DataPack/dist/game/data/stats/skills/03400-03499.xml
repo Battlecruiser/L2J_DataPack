@@ -52,6 +52,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<cond msgId="113" addName="1">
@@ -65,6 +66,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1200000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="3406" levels="1" name="Weight Decrease Ring">
@@ -74,7 +76,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="weightPenalty" val="9000" />
+				<add stat="weightPenalty" val="9000" />
 			</effect>
 		</for>
 	</skill>
@@ -90,10 +92,11 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SilentMove">
-				<mul order="0x30" stat="runSpd" val="0.6" />
+				<mul stat="runSpd" val="0.6" />
 			</effect>
 		</for>
 	</skill>
@@ -105,6 +108,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="60000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -131,6 +135,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="300000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="PC_BODY" />
 		<cond>
 			<player canResurrect="true" />
@@ -153,10 +158,11 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="reflectDam" val="10" />
+				<add stat="reflectDam" val="10" />
 			</effect>
 		</for>
 	</skill>
@@ -167,11 +173,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="rCrit" val="109.2" />
-				<mul order="0x30" stat="maxHp" val="1.1" />
-				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+				<add stat="rCrit" val="109.2" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="pvpPhysDmg" val="1.05" />
+				<mul stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul stat="pvpMagicalDmg" val="1.05" />
 			</effect>
 		</for>
 	</skill>
@@ -183,9 +189,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pDef" val="1.046" /> <!-- P. Def +4.6% -->
-				<add order="0x40" stat="maxHp" val="418" /> <!-- MaxHP +418 -->
-				<add order="0x40" stat="darkRes" val="6" /> <!-- Darkness Resistance +6 -->
+				<mul stat="pDef" val="1.046" /> <!-- P. Def +4.6% -->
+				<add stat="maxHp" val="418" /> <!-- MaxHP +418 -->
+				<add stat="darkRes" val="6" /> <!-- Darkness Resistance +6 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -198,10 +204,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="rEvas" val="1.72" /> <!-- Evacion +1.72 -->
-				<add order="0x40" stat="accCombat" val="1.72" /> <!-- Accuracy +1.72 -->
-				<add order="0x40" stat="maxHp" val="418" /> <!-- MaxHP +418 -->
-				<add order="0x40" stat="darkRes" val="6" /> <!-- Darkness Resistance +6 -->
+				<add stat="rEvas" val="1.72" /> <!-- Evacion +1.72 -->
+				<add stat="accCombat" val="1.72" /> <!-- Accuracy +1.72 -->
+				<add stat="maxHp" val="418" /> <!-- MaxHP +418 -->
+				<add stat="darkRes" val="6" /> <!-- Darkness Resistance +6 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -214,10 +220,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.054" /> <!-- P. Atk. +5.4% -->
-				<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 Effect -->
-				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
-				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" /> <!-- MP consumption of the active skill is decreased -5% -->
+				<mul stat="pAtk" val="1.054" /> <!-- P. Atk. +5.4% -->
+				<add stat="maxHp" val="492" /> <!-- Max HP +492 Effect -->
+				<add stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
+				<mul stat="PhysicalMpConsumeRate" val="0.95" /> <!-- MP consumption of the active skill is decreased -5% -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -230,11 +236,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.054" /> <!-- P. Atk +5.4% -->
-				<add order="0x40" stat="maxHp" val="492" /> <!-- MaxHP +492 -->
-				<add order="0x40" stat="rCrit" val="24.6" /> <!-- Critical Damage Chance +24.6 -->
-				<add order="0x40" stat="cAtkAdd" val="234" /> <!-- Critical Damage +234 -->
-				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<mul stat="pAtk" val="1.054" /> <!-- P. Atk +5.4% -->
+				<add stat="maxHp" val="492" /> <!-- MaxHP +492 -->
+				<add stat="rCrit" val="24.6" /> <!-- Critical Damage Chance +24.6 -->
+				<add stat="cAtkAdd" val="234" /> <!-- Critical Damage +234 -->
+				<add stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -247,9 +253,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mAtkSpd" val="1.12" /> <!-- Casting Spd. +12% -->
-				<add order="0x40" stat="maxMp" val="257" /> <!-- Max MP +257 -->
-				<add order="0x40" stat="darkRes" val="6" /> <!-- Darkness Resistance +6 -->
+				<mul stat="mAtkSpd" val="1.12" /> <!-- Casting Spd. +12% -->
+				<add stat="maxMp" val="257" /> <!-- Max MP +257 -->
+				<add stat="darkRes" val="6" /> <!-- Darkness Resistance +6 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -263,7 +269,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="rShld" val="1.05" />
+				<mul stat="rShld" val="1.05" />
 			</effect>
 		</for>
 	</skill>
@@ -275,6 +281,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<cond>
 			<player canTransform="true" />
@@ -299,11 +306,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtkSpd" val="1.054" /> <!-- increase Atk. Spd. +5.4% -->
-				<mul order="0x30" stat="pAtk" val="1.0266" /> <!-- Increase P. Atk. +2.66% -->
-				<mul order="0x30" stat="pDef" val="1.0266" /> <!-- Increase P. Def. +2.66% -->
-				<add order="0x40" stat="maxHp" val="492" /> <!-- MaxHP +492 -->
-				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<mul stat="pAtkSpd" val="1.054" /> <!-- increase Atk. Spd. +5.4% -->
+				<mul stat="pAtk" val="1.0266" /> <!-- Increase P. Atk. +2.66% -->
+				<mul stat="pDef" val="1.0266" /> <!-- Increase P. Def. +2.66% -->
+				<add stat="maxHp" val="492" /> <!-- MaxHP +492 -->
+				<add stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -314,6 +321,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="3422" levels="1" name="Wolf Dismount">
@@ -322,6 +330,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="3423" levels="1" name="Little Angel Agathion - Summon (or Release)">
@@ -331,6 +340,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -345,6 +355,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -359,6 +370,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion">
@@ -371,13 +383,12 @@
 		<!-- Rapier +4 Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="true" />
 				<param minDamage="1" chance="5" />
-				<param skillId="5547" skillLevel="1" />
+				<param skillId="5547" skillLevel="1" /> <!-- Maximum Ability -->
 				<param targetType="PARTY" />
 				<param allowWeapons="ALL" />
 			</effect>
@@ -391,20 +402,20 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxHp" val="1.25" /> <!-- HP +25% -->
-				<mul order="0x30" stat="maxMp" val="1.3" /> <!-- MP +30% -->
-				<mul order="0x30" stat="maxCp" val="1.5" /> <!-- CP +50% -->
+				<mul stat="maxHp" val="1.25" /> <!-- HP +25% -->
+				<mul stat="maxMp" val="1.3" /> <!-- MP +30% -->
+				<mul stat="maxCp" val="1.5" /> <!-- CP +50% -->
 				<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
-				<mul order="0x30" stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<mul order="0x30" stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<add order="0x40" stat="reflectDam" val="9" /> <!-- Reflect Damage 9% -->
+				<mul stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<mul stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<mul stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<add stat="reflectDam" val="9" /> <!-- Reflect Damage 9% -->
 			</effect>			
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="true" />
 				<param minDamage="1" chance="5" />
-				<param skillId="5547" skillLevel="1" />
+				<param skillId="5547" skillLevel="1" /> <!-- Maximum Ability -->
 				<param targetType="PARTY" />
 				<param allowWeapons="ALL" />
 			</effect>
@@ -424,11 +435,12 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.2" />
-				<mul order="0x30" stat="pAtkSpd" val="1.1" />
+				<mul stat="pAtk" val="1.2" />
+				<mul stat="pAtkSpd" val="1.1" />
 			</effect>
 		</for>
 	</skill>
@@ -440,6 +452,7 @@
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1800000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="HealPercent">
@@ -464,10 +477,11 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="darkRes" val="50" />
+				<add stat="darkRes" val="50" />
 			</effect>
 		</for>
 	</skill>
@@ -485,10 +499,11 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="windRes" val="50" />
+				<add stat="windRes" val="50" />
 			</effect>
 		</for>
 	</skill>
@@ -506,10 +521,11 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="waterRes" val="50" />
+				<add stat="waterRes" val="50" />
 			</effect>
 		</for>
 	</skill>
@@ -527,10 +543,11 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="fireRes" val="50" />
+				<add stat="fireRes" val="50" />
 			</effect>
 		</for>
 	</skill>
@@ -548,10 +565,11 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="earthRes" val="50" />
+				<add stat="earthRes" val="50" />
 			</effect>
 		</for>
 	</skill>
@@ -569,10 +587,11 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="holyRes" val="50" />
+				<add stat="holyRes" val="50" />
 			</effect>
 		</for>
 	</skill>
@@ -588,6 +607,7 @@
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="200" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -607,11 +627,12 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="mCritRate" val="4" />
-				<mul order="0x30" stat="mAtk" val="1.55" />
+				<add stat="mCritRate" val="4" />
+				<mul stat="mAtk" val="1.55" />
 			</effect>
 		</for>
 	</skill>
@@ -629,10 +650,11 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="healEffect" val="1000" />
+				<add stat="healEffect" val="1000" />
 			</effect>
 		</for>
 	</skill>
@@ -642,7 +664,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxHp" val="118" />
+				<add stat="maxHp" val="118" />
 			</effect>
 		</for>
 	</skill>
@@ -652,7 +674,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxMp" val="51" />
+				<add stat="maxMp" val="51" />
 			</effect>
 		</for>
 	</skill>
@@ -662,7 +684,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxCp" val="354" />
+				<add stat="maxCp" val="354" />
 			</effect>
 		</for>
 	</skill>
@@ -672,8 +694,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxHp" val="59" />
-				<add order="0x40" stat="maxMp" val="26" />
+				<add stat="maxHp" val="59" />
+				<add stat="maxMp" val="26" />
 			</effect>
 		</for>
 	</skill>
@@ -683,8 +705,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxHp" val="59" />
-				<add order="0x40" stat="maxCp" val="117" />
+				<add stat="maxHp" val="59" />
+				<add stat="maxCp" val="117" />
 			</effect>
 		</for>
 	</skill>
@@ -694,8 +716,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxMp" val="26" />
-				<add order="0x40" stat="maxCp" val="117" />
+				<add stat="maxMp" val="26" />
+				<add stat="maxCp" val="117" />
 			</effect>
 		</for>
 	</skill>
@@ -705,7 +727,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxHp" val="147" />
+				<add stat="maxHp" val="147" />
 			</effect>
 		</for>
 	</skill>
@@ -715,7 +737,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxMp" val="72" />
+				<add stat="maxMp" val="72" />
 			</effect>
 		</for>
 	</skill>
@@ -725,7 +747,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxCp" val="441" />
+				<add stat="maxCp" val="441" />
 			</effect>
 		</for>
 	</skill>
@@ -735,8 +757,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxHp" val="74" />
-				<add order="0x40" stat="maxMp" val="36" />
+				<add stat="maxHp" val="74" />
+				<add stat="maxMp" val="36" />
 			</effect>
 		</for>
 	</skill>
@@ -746,8 +768,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxHp" val="74" />
-				<add order="0x40" stat="maxCp" val="222" />
+				<add stat="maxHp" val="74" />
+				<add stat="maxCp" val="222" />
 			</effect>
 		</for>
 	</skill>
@@ -757,8 +779,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxMp" val="36" />
-				<add order="0x40" stat="maxCp" val="222" />
+				<add stat="maxMp" val="36" />
+				<add stat="maxCp" val="222" />
 			</effect>
 		</for>
 	</skill>
@@ -768,7 +790,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxHp" val="172" />
+				<add stat="maxHp" val="172" />
 			</effect>
 		</for>
 	</skill>
@@ -778,7 +800,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxMp" val="85" />
+				<add stat="maxMp" val="85" />
 			</effect>
 		</for>
 	</skill>
@@ -788,7 +810,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxCp" val="516" />
+				<add stat="maxCp" val="516" />
 			</effect>
 		</for>
 	</skill>
@@ -798,8 +820,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxHp" val="86" />
-				<add order="0x40" stat="maxMp" val="43" />
+				<add stat="maxHp" val="86" />
+				<add stat="maxMp" val="43" />
 			</effect>
 		</for>
 	</skill>
@@ -809,8 +831,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxHp" val="86" />
-				<add order="0x40" stat="maxCp" val="258" />
+				<add stat="maxHp" val="86" />
+				<add stat="maxCp" val="258" />
 			</effect>
 		</for>
 	</skill>
@@ -820,8 +842,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxMp" val="43" />
-				<add order="0x40" stat="maxCp" val="258" />
+				<add stat="maxMp" val="43" />
+				<add stat="maxCp" val="258" />
 			</effect>
 		</for>
 	</skill>
@@ -831,7 +853,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxHp" val="224" />
+				<add stat="maxHp" val="224" />
 			</effect>
 		</for>
 	</skill>
@@ -841,7 +863,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxMp" val="111" />
+				<add stat="maxMp" val="111" />
 			</effect>
 		</for>
 	</skill>
@@ -851,7 +873,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxCp" val="672" />
+				<add stat="maxCp" val="672" />
 			</effect>
 		</for>
 	</skill>
@@ -861,8 +883,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxHp" val="112" />
-				<add order="0x40" stat="maxMp" val="56" />
+				<add stat="maxHp" val="112" />
+				<add stat="maxMp" val="56" />
 			</effect>
 		</for>
 	</skill>
@@ -872,8 +894,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxHp" val="112" />
-				<add order="0x40" stat="maxCp" val="336" />
+				<add stat="maxHp" val="112" />
+				<add stat="maxCp" val="336" />
 			</effect>
 		</for>
 	</skill>
@@ -883,8 +905,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxMp" val="56" />
-				<add order="0x40" stat="maxCp" val="336" />
+				<add stat="maxMp" val="56" />
+				<add stat="maxCp" val="336" />
 			</effect>
 		</for>
 	</skill>
@@ -894,7 +916,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxHp" val="135" />
+				<add stat="maxHp" val="135" />
 			</effect>
 		</for>
 	</skill>
@@ -904,7 +926,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxMp" val="66" />
+				<add stat="maxMp" val="66" />
 			</effect>
 		</for>
 	</skill>
@@ -914,7 +936,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxCp" val="405" />
+				<add stat="maxCp" val="405" />
 			</effect>
 		</for>
 	</skill>
@@ -924,8 +946,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxHp" val="68" />
-				<add order="0x40" stat="maxMp" val="33" />
+				<add stat="maxHp" val="68" />
+				<add stat="maxMp" val="33" />
 			</effect>
 		</for>
 	</skill>
@@ -935,8 +957,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxHp" val="68" />
-				<add order="0x40" stat="maxCp" val="203" />
+				<add stat="maxHp" val="68" />
+				<add stat="maxCp" val="203" />
 			</effect>
 		</for>
 	</skill>
@@ -946,8 +968,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxMp" val="33" />
-				<add order="0x40" stat="maxCp" val="203" />
+				<add stat="maxMp" val="33" />
+				<add stat="maxCp" val="203" />
 			</effect>
 		</for>
 	</skill>
@@ -957,7 +979,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxHp" val="160" />
+				<add stat="maxHp" val="160" />
 			</effect>
 		</for>
 	</skill>
@@ -967,7 +989,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxMp" val="78" />
+				<add stat="maxMp" val="78" />
 			</effect>
 		</for>
 	</skill>
@@ -977,7 +999,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxCp" val="480" />
+				<add stat="maxCp" val="480" />
 			</effect>
 		</for>
 	</skill>
@@ -987,8 +1009,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxHp" val="80" />
-				<add order="0x40" stat="maxMp" val="39" />
+				<add stat="maxHp" val="80" />
+				<add stat="maxMp" val="39" />
 			</effect>
 		</for>
 	</skill>
@@ -998,8 +1020,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxHp" val="80" />
-				<add order="0x40" stat="maxCp" val="240" />
+				<add stat="maxHp" val="80" />
+				<add stat="maxCp" val="240" />
 			</effect>
 		</for>
 	</skill>
@@ -1009,8 +1031,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxMp" val="39" />
-				<add order="0x40" stat="maxCp" val="240" />
+				<add stat="maxMp" val="39" />
+				<add stat="maxCp" val="240" />
 			</effect>
 		</for>
 	</skill>
@@ -1020,7 +1042,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxHp" val="186" />
+				<add stat="maxHp" val="186" />
 			</effect>
 		</for>
 	</skill>
@@ -1030,7 +1052,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxMp" val="92" />
+				<add stat="maxMp" val="92" />
 			</effect>
 		</for>
 	</skill>
@@ -1040,7 +1062,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxCp" val="564" />
+				<add stat="maxCp" val="564" />
 			</effect>
 		</for>
 	</skill>
@@ -1050,8 +1072,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxHp" val="93" />
-				<add order="0x40" stat="maxMp" val="46" />
+				<add stat="maxHp" val="93" />
+				<add stat="maxMp" val="46" />
 			</effect>
 		</for>
 	</skill>
@@ -1061,8 +1083,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxHp" val="93" />
-				<add order="0x40" stat="maxCp" val="282" />
+				<add stat="maxHp" val="93" />
+				<add stat="maxCp" val="282" />
 			</effect>
 		</for>
 	</skill>
@@ -1072,8 +1094,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxMp" val="46" />
-				<add order="0x40" stat="maxCp" val="282" />
+				<add stat="maxMp" val="46" />
+				<add stat="maxCp" val="282" />
 			</effect>
 		</for>
 	</skill>
@@ -1083,7 +1105,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxHp" val="246" />
+				<add stat="maxHp" val="246" />
 			</effect>
 		</for>
 	</skill>
@@ -1093,7 +1115,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxMp" val="122" />
+				<add stat="maxMp" val="122" />
 			</effect>
 		</for>
 	</skill>
@@ -1103,7 +1125,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxCp" val="744" />
+				<add stat="maxCp" val="744" />
 			</effect>
 		</for>
 	</skill>
@@ -1113,8 +1135,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxHp" val="123" />
-				<add order="0x40" stat="maxMp" val="61" />
+				<add stat="maxHp" val="123" />
+				<add stat="maxMp" val="61" />
 			</effect>
 		</for>
 	</skill>
@@ -1124,8 +1146,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxHp" val="123" />
-				<add order="0x40" stat="maxCp" val="372" />
+				<add stat="maxHp" val="123" />
+				<add stat="maxCp" val="372" />
 			</effect>
 		</for>
 	</skill>
@@ -1135,8 +1157,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxMp" val="61" />
-				<add order="0x40" stat="maxCp" val="372" />
+				<add stat="maxMp" val="61" />
+				<add stat="maxCp" val="372" />
 			</effect>
 		</for>
 	</skill>
@@ -1154,10 +1176,11 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="pAtk" val="9.4" />
+				<add stat="pAtk" val="9.4" />
 			</effect>
 		</for>
 	</skill>
@@ -1175,10 +1198,11 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="sDef" val="63" />
+				<add stat="sDef" val="63" />
 			</effect>
 		</for>
 	</skill>
@@ -1190,7 +1214,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="mAtk" val="11.7" />
+				<add stat="mAtk" val="11.7" />
 			</effect>
 		</for>
 	</skill>
@@ -1202,7 +1226,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="pDef" val="18.3" />
+				<add stat="pDef" val="18.3" />
 			</effect>
 		</for>
 	</skill>
@@ -1214,7 +1238,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="rEvas" val="1.1" />
+				<add stat="rEvas" val="1.1" />
 			</effect>
 		</for>
 	</skill>
@@ -1226,7 +1250,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="runSpd" val="3" />
+				<add stat="runSpd" val="3" />
 			</effect>
 		</for>
 	</skill>
@@ -1238,7 +1262,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="regHp" val="1.01" />
+				<mul stat="regHp" val="1.01" />
 			</effect>
 		</for>
 	</skill>
@@ -1250,7 +1274,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="regCp" val="1.01" />
+				<mul stat="regCp" val="1.01" />
 			</effect>
 		</for>
 	</skill>
@@ -1262,7 +1286,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="healEffect" val="8" />
+				<add stat="healEffect" val="8" />
 			</effect>
 		</for>
 	</skill>
@@ -1277,6 +1301,7 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="300000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Heal">
@@ -1295,7 +1320,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="regMp" val="1.01" />
+				<mul stat="regMp" val="1.01" />
 			</effect>
 		</for>
 	</skill>
@@ -1307,7 +1332,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="weightLimit" val="1.2" />
+				<mul stat="weightLimit" val="1.2" />
 			</effect>
 		</for>
 	</skill>
@@ -1318,6 +1343,7 @@
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="magicLvl" val="56" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="DispelBySlot">

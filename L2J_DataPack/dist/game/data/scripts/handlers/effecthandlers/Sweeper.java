@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -17,6 +17,8 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.effecthandlers;
+
+import java.util.Collection;
 
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
@@ -63,21 +65,19 @@ public final class Sweeper extends AbstractEffect
 			return;
 		}
 		
-		final ItemHolder[] items = monster.takeSweep();
-		if ((items == null) || (items.length == 0))
+		final Collection<ItemHolder> items = monster.takeSweep();
+		if (items != null)
 		{
-			return;
-		}
-		
-		for (ItemHolder item : items)
-		{
-			if (player.isInParty())
+			for (ItemHolder item : items)
 			{
-				player.getParty().distributeItem(player, item, true, monster);
-			}
-			else
-			{
-				player.addItem("Sweeper", item, info.getEffected(), true);
+				if (player.isInParty())
+				{
+					player.getParty().distributeItem(player, item, true, monster);
+				}
+				else
+				{
+					player.addItem("Sweeper", item, info.getEffected(), true);
+				}
 			}
 		}
 	}

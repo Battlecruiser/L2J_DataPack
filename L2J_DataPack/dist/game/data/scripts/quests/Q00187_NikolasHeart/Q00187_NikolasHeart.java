@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,11 +18,12 @@
  */
 package quests.Q00187_NikolasHeart;
 
+import quests.Q00185_NikolasCooperation.Q00185_NikolasCooperation;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * Nikola's Heart (187)
@@ -39,7 +40,7 @@ public final class Q00187_NikolasHeart extends Quest
 	private static final int METALLOGRAPH = 10368;
 	// Misc
 	private static final int MIN_LEVEL = 41;
-	private static final int MIN_LEVEL_FOR_EXP_SP = 47;
+	private static final int MAX_LEVEL_FOR_EXP_SP = 47;
 	
 	public Q00187_NikolasHeart()
 	{
@@ -52,50 +53,63 @@ public final class Q00187_NikolasHeart extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
+		
 		String htmltext = null;
 		switch (event)
 		{
-			case "30621-02.html":
-			case "30512-02.html":
-			{
-				htmltext = event;
-				break;
-			}
 			case "30673-03.htm":
 			{
-				if (st.isCreated())
+				if (qs.isCreated())
 				{
-					st.startQuest();
-					st.takeItems(LORAINES_CERTIFICATE, -1);
-					st.giveItems(METALLOGRAPH, 1);
+					qs.startQuest();
+					qs.setMemoState(1);
+					giveItems(player, METALLOGRAPH, 1);
+					takeItems(player, LORAINES_CERTIFICATE, -1);
 					htmltext = event;
 				}
 				break;
 			}
-			case "30621-03.html":
+			case "30512-02.html":
 			{
-				if (st.isCond(1))
+				if (qs.isMemoState(2))
 				{
-					st.setCond(2, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "30512-03.html":
 			{
-				if (st.isCond(2))
+				if (qs.isMemoState(2))
 				{
-					st.giveAdena(93383, true);
-					if (player.getLevel() < MIN_LEVEL_FOR_EXP_SP)
+					giveAdena(player, 93383, true);
+					if (player.getLevel() < MAX_LEVEL_FOR_EXP_SP)
 					{
-						st.addExpAndSp(285935, 18711);
+						addExpAndSp(player, 285935, 18711);
 					}
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
+					htmltext = event;
+				}
+				break;
+			}
+			case "30621-02.html":
+			{
+				if (qs.isMemoState(1))
+				{
+					htmltext = event;
+				}
+				break;
+			}
+			case "30621-03.html":
+			{
+				if (qs.isMemoState(1))
+				{
+					qs.setMemoState(2);
+					qs.setCond(2, true);
 					htmltext = event;
 				}
 				break;
@@ -107,59 +121,59 @@ public final class Q00187_NikolasHeart extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
+		final QuestState qs = getQuestState(player, true);
+		final int memoState = qs.getMemoState();
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
+		if (qs.isCreated())
 		{
-			return htmltext;
+			if (npc.getId() == RESEARCHER_LORAIN)
+			{
+				final QuestState q185 = player.getQuestState(Q00185_NikolasCooperation.class.getSimpleName());
+				if ((q185 != null) && q185.isCompleted() && hasQuestItems(player, LORAINES_CERTIFICATE))
+				{
+					htmltext = player.getLevel() >= MIN_LEVEL ? "30673-01.htm" : "30673-02.htm";
+				}
+			}
 		}
-		
-		switch (npc.getId())
+		else if (qs.isStarted())
 		{
-			case RESEARCHER_LORAIN:
+			switch (npc.getId())
 			{
-				switch (st.getState())
+				case RESEARCHER_LORAIN:
 				{
-					case State.CREATED:
+					if (memoState >= 1)
 					{
-						final QuestState qs = player.getQuestState("185_Nikolas_Cooperation_Consideration");
-						if ((qs != null) && qs.isCompleted() && st.hasQuestItems(LORAINES_CERTIFICATE))
-						{
-							htmltext = player.getLevel() < MIN_LEVEL ? "30673-02.htm" : "30673-01.htm";
-						}
-						break;
+						htmltext = "30673-04.html";
 					}
-					case State.STARTED:
-					{
-						if (st.getCond() >= 1)
-						{
-							htmltext = "30673-04.html";
-						}
-						break;
-					}
-					case State.COMPLETED:
-					{
-						htmltext = getAlreadyCompletedMsg(player);
-						break;
-					}
+					break;
 				}
-				break;
+				case HEAD_BLACKSMITH_KUSTO:
+				{
+					if (memoState == 2)
+					{
+						htmltext = "30512-01.html";
+					}
+					break;
+				}
+				case MAESTRO_NIKOLA:
+				{
+					if (memoState == 1)
+					{
+						htmltext = "30621-01.html";
+					}
+					else if (memoState == 2)
+					{
+						htmltext = "30621-04.html";
+					}
+					break;
+				}
 			}
-			case MAESTRO_NIKOLA:
+		}
+		else if (qs.isCompleted())
+		{
+			if (npc.getId() == RESEARCHER_LORAIN)
 			{
-				if (st.isStarted())
-				{
-					htmltext = st.isCond(1) ? "30621-01.html" : "30621-04.html";
-				}
-				break;
-			}
-			case HEAD_BLACKSMITH_KUSTO:
-			{
-				if (st.isCond(2) && st.hasQuestItems(METALLOGRAPH))
-				{
-					htmltext = "30512-01.html";
-				}
-				break;
+				htmltext = getAlreadyCompletedMsg(player);
 			}
 		}
 		return htmltext;

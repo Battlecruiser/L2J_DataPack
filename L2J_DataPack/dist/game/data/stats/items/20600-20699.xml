@@ -19,10 +19,10 @@
 		<set name="item_skill" val="21089-1" />
 		<set name="time" val="10080" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="1" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="1" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="20601" type="Armor" name="Anniversary Hat - Soul of Phoenix - 7-day limited period">
@@ -602,10 +602,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="92" />
-			<set order="0x08" stat="mAtk" val="54" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="92" />
+			<set stat="mAtk" val="54" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="20640" type="Weapon" name="Common Item - Light Crossbow">
@@ -629,11 +629,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="191" />
-			<set order="0x08" stat="mAtk" val="54" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="191" />
+			<set stat="mAtk" val="54" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
 	<item id="20641" type="Weapon" name="Common Item - Knight's Sword*Elven Sword">
@@ -655,10 +655,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="107" />
-			<set order="0x08" stat="mAtk" val="51" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="107" />
+			<set stat="mAtk" val="51" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="20642" type="Armor" name="Common Item - Mithril Gloves">
@@ -674,7 +674,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<add order="0x10" stat="pDef" val="29" />
+			<add order="0" stat="pDef" val="29" />
 		</for>
 	</item>
 	<item id="20643" type="Armor" name="Common Item - Plate Boots">
@@ -690,7 +690,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<add order="0x10" stat="pDef" val="29" />
+			<add order="0" stat="pDef" val="29" />
 		</for>
 	</item>
 	<item id="20644" type="Armor" name="Common Item - Plate Shield">
@@ -709,9 +709,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="154" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="154" />
 		</for>
 	</item>
 	<item id="20645" type="Armor" name="Common Item - Plate Helmet">
@@ -727,7 +727,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<add order="0x10" stat="pDef" val="44" />
+			<add order="0" stat="pDef" val="44" />
 		</for>
 	</item>
 	<item id="20646" type="Armor" name="Common Item - Plate Gaiters">
@@ -747,7 +747,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="70" />
+			<add order="0" stat="pDef" val="70" />
 		</for>
 	</item>
 	<item id="20647" type="Armor" name="Common Item - Half Plate Armor">
@@ -767,7 +767,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="111" />
+			<add order="0" stat="pDef" val="111" />
 		</for>
 	</item>
 	<item id="20648" type="Armor" name="Common Item - Salamander Skin Mail">
@@ -784,7 +784,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<add order="0x10" stat="pDef" val="136" />
+			<add order="0" stat="pDef" val="136" />
 		</for>
 	</item>
 	<item id="20649" type="Weapon" name="Common Item - Ghost Staff">
@@ -807,11 +807,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="90" />
-			<set order="0x08" stat="mAtk" val="79" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="90" />
+			<set stat="mAtk" val="79" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="20650" type="Armor" name="Common Item - Mithril Tunic">
@@ -831,8 +831,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="52" />
-			<add order="0x40" stat="maxMp" val="169" />
+			<add order="0" stat="pDef" val="52" />
+			<add stat="maxMp" val="169" />
 		</for>
 	</item>
 	<item id="20651" type="Armor" name="Common Item - Mithril Stockings">
@@ -852,8 +852,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="32" />
-			<add order="0x40" stat="maxMp" val="105" />
+			<add order="0" stat="pDef" val="32" />
+			<add stat="maxMp" val="105" />
 		</for>
 	</item>
 	<item id="20652" type="Armor" name="Common Item - Salamander Skin Boots">
@@ -869,7 +869,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<add order="0x10" stat="pDef" val="29" />
+			<add order="0" stat="pDef" val="29" />
 		</for>
 	</item>
 	<item id="20653" type="Armor" name="Common Item - Ogre Power Gauntlet">
@@ -885,7 +885,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<add order="0x10" stat="pDef" val="29" />
+			<add order="0" stat="pDef" val="29" />
 		</for>
 	</item>
 	<item id="20654" type="Armor" name="Agathion Seal Bracelet - Chon-chon">

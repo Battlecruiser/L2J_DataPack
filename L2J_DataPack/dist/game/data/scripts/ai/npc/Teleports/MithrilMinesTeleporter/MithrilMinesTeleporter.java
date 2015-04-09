@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -39,7 +39,7 @@ public final class MithrilMinesTeleporter extends AbstractNpcAI
 		new Location(175499, -181586, -904),
 		new Location(173462, -174011, 3480),
 		new Location(179299, -182831, -224),
-		new Location(178591, -184615, 360),
+		new Location(178591, -184615, -360),
 		new Location(175499, -181586, -904)
 	};
 	

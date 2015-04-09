@@ -57,7 +57,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="51" />
 		<for>
-			<add order="0x10" stat="mDef" val="15" />
+			<add order="0" stat="mDef" val="15" />
 		</for>
 	</item>
 	<item id="1507" type="Armor" name="Necklace of Valor">
@@ -69,7 +69,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="3600" />
 		<for>
-			<add order="0x10" stat="mDef" val="21" />
+			<add order="0" stat="mDef" val="21" />
 		</for>
 	</item>
 	<item id="1508" type="Armor" name="Ring of Raccoon">
@@ -81,7 +81,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="1800" />
 		<for>
-			<add order="0x10" stat="mDef" val="11" />
+			<add order="0" stat="mDef" val="11" />
 		</for>
 	</item>
 	<item id="1509" type="Armor" name="Ring of Firefly">
@@ -93,7 +93,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="1800" />
 		<for>
-			<add order="0x10" stat="mDef" val="11" />
+			<add order="0" stat="mDef" val="11" />
 		</for>
 	</item>
 	<item id="1510" type="Weapon" name="Butcher's Sword">
@@ -111,10 +111,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="13" />
-			<set order="0x08" stat="mAtk" val="10" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="13" />
+			<set stat="mAtk" val="10" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="1511" type="Weapon" name="Silversmith Hammer">
@@ -132,11 +132,11 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="13" />
-			<set order="0x08" stat="mAtk" val="10" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="13" />
+			<set stat="mAtk" val="10" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="1512" type="EtcItem" name="Spellbook: Confusion">

@@ -1,4 +1,4 @@
-There are SQL sequences that should not neccessarily be performed every time you
+There are SQL sequences that should not necessarily be performed every time you
 update your database structure. Rather, these queries should be executed once or
 from time to time. Essentially, an .sql file should appear under 'maintenance'
 instead of the old 'updates' folder provided that:

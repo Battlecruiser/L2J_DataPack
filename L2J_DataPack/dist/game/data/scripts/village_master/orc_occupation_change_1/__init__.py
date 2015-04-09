@@ -47,7 +47,7 @@ class Quest (JQuest) :
    npcId    = npc.getId()
    htmltext = default
    suffix = ''
-   st = player.getQuestState(qn)
+   st = self.getQuestState(player, False)
    if not st : return
    race     = player.getRace().ordinal()
    classid  = player.getClassId().getId()
@@ -75,7 +75,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onTalk (self,npc,player):
-   st = player.getQuestState(qn)
+   st = self.getQuestState(player, True)
    npcId = npc.getId()
    race    = player.getRace().ordinal()
    classId = player.getClassId()

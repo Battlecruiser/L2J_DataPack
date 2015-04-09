@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -23,7 +23,6 @@ import java.util.logging.Level;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.GeoData;
-import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -32,7 +31,7 @@ import com.l2jserver.gameserver.model.interfaces.ILocational;
 import com.l2jserver.util.Rnd;
 
 /**
- * @author FBIagent, janiko, FinalDestination, lion
+ * @author HorridoJoho, janiko, FinalDestination, lion
  */
 public final class AltarsOfSacrifice extends AbstractNpcAI
 {
@@ -56,7 +55,7 @@ public final class AltarsOfSacrifice extends AbstractNpcAI
 				throw new IllegalStateException();
 			}
 			
-			final L2Spawn spawn = new L2Spawn(NpcData.getInstance().getTemplate(_bossNpcIds[Rnd.get(_bossNpcIds.length)]));
+			final L2Spawn spawn = new L2Spawn(_bossNpcIds[Rnd.get(_bossNpcIds.length)]);
 			spawn.setAmount(1);
 			spawn.setHeading(Rnd.get(65536));
 			

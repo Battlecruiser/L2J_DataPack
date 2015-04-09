@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -65,7 +65,7 @@ public class Q00034_InSearchOfCloth extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -122,7 +122,7 @@ public class Q00034_InSearchOfCloth extends Quest
 		final L2PcInstance member = getRandomPartyMember(player, 4);
 		if ((member != null) && getRandomBoolean())
 		{
-			final QuestState st = member.getQuestState(getName());
+			final QuestState st = getQuestState(member, false);
 			st.giveItems(SPINNERET, 1);
 			if (st.getQuestItemsCount(SPINNERET) >= SPINNERET_COUNT)
 			{
@@ -140,7 +140,7 @@ public class Q00034_InSearchOfCloth extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, true);
 		if (st == null)
 		{
 			return htmltext;

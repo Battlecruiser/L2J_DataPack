@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -31,9 +31,8 @@ import java.util.logging.Logger;
 
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
-import com.l2jserver.gameserver.communitybbs.Manager.RegionBBSManager;
-import com.l2jserver.gameserver.datatables.CharNameTable;
-import com.l2jserver.gameserver.datatables.ClassListData;
+import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
+import com.l2jserver.gameserver.data.xml.impl.ClassListData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2World;
@@ -46,8 +45,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
 import com.l2jserver.gameserver.network.L2GameClient;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.communityserver.CommunityServerThread;
-import com.l2jserver.gameserver.network.communityserver.writepackets.WorldInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExVoteSystemInfo;
 import com.l2jserver.gameserver.network.serverpackets.GMViewItemList;
@@ -446,7 +443,6 @@ public class AdminEditChar implements IAdminCommandHandler
 				activeChar.sendMessage("Changed name to " + val);
 				player.sendMessage("Your name has been changed by a GM.");
 				player.broadcastUserInfo();
-				CommunityServerThread.getInstance().sendPacket(new WorldInfo(player, null, WorldInfo.TYPE_UPDATE_PLAYER_DATA));
 				
 				if (player.isInParty())
 				{
@@ -465,8 +461,6 @@ public class AdminEditChar implements IAdminCommandHandler
 				{
 					player.getClan().broadcastClanStatus();
 				}
-				
-				RegionBBSManager.getInstance().changeCommunityBoard();
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{ // Case of empty character name
@@ -1245,34 +1239,22 @@ public class AdminEditChar implements IAdminCommandHandler
 	 */
 	private void findCharactersPerAccount(L2PcInstance activeChar, String characterName) throws IllegalArgumentException
 	{
-		if (characterName.matches(Config.CNAME_TEMPLATE))
+		L2PcInstance player = L2World.getInstance().getPlayer(characterName);
+		if (player == null)
 		{
-			String account = null;
-			Map<Integer, String> chars;
-			L2PcInstance player = L2World.getInstance().getPlayer(characterName);
-			if (player == null)
-			{
-				throw new IllegalArgumentException("Player doesn't exist");
-			}
-			chars = player.getAccountChars();
-			account = player.getAccountName();
-			final StringBuilder replyMSG = new StringBuilder(chars.size() * 20);
-			final NpcHtmlMessage adminReply = new NpcHtmlMessage();
-			adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/accountinfo.htm");
-			for (String charname : chars.values())
-			{
-				StringUtil.append(replyMSG, charname, "<br1>");
-			}
-			
-			adminReply.replace("%characters%", replyMSG.toString());
-			adminReply.replace("%account%", account);
-			adminReply.replace("%player%", characterName);
-			activeChar.sendPacket(adminReply);
+			throw new IllegalArgumentException("Player doesn't exist");
 		}
-		else
-		{
-			throw new IllegalArgumentException("Malformed character name");
-		}
+		
+		final Map<Integer, String> chars = player.getAccountChars();
+		final StringBuilder replyMSG = new StringBuilder(chars.size() * 20);
+		chars.values().stream().forEachOrdered(name -> StringUtil.append(replyMSG, name, "<br1>"));
+		
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
+		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/accountinfo.htm");
+		adminReply.replace("%account%", player.getAccountName());
+		adminReply.replace("%player%", characterName);
+		adminReply.replace("%characters%", replyMSG.toString());
+		activeChar.sendPacket(adminReply);
 	}
 	
 	/**

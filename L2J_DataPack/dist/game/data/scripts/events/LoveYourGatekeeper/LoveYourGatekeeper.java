@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -23,8 +23,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.event.LongTimeEvent;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
-import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
@@ -38,11 +36,12 @@ public final class LoveYourGatekeeper extends LongTimeEvent
 	private static final int GATEKEEPER = 32477;
 	// Item
 	private static final int GATEKEEPER_TRANSFORMATION_STICK = 12814;
+	// Skills
+	private static SkillHolder TELEPORTER_TRANSFORM = new SkillHolder(5655, 1);
 	// Misc
 	private static final int HOURS = 24;
 	private static final int PRICE = 10000;
-	// Skills
-	private static SkillHolder TELEPORTER_TRANSFORM = new SkillHolder(5655, 1);
+	private static final String REUSE = LoveYourGatekeeper.class.getSimpleName() + "_reuse";
 	
 	private LoveYourGatekeeper()
 	{
@@ -55,27 +54,16 @@ public final class LoveYourGatekeeper extends LongTimeEvent
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return getNoQuestMsg(player);
-		}
-		
 		switch (event)
 		{
 			case "transform_stick":
 			{
 				if (player.getAdena() >= PRICE)
 				{
-					long _reuse = 0;
-					String _streuse = st.get("reuse");
-					if (_streuse != null)
+					final long reuse = player.getVariables().getLong(REUSE, 0);
+					if (reuse > System.currentTimeMillis())
 					{
-						_reuse = Long.parseLong(_streuse);
-					}
-					if (_reuse > System.currentTimeMillis())
-					{
-						final long remainingTime = (_reuse - System.currentTimeMillis()) / 1000;
+						final long remainingTime = (reuse - System.currentTimeMillis()) / 1000;
 						final int hours = (int) (remainingTime / 3600);
 						final int minutes = (int) ((remainingTime % 3600) / 60);
 						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.AVAILABLE_AFTER_S1_S2_HOURS_S3_MINUTES);
@@ -86,12 +74,10 @@ public final class LoveYourGatekeeper extends LongTimeEvent
 					}
 					else
 					{
-						st.takeItems(Inventory.ADENA_ID, PRICE);
-						st.giveItems(GATEKEEPER_TRANSFORMATION_STICK, 1);
-						st.setState(State.STARTED);
-						st.set("reuse", String.valueOf(System.currentTimeMillis() + (HOURS * 3600000)));
+						takeItems(player, Inventory.ADENA_ID, PRICE);
+						giveItems(player, GATEKEEPER_TRANSFORMATION_STICK, 1);
+						player.getVariables().set(REUSE, System.currentTimeMillis() + (HOURS * 3600000));
 					}
-					
 				}
 				else
 				{
@@ -101,11 +87,10 @@ public final class LoveYourGatekeeper extends LongTimeEvent
 			}
 			case "transform":
 			{
-				if (player.isTransformed())
+				if (!player.isTransformed())
 				{
-					return null;
+					player.doCast(TELEPORTER_TRANSFORM.getSkill());
 				}
-				player.doCast(TELEPORTER_TRANSFORM.getSkill());
 				return null;
 			}
 		}
@@ -115,10 +100,6 @@ public final class LoveYourGatekeeper extends LongTimeEvent
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (player.getQuestState(getName()) == null)
-		{
-			newQuestState(player);
-		}
 		return "32477.htm";
 	}
 	

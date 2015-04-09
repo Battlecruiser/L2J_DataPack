@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -24,7 +24,7 @@ import java.util.StringTokenizer;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.datatables.MultisellData;
+import com.l2jserver.gameserver.data.xml.impl.MultisellData;
 import com.l2jserver.gameserver.instancemanager.TerritoryWarManager;
 import com.l2jserver.gameserver.instancemanager.TerritoryWarManager.Territory;
 import com.l2jserver.gameserver.instancemanager.TerritoryWarManager.TerritoryNPCSpawn;

@@ -185,10 +185,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="24" />
-			<set order="0x08" stat="mAtk" val="17" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="24" />
+			<set stat="mAtk" val="17" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="2916" type="EtcItem" name="Broken Teleport Device">

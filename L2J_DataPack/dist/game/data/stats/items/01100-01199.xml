@@ -13,8 +13,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="21" />
-			<add order="0x40" stat="maxMp" val="38" />
+			<add order="0" stat="pDef" val="21" />
+			<add stat="maxMp" val="38" />
 		</for>
 	</item>
 	<item id="1101" type="Armor" name="Tunic of Devotion">
@@ -30,8 +30,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="30" />
-			<add order="0x40" stat="maxMp" val="67" />
+			<add order="0" stat="pDef" val="30" />
+			<add stat="maxMp" val="67" />
 		</for>
 	</item>
 	<item id="1102" type="Armor" name="Tunic of Magic">
@@ -47,8 +47,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="34" />
-			<add order="0x40" stat="maxMp" val="86" />
+			<add order="0" stat="pDef" val="34" />
+			<add stat="maxMp" val="86" />
 		</for>
 	</item>
 	<item id="1103" type="Armor" name="Cotton Stockings">
@@ -64,8 +64,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="13" />
-			<add order="0x40" stat="maxMp" val="23" />
+			<add order="0" stat="pDef" val="13" />
+			<add stat="maxMp" val="23" />
 		</for>
 	</item>
 	<item id="1104" type="Armor" name="Stockings of Devotion">
@@ -81,8 +81,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="19" />
-			<add order="0x40" stat="maxMp" val="42" />
+			<add order="0" stat="pDef" val="19" />
+			<add stat="maxMp" val="42" />
 		</for>
 	</item>
 	<item id="1105" type="Armor" name="Stockings of Magic">
@@ -98,8 +98,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="21" />
-			<add order="0x40" stat="maxMp" val="54" />
+			<add order="0" stat="pDef" val="21" />
+			<add stat="maxMp" val="54" />
 		</for>
 	</item>
 	<item id="1106" type="EtcItem" name="Norman's Letter">
@@ -254,7 +254,7 @@
 		<set name="weight" val="660" />
 		<set name="price" val="470" />
 		<for>
-			<add order="0x10" stat="pDef" val="11" />
+			<add order="0" stat="pDef" val="11" />
 		</for>
 	</item>
 	<item id="1120" type="Armor" name="Pa'agrian Hand">
@@ -269,8 +269,8 @@
 		<set name="price" val="123900" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="34" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="34" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="1121" type="Armor" name="Apprentice's Shoes">
@@ -282,7 +282,7 @@
 		<set name="weight" val="1320" />
 		<set name="price" val="5" />
 		<for>
-			<add order="0x10" stat="pDef" val="8" />
+			<add order="0" stat="pDef" val="8" />
 		</for>
 	</item>
 	<item id="1122" type="Armor" name="Cotton Shoes">
@@ -294,7 +294,7 @@
 		<set name="weight" val="1320" />
 		<set name="price" val="470" />
 		<for>
-			<add order="0x10" stat="pDef" val="11" />
+			<add order="0" stat="pDef" val="11" />
 		</for>
 	</item>
 	<item id="1123" type="Armor" name="Blue Buckskin Boots">
@@ -309,8 +309,8 @@
 		<set name="price" val="25600" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="22" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="22" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="1124" type="Armor" name="Boots of Power">
@@ -325,8 +325,8 @@
 		<set name="price" val="57400" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="27" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="27" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="1125" type="Armor" name="Assault Boots">
@@ -341,8 +341,8 @@
 		<set name="price" val="75200" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="29" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="29" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="1126" type="Armor" name="Crimson Boots">
@@ -357,8 +357,8 @@
 		<set name="price" val="123900" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="34" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="34" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="1127" type="Armor" name="Forgotten Boots">
@@ -373,8 +373,8 @@
 		<set name="price" val="188800" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="36" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="36" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="1128" type="Armor" name="Adamantite Boots">
@@ -389,8 +389,8 @@
 		<set name="price" val="275100" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="39" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="39" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="1129" type="Armor" name="Crude Leather Shoes">
@@ -402,7 +402,7 @@
 		<set name="weight" val="1320" />
 		<set name="price" val="470" />
 		<for>
-			<add order="0x10" stat="pDef" val="11" />
+			<add order="0" stat="pDef" val="11" />
 		</for>
 	</item>
 	<item id="1130" type="EtcItem" name="Cobendell's Medicine">
@@ -553,10 +553,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="18" />
-			<set order="0x08" stat="mAtk" val="21" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="18" />
+			<set stat="mAtk" val="21" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="1143" type="EtcItem" name="Simplon's Letter">
@@ -603,7 +603,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<add order="0x10" stat="pDef" val="33" />
+			<add order="0" stat="pDef" val="33" />
 		</for>
 	</item>
 	<item id="1147" type="Armor" name="Squire's Pants">
@@ -619,7 +619,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<add order="0x10" stat="pDef" val="20" />
+			<add order="0" stat="pDef" val="20" />
 		</for>
 	</item>
 	<item id="1148" type="Armor" name="Hard Leather Helmet">
@@ -631,7 +631,7 @@
 		<set name="weight" val="640" />
 		<set name="price" val="14200" />
 		<for>
-			<add order="0x10" stat="pDef" val="26" />
+			<add order="0" stat="pDef" val="26" />
 		</for>
 	</item>
 	<item id="1149" type="Armor" name="Shining Circlet">
@@ -646,8 +646,8 @@
 		<set name="price" val="283200" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="54" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="54" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="1150" type="EtcItem" name="Spellbook: Wind Strike">
@@ -1001,11 +1001,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="45" />
-			<set order="0x08" stat="mAtk" val="16" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="45" />
+			<set stat="mAtk" val="16" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
 	<item id="1182" type="Weapon" name="Neti's Dagger">
@@ -1025,11 +1025,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="19" />
-			<set order="0x08" stat="mAtk" val="16" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="19" />
+			<set stat="mAtk" val="16" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="1183" type="EtcItem" name="Spartoi's Bones">

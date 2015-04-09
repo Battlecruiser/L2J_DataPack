@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -17,27 +17,6 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers;
-
-import java.lang.reflect.Method;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.handler.ActionHandler;
-import com.l2jserver.gameserver.handler.ActionShiftHandler;
-import com.l2jserver.gameserver.handler.AdminCommandHandler;
-import com.l2jserver.gameserver.handler.BypassHandler;
-import com.l2jserver.gameserver.handler.ChatHandler;
-import com.l2jserver.gameserver.handler.IHandler;
-import com.l2jserver.gameserver.handler.ItemHandler;
-import com.l2jserver.gameserver.handler.PunishmentHandler;
-import com.l2jserver.gameserver.handler.TargetHandler;
-import com.l2jserver.gameserver.handler.TelnetHandler;
-import com.l2jserver.gameserver.handler.UserCommandHandler;
-import com.l2jserver.gameserver.handler.VoicedCommandHandler;
 
 import handlers.actionhandlers.L2ArtefactInstanceAction;
 import handlers.actionhandlers.L2DecoyAction;
@@ -78,7 +57,6 @@ import handlers.admincommandhandlers.AdminEvents;
 import handlers.admincommandhandlers.AdminExpSp;
 import handlers.admincommandhandlers.AdminFightCalculator;
 import handlers.admincommandhandlers.AdminFortSiege;
-import handlers.admincommandhandlers.AdminGeoEditor;
 import handlers.admincommandhandlers.AdminGeodata;
 import handlers.admincommandhandlers.AdminGm;
 import handlers.admincommandhandlers.AdminGmChat;
@@ -172,6 +150,14 @@ import handlers.chathandlers.ChatPetition;
 import handlers.chathandlers.ChatShout;
 import handlers.chathandlers.ChatTell;
 import handlers.chathandlers.ChatTrade;
+import handlers.communityboard.ClanBoard;
+import handlers.communityboard.FavoriteBoard;
+import handlers.communityboard.FriendsBoard;
+import handlers.communityboard.HomeBoard;
+import handlers.communityboard.HomepageBoard;
+import handlers.communityboard.MailBoard;
+import handlers.communityboard.MemoBoard;
+import handlers.communityboard.RegionBoard;
 import handlers.itemhandlers.BeastSoulShot;
 import handlers.itemhandlers.BeastSpiritShot;
 import handlers.itemhandlers.BlessedSpiritShot;
@@ -270,6 +256,28 @@ import handlers.voicedcommandhandlers.Lang;
 import handlers.voicedcommandhandlers.StatsVCmd;
 import handlers.voicedcommandhandlers.Wedding;
 
+import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import com.l2jserver.Config;
+import com.l2jserver.gameserver.handler.ActionHandler;
+import com.l2jserver.gameserver.handler.ActionShiftHandler;
+import com.l2jserver.gameserver.handler.AdminCommandHandler;
+import com.l2jserver.gameserver.handler.BypassHandler;
+import com.l2jserver.gameserver.handler.ChatHandler;
+import com.l2jserver.gameserver.handler.CommunityBoardHandler;
+import com.l2jserver.gameserver.handler.IHandler;
+import com.l2jserver.gameserver.handler.ItemHandler;
+import com.l2jserver.gameserver.handler.PunishmentHandler;
+import com.l2jserver.gameserver.handler.TargetHandler;
+import com.l2jserver.gameserver.handler.TelnetHandler;
+import com.l2jserver.gameserver.handler.UserCommandHandler;
+import com.l2jserver.gameserver.handler.VoicedCommandHandler;
+
 /**
  * Master handler.
  * @author UnAfraid
@@ -278,13 +286,14 @@ public class MasterHandler
 {
 	private static final Logger _log = Logger.getLogger(MasterHandler.class.getName());
 	
-	private static final IHandler<?, ?>[] _loadInstances =
+	private static final IHandler<?, ?>[] LOAD_INSTANCES =
 	{
 		ActionHandler.getInstance(),
 		ActionShiftHandler.getInstance(),
 		AdminCommandHandler.getInstance(),
 		BypassHandler.getInstance(),
 		ChatHandler.getInstance(),
+		CommunityBoardHandler.getInstance(),
 		ItemHandler.getInstance(),
 		PunishmentHandler.getInstance(),
 		UserCommandHandler.getInstance(),
@@ -293,7 +302,7 @@ public class MasterHandler
 		TelnetHandler.getInstance(),
 	};
 	
-	private static final Class<?>[][] _handlers =
+	private static final Class<?>[][] HANDLERS =
 	{
 		{
 			// Action Handlers
@@ -344,7 +353,6 @@ public class MasterHandler
 			AdminFightCalculator.class,
 			AdminFortSiege.class,
 			AdminGeodata.class,
-			AdminGeoEditor.class,
 			AdminGm.class,
 			AdminGmChat.class,
 			AdminGraciaSeeds.class,
@@ -442,6 +450,17 @@ public class MasterHandler
 			ChatShout.class,
 			ChatTell.class,
 			ChatTrade.class,
+		},
+		{
+			// Community Board
+			ClanBoard.class,
+			FavoriteBoard.class,
+			FriendsBoard.class,
+			HomeBoard.class,
+			HomepageBoard.class,
+			MailBoard.class,
+			MemoBoard.class,
+			RegionBoard.class,
 		},
 		{
 			// Item Handlers
@@ -563,15 +582,12 @@ public class MasterHandler
 		},
 	};
 	
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args)
 	{
 		_log.log(Level.INFO, "Loading Handlers...");
 		
 		Map<IHandler<?, ?>, Method> registerHandlerMethods = new HashMap<>();
-		for (IHandler<?, ?> loadInstance : _loadInstances)
+		for (IHandler<?, ?> loadInstance : LOAD_INSTANCES)
 		{
 			registerHandlerMethods.put(loadInstance, null);
 			for (Method method : loadInstance.getClass().getMethods())
@@ -588,7 +604,7 @@ public class MasterHandler
 			_log.log(Level.WARNING, "Failed loading handlers of: " + e.getKey().getClass().getSimpleName() + " seems registerHandler function does not exist.");
 		});
 		
-		for (Class<?> classes[] : _handlers)
+		for (Class<?> classes[] : HANDLERS)
 		{
 			for (Class<?> c : classes)
 			{
@@ -616,7 +632,7 @@ public class MasterHandler
 			}
 		}
 		
-		for (IHandler<?, ?> loadInstance : _loadInstances)
+		for (IHandler<?, ?> loadInstance : LOAD_INSTANCES)
 		{
 			_log.log(Level.INFO, loadInstance.getClass().getSimpleName() + ": Loaded " + loadInstance.size() + " Handlers");
 		}

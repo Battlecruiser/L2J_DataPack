@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -69,7 +69,7 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -134,7 +134,7 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 			return super.onKill(npc, player, isSummon);
 		}
 		
-		final QuestState st = pl.getQuestState(getName());
+		final QuestState st = getQuestState(pl, false);
 		int chance = (int) (Config.RATE_QUEST_DROP * REWARD_CHANCES.get(npc.getId()));
 		int numItems = Math.max((chance / 1000), 1);
 		chance = chance % 1000;
@@ -150,7 +150,7 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, true);
 		if (st == null)
 		{
 			return htmltext;

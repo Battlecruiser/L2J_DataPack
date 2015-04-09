@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -84,8 +84,8 @@ public final class QueenShyeed extends AbstractNpcAI
 	
 	private void spawnShyeed()
 	{
-		String respawn = loadGlobalQuestVar("Respawn");
-		long remain = (!respawn.isEmpty()) ? Long.parseLong(respawn) - System.currentTimeMillis() : 0;
+		final String respawn = loadGlobalQuestVar("Respawn");
+		final long remain = (!respawn.isEmpty()) ? Long.parseLong(respawn) - System.currentTimeMillis() : 0;
 		if (remain > 0)
 		{
 			startQuestTimer("respawn", remain, null, null);
@@ -100,7 +100,7 @@ public final class QueenShyeed extends AbstractNpcAI
 	
 	private void startRespawn()
 	{
-		int respawnTime = RESPAWN - getRandom(RANDOM_RESPAWN);
+		final int respawnTime = RESPAWN - getRandom(RANDOM_RESPAWN);
 		saveGlobalQuestVar("Respawn", Long.toString(System.currentTimeMillis() + respawnTime));
 		startQuestTimer("respawn", respawnTime, null, null);
 		MOB_BUFF_ZONE.setEnabled(false);

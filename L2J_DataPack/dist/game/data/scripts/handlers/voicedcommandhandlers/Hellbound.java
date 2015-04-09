@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,10 +18,10 @@
  */
 package handlers.voicedcommandhandlers;
 
+import hellbound.HellboundEngine;
+
 import com.l2jserver.gameserver.handler.IVoicedCommandHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-
-import hellbound.HellboundEngine;
 
 /**
  * Hellbound voiced command.

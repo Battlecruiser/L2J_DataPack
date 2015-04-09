@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,7 +18,7 @@
  */
 package handlers.admincommandhandlers;
 
-import com.l2jserver.gameserver.datatables.AdminTable;
+import com.l2jserver.gameserver.data.xml.impl.AdminData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2World;
@@ -116,7 +116,7 @@ public class AdminGmChat implements IAdminCommandHandler
 			}
 			text = command.substring(offset);
 			CreatureSay cs = new CreatureSay(0, Say2.ALLIANCE, activeChar.getName(), text);
-			AdminTable.getInstance().broadcastToGMs(cs);
+			AdminData.getInstance().broadcastToGMs(cs);
 		}
 		catch (StringIndexOutOfBoundsException e)
 		{

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -136,7 +136,7 @@ public final class Q00406_PathOfTheElvenKnight extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState qs = killer.getQuestState(getName());
+		final QuestState qs = getQuestState(killer, false);
 		final ItemChanceHolder reward = MONSTER_DROPS.get(npc.getId());
 		int requiredItemId = KLUTO_BOX;
 		int cond = 2;

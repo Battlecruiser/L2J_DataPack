@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,8 +18,8 @@
  */
 package instances.MithrilMine;
 
+import instances.AbstractInstance;
 import quests.Q10284_AcquisitionOfDivineSword.Q10284_AcquisitionOfDivineSword;
-import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
@@ -32,22 +32,19 @@ import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
  * Mithril Mine instance zone.
  * @author Adry_85
  */
-public final class MithrilMine extends AbstractNpcAI
+public final class MithrilMine extends AbstractInstance
 {
 	protected class MMWorld extends InstanceWorld
 	{
-		long storeTime = 0;
-		int _count = 0;
+		protected int _count = 0;
 	}
 	
-	private static final int TEMPLATE_ID = 138;
 	// NPCs
 	private static final int KEGOR = 18846;
 	private static final int MITHRIL_MILLIPEDE = 22766;
@@ -68,8 +65,10 @@ public final class MithrilMine extends AbstractNpcAI
 		new Location(185920, -184544, -3308, -32544),
 		new Location(185664, -184720, -3308, 27892)
 	};
+	// Misc
+	private static final int TEMPLATE_ID = 138;
 	
-	private MithrilMine()
+	public MithrilMine()
 	{
 		super(MithrilMine.class.getSimpleName(), "instances");
 		addFirstTalkId(KEGOR);
@@ -147,8 +146,8 @@ public final class MithrilMine extends AbstractNpcAI
 				world.removeAllowed(player.getObjectId());
 				player.setInstanceId(0);
 				player.teleToLocation(EXIT_LOC, 0);
-				qs.giveAdena(296425, true);
-				qs.addExpAndSp(921805, 82230);
+				giveAdena(player, 296425, true);
+				addExpAndSp(player, 921805, 82230);
 				qs.exitQuest(false, true);
 				return "18846-03.html";
 			}
@@ -200,21 +199,21 @@ public final class MithrilMine extends AbstractNpcAI
 				final QuestState qs = talker.getQuestState(Q10284_AcquisitionOfDivineSword.class.getSimpleName());
 				if ((qs != null) && qs.isMemoState(2))
 				{
-					if (!qs.hasQuestItems(COLD_RESISTANCE_POTION))
+					if (!hasQuestItems(talker, COLD_RESISTANCE_POTION))
 					{
-						qs.giveItems(COLD_RESISTANCE_POTION, 1);
+						giveItems(talker, COLD_RESISTANCE_POTION, 1);
 					}
 					qs.setCond(4, true);
-					enterInstance(talker, "MithrilMine.xml", START_LOC);
+					enterInstance(talker, new MMWorld(), "MithrilMine.xml", TEMPLATE_ID);
 				}
 				break;
 			}
 			case KEGOR:
 			{
 				final QuestState qs = talker.getQuestState(Q10284_AcquisitionOfDivineSword.class.getSimpleName());
-				if ((qs != null) && qs.isMemoState(2) && qs.hasQuestItems(COLD_RESISTANCE_POTION) && npc.isScriptValue(0))
+				if ((qs != null) && qs.isMemoState(2) && hasQuestItems(talker, COLD_RESISTANCE_POTION) && npc.isScriptValue(0))
 				{
-					qs.takeItems(COLD_RESISTANCE_POTION, -1);
+					takeItems(talker, COLD_RESISTANCE_POTION, -1);
 					qs.setCond(5, true);
 					npc.setScriptValue(1);
 					startQuestTimer("TIMER", 3000, npc, talker);
@@ -227,37 +226,13 @@ public final class MithrilMine extends AbstractNpcAI
 		return super.onTalk(npc, talker);
 	}
 	
-	protected int enterInstance(L2PcInstance player, String template, Location loc)
+	@Override
+	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
 	{
-		// check for existing instances for this player
-		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-		// existing instance
-		if (world != null)
+		if (firstEntrance)
 		{
-			if (!(world instanceof MMWorld))
-			{
-				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
-				return 0;
-			}
-			teleportPlayer(player, loc, world.getInstanceId(), false);
-			return 0;
+			world.addAllowed(player.getObjectId());
 		}
-		// New instance
-		world = new MMWorld();
-		world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
-		world.setTemplateId(TEMPLATE_ID);
-		world.setStatus(0);
-		((MMWorld) world).storeTime = System.currentTimeMillis();
-		InstanceManager.getInstance().addWorld(world);
-		_log.info("Mithril Mine started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
-		// teleport players
-		teleportPlayer(player, loc, world.getInstanceId(), false);
-		world.addAllowed(player.getObjectId());
-		return world.getInstanceId();
-	}
-	
-	public static void main(String[] args)
-	{
-		new MithrilMine();
+		teleportPlayer(player, START_LOC, world.getInstanceId(), false);
 	}
 }

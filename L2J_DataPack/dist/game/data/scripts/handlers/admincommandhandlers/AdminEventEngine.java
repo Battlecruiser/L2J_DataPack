@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -29,9 +29,8 @@ import java.io.PrintStream;
 import java.util.StringTokenizer;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.Announcements;
-import com.l2jserver.gameserver.datatables.AdminTable;
-import com.l2jserver.gameserver.datatables.TransformData;
+import com.l2jserver.gameserver.data.xml.impl.AdminData;
+import com.l2jserver.gameserver.data.xml.impl.TransformData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -42,6 +41,7 @@ import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 import com.l2jserver.gameserver.network.serverpackets.UserInfo;
+import com.l2jserver.gameserver.util.Broadcast;
 import com.l2jserver.util.Rnd;
 import com.l2jserver.util.StringUtil;
 
@@ -221,7 +221,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 				}
 				
 				activeChar.sendMessage(L2Event.startEventParticipation());
-				Announcements.getInstance().announceToAll(activeChar.getName() + " has started an event. You will find a participation NPC somewhere around you.");
+				Broadcast.toAllOnlinePlayers(activeChar.getName() + " has started an event. You will find a participation NPC somewhere around you.");
 				
 				PlaySound _snd = new PlaySound(1, "B03_F", 0, 0, 0, 0, 0);
 				activeChar.sendPacket(_snd);
@@ -368,7 +368,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 					int transId = transIds[Rnd.get(transIds.length)];
 					if (!TransformData.getInstance().transformPlayer(transId, player))
 					{
-						AdminTable.getInstance().broadcastMessageToGMs("EventEngine: Unknow transformation id: " + transId);
+						AdminData.getInstance().broadcastMessageToGMs("EventEngine: Unknow transformation id: " + transId);
 					}
 				}
 				showEventControl(activeChar);
@@ -428,7 +428,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 		catch (Exception e)
 		{
 			e.printStackTrace();
-			AdminTable.getInstance().broadcastMessageToGMs("EventEngine: Error! Possible blank boxes while executing a command which requires a value in the box?");
+			AdminData.getInstance().broadcastMessageToGMs("EventEngine: Error! Possible blank boxes while executing a command which requires a value in the box?");
 		}
 		return true;
 	}

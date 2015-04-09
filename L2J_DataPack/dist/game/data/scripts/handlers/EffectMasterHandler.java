@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,13 +18,13 @@
  */
 package handlers;
 
+import handlers.effecthandlers.*;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jserver.gameserver.handler.EffectHandler;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
-
-import handlers.effecthandlers.*;
 
 /**
  * Effect Master handler.
@@ -56,7 +56,6 @@ public final class EffectMasterHandler
 		ChangeFishingMastery.class,
 		ChangeHairColor.class,
 		ChangeHairStyle.class,
-		CharmOfLuck.class,
 		ClanGate.class,
 		Confuse.class,
 		ConsumeBody.class,
@@ -120,6 +119,8 @@ public final class EffectMasterHandler
 		ManaHealByLevel.class,
 		ManaHealOverTime.class,
 		ManaHealPercent.class,
+		MaxCp.class,
+		MaxHp.class,
 		MpConsumePerLevel.class,
 		Mute.class,
 		NoblesseBless.class,

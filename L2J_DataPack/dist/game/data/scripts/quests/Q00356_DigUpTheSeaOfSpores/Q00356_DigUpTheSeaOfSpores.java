@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -72,16 +72,16 @@ public final class Q00356_DigUpTheSeaOfSpores extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "30717-02.html":
-			case "30717-03.html":
-			case "30717-04.html":
+			case "30717-02.htm":
+			case "30717-03.htm":
+			case "30717-04.htm":
 			case "30717-10.html":
 			case "30717-18.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "30717-05.html":
+			case "30717-05.htm":
 			{
 				qs.startQuest();
 				htmltext = event;
@@ -148,7 +148,7 @@ public final class Q00356_DigUpTheSeaOfSpores extends Quest
 		final int dropItem = ((npc.getId() == ROTTING_TREE) ? HERBIVOROUS_SPORE : CARNIVORE_SPORE);
 		final int otherItem = ((dropItem == HERBIVOROUS_SPORE) ? CARNIVORE_SPORE : HERBIVOROUS_SPORE);
 		
-		if (giveItemRandomly(killer, npc, dropItem, 1, 50, MONSTER_DROP_CHANCES.get(npc.getId()), true))
+		if (giveItemRandomly(qs.getPlayer(), npc, dropItem, 1, 50, MONSTER_DROP_CHANCES.get(npc.getId()), true))
 		{
 			if (getQuestItemsCount(killer, otherItem) >= 50)
 			{
@@ -165,11 +165,11 @@ public final class Q00356_DigUpTheSeaOfSpores extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState qs = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		if (qs.isCreated())
 		{
-			htmltext = (player.getLevel() >= MIN_LEVEL) ? "30717-01.html" : "30717-06.htm";
+			htmltext = (player.getLevel() >= MIN_LEVEL) ? "30717-01.htm" : "30717-06.htm";
 		}
 		else if (qs.isStarted())
 		{

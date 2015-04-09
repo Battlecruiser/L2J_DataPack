@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -135,7 +135,7 @@ public class AdminQuest implements IAdminCommandHandler
 					{
 						L2ScriptEngineManager.getInstance().executeScript(file);
 						
-						// This part should be called only when the script is successfuly loaded.
+						// This part should be called only when the script is successfully loaded.
 						activeChar.sendMessage("Script Successfully Loaded.");
 					}
 					catch (ScriptException e)

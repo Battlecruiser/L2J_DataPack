@@ -32,13 +32,13 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3014-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="85" />
-			<set order="0x08" stat="mAtk" val="81" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="85" />
+			<set stat="mAtk" val="81" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="7702" type="Weapon" name="Stick of Faith - Magic Hold">
@@ -62,13 +62,13 @@
 		<set name="onmagic_chance" val="10" />
 		<set name="onmagic_skill" val="1201-16" />
 		<for>
-			<set order="0x08" stat="pAtk" val="85" />
-			<set order="0x08" stat="mAtk" val="81" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="85" />
+			<set stat="mAtk" val="81" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="7703" type="Weapon" name="Stick of Faith - Magic Shield">
@@ -92,13 +92,13 @@
 		<set name="onmagic_chance" val="50" />
 		<set name="onmagic_skill" val="1035-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="85" />
-			<set order="0x08" stat="mAtk" val="81" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="85" />
+			<set stat="mAtk" val="81" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="7704" type="Weapon" name="Stick of Eternity - Empower">
@@ -121,13 +121,13 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3076-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="111" />
-			<set order="0x08" stat="mAtk" val="101" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="111" />
+			<set stat="mAtk" val="101" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="7705" type="Weapon" name="Stick of Eternity - Rsk. Evasion">
@@ -150,13 +150,13 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3030-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="111" />
-			<set order="0x08" stat="mAtk" val="101" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="111" />
+			<set stat="mAtk" val="101" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="7706" type="Weapon" name="Stick of Eternity - Blessed Body">
@@ -180,13 +180,13 @@
 		<set name="onmagic_chance" val="20" />
 		<set name="onmagic_skill" val="1045-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="111" />
-			<set order="0x08" stat="mAtk" val="101" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="111" />
+			<set stat="mAtk" val="101" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="7707" type="Weapon" name="Nirvana Axe - M. Atk.">
@@ -209,13 +209,13 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3077-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="111" />
-			<set order="0x08" stat="mAtk" val="101" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="111" />
+			<set stat="mAtk" val="101" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="7708" type="Weapon" name="Nirvana Axe - Magic Poison">
@@ -239,13 +239,13 @@
 		<set name="onmagic_chance" val="7" />
 		<set name="onmagic_skill" val="1168-6" />
 		<for>
-			<set order="0x08" stat="pAtk" val="111" />
-			<set order="0x08" stat="mAtk" val="101" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="111" />
+			<set stat="mAtk" val="101" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="7709" type="Weapon" name="Nirvana Axe - Magic Weakness">
@@ -269,13 +269,13 @@
 		<set name="onmagic_chance" val="7" />
 		<set name="onmagic_skill" val="1164-9" />
 		<for>
-			<set order="0x08" stat="pAtk" val="111" />
-			<set order="0x08" stat="mAtk" val="101" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="111" />
+			<set stat="mAtk" val="101" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="7710" type="Weapon" name="Club of Nature - Acumen">
@@ -298,13 +298,13 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3047-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="111" />
-			<set order="0x08" stat="mAtk" val="101" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="111" />
+			<set stat="mAtk" val="101" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="7711" type="Weapon" name="Club of Nature - Mental Shield">
@@ -328,13 +328,13 @@
 		<set name="onmagic_chance" val="50" />
 		<set name="onmagic_skill" val="1035-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="111" />
-			<set order="0x08" stat="mAtk" val="101" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="111" />
+			<set stat="mAtk" val="101" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="7712" type="Weapon" name="Club of Nature - Magic Hold">
@@ -358,13 +358,13 @@
 		<set name="onmagic_chance" val="10" />
 		<set name="onmagic_skill" val="1201-21" />
 		<for>
-			<set order="0x08" stat="pAtk" val="111" />
-			<set order="0x08" stat="mAtk" val="101" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="111" />
+			<set stat="mAtk" val="101" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="7713" type="Weapon" name="Mace of Underworld - Mana Up">
@@ -387,13 +387,13 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3014-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="111" />
-			<set order="0x08" stat="mAtk" val="101" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="111" />
+			<set stat="mAtk" val="101" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="7714" type="Weapon" name="Mace of Underworld - Magic Silence">
@@ -417,13 +417,13 @@
 		<set name="onmagic_chance" val="10" />
 		<set name="onmagic_skill" val="3078-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="111" />
-			<set order="0x08" stat="mAtk" val="101" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="111" />
+			<set stat="mAtk" val="101" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="7715" type="Weapon" name="Mace of Underworld - Conversion">
@@ -446,13 +446,13 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3048-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="111" />
-			<set order="0x08" stat="mAtk" val="101" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="111" />
+			<set stat="mAtk" val="101" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="7716" type="Weapon" name="Inferno Staff - Acumen">
@@ -475,13 +475,13 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3047-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="135" />
-			<set order="0x08" stat="mAtk" val="111" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="135" />
+			<set stat="mAtk" val="111" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="7717" type="Weapon" name="Inferno Staff - Magic Silence">
@@ -505,13 +505,13 @@
 		<set name="onmagic_chance" val="10" />
 		<set name="onmagic_skill" val="3078-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="135" />
-			<set order="0x08" stat="mAtk" val="111" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="135" />
+			<set stat="mAtk" val="111" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="7718" type="Weapon" name="Inferno Staff - Magic Paralyze">
@@ -535,13 +535,13 @@
 		<set name="onmagic_chance" val="5" />
 		<set name="onmagic_skill" val="3079-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="135" />
-			<set order="0x08" stat="mAtk" val="111" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="135" />
+			<set stat="mAtk" val="111" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="7719" type="Weapon" name="Poleaxe - Critical Stun">
@@ -565,13 +565,13 @@
 		<set name="oncrit_skill" val="3016-3" />
 		<set name="item_skill" val="3599-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="139" />
-			<set order="0x08" stat="mAtk" val="76" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="139" />
+			<set stat="mAtk" val="76" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="7720" type="Weapon" name="Poleaxe - Towering Blow">
@@ -593,14 +593,14 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3599-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="139" />
-			<set order="0x08" stat="mAtk" val="76" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<set val="80" order="0x08" stat="pAtkRange" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="139" />
+			<set stat="mAtk" val="76" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
+			<set val="80" stat="pAtkRange" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="7721" type="Weapon" name="Poleaxe - Wide Blow">
@@ -622,13 +622,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3599-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="139" />
-			<set order="0x08" stat="mAtk" val="76" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="139" />
+			<set stat="mAtk" val="76" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="7722" type="Weapon" name="Sword of Valhalla - Acumen">
@@ -651,12 +651,12 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3047-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="140" />
-			<set order="0x08" stat="mAtk" val="122" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="140" />
+			<set stat="mAtk" val="122" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="7723" type="Weapon" name="Sword of Valhalla - Magic Weakness">
@@ -680,12 +680,12 @@
 		<set name="onmagic_chance" val="7" />
 		<set name="onmagic_skill" val="1164-11" />
 		<for>
-			<set order="0x08" stat="pAtk" val="140" />
-			<set order="0x08" stat="mAtk" val="122" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="140" />
+			<set stat="mAtk" val="122" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="7724" type="Weapon" name="Sword of Valhalla - Magic Regeneration">
@@ -709,12 +709,12 @@
 		<set name="onmagic_chance" val="30" />
 		<set name="onmagic_skill" val="1044-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="140" />
-			<set order="0x08" stat="mAtk" val="122" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="140" />
+			<set stat="mAtk" val="122" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="7725" type="EtcItem" name="Booty - Gray Pouch">

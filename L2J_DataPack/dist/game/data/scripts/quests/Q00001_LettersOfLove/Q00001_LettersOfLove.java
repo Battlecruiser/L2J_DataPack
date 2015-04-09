@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -55,7 +55,7 @@ public class Q00001_LettersOfLove extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -76,7 +76,7 @@ public class Q00001_LettersOfLove extends Quest
 				if (player.getLevel() >= MIN_LEVEL)
 				{
 					st.startQuest();
-					st.giveItems(DARINS_LETTER, 1);
+					giveItems(player, DARINS_LETTER, 1);
 					htmltext = event;
 				}
 				break;
@@ -88,12 +88,7 @@ public class Q00001_LettersOfLove extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return getNoQuestMsg(player);
-		}
-		
+		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		switch (st.getState())
 		{
@@ -117,10 +112,10 @@ public class Q00001_LettersOfLove extends Quest
 							}
 							case ROXXY:
 							{
-								if (st.hasQuestItems(DARINS_LETTER) && !st.hasQuestItems(ROXXYS_KERCHIEF))
+								if (hasQuestItems(player, DARINS_LETTER) && !hasQuestItems(player, ROXXYS_KERCHIEF))
 								{
-									st.takeItems(DARINS_LETTER, -1);
-									st.giveItems(ROXXYS_KERCHIEF, 1);
+									takeItems(player, DARINS_LETTER, -1);
+									giveItems(player, ROXXYS_KERCHIEF, 1);
 									st.setCond(2, true);
 									htmltext = "30006-01.html";
 								}
@@ -135,10 +130,10 @@ public class Q00001_LettersOfLove extends Quest
 						{
 							case DARIN:
 							{
-								if (st.hasQuestItems(ROXXYS_KERCHIEF))
+								if (hasQuestItems(player, ROXXYS_KERCHIEF))
 								{
-									st.takeItems(ROXXYS_KERCHIEF, -1);
-									st.giveItems(DARINS_RECEIPT, 1);
+									takeItems(player, ROXXYS_KERCHIEF, -1);
+									giveItems(player, DARINS_RECEIPT, 1);
 									st.setCond(3, true);
 									htmltext = "30048-08.html";
 								}
@@ -146,7 +141,7 @@ public class Q00001_LettersOfLove extends Quest
 							}
 							case ROXXY:
 							{
-								if (st.hasQuestItems(ROXXYS_KERCHIEF))
+								if (hasQuestItems(player, ROXXYS_KERCHIEF))
 								{
 									htmltext = "30006-02.html";
 								}
@@ -161,7 +156,7 @@ public class Q00001_LettersOfLove extends Quest
 						{
 							case DARIN:
 							{
-								if (st.hasQuestItems(DARINS_RECEIPT) || !st.hasQuestItems(BAULROS_POTION))
+								if (hasQuestItems(player, DARINS_RECEIPT) || !hasQuestItems(player, BAULROS_POTION))
 								{
 									htmltext = "30048-09.html";
 								}
@@ -169,7 +164,7 @@ public class Q00001_LettersOfLove extends Quest
 							}
 							case ROXXY:
 							{
-								if (st.hasQuestItems(DARINS_RECEIPT) || st.hasQuestItems(BAULROS_POTION))
+								if (hasQuestItems(player, DARINS_RECEIPT) || hasQuestItems(player, BAULROS_POTION))
 								{
 									htmltext = "30006-03.html";
 								}
@@ -177,14 +172,14 @@ public class Q00001_LettersOfLove extends Quest
 							}
 							case BAULRO:
 							{
-								if (st.hasQuestItems(DARINS_RECEIPT))
+								if (hasQuestItems(player, DARINS_RECEIPT))
 								{
-									st.takeItems(DARINS_RECEIPT, -1);
-									st.giveItems(BAULROS_POTION, 1);
+									takeItems(player, DARINS_RECEIPT, -1);
+									giveItems(player, BAULROS_POTION, 1);
 									st.setCond(4, true);
 									htmltext = "30033-01.html";
 								}
-								else if (st.hasQuestItems(BAULROS_POTION))
+								else if (hasQuestItems(player, BAULROS_POTION))
 								{
 									htmltext = "30033-02.html";
 								}
@@ -201,16 +196,16 @@ public class Q00001_LettersOfLove extends Quest
 							{
 								// TODO: Beside this message something should be set for the Newbie Guide.
 								showOnScreenMsg(player, NpcStringId.DELIVERY_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_GUIDE, 2, 5000);
-								st.giveItems(NECKLACE_OF_KNOWLEDGE, 1);
-								st.addExpAndSp(5672, 446);
-								st.giveAdena(2466, false);
+								giveItems(player, NECKLACE_OF_KNOWLEDGE, 1);
+								addExpAndSp(player, 5672, 446);
+								giveAdena(player, 2466, false);
 								st.exitQuest(false, true);
 								htmltext = "30048-10.html";
 								break;
 							}
 							case BAULRO:
 							{
-								if (st.hasQuestItems(BAULROS_POTION))
+								if (hasQuestItems(player, BAULROS_POTION))
 								{
 									htmltext = "30033-02.html";
 								}
@@ -218,7 +213,7 @@ public class Q00001_LettersOfLove extends Quest
 							}
 							case ROXXY:
 							{
-								if (st.hasQuestItems(BAULROS_POTION))
+								if (hasQuestItems(player, BAULROS_POTION))
 								{
 									htmltext = "30006-03.html";
 								}

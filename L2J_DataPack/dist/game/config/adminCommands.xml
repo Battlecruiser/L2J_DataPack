@@ -29,22 +29,10 @@
 	<admin command="admin_gmon" accessLevel="7" />
 
 	<!-- ADMIN ANNOUNCEMENTS -->
-	<admin command="admin_list_announcements" accessLevel="7" />
-	<admin command="admin_list_critannouncements" accessLevel="7" />
-	<admin command="admin_reload_announcements" accessLevel="7" />
-	<admin command="admin_announce_announcements" accessLevel="7" />
-	<admin command="admin_add_announcement" accessLevel="7" />
-	<admin command="admin_del_announcement" accessLevel="7" />
-	<admin command="admin_add_critannouncement" accessLevel="7" />
-	<admin command="admin_del_critannouncement" accessLevel="7" />
 	<admin command="admin_announce" accessLevel="7" />
-	<admin command="admin_critannounce" accessLevel="7" />
-	<admin command="admin_announce_menu" accessLevel="7" />
-	<admin command="admin_critannounce_menu" accessLevel="7" />
-	<admin command="admin_list_autoann" accessLevel="7" />
-	<admin command="admin_reload_autoann" accessLevel="7" />
-	<admin command="admin_add_autoann" accessLevel="7" />
-	<admin command="admin_del_autoann" accessLevel="7" />
+	<admin command="admin_announce_crit" accessLevel="7" />
+	<admin command="admin_announce_screen" accessLevel="7" />
+	<admin command="admin_announces" accessLevel="7" />
 
 	<!-- ADMIN BAN -->
 	<admin command="admin_punishment" accessLevel="7" />

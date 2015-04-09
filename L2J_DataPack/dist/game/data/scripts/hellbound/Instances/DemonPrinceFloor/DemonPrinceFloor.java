@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,14 +18,12 @@
  */
 package hellbound.Instances.DemonPrinceFloor;
 
-import java.util.Calendar;
-
-import ai.npc.AbstractNpcAI;
+import instances.AbstractInstance;
 
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.L2Party;
-import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.Location;
+import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
@@ -38,7 +36,7 @@ import com.l2jserver.gameserver.util.Util;
  * Demon Prince Floor instance zone.
  * @author GKR
  */
-public final class DemonPrinceFloor extends AbstractNpcAI
+public final class DemonPrinceFloor extends AbstractInstance
 {
 	protected class DPFWorld extends InstanceWorld
 	{
@@ -51,20 +49,18 @@ public final class DemonPrinceFloor extends AbstractNpcAI
 	private static final int DEMON_PRINCE = 25540;
 	// Item
 	private static final int SEAL_BREAKER_5 = 15515;
-	// Misc
-	private static final int TEMPLATE_ID = 142;
-	private static final int RESET_HOUR = 6;
-	private static final int RESET_MIN = 30;
+	// Locations
 	private static final Location ENTRY_POINT = new Location(-22208, 277056, -8239);
 	private static final Location EXIT_POINT = new Location(-19024, 277122, -8256);
+	// Misc
+	private static final int TEMPLATE_ID = 142;
+	private static final int MIN_LV = 78;
 	
 	public DemonPrinceFloor()
 	{
 		super(DemonPrinceFloor.class.getSimpleName(), "hellbound/Instances");
-		addStartNpc(GK_4);
-		addStartNpc(CUBE);
-		addTalkId(GK_4);
-		addTalkId(CUBE);
+		addStartNpc(GK_4, CUBE);
+		addTalkId(GK_4, CUBE);
 		addKillId(DEMON_PRINCE);
 	}
 	
@@ -74,16 +70,26 @@ public final class DemonPrinceFloor extends AbstractNpcAI
 		String htmltext = null;
 		if (npc.getId() == GK_4)
 		{
-			htmltext = checkConditions(player);
+			if (!player.canOverrideCond(PcCondOverride.INSTANCE_CONDITIONS))
+			{
+				if (player.getParty() == null)
+				{
+					htmltext = "gk-noparty.htm";
+				}
+				else if (!player.getParty().isLeader(player))
+				{
+					htmltext = "gk-noleader.htm";
+				}
+			}
 			
 			if (htmltext == null)
 			{
-				enterInstance(player, "DemonPrince.xml");
+				enterInstance(player, new DPFWorld(), "DemonPrince.xml", TEMPLATE_ID);
 			}
 		}
 		else if (npc.getId() == CUBE)
 		{
-			InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+			final InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 			if (world instanceof DPFWorld)
 			{
 				world.removeAllowed(player.getObjectId());
@@ -99,51 +105,27 @@ public final class DemonPrinceFloor extends AbstractNpcAI
 		final int instanceId = npc.getInstanceId();
 		if (instanceId > 0)
 		{
-			Instance inst = InstanceManager.getInstance().getInstance(instanceId);
-			InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+			final Instance inst = InstanceManager.getInstance().getInstance(instanceId);
+			final InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 			inst.setSpawnLoc(EXIT_POINT);
 			
-			// Terminate instance in 10 min
-			if ((inst.getInstanceEndTime() - System.currentTimeMillis()) > 600000)
-			{
-				inst.setDuration(600000);
-			}
-			
-			inst.setEmptyDestroyTime(0);
-			
-			if (world instanceof DPFWorld)
-			{
-				setReenterTime(world);
-			}
+			finishInstance(world);
 			addSpawn(CUBE, -22144, 278744, -8239, 0, false, 0, false, instanceId);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	private String checkConditions(L2PcInstance player)
+	@Override
+	protected boolean checkConditions(L2PcInstance player)
 	{
-		if (player.getParty() == null)
+		if (player.canOverrideCond(PcCondOverride.INSTANCE_CONDITIONS))
 		{
-			return "gk-noparty.htm";
-		}
-		else if (!player.getParty().isLeader(player))
-		{
-			return "gk-noleader.htm";
+			return true;
 		}
 		
-		return null;
-	}
-	
-	private boolean checkTeleport(L2PcInstance player)
-	{
 		final L2Party party = player.getParty();
 		
-		if (party == null)
-		{
-			return false;
-		}
-		
-		if (!party.isLeader(player))
+		if ((party == null) || !party.isLeader(player))
 		{
 			player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
 			return false;
@@ -151,125 +133,64 @@ public final class DemonPrinceFloor extends AbstractNpcAI
 		
 		for (L2PcInstance partyMember : party.getMembers())
 		{
-			if (partyMember.getLevel() < 78)
+			if (partyMember.getLevel() < MIN_LV)
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
-				sm.addPcName(partyMember);
-				party.broadcastPacket(sm);
+				party.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED).addPcName(partyMember));
 				return false;
 			}
 			
 			if (!Util.checkIfInRange(500, player, partyMember, true))
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_LOCATION_THAT_CANNOT_BE_ENTERED);
-				sm.addPcName(partyMember);
-				party.broadcastPacket(sm);
+				party.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED).addPcName(partyMember));
 				return false;
 			}
 			
 			if (InstanceManager.getInstance().getPlayerWorld(player) != null)
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
-				sm.addPcName(partyMember);
-				party.broadcastPacket(sm);
+				party.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON).addPcName(partyMember));
 				return false;
 			}
 			
-			Long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), TEMPLATE_ID);
+			final Long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), TEMPLATE_ID);
 			if (System.currentTimeMillis() < reentertime)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_REENTER_YET);
-				sm.addPcName(partyMember);
-				party.broadcastPacket(sm);
+				party.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET).addPcName(partyMember));
 				return false;
 			}
 			
 			if (partyMember.getInventory().getInventoryItemCount(SEAL_BREAKER_5, -1, false) < 1)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_QUEST_REQUIREMENT_NOT_SUFFICIENT);
-				sm.addPcName(partyMember);
-				party.broadcastPacket(sm);
+				party.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_S_QUEST_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED).addPcName(partyMember));
 				return false;
 			}
 		}
 		return true;
 	}
 	
-	private void enterInstance(L2PcInstance player, String template)
+	@Override
+	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
 	{
-		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-		
-		if (world != null)
+		if (firstEntrance)
 		{
-			if (world instanceof DPFWorld)
+			if (player.getParty() == null)
 			{
 				teleportPlayer(player, ENTRY_POINT, world.getInstanceId());
-				return;
-			}
-			player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
-			return;
-		}
-		
-		if (!checkTeleport(player))
-		{
-			return;
-		}
-		
-		world = new DPFWorld();
-		world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
-		world.setTemplateId(TEMPLATE_ID);
-		world.addAllowed(player.getObjectId());
-		world.setStatus(0);
-		InstanceManager.getInstance().addWorld(world);
-		teleportPlayer(player, ENTRY_POINT, world.getInstanceId());
-		
-		_log.info("Tower of Infinitum - Demon Prince floor started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
-		
-		for (L2PcInstance partyMember : player.getParty().getMembers())
-		{
-			teleportPlayer(partyMember, ENTRY_POINT, world.getInstanceId());
-			partyMember.destroyItemByItemId("Quest", SEAL_BREAKER_5, 1, null, true);
-			world.addAllowed(partyMember.getObjectId());
-		}
-	}
-	
-	public void setReenterTime(InstanceWorld world)
-	{
-		if (world instanceof DPFWorld)
-		{
-			// Reenter time should be cleared every Wed and Sat at 6:30 AM, so we set next suitable
-			Calendar reenter;
-			Calendar now = Calendar.getInstance();
-			Calendar reenterPointWed = (Calendar) now.clone();
-			reenterPointWed.set(Calendar.AM_PM, Calendar.AM);
-			reenterPointWed.set(Calendar.MINUTE, RESET_MIN);
-			reenterPointWed.set(Calendar.HOUR_OF_DAY, RESET_HOUR);
-			reenterPointWed.set(Calendar.DAY_OF_WEEK, Calendar.WEDNESDAY);
-			Calendar reenterPointSat = (Calendar) reenterPointWed.clone();
-			reenterPointSat.set(Calendar.DAY_OF_WEEK, Calendar.SATURDAY);
-			
-			if (now.after(reenterPointSat))
-			{
-				reenterPointWed.add(Calendar.WEEK_OF_MONTH, 1);
-				reenter = (Calendar) reenterPointWed.clone();
+				player.destroyItemByItemId("Quest", SEAL_BREAKER_5, 1, null, true);
+				world.addAllowed(player.getObjectId());
 			}
 			else
 			{
-				reenter = (Calendar) reenterPointSat.clone();
-			}
-			
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_RESTRICTED);
-			sm.addInstanceName(world.getTemplateId());
-			// set instance reenter time for all allowed players
-			for (int objectId : world.getAllowed())
-			{
-				L2PcInstance player = L2World.getInstance().getPlayer(objectId);
-				if ((player != null) && player.isOnline())
+				for (L2PcInstance partyMember : player.getParty().getMembers())
 				{
-					InstanceManager.getInstance().setInstanceTime(objectId, world.getTemplateId(), reenter.getTimeInMillis());
-					player.sendPacket(sm);
+					teleportPlayer(partyMember, ENTRY_POINT, world.getInstanceId());
+					partyMember.destroyItemByItemId("Quest", SEAL_BREAKER_5, 1, null, true);
+					world.addAllowed(partyMember.getObjectId());
 				}
 			}
+		}
+		else
+		{
+			teleportPlayer(player, ENTRY_POINT, world.getInstanceId());
 		}
 	}
 }
