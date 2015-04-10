@@ -1470,9 +1470,8 @@ public final class CrystalCaverns extends AbstractInstance
 		return "";
 	}
 	
-	private void giveRewards(L2PcInstance player, int instanceId, int bossCry, boolean isBaylor)
+	private void giveRewards(L2PcInstance player, int instanceId, int bossCry, boolean isBaylor, L2Npc boss)
 	{
-		final int num = Math.max((int) Config.RATE_DEATH_DROP_CHANCE_MULTIPLIER, 1);
 		
 		L2Party party = player.getParty();
 		if (party != null)
@@ -1486,13 +1485,13 @@ public final class CrystalCaverns extends AbstractInstance
 						takeItems(partyMember, CONT_CRYSTAL, 1);
 						giveItems(partyMember, bossCry, 1);
 					}
-					if (getRandom(10) < 5)
+					if (getRandomBoolean())
 					{
-						giveItems(partyMember, WHITE_SEED, num);
+						giveItems(partyMember, WHITE_SEED, (long) (Config.getDropChanceRate(boss, WHITE_SEED) * Config.getDropAmountRate(boss, WHITE_SEED)));
 					}
 					else
 					{
-						giveItems(partyMember, BLACK_SEED, num);
+						giveItems(partyMember, BLACK_SEED, (long) (Config.getDropChanceRate(boss, BLACK_SEED) * Config.getDropAmountRate(boss, BLACK_SEED)));
 					}
 				}
 			}
@@ -1504,13 +1503,13 @@ public final class CrystalCaverns extends AbstractInstance
 				takeItems(player, CONT_CRYSTAL, 1);
 				giveItems(player, bossCry, 1);
 			}
-			if (getRandom(10) < 5)
+			if (getRandomBoolean())
 			{
-				giveItems(player, WHITE_SEED, num);
+				giveItems(player, WHITE_SEED, (long) (Config.getDropChanceRate(boss, WHITE_SEED) * Config.getDropAmountRate(boss, WHITE_SEED)));
 			}
 			else
 			{
-				giveItems(player, BLACK_SEED, num);
+				giveItems(player, BLACK_SEED, (long) (Config.getDropChanceRate(boss, BLACK_SEED) * Config.getDropAmountRate(boss, BLACK_SEED)));
 			}
 		}
 		
@@ -1548,7 +1547,7 @@ public final class CrystalCaverns extends AbstractInstance
 			{
 				InstanceManager.getInstance().getInstance(world.getInstanceId()).setDuration(300000);
 				addSpawn(32280, 144312, 154420, -11855, 0, false, 0, false, world.getInstanceId());
-				giveRewards(player, npc.getInstanceId(), BOSS_CRYSTAL_3, false);
+				giveRewards(player, npc.getInstanceId(), BOSS_CRYSTAL_3, false, npc);
 			}
 			else if ((world.getStatus() == 2) && world.keyKeepers.contains(npc))
 			{
@@ -1723,7 +1722,7 @@ public final class CrystalCaverns extends AbstractInstance
 					// something is wrong
 					return "";
 				}
-				giveRewards(player, npc.getInstanceId(), bossCry, false);
+				giveRewards(player, npc.getInstanceId(), bossCry, false, npc);
 			}
 			if (npc.getId() == ALARMID)
 			{
@@ -1743,7 +1742,7 @@ public final class CrystalCaverns extends AbstractInstance
 				Instance baylorInstance = InstanceManager.getInstance().getInstance(npc.getInstanceId());
 				baylorInstance.setDuration(300000);
 				this.startQuestTimer("spawn_oracle", 1000, npc, null);
-				giveRewards(player, npc.getInstanceId(), -1, true);
+				giveRewards(player, npc.getInstanceId(), -1, true, npc);
 			}
 		}
 		return "";
