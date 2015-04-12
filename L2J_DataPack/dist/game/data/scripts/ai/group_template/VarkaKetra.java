@@ -33,14 +33,13 @@ import quests.Q00616_MagicalPowerOfFirePart2.Q00616_MagicalPowerOfFirePart2;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.actor.L2Attackable;
-import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Varka Silenos Barracks and Ketra Orc Outpost AI
+ * Varka Silenos Barracks and Ketra Orc Outpost AI.
  * @author malyelfik
  */
 public class VarkaKetra extends AbstractNpcAI
@@ -56,6 +55,7 @@ public class VarkaKetra extends AbstractNpcAI
 		21331, // Ketra Orc Warrior
 		21332, // Ketra Orc Lieutenant
 		21334, // Ketra Orc Medium
+		21335, // Ketra Orc Elite Soldier
 		21336, // Ketra Orc White Captain
 		21338, // Ketra Orc Seer
 		21339, // Ketra Orc General
@@ -203,12 +203,11 @@ public class VarkaKetra extends AbstractNpcAI
 	@Override
 	public boolean onNpcHate(L2Attackable mob, L2PcInstance player, boolean isSummon)
 	{
-		return stopAttack(player, mob) ? false : super.onNpcHate(mob, player, isSummon);
-	}
-	
-	private final boolean stopAttack(L2PcInstance player, L2Character monster)
-	{
-		return (Util.contains(KETRA, monster.getId()) && hasAtLeastOneQuestItem(player, KETRA_MARKS)) || (Util.contains(VARKA, monster.getId()) && hasAtLeastOneQuestItem(player, VARKA_MARKS));
+		if (Util.contains(KETRA, mob.getId()))
+		{
+			return !hasAtLeastOneQuestItem(player, KETRA_MARKS);
+		}
+		return !hasAtLeastOneQuestItem(player, VARKA_MARKS);
 	}
 	
 	public static void main(String[] args)
