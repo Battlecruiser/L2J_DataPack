@@ -1014,7 +1014,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		adminReply.replace("%accuracy%", String.valueOf(player.getAccuracy()));
 		adminReply.replace("%evasion%", String.valueOf(player.getEvasionRate(null)));
 		adminReply.replace("%critical%", String.valueOf(player.getCriticalHit(null, null)));
-		adminReply.replace("%runspeed%", String.valueOf(player.getRunSpeed()));
+		adminReply.replace("%runspeed%", String.valueOf((int) player.getRunSpeed()));
 		adminReply.replace("%patkspd%", String.valueOf(player.getPAtkSpd()));
 		adminReply.replace("%matkspd%", String.valueOf(player.getMAtkSpd()));
 		adminReply.replace("%access%", player.getAccessLevel().getLevel() + " (" + player.getAccessLevel().getName() + ")");
