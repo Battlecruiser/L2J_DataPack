@@ -55,14 +55,7 @@ public final class Unsummon extends AbstractEffect
 				return true;
 			}
 		}
-		
 		return false;
-	}
-	
-	@Override
-	public boolean canStart(BuffInfo info)
-	{
-		return info.getEffected().isSummon();
 	}
 	
 	@Override
@@ -75,7 +68,6 @@ public final class Unsummon extends AbstractEffect
 	public void onStart(BuffInfo info)
 	{
 		final L2Summon summon = info.getEffected().getSummon();
-		
 		if (summon != null)
 		{
 			final L2PcInstance summonOwner = summon.getOwner();
