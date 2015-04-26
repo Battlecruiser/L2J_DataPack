@@ -24,6 +24,7 @@ import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.enums.PrivateStoreType;
 import com.l2jserver.gameserver.handler.IActionHandler;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
@@ -105,6 +106,12 @@ public class L2PcInstanceAction implements IActionHandler
 							activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 							activeChar.onActionRequest();
 						}
+						else
+						{
+							final Location destination = GeoData.getInstance().moveCheck(activeChar.getX(), activeChar.getY(), activeChar.getZ(), target.getX(), target.getY(), target.getZ(), activeChar.getInstanceId());
+							activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);
+							activeChar.onActionRequest();
+						}
 					}
 				}
 				else
@@ -114,6 +121,12 @@ public class L2PcInstanceAction implements IActionHandler
 					if (GeoData.getInstance().canSeeTarget(activeChar, target))
 					{
 						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, target);
+					}
+					else
+					{
+						final Location destination = GeoData.getInstance().moveCheck(activeChar.getX(), activeChar.getY(), activeChar.getZ(), target.getX(), target.getY(), target.getZ(), activeChar.getInstanceId());
+						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);
+						activeChar.onActionRequest();
 					}
 				}
 			}
