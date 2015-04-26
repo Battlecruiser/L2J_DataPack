@@ -18,6 +18,7 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.ai.CtrlIntention;
@@ -105,7 +106,17 @@ public final class Fear extends AbstractEffect
 			info.getEffected().setRunning();
 		}
 		
-		final Location destination = GeoData.getInstance().moveCheck(info.getEffected().getX(), info.getEffected().getY(), info.getEffected().getZ(), posX, posY, posZ, info.getEffected().getInstanceId());
+		// If pathfinding enabled the creature will go to the defined destination (retail like).
+		// Otherwise it will go to the nearest obstacle.
+		final Location destination;
+		if (Config.PATHFINDING > 0)
+		{
+			destination = new Location(posX, posY, posZ, info.getEffected().getInstanceId());
+		}
+		else
+		{
+			destination = GeoData.getInstance().moveCheck(info.getEffected().getX(), info.getEffected().getY(), info.getEffected().getZ(), posX, posY, posZ, info.getEffected().getInstanceId());
+		}
 		info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);
 	}
 }
