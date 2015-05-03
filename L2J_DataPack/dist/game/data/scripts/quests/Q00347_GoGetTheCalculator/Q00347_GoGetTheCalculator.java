@@ -206,6 +206,7 @@ public final class Q00347_GoGetTheCalculator extends Quest
 						{
 							htmltext = "30533-03.html";
 						}
+						break;
 					}
 					case SILVERA:
 					{
@@ -242,6 +243,7 @@ public final class Q00347_GoGetTheCalculator extends Quest
 								break;
 							}
 						}
+						break;
 					}
 				}
 				break;
