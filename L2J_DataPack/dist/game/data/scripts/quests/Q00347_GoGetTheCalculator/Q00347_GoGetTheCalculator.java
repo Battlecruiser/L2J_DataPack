@@ -20,6 +20,7 @@ package quests.Q00347_GoGetTheCalculator;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -42,6 +43,7 @@ public final class Q00347_GoGetTheCalculator extends Quest
 	private static final int GEMSTONE_BEAST = 20540;
 	// Reward
 	private static final int CALCULATOR = 4393;
+	private static final int ADENA = 1500;
 	// Misc
 	private static final int MIN_LVL = 12;
 	
@@ -92,7 +94,7 @@ public final class Q00347_GoGetTheCalculator extends Quest
 				{
 					takeItems(player, STOLEN_CALCULATOR, -1);
 					rewardItems(player, CALCULATOR, 1);
-					qs.exitQuest(false, true);
+					qs.exitQuest(true, true);
 					htmltext = event;
 				}
 				else
@@ -106,8 +108,8 @@ public final class Q00347_GoGetTheCalculator extends Quest
 				if (qs.isCond(6))
 				{
 					takeItems(player, STOLEN_CALCULATOR, -1);
-					giveAdena(player, 1000, true);
-					qs.exitQuest(false, true);
+					giveAdena(player, ADENA, true);
+					qs.exitQuest(true, true);
 					htmltext = event;
 				}
 				break;
@@ -125,7 +127,7 @@ public final class Q00347_GoGetTheCalculator extends Quest
 			{
 				if ((qs.isCond(2)) && (player.getAdena() > 100))
 				{
-					takeItems(player, 57, 100);
+					takeItems(player, Inventory.ADENA_ID, 100);
 					qs.setCond(3, true);
 					htmltext = event;
 				}
