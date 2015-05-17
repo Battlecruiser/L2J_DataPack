@@ -183,6 +183,7 @@ public final class HallOfSuffering extends AbstractNpcAI
 	// Misc
 	private static final int TEMPLATE_ID = 115;
 	private static final int MIN_LEVEL = 75;
+	private static final int MAX_LEVEL = 82;
 	private static final boolean debug = false;
 	
 	public HallOfSuffering()
@@ -219,7 +220,7 @@ public final class HallOfSuffering extends AbstractNpcAI
 		
 		for (L2PcInstance partyMember : party.getMembers())
 		{
-			if (partyMember.getLevel() < MIN_LEVEL)
+			if ((partyMember.getLevel() < MIN_LEVEL) || (partyMember.getLevel() > MAX_LEVEL))
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED);
 				sm.addPcName(partyMember);
