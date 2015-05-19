@@ -520,7 +520,7 @@ public final class Antharas extends AbstractNpcAI
 				}
 				else
 				{
-					player.sendMessage(getClass().getSimpleName() + ": You cant skip waiting time right now!");
+					player.sendMessage(getClass().getSimpleName() + ": You can't skip waiting time right now!");
 				}
 				break;
 			}
@@ -535,7 +535,7 @@ public final class Antharas extends AbstractNpcAI
 				}
 				else
 				{
-					player.sendMessage(getClass().getSimpleName() + ": You cant respawn antharas while antharas is alive!");
+					player.sendMessage(getClass().getSimpleName() + ": You can't respawn antharas while antharas is alive!");
 				}
 				break;
 			}
@@ -553,12 +553,12 @@ public final class Antharas extends AbstractNpcAI
 					}
 					if (player != null) // Player dont will be null just when is this event called from GM command
 					{
-						player.sendMessage(getClass().getSimpleName() + ": All minions has been deleted!");
+						player.sendMessage(getClass().getSimpleName() + ": All minions have been deleted!");
 					}
 				}
 				else if (player != null) // Player dont will be null just when is this event called from GM command
 				{
-					player.sendMessage(getClass().getSimpleName() + ": You cant despawn minions right now!");
+					player.sendMessage(getClass().getSimpleName() + ": You can't despawn minions right now!");
 				}
 				break;
 			}
@@ -594,7 +594,7 @@ public final class Antharas extends AbstractNpcAI
 				}
 				else
 				{
-					player.sendMessage(getClass().getSimpleName() + ": You cant abort fight right now!");
+					player.sendMessage(getClass().getSimpleName() + ": You can't abort fight right now!");
 				}
 				break;
 			}
