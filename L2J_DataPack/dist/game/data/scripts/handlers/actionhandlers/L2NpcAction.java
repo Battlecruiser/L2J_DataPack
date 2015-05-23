@@ -60,55 +60,55 @@ public class L2NpcAction implements IActionHandler
 	@Override
 	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
-		if (!((L2Npc) target).canTarget(activeChar))
+		final L2Npc npc = (L2Npc) target;
+		if (!npc.canTarget(activeChar))
 		{
 			return false;
 		}
-		activeChar.setLastFolkNPC((L2Npc) target);
+		activeChar.setLastFolkNPC(npc);
 		// Check if the L2PcInstance already target the L2Npc
-		if (target != activeChar.getTarget())
+		if (npc != activeChar.getTarget())
 		{
 			// Set the target of the L2PcInstance activeChar
-			activeChar.setTarget(target);
+			activeChar.setTarget(npc);
 			// Check if the activeChar is attackable (without a forced attack)
-			if (target.isAutoAttackable(activeChar))
+			if (npc.isAutoAttackable(activeChar))
 			{
-				((L2Npc) target).getAI(); // wake up ai
+				npc.getAI(); // wake up ai
 			}
 		}
 		else if (interact)
 		{
 			// Check if the activeChar is attackable (without a forced attack) and isn't dead
-			if (target.isAutoAttackable(activeChar) && !((L2Npc) target).isAlikeDead())
+			if (npc.isAutoAttackable(activeChar) && !npc.isAlikeDead())
 			{
-				if (GeoData.getInstance().canSeeTarget(activeChar, target))
+				if (GeoData.getInstance().canSeeTarget(activeChar, npc))
 				{
-					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, npc);
 				}
 				else
 				{
-					final Location destination = GeoData.getInstance().moveCheck(activeChar, target);
+					final Location destination = GeoData.getInstance().moveCheck(activeChar, npc);
 					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);
 				}
 			}
-			else if (!target.isAutoAttackable(activeChar))
+			else if (!npc.isAutoAttackable(activeChar))
 			{
-				if (GeoData.getInstance().canSeeTarget(activeChar, target))
+				if (!GeoData.getInstance().canSeeTarget(activeChar, npc))
 				{
-					final Location destination = GeoData.getInstance().moveCheck(activeChar, target);
+					final Location destination = GeoData.getInstance().moveCheck(activeChar, npc);
 					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);
 					return true;
 				}
 				
-				// Calculate the distance between the L2PcInstance and the L2Npc
-				if (!((L2Npc) target).canInteract(activeChar))
+				// Verifies if the NPC can interact with the player.
+				if (!npc.canInteract(activeChar))
 				{
 					// Notify the L2PcInstance AI with AI_INTENTION_INTERACT
-					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
+					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, npc);
 				}
 				else
 				{
-					final L2Npc npc = (L2Npc) target;
 					// Turn NPC to the player.
 					activeChar.sendPacket(new MoveToPawn(activeChar, npc, 100));
 					if (npc.hasRandomAnimation())
@@ -118,13 +118,13 @@ public class L2NpcAction implements IActionHandler
 					// Open a chat window on client with the text of the L2Npc
 					if (npc.isEventMob())
 					{
-						L2Event.showEventHtml(activeChar, String.valueOf(target.getObjectId()));
+						L2Event.showEventHtml(activeChar, String.valueOf(npc.getObjectId()));
 					}
 					else
 					{
 						if (npc.hasListener(EventType.ON_NPC_QUEST_START))
 						{
-							activeChar.setLastQuestNpcObject(target.getObjectId());
+							activeChar.setLastQuestNpcObject(npc.getObjectId());
 						}
 						if (npc.hasListener(EventType.ON_NPC_FIRST_TALK))
 						{
