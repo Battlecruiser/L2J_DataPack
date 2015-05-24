@@ -226,6 +226,7 @@ import quests.Q00231_TestOfTheMaestro.Q00231_TestOfTheMaestro;
 import quests.Q00232_TestOfTheLord.Q00232_TestOfTheLord;
 import quests.Q00233_TestOfTheWarSpirit.Q00233_TestOfTheWarSpirit;
 import quests.Q00235_MimirsElixir.Q00235_MimirsElixir;
+import quests.Q00236_SeedsOfChaos.Q00236_SeedsOfChaos;
 import quests.Q00237_WindsOfChange.Q00237_WindsOfChange;
 import quests.Q00238_SuccessFailureOfBusiness.Q00238_SuccessFailureOfBusiness;
 import quests.Q00239_WontYouJoinUs.Q00239_WontYouJoinUs;
@@ -702,6 +703,7 @@ public class QuestMasterHandler
 		Q00232_TestOfTheLord.class,
 		Q00233_TestOfTheWarSpirit.class,
 		Q00235_MimirsElixir.class,
+		Q00236_SeedsOfChaos.class,
 		Q00237_WindsOfChange.class,
 		Q00238_SuccessFailureOfBusiness.class,
 		Q00239_WontYouJoinUs.class,
