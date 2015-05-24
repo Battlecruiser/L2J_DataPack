@@ -42,6 +42,7 @@ import instances.LibraryOfSages.LibraryOfSages;
 import instances.MithrilMine.MithrilMine;
 import instances.MonasteryOfSilence1.MonasteryOfSilence1;
 import instances.NornilsGarden.NornilsGarden;
+import instances.NornilsGardenQuest.NornilsGardenQuest;
 import instances.PailakaDevilsLegacy.PailakaDevilsLegacy;
 import instances.PailakaSongOfIceAndFire.PailakaSongOfIceAndFire;
 import instances.SanctumOftheLordsOfDawn.SanctumOftheLordsOfDawn;
@@ -83,6 +84,7 @@ public final class InstanceLoader
 		MithrilMine.class,
 		MonasteryOfSilence1.class,
 		NornilsGarden.class,
+		NornilsGardenQuest.class,
 		PailakaDevilsLegacy.class,
 		PailakaSongOfIceAndFire.class,
 		SanctumOftheLordsOfDawn.class,
