@@ -37,7 +37,7 @@ public class Q00069_SagaOfTheTrickster extends AbstractSagaQuest
 			31270,
 			31282,
 			32228,
-			32237,
+			32263,
 			31646,
 			31649,
 			31653,
