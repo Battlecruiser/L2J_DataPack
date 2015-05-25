@@ -28,10 +28,12 @@ import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.data.xml.impl.DoorData;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
+import com.l2jserver.gameserver.instancemanager.MapRegionManager;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.TeleportWhereType;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -93,6 +95,7 @@ public final class Beleth extends AbstractNpcAI
 	private L2PcInstance _killer;
 	private int _allowedObjId;
 	private int _killedCount;
+	private long _lastAttack;
 	private final List<L2Npc> _minions = new CopyOnWriteArrayList<>();
 	
 	private Beleth()
@@ -372,11 +375,17 @@ public final class Beleth extends AbstractNpcAI
 					c.setIsImmobilized(false);
 				}
 				
+				_lastAttack = System.currentTimeMillis();
+				
+				startQuestTimer("CHECK_ATTACK", 60000, null, null);
+				
 				startQuestTimer("SPAWN25", 60000, null, null);
 				break;
 			}
 			case "SPAWN25":
 			{
+				_minions.clear();
+				
 				int a = 0;
 				for (int i = 0; i < 16; i++)
 				{
@@ -531,6 +540,33 @@ public final class Beleth extends AbstractNpcAI
 					c.enableAllSkills();
 					c.setIsInvul(false);
 					c.setIsImmobilized(false);
+				}
+				break;
+			}
+			case "CHECK_ATTACK":
+			{
+				if ((_lastAttack + 900000) < System.currentTimeMillis())
+				{
+					GrandBossManager.getInstance().setBossStatus(REAL_BELETH, ALIVE);
+					for (L2Character charInside : ZONE.getCharactersInside())
+					{
+						if (charInside != null)
+						{
+							if (charInside.isNpc())
+							{
+								charInside.deleteMe();
+							}
+							else if (charInside.isPlayer())
+							{
+								charInside.teleToLocation(MapRegionManager.getInstance().getTeleToLocation(charInside, TeleportWhereType.TOWN));
+							}
+						}
+					}
+					cancelQuestTimer("CHECK_ATTACK", null, null);
+				}
+				else
+				{
+					startQuestTimer("CHECK_ATTACK", 60000, null, null);
 				}
 				break;
 			}
@@ -718,6 +754,8 @@ public final class Beleth extends AbstractNpcAI
 	{
 		if (npc.getId() == REAL_BELETH)
 		{
+			cancelQuestTimer("CHECK_ATTACK", null, null);
+			
 			setBelethKiller(killer);
 			GrandBossManager.getInstance().setBossStatus(REAL_BELETH, DEAD);
 			final long respawnTime = (Config.BELETH_SPAWN_INTERVAL + getRandom(-Config.BELETH_SPAWN_RANDOM, Config.BELETH_SPAWN_RANDOM)) * 3600000;
@@ -749,7 +787,7 @@ public final class Beleth extends AbstractNpcAI
 			
 			startQuestTimer("SPAWN26", 1000, null, null);
 		}
-		else if ((npc.getId() == FAKE_BELETH) && (npc.getObjectId() == _allowedObjId))
+		else if (npc.getObjectId() == _allowedObjId)
 		{
 			deleteAll();
 			
