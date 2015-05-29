@@ -57,7 +57,7 @@ DROPLIST = {
 }
 
 def suscribe_members(st) :
-  clan=st.getPlayer().getClan().getId()
+  clan=st.getPlayer().getClanId()
   con=L2DatabaseFactory.getInstance().getConnection()
   offline=con.prepareStatement("SELECT charId FROM characters WHERE clanid=? AND online=0")
   offline.setInt(1, clan)
@@ -81,7 +81,7 @@ def suscribe_members(st) :
     pass
 
 def offlineMemberExit(st) :
-  clan=st.getPlayer().getClan().getClanId()
+  clan=st.getPlayer().getClanId()
   con=L2DatabaseFactory.getInstance().getConnection()
   offline=con.prepareStatement("DELETE FROM character_quests WHERE name = ? and charId IN (SELECT charId FROM characters WHERE clanId =? AND online=0")
   offline.setString(1, qn)
