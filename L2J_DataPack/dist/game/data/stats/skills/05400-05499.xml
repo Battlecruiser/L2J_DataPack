@@ -1263,7 +1263,7 @@
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="castRange" val="800" />
 		<set name="channelingSkillId" val="5106" />
-		<set name="channelingSkillId" val="5106" />
+		<set name="channelingTickInterval" val="2" />
 		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="1000" />
 		<set name="hitTime" val="25000" />
@@ -1276,6 +1276,9 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
+		<cond msgId="109">
+			<target npcId="32331" />
+		</cond>
 	</skill>
 	<skill id="5494" levels="1" name="Gust">
 		<!-- Confirmed CT2.5 -->
