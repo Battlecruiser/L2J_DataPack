@@ -150,6 +150,7 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 	
 	private synchronized void checkDoors(L2Npc npc, DNPWorld world)
 	{
+		world.countKill++;
 		switch (world.countKill)
 		{
 			case 4:
@@ -380,7 +381,6 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 		if (tmpworld instanceof DNPWorld)
 		{
 			final DNPWorld world = (DNPWorld) tmpworld;
-			world.countKill++;
 			checkDoors(npc, world);
 		}
 		
