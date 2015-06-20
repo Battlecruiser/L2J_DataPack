@@ -188,7 +188,7 @@ public final class HallOfSuffering extends AbstractNpcAI
 	
 	public HallOfSuffering()
 	{
-		super(HallOfSuffering.class.getSimpleName(), "gracia/instances/SeedOfInfinity/HallOfSuffering");
+		super(HallOfSuffering.class.getSimpleName(), "gracia/instances/SeedOfInfinity");
 		addStartNpc(MOUTHOFEKIMUS, TEPIOS);
 		addTalkId(MOUTHOFEKIMUS, TEPIOS);
 		addFirstTalkId(TEPIOS);
@@ -449,7 +449,7 @@ public final class HallOfSuffering extends AbstractNpcAI
 	
 	private String getPtLeaderText(L2PcInstance player, HSWorld world)
 	{
-		String htmltext = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "/data/scripts/instances/SeedOfInfinity/HallOfSuffering/32530-10.htm");
+		String htmltext = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "/data/scripts/gracia/instances/SeedOfInfinity/HallOfSuffering/32530-10.htm");
 		htmltext = htmltext.replaceAll("%ptLeader%", String.valueOf(world.ptLeaderName));
 		return htmltext;
 	}
