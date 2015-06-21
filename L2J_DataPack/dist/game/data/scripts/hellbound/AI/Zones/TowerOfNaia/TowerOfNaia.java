@@ -23,8 +23,10 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import ai.npc.AbstractNpcAI;
 
@@ -148,7 +150,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 	private L2MonsterInstance _lock;
 	private final L2Npc _controller;
 	private int _counter;
-	private int _despawnedSporesCount;
+	private final AtomicInteger _despawnedSporesCount = new AtomicInteger();
 	private final int[] _indexCount =
 	{
 		0,
@@ -159,7 +161,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 	
 	private final Map<Integer, Boolean> _activeRooms = new HashMap<>();
 	private final Map<Integer, List<L2Npc>> _spawns = new ConcurrentHashMap<>();
-	private final List<L2Npc> _sporeSpawn = new CopyOnWriteArrayList<>();
+	private final Set<L2Npc> _sporeSpawn = ConcurrentHashMap.newKeySet();
 	static
 	{
 		// Format: entrance_door, exit_door
@@ -348,16 +350,11 @@ public final class TowerOfNaia extends AbstractNpcAI
 	{
 		super(TowerOfNaia.class.getSimpleName(), "hellbound/AI/Zones");
 		addFirstTalkId(CONTROLLER);
-		addStartNpc(CONTROLLER);
-		addStartNpc(DWARVEN_GHOST);
-		addTalkId(CONTROLLER);
-		addTalkId(DWARVEN_GHOST);
+		addStartNpc(CONTROLLER, DWARVEN_GHOST);
+		addTalkId(CONTROLLER, DWARVEN_GHOST);
 		addAttackId(LOCK);
-		addKillId(LOCK);
-		addKillId(MUTATED_ELPY);
-		addSpawnId(MUTATED_ELPY);
-		addKillId(SPORE_BASIC);
-		addSpawnId(SPORE_BASIC);
+		addKillId(LOCK, MUTATED_ELPY, SPORE_BASIC);
+		addSpawnId(MUTATED_ELPY, SPORE_BASIC);
 		
 		for (int npcId = SPORE_FIRE; npcId <= SPORE_EARTH; npcId++)
 		{
@@ -381,9 +378,6 @@ public final class TowerOfNaia extends AbstractNpcAI
 		_lock = (L2MonsterInstance) addSpawn(LOCK, 16409, 244438, 11620, -1048, false, 0, false);
 		_controller = addSpawn(CONTROLLER, 16608, 244420, 11620, 31264, false, 0, false);
 		_counter = 90;
-		_despawnedSporesCount = 0;
-		_challengeState = 0;
-		_winIndex = -1;
 		initSporeChallenge();
 		spawnElpy();
 	}
@@ -436,34 +430,17 @@ public final class TowerOfNaia extends AbstractNpcAI
 			// Spores is not attacked too long - despawn them all, reinit values
 			if (_challengeState == STATE_SPORE_IDLE_TOO_LONG)
 			{
-				for (L2Npc spore : _sporeSpawn)
-				{
-					if ((spore != null) && !spore.isDead())
-					{
-						spore.deleteMe();
-					}
-				}
-				_sporeSpawn.clear();
+				removeSpores();
 				initSporeChallenge();
 			}
 			// Spores are moving to assembly point. Despawn all reached, check for reached spores count.
 			else if ((_challengeState == STATE_SPORE_CHALLENGE_SUCCESSFULL) && (_winIndex >= 0))
 			{
 				// Requirements are met, despawn all spores, spawn Epidos
-				if ((_despawnedSporesCount >= 10) || _sporeSpawn.isEmpty())
+				if ((_despawnedSporesCount.get() >= 10) || _sporeSpawn.isEmpty())
 				{
-					if (!_sporeSpawn.isEmpty())
-					{
-						for (L2Npc spore : _sporeSpawn)
-						{
-							if ((spore != null) && !spore.isDead())
-							{
-								spore.deleteMe();
-							}
-						}
-					}
-					_sporeSpawn.clear();
-					_despawnedSporesCount = 0;
+					removeSpores();
+					_despawnedSporesCount.set(0);
 					int[] coords = SPORES_MERGE_POSITION[_winIndex];
 					addSpawn(EPIDOSES[_winIndex], coords[0], coords[1], coords[2], 0, false, 0, false);
 					initSporeChallenge();
@@ -479,10 +456,9 @@ public final class TowerOfNaia extends AbstractNpcAI
 						{
 							spore.deleteMe();
 							it.remove();
-							_despawnedSporesCount++;
+							_despawnedSporesCount.incrementAndGet();
 						}
 					}
-					
 					startQuestTimer("despawn_total", 3000, null, null);
 				}
 			}
@@ -510,9 +486,9 @@ public final class TowerOfNaia extends AbstractNpcAI
 			
 			else if ((npcId >= SPORE_FIRE) && (npcId <= SPORE_EARTH))
 			{
-				_despawnedSporesCount++;
+				_despawnedSporesCount.incrementAndGet();
 				
-				if (_despawnedSporesCount < SELF_DESPAWN_LIMIT)
+				if (_despawnedSporesCount.get() < SELF_DESPAWN_LIMIT)
 				{
 					spawnOppositeSpore(npcId);
 				}
@@ -686,7 +662,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 			
 			if (_challengeState == STATE_SPORE_CHALLENGE_IN_PROGRESS)
 			{
-				_despawnedSporesCount--;
+				_despawnedSporesCount.decrementAndGet();
 				int sporeGroup = getSporeGroup(npcId);
 				
 				if (sporeGroup >= 0)
@@ -735,7 +711,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 					// index value was reached
 					{
 						_challengeState = STATE_SPORE_CHALLENGE_SUCCESSFULL;
-						_despawnedSporesCount = 0;
+						_despawnedSporesCount.set(0);
 						_winIndex = Arrays.binarySearch(ELEMENTS, npcId);
 						int[] coord = SPORES_MERGE_POSITION[_winIndex];
 						
@@ -829,7 +805,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 	
 	private void initSporeChallenge()
 	{
-		_despawnedSporesCount = 0;
+		_despawnedSporesCount.set(0);
 		_challengeState = 0;
 		_winIndex = -1;
 		_indexCount[0] = 0;
@@ -837,7 +813,6 @@ public final class TowerOfNaia extends AbstractNpcAI
 		ZoneManager.getInstance().getZoneById(200100).setEnabled(false);
 		ZoneManager.getInstance().getZoneById(200101).setEnabled(false);
 		ZoneManager.getInstance().getZoneById(200101).setEnabled(true);
-		
 	}
 	
 	private void markElpyRespawn()
@@ -947,6 +922,19 @@ public final class TowerOfNaia extends AbstractNpcAI
 				}
 			}
 		}
+	}
+	
+	private void removeSpores()
+	{
+		for (L2Npc spore : _sporeSpawn)
+		{
+			if ((spore != null) && !spore.isDead())
+			{
+				spore.deleteMe();
+			}
+		}
+		_sporeSpawn.clear();
+		cancelQuestTimers("despawn_spore");
 	}
 	
 	private class StopRoomTask implements Runnable
