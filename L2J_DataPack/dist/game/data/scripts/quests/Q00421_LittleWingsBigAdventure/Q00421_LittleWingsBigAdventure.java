@@ -89,6 +89,15 @@ public final class Q00421_LittleWingsBigAdventure extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
+		if ("DESPAWN_GUARDIAN".equals(event))
+		{
+			if (npc != null)
+			{
+				npc.deleteMe();
+			}
+			return super.onAdvEvent(event, npc, player);
+		}
+		
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
 		if (qs == null)
@@ -170,14 +179,6 @@ public final class Q00421_LittleWingsBigAdventure extends Quest
 			case "30747-10.html":
 			{
 				htmltext = event;
-				break;
-			}
-			case "DESPAWN_GUARDIAN":
-			{
-				if (npc != null)
-				{
-					npc.deleteMe();
-				}
 				break;
 			}
 		}

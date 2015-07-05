@@ -18,11 +18,8 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlEvent;
-import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.enums.Race;
-import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2DefenderInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2FortCommanderInstance;
@@ -32,7 +29,6 @@ import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
-import com.l2jserver.gameserver.util.Util;
 
 /**
  * Fear effect implementation.
@@ -40,8 +36,6 @@ import com.l2jserver.gameserver.util.Util;
  */
 public final class Fear extends AbstractEffect
 {
-	public static final int FEAR_RANGE = 500;
-	
 	public Fear(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
@@ -76,7 +70,7 @@ public final class Fear extends AbstractEffect
 	@Override
 	public boolean onActionTime(BuffInfo info)
 	{
-		fearAction(info, false);
+		info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_AFRAID, info.getEffector(), false);
 		return false;
 	}
 	
@@ -88,24 +82,6 @@ public final class Fear extends AbstractEffect
 			info.getEffected().abortCast();
 		}
 		
-		info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_AFRAID);
-		fearAction(info, true);
-	}
-	
-	private void fearAction(BuffInfo info, boolean start)
-	{
-		double radians = Math.toRadians(start ? Util.calculateAngleFrom(info.getEffector(), info.getEffected()) : Util.convertHeadingToDegree(info.getEffected().getHeading()));
-		
-		int posX = (int) (info.getEffected().getX() + (FEAR_RANGE * Math.cos(radians)));
-		int posY = (int) (info.getEffected().getY() + (FEAR_RANGE * Math.sin(radians)));
-		int posZ = info.getEffected().getZ();
-		
-		if (!info.getEffected().isPet())
-		{
-			info.getEffected().setRunning();
-		}
-		
-		final Location destination = GeoData.getInstance().moveCheck(info.getEffected().getX(), info.getEffected().getY(), info.getEffected().getZ(), posX, posY, posZ, info.getEffected().getInstanceId());
-		info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);
+		info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_AFRAID, info.getEffector(), true);
 	}
 }

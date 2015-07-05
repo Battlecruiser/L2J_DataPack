@@ -1227,7 +1227,7 @@ public final class Kamaloka extends AbstractInstance
 	 * @param index (0-18) index of the kamaloka in arrays
 	 * @return true if party allowed to enter
 	 */
-	private static final boolean checkConditions(L2PcInstance player, int index)
+	private static final boolean checkPartyConditions(L2PcInstance player, int index)
 	{
 		final L2Party party = player.getParty();
 		// player must be in party
@@ -1375,7 +1375,7 @@ public final class Kamaloka extends AbstractInstance
 			return;
 		}
 		// Creating new kamaloka instance
-		if (!checkConditions(player, index))
+		if (!checkPartyConditions(player, index))
 		{
 			return;
 		}

@@ -55,14 +55,7 @@ public final class Unsummon extends AbstractEffect
 				return true;
 			}
 		}
-		
 		return false;
-	}
-	
-	@Override
-	public boolean canStart(BuffInfo info)
-	{
-		return info.getEffected().isSummon();
 	}
 	
 	@Override

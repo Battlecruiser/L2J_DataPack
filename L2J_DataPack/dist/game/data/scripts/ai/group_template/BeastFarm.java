@@ -19,10 +19,11 @@
 package ai.group_template;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
-import javolution.util.FastMap;
 import quests.Q00020_BringUpWithLove.Q00020_BringUpWithLove;
 import ai.npc.AbstractNpcAI;
 
@@ -104,8 +105,8 @@ public final class BeastFarm extends AbstractNpcAI
 		18900
 	};
 	
-	private static Map<Integer, Integer> _FeedInfo = new FastMap<>();
-	private static Map<Integer, GrowthCapableMob> _GrowthCapableMobs = new FastMap<>();
+	private static final Map<Integer, Integer> FEED_INFO = new ConcurrentHashMap<>();
+	private static final Map<Integer, GrowthCapableMob> GROWTH_CAPABLE_MONSTERS = new HashMap<>();
 	private static List<TamedBeast> TAMED_BEAST_DATA = new ArrayList<>();
 	
 	private BeastFarm()
@@ -124,23 +125,23 @@ public final class BeastFarm extends AbstractNpcAI
 		temp.addNpcIdForSkillId(SKILL_BLESSED_CRYSTAL_SPICE, 18869);
 		temp.addNpcIdForSkillId(SKILL_SGRADE_GOLDEN_SPICE, 18878);
 		temp.addNpcIdForSkillId(SKILL_SGRADE_CRYSTAL_SPICE, 18879);
-		_GrowthCapableMobs.put(18873, temp);
+		GROWTH_CAPABLE_MONSTERS.put(18873, temp);
 		
 		temp = new GrowthCapableMob(40, 1, 18869);
 		temp.addNpcIdForSkillId(SKILL_GOLDEN_SPICE, 18876);
-		_GrowthCapableMobs.put(18874, temp);
+		GROWTH_CAPABLE_MONSTERS.put(18874, temp);
 		
 		temp = new GrowthCapableMob(40, 1, 18869);
 		temp.addNpcIdForSkillId(SKILL_CRYSTAL_SPICE, 18877);
-		_GrowthCapableMobs.put(18875, temp);
+		GROWTH_CAPABLE_MONSTERS.put(18875, temp);
 		
 		temp = new GrowthCapableMob(25, 2, 18869);
 		temp.addNpcIdForSkillId(SKILL_GOLDEN_SPICE, 18878);
-		_GrowthCapableMobs.put(18876, temp);
+		GROWTH_CAPABLE_MONSTERS.put(18876, temp);
 		
 		temp = new GrowthCapableMob(25, 2, 18869);
 		temp.addNpcIdForSkillId(SKILL_CRYSTAL_SPICE, 18879);
-		_GrowthCapableMobs.put(18877, temp);
+		GROWTH_CAPABLE_MONSTERS.put(18877, temp);
 		
 		// Cougar
 		temp = new GrowthCapableMob(100, 0, 18870);
@@ -150,23 +151,23 @@ public final class BeastFarm extends AbstractNpcAI
 		temp.addNpcIdForSkillId(SKILL_BLESSED_CRYSTAL_SPICE, 18870);
 		temp.addNpcIdForSkillId(SKILL_SGRADE_GOLDEN_SPICE, 18885);
 		temp.addNpcIdForSkillId(SKILL_SGRADE_CRYSTAL_SPICE, 18886);
-		_GrowthCapableMobs.put(18880, temp);
+		GROWTH_CAPABLE_MONSTERS.put(18880, temp);
 		
 		temp = new GrowthCapableMob(40, 1, 18870);
 		temp.addNpcIdForSkillId(SKILL_GOLDEN_SPICE, 18883);
-		_GrowthCapableMobs.put(18881, temp);
+		GROWTH_CAPABLE_MONSTERS.put(18881, temp);
 		
 		temp = new GrowthCapableMob(40, 1, 18870);
 		temp.addNpcIdForSkillId(SKILL_CRYSTAL_SPICE, 18884);
-		_GrowthCapableMobs.put(18882, temp);
+		GROWTH_CAPABLE_MONSTERS.put(18882, temp);
 		
 		temp = new GrowthCapableMob(25, 2, 18870);
 		temp.addNpcIdForSkillId(SKILL_GOLDEN_SPICE, 18885);
-		_GrowthCapableMobs.put(18883, temp);
+		GROWTH_CAPABLE_MONSTERS.put(18883, temp);
 		
 		temp = new GrowthCapableMob(25, 2, 18870);
 		temp.addNpcIdForSkillId(SKILL_CRYSTAL_SPICE, 18886);
-		_GrowthCapableMobs.put(18884, temp);
+		GROWTH_CAPABLE_MONSTERS.put(18884, temp);
 		
 		// Buffalo
 		temp = new GrowthCapableMob(100, 0, 18871);
@@ -176,23 +177,23 @@ public final class BeastFarm extends AbstractNpcAI
 		temp.addNpcIdForSkillId(SKILL_BLESSED_CRYSTAL_SPICE, 18871);
 		temp.addNpcIdForSkillId(SKILL_SGRADE_GOLDEN_SPICE, 18892);
 		temp.addNpcIdForSkillId(SKILL_SGRADE_CRYSTAL_SPICE, 18893);
-		_GrowthCapableMobs.put(18887, temp);
+		GROWTH_CAPABLE_MONSTERS.put(18887, temp);
 		
 		temp = new GrowthCapableMob(40, 1, 18871);
 		temp.addNpcIdForSkillId(SKILL_GOLDEN_SPICE, 18890);
-		_GrowthCapableMobs.put(18888, temp);
+		GROWTH_CAPABLE_MONSTERS.put(18888, temp);
 		
 		temp = new GrowthCapableMob(40, 1, 18871);
 		temp.addNpcIdForSkillId(SKILL_CRYSTAL_SPICE, 18891);
-		_GrowthCapableMobs.put(18889, temp);
+		GROWTH_CAPABLE_MONSTERS.put(18889, temp);
 		
 		temp = new GrowthCapableMob(25, 2, 18871);
 		temp.addNpcIdForSkillId(SKILL_GOLDEN_SPICE, 18892);
-		_GrowthCapableMobs.put(18890, temp);
+		GROWTH_CAPABLE_MONSTERS.put(18890, temp);
 		
 		temp = new GrowthCapableMob(25, 2, 18871);
 		temp.addNpcIdForSkillId(SKILL_CRYSTAL_SPICE, 18893);
-		_GrowthCapableMobs.put(18891, temp);
+		GROWTH_CAPABLE_MONSTERS.put(18891, temp);
 		
 		// Grendel
 		temp = new GrowthCapableMob(100, 0, 18872);
@@ -202,23 +203,23 @@ public final class BeastFarm extends AbstractNpcAI
 		temp.addNpcIdForSkillId(SKILL_BLESSED_CRYSTAL_SPICE, 18872);
 		temp.addNpcIdForSkillId(SKILL_SGRADE_GOLDEN_SPICE, 18899);
 		temp.addNpcIdForSkillId(SKILL_SGRADE_CRYSTAL_SPICE, 18900);
-		_GrowthCapableMobs.put(18894, temp);
+		GROWTH_CAPABLE_MONSTERS.put(18894, temp);
 		
 		temp = new GrowthCapableMob(40, 1, 18872);
 		temp.addNpcIdForSkillId(SKILL_GOLDEN_SPICE, 18897);
-		_GrowthCapableMobs.put(18895, temp);
+		GROWTH_CAPABLE_MONSTERS.put(18895, temp);
 		
 		temp = new GrowthCapableMob(40, 1, 18872);
 		temp.addNpcIdForSkillId(SKILL_CRYSTAL_SPICE, 18898);
-		_GrowthCapableMobs.put(18896, temp);
+		GROWTH_CAPABLE_MONSTERS.put(18896, temp);
 		
 		temp = new GrowthCapableMob(25, 2, 18872);
 		temp.addNpcIdForSkillId(SKILL_GOLDEN_SPICE, 18899);
-		_GrowthCapableMobs.put(18897, temp);
+		GROWTH_CAPABLE_MONSTERS.put(18897, temp);
 		
 		temp = new GrowthCapableMob(25, 2, 18872);
 		temp.addNpcIdForSkillId(SKILL_CRYSTAL_SPICE, 18900);
-		_GrowthCapableMobs.put(18898, temp);
+		GROWTH_CAPABLE_MONSTERS.put(18898, temp);
 		
 		// Tamed beasts data
 		TAMED_BEAST_DATA.add(new TamedBeast("%name% of Focus", new SkillHolder(6432, 1), new SkillHolder(6668, 1)));
@@ -232,11 +233,11 @@ public final class BeastFarm extends AbstractNpcAI
 	public void spawnNext(L2Npc npc, L2PcInstance player, int nextNpcId, int food)
 	{
 		// remove the feedinfo of the mob that got despawned, if any
-		if (_FeedInfo.containsKey(npc.getObjectId()))
+		if (FEED_INFO.containsKey(npc.getObjectId()))
 		{
-			if (_FeedInfo.get(npc.getObjectId()) == player.getObjectId())
+			if (FEED_INFO.get(npc.getObjectId()) == player.getObjectId())
 			{
-				_FeedInfo.remove(npc.getObjectId());
+				FEED_INFO.remove(npc.getObjectId());
 			}
 		}
 		// despawn the old mob
@@ -289,7 +290,7 @@ public final class BeastFarm extends AbstractNpcAI
 			L2Attackable nextNpc = (L2Attackable) addSpawn(nextNpcId, npc);
 			
 			// register the player in the feedinfo for the mob that just spawned
-			_FeedInfo.put(nextNpc.getObjectId(), player.getObjectId());
+			FEED_INFO.put(nextNpc.getObjectId(), player.getObjectId());
 			nextNpc.setRunning();
 			nextNpc.addDamageHate(player, 0, 99999);
 			nextNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
@@ -319,19 +320,19 @@ public final class BeastFarm extends AbstractNpcAI
 		// first gather some values on local variables
 		int objectId = npc.getObjectId();
 		int growthLevel = 3; // if a mob is in FEEDABLE_BEASTS but not in _GrowthCapableMobs, then it's at max growth (3)
-		if (_GrowthCapableMobs.containsKey(npcId))
+		if (GROWTH_CAPABLE_MONSTERS.containsKey(npcId))
 		{
-			growthLevel = _GrowthCapableMobs.get(npcId).getGrowthLevel();
+			growthLevel = GROWTH_CAPABLE_MONSTERS.get(npcId).getGrowthLevel();
 		}
 		
 		// prevent exploit which allows 2 players to simultaneously raise the same 0-growth beast
 		// If the mob is at 0th level (when it still listens to all feeders) lock it to the first feeder!
-		if ((growthLevel == 0) && _FeedInfo.containsKey(objectId))
+		if ((growthLevel == 0) && FEED_INFO.containsKey(objectId))
 		{
 			return super.onSkillSee(npc, caster, skill, targets, isSummon);
 		}
 		
-		_FeedInfo.put(objectId, caster.getObjectId());
+		FEED_INFO.put(objectId, caster.getObjectId());
 		
 		// display the social action of the beast eating the food.
 		npc.broadcastSocialAction(2);
@@ -347,22 +348,22 @@ public final class BeastFarm extends AbstractNpcAI
 		}
 		
 		// if this pet can't grow, it's all done.
-		if (_GrowthCapableMobs.containsKey(npcId))
+		if (GROWTH_CAPABLE_MONSTERS.containsKey(npcId))
 		{
 			// do nothing if this mob doesn't eat the specified food (food gets consumed but has no effect).
-			int newNpcId = _GrowthCapableMobs.get(npcId).getLeveledNpcId(skillId);
+			int newNpcId = GROWTH_CAPABLE_MONSTERS.get(npcId).getLeveledNpcId(skillId);
 			if (newNpcId == -1)
 			{
 				if (growthLevel == 0)
 				{
-					_FeedInfo.remove(objectId);
+					FEED_INFO.remove(objectId);
 					npc.setRunning();
 					((L2Attackable) npc).addDamageHate(caster, 0, 1);
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, caster);
 				}
 				return super.onSkillSee(npc, caster, skill, targets, isSummon);
 			}
-			else if ((growthLevel > 0) && (_FeedInfo.get(objectId) != caster.getObjectId()))
+			else if ((growthLevel > 0) && (FEED_INFO.get(objectId) != caster.getObjectId()))
 			{
 				// check if this is the same player as the one who raised it from growth 0.
 				// if no, then do not allow a chance to raise the pet (food gets consumed but has no effect).
@@ -382,9 +383,9 @@ public final class BeastFarm extends AbstractNpcAI
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		// remove the feedinfo of the mob that got killed, if any
-		if (_FeedInfo.containsKey(npc.getObjectId()))
+		if (FEED_INFO.containsKey(npc.getObjectId()))
 		{
-			_FeedInfo.remove(npc.getObjectId());
+			FEED_INFO.remove(npc.getObjectId());
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
@@ -395,7 +396,7 @@ public final class BeastFarm extends AbstractNpcAI
 		private final int _chance;
 		private final int _growthLevel;
 		private final int _tameNpcId;
-		private final Map<Integer, Integer> _skillSuccessNpcIdList = new FastMap<>();
+		private final Map<Integer, Integer> _skillSuccessNpcIdList = new HashMap<>();
 		
 		public GrowthCapableMob(int chance, int growthLevel, int tameNpcId)
 		{

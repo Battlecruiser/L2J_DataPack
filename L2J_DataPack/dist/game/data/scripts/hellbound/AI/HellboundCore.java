@@ -41,7 +41,7 @@ public final class HellboundCore extends AbstractNpcAI
 	public HellboundCore()
 	{
 		super(HellboundCore.class.getSimpleName(), "hellbound/AI");
-		addSpawnId(HELLBOUND_CORE);
+		addSpawnId(HELLBOUND_CORE, NAIA);
 	}
 	
 	@Override
@@ -51,7 +51,7 @@ public final class HellboundCore extends AbstractNpcAI
 		{
 			for (L2Character naia : npc.getKnownList().getKnownCharactersInRadius(900))
 			{
-				if ((naia != null) && naia.isMonster() && (naia.getId() == NAIA) && !naia.isDead())
+				if ((naia != null) && naia.isMonster() && (naia.getId() == NAIA) && !naia.isDead() && !naia.isChanneling())
 				{
 					naia.setTarget(npc);
 					naia.doSimultaneousCast(BEAM.getSkill());
@@ -65,7 +65,15 @@ public final class HellboundCore extends AbstractNpcAI
 	@Override
 	public final String onSpawn(L2Npc npc)
 	{
-		startQuestTimer("cast", 10000, npc, null);
+		if (npc.getId() == NAIA)
+		{
+			npc.setIsNoRndWalk(true);
+		}
+		else
+		{
+			startQuestTimer("cast", 10000, npc, null);
+		}
+		
 		return super.onSpawn(npc);
 	}
 }

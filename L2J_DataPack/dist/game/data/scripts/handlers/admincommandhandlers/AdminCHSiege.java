@@ -292,8 +292,7 @@ public final class AdminCHSiege implements IAdminCommandHandler
 			}
 			else
 			{
-				ClanHallSiegeEngine siegable = hall.getSiege();
-				siegable.getAttackers().clear();
+				hall.getSiege().getAttackers().clear();
 			}
 		}
 		else if (split[0].equals(COMMANDS[7]))

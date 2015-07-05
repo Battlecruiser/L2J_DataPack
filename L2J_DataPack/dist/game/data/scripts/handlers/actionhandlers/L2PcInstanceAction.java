@@ -24,7 +24,7 @@ import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.enums.PrivateStoreType;
 import com.l2jserver.gameserver.handler.IActionHandler;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -32,6 +32,8 @@ import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 
 public class L2PcInstanceAction implements IActionHandler
 {
+	private static final int CURSED_WEAPON_VICTIM_MIN_LEVEL = 21;
+	
 	/**
 	 * Manage actions when a player click on this L2PcInstance.<BR>
 	 * <BR>
@@ -82,38 +84,48 @@ public class L2PcInstanceAction implements IActionHandler
 		}
 		else if (interact)
 		{
+			final L2PcInstance player = target.getActingPlayer();
 			// Check if this L2PcInstance has a Private Store
-			if (((L2PcInstance) target).getPrivateStoreType() != PrivateStoreType.NONE)
+			if (player.getPrivateStoreType() != PrivateStoreType.NONE)
 			{
-				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
+				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, player);
 			}
 			else
 			{
 				// Check if this L2PcInstance is autoAttackable
-				if (target.isAutoAttackable(activeChar))
+				if (player.isAutoAttackable(activeChar))
 				{
-					// activeChar with lvl < 21 can't attack a cursed weapon holder
-					// And a cursed weapon holder can't attack activeChars with lvl < 21
-					if ((((L2PcInstance) target).isCursedWeaponEquipped() && (activeChar.getLevel() < 21)) || (activeChar.isCursedWeaponEquipped() && (((L2Character) target).getLevel() < 21)))
+					if ((player.isCursedWeaponEquipped() && (activeChar.getLevel() < CURSED_WEAPON_VICTIM_MIN_LEVEL)) //
+						|| (activeChar.isCursedWeaponEquipped() && (player.getLevel() < CURSED_WEAPON_VICTIM_MIN_LEVEL)))
 					{
 						activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 					}
 					else
 					{
-						if (GeoData.getInstance().canSeeTarget(activeChar, target))
+						if (GeoData.getInstance().canSeeTarget(activeChar, player))
 						{
-							activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
-							activeChar.onActionRequest();
+							activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 						}
+						else
+						{
+							final Location destination = GeoData.getInstance().moveCheck(activeChar, player);
+							activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);
+						}
+						activeChar.onActionRequest();
 					}
 				}
 				else
 				{
 					// This Action Failed packet avoids activeChar getting stuck when clicking three or more times
 					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-					if (GeoData.getInstance().canSeeTarget(activeChar, target))
+					if (GeoData.getInstance().canSeeTarget(activeChar, player))
 					{
-						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, target);
+						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
+					}
+					else
+					{
+						final Location destination = GeoData.getInstance().moveCheck(activeChar, player);
+						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);
 					}
 				}
 			}

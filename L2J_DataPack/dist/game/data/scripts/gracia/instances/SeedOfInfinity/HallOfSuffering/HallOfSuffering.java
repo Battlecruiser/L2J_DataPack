@@ -183,11 +183,12 @@ public final class HallOfSuffering extends AbstractNpcAI
 	// Misc
 	private static final int TEMPLATE_ID = 115;
 	private static final int MIN_LEVEL = 75;
+	private static final int MAX_LEVEL = 82;
 	private static final boolean debug = false;
 	
 	public HallOfSuffering()
 	{
-		super(HallOfSuffering.class.getSimpleName(), "gracia/instances/SeedOfInfinity/HallOfSuffering");
+		super(HallOfSuffering.class.getSimpleName(), "gracia/instances/SeedOfInfinity");
 		addStartNpc(MOUTHOFEKIMUS, TEPIOS);
 		addTalkId(MOUTHOFEKIMUS, TEPIOS);
 		addFirstTalkId(TEPIOS);
@@ -219,7 +220,7 @@ public final class HallOfSuffering extends AbstractNpcAI
 		
 		for (L2PcInstance partyMember : party.getMembers())
 		{
-			if (partyMember.getLevel() < MIN_LEVEL)
+			if ((partyMember.getLevel() < MIN_LEVEL) || (partyMember.getLevel() > MAX_LEVEL))
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
 				sm.addPcName(partyMember);
@@ -448,7 +449,7 @@ public final class HallOfSuffering extends AbstractNpcAI
 	
 	private String getPtLeaderText(L2PcInstance player, HSWorld world)
 	{
-		String htmltext = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "/data/scripts/instances/SeedOfInfinity/HallOfSuffering/32530-10.htm");
+		String htmltext = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "/data/scripts/gracia/instances/SeedOfInfinity/HallOfSuffering/32530-10.htm");
 		htmltext = htmltext.replaceAll("%ptLeader%", String.valueOf(world.ptLeaderName));
 		return htmltext;
 	}

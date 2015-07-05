@@ -19,8 +19,8 @@
 package ai.individual;
 
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
-import javolution.util.FastList;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
@@ -81,7 +81,7 @@ public final class QueenAnt extends AbstractNpcAI
 	
 	private L2MonsterInstance _queen = null;
 	private L2MonsterInstance _larva = null;
-	private final List<L2MonsterInstance> _nurses = new FastList<>(5);
+	private final List<L2MonsterInstance> _nurses = new CopyOnWriteArrayList<>();
 	
 	private QueenAnt()
 	{

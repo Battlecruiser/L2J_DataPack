@@ -18,15 +18,16 @@
  */
 package hellbound.AI.Zones.TullyWorkshop;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 
-import javolution.util.FastList;
-import javolution.util.FastMap;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
@@ -111,8 +112,8 @@ public final class TullyWorkshop extends AbstractNpcAI
 		22383
 	};
 	
-	private static final Map<Integer, int[]> TULLY_DOORLIST = new FastMap<>();
-	private static final Map<Integer, Location[]> TELE_COORDS = new FastMap<>();
+	private static final Map<Integer, int[]> TULLY_DOORLIST = new HashMap<>();
+	private static final Map<Integer, Location[]> TELE_COORDS = new HashMap<>();
 	
 	protected int countdownTime;
 	private int nextServantIdx = 0;
@@ -125,14 +126,13 @@ public final class TullyWorkshop extends AbstractNpcAI
 	protected ScheduledFuture<?> _countdown = null;
 	
 	// NPC's, spawned after Tully's death are stored here
-	protected static List<L2Npc> postMortemSpawn = new FastList<>();
-	// TODO: Zoey76: Not thread-safe, probably will lead to problems.
-	protected static Set<Integer> brokenContraptions = new HashSet<>();
+	protected static List<L2Npc> postMortemSpawn = new ArrayList<>();
+	protected static Set<Integer> brokenContraptions = ConcurrentHashMap.newKeySet();
 	protected static Set<Integer> rewardedContraptions = new HashSet<>();
 	protected static Set<Integer> talkedContraptions = new HashSet<>();
 	
-	private final List<L2MonsterInstance> spawnedFollowers = new FastList<>();
-	private final List<L2MonsterInstance> spawnedFollowerMinions = new FastList<>();
+	private final List<L2MonsterInstance> spawnedFollowers = new ArrayList<>();
+	private final List<L2MonsterInstance> spawnedFollowerMinions = new ArrayList<>();
 	private L2Npc spawnedAgent = null;
 	private L2Spawn pillarSpawn = null;
 	

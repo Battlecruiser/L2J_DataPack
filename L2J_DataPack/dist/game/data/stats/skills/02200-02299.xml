@@ -1885,13 +1885,14 @@
 	<skill id="2286" levels="6" name="Scroll: Recovery">
 		<!-- Confirmed CT2.5 -->
 		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;85 </table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<table name="#itemConsumeId"> 8594 8595 8596 8597 8598 8599 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="simultaneousCast" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>

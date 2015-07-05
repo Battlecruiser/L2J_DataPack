@@ -1572,8 +1572,11 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
+			<effect name="RunAway">
+				<param power="40" />
+				<param time="20" />
+			</effect>
 			<effect name="Fear" />
-			<!-- FIXME: We need an instant effect that will work only vs monsters and fear them with 40% chance for 20 seconds here -->
 		</for>
 	</skill>
 	<skill id="5174" levels="15" name="Poison">

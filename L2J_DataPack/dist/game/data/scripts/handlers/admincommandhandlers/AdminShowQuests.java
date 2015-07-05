@@ -23,8 +23,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.logging.Logger;
 
-import javolution.text.TextBuilder;
-
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
@@ -158,7 +156,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 	
 	private static void showFirstQuestMenu(L2PcInstance target, L2PcInstance actor)
 	{
-		TextBuilder replyMSG = new TextBuilder("<html><body><table width=270><tr><td width=45><button value=\"Main\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=180><center>Player: " + target.getName() + "</center></td><td width=45><button value=\"Back\" action=\"bypass -h admin_admin6\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table>");
+		StringBuilder replyMSG = new StringBuilder("<html><body><table width=270><tr><td width=45><button value=\"Main\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=180><center>Player: " + target.getName() + "</center></td><td width=45><button value=\"Back\" action=\"bypass -h admin_admin6\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table>");
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		int ID = target.getObjectId();
 		
@@ -182,7 +180,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 			PreparedStatement req;
 			int ID = target.getObjectId();
 			
-			TextBuilder replyMSG = new TextBuilder("<html><body>");
+			StringBuilder replyMSG = new StringBuilder("<html><body>");
 			final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 			
 			switch (val[0])

@@ -49,12 +49,6 @@ public final class TransferHate extends AbstractEffect
 	}
 	
 	@Override
-	public boolean canStart(BuffInfo info)
-	{
-		return Util.checkIfInRange(info.getSkill().getEffectRange(), info.getEffector(), info.getEffected(), true);
-	}
-	
-	@Override
 	public boolean isInstant()
 	{
 		return true;
@@ -63,6 +57,11 @@ public final class TransferHate extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
+		if (!Util.checkIfInRange(info.getSkill().getEffectRange(), info.getEffector(), info.getEffected(), true))
+		{
+			return;
+		}
+		
 		for (L2Character obj : info.getEffector().getKnownList().getKnownCharactersInRadius(info.getSkill().getAffectRange()))
 		{
 			if ((obj == null) || !obj.isAttackable() || obj.isDead())

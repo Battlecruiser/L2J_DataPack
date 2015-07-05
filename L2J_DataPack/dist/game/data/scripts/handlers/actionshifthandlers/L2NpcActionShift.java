@@ -85,7 +85,7 @@ public class L2NpcActionShift implements IActionShiftHandler
 			html.replace("%accu%", String.valueOf(((L2Character) target).getAccuracy()));
 			html.replace("%evas%", String.valueOf(((L2Character) target).getEvasionRate(null)));
 			html.replace("%crit%", String.valueOf(((L2Character) target).getCriticalHit(null, null)));
-			html.replace("%rspd%", String.valueOf(((L2Character) target).getRunSpeed()));
+			html.replace("%rspd%", String.valueOf((int) ((L2Character) target).getRunSpeed()));
 			html.replace("%aspd%", String.valueOf(((L2Character) target).getPAtkSpd()));
 			html.replace("%cspd%", String.valueOf(((L2Character) target).getMAtkSpd()));
 			html.replace("%atkType%", String.valueOf(((L2Character) target).getTemplate().getBaseAttackType()));

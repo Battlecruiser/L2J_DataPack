@@ -88,6 +88,7 @@ import quests.Q00195_SevenSignsSecretRitualOfThePriests.Q00195_SevenSignsSecretR
 import quests.Q00196_SevenSignsSealOfTheEmperor.Q00196_SevenSignsSealOfTheEmperor;
 import quests.Q00197_SevenSignsTheSacredBookOfSeal.Q00197_SevenSignsTheSacredBookOfSeal;
 import quests.Q00198_SevenSignsEmbryo.Q00198_SevenSignsEmbryo;
+import quests.Q00236_SeedsOfChaos.Q00236_SeedsOfChaos;
 import quests.Q00237_WindsOfChange.Q00237_WindsOfChange;
 import quests.Q00238_SuccessFailureOfBusiness.Q00238_SuccessFailureOfBusiness;
 import quests.Q00239_WontYouJoinUs.Q00239_WontYouJoinUs;
@@ -101,6 +102,7 @@ import quests.Q00307_ControlDeviceOfTheGiants.Q00307_ControlDeviceOfTheGiants;
 import quests.Q00310_OnlyWhatRemains.Q00310_OnlyWhatRemains;
 import quests.Q00326_VanquishRemnants.Q00326_VanquishRemnants;
 import quests.Q00333_HuntOfTheBlackLion.Q00333_HuntOfTheBlackLion;
+import quests.Q00337_AudienceWithTheLandDragon.Q00337_AudienceWithTheLandDragon;
 import quests.Q00350_EnhanceYourWeapon.Q00350_EnhanceYourWeapon;
 import quests.Q00357_WarehouseKeepersAmbition.Q00357_WarehouseKeepersAmbition;
 import quests.Q00359_ForASleeplessDeadman.Q00359_ForASleeplessDeadman;
@@ -112,6 +114,7 @@ import quests.Q00381_LetsBecomeARoyalMember.Q00381_LetsBecomeARoyalMember;
 import quests.Q00382_KailsMagicCoin.Q00382_KailsMagicCoin;
 import quests.Q00420_LittleWing.Q00420_LittleWing;
 import quests.Q00421_LittleWingsBigAdventure.Q00421_LittleWingsBigAdventure;
+import quests.Q00422_RepentYourSins.Q00422_RepentYourSins;
 import quests.Q00426_QuestForFishingShot.Q00426_QuestForFishingShot;
 import quests.Q00431_WeddingMarch.Q00431_WeddingMarch;
 import quests.Q00432_BirthdayPartySong.Q00432_BirthdayPartySong;
@@ -286,6 +289,7 @@ public class QuestMasterHandler
 		Q00196_SevenSignsSealOfTheEmperor.class,
 		Q00197_SevenSignsTheSacredBookOfSeal.class,
 		Q00198_SevenSignsEmbryo.class,
+		Q00236_SeedsOfChaos.class,
 		Q00237_WindsOfChange.class,
 		Q00238_SuccessFailureOfBusiness.class,
 		Q00239_WontYouJoinUs.class,
@@ -299,6 +303,7 @@ public class QuestMasterHandler
 		Q00310_OnlyWhatRemains.class,
 		Q00326_VanquishRemnants.class,
 		Q00333_HuntOfTheBlackLion.class,
+		Q00337_AudienceWithTheLandDragon.class,
 		Q00350_EnhanceYourWeapon.class,
 		Q00357_WarehouseKeepersAmbition.class,
 		Q00359_ForASleeplessDeadman.class,
@@ -310,6 +315,7 @@ public class QuestMasterHandler
 		Q00382_KailsMagicCoin.class,
 		Q00420_LittleWing.class,
 		Q00421_LittleWingsBigAdventure.class,
+		Q00422_RepentYourSins.class,
 		Q00426_QuestForFishingShot.class,
 		Q00431_WeddingMarch.class,
 		Q00432_BirthdayPartySong.class,

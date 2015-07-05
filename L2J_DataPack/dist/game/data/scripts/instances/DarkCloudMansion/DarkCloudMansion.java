@@ -19,14 +19,16 @@
 package instances.DarkCloudMansion;
 
 import instances.AbstractInstance;
-import javolution.util.FastList;
-import javolution.util.FastMap;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
@@ -45,7 +47,7 @@ public final class DarkCloudMansion extends AbstractInstance
 {
 	protected class DMCWorld extends InstanceWorld
 	{
-		protected FastMap<String, DMCRoom> rooms = new FastMap<>();
+		protected Map<String, DMCRoom> rooms = new ConcurrentHashMap<>();
 	}
 	
 	// NPCs
@@ -229,7 +231,7 @@ public final class DarkCloudMansion extends AbstractInstance
 	
 	protected static class DMCRoom
 	{
-		public FastList<DMCNpc> npcList = new FastList<>();
+		public List<DMCNpc> npcList = new ArrayList<>();
 		public int counter = 0;
 		public int reset = 0;
 		public int founded = 0;
@@ -239,7 +241,7 @@ public final class DarkCloudMansion extends AbstractInstance
 	@Override
 	protected boolean checkConditions(L2PcInstance player)
 	{
-		if (debug || player.canOverrideCond(PcCondOverride.INSTANCE_CONDITIONS))
+		if (debug)
 		{
 			return true;
 		}

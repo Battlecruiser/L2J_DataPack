@@ -380,6 +380,7 @@ public final class MinionSpawnManager extends AbstractNpcAI
 		NPC.add(27266); // Fallen Angel Haures
 		NPC.add(27267); // Fallen Angel Haures
 		NPC.add(27290); // White Wing Commander
+		NPC.add(29001); // Queen Ant
 		NPC.add(29030); // Fenril Hound Kerinne
 		NPC.add(29033); // Fenril Hound Freki
 		NPC.add(29037); // Fenril Hound Kinaz

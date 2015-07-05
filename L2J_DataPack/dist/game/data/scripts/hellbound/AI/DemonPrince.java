@@ -19,8 +19,8 @@
 package hellbound.AI;
 
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
-import javolution.util.FastMap;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -46,7 +46,7 @@ public final class DemonPrince extends AbstractNpcAI
 		new SkillHolder(5376, 6),
 	};
 	
-	private static final Map<Integer, Boolean> ATTACK_STATE = new FastMap<>();
+	private static final Map<Integer, Boolean> ATTACK_STATE = new ConcurrentHashMap<>();
 	
 	public DemonPrince()
 	{
