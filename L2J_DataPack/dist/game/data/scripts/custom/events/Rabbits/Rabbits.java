@@ -20,7 +20,8 @@ package custom.events.Rabbits;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.L2Object;
@@ -51,7 +52,7 @@ public final class Rabbits extends Event
 	private static final int EVENT_TIME = 10;
 	private static final int TOTAL_CHEST_COUNT = 75;
 	private static final int TRANSFORMATION_ID = 105;
-	private final List<L2Npc> _npcs = new CopyOnWriteArrayList<>();
+	private final Set<L2Npc> _npcs = ConcurrentHashMap.newKeySet(TOTAL_CHEST_COUNT + 1);
 	private final List<L2PcInstance> _players = new ArrayList<>();
 	private boolean _isActive = false;
 	
@@ -142,16 +143,13 @@ public final class Rabbits extends Event
 		// Despawn NPCs
 		for (L2Npc npc : _npcs)
 		{
-			if (npc != null)
-			{
-				npc.deleteMe();
-			}
+			npc.deleteMe();
 		}
 		_npcs.clear();
 		
 		for (L2PcInstance player : _players)
 		{
-			if ((player != null) && (player.getTransformationId() == TRANSFORMATION_ID))
+			if (player.getTransformationId() == TRANSFORMATION_ID)
 			{
 				player.untransform();
 			}
@@ -213,7 +211,7 @@ public final class Rabbits extends Event
 				npc.deleteMe();
 				_npcs.remove(npc);
 				
-				if (_npcs.size() <= 1)
+				if (_npcs.isEmpty())
 				{
 					Broadcast.toAllOnlinePlayers("Rabbits Event: No more chests...");
 					eventStop();
@@ -253,7 +251,7 @@ public final class Rabbits extends Event
 		}
 	}
 	
-	private static void recordSpawn(List<L2Npc> npcs, int npcId, int x, int y, int z, int heading, boolean randomOffSet, long despawnDelay)
+	private static void recordSpawn(Set<L2Npc> npcs, int npcId, int x, int y, int z, int heading, boolean randomOffSet, long despawnDelay)
 	{
 		final L2Npc npc = addSpawn(npcId, x, y, z, heading, randomOffSet, despawnDelay);
 		if (npc.getId() == CHEST)
