@@ -18,9 +18,8 @@
  */
 package custom.events.Race;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 
 import com.l2jserver.Config;
@@ -43,11 +42,11 @@ import com.l2jserver.gameserver.util.Broadcast;
 public final class Race extends Event
 {
 	// Event NPC's list
-	private List<L2Npc> _npclist;
+	private final Set<L2Npc> _npcs = ConcurrentHashMap.newKeySet();
 	// Npc
 	private L2Npc _npc;
 	// Player list
-	private List<L2PcInstance> _players;
+	private final Set<L2PcInstance> _players = ConcurrentHashMap.newKeySet();
 	// Event Task
 	ScheduledFuture<?> _eventTask = null;
 	// Event state
@@ -121,6 +120,7 @@ public final class Race extends Event
 		{
 			return false;
 		}
+		
 		// Check Custom Table - we use custom NPC's
 		if (!Config.CUSTOM_NPC_DATA)
 		{
@@ -128,9 +128,7 @@ public final class Race extends Event
 			eventMaker.sendMessage("Event " + getName() + " can't be started because custom NPC table is disabled!");
 			return false;
 		}
-		// Initialize list
-		_npclist = new ArrayList<>();
-		_players = new CopyOnWriteArrayList<>();
+		
 		// Set Event active
 		_isactive = true;
 		// Spawn Manager
@@ -168,7 +166,7 @@ public final class Race extends Event
 		// Transform players and send message
 		for (L2PcInstance player : _players)
 		{
-			if ((player != null) && player.isOnline())
+			if (player.isOnline())
 			{
 				if (player.isInsideRadius(_npc, 500, false, false))
 				{
@@ -210,22 +208,19 @@ public final class Race extends Event
 		// Teleport to event start point
 		for (L2PcInstance player : _players)
 		{
-			if ((player != null) && player.isOnline())
+			if (player.isOnline())
 			{
 				player.untransform();
 				player.teleToLocation(_npc.getX(), _npc.getY(), _npc.getZ(), true);
 			}
 		}
-		// Despawn NPCs
-		for (L2Npc _npc : _npclist)
-		{
-			if (_npc != null)
-			{
-				_npc.deleteMe();
-			}
-		}
-		_npclist.clear();
 		_players.clear();
+		// Despawn NPCs
+		for (L2Npc _npc : _npcs)
+		{
+			_npc.deleteMe();
+		}
+		_npcs.clear();
 		// Announce event end
 		Broadcast.toAllOnlinePlayers("* Race Event finished *");
 		
@@ -356,10 +351,7 @@ public final class Race extends Event
 	private L2Npc recordSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffSet, long despawnDelay)
 	{
 		final L2Npc npc = addSpawn(npcId, x, y, z, heading, randomOffSet, despawnDelay);
-		if (npc != null)
-		{
-			_npclist.add(npc);
-		}
+		_npcs.add(npc);
 		return npc;
 	}
 	
