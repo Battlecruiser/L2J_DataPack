@@ -2,78 +2,76 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/armorSets.xsd">
 	<!-- D GRADE Armor Sets -->
 	<set id="3">
-		<chest id="58" /> <!-- Mithril Breastplate -->
-		<legs id="59" /> <!-- Mithril Gaiters -->
-		<head id="47" /> <!-- Helmet -->
-		<shield id="628" /> <!-- Hoplon -->
-		<skill id="3006" level="1" /> <!-- Equip Set Items -->
-		<skill id="3502" level="1" /> <!-- Mithril Heavy Armor Set -->
-		<shield_skill id="3543" level="1" /> <!-- Equipped with Shield -->
-		<enchant6skill id="3611" level="1" /> <!-- Enchant Heavy Armor (D Grade) -->
+		<item id="58" /> <!-- Mithril Breastplate -->
+		<item id="59" /> <!-- Mithril Gaiters -->
+		<item id="47" /> <!-- Helmet -->
+		<bonus_item id="628" /> <!-- Hoplon -->
+		<skill set="3" id="3006" level="1" /> <!-- Equip Set Items -->
+		<skill set="3" id="3502" level="1" /> <!-- Mithril Heavy Armor Set -->
+		<bonus_skill id="3543" level="1" /> <!-- Equipped with Shield -->
+		<enchant_skill enchantLevel="6" id="3611" level="1" /> <!-- Enchant Heavy Armor (D Grade) -->
 	</set>
 	<set id="4">
-		<chest id="394" /> <!-- Reinforced Leather Shirt -->
-		<legs id="416" /> <!-- Reinforced Leather Gaiters -->
-		<feet id="2422" /> <!-- Reinforced Leather Boots -->
-		<skill id="3006" level="1" /> <!-- Equip Set Items -->
-		<skill id="3503" level="1" /> <!-- Reinforced Leather Set -->
-		<enchant6skill id="3612" level="1" /> <!-- Enchant Light Armor (D Grade) -->
+		<item id="394" /> <!-- Reinforced Leather Shirt -->
+		<item id="416" /> <!-- Reinforced Leather Gaiters -->
+		<item id="2422" /> <!-- Reinforced Leather Boots -->
+		<skill set="3" id="3006" level="1" /> <!-- Equip Set Items -->
+		<skill set="3" id="3503" level="1" /> <!-- Reinforced Leather Set -->
+		<enchant_skill enchantLevel="6" id="3612" level="1" /> <!-- Enchant Light Armor (D Grade) -->
 	</set>
 	<set id="5">
-		<chest id="436" /> <!-- Tunic of Knowledge -->
-		<legs id="469" /> <!-- Stockings of Knowledge -->
-		<gloves id="2447" /> <!-- Gloves of Knowledge -->
-		<skill id="3006" level="1" /> <!-- Equip Set Items -->
-		<skill id="3504" level="1" /> <!-- Knowledge Set -->
-		<enchant6skill id="3613" level="1" /> <!-- Enchant Robe (D Grade) -->
+		<item id="436" /> <!-- Tunic of Knowledge -->
+		<item id="469" /> <!-- Stockings of Knowledge -->
+		<item id="2447" /> <!-- Gloves of Knowledge -->
+		<skill set="3" id="3006" level="1" /> <!-- Equip Set Items -->
+		<skill set="3" id="3504" level="1" /> <!-- Knowledge Set -->
+		<enchant_skill enchantLevel="6" id="3613" level="1" /> <!-- Enchant Robe (D Grade) -->
 	</set>
 	<set id="6">
-		<chest id="395" /> <!-- Manticore Skin Shirt -->
-		<legs id="417" /> <!-- Manticore Skin Gaiters -->
-		<feet id="2424" /> <!-- Manticore Skin Boots -->
-		<skill id="3006" level="1" /> <!-- Equip Set Items -->
-		<skill id="3505" level="1" /> <!-- Manticore Set -->
-		<enchant6skill id="3612" level="1" /> <!-- Enchant Light Armor (D Grade) -->
+		<item id="395" /> <!-- Manticore Skin Shirt -->
+		<item id="417" /> <!-- Manticore Skin Gaiters -->
+		<item id="2424" /> <!-- Manticore Skin Boots -->
+		<skill set="3" id="3006" level="1" /> <!-- Equip Set Items -->
+		<skill set="3" id="3505" level="1" /> <!-- Manticore Set -->
+		<enchant_skill enchantLevel="6" id="3612" level="1" /> <!-- Enchant Light Armor (D Grade) -->
 	</set>
 	<set id="7">
-		<chest id="352" /> <!-- Brigandine Tunic -->
-		<legs id="2378" /> <!-- Brigandine Gaiters -->
-		<head id="2411" /> <!-- Brigandine Helmet -->
-		<shield id="2493" /> <!-- Brigandine Shield -->
-		<skill id="3006" level="1" /> <!-- Equip Set Items -->
-		<skill id="3506" level="1" /> <!-- Brigandine Heavy Armor Set -->
-		<shield_skill id="3544" level="1" /> <!-- Equipped with Shield -->
-		<enchant6skill id="3611" level="1" /> <!-- Enchant Heavy Armor (D Grade) -->
+		<item id="352" /> <!-- Brigandine Tunic -->
+		<item id="2378" /> <!-- Brigandine Gaiters -->
+		<item id="2411" /> <!-- Brigandine Helmet -->
+		<bonus_item id="2493" /> <!-- Brigandine Shield -->
+		<skill set="3" id="3006" level="1" /> <!-- Equip Set Items -->
+		<skill set="3" id="3506" level="1" /> <!-- Brigandine Heavy Armor Set -->
+		<bonus_skill id="3544" level="1" /> <!-- Equipped with Shield -->
+		<enchant_skill enchantLevel="6" id="3611" level="1" /> <!-- Enchant Heavy Armor (D Grade) -->
 	</set>
 	<set id="8">
-		<chest id="437" /> <!-- Mithril Tunic -->
-		<legs id="470" /> <!-- Mithril Stockings -->
-		<gloves id="2450" /> <!-- Mithril Gloves -->
-		<skill id="3006" level="1" /> <!-- Equip Set Items -->
-		<skill id="3507" level="1" /> <!-- Elven Mithril Robe Set -->
-		<enchant6skill id="3613" level="1" /> <!-- Enchant Robe (D Grade) -->
-		<int val="-1" />
-		<wit val="1" />
+		<item id="437" /> <!-- Mithril Tunic -->
+		<item id="470" /> <!-- Mithril Stockings -->
+		<item id="2450" /> <!-- Mithril Gloves -->
+		<skill set="3" id="3006" level="1" /> <!-- Equip Set Items -->
+		<skill set="3" id="3507" level="1" /> <!-- Elven Mithril Robe Set -->
+		<enchant_skill enchantLevel="6" id="3613" level="1" /> <!-- Enchant Robe (D Grade) -->
 	</set>
 	<!-- Reserved Slots (not used in game yet) -->
 	<!-- <set id="9"> -->
-	<!-- <chest id="44" /> -->
-	<!-- <feet id="2427" /> -->
-	<!-- <skill id="3006" level="1" /> -->
-	<!-- <enchant6skill id="3612" level="1" /> -->
+	<!-- <item id="44" /> -->
+	<!-- <item id="2427" /> -->
+	<!-- <skill set="2" id="3006" level="1" /> -->
+	<!-- <enchant_skill enchantLevel="6" id="3612" level="1" /> -->
 	<!-- </set> -->
 	<!-- <set id="10"> -->
-	<!-- <chest id="44" /> -->
-	<!-- <legs id="380" /> -->
-	<!-- <head id="2412" /> -->
-	<!-- <shield id="2494" /> -->
-	<!-- <skill id="3006" level="1" /> -->
-	<!-- <enchant6skill id="3611" level="1" /> -->
+	<!-- <item id="44" /> -->
+	<!-- <item id="380" /> -->
+	<!-- <item id="2412" /> -->
+	<!-- <bonus_item id="2494" /> -->
+	<!-- <skill set="3" id="3006" level="1" /> -->
+	<!-- <enchant_skill enchantLevel="6" id="3611" level="1" /> -->
 	<!-- </set> -->
 	<!-- <set id="11"> -->
-	<!-- <chest id="44" /> -->
-	<!-- <gloves id="2451" /> -->
-	<!-- <skill id="3006" level="1" /> -->
-	<!-- <enchant6skill id="3613" level="1" /> -->
+	<!-- <item id="44" /> -->
+	<!-- <item id="2451" /> -->
+	<!-- <skill set="2" id="3006" level="1" /> -->
+	<!-- <enchant_skill enchantLevel="6" id="3613" level="1" /> -->
 	<!-- </set> -->
 </list>

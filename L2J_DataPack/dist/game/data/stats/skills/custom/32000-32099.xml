@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/skills.xsd">
+	<skill id="32003" levels="1" name="Dynasty Tunic - Enchanter">
+		<!-- This skill is to work around retail bug that Dynasty Leather Armor - Enchanter lacks its own skill. (in retail it uses robe's skill but the base stat change is different -->
+		<!-- Used for Dynasty Leather Armor - Enchanter -->
+		<!-- Confirmed CT2.5 -->
+		<set name="displayId" val="3355" />
+		<set name="icon" val="icon.armor_t93_ue_i00" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+				<add stat="maxMp" val="321" /> <!-- Max MP +321 -->
+				<sub stat="cancel" val="15" /> <!-- Decrease magic cancel rate -15% -->
+				<mul stat="MagicalMpConsumeRate" val="0.95" /> <!-- Decrease MP consumption -5% -->
+				<add stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<add stat="MEN" val="2" /> <!-- MEN + 2 -->
+				<sub stat="WIT" val="1" /> <!-- WIT - 1 -->
+				<sub stat="INT" val="1" /> <!-- INT - 1 -->
+			</effect>
+			<effect name="EnableCloak" />
+		</for>
+	</skill>
+	<skill id="32004" levels="1" name="Dynasty Silver Satin Tunic Enchanter">
+		<!-- This skill is to work around retail bug that Dynasty Jeweled Leather Armor - Enchanter lacks its own skill. (in retail it uses robe's skill but the base stat change is different -->
+		<!-- Used for Dynasty Jeweled Leather Armor - Enchanter -->
+		<!-- Confirmed CT2.5 -->
+		<set name="displayId" val="3646" />
+		<set name="icon" val="icon.armor_t93_ue_i00" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+				<add stat="maxMp" val="321" /> <!-- Max MP +321 -->
+				<sub stat="cancel" val="15" /> <!-- Magic Cancel Rate -15 -->
+				<mul stat="MagicalMpConsumeRate" val="0.94" /> <!-- MP Consumption -6% -->
+				<add stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<add stat="MEN" val="2" /> <!-- MEN + 2 -->
+				<sub stat="WIT" val="1" /> <!-- WIT - 1 -->
+				<sub stat="INT" val="1" /> <!-- INT - 1 -->
+			</effect>
+			<effect name="EnableCloak" />
+		</for>
+	</skill>
+</list>
